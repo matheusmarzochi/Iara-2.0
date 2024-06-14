@@ -1,5 +1,8 @@
 # See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
 
+/postgres
+/.pnpm-store
+.env.local
 # dependencies
 /node_modules
 /.pnp
@@ -36,3 +39,6 @@ yarn-error.log*
 next-env.d.ts
 
 .env
+
+
+
