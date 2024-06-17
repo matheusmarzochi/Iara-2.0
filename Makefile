@@ -12,3 +12,9 @@ pnpm-install:
 
 bash-api:
 	@docker exec -ti iara-app bash
+
+db-generate:
+	@docker exec -ti iara-app pnpm db:generate
+
+db-migrate:
+	@docker exec -ti iara-app pnpm db:migrate

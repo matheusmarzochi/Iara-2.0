@@ -13,12 +13,23 @@ cp .env.example .env.local
 make up
 
 # Stop Containers
-make up
+make down
+```
+
+#### Commands
+```bash
+make build          # Build Docker Image and install dependencies
+make pnpm-install   # Install dependecies
+make up             # Start Containers
+make down           # Stop Containers
+db-generate         # Generate migrations
+db-migrate:         # Apply migrations
 ```
 
 ## Database
 
 ### Development
+
 When in development, if you need to create a new table or change things around, use the `pnpm run db:push`. This will apply the changes directly in the database without creating any migrations. Note that this command can cause data loss, so only use it for development purposes.
 
 ### Handling database migrations
