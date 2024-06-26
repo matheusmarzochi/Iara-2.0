@@ -7,7 +7,7 @@ export const questions = pgTable(
     'questions',
     {
         id: uuid('id').primaryKey().defaultRandom(),
-        researchId: uuid('research_id').references(() => researches.id),
+        researchId: uuid('research_id').notNull().references(() => researches.id),
         purpose: text('purpose').notNull(),
         score: text('score').notNull(),
         explanation: text('explanation').notNull(),

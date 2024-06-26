@@ -8,7 +8,7 @@ export const forms = pgTable(
     'forms',
     {
         id: uuid('id').primaryKey().defaultRandom(),
-        researchId: uuid('research_id').references(() => researches.id),
+        researchId: uuid('research_id').notNull().references(() => researches.id),
         email: text('email').notNull(),
         createdAt: timestamp("created_at", { mode: "date", withTimezone: true })
             .notNull()

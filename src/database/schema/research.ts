@@ -11,7 +11,7 @@ export const researches = pgTable(
         id: uuid('id').primaryKey().defaultRandom(),
         title: text('title').notNull(),
         description: text('description').notNull(),
-        userId: uuid('user_id').references(() => users.id),
+        userId: uuid('user_id').notNull().references(() => users.id),
         createdAt: timestamp("created_at", { mode: "date", withTimezone: true })
             .notNull()
             .defaultNow(),
