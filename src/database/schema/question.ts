@@ -1,4 +1,5 @@
-import { index, integer, pgTable, text, uuid } from 'drizzle-orm/pg-core';
+import { index, integer, pgTable, text, timestamp, uuid } from 'drizzle-orm/pg-core';
+import { relations } from 'drizzle-orm';
 import { createInsertSchema } from "drizzle-zod";
 import { researches } from './research';
 
@@ -11,11 +12,21 @@ export const questions = pgTable(
         score: text('score').notNull(),
         explanation: text('explanation').notNull(),
         sequence: integer('sequence').notNull(),
+        createdAt: timestamp("created_at", { mode: "date", withTimezone: true })
+            .notNull()
+            .defaultNow(),
     },
     (t) => ({
         researchId: index("questions_researchId_index").on(t.researchId),
     }),
 );
+
+export const questionsRelations = relations(questions, ({ one }) => ({
+    research: one(researches, {
+        fields: [questions.researchId],
+        references: [researches.id]
+    }),
+}))
 
 export type Question = typeof questions.$inferSelect;
 
