@@ -8,6 +8,27 @@
       "when": 1718432005459,
       "tag": "0000_friendly_wildside",
       "breakpoints": true
+    },
+    {
+      "idx": 1,
+      "version": "7",
+      "when": 1719412656023,
+      "tag": "0001_icy_starhawk",
+      "breakpoints": true
+    },
+    {
+      "idx": 2,
+      "version": "7",
+      "when": 1719422698897,
+      "tag": "0002_nappy_fallen_one",
+      "breakpoints": true
+    },
+    {
+      "idx": 3,
+      "version": "7",
+      "when": 1719426045516,
+      "tag": "0003_shiny_tiger_shark",
+      "breakpoints": true
     }
   ]
 }
