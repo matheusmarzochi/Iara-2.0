@@ -1,6 +1,8 @@
 services:
   api:
     container_name: iara-app
+    networks:
+      - iara
     build:
       context: .
       dockerfile: Dockerfile
@@ -13,11 +15,26 @@ services:
       - 3000:3000
     entrypoint: ["pnpm", "dev"]
 
+  rabbitmq:
+    image: rabbitmq:3-management
+    container_name: iara-rabbitmq
+    networks:
+      - iara
+    expose:
+      - 5672
+    ports:
+      - "5672:5672"
+      - "15672:15672"
+    env_file:
+      - ./.env.local
+
   postgres:
     container_name: iara-postgres
     image: postgres
     restart: always
     shm_size: 128mb
+    networks:
+      - iara
     expose:
       - 5432
     env_file:
@@ -29,6 +46,8 @@ services:
 
   drizzle-studio:
     container_name: iara-drizzle-studio
+    networks:
+      - iara
     build:
       context: .
       dockerfile: Dockerfile
@@ -40,3 +59,7 @@ services:
       - ./.env.local
     ports:
       - 4983:4983
+
+networks:
+  iara:
+    driver: bridge
