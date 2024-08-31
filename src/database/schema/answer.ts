@@ -11,6 +11,7 @@ export const answers = pgTable(
         score: integer('score').notNull(),
         explanation: text('explanation').notNull(),
         sequence: integer('sequence').notNull(),
+        purpose: text('purpose').notNull(),
         createdAt: timestamp("created_at", { mode: "date", withTimezone: true })
             .notNull()
             .defaultNow(),

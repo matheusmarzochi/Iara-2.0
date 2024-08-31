@@ -18,3 +18,6 @@ db-generate:
 
 db-migrate:
 	@docker exec -ti iara-app pnpm db:migrate
+
+db-push:
+	@docker exec -ti iara-app pnpm db:push
