@@ -1,4 +1,4 @@
-import { ReactNode } from "react";
+import type { ReactNode } from "react";
 import { ToggleTheme } from "~/components/theme/toggle-theme";
 
 export default function WebsiteLayout({ children }: { children: ReactNode }) {

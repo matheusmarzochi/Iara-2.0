@@ -2,7 +2,7 @@ import { index, integer, pgTable, text, timestamp, uuid } from 'drizzle-orm/pg-c
 import { relations } from 'drizzle-orm';
 import { createInsertSchema } from "drizzle-zod";
 import { researches } from './research';
-import { categories, Category } from './category';
+import { categories, type Category } from './category';
 
 export const questions = pgTable(
     'questions',
