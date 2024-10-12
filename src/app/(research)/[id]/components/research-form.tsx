@@ -19,6 +19,11 @@ import { Textarea } from "~/components/ui/textarea";
 
 const schema = z.object({
   email: z.string().email("Informe um e-mail válido"),
+  purpose: z
+    .string()
+    .min(1, "Informe o motivo do que porque você escolheu nosso produto"),
+  score: z.enum(["0", "1", "2", "3", "4", "5"]),
+  explanation: z.string().min(1, "Adicione uma explicação."),
 });
 
 type Schema = z.infer<typeof schema>;
@@ -27,6 +32,7 @@ export function ResearchForm() {
   const form = useForm<Schema>({
     defaultValues: {
       email: "",
+      purpose: "",
     },
     resolver: zodResolver(schema),
   });
@@ -54,7 +60,6 @@ export function ResearchForm() {
 
         <FormField
           control={form.control}
-          // @ts-expect-error
           name="purpose"
           render={({ field }) => (
             <FormItem>
@@ -75,7 +80,6 @@ export function ResearchForm() {
 
         <FormField
           control={form.control}
-          // @ts-expect-error
           name="score"
           render={({ field }) => (
             <FormItem>
@@ -151,7 +155,6 @@ export function ResearchForm() {
 
         <FormField
           control={form.control}
-          // @ts-expect-error
           name="explanation"
           render={({ field }) => (
             <FormItem>

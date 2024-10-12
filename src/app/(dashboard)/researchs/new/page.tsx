@@ -1,5 +1,5 @@
 import { Button } from "~/components/ui/button";
-import { CreateResearchForm } from "./components/create-reaearch-form";
+import { CreateResearchForm } from "./components/create-research-form";
 
 export default function CreateResearchPage() {
   return (

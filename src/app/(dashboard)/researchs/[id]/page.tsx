@@ -1,6 +1,4 @@
-import { Button } from "~/components/ui/button";
 import { CopyLinkForm } from "./components/copy-link-form";
-import Link from "next/link";
 import { CloseResearch } from "./components/close-research";
 
 export default function ResearchPage() {

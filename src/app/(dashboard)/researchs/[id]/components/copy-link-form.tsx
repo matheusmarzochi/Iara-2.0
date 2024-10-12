@@ -4,6 +4,7 @@ import { Button } from "~/components/ui/button";
 import { Input } from "~/components/ui/input";
 import { Label } from "~/components/ui/label";
 
+// @todo adicionar hook para copiar o link
 export function CopyLinkForm() {
   return (
     <div className="py-4 space-y-2">
