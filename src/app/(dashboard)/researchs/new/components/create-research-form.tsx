@@ -20,20 +20,26 @@ import { schema } from "../schemas";
 import type { z } from "zod";
 import { useServerAction } from "zsa-react";
 import { createResearchAction } from "../actions";
+import { StatusButton } from "~/components/status-button";
+import { toast } from "sonner";
 
 type Schema = z.infer<typeof schema>;
 
-/** @todo criar um botão que indique quando estamos em estado de loading  */
-/** @todo criar preview do formulário */
 /** @todo mover os actions para server actions assim não precisamos do javascript */
 /** @todo adicionar validação de form para caso a internet do usuário esteja lenda */
+/** @todo tirar o botão de preview */
 export function CreateResearchForm() {
   const { execute, isPending } = useServerAction(createResearchAction, {
     onSuccess: () => {
-      // @todo nós podemos fazer algo aqui quando for sucesso
+      toast.success("Pesquisa criada.", {
+        description: "Pesquisa criada com sucesso!",
+      });
     },
-    onError: () => {
-      // @todo ou podemos lidar com o erro aqui
+    onError: (error) => {
+      toast.error("Erro", {
+        description:
+          "Houve um erro ao tentar criar sua pesquisa, por favor tente novamente.",
+      });
     },
   });
 
@@ -157,7 +163,7 @@ export function CreateResearchForm() {
                           <RadioGroupItem value="" aria-readonly disabled />
                           <Label>
                             5 - Extremamante. Recebi tudo que esperava e mais um
-                            pouico.
+                            pouco.
                           </Label>
                         </div>
 
@@ -244,7 +250,9 @@ export function CreateResearchForm() {
             <Link href="/dashboard">Voltar</Link>
           </Button>
 
-          <Button size="sm">Criar Pesquisa</Button>
+          <StatusButton isPending={isPending} size="sm">
+            Criar Pesquisa
+          </StatusButton>
         </div>
       </form>
     </Form>
