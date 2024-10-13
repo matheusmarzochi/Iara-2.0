@@ -2,7 +2,6 @@
 
 import { useFieldArray, useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
-import { z } from "zod";
 import {
   Form,
   FormControl,
@@ -17,22 +16,30 @@ import { Button } from "~/components/ui/button";
 import Link from "next/link";
 import { RadioGroup, RadioGroupItem } from "~/components/ui/radio-group";
 import { Label } from "~/components/ui/label";
-
-const schema = z.object({
-  title: z.string().min(1, "Informe um título para sua pesquisa."),
-  description: z.string().min(1, "Informe uma descrição para sua pesquisa."),
-  purposes: z.array(
-    z.object({
-      purpose: z.string().min(1, "Informe um título para esta pergunta."),
-      score: z.string().min(1, "Informe um texto para esta pergunta."),
-      explanation: z.string().min(1, "Informe um texto para esta pergunta."),
-    }),
-  ),
-});
+import { schema } from "../schemas";
+import type { z } from "zod";
+import { useServerAction } from "zsa-react";
+import { createResearchAction } from "../actions";
+import { StatusButton } from "~/components/status-button";
+import { toast } from "sonner";
 
 type Schema = z.infer<typeof schema>;
 
 export function CreateResearchForm() {
+  const { execute, isPending } = useServerAction(createResearchAction, {
+    onSuccess: () => {
+      toast.success("Pesquisa criada.", {
+        description: "Pesquisa criada com sucesso!",
+      });
+    },
+    onError: (error) => {
+      toast.error("Erro", {
+        description:
+          "Houve um erro ao tentar criar sua pesquisa, por favor tente novamente.",
+      });
+    },
+  });
+
   const form = useForm<Schema>({
     defaultValues: {
       title: "",
@@ -54,9 +61,13 @@ export function CreateResearchForm() {
     name: "purposes",
   });
 
+  const submit = () => {
+    execute(form.getValues());
+  };
+
   return (
     <Form {...form}>
-      <form className="space-y-6">
+      <form className="space-y-6" onSubmit={form.handleSubmit(submit)}>
         <FormField
           control={form.control}
           name="title"
@@ -149,7 +160,7 @@ export function CreateResearchForm() {
                           <RadioGroupItem value="" aria-readonly disabled />
                           <Label>
                             5 - Extremamante. Recebi tudo que esperava e mais um
-                            pouico.
+                            pouco.
                           </Label>
                         </div>
 
@@ -236,7 +247,9 @@ export function CreateResearchForm() {
             <Link href="/dashboard">Voltar</Link>
           </Button>
 
-          <Button size="sm">Criar Pesquisa</Button>
+          <StatusButton isPending={isPending} size="sm">
+            Criar Pesquisa
+          </StatusButton>
         </div>
       </form>
     </Form>

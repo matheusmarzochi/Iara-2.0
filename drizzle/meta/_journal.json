@@ -50,6 +50,20 @@
       "when": 1720560123117,
       "tag": "0006_fresh_toad_men",
       "breakpoints": true
+    },
+    {
+      "idx": 7,
+      "version": "7",
+      "when": 1728762423142,
+      "tag": "0007_cultured_sebastian_shaw",
+      "breakpoints": true
+    },
+    {
+      "idx": 8,
+      "version": "7",
+      "when": 1728782063152,
+      "tag": "0008_ambiguous_slipstream",
+      "breakpoints": true
     }
   ]
 }

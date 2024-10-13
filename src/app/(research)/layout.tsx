@@ -1,3 +1,4 @@
+import Link from "next/link";
 import type { ReactNode } from "react";
 import { Logo } from "~/components/logo";
 import { ToggleTheme } from "~/components/theme/toggle-theme";
@@ -11,7 +12,9 @@ export default function ResearchPublicPage({
     <>
       <header>
         <div className="container h-20 flex justify-between items-center">
-          <Logo className="w-10" />
+          <Link href="/">
+            <Logo className="w-10" />
+          </Link>
         </div>
       </header>
       <main className="min-h-[calc(100dvh-160px)] w-full container">

@@ -1,5 +1,4 @@
-import { Button } from "~/components/ui/button";
-import { CreateResearchForm } from "./components/create-reaearch-form";
+import { CreateResearchForm } from "./components/create-research-form";
 
 export default function CreateResearchPage() {
   return (
@@ -7,9 +6,9 @@ export default function CreateResearchPage() {
       <header className="pt-4 pb-6 space-y-4">
         <div className="flex items-center justify-between">
           <h2 className="text-3xl font-semibold leading-tight">Formulário</h2>
-          <Button size="sm" variant="outline">
+          {/* <Button size="sm" variant="outline">
             Preview
-          </Button>
+          </Button> */}
         </div>
 
         <small className="text-muted-foreground inline-block">

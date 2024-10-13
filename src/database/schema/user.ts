@@ -8,6 +8,7 @@ export const users = pgTable(
   "users",
   {
     id: uuid("id").primaryKey().defaultRandom(),
+    clerkId: text("clerk_id").notNull(),
     name: text("name").notNull(),
     email: text("email").notNull(),
     createdAt: timestamp("created_at", { mode: "date", withTimezone: true })
@@ -19,6 +20,6 @@ export const users = pgTable(
   }),
 );
 
-export type User = typeof users.$inferSelect;
+export type User = Omit<typeof users.$inferSelect, "clerk_id">;
 
 export const createUserSchema = createInsertSchema(users);
