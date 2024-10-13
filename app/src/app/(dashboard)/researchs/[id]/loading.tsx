@@ -26,10 +26,10 @@ export default function ResearchPage() {
           </p>
         </div>
 
-        <CopyLinkForm />
+        <CopyLinkForm research="" status="PROCESSING" />
       </section>
 
-      <CloseResearch />
+      <CloseResearch research="" status="PROCESSING" />
     </div>
   );
 }
