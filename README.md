@@ -19,12 +19,22 @@ make down
 #### Commands
 ```bash
 make build          # Build Docker Image and install dependencies
-make pnpm-install   # Install dependecies
+make npm-install    # Install dependecies
 make up             # Start Containers
 make down           # Stop Containers
-db-generate         # Generate migrations
-db-migrate:         # Apply migrations
+make db-generate         # Generate migrations
+make db-migrate:         # Apply migrations
 ```
+
+## Ngrok Tunnel
+Create an AuthToken to add to env
+https://dashboard.ngrok.com/authtokens
+
+Fill CLERK_WH_SECRET_KEY with your endpoint URL
+https://dashboard.ngrok.com/endpoints
+
+Restart you app
+docker compose restart app
 
 ## Database
 

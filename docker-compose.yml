@@ -1,38 +1,69 @@
 services:
-  api:
+  app:
+    build: ./app/.
     container_name: iara-app
+    image: iara-app
+    depends_on:
+      rabbitmq:
+        condition: service_healthy
+      postgres:
+        condition: service_healthy
     networks:
       - iara
-    build:
-      context: .
-      dockerfile: Dockerfile
-      target: base
-    volumes:
-      - ./:/app
     env_file:
-      - ./.env.local
+      - .env.local
+    volumes:
+      - ./app:/code
     ports:
-      - 3000:3000
-    entrypoint: ["pnpm", "dev"]
-
+      - 3001:3000
+    expose:
+      - 3000
+    command: npm run dev
+  worker:
+    build: ./worker/.
+    container_name: iara-worker
+    image: iara-worker
+    depends_on:
+      rabbitmq:
+        condition: service_healthy
+      postgres:
+        condition: service_healthy
+    networks:
+      - iara
+    env_file:
+      - .env.local
+    volumes:
+      - ./worker:/code
+    command: npm run dev
   rabbitmq:
     image: rabbitmq:3-management
     container_name: iara-rabbitmq
+    healthcheck:
+      test: [ "CMD", "rabbitmqctl", "status" ]
+      interval: 10s
+      timeout: 10s
+      retries: 5
     networks:
       - iara
+    env_file:
+      - .env.local
     expose:
       - 5672
     ports:
       - "5672:5672"
       - "15672:15672"
-    env_file:
-      - ./.env.local
-
+    volumes:
+      - ./queue:/var/lib/rabbitmq
   postgres:
     container_name: iara-postgres
     image: postgres
     restart: always
     shm_size: 128mb
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U postgres"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
     networks:
       - iara
     expose:
@@ -43,23 +74,33 @@ services:
       PGDATA: /var/lib/postgresql/data/pgdata
     volumes:
       - ./postgres:/var/lib/postgresql/data
-
   drizzle-studio:
+    build: ./app/.
+    image: iara-app
     container_name: iara-drizzle-studio
+    depends_on:
+      postgres:
+        condition: service_healthy
     networks:
       - iara
-    build:
-      context: .
-      dockerfile: Dockerfile
-      target: studio
-    restart: always
     volumes:
-      - ./:/app
+      - ./app/:/code
     env_file:
       - ./.env.local
     ports:
       - 4983:4983
-
+    command: npm run db:studio
+  ngrok:
+    image: ngrok/ngrok:latest
+    container_name: iara-grok
+    networks:
+      - iara
+    env_file:
+      - ./.env.local
+    ports:
+      - 4040:4040
+    command:
+      - "http"
+      - "http://iara-app:3000"
 networks:
   iara:
-    driver: bridge
