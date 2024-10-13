@@ -5,7 +5,13 @@ import { Badge } from "~/components/ui/badge";
 import { Button } from "~/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "~/components/ui/card";
 import { db } from "~/database";
-import { answers, forms, researches, users } from "~/database/schema";
+import {
+  answers,
+  forms,
+  type Research,
+  researches,
+  users,
+} from "~/database/schema";
 import { formatters } from "~/lib/utils";
 
 async function getUserResearchs() {
@@ -20,6 +26,7 @@ async function getUserResearchs() {
     .select({
       id: researches.id,
       title: researches.title,
+      status: researches.status,
       createdAt: researches.createdAt,
       replies: count(answers.id),
     })
@@ -30,13 +37,30 @@ async function getUserResearchs() {
     .orderBy(desc(researches.createdAt))
     .groupBy(researches.id);
 
-  console.log(researchs);
-
   return researchs;
 }
 
 export default async function DashboardPage() {
   const researchs = await getUserResearchs();
+
+  const status = (status: Research["status"]) =>
+    ({
+      CREATED: (
+        <Badge className="whitespace-nowrap w-fit bg-yellow-500 text-black">
+          Em Andamento
+        </Badge>
+      ),
+      FINISHED: (
+        <Badge className="whitespace-nowrap w-fit bg-green-400 text-black">
+          Encerrada
+        </Badge>
+      ),
+      PROCESSING: (
+        <Badge className="whitespace-nowrap w-fit bg-orange-500 text-black">
+          Processando
+        </Badge>
+      ),
+    })[status];
 
   return (
     <>
@@ -59,10 +83,7 @@ export default async function DashboardPage() {
             <CardHeader>
               <div className="flex justify-between items-center">
                 <CardTitle className="text-xl">{research.title}</CardTitle>
-                {/** @todo adicionar status */}
-                <Badge className="whitespace-nowrap w-fit bg-yellow-500 text-black">
-                  Em Andamento
-                </Badge>
+                {status(research.status)}
               </div>
             </CardHeader>
 

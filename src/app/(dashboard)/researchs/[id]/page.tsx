@@ -3,8 +3,9 @@ import { CloseResearch } from "./components/close-research";
 import { db } from "~/database";
 import { notFound } from "next/navigation";
 import { formatters } from "~/lib/utils";
-import { count, eq, inArray } from "drizzle-orm";
-import { answers, forms } from "~/database/schema";
+import { and, count, eq, inArray } from "drizzle-orm";
+import { answers, forms, researches, users } from "~/database/schema";
+import { auth } from "@clerk/nextjs/server";
 
 type Props = {
   params: {
@@ -13,31 +14,30 @@ type Props = {
 };
 
 async function getResearchById(id: string) {
-  const research = await db.query.researches.findFirst({
-    where: (research, { eq }) => eq(research.id, id),
-    columns: {
-      userId: false,
-    },
-  });
+  const { userId } = auth();
 
-  if (!research) {
-    return null;
-  }
+  const user = db
+    .select({ id: users.id })
+    .from(users)
+    .where(eq(users.clerkId, userId as string));
 
-  const [{ count: replies }] = await db
-    .select({ count: count(answers.formId) })
-    .from(answers)
-    .where(
-      inArray(
-        answers.formId,
-        db
-          .select({ id: forms.id })
-          .from(forms)
-          .where(eq(forms.researchId, research.id)),
-      ),
-    );
+  const [research] = await db
+    .select({
+      id: researches.id,
+      title: researches.title,
+      description: researches.description,
+      status: researches.status,
+      answers: count(answers.id),
+      createdAt: researches.createdAt,
+    })
+    .from(researches)
+    .leftJoin(forms, eq(forms.researchId, researches.id))
+    .leftJoin(answers, eq(answers.formId, forms.id))
+    .where(and(eq(researches.id, id), eq(researches.userId, user)))
+    .limit(1)
+    .groupBy(researches.id);
 
-  return { ...research, answers: replies };
+  return research;
 }
 
 export default async function ResearchPage({ params }: Props) {
@@ -65,10 +65,10 @@ export default async function ResearchPage({ params }: Props) {
           <p>Respostas: {research.answers}</p>
         </div>
 
-        <CopyLinkForm research={research.id} />
+        <CopyLinkForm research={research.id} status={research.status} />
       </section>
 
-      <CloseResearch />
+      <CloseResearch research={research.id} status={research.status} />
     </div>
   );
 }

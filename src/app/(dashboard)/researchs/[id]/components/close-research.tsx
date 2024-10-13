@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import { useServerAction } from "zsa-react";
 import { Button } from "~/components/ui/button";
 import {
   Dialog,
@@ -23,10 +24,27 @@ import {
   DrawerTrigger,
 } from "~/components/ui/drawer";
 import { useMediaQuery } from "~/hooks/use-media-query";
+import { closeResearchAction } from "../actions";
+import { toast } from "sonner";
+import type { Research } from "~/database/schema";
+import { Loader } from "lucide-react";
 
-// @todo adicionar action para encerrar pesquisa
-export function CloseResearch() {
+type Props = {
+  research: string;
+  status: Research["status"];
+};
+
+export function CloseResearch({ research, status }: Props) {
   const isDesktop = useMediaQuery("(min-width: 764px)");
+
+  const { execute, isPending } = useServerAction(closeResearchAction, {
+    onSuccess: () => {
+      toast.success("Pesquisa encerrada.", {
+        description:
+          "Sua pesquisa foi encerrada, aguarde enquanto realizamos o processamento das respostas.",
+      });
+    },
+  });
 
   return (
     <div className="fixed bottom-4 w-full left-0">
@@ -38,7 +56,11 @@ export function CloseResearch() {
         {isDesktop ? (
           <Dialog>
             <DialogTrigger asChild>
-              <Button size="sm" variant="destructive">
+              <Button
+                size="sm"
+                variant="destructive"
+                disabled={status !== "CREATED"}
+              >
                 Encerrar Pesquisa
               </Button>
             </DialogTrigger>
@@ -54,13 +76,26 @@ export function CloseResearch() {
               </DialogDescription>
 
               <DialogFooter>
-                <DialogClose>
+                <DialogClose asChild>
                   <Button variant="outline" size="sm">
                     Não encerrar
                   </Button>
                 </DialogClose>
-                <Button size="sm" variant="destructive">
-                  Encerrar
+                <Button
+                  size="sm"
+                  variant="destructive"
+                  onClick={() => execute({ id: research })}
+                  disabled={status !== "CREATED" || isPending}
+                  className="min-w-[80px]"
+                >
+                  {isPending ? (
+                    <>
+                      <span className="sr-only">Encerrando a pesquisa</span>
+                      <Loader className="size-4 animate-spin" />
+                    </>
+                  ) : (
+                    "Encerrar"
+                  )}
                 </Button>
               </DialogFooter>
             </DialogContent>
@@ -68,7 +103,11 @@ export function CloseResearch() {
         ) : (
           <Drawer>
             <DrawerTrigger asChild>
-              <Button size="sm" variant="destructive">
+              <Button
+                size="sm"
+                variant="destructive"
+                disabled={status !== "CREATED"}
+              >
                 Encerrar Pesquisa
               </Button>
             </DrawerTrigger>
@@ -89,8 +128,20 @@ export function CloseResearch() {
                   </Button>
                 </DrawerClose>
 
-                <Button size="sm" variant="destructive">
-                  Encerrar
+                <Button
+                  size="sm"
+                  variant="destructive"
+                  onClick={() => execute({ id: research })}
+                  disabled={status !== "CREATED" || isPending}
+                >
+                  {isPending ? (
+                    <>
+                      <span className="sr-only">Encerrando a pesquisa</span>
+                      <Loader className="size-4 animate-spin" />
+                    </>
+                  ) : (
+                    "Encerrar"
+                  )}
                 </Button>
               </DrawerFooter>
             </DrawerContent>

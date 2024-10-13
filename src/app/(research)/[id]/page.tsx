@@ -15,7 +15,6 @@ async function getResearchForm(id: string) {
       userId: false,
     },
     with: {
-      /** @todo remover campos não usados na seleção. */
       questions: {
         with: {
           categories: true,
@@ -25,12 +24,23 @@ async function getResearchForm(id: string) {
   });
 }
 
-/** @todo quando uma pesquisa não estiver com status em andamento, mostrar uma mensagem de pesquisa encerrada.  */
 export default async function ResearchPage({ params }: Props) {
   const research = await getResearchForm(params.id);
 
   if (!research) {
     return notFound();
+  }
+
+  if (research.status !== "CREATED") {
+    return (
+      <section className="space-y-6 h-[calc(100dvh-160px)] flex items-center">
+        <header className="pt-4 pb-6 space-y-4">
+          <h2 className="text-3xl font-semibold leading-tight text-muted-foreground">
+            Essa pesquisa foi encerrada.
+          </h2>
+        </header>
+      </section>
+    );
   }
 
   return (
