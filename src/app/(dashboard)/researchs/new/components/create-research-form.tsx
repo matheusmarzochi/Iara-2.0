@@ -26,8 +26,7 @@ import { toast } from "sonner";
 type Schema = z.infer<typeof schema>;
 
 /** @todo mover os actions para server actions assim não precisamos do javascript */
-/** @todo adicionar validação de form para caso a internet do usuário esteja lenda */
-/** @todo tirar o botão de preview */
+/** @todo adicionar validação de form para caso a internet do usuário esteja lenta */
 export function CreateResearchForm() {
   const { execute, isPending } = useServerAction(createResearchAction, {
     onSuccess: () => {
