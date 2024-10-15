@@ -18,7 +18,7 @@ export function AuthButton() {
       </SignedOut>
 
       <SignedIn>
-        <Button size="sm" className="group gap-2">
+        <Button asChild size="sm" className="group gap-2">
           <Link className="flex gap-2 items-center" href="/dashboard">
             Dashboard{" "}
             <MoveRightIcon className="h-4 transition-transform group-hover:translate-x-1" />
