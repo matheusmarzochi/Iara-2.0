@@ -3,7 +3,7 @@ build:
 
 up:
 	@docker compose -f docker-compose.yml --env-file .env.local up -d
-	
+
 down:
 	@docker compose -f docker-compose.yml --env-file .env.local down
 
@@ -12,7 +12,6 @@ npm-install:
 	@docker run --rm -v ./app/:/code iara-app bash -c "npm install"
 	@echo "=== Instaling Worker dependencies"
 	@docker run --rm -v ./worker/:/code iara-worker bash -c "npm install"
-
 
 test-worker:
 	@docker run -ti --rm \
