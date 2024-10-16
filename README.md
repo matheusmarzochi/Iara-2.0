@@ -19,5 +19,6 @@ make bash-app       # Access Worker Bash
 - App: http://localhost:3001/
 - Database: https://local.drizzle.studio/
 - Ngrok Tunnel: http://localhost:4040/inspect/http
+- Queue: http://localhost:15672
     - User: `rabbitmq`
     - Password: `RabbitPass`

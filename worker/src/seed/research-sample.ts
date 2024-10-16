@@ -1,10 +1,9 @@
 import fs from 'fs'
-import { db } from '../database';
-import { researches } from '../database/schema/research';
-import { users } from '../database/schema/user';
-import { questions } from '../database/schema/question';
-import { forms } from '../database/schema/form';
-import { answers } from '../database/schema/answer';
+import { db } from '../../../app/src/database';
+import { researches } from '../../../app/src/database/schema/research';
+import { questions } from '../../../app/src/database/schema/question';
+import { forms } from '../../../app/src/database/schema/form';
+import { answers } from '../../../app/src/database/schema/answer';
 
 type FormData = {
     email: string
@@ -23,13 +22,16 @@ type AnswerData = {
     sequence: number
 }
 
-const formsData = JSON.parse(fs.readFileSync('/code/src/seed/forms.json').toString()) as FormData[]
+const formsData = JSON.parse(fs.readFileSync('/code/worker/src/seed/forms.json').toString()) as FormData[]
 
-const seed = async () => {
-    const [user] = await db.insert(users).values({
-        email: "ivanmicai@gmail.com",
-        name: "Ivan Micai",
-    }).returning()
+const seed = async (email: string) => {
+    const user = await db.query.users.findFirst({
+        where: (users, { eq }) => eq(users.email, email),
+    })
+
+    if (!user) {
+        return "Email not found"
+    }
 
     const [researchReturn] = await db.insert(researches).values({
         description: "Pesquisa do curso de Agilidade para medir a satisfação do usuário",
@@ -96,4 +98,4 @@ const seed = async () => {
 }
 
 
-seed()
+seed("ivanmicai@gmail.com")

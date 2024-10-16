@@ -27,16 +27,30 @@ bash-app:
 		-w /code \
 		node:20.18 bash
 
+ollama-init:
+	docker exec -it iara-ollama ollama run llama3.2
+
 bash-worker:
 	@docker run -ti --rm \
+		--net app_iara \
 		--name iara-worker-bash \
-		-v ./worker/:/code \
-		-w /code \
+		--env-file .env.local \
+		-v ./worker/:/code/worker \
+		-v ./app/src/database:/code/app/src/database \
+		iara-worker bash
+
+seed-worker:
+	@docker run -ti --rm \
+		--net app_iara \
+		--name iara-worker-bash \
+		--env-file .env.local \
+		-v ./worker/:/code/worker \
+		-v ./app/src/database:/code/app/src/database \
+		-w /code/worker \
 		iara-worker bash
 
 db-generate:
 	@docker run -ti --rm \
-		--net app_iara \
 		--name iara-db-generate \
 		--env-file .env.local \
 		-v ./app/:/code \

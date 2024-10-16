@@ -1,0 +1,1 @@
+ALTER TABLE "classifications" ADD CONSTRAINT "classifications_answerId_unique" UNIQUE("answer_id");

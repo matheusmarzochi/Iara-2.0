@@ -1,0 +1,1 @@
+ALTER TABLE "categories" ADD CONSTRAINT "categories_questionId_unique" UNIQUE("question_id");

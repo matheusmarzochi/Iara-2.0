@@ -2,7 +2,7 @@ import { index, pgTable, text, timestamp, uuid } from 'drizzle-orm/pg-core';
 import { relations } from 'drizzle-orm';
 import { createInsertSchema } from 'drizzle-zod';
 import { researches } from './research';
-import { answers } from './answer';
+import { answers, type Answer } from './answer';
 
 export const forms = pgTable(
     'forms',
@@ -27,6 +27,6 @@ export const formsRelations = relations(forms, ({ one, many }) => ({
     answers: many(answers),
 }))
 
-export type Form = typeof forms.$inferSelect;
+export type Form = typeof forms.$inferSelect & { answers: Answer[] };;
 
 export const createFormSchema = createInsertSchema(forms);

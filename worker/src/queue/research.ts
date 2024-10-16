@@ -1,5 +1,6 @@
 import { Producer, Consumer } from '../queue/connection';
 import { getCategories } from '../prompt/categorization'
+import { getClassification } from '../prompt/classification'
 
 const researchQueueName = "researches"
 
@@ -8,6 +9,7 @@ const researchProcessor = {
 
     console.log(`Start processing ResearchID: ${msg}`)
     await getCategories(msg)
+    await getClassification(msg)
     
     return true 
   }

@@ -1,5 +1,5 @@
-import { Question } from "../database/schema/question"
-import { Form } from "../database/schema/form"
+import { Question } from "../../../app/src/database/schema/question"
+import { Form } from "../../../app/src/database/schema/form"
 import {
     prompt,
     promptValidation

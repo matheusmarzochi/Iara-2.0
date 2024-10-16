@@ -1,4 +1,4 @@
-import { stringToJson } from "./gpt"
+import { stringToJson } from "./prompt"
 
 describe('stringToJson', () => {
     it('should ', () => {

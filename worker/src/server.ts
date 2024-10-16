@@ -1,5 +1,6 @@
 import { consumer as ResearchConsumer } from './queue/research'
 
+const isOpenAI = process.env.LLM_PROVIDER === "openai"
 async function main() {
   
   ResearchConsumer.start();

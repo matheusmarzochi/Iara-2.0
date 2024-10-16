@@ -1,4 +1,4 @@
-import { index, pgTable, text, timestamp, uuid } from 'drizzle-orm/pg-core';
+import { index, pgTable, text, timestamp, uuid, unique } from 'drizzle-orm/pg-core';
 import { relations } from 'drizzle-orm';
 import { createInsertSchema } from "drizzle-zod";
 import { questions } from './question';
@@ -15,6 +15,7 @@ export const categories = pgTable(
     },
     (t) => ({
         questionId: index("categories_questionId_index").on(t.questionId),
+        questionIdUnique: unique("categories_questionId_unique").on(t.questionId),
     }),
 );
 

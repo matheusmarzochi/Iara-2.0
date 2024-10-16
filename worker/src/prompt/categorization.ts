@@ -1,8 +1,8 @@
-import { db } from "../database"
-import { gpt, stringToJson } from "../integration/gpt"
-import { categories } from "../database/schema/category"
-import { Form } from "../database/schema/form"
-import { Question, questions } from "../database/schema/question"
+import { db } from "../../../app/src/database"
+import { promptRequest, stringToJson } from "../integration/prompt"
+import { categories } from "../../../app/src/database/schema/category"
+import { Form } from "../../../app/src/database/schema/form"
+import { Question } from "../../../app/src/database/schema/question"
 import { filterAnswersBySequence, filterQuestionsBySequence } from "./helper"
 
 export const prompt = (question: Question, forms: Form[], categories: number) => {
@@ -75,7 +75,7 @@ export const getCategories = async (researchId: string) => {
         console.log(`getCategories: No Questions for Research ID ${researchId}`)
         return
     }
-    
+
     const forms = await db.query.forms.findMany({
         where: (forms, { eq }) => (eq(forms.researchId, researchId)),
         with: {
@@ -100,13 +100,13 @@ export const getCategories = async (researchId: string) => {
                 filterAnswersBySequence(forms, question.sequence),
                 quantity
             );
-            
-            const output = await gpt(promptInput, "question", question.id);
+
+            const output = await promptRequest(promptInput, "question", question.id);
             const { object } = stringToJson(output);
 
             const { ok, data } = promptValidation(object, quantity);
             isValid = ok
-            
+
             if (!isValid) {
                 attempt++;
                 if (attempt >= 3) {
@@ -116,14 +116,20 @@ export const getCategories = async (researchId: string) => {
                 continue
             }
 
-            // TODO: Use Create or Update (if already exists)
-            await db
-                .insert(categories)
-                .values(data.map(d => ({
-                    name: d,
-                    questionId: question.id,
-                }))
-            )
+            for (const name of data) {
+                await db
+                    .insert(categories)
+                    .values({
+                        name,
+                        questionId: question.id,
+                    })
+                    .onConflictDoUpdate({
+                        target: categories.questionId,
+                        set: {
+                            name,
+                        }
+                    });
+            }
         }
     }
 }

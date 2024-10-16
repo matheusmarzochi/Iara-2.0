@@ -1,10 +1,12 @@
-import { db } from '../database';
-import { gptMessages } from '../database/schema/gpt';
+import { db } from '../../../app/src/database';
+import { gptMessages } from '../../../app/src/database/schema/gpt';
 
-const OPENAI_API_KEY = process.env.OPENAI_API_KEY
-const modelName = "gpt-4o"
+import { ollama } from './providers/ollama'
+import { gpt } from './providers/gpt'
 
-type ChatCompletion = {
+const isOpenAI = process.env.LLM_PROVIDER === "openai"
+
+export type ChatCompletion = {
     id: string;
     object: string;
     created: number;
@@ -26,37 +28,19 @@ type ChatCompletion = {
     system_fingerprint: string;
 }
 
-export const gpt = async (input: string, model_type: string, model_id: string): Promise<string> => {
-    let response
-    let data
+export const promptRequest = async (input: string, model_type: string, model_id: string): Promise<string> => {
+    let data: ChatCompletion | undefined
     let attempt = 1
 
     for (attempt = 1; attempt <= 3; attempt++) {
         try {
-            // Attempt to run the function and return the result if successful
-            response = await fetch('https://api.openai.com/v1/chat/completions', {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json',
-                    'Authorization': `Bearer ${OPENAI_API_KEY}`,
-                },
-                body: JSON.stringify({
-                    model: modelName,
-                    max_tokens: 300,
-                    messages: [{
-                        role: "user",
-                        content: input
-                    }]
-                }),
-            })
+            data = isOpenAI
+                ? await gpt(input)
+                : await ollama(input)
 
-            if (response.status == 200) {
-                data = await response.json() as ChatCompletion
-                break
-            }
         } catch (error) {
             if (error instanceof TypeError) {
-                console.error(`OpenIA: Attempt ${attempt} failed: ${error.message}`);
+                console.error(`${isOpenAI ? "OpenAI" : "Ollama" }: Attempt ${attempt} failed: ${error.message}`);
                 await new Promise(resolve => setTimeout(resolve, 1000));
             }
         }
