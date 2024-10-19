@@ -1,8 +1,9 @@
-import { db } from "../../../app/src/database"
+import { eq } from "drizzle-orm";
+import { db } from "../database"
+import { categories } from "../database/schema"
+import { Form } from "../database/schema/form"
+import { Question } from "../database/schema/question"
 import { promptRequest, stringToJson } from "../integration/prompt"
-import { categories } from "../../../app/src/database/schema/category"
-import { Form } from "../../../app/src/database/schema/form"
-import { Question } from "../../../app/src/database/schema/question"
 import { filterAnswersBySequence, filterQuestionsBySequence } from "./helper"
 
 export const prompt = (question: Question, forms: Form[], categories: number) => {
@@ -76,12 +77,12 @@ export const getCategories = async (researchId: string) => {
         return
     }
 
-    const forms = await db.query.forms.findMany({
+    const forms = (await db.query.forms.findMany({
         where: (forms, { eq }) => (eq(forms.researchId, researchId)),
         with: {
             answers: true
         },
-    })
+    })) as Form[]
 
     if (forms.length == 0) {
         console.log(`getCategories: No Forms for Research ID ${researchId}`)
@@ -93,6 +94,10 @@ export const getCategories = async (researchId: string) => {
     for await (const question of questions) {
         let attempt = 0;
         let isValid = false;
+
+        await db
+            .delete(categories)
+            .where(eq(categories.questionId, question.id))
 
         while (attempt < 3 && !isValid) {
             const promptInput = prompt(
@@ -123,12 +128,6 @@ export const getCategories = async (researchId: string) => {
                         name,
                         questionId: question.id,
                     })
-                    .onConflictDoUpdate({
-                        target: categories.questionId,
-                        set: {
-                            name,
-                        }
-                    });
             }
         }
     }

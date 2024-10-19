@@ -1,18 +1,37 @@
+import { Form } from '../database/schema'
 import {
     filterAnswersBySequence,
     filterQuestionsBySequence,
 } from './helper';
 
 describe('filterAnswersBySequence', () => {
-    const forms = [
+    const forms: Form[] = [
         {
             id: 'form1',
             email: 'test1@example.com',
             createdAt: new Date(),
             researchId: 'research1',
             answers: [
-                { id: 'answer1', createdAt: new Date(), formId: 'form1', score: 10, explanation: 'Good', sequence: 1, purpose: 'Purpose1' },
-                { id: 'answer2', createdAt: new Date(), formId: 'form1', score: 8, explanation: 'Average', sequence: 2, purpose: 'Purpose2' },
+                { 
+                    id: 'answer1',
+                    createdAt: new Date(),
+                    formId: 'form1',
+                    score: 10,
+                    explanation: 'Good',
+                    sequence: 1,
+                    purpose: 'Purpose1',
+                    classifications: []
+                },
+                {
+                    id: 'answer2',
+                    createdAt: new Date(),
+                    formId: 'form1',
+                    score: 8,
+                    explanation: 'Average',
+                    sequence: 2,
+                    purpose: 'Purpose2',
+                    classifications: []
+                },
             ]
         },
         {
@@ -21,8 +40,8 @@ describe('filterAnswersBySequence', () => {
             createdAt: new Date(),
             researchId: 'research2',
             answers: [
-                { id: 'answer3', createdAt: new Date(), formId: 'form2', score: 9, explanation: 'Very Good', sequence: 1, purpose: 'Purpose1' },
-                { id: 'answer4', createdAt: new Date(), formId: 'form2', score: 7, explanation: 'Fair', sequence: 3, purpose: 'Purpose3' },
+                { id: 'answer3', createdAt: new Date(), formId: 'form2', score: 9, explanation: 'Very Good', sequence: 1, purpose: 'Purpose1', classifications: [] },
+                { id: 'answer4', createdAt: new Date(), formId: 'form2', score: 7, explanation: 'Fair', sequence: 3, purpose: 'Purpose3', classifications: [] },
             ]
         }
     ];

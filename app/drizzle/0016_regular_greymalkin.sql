@@ -1,0 +1,1 @@
+ALTER TABLE "reports" ADD CONSTRAINT "reports_researchId_unique" UNIQUE("research_id");

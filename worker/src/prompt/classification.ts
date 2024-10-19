@@ -1,7 +1,7 @@
-import { db } from "../../../app/src/database"
+import { db } from "../database"
 import { promptRequest, stringToJson } from "../integration/prompt"
 import { filterQuestionsBySequence } from "./helper"
-import { Answer, Question, Category, classifications } from "../../../app/src/database/schema"
+import { Answer, Question, Form, Category, classifications } from "../database/schema"
 
 export const prompt = (question: Question, answer: Answer) => {
     let prompt = "Você recebeu uma pesquisa com a seguinte pergunta, resposta e categorias.\n"
@@ -91,12 +91,12 @@ export const getClassification = async (researchId: string) => {
         return
     }
 
-    const forms = await db.query.forms.findMany({
+    const forms = (await db.query.forms.findMany({
         where: (forms, { eq }) => (eq(forms.researchId, researchId)),
         with: {
             answers: true
         },
-    })
+    })) as Form[]
 
     if (forms.length == 0) {
         console.log(`getClassification: No Forms for Research ID ${researchId}`)

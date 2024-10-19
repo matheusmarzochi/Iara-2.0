@@ -1,6 +1,3 @@
-/**
- * Drizzle example schema
- */
 import { index, pgTable, text, timestamp, uuid } from "drizzle-orm/pg-core";
 import { createInsertSchema } from "drizzle-zod";
 

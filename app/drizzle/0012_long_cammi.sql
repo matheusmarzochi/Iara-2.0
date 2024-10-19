@@ -1,0 +1,1 @@
+ALTER TABLE "categories" DROP CONSTRAINT "categories_questionId_unique";

@@ -25,7 +25,7 @@ bash-app:
 		--name iara-app-bash \
 		-v ./app/:/code \
 		-w /code \
-		node:20.18 bash
+		iara-app bash
 
 ollama-init:
 	docker exec -it iara-ollama ollama run llama3.2
@@ -63,3 +63,7 @@ db-migrate:
 		--env-file .env.local \
 		-v ./app/:/code \
 		iara-app npm run db:migrate
+
+db-sync:
+	@rm -rf worker/src/database/
+	@cp -r app/src/database/ worker/src/database

@@ -1,4 +1,4 @@
-import { index, pgTable, text, timestamp, uuid, unique } from 'drizzle-orm/pg-core';
+import { index, pgTable, text, timestamp, uuid, boolean } from 'drizzle-orm/pg-core';
 import { relations } from 'drizzle-orm';
 import { createInsertSchema } from "drizzle-zod";
 import { questions } from './question';
@@ -9,13 +9,13 @@ export const categories = pgTable(
         id: uuid('id').primaryKey().defaultRandom(),
         questionId: uuid('question_id').notNull().references(() => questions.id),
         name: text('name').notNull(),
+        target: boolean('target').notNull().default(false),
         createdAt: timestamp("created_at", { mode: "date", withTimezone: true })
             .notNull()
             .defaultNow(),
     },
     (t) => ({
         questionId: index("categories_questionId_index").on(t.questionId),
-        questionIdUnique: unique("categories_questionId_unique").on(t.questionId),
     }),
 );
 
