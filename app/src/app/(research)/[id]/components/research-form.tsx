@@ -206,18 +206,6 @@ export function ResearchForm({ questions, research }: Props) {
                 </FormItem>
               )}
             />
-
-            <FormField
-              control={form.control}
-              name={`purposes.${index}.sequence`}
-              render={() => (
-                <Input
-                  className="hidden"
-                  defaultValue={question.sequence}
-                  readOnly
-                />
-              )}
-            />
           </div>
         ))}
 

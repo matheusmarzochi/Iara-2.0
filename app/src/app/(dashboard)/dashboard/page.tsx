@@ -1,17 +1,11 @@
 import { auth } from "@clerk/nextjs/server";
-import { count, desc, eq, inArray } from "drizzle-orm";
+import { count, desc, eq } from "drizzle-orm";
 import Link from "next/link";
 import { Badge } from "~/components/ui/badge";
 import { Button } from "~/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "~/components/ui/card";
 import { db } from "~/database";
-import {
-  answers,
-  forms,
-  type Research,
-  researches,
-  users,
-} from "~/database/schema";
+import { forms, type Research, researches, users } from "~/database/schema";
 import { formatters } from "~/lib/utils";
 
 async function getUserResearchs() {
@@ -28,11 +22,10 @@ async function getUserResearchs() {
       title: researches.title,
       status: researches.status,
       createdAt: researches.createdAt,
-      replies: count(answers.id),
+      replies: count(forms.id),
     })
     .from(researches)
     .leftJoin(forms, eq(forms.researchId, researches.id))
-    .leftJoin(answers, eq(answers.formId, forms.id))
     .where(eq(researches.userId, user))
     .orderBy(desc(researches.createdAt))
     .groupBy(researches.id);

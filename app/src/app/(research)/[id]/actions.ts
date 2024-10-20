@@ -19,9 +19,10 @@ export const replyResearchAction = createServerAction()
       .returning({ id: forms.id });
 
     await db.insert(answers).values(
-      purposes.map((purpose) => ({
+      purposes.map((purpose, index) => ({
         ...purpose,
         formId: form.id,
+        sequence: index + 1,
         score: Number(purpose.score.replace(/\D+/g, "")),
       })),
     );

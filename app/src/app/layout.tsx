@@ -17,7 +17,12 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <ClerkProvider localization={ptBR}>
+    <ClerkProvider
+      localization={ptBR}
+      afterSignOutUrl="/"
+      signInFallbackRedirectUrl="/dashboard"
+      signUpFallbackRedirectUrl="/dashboard"
+    >
       <html lang="pt-BR" suppressHydrationWarning>
         <body>
           <ThemeProvider
