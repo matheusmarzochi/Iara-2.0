@@ -4,7 +4,7 @@ import { db } from "~/database";
 import { notFound } from "next/navigation";
 import { formatters } from "~/lib/utils";
 import { and, count, eq, inArray } from "drizzle-orm";
-import { answers, forms, researches, users } from "~/database/schema";
+import { answers, forms, reports, Research, researches, users, Answer, categories } from "~/database/schema";
 import { auth } from "@clerk/nextjs/server";
 
 type Props = {
@@ -12,6 +12,7 @@ type Props = {
     id: string;
   };
 };
+
 
 async function getResearchById(id: string) {
   const { userId } = auth();
@@ -27,12 +28,11 @@ async function getResearchById(id: string) {
       title: researches.title,
       description: researches.description,
       status: researches.status,
-      answers: count(answers.id),
+      forms: count(forms.id),
       createdAt: researches.createdAt,
     })
     .from(researches)
     .leftJoin(forms, eq(forms.researchId, researches.id))
-    .leftJoin(answers, eq(answers.formId, forms.id))
     .where(and(eq(researches.id, id), eq(researches.userId, user)))
     .limit(1)
     .groupBy(researches.id);
@@ -40,8 +40,25 @@ async function getResearchById(id: string) {
   return research;
 }
 
+async function getReportByResearchId(id: string) {
+  const { userId } = auth();
+
+  const user = db
+    .select({ id: users.id })
+    .from(users)
+    .where(eq(users.clerkId, userId as string));
+
+  const report = await db.query.reports.findFirst({
+    where: eq(reports.researchId, id)
+  })
+
+  return report;
+}
+
+
 export default async function ResearchPage({ params }: Props) {
   const research = await getResearchById(params.id);
+  const report = await getReportByResearchId(params.id);
 
   if (!research) {
     return notFound();
@@ -62,7 +79,10 @@ export default async function ResearchPage({ params }: Props) {
 
         <div>
           <p>Criado em: {formatters.date(research.createdAt)}</p>
-          <p>Respostas: {research.answers}</p>
+          <p>Respostas: {research.forms}</p>
+        </div>
+        <div>
+          {JSON.stringify(report, null, 2)}
         </div>
 
         <CopyLinkForm research={research.id} status={research.status} />

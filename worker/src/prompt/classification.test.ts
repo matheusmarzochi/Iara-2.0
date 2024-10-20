@@ -1,10 +1,11 @@
+import { Category } from './../database/schema';
 import { promptValidation } from './classification';
 
 describe('promptValidation', () => {
-    const categories = [
-        { id: '1', name: 'category1', createdAt: new Date(), questionId: 'q1' },
-        { id: '2', name: 'category2', createdAt: new Date(), questionId: 'q2' },
-        { id: '3', name: 'category3', createdAt: new Date(), questionId: 'q3' },
+    const categories: Category[] = [
+        { id: '1', name: 'category1', createdAt: new Date(), questionId: 'q1', target: false },
+        { id: '2', name: 'category2', createdAt: new Date(), questionId: 'q2', target: false },
+        { id: '3', name: 'category3', createdAt: new Date(), questionId: 'q3', target: false },
     ];
 
     test('should return false when output is not an object', () => {

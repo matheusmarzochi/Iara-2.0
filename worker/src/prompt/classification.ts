@@ -1,7 +1,9 @@
-import { db } from "../database"
-import { gpt, stringToJson } from "../integration/gpt"
+import { db } from "../../../app/src/database"
+import { promptRequest, stringToJson } from "../integration/prompt"
 import { filterQuestionsBySequence } from "./helper"
-import { Answer, Question, Category, classifications } from "../database/schema"
+import { Answer, Question, Form, Category, classifications } from "../../../app/src/database/schema"
+
+const MAX_ATTEMPT = 3
 
 export const prompt = (question: Question, answer: Answer) => {
     let prompt = "Você recebeu uma pesquisa com a seguinte pergunta, resposta e categorias.\n"
@@ -31,7 +33,7 @@ export const prompt = (question: Question, answer: Answer) => {
 
     prompt += `{\n`
     question.categories.forEach((category, index) => {
-        prompt += `   "${category.name}": 100${ question.categories.length > index + 1 ? "," : "" }\n`
+        prompt += `   "${category.name}": 100${question.categories.length > index + 1 ? "," : ""}\n`
     })
     prompt += `}`
 
@@ -58,7 +60,7 @@ export const promptValidation = (output: any, categories: Category[]): PromptVal
 
     // Iterate through the keys of output
     for (const key in output) {
-        if (categoryNames.includes(key)) {
+        if (categoryNames.includes(key) && Number.isInteger(output[key])) {
             result.data[key] = output[key];
         } else {
             return { ok: false, data: {} };
@@ -91,12 +93,12 @@ export const getClassification = async (researchId: string) => {
         return
     }
 
-    const forms = await db.query.forms.findMany({
+    const forms = (await db.query.forms.findMany({
         where: (forms, { eq }) => (eq(forms.researchId, researchId)),
         with: {
             answers: true
         },
-    })
+    })) as Form[]
 
     if (forms.length == 0) {
         console.log(`getClassification: No Forms for Research ID ${researchId}`)
@@ -105,7 +107,7 @@ export const getClassification = async (researchId: string) => {
 
     const total = forms.reduce((acc, form) => {
         return acc + form.answers.length
-    },0)
+    }, 0)
     let process = 0
 
     for await (const form of forms) {
@@ -113,7 +115,7 @@ export const getClassification = async (researchId: string) => {
             let attempt = 0;
             let isValid = false;
 
-            console.log(`Progression: ${process *100 / total}`)
+            console.log(`Progression: ${process * 100 / total}`)
 
             const question = filterQuestionsBySequence(questions, answer.sequence)[0]
 
@@ -133,7 +135,7 @@ export const getClassification = async (researchId: string) => {
                 }
             }
 
-            while (attempt < 3 && !isValid) {
+            while (attempt <= MAX_ATTEMPT && !isValid) {
                 const promptInput = prompt(
                     question,
                     answer
@@ -141,7 +143,7 @@ export const getClassification = async (researchId: string) => {
 
                 isValid = true
 
-                const output = await gpt(promptInput, "answer", answer.id);
+                const output = await promptRequest(promptInput, "answer", answer.id);
                 const { object } = stringToJson(output);
 
                 const { ok, data } = promptValidation(object, question.categories);
@@ -149,14 +151,13 @@ export const getClassification = async (researchId: string) => {
 
                 if (!isValid) {
                     attempt++;
-                    if (attempt >= 3) {
+                    if (attempt >= MAX_ATTEMPT) {
                         console.log(`Validation failed after ${attempt} attempts for answer ID ${answer.id}`);
                     }
 
                     continue
                 }
 
-                // TODO: Use Create or Update (if already exists)
                 await db
                     .insert(classifications)
                     .values({
@@ -164,6 +165,13 @@ export const getClassification = async (researchId: string) => {
                         names: Object.keys(data),
                         affinities: Object.values(data),
                     })
+                    .onConflictDoUpdate({
+                        target: classifications.answerId,
+                        set: {
+                            names: Object.keys(data),
+                            affinities: Object.values(data),
+                        }
+                    });
                 process++
             }
         }

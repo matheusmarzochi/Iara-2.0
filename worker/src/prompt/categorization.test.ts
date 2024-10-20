@@ -70,7 +70,8 @@ describe('prompt function', () => {
                         score: 5,
                         explanation: 'N/A',
                         sequence: 1,
-                        purpose: 'Ler livros'
+                        purpose: 'Ler livros',
+                        classifications: [],
                     },
                     {
                         id: 'a2',
@@ -79,7 +80,8 @@ describe('prompt function', () => {
                         score: 5,
                         explanation: 'N/A',
                         sequence: 2,
-                        purpose: 'Assistir filmes'
+                        purpose: 'Assistir filmes',
+                        classifications: [],
                     }
                 ]
             },
@@ -96,7 +98,8 @@ describe('prompt function', () => {
                         score: 5,
                         explanation: 'N/A',
                         sequence: 1,
-                        purpose: 'Jogar futebol'
+                        purpose: 'Jogar futebol',
+                        classifications: []
                     },
                     {
                         id: 'a4',
@@ -105,7 +108,8 @@ describe('prompt function', () => {
                         score: 5,
                         explanation: 'N/A',
                         sequence: 2,
-                        purpose: 'Correr'
+                        purpose: 'Correr',
+                        classifications: []
                     }
                 ]
             }

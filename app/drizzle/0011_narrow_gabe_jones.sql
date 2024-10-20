@@ -1,0 +1,1 @@
+ALTER TABLE "classifications" DROP CONSTRAINT "classifications_answerId_unique";

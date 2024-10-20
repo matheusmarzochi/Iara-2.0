@@ -1,8 +1,9 @@
-import { db } from "../database"
-import { gpt, stringToJson } from "../integration/gpt"
-import { categories } from "../database/schema/category"
-import { Form } from "../database/schema/form"
-import { Question, questions } from "../database/schema/question"
+import { eq } from "../../../app/node_modules/drizzle-orm";
+import { db } from "../../../app/src/database"
+import { categories } from "../../../app/src/database/schema"
+import { Form } from "../../../app/src/database/schema/form"
+import { Question } from "../../../app/src/database/schema/question"
+import { promptRequest, stringToJson } from "../integration/prompt"
 import { filterAnswersBySequence, filterQuestionsBySequence } from "./helper"
 
 export const prompt = (question: Question, forms: Form[], categories: number) => {
@@ -75,13 +76,13 @@ export const getCategories = async (researchId: string) => {
         console.log(`getCategories: No Questions for Research ID ${researchId}`)
         return
     }
-    
-    const forms = await db.query.forms.findMany({
+
+    const forms = (await db.query.forms.findMany({
         where: (forms, { eq }) => (eq(forms.researchId, researchId)),
         with: {
             answers: true
         },
-    })
+    })) as Form[]
 
     if (forms.length == 0) {
         console.log(`getCategories: No Forms for Research ID ${researchId}`)
@@ -94,19 +95,23 @@ export const getCategories = async (researchId: string) => {
         let attempt = 0;
         let isValid = false;
 
+        await db
+            .delete(categories)
+            .where(eq(categories.questionId, question.id))
+
         while (attempt < 3 && !isValid) {
             const promptInput = prompt(
                 filterQuestionsBySequence(questions, question.sequence)[0],
                 filterAnswersBySequence(forms, question.sequence),
                 quantity
             );
-            
-            const output = await gpt(promptInput, "question", question.id);
+
+            const output = await promptRequest(promptInput, "question", question.id);
             const { object } = stringToJson(output);
 
             const { ok, data } = promptValidation(object, quantity);
             isValid = ok
-            
+
             if (!isValid) {
                 attempt++;
                 if (attempt >= 3) {
@@ -116,14 +121,14 @@ export const getCategories = async (researchId: string) => {
                 continue
             }
 
-            // TODO: Use Create or Update (if already exists)
-            await db
-                .insert(categories)
-                .values(data.map(d => ({
-                    name: d,
-                    questionId: question.id,
-                }))
-            )
+            for (const name of data) {
+                await db
+                    .insert(categories)
+                    .values({
+                        name,
+                        questionId: question.id,
+                    })
+            }
         }
     }
 }

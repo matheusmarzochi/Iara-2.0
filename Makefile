@@ -25,18 +25,33 @@ bash-app:
 		--name iara-app-bash \
 		-v ./app/:/code \
 		-w /code \
-		node:20.18 bash
+		iara-app bash
+
+ollama-init:
+	docker exec -it iara-ollama ollama run llama3.2
 
 bash-worker:
 	@docker run -ti --rm \
+		--net app_iara \
 		--name iara-worker-bash \
-		-v ./worker/:/code \
-		-w /code \
+		--env-file .env.local \
+		-v ./worker/:/code/worker \
+		-v ./app/node_modules:/code/app/node_modules \
+		-v ./app/src/database:/code/app/src/database \
+		iara-worker bash
+
+seed-worker:
+	@docker run -ti --rm \
+		--net app_iara \
+		--name iara-worker-bash \
+		--env-file .env.local \
+		-v ./worker/:/code/worker \
+		-v ./app/src/database:/code/app/src/database \
+		-w /code/worker \
 		iara-worker bash
 
 db-generate:
 	@docker run -ti --rm \
-		--net app_iara \
 		--name iara-db-generate \
 		--env-file .env.local \
 		-v ./app/:/code \
@@ -49,3 +64,7 @@ db-migrate:
 		--env-file .env.local \
 		-v ./app/:/code \
 		iara-app npm run db:migrate
+
+db-sync:
+	@rm -rf worker/src/database/
+	@cp -r app/src/database/ worker/src/database

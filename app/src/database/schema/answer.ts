@@ -2,6 +2,7 @@ import { index, integer, pgTable, text, timestamp, uuid } from 'drizzle-orm/pg-c
 import { relations } from 'drizzle-orm';
 import { createInsertSchema } from "drizzle-zod";
 import { forms } from './form';
+import { classifications, Classification } from './classification'
 
 export const answers = pgTable(
     'answers',
@@ -21,13 +22,14 @@ export const answers = pgTable(
     }),
 );
 
-export const answersRelations = relations(answers, ({ one }) => ({
+export const answersRelations = relations(answers, ({ one, many }) => ({
     form: one(forms, {
         fields: [answers.formId],
         references: [forms.id]
     }),
+    classifications: many(classifications)
 }))
 
-export type Answer = typeof answers.$inferSelect;
+export type Answer = typeof answers.$inferSelect & { classifications: Classification[] };
 
 export const createAnswerSchema = createInsertSchema(answers);

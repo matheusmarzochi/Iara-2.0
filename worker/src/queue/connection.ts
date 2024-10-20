@@ -102,7 +102,7 @@ class Producer {
                 durable: true,
             });
 
-            channel.sendToQueue(this.queueName, Buffer.from(message));
+            await channel.sendToQueue(this.queueName, Buffer.from(message));
             console.log(`Message sent to queue ${this.queueName}: ${message}`);
         } catch (error) {
             console.error('Error producing message:', error);

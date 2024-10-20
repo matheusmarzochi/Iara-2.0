@@ -33,7 +33,9 @@ services:
     env_file:
       - .env.local
     volumes:
-      - ./worker:/code
+      - ./worker:/code/worker
+      - ./app/node_modules:/code/app/node_modules
+      - ./app/src/database:/code/app/src/database
     command: npm run dev
   rabbitmq:
     image: rabbitmq:3-management
@@ -102,5 +104,21 @@ services:
     command:
       - "http"
       - "http://iara-app:3000"
+  ollama:
+    image: ollama/ollama
+    container_name: iara-ollama
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - driver: nvidia
+              count: 1
+              capabilities: [gpu]
+    networks:
+      - iara
+    volumes:
+      - ./ollama:/root/.ollama
+    expose:
+      - 11434
 networks:
   iara:
