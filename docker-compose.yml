@@ -34,6 +34,7 @@ services:
       - .env.local
     volumes:
       - ./worker:/code/worker
+      - ./app/node_modules:/code/app/node_modules
       - ./app/src/database:/code/app/src/database
     command: npm run dev
   rabbitmq:

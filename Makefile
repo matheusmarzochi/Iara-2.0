@@ -36,6 +36,7 @@ bash-worker:
 		--name iara-worker-bash \
 		--env-file .env.local \
 		-v ./worker/:/code/worker \
+		-v ./app/node_modules:/code/app/node_modules \
 		-v ./app/src/database:/code/app/src/database \
 		iara-worker bash
 

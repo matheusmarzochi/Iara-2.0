@@ -4,7 +4,7 @@ import { db } from "~/database";
 import { notFound } from "next/navigation";
 import { formatters } from "~/lib/utils";
 import { and, count, eq, inArray } from "drizzle-orm";
-import { answers, forms, Research, researches, users, Answer, categories } from "~/database/schema";
+import { answers, forms, reports, Research, researches, users, Answer, categories } from "~/database/schema";
 import { auth } from "@clerk/nextjs/server";
 
 type Props = {
@@ -14,135 +14,51 @@ type Props = {
 };
 
 
-type ScoreBox = {
-  fit: number
-  neutral: number
-  unfit: number
-}
-type PointOfInterest = {
-  name: string
-  score_box: ScoreBox
-  answers: Answer[]
-}
-
-type StrategyInsights = {
-  improve: string[]
-  adjust: string[]
-  develop: string[]
-  focus: string[]
-  pivot: string[]
-  abandon: string[]
-}
-
-type QuestionReport = {
-  score_box: ScoreBox
-  point_of_interests: PointOfInterest[]
-  strategy_insights: StrategyInsights
-  total_answer: number
-  total_viewers: number
-  total_point_of_interests: number
-}
-
-async function getResearchById(id: string): Promise<Research> {
+async function getResearchById(id: string) {
   const { userId } = auth();
 
-  
   const user = db
     .select({ id: users.id })
     .from(users)
     .where(eq(users.clerkId, userId as string));
 
-  const research = await db.query.researches.findFirst({
-    where: eq(researches.id, id),
-    with: {
-      forms: {
-        columns: {
-          id: true
-        },
-        with: {
-          answers: {
-            with: {
-              classifications: {
-                columns: {
-                  affinities: true,
-                  names: true
-                }
-              }
-            },
-            columns: {
-              purpose: true,
-              score: true,
-              sequence: true,
-              explanation: true,
-            }
-          }
-        }
-      },
-      questions: {
-        columns: {
-          purpose: true,
-          sequence: true,
-          explanation: true,
-          score: true,
-        },
-        with: {
-          categories: {
-            columns: {
-              name: true
-            }
-          }
-        }
-      }
-    },
-  }) as Research
+  const [research] = await db
+    .select({
+      id: researches.id,
+      title: researches.title,
+      description: researches.description,
+      status: researches.status,
+      forms: count(forms.id),
+      createdAt: researches.createdAt,
+    })
+    .from(researches)
+    .leftJoin(forms, eq(forms.researchId, researches.id))
+    .where(and(eq(researches.id, id), eq(researches.userId, user)))
+    .limit(1)
+    .groupBy(researches.id);
 
   return research;
 }
-/*
 
-async function getReportByResearchID(research: Research) {
-  const questionsReport: QuestionReport[] = []
-  const questionsCategories = research.questions.map(q => q.categories)
+async function getReportByResearchId(id: string) {
+  const { userId } = auth();
 
-  questionsCategories.forEach((caregories, qindex) => {
-    const answersByQuestion = answers.map(a => a.answers[qindex])
-    const pointOfInterests = caregories.map(category => {
-      const answersByCategory = answersByQuestion.filter(a => filterByCategory(a, 5, category.name))
+  const user = db
+    .select({ id: users.id })
+    .from(users)
+    .where(eq(users.clerkId, userId as string));
 
-      const pointOfInterest: PointOfInterest = {
-        name: category.name,
-        score_box: scoreBoxCalculation(answersByCategory),
-        answers: answersByCategory,
-      }
-
-      return pointOfInterest
-    })
-
-    const questionReport: QuestionReport = {
-      score_box: sumScoreBox(pointOfInterests),
-      point_of_interests: pointOfInterests,
-      strategy_insights: calculateStrategyInsights(pointOfInterests, caregories),
-      total_point_of_interests: 0,
-      total_answer: answers.length,
-      total_viewers: 0,
-    }
-
-    questionReport.total_point_of_interests = calculateTotalPointsOfInterests(questionReport)
-
-    questionsReport.push(questionReport)
+  const report = await db.query.reports.findFirst({
+    where: eq(reports.researchId, id)
   })
 
-  const response: ReportGetResponse = {
-    id: report.id,
-    research_id: research.id,
-    questions_report: questionsReport,
-    created_at: report.created_at,
-  }
+  return report;
 }
 
-*/
+
 export default async function ResearchPage({ params }: Props) {
   const research = await getResearchById(params.id);
+  const report = await getReportByResearchId(params.id);
 
   if (!research) {
     return notFound();
@@ -163,10 +79,10 @@ export default async function ResearchPage({ params }: Props) {
 
         <div>
           <p>Criado em: {formatters.date(research.createdAt)}</p>
-          {<p>Respostas: {research.forms.length}</p>}
+          <p>Respostas: {research.forms}</p>
         </div>
         <div>
-          {JSON.stringify(research, null, 2)}
+          {JSON.stringify(report, null, 2)}
         </div>
 
         <CopyLinkForm research={research.id} status={research.status} />

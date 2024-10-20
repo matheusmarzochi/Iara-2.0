@@ -1,8 +1,8 @@
-import { eq } from "drizzle-orm";
-import { db } from "../database"
-import { categories } from "../database/schema"
-import { Form } from "../database/schema/form"
-import { Question } from "../database/schema/question"
+import { eq } from "../../../app/node_modules/drizzle-orm";
+import { db } from "../../../app/src/database"
+import { categories } from "../../../app/src/database/schema"
+import { Form } from "../../../app/src/database/schema/form"
+import { Question } from "../../../app/src/database/schema/question"
 import { promptRequest, stringToJson } from "../integration/prompt"
 import { filterAnswersBySequence, filterQuestionsBySequence } from "./helper"
 

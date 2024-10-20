@@ -1,6 +1,6 @@
-import { db } from '../database'
-import { eq } from 'drizzle-orm'
-import { reports, researches, type Research } from '../database/schema';
+import { db } from '../../../app/src/database'
+import { eq } from '../../../app/node_modules/drizzle-orm'
+import { reports, researches, type Research } from '../../../app/src/database/schema';
 
 interface ScoreBox {
     fit: number

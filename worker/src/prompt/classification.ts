@@ -1,7 +1,9 @@
-import { db } from "../database"
+import { db } from "../../../app/src/database"
 import { promptRequest, stringToJson } from "../integration/prompt"
 import { filterQuestionsBySequence } from "./helper"
-import { Answer, Question, Form, Category, classifications } from "../database/schema"
+import { Answer, Question, Form, Category, classifications } from "../../../app/src/database/schema"
+
+const MAX_ATTEMPT = 3
 
 export const prompt = (question: Question, answer: Answer) => {
     let prompt = "Você recebeu uma pesquisa com a seguinte pergunta, resposta e categorias.\n"
@@ -58,7 +60,7 @@ export const promptValidation = (output: any, categories: Category[]): PromptVal
 
     // Iterate through the keys of output
     for (const key in output) {
-        if (categoryNames.includes(key)) {
+        if (categoryNames.includes(key) && Number.isInteger(output[key])) {
             result.data[key] = output[key];
         } else {
             return { ok: false, data: {} };
@@ -133,7 +135,7 @@ export const getClassification = async (researchId: string) => {
                 }
             }
 
-            while (attempt < 3 && !isValid) {
+            while (attempt <= MAX_ATTEMPT && !isValid) {
                 const promptInput = prompt(
                     question,
                     answer
@@ -149,14 +151,13 @@ export const getClassification = async (researchId: string) => {
 
                 if (!isValid) {
                     attempt++;
-                    if (attempt >= 8) {
+                    if (attempt >= MAX_ATTEMPT) {
                         console.log(`Validation failed after ${attempt} attempts for answer ID ${answer.id}`);
                     }
 
                     continue
                 }
 
-                // TODO: Use Create or Update (if already exists)
                 await db
                     .insert(classifications)
                     .values({
