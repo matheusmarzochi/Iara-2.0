@@ -4,15 +4,24 @@ import { db } from "~/database";
 import { notFound } from "next/navigation";
 import { formatters } from "~/lib/utils";
 import { and, count, eq, inArray } from "drizzle-orm";
-import { answers, forms, reports, Research, researches, users, Answer, categories } from "~/database/schema";
+import {
+  forms,
+  reports,
+  type Research,
+  researches,
+  users,
+} from "~/database/schema";
 import { auth } from "@clerk/nextjs/server";
+import { Badge } from "~/components/ui/badge";
+import { Button } from "~/components/ui/button";
+import Link from "next/link";
+import { MoveRightIcon } from "lucide-react";
 
 type Props = {
   params: {
     id: string;
   };
 };
-
 
 async function getResearchById(id: string) {
   const { userId } = auth();
@@ -41,20 +50,12 @@ async function getResearchById(id: string) {
 }
 
 async function getReportByResearchId(id: string) {
-  const { userId } = auth();
-
-  const user = db
-    .select({ id: users.id })
-    .from(users)
-    .where(eq(users.clerkId, userId as string));
-
   const report = await db.query.reports.findFirst({
-    where: eq(reports.researchId, id)
-  })
+    where: eq(reports.researchId, id),
+  });
 
   return report;
 }
-
 
 export default async function ResearchPage({ params }: Props) {
   const research = await getResearchById(params.id);
@@ -63,6 +64,28 @@ export default async function ResearchPage({ params }: Props) {
   if (!research) {
     return notFound();
   }
+
+  const isResearchActive = research.status === "CREATED";
+  const isResearchFinished = research.status === "FINISHED";
+
+  const status = (status: Research["status"]) =>
+    ({
+      CREATED: (
+        <Badge className="whitespace-nowrap w-fit bg-yellow-500 text-black hover:bg-yellow-400">
+          Em Andamento
+        </Badge>
+      ),
+      FINISHED: (
+        <Badge className="whitespace-nowrap w-fit bg-green-400 text-black hover:bg-green-300">
+          Encerrada
+        </Badge>
+      ),
+      PROCESSING: (
+        <Badge className="whitespace-nowrap w-fit bg-orange-500 text-black hover:bg-orange-400">
+          Processando
+        </Badge>
+      ),
+    })[status];
 
   return (
     <div className="relative">
@@ -81,14 +104,34 @@ export default async function ResearchPage({ params }: Props) {
           <p>Criado em: {formatters.date(research.createdAt)}</p>
           <p>Respostas: {research.forms}</p>
         </div>
-        <div>
-          {JSON.stringify(report, null, 2)}
-        </div>
+        <div>{JSON.stringify(report, null, 2)}</div>
 
-        <CopyLinkForm research={research.id} status={research.status} />
+        {isResearchActive ? (
+          <CopyLinkForm research={research.id} status={research.status} />
+        ) : null}
+
+        {status(research.status)}
+
+        {isResearchFinished ? (
+          <div className="text-balance space-y-4">
+            <p className="text-sm">
+              Sua pesquisa foi precessada, você pode ver os seus resultados
+              clicando no botão abaixo:
+            </p>
+
+            <Button size="sm" className="gap-2 group" asChild>
+              <Link href={`/researchs/${research.id}/reports`}>
+                Ver Relatório{" "}
+                <MoveRightIcon className="size-4 group-hover:translate-x-1 transition-all" />
+              </Link>
+            </Button>
+          </div>
+        ) : null}
       </section>
 
-      <CloseResearch research={research.id} status={research.status} />
+      {isResearchActive ? (
+        <CloseResearch research={research.id} status={research.status} />
+      ) : null}
     </div>
   );
 }
