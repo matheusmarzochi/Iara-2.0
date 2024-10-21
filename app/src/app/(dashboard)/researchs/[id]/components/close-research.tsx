@@ -47,7 +47,7 @@ export function CloseResearch({ research, status }: Props) {
   });
 
   return (
-    <div className="fixed bottom-4 w-full left-0">
+    <div className="fixed bottom-20 w-full left-0">
       <div className="container w-full flex [&>*]:w-full gap-4">
         <Button size="sm" variant="outline" asChild>
           <Link href="/dashboard">Voltar</Link>
