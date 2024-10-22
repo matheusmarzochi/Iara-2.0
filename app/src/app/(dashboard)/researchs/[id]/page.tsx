@@ -49,18 +49,9 @@ async function getResearchById(id: string) {
   return research;
 }
 
-async function getReportByResearchId(id: string) {
-  const report = await db.query.reports.findFirst({
-    where: eq(reports.researchId, id),
-  });
-
-  return report;
-}
-
 export default async function ResearchPage({ params }: Props) {
   const research = await getResearchById(params.id);
-  const report = await getReportByResearchId(params.id);
-
+  
   if (!research) {
     return notFound();
   }
@@ -104,7 +95,6 @@ export default async function ResearchPage({ params }: Props) {
           <p>Criado em: {formatters.date(research.createdAt)}</p>
           <p>Respostas: {research.forms}</p>
         </div>
-        <div>{JSON.stringify(report, null, 2)}</div>
 
         {isResearchActive ? (
           <CopyLinkForm research={research.id} status={research.status} />
