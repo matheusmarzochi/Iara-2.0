@@ -1,5 +1,4 @@
-import { Question } from "../database/schema/question"
-import { Form } from "../database/schema/form"
+import { Question, Form } from "../../../app/src/database/schema"
 import {
     prompt,
     promptValidation

@@ -1,4 +1,4 @@
-import { Category } from './../database/schema';
+import { Category } from '../../../app/src/database/schema';
 import { promptValidation } from './classification';
 
 describe('promptValidation', () => {
