@@ -20,6 +20,14 @@ test-worker:
 		-w /code \
 		iara-worker npm test
 
+app-build:
+	@docker run -ti --rm \
+		--name iara-app-bash \
+		--env-file .env.local \
+		-v ./app/:/code \
+		-w /code \
+		iara-app npm run build
+
 bash-app:
 	@docker run -ti --rm \
 		--name iara-app-bash \

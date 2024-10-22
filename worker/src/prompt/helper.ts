@@ -1,5 +1,5 @@
-import { Form } from "../../../app/src/database/schema/form"
-import { Question } from "../../../app/src/database/schema/question"
+import { type Form, Question } from "../../../app/src/database/schema"
+
 
 export const filterQuestionsBySequence = (questions: Question[], sequence: number): Question[] => {
     return questions.filter(question => question.sequence === sequence);

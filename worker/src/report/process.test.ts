@@ -1,5 +1,5 @@
 import { buildQuestionReports } from './process'; 
-import { Research } from '../database/schema'
+import { Research } from '../../../app/src/database/schema'
 
 describe('buildQuestionReports', () => {
   test('should generate correct QuestionReport for a simple ResearchObject', () => {
@@ -123,7 +123,6 @@ describe('buildQuestionReports', () => {
     // Test for Question 1
     const report1 = reports[0];
     expect(report1.total_forms).toBe(2);
-    expect(report1.total_answers).toBe(2);
     expect(report1.score_box).toEqual({ fit: 1, neutral: 1, unfit: 0 });
 
     expect(report1.strategy_insights).toEqual({
@@ -143,7 +142,6 @@ describe('buildQuestionReports', () => {
     // Test for Question 2
     const report2 = reports[1];
     expect(report2.total_forms).toBe(1);
-    expect(report2.total_answers).toBe(1);
     expect(report2.score_box).toEqual({ fit: 0, neutral: 1, unfit: 0 });
 
     expect(report2.strategy_insights).toEqual({
@@ -210,7 +208,6 @@ describe('buildQuestionReports', () => {
 
     const report = reports[0];
     expect(report.total_forms).toBe(1);
-    expect(report.total_answers).toBe(1);
     expect(report.score_box).toEqual({ fit: 1, neutral: 0, unfit: 0 });
     expect(report.point_of_interests.length).toBe(0);
     expect(report.strategy_insights).toEqual({
@@ -300,7 +297,6 @@ describe('buildQuestionReports', () => {
     expect(reports.length).toBe(1);
     const report = reports[0];
     expect(report.total_forms).toBe(1);
-    expect(report.total_answers).toBe(2);
     expect(report.score_box).toEqual({ fit: 1, neutral: 0, unfit: 1 });
 
     expect(report.point_of_interests.length).toBe(2);
@@ -441,7 +437,6 @@ describe('buildQuestionReports', () => {
     const report = reports[0];
 
     expect(report.total_forms).toBe(3);
-    expect(report.total_answers).toBe(3);
     expect(report.score_box).toEqual({ fit: 1, neutral: 1, unfit: 1 });
 
     expect(report.strategy_insights).toEqual({
@@ -486,7 +481,6 @@ describe('buildQuestionReports', () => {
     const report = reports[0];
 
     expect(report.total_forms).toBe(0);
-    expect(report.total_answers).toBe(0);
     expect(report.score_box).toEqual({ fit: 0, neutral: 0, unfit: 0 });
     expect(report.strategy_insights).toEqual({
       improve: [],
@@ -590,7 +584,6 @@ describe('buildQuestionReports', () => {
     const report = reports[0];
 
     expect(report.total_forms).toBe(1);
-    expect(report.total_answers).toBe(3);
     expect(report.score_box).toEqual({ fit: 1, neutral: 1, unfit: 1 });
 
     // Since fit, neutral, and unfit all have counts of 1, the code defaults to 'fit' in ties
@@ -663,7 +656,6 @@ describe('buildQuestionReports', () => {
     const report = reports[0];
 
     expect(report.total_forms).toBe(1);
-    expect(report.total_answers).toBe(1);
     expect(report.score_box).toEqual({ fit: 1, neutral: 0, unfit: 0 });
 
     expect(report.point_of_interests.length).toBe(1);

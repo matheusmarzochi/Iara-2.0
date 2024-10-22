@@ -1,44 +1,6 @@
 import { db } from '../../../app/src/database'
 import { eq } from '../../../app/node_modules/drizzle-orm'
-import { reports, researches, type Research } from '../../../app/src/database/schema';
-
-interface ScoreBox {
-    fit: number
-    neutral: number
-    unfit: number
-}
-
-interface PointOfInterest {
-    name: string
-    score_box: ScoreBox
-    answers: Array<{
-        purpose: string;
-        score: number;
-        explanation: string;
-        sequence: number;
-        classifications: Array<{
-            names: string[];
-            affinities: number[];
-        }>;
-    }>
-}
-
-interface StrategyInsights {
-    improve: Array<string>;
-    adjust: Array<string>;
-    develop: Array<string>;
-    focus: Array<string>;
-    pivot: Array<string>;
-    abandon: Array<string>;
-}
-
-export type QuestionReport = {
-    score_box: ScoreBox
-    point_of_interests: Array<PointOfInterest>
-    total_forms: number
-    strategy_insights: StrategyInsights;
-    total_answers: number
-}
+import { reports, researches, type Research, PointOfInterest, ScoreBox, StrategyInsights, ReportData } from '../../../app/src/database/schema';
 
 export const getReport = async (researchId: string) => {
     const research = await db.query.researches.findFirst({
@@ -108,12 +70,13 @@ export const getReport = async (researchId: string) => {
 }
 
 
-export const buildQuestionReports = (research: Research): Array<QuestionReport> => {
-    const questionReports: Array<QuestionReport> = [];
+export const buildQuestionReports = (research: Research): Array<ReportData> => {
+    const questionReports: Array<ReportData> = [];
 
     for (const question of research.questions) {
-        const questionReport: QuestionReport = {
+        const questionReport: ReportData = {
             score_box: { fit: 0, neutral: 0, unfit: 0 },
+            question_id: question.id,
             point_of_interests: [],
             strategy_insights: {
                 improve: [],
@@ -124,7 +87,6 @@ export const buildQuestionReports = (research: Research): Array<QuestionReport> 
                 abandon: [],
             },
             total_forms: 0,
-            total_answers: 0,
         };
 
         // Map to collect PointOfInterest by name (from classifications)
@@ -147,7 +109,6 @@ export const buildQuestionReports = (research: Research): Array<QuestionReport> 
             for (const answer of form.answers) {
                 if (answer.sequence === question.sequence) {
                     formHasAnswerToQuestion = true;
-                    questionReport.total_answers += 1;
 
                     // Update overall score_box
                     if (answer.score >= 4) {

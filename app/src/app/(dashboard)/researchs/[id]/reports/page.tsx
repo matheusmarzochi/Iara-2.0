@@ -3,8 +3,7 @@ import { and, eq } from "drizzle-orm";
 import { notFound } from "next/navigation";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "~/components/ui/tabs";
 import { db } from "~/database";
-import { researches, users } from "~/database/schema";
-import data from "../../report.json";
+import { researches, users, reports, type Report, StrategyKeys } from "~/database/schema";
 import {
   Accordion,
   AccordionContent,
@@ -16,47 +15,6 @@ type Props = {
   params: {
     id: string;
   };
-};
-
-type ScoreBox = {
-  fit: number;
-  neutral: number;
-  unfit: number;
-};
-
-type StrategyKeys =
-  | "improve"
-  | "adjust"
-  | "develop"
-  | "focus"
-  | "pivot"
-  | "abandon";
-
-type Report = {
-  id: string;
-  researchId: string;
-  data: Array<{
-    question_id: string;
-    score_box: ScoreBox;
-    point_of_interests: Array<{
-      name: string;
-      score_box: ScoreBox;
-      answers: Array<{
-        purpose: string;
-        score: number;
-        sequence: number;
-        explanation: string;
-        classifications: Array<{
-          affinities: Array<number>;
-          names: Array<string>;
-        }>;
-      }>;
-    }>;
-    strategy_insights: Record<StrategyKeys, string[]>;
-
-    total_forms: number;
-  }>;
-  createdAt: Date | string | number;
 };
 
 async function getResearchById({ id }: { id: string }) {
@@ -79,14 +37,19 @@ async function getResearchById({ id }: { id: string }) {
   return research;
 }
 
-/**
- * @todo get the report
- */
+async function getReportByResearchId({ id }: { id: string }): Promise<Report | undefined> {
+  const report = await db.query.reports.findFirst({
+      where: eq(reports.researchId, id)
+  })
+
+  return report;
+}
+
 export default async function ReportsPage({ params }: Props) {
   const research = await getResearchById({ id: params.id });
-  const report = data as Report;
+  const report = await getReportByResearchId({ id: params.id });
 
-  if (!research) {
+  if (!research || !report) {
     return notFound();
   }
 
@@ -132,7 +95,7 @@ export default async function ReportsPage({ params }: Props) {
           ))}
         </TabsList>
 
-        {report.data.map((question, index) => (
+        {report.data.map((question) => (
           <TabsContent
             className="space-y-8"
             value={question.question_id}
@@ -141,8 +104,10 @@ export default async function ReportsPage({ params }: Props) {
             <div className="space-y-2">
               <h3 className="text-lg font-semibold">Score Box</h3>
               <h4 className="font-medium text-blue-500">
-                {question.score_box.fit}/{question.score_box.neutral}/
-                {question.score_box.unfit} ({question.total_forms})
+                {Math.round(100 * question.score_box.fit / question.total_forms)}/
+                {Math.round(100 * question.score_box.neutral / question.total_forms)}/
+                {Math.round(100 * question.score_box.unfit / question.total_forms)}
+                {" "}({question.total_forms})
               </h4>
 
               <div className="space-y-2">
@@ -150,9 +115,9 @@ export default async function ReportsPage({ params }: Props) {
                   Total de propósito informados: {question.total_forms}
                 </p>
                 <p className="text-sm">
-                  Fit: {question.score_box.fit}% Regular:{" "}
-                  {question.score_box.neutral}% Não atende:{" "}
-                  {question.score_box.unfit}%
+                  Fit: {Math.round(100 * question.score_box.fit / question.total_forms)}%
+                  Regular:{" "}{Math.round(100 * question.score_box.neutral / question.total_forms)}%
+                  Não atende:{" "}{Math.round(100 * question.score_box.unfit / question.total_forms)}%
                 </p>
               </div>
             </div>
@@ -166,8 +131,11 @@ export default async function ReportsPage({ params }: Props) {
                 {question.point_of_interests.map((interest) => (
                   <AccordionItem value={interest.name} key={interest.name}>
                     <AccordionTrigger>
-                      {interest.name} [{interest.score_box.fit}:
-                      {interest.score_box.neutral}:{interest.score_box.unfit}]
+                      {interest.name} [
+                        {Math.round(100 * interest.score_box.fit / interest.answers.length)}:
+                        {Math.round(100 * interest.score_box.neutral / interest.answers.length)}:
+                        {Math.round(100 * interest.score_box.unfit / interest.answers.length)}]
+                        ({interest.answers.length}/{question.total_forms})
                     </AccordionTrigger>
                     <AccordionContent className="space-y-6">
                       {interest.answers.map((answer, index) => (
