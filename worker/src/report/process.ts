@@ -31,6 +31,7 @@ export const getReport = async (researchId: string) => {
             },
             questions: {
                 columns: {
+                    id: true,
                     purpose: true,
                     sequence: true,
                     explanation: true,
@@ -66,6 +67,16 @@ export const getReport = async (researchId: string) => {
                 data: data
             }
         });
+
+    await db
+        .update(researches)
+        .set({
+            status: "FINISHED",
+            updatedAt: new Date(),
+        })
+        .where(
+            eq(researches.id, researchId),
+        );
 
 }
 

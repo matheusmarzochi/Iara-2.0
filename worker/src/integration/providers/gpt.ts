@@ -2,7 +2,7 @@ import { type ChatCompletion } from '../prompt'
 
 const OPENAI_URL = 'https://api.openai.com/v1/chat/completions'
 const OPENAI_API_KEY = process.env.OPENAI_API_KEY
-const MODEL_NAME = "gpt-4o"
+const MODEL_NAME = "gpt-4o-mini"
 
 export const gpt = async (input: string): Promise<ChatCompletion> => {
     const response = await fetch(OPENAI_URL, {
@@ -16,7 +16,8 @@ export const gpt = async (input: string): Promise<ChatCompletion> => {
             messages: [{
                 role: "user",
                 content: input
-            }]
+            }],
+            max_completion_tokens: 800
         }),
     })
 
