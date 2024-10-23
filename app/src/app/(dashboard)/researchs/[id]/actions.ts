@@ -7,7 +7,7 @@ import { z } from "zod";
 import { db } from "~/database";
 import { researches } from "~/database/schema";
 import { actions } from "~/lib/actions";
-
+import { producer } from '~/queue'
 export const closeResearchAction = actions
   .createServerAction()
   .input(
@@ -26,7 +26,7 @@ export const closeResearchAction = actions
         and(eq(researches.id, input.id), eq(researches.userId, ctx.user.id)),
       );
 
-    /** @todo adicionar a pesquisa na fila de processamento. */
+    await producer.send(input.id)
 
     revalidatePath("/dashboard", "page");
     redirect("/dashboard");

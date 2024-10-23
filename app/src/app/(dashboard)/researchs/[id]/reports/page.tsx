@@ -83,7 +83,7 @@ export default async function ReportsPage({ params }: Props) {
         <h3 className="text-lg font-bold">Resultados</h3>
       </header>
 
-      <Tabs className="mt-4">
+      <Tabs className="mt-4" defaultValue={ report.data.length ? report.data[0].question_id : ''}>
         <TabsList>
           {report.data.map((question, index) => (
             <TabsTrigger

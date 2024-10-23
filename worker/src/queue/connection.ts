@@ -1,5 +1,9 @@
 import amqp, { Connection, Channel, Message } from 'amqplib';
 
+function sleep(ms: number): Promise<void> {
+    return new Promise(resolve => setTimeout(resolve, ms));
+}
+
 export interface MessageProcessor {
     process(msg: string): Promise<boolean>;
 }
@@ -107,6 +111,7 @@ class Producer {
         } catch (error) {
             console.error('Error producing message:', error);
         }
+        await sleep(100);
     }
 }
 

@@ -3,7 +3,6 @@ import { getCategories } from '../prompt/categorization'
 import { getClassification } from '../prompt/classification'
 import { getReport } from '../report/process'
 
-
 const researchQueueName = "researches"
 
 const researchProcessor = {
