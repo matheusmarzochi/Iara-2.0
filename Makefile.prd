@@ -2,10 +2,10 @@ build:
 	@docker compose build
 
 up:
-	@docker compose -f docker-compose.yml --env-file .env.production up -d
+	@docker compose -f docker-compose-production.yml --env-file .env.production up -d
 
 down:
-	@docker compose -f docker-compose.yml --env-file .env.production down
+	@docker compose -f docker-compose-production.yml --env-file .env.production down
 
 npm-install:
 	@echo "=== Instaling APP dependencies"
@@ -40,7 +40,7 @@ ollama-init:
 
 bash-worker:
 	@docker run -ti --rm \
-		--net app_iara \
+		--net app_iara_prd \
 		--name iara-worker-bash \
 		--env-file .env.production \
 		-v ./worker/:/code/worker \
@@ -50,7 +50,7 @@ bash-worker:
 
 seed-worker:
 	@docker run -ti --rm \
-		--net app_iara \
+		--net app_iara_prd \
 		--name iara-worker-bash \
 		--env-file .env.production \
 		-v ./worker/:/code/worker \
@@ -67,7 +67,7 @@ db-generate:
 
 db-migrate:
 	@docker run -ti --rm \
-		--net app_iara \
+		--net app_iara_prd \
 		--name iara-db-migrate \
 		--env-file .env.production \
 		-v ./app/:/code \
