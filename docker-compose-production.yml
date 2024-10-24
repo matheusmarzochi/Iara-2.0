@@ -1,0 +1,22 @@
+services:
+  worker:
+    build: ./worker/.
+    container_name: iara-prd-worker
+    image: iara-worker
+    depends_on:
+      rabbitmq:
+        condition: service_healthy
+      postgres:
+        condition: service_healthy
+    networks:
+      - iara
+    env_file:
+      - .env.production
+    volumes:
+      - ./worker:/code/worker
+      - ./app/node_modules:/code/app/node_modules
+      - ./app/src/database:/code/app/src/database
+    command: npm run dev
+networks:
+  iara-prd:
+
