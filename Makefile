@@ -76,3 +76,20 @@ db-migrate:
 db-sync:
 	@rm -rf worker/src/database/
 	@cp -r app/src/database/ worker/src/database
+
+
+prd-db-migrate:
+	@docker run -ti --rm \
+		--name iara-db-migrate \
+		--env-file .env.production \
+		-v ./app/:/code \
+		iara-app npm run db:migrate
+
+prd-bash-worker:
+	@docker run -ti --rm \
+		--name iara-worker-bash \
+		--env-file .env.production \
+		-v ./worker/:/code/worker \
+		-v ./app/node_modules:/code/app/node_modules \
+		-v ./app/src/database:/code/app/src/database \
+		iara-worker bash

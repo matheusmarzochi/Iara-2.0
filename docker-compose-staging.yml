@@ -1,0 +1,110 @@
+services:
+  app:
+    build: ./app/.
+    container_name: iara-stg-app
+    image: iara-app
+    depends_on:
+      rabbitmq:
+        condition: service_healthy
+      postgres:
+        condition: service_healthy
+    networks:
+      - iara
+    env_file:
+      - .env.staging
+    volumes:
+      - ./app:/code
+    expose:
+      - 3000
+    command: npm run dev
+  worker:
+    build: ./worker/.
+    container_name: iara-stg-worker
+    image: iara-worker
+    depends_on:
+      rabbitmq:
+        condition: service_healthy
+      postgres:
+        condition: service_healthy
+    networks:
+      - iara
+    env_file:
+      - .env.staging
+    volumes:
+      - ./worker:/code/worker
+      - ./app/node_modules:/code/app/node_modules
+      - ./app/src/database:/code/app/src/database
+    command: npm run dev
+  rabbitmq:
+    image: rabbitmq:3-management
+    container_name: iara-stg-rabbitmq
+    healthcheck:
+      test: [ "CMD", "rabbitmqctl", "status" ]
+      interval: 10s
+      timeout: 10s
+      retries: 5
+    networks:
+      - iara
+    env_file:
+      - .env.staging
+    expose:
+      - 5672
+      - 15672
+    volumes:
+      - ./queue:/var/lib/rabbitmq
+  postgres:
+    container_name: iara-stg-postgres
+    image: postgres
+    restart: always
+    shm_size: 128mb
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U postgres"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+    networks:
+      - iara
+    expose:
+      - 5432
+    env_file:
+      - ./.env.staging
+    environment:
+      PGDATA: /var/lib/postgresql/data/pgdata
+    volumes:
+      - ./postgres:/var/lib/postgresql/data
+  cloudflared:
+    image: cloudflare/cloudflared:latest
+    container_name: iara-stg-cloudflared-tunnel
+    networks:
+      - iara
+    env_file:
+      - ./.env.staging
+    command: tunnel --no-autoupdate run --token ${CLOUDFLARE_TOKEN}
+  drizzle-studio:
+    build: ./app/.
+    image: iara-app
+    container_name: iara-drizzle-studio
+    depends_on:
+      postgres:
+        condition: service_healthy
+    networks:
+      - iara
+    volumes:
+      - ./app/:/code
+    env_file:
+      - ./.env.staging
+    expose:
+      - 4983
+    command: npm run db:studio
+  ollama:
+    image: ollama/ollama
+    container_name: iara-stg-ollama
+    networks:
+      - iara
+    volumes:
+      - ./ollama:/root/.ollama
+    expose:
+      - 11434
+networks:
+  iara-stg:
+

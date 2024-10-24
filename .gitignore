@@ -2,3 +2,5 @@
 /queue
 /ollama
 .env.local
+.env.production
+.env.staging
