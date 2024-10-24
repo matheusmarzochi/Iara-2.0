@@ -122,3 +122,4 @@ services:
       - 11434
 networks:
   iara:
+    name: iara

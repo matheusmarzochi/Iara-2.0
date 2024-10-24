@@ -9,7 +9,7 @@ services:
       postgres:
         condition: service_healthy
     networks:
-      - iara
+      - iara-stg
     env_file:
       - .env.staging
     volumes:
@@ -27,7 +27,7 @@ services:
       postgres:
         condition: service_healthy
     networks:
-      - iara
+      - iara-stg
     env_file:
       - .env.staging
     volumes:
@@ -44,7 +44,7 @@ services:
       timeout: 10s
       retries: 5
     networks:
-      - iara
+      - iara-stg
     env_file:
       - .env.staging
     expose:
@@ -63,7 +63,7 @@ services:
       timeout: 5s
       retries: 5
     networks:
-      - iara
+      - iara-stg
     expose:
       - 5432
     env_file:
@@ -76,19 +76,19 @@ services:
     image: cloudflare/cloudflared:latest
     container_name: iara-stg-cloudflared-tunnel
     networks:
-      - iara
+      - iara-stg
     env_file:
       - ./.env.staging
     command: tunnel --no-autoupdate run --token ${CLOUDFLARE_TOKEN}
   drizzle-studio:
     build: ./app/.
     image: iara-app
-    container_name: iara-drizzle-studio
+    container_name: iara-stg-drizzle-studio
     depends_on:
       postgres:
         condition: service_healthy
     networks:
-      - iara
+      - iara-stg
     volumes:
       - ./app/:/code
     env_file:
@@ -100,11 +100,12 @@ services:
     image: ollama/ollama
     container_name: iara-stg-ollama
     networks:
-      - iara
+      - iara-stg
     volumes:
       - ./ollama:/root/.ollama
     expose:
       - 11434
+
 networks:
   iara-stg:
-
+    name: iara-stg

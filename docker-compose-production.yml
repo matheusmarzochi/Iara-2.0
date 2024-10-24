@@ -9,7 +9,7 @@ services:
       postgres:
         condition: service_healthy
     networks:
-      - iara
+      - iara-prd
     env_file:
       - .env.production
     volumes:
@@ -19,4 +19,4 @@ services:
     command: npm run dev
 networks:
   iara-prd:
-
+    name: iara-prd

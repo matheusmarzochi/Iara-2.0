@@ -40,7 +40,7 @@ ollama-init:
 
 bash-worker:
 	@docker run -ti --rm \
-		--net app_iara \
+		--net iara \
 		--name iara-worker-bash \
 		--env-file .env.local \
 		-v ./worker/:/code/worker \
@@ -50,7 +50,7 @@ bash-worker:
 
 seed-worker:
 	@docker run -ti --rm \
-		--net app_iara \
+		--net iara \
 		--name iara-worker-bash \
 		--env-file .env.local \
 		-v ./worker/:/code/worker \
@@ -67,7 +67,7 @@ db-generate:
 
 db-migrate:
 	@docker run -ti --rm \
-		--net app_iara \
+		--net iara \
 		--name iara-db-migrate \
 		--env-file .env.local \
 		-v ./app/:/code \
