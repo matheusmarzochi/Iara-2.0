@@ -8,6 +8,8 @@ import { db } from "~/database";
 import { forms, type Research, researches, users } from "~/database/schema";
 import { cn, formatters } from "~/lib/utils";
 
+type ResearchGroup = Record<Research["status"], Array<Research>>;
+
 async function getUserResearchs() {
 	const { userId } = auth();
 
@@ -36,7 +38,7 @@ async function getUserResearchs() {
 export default async function DashboardPage() {
 	const researchs = await getUserResearchs();
 
-	const status = (status: Research["status"]) =>
+	const researchStatus = (status: Research["status"]) =>
 		({
 			CREATED: (
 				<Badge className="whitespace-nowrap w-fit bg-yellow-500 text-black">
@@ -55,6 +57,27 @@ export default async function DashboardPage() {
 			),
 		})[status];
 
+	const researchStatusTitle = (status: Research["status"]) =>
+		({
+			CREATED: <h3 className="font-bold text-2xl">Em Andamento</h3>,
+			PROCESSING: <h3 className="font-bold text-2xl">Em Processamento</h3>,
+			FINISHED: <h3 className="font-bold text-2xl">Encerrado</h3>,
+		})[status];
+
+	const researchsByStatus = researchs.reduce(
+		(researchs, research) => {
+			if (researchs[research.status]) {
+				researchs[research.status] = [];
+			}
+
+			// @ts-expect-error research type
+			researchs[research.status].push(research);
+
+			return researchs;
+		},
+		{ CREATED: [], PROCESSING: [], FINISHED: [] } as ResearchGroup,
+	);
+
 	return (
 		<>
 			<section className="flex flex-col items-end md:items-start pt-4 pb-8 gap-6">
@@ -72,29 +95,51 @@ export default async function DashboardPage() {
 				) : null}
 			</section>
 
-			<section className="flex flex-col gap-6">
-				{researchs.map((research) => (
-					<Card key={research.id} className="relative">
-						<CardHeader>
-							<div className="flex justify-between items-center">
-								<CardTitle className="text-xl">{research.title}</CardTitle>
-								{status(research.status)}
+			<section className="space-y-10">
+				{Object.keys(researchsByStatus)
+					// @ts-expect-error type status
+					.filter((key: Research["status"]) =>
+						Boolean(researchsByStatus[key].length),
+					)
+					// @ts-expect-error type status
+					.map((status: Research["status"]) => {
+						return (
+							<div key={status} className="space-y-6">
+								{researchStatusTitle(status)}
+
+								<div className="flex flex-col gap-6 md:grid md:grid-cols-2 lg:grid-cols-3">
+									{researchsByStatus[status].map((research) => (
+										<Card
+											key={research.id}
+											className="relative shadow-md hover:shadow-xl transition-all"
+										>
+											<CardHeader>
+												<div className="flex justify-between items-start">
+													<CardTitle className="text-xl">
+														{research.title}
+													</CardTitle>
+													{researchStatus(research.status)}
+												</div>
+											</CardHeader>
+
+											<CardContent>
+												<p className="text-sm">
+													Criado em: {formatters.date(research.createdAt)}
+												</p>
+												{/* @ts-expect-error replies type is missing */}
+												<p className="text-sm">Respostas: {research.replies}</p>
+											</CardContent>
+
+											<Link
+												className="absolute inset-0"
+												href={`/researchs/${research.id}`}
+											/>
+										</Card>
+									))}
+								</div>
 							</div>
-						</CardHeader>
-
-						<CardContent>
-							<p className="text-sm">
-								Criado em: {formatters.date(research.createdAt)}
-							</p>
-							<p className="text-sm">Respostas: {research.replies}</p>
-						</CardContent>
-
-						<Link
-							className="absolute inset-0"
-							href={`/researchs/${research.id}`}
-						/>
-					</Card>
-				))}
+						);
+					})}
 			</section>
 		</>
 	);
