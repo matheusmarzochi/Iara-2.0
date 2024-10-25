@@ -1,0 +1,32 @@
+services:
+  app:
+    build: ./app/.
+    container_name: iara-app
+    image: iara-app
+    networks:
+      - iara
+    env_file:
+      - .env.local
+    volumes:
+      - ./app:/code
+    ports:
+      - 3001:3000
+    expose:
+      - 3000
+    command: npm run dev
+  drizzle-studio:
+    build: ./app/.
+    image: iara-app
+    container_name: iara-drizzle-studio
+    networks:
+      - iara
+    volumes:
+      - ./app/:/code
+    env_file:
+      - ./.env.local
+    ports:
+      - 4983:4983
+    command: npm run db:studio
+networks:
+  iara:
+    name: iara
