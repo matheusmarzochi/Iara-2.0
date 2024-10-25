@@ -6,7 +6,7 @@ services:
     networks:
       - iara
     env_file:
-      - .env.local
+      - .env.remote
     volumes:
       - ./app:/code
     ports:
@@ -23,7 +23,7 @@ services:
     volumes:
       - ./app/:/code
     env_file:
-      - ./.env.local
+      - ./.env.remote
     ports:
       - 4983:4983
     command: npm run db:studio
