@@ -3,3 +3,13 @@ up:
 
 down:
 	@docker compose -f docker-compose-remote.yml --env-file .env.remote down
+
+bash-worker:
+	@docker run -ti --rm \
+		--net iara \
+		--name iara-worker-bash \
+		--env-file .env.remote \
+		-v ./worker/:/code/worker \
+		-v ./app/node_modules:/code/app/node_modules \
+		-v ./app/src/database:/code/app/src/database \
+		iara-worker bash
