@@ -9,8 +9,7 @@ import {
 	reports,
 	type Report,
 	type StrategyKeys,
-	type Answer,
-	type ReportAwnser
+	type ReportAwnser,
 } from "~/database/schema";
 import {
 	Accordion,
@@ -138,20 +137,26 @@ export default async function ReportsPage({ params }: Props) {
 									<p className="text-sm">
 										Total de propósito informados: {question.total_forms}
 									</p>
-									<p className="text-sm">
-										Fit:{" "}
-										{Math.round(
-											(100 * question.score_box.fit) / question.total_forms,
-										)}
-										% Regular:{" "}
-										{Math.round(
-											(100 * question.score_box.neutral) / question.total_forms,
-										)}
-										% Não atende:{" "}
-										{Math.round(
-											(100 * question.score_box.unfit) / question.total_forms,
-										)}
-										%
+									<p className="text-sm space-x-6">
+										<span>
+											{Math.round(
+												(100 * question.score_box.fit) / question.total_forms,
+											)}
+											% Fit
+										</span>
+										<span>
+											{Math.round(
+												(100 * question.score_box.neutral) /
+													question.total_forms,
+											)}
+											% Regular
+										</span>
+										<span>
+											{Math.round(
+												(100 * question.score_box.unfit) / question.total_forms,
+											)}
+											% Unfit
+										</span>
 									</p>
 								</div>
 							</div>
@@ -233,7 +238,7 @@ export default async function ReportsPage({ params }: Props) {
 	);
 }
 
-type GroupClassification = "unfit" | "regular" | "fit"
+type GroupClassification = "unfit" | "regular" | "fit";
 type GroupAnswer = Record<GroupClassification, Array<ReportAwnser>>;
 
 function InterestGroupedAnwsers({ answers }: { answers: Array<ReportAwnser> }) {
@@ -258,15 +263,25 @@ function InterestGroupedAnwsers({ answers }: { answers: Array<ReportAwnser> }) {
 
 	const getBadge = (key: "unfit" | "regular" | "fit") =>
 		({
-			unfit: <Badge className="bg-red-500 text-white">Não Atende</Badge>,
-			regular: <Badge className="bg-yellow-500 text-white">Regular</Badge>,
-			fit: <Badge className="bg-green-500 text-white">Fit</Badge>,
+			unfit: (
+				<Badge className="bg-red-500 text-white hover:bg-red-500">Unfit</Badge>
+			),
+			regular: (
+				<Badge className="bg-yellow-500 text-white hover:bg-yellow-500">
+					Regular
+				</Badge>
+			),
+			fit: (
+				<Badge className="bg-green-500 text-white hover:bg-green-500">
+					Fit
+				</Badge>
+			),
 		})[key];
 
 	return (Object.keys(grouped) as Array<GroupClassification>)
 		.filter((key) => Boolean(grouped[key].length))
 		.map((key) => {
-			const answers = grouped[key]
+			const answers = grouped[key];
 
 			return (
 				<Card key={key}>
