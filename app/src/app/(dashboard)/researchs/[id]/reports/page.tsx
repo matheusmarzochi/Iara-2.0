@@ -266,9 +266,21 @@ function InterestGroupedAnwsers({ answers }: { answers: Array<ReportAwnser> }) {
 
 	const getBadge = (key: "unfit" | "regular" | "fit") =>
 		({
-			unfit: <Badge className="bg-red-500 text-white">Não Atende</Badge>,
-			regular: <Badge className="bg-yellow-500 text-white">Regular</Badge>,
-			fit: <Badge className="bg-green-500 text-white">Fit</Badge>,
+			unfit: (
+				<Badge className="bg-red-500 text-white hover:bg-red-500">
+					Não Atende
+				</Badge>
+			),
+			regular: (
+				<Badge className="bg-yellow-500 text-white hover:bg-yellow-500">
+					Regular
+				</Badge>
+			),
+			fit: (
+				<Badge className="bg-green-500 text-white hover:bg-green-500">
+					Fit
+				</Badge>
+			),
 		})[key];
 
 	return (Object.keys(grouped) as Array<GroupClassification>)
