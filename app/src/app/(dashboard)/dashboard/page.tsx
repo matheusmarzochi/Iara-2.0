@@ -66,10 +66,6 @@ export default async function DashboardPage() {
 
 	const researchsByStatus = researchs.reduce(
 		(researchs, research) => {
-			if (researchs[research.status]) {
-				researchs[research.status] = [];
-			}
-
 			// @ts-expect-error research type
 			researchs[research.status].push(research);
 

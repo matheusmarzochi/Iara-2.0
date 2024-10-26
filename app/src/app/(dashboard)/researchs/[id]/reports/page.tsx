@@ -10,6 +10,7 @@ import {
 	type Report,
 	type StrategyKeys,
 	type Answer,
+	type ReportAwnser
 } from "~/database/schema";
 import {
 	Accordion,
@@ -232,10 +233,11 @@ export default async function ReportsPage({ params }: Props) {
 	);
 }
 
-type GroupAnswer = Record<"unfit" | "regular" | "fit", Array<Answer>>;
+type GroupClassification = "unfit" | "regular" | "fit"
+type GroupAnswer = Record<GroupClassification, Array<ReportAwnser>>;
 
-function InterestGroupedAnwsers({ answers }: { answers: Array<Answer> }) {
-	const grouped = answers.reduce(
+function InterestGroupedAnwsers({ answers }: { answers: Array<ReportAwnser> }) {
+	const grouped: GroupAnswer = answers.reduce(
 		(acc, answer) => {
 			if (answer.score > 3) {
 				acc.fit = [...acc.fit, answer];
@@ -261,10 +263,10 @@ function InterestGroupedAnwsers({ answers }: { answers: Array<Answer> }) {
 			fit: <Badge className="bg-green-500 text-white">Fit</Badge>,
 		})[key];
 
-	return Object.keys(grouped)
+	return (Object.keys(grouped) as Array<GroupClassification>)
 		.filter((key) => Boolean(grouped[key].length))
 		.map((key) => {
-			const answers = grouped[key] as Array<Answer>;
+			const answers = grouped[key]
 
 			return (
 				<Card key={key}>
