@@ -19,19 +19,21 @@ export type StrategyKeys =
 
 export type StrategyInsights = Record<StrategyKeys, string[]>
 
+export type ReportAwnser = {
+    purpose: string;
+    score: number;
+    sequence: number;
+    explanation: string;
+    classifications: Array<{
+        affinities: Array<number>;
+        names: Array<string>;
+    }>;
+}
+
 export type PointOfInterest = {
     name: string;
     score_box: ScoreBox;
-    answers: Array<{
-        purpose: string;
-        score: number;
-        sequence: number;
-        explanation: string;
-        classifications: Array<{
-            affinities: Array<number>;
-            names: Array<string>;
-        }>;
-    }>;
+    answers: ReportAwnser[]
 }
 
 export type ReportData = {

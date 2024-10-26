@@ -3,12 +3,12 @@
 import { useFieldArray, useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import {
-  Form,
-  FormControl,
-  FormField,
-  FormItem,
-  FormLabel,
-  FormMessage,
+	Form,
+	FormControl,
+	FormField,
+	FormItem,
+	FormLabel,
+	FormMessage,
 } from "~/components/ui/form";
 import { Input } from "~/components/ui/input";
 import { Textarea } from "~/components/ui/textarea";
@@ -26,232 +26,261 @@ import { toast } from "sonner";
 type Schema = z.infer<typeof schema>;
 
 export function CreateResearchForm() {
-  const { execute, isPending } = useServerAction(createResearchAction, {
-    onSuccess: () => {
-      toast.success("Pesquisa criada.", {
-        description: "Pesquisa criada com sucesso!",
-      });
-    },
-    onError: (error) => {
-      toast.error("Erro", {
-        description:
-          "Houve um erro ao tentar criar sua pesquisa, por favor tente novamente.",
-      });
-    },
-  });
+	const { execute, isPending } = useServerAction(createResearchAction, {
+		onSuccess: () => {
+			toast.success("Pesquisa criada.", {
+				description: "Pesquisa criada com sucesso!",
+			});
+		},
+		onError: (error) => {
+			toast.error("Erro", {
+				description:
+					"Houve um erro ao tentar criar sua pesquisa, por favor tente novamente.",
+			});
+		},
+	});
 
-  const form = useForm<Schema>({
-    defaultValues: {
-      title: "",
-      description: "",
-      purposes: [
-        {
-          purpose: "",
-          score: "",
-          explanation: "",
-        },
-      ],
-    },
-    mode: "onBlur",
-    resolver: zodResolver(schema),
-  });
+	const form = useForm<Schema>({
+		defaultValues: {
+			title: "",
+			description: "",
+			purposes: [
+				{
+					purpose: "",
+					score: "",
+					explanation: "",
+				},
+			],
+		},
+		mode: "onBlur",
+		resolver: zodResolver(schema),
+	});
 
-  const { fields, append, remove } = useFieldArray<Schema>({
-    control: form.control,
-    name: "purposes",
-  });
+	const { fields, append, remove } = useFieldArray<Schema>({
+		control: form.control,
+		name: "purposes",
+	});
 
-  const submit = () => {
-    execute(form.getValues());
-  };
+	const submit = () => {
+		execute(form.getValues());
+	};
 
-  return (
-    <Form {...form}>
-      <form className="space-y-6" onSubmit={form.handleSubmit(submit)}>
-        <FormField
-          control={form.control}
-          name="title"
-          render={({ field }) => (
-            <FormItem>
-              <FormLabel>Título</FormLabel>
-              <FormControl>
-                <Input {...field} placeholder="Digite o título do formulário" />
-              </FormControl>
-              <FormMessage />
-            </FormItem>
-          )}
-        />
+	return (
+		<Form {...form}>
+			<form className="space-y-6" onSubmit={form.handleSubmit(submit)}>
+				<div className="flex flex-col gap-6 lg:flex-row lg:gap-10">
+					<FormField
+						control={form.control}
+						name="title"
+						render={({ field }) => (
+							<FormItem className="flex-1 lg:max-w-[345px]">
+								<FormLabel>Título</FormLabel>
+								<FormControl>
+									<Input
+										{...field}
+										placeholder="Digite o título do formulário"
+									/>
+								</FormControl>
+								<FormMessage />
+							</FormItem>
+						)}
+					/>
 
-        <FormField
-          control={form.control}
-          name="description"
-          render={({ field }) => (
-            <FormItem>
-              <FormLabel>Descrição</FormLabel>
-              <FormControl>
-                <Textarea
-                  {...field}
-                  className="resize-none"
-                  placeholder="Digite a descrição do formulário"
-                />
-              </FormControl>
-              <FormMessage />
-            </FormItem>
-          )}
-        />
+					<FormField
+						control={form.control}
+						name="description"
+						render={({ field }) => (
+							<FormItem className="flex-1">
+								<FormLabel>Descrição</FormLabel>
+								<FormControl>
+									<Textarea
+										{...field}
+										className="resize-none lg:max-h-10 min-h-10"
+										placeholder="Digite a descrição do formulário"
+									/>
+								</FormControl>
+								<FormMessage />
+							</FormItem>
+						)}
+					/>
+				</div>
 
-        <div>
-          <h3 className="text-2xl font-semibold">Propósitos</h3>
+				<div>
+					<h3 className="text-2xl font-semibold">Propósitos</h3>
 
-          <div>
-            {fields.map((field, index) => (
-              <div
-                key={field.id}
-                className="border-b py-10 last:border-b-0 space-y-4"
-              >
-                {index > 0 ? (
-                  <div className="py-2">
-                    <Button
-                      size="sm"
-                      variant="outline"
-                      type="button"
-                      onClick={() => remove(index)}
-                    >
-                      Remover este propósito
-                    </Button>
-                  </div>
-                ) : null}
+					<div>
+						{fields.map((field, index) => (
+							<div
+								key={field.id}
+								className="border-b py-10 last:border-b-0 space-y-4"
+							>
+								{index > 0 ? (
+									<div className="py-2">
+										<Button
+											size="sm"
+											variant="outline"
+											type="button"
+											onClick={() => remove(index)}
+										>
+											Remover este propósito
+										</Button>
+									</div>
+								) : null}
 
-                <FormField
-                  control={form.control}
-                  name={`purposes.${index}.purpose`}
-                  render={({ field }) => (
-                    <FormItem>
-                      <FormLabel>Questão de Propósito</FormLabel>
-                      <FormControl>
-                        <Textarea
-                          {...field}
-                          className="resize-none"
-                          placeholder="Porque você escolheu nosso produto ou serviço?"
-                        />
-                      </FormControl>
-                      <FormMessage />
-                    </FormItem>
-                  )}
-                />
+								<FormField
+									control={form.control}
+									name={`purposes.${index}.purpose`}
+									render={({ field }) => (
+										<FormItem>
+											<FormLabel>Questão de Propósito</FormLabel>
+											<FormControl>
+												<Textarea
+													{...field}
+													className="resize-none"
+													placeholder="Porque você escolheu nosso produto ou serviço?"
+												/>
+											</FormControl>
+											<FormMessage />
+										</FormItem>
+									)}
+								/>
 
-                <FormField
-                  control={form.control}
-                  name={`purposes.${index}.score`}
-                  render={({ field }) => (
-                    <FormItem>
-                      <FormLabel>Questão de Avaliação</FormLabel>
-                      <FormControl>
-                        <Textarea
-                          {...field}
-                          className="resize-none"
-                          placeholder="Porque você escolheu nosso produto ou serviço?"
-                        />
-                      </FormControl>
-                      <FormMessage />
+								<FormField
+									control={form.control}
+									name={`purposes.${index}.score`}
+									render={({ field }) => (
+										<FormItem>
+											<FormLabel>Questão de Avaliação</FormLabel>
+											<FormControl>
+												<Textarea
+													{...field}
+													className="resize-none"
+													placeholder="Quanto o produto ou serviço atendeu ao seu propósito?"
+												/>
+											</FormControl>
+											<FormMessage />
 
-                      <RadioGroup>
-                        <div className="flex items-start md:items-center gap-2">
-                          <RadioGroupItem value="" aria-readonly disabled />
-                          <Label>
-                            5 - Extremamante. Recebi tudo que esperava e mais um
-                            pouco.
-                          </Label>
-                        </div>
+											<RadioGroup>
+												<div className="flex items-start md:items-center gap-2">
+													<RadioGroupItem value="" aria-readonly disabled />
+													<Label>
+														5 - Extremamante. Recebi tudo que esperava e mais um
+														pouco.
+													</Label>
+												</div>
 
-                        <div className="flex items-start md:items-center gap-2">
-                          <RadioGroupItem value="" aria-readonly disabled />
-                          <Label>
-                            4 - Plenamente. Tudo que eu precisava foi atendido.
-                          </Label>
-                        </div>
+												<div className="flex items-start md:items-center gap-2">
+													<RadioGroupItem value="" aria-readonly disabled />
+													<Label>
+														4 - Plenamente. Tudo que eu precisava foi atendido.
+													</Label>
+												</div>
 
-                        <div className="flex items-start md:items-center gap-2">
-                          <RadioGroupItem value="" aria-readonly disabled />
-                          <Label>
-                            3 - Na maior parte. Em geral foi atendido,mas algo
-                            ficou faltando.
-                          </Label>
-                        </div>
+												<div className="flex items-start md:items-center gap-2">
+													<RadioGroupItem value="" aria-readonly disabled />
+													<Label>
+														3 - Na maior parte. Em geral foi atendido,mas algo
+														ficou faltando.
+													</Label>
+												</div>
 
-                        <div className="flex items-start md:items-center gap-2">
-                          <RadioGroupItem value="" aria-readonly disabled />
-                          <Label>
-                            2 - Parcialmente. Alguns pontos foram ok, mas uma
-                            parte relevante deixou a desejar.
-                          </Label>
-                        </div>
+												<div className="flex items-start md:items-center gap-2">
+													<RadioGroupItem value="" aria-readonly disabled />
+													<Label>
+														2 - Parcialmente. Alguns pontos foram ok, mas uma
+														parte relevante deixou a desejar.
+													</Label>
+												</div>
 
-                        <div className="flex items-start md:items-center gap-2">
-                          <RadioGroupItem value="" aria-readonly disabled />
-                          <Label>
-                            1 - Um pouco. Houve itens positivos, mas a real
-                            necessidade não foi atendida.
-                          </Label>
-                        </div>
+												<div className="flex items-start md:items-center gap-2">
+													<RadioGroupItem value="" aria-readonly disabled />
+													<Label>
+														1 - Um pouco. Houve itens positivos, mas a real
+														necessidade não foi atendida.
+													</Label>
+												</div>
 
-                        <div className="flex items-start md:items-center gap-2">
-                          <RadioGroupItem value="" aria-readonly disabled />
-                          <Label>
-                            0 - Nada. Nenhuma das minhas necessidades foi
-                            atendida.
-                          </Label>
-                        </div>
-                      </RadioGroup>
-                    </FormItem>
-                  )}
-                />
+												<div className="flex items-start md:items-center gap-2">
+													<RadioGroupItem value="" aria-readonly disabled />
+													<Label>
+														0 - Nada. Nenhuma das minhas necessidades foi
+														atendida.
+													</Label>
+												</div>
+											</RadioGroup>
+										</FormItem>
+									)}
+								/>
 
-                <FormField
-                  control={form.control}
-                  name={`purposes.${index}.explanation`}
-                  render={({ field }) => (
-                    <FormItem>
-                      <FormLabel>Questão de Avaliação</FormLabel>
-                      <FormControl>
-                        <Textarea
-                          {...field}
-                          className="resize-none"
-                          placeholder="Detalhe sua resposta ao item 2"
-                        />
-                      </FormControl>
-                      <FormMessage />
-                    </FormItem>
-                  )}
-                />
-              </div>
-            ))}
-          </div>
+								<FormField
+									control={form.control}
+									name={`purposes.${index}.explanation`}
+									render={({ field }) => (
+										<FormItem>
+											<FormLabel>Questão de Avaliação</FormLabel>
+											<FormControl>
+												<Textarea
+													{...field}
+													className="resize-none"
+													placeholder="Detalhe sua resposta ao item 2"
+												/>
+											</FormControl>
+											<FormMessage />
+										</FormItem>
+									)}
+								/>
+							</div>
+						))}
+					</div>
 
-          <div className="pt-4 flex items-center justify-end">
-            <Button
-              type="button"
-              size="sm"
-              variant="outline"
-              onClick={() =>
-                append({ explanation: "", purpose: "", score: "" })
-              }
-            >
-              Adicionar Propósito
-            </Button>
-          </div>
-        </div>
+					<div className="pt-4 flex items-center justify-end lg:hidden">
+						<Button
+							type="button"
+							size="sm"
+							variant="outline"
+							onClick={() =>
+								append({ explanation: "", purpose: "", score: "" })
+							}
+						>
+							Adicionar Propósito
+						</Button>
+					</div>
+				</div>
 
-        <div className="flex gap-4 items-center [&>*]:w-full">
-          <Button size="sm" variant="outline" type="button" asChild>
-            <Link href="/dashboard">Voltar</Link>
-          </Button>
+				<div className="flex gap-4 items-center justify-between [&>*]:w-full">
+					<Button
+						size="sm"
+						variant="outline"
+						type="button"
+						className="lg:max-w-fit"
+						asChild
+					>
+						<Link href="/dashboard">Voltar</Link>
+					</Button>
 
-          <StatusButton isPending={isPending} size="sm">
-            Criar Pesquisa
-          </StatusButton>
-        </div>
-      </form>
-    </Form>
-  );
+					<div className="flex gap-4 justify-end">
+						<Button
+							type="button"
+							size="sm"
+							variant="outline"
+							className="hidden lg:flex"
+							onClick={() =>
+								append({ explanation: "", purpose: "", score: "" })
+							}
+						>
+							Adicionar Propósito
+						</Button>
+
+						<StatusButton
+							isPending={isPending}
+							size="sm"
+							className="w-full lg:w-[120px]"
+						>
+							Criar Pesquisa
+						</StatusButton>
+					</div>
+				</div>
+			</form>
+		</Form>
+	);
 }
