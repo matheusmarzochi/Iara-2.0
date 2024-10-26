@@ -50,6 +50,8 @@ services:
     expose:
       - 5672
       - 15672
+    ports:
+      - 56720:5672
     volumes:
       - ./queue:/var/lib/rabbitmq
   postgres:
@@ -66,6 +68,8 @@ services:
       - iara-stg
     expose:
       - 5432
+    ports:
+      - 54320:5432
     env_file:
       - ./.env.staging
     environment:
@@ -101,6 +105,13 @@ services:
     container_name: iara-stg-ollama
     networks:
       - iara-stg
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - driver: nvidia
+              count: 1
+              capabilities: [gpu]
     volumes:
       - ./ollama:/root/.ollama
     expose:
