@@ -3,11 +3,6 @@ services:
     build: ./worker/.
     container_name: iara-prd-worker
     image: iara-worker
-    depends_on:
-      rabbitmq:
-        condition: service_healthy
-      postgres:
-        condition: service_healthy
     networks:
       - iara-prd
     env_file:
