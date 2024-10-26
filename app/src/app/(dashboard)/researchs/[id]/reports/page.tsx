@@ -139,26 +139,23 @@ export default async function ReportsPage({ params }: Props) {
 									</p>
 									<p className="text-sm space-x-6">
 										<span>
-											Fit:{" "}
 											{Math.round(
 												(100 * question.score_box.fit) / question.total_forms,
 											)}
-											%
+											% Fit
 										</span>
 										<span>
-											Regular:{" "}
 											{Math.round(
 												(100 * question.score_box.neutral) /
 													question.total_forms,
 											)}
-											%
+											% Regular
 										</span>
 										<span>
-											Não atende:{" "}
 											{Math.round(
 												(100 * question.score_box.unfit) / question.total_forms,
 											)}
-											%
+											% Unfit
 										</span>
 									</p>
 								</div>
@@ -267,9 +264,7 @@ function InterestGroupedAnwsers({ answers }: { answers: Array<ReportAwnser> }) {
 	const getBadge = (key: "unfit" | "regular" | "fit") =>
 		({
 			unfit: (
-				<Badge className="bg-red-500 text-white hover:bg-red-500">
-					Não Atende
-				</Badge>
+				<Badge className="bg-red-500 text-white hover:bg-red-500">Unfit</Badge>
 			),
 			regular: (
 				<Badge className="bg-yellow-500 text-white hover:bg-yellow-500">
