@@ -42,20 +42,14 @@ const seed = async (email: string) => {
     const [questionsReturn] = await db.insert(questions).values([{
         researchId: researchReturn.id,
         purpose: "Qual foi o seu objetivo PRIMÁRIO em escolher o Treinamento Kanban (KMP I)?",
-        score: "De acordo com os objetivos acima avalie como o treinamento atendeu às suas expectativas: [Objetivo PRIMÁRIO]",
-        explanation: "Qual a sua justificativa em escolher a opção acima para seu Objetivo PRIMÁRIO?",
         sequence: 1,
     }, {
         researchId: researchReturn.id,
         purpose: "(opcional) Qual foi o seu objetivo SECUNDÁRIO em escolher o KMP I?",
-        score: "De acordo com os objetivos acima avalie como o treinamento atendeu às suas expectativas: [Objetivo SECUNDÁRIO]",
-        explanation: "Qual a sua justificativa em escolher a opção acima para seu Objetivo SECUNDÁRIO?",
         sequence: 2,
     }, {
         researchId: researchReturn.id,
         purpose: "(opcional) Teve algum OUTRO OBJETIVO além dos dois acima?",
-        score: "De acordo com os objetivos acima avalie como o treinamento atendeu às suas expectativas: [OUTRO OBJETIVO]",
-        explanation: "Qual a sua justificativa em escolher a opção acima para seu OUTRO OBJETIVO?",
         sequence: 3,
     }]).returning()
 

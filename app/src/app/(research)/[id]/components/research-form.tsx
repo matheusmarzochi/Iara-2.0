@@ -118,7 +118,7 @@ export function ResearchForm({ questions, research }: Props) {
               name={`purposes.${index}.score`}
               render={({ field }) => (
                 <FormItem>
-                  <FormLabel>* {question.score}</FormLabel>
+                  <FormLabel>* Porque você escolheu nosso produto ou serviço?</FormLabel>
                   <FormControl>
                     <RadioGroup
                       defaultValue={field.value}
@@ -194,7 +194,7 @@ export function ResearchForm({ questions, research }: Props) {
               name={`purposes.${index}.explanation`}
               render={({ field }) => (
                 <FormItem>
-                  <FormLabel>* {question.explanation}</FormLabel>
+                  <FormLabel>* Conte-nos porque você deu sua nota</FormLabel>
                   <FormControl>
                     <Textarea
                       {...field}

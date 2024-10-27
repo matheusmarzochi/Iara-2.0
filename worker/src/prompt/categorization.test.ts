@@ -49,8 +49,6 @@ describe('prompt function', () => {
             createdAt: new Date(),
             researchId: 'r1',
             purpose: 'Qual é o seu hobby favorito?',
-            score: 'high',
-            explanation: 'N/A',
             sequence: 1,
             categories: []
         };
@@ -127,8 +125,6 @@ describe('prompt function', () => {
             createdAt: new Date(),
             researchId: 'r1',
             purpose: 'Qual é o seu hobby favorito?',
-            score: 'high',
-            explanation: 'N/A',
             sequence: 1,
             categories: []
         };

@@ -6,8 +6,6 @@ export const schema = z.object({
   purposes: z.array(
     z.object({
       purpose: z.string().min(1, "Informe um título para esta pergunta."),
-      score: z.string().min(1, "Informe um texto para esta pergunta."),
-      explanation: z.string().min(1, "Informe um texto para esta pergunta."),
     }),
   ),
 });

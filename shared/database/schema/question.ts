@@ -10,8 +10,6 @@ export const questions = pgTable(
         id: uuid('id').primaryKey().defaultRandom(),
         researchId: uuid('research_id').notNull().references(() => researches.id),
         purpose: text('purpose').notNull(),
-        score: text('score').notNull(),
-        explanation: text('explanation').notNull(),
         sequence: integer('sequence').notNull(),
         createdAt: timestamp("created_at", { mode: "date", withTimezone: true })
             .notNull()

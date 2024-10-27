@@ -34,8 +34,6 @@ export const getReport = async (researchId: string) => {
                     id: true,
                     purpose: true,
                     sequence: true,
-                    explanation: true,
-                    score: true,
                 },
                 with: {
                     categories: {
