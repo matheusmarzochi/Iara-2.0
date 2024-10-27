@@ -3,6 +3,8 @@ import { getCategories } from '../prompt/categorization'
 import { getClassification } from '../prompt/classification'
 import { getReport } from '../report/process'
 
+
+
 const researchProcessor = {
   async process(msg: string): Promise<boolean> {
 
@@ -15,5 +17,5 @@ const researchProcessor = {
   }
 }
 
-export const consumer = Consumer.create(researchQueueName, researchProcessor, 3)
+export const consumer = Consumer.create(researchQueueName, researchProcessor)
 export const producer = Producer.create(researchQueueName)

@@ -39,6 +39,7 @@ class ConnectionManager {
     }
 }
 
+
 class Consumer {
     private queueName: string;
     private handle: MessageProcessor;
@@ -46,16 +47,16 @@ class Consumer {
     private activeCount: number;
     private requeueDelay: number; // delay in milliseconds before re-queuing
 
-    private constructor(queueName: string, handle: MessageProcessor, maxConcurrent: number, requeueDelay: number) {
+    private constructor(queueName: string, handle: MessageProcessor, requeueDelay: number) {
         this.queueName = queueName;
         this.handle = handle;
-        this.maxConcurrent = maxConcurrent;
+        this.maxConcurrent = parseInt(process.env.QUEUE_MAX_CONCURRENT || '1', 10); // Fetch from env or use default
         this.requeueDelay = requeueDelay;
         this.activeCount = 0;
     }
 
-    public static create(queueName: string, handle: MessageProcessor, maxConcurrent: number, requeueDelay: number = 15000): Consumer {
-        return new Consumer(queueName, handle, maxConcurrent, requeueDelay);
+    public static create(queueName: string, handle: MessageProcessor, requeueDelay: number = 5000): Consumer {
+        return new Consumer(queueName, handle, requeueDelay);
     }
 
     public async start(): Promise<void> {
@@ -68,6 +69,7 @@ class Consumer {
             });
 
             console.log(`Waiting for messages in ${this.queueName}. To exit press CTRL+C`);
+            console.log(`Max concurrent processing set to: ${this.maxConcurrent}`);
 
             channel.consume(this.queueName, async (msg: Message | null) => {
                 if (msg !== null) {
