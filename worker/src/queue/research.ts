@@ -3,6 +3,8 @@ import { getCategories } from '../prompt/categorization'
 import { getClassification } from '../prompt/classification'
 import { getReport } from '../report/process'
 
+
+
 const researchProcessor = {
   async process(msg: string): Promise<boolean> {
 

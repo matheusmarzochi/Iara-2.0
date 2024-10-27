@@ -1,7 +1,7 @@
-import { eq, and } from '../../app/node_modules/drizzle-orm'
-import { db } from '../../app/src/database'
-import { classifications, forms, reports, questions, categories, gptMessages } from '../../app/src/database/schema'
-import { producer } from './queue/index'
+import { eq, and } from 'iara-shared/node_modules/drizzle-orm'
+import { db } from 'iara-shared/database'
+import { classifications, forms, reports, questions, categories, gptMessages } from 'iara-shared/database/schema'
+import { producer } from './queue/research'
 
 
 const enqueue = async(researchId: string) => {
