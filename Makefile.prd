@@ -30,7 +30,7 @@ bash-app:
 
 bash-worker:
 	@docker run -ti --rm \
-		--net iara_prd \
+		--net iara-prd \
 		--name iara-worker-bash \
 		--env-file .env.production \
 		-v ./worker/:/code/worker \
@@ -39,7 +39,7 @@ bash-worker:
 
 db-migrate:
 	@docker run -ti --rm \
-		--net iara_prd \
+		--net iara-prd \
 		--name iara-db-migrate \
 		--env-file .env.production \
 		-v ./shared/:/code \

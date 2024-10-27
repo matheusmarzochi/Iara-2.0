@@ -40,7 +40,7 @@ ollama-init:
 
 bash-worker:
 	@docker run -ti --rm \
-		--net iara_stg \
+		--net iara-stg \
 		--name iara-worker-bash \
 		--env-file .env.staging \
 		-v ./worker/:/code/worker \
@@ -49,7 +49,7 @@ bash-worker:
 
 seed-worker:
 	@docker run -ti --rm \
-		--net iara_stg \
+		--net iara-stg \
 		--name iara-worker-bash \
 		--env-file .env.staging \
 		-v ./worker/:/code/worker \
@@ -58,7 +58,7 @@ seed-worker:
 
 db-migrate:
 	@docker run -ti --rm \
-		--net iara_stg \
+		--net iara-stg \
 		--name iara-db-migrate \
 		--env-file .env.staging \
 		-v ./shared/:/code \
