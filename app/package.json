@@ -13,7 +13,7 @@
     "db:migrate": "drizzle-kit migrate",
     "db:studio": "drizzle-kit studio --host 0.0.0.0",
     "webhooks": "ngrok http 3000",
-    "postinstall": "npm --cwd ../shared install"
+    "postinstall": "npm --prefix ../shared install"
   },
   "dependencies": {
     "@clerk/localizations": "^2.8.1",
