@@ -1,4 +1,4 @@
-import { Producer } from '../queue/connection';
+import { Producer } from 'iara-shared/queue/connection';
 
 const researchQueueName = "researches"
 

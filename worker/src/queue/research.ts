@@ -15,5 +15,5 @@ const researchProcessor = {
   }
 }
 
-export const consumer = Consumer.create(researchQueueName, researchProcessor)
+export const consumer = Consumer.create(researchQueueName, researchProcessor, 3)
 export const producer = Producer.create(researchQueueName)

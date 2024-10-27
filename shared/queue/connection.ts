@@ -42,14 +42,20 @@ class ConnectionManager {
 class Consumer {
     private queueName: string;
     private handle: MessageProcessor;
+    private maxConcurrent: number;
+    private activeCount: number;
+    private requeueDelay: number; // delay in milliseconds before re-queuing
 
-    private constructor(queueName: string, handle: MessageProcessor) {
+    private constructor(queueName: string, handle: MessageProcessor, maxConcurrent: number, requeueDelay: number) {
         this.queueName = queueName;
         this.handle = handle;
+        this.maxConcurrent = maxConcurrent;
+        this.requeueDelay = requeueDelay;
+        this.activeCount = 0;
     }
 
-    public static create(queueName: string, handle: MessageProcessor): Consumer {
-        return new Consumer(queueName, handle);
+    public static create(queueName: string, handle: MessageProcessor, maxConcurrent: number, requeueDelay: number = 15000): Consumer {
+        return new Consumer(queueName, handle, maxConcurrent, requeueDelay);
     }
 
     public async start(): Promise<void> {
@@ -65,16 +71,30 @@ class Consumer {
 
             channel.consume(this.queueName, async (msg: Message | null) => {
                 if (msg !== null) {
-                    const messageContent = msg.content.toString();
-                    console.log(`Received message at ${this.queueName}`);
+                    // Only proceed if we're under the max concurrency limit
+                    if (this.activeCount < this.maxConcurrent) {
+                        this.activeCount++;
+                        const messageContent = msg.content.toString();
+                        console.log(`Received message at ${this.queueName}`);
 
-                    const result = await this.handle.process(messageContent);
+                        try {
+                            const result = await this.handle.process(messageContent);
 
-                    if (result) {
-                        channel.ack(msg);
+                            if (result) {
+                                channel.ack(msg);
+                            } else {
+                                console.error(`Failed to process message at ${this.queueName}`);
+                            }
+                        } catch (error) {
+                            console.error(`Error processing message at ${this.queueName}:`, error);
+                        } finally {
+                            // Decrement active count when processing completes
+                            this.activeCount--;
+                        }
                     } else {
-                        console.error(`Failed to process message at ${this.queueName}`);
-                        // Optionally, you could handle failed processing here
+                        // Wait before re-queuing if we're at max concurrency
+                        await this.sleep(this.requeueDelay);
+                        channel.nack(msg, false, true);
                     }
                 }
             }, {
@@ -83,6 +103,10 @@ class Consumer {
         } catch (error) {
             console.error('Error connecting to RabbitMQ:', error);
         }
+    }
+
+    private sleep(ms: number): Promise<void> {
+        return new Promise(resolve => setTimeout(resolve, ms));
     }
 }
 

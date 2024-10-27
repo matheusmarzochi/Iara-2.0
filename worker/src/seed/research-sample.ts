@@ -1,9 +1,9 @@
 import fs from 'fs'
-import { db } from '../../../app/src/database';
-import { researches } from '../../../app/src/database/schema/research';
-import { questions } from '../../../app/src/database/schema/question';
-import { forms } from '../../../app/src/database/schema/form';
-import { answers } from '../../../app/src/database/schema/answer';
+import { db } from 'iara-shared/database';
+import { researches } from 'iara-shared/database/schema/research';
+import { questions } from 'iara-shared/database/schema/question';
+import { forms } from 'iara-shared/database/schema/form';
+import { answers } from 'iara-shared/database/schema/answer';
 
 type FormData = {
     email: string

@@ -28,7 +28,6 @@ app-build:
 		--env-file .env.local \
 		-v ./app/:/code/app \
 		-v ./shared/:/code/shared \
-		-w /code \
 		iara-app npm run build
 
 bash-app:
