@@ -1,6 +1,8 @@
 services:
   app:
-    build: ./app/.
+    build:
+      context: .
+      dockerfile: ./app/Dockerfile
     container_name: iara-stg-app
     image: iara-app
     depends_on:
@@ -19,7 +21,9 @@ services:
       - 3000
     command: npm run dev
   worker:
-    build: ./worker/.
+    build:
+      context: .
+      dockerfile: ./worker/Dockerfile
     container_name: iara-stg-worker
     image: iara-worker
     depends_on:

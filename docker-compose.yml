@@ -1,6 +1,8 @@
 services:
   app:
-    build: ./app/.
+    build:
+      context: .
+      dockerfile: ./app/Dockerfile
     container_name: iara-app
     image: iara-app
     depends_on:
@@ -21,7 +23,9 @@ services:
       - 3000
     command: npm run dev
   worker:
-    build: ./worker/.
+    build:
+      context: .
+      dockerfile: ./worker/Dockerfile
     container_name: iara-worker
     image: iara-worker
     depends_on:
@@ -77,7 +81,9 @@ services:
     volumes:
       - ./postgres:/var/lib/postgresql/data
   drizzle-studio:
-    build: ./app/.
+    build: 
+      context: .
+      dockerfile: ./app/Dockerfile
     image: iara-app
     container_name: iara-drizzle-studio
     depends_on:
