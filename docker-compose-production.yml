@@ -9,8 +9,7 @@ services:
       - .env.production
     volumes:
       - ./worker:/code/worker
-      - ./app/node_modules:/code/app/node_modules
-      - ./app/src/database:/code/app/src/database
+      - ./shared:/code/shared
     command: npm run dev
 networks:
   iara-prd:

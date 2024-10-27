@@ -1,5 +1,5 @@
 import { buildQuestionReports } from './process'; 
-import { Research } from '../../../app/src/database/schema'
+import { Research } from 'iara-shared/database/schema'
 
 describe('buildQuestionReports', () => {
   test('should generate correct QuestionReport for a simple ResearchObject', () => {

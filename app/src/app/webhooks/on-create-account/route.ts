@@ -1,8 +1,8 @@
 import type { UserJSON, WebhookEvent } from "@clerk/nextjs/server";
 import { headers } from "next/headers";
 import { Webhook, type WebhookRequiredHeaders } from "svix";
-import { db } from "~/database";
-import { users } from "~/database/schema";
+import { db } from "iara-shared/database";
+import { users } from "iara-shared/database/schema";
 import { env } from "~/env";
 
 async function handler(request: Request) {

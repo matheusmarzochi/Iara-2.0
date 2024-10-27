@@ -14,7 +14,7 @@ import {
 import { Input } from "~/components/ui/input";
 import { RadioGroup, RadioGroupItem } from "~/components/ui/radio-group";
 import { Textarea } from "~/components/ui/textarea";
-import type { Question } from "~/database/schema";
+import type { Question } from "iara-shared/database/schema";
 import { schema } from "../schema";
 import { useServerAction } from "zsa-react";
 import { replyResearchAction } from "../actions";

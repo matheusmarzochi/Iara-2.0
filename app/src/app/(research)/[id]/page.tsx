@@ -1,4 +1,4 @@
-import { db } from "~/database";
+import { db } from "iara-shared/database";
 import { ResearchForm } from "./components/research-form";
 import { notFound } from "next/navigation";
 

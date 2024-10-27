@@ -1,8 +1,8 @@
 import { auth } from "@clerk/nextjs/server";
-import { and, eq } from "drizzle-orm";
+import { and, eq } from "iara-shared/node_modules/drizzle-orm";
 import { notFound } from "next/navigation";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "~/components/ui/tabs";
-import { db } from "~/database";
+import { db } from "iara-shared/database";
 import {
 	researches,
 	users,
@@ -10,7 +10,7 @@ import {
 	type Report,
 	type StrategyKeys,
 	type ReportAwnser,
-} from "~/database/schema";
+} from "iara-shared/database/schema";
 import {
 	Accordion,
 	AccordionContent,

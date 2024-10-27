@@ -27,7 +27,7 @@ import {
 import { useMediaQuery } from "~/hooks/use-media-query";
 import { closeResearchAction } from "../actions";
 import { toast } from "sonner";
-import type { Research } from "~/database/schema";
+import type { Research } from "iara-shared/database/schema";
 import { Loader } from "lucide-react";
 
 type Props = {

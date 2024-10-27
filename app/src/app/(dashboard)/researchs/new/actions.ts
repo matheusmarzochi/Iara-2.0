@@ -2,8 +2,8 @@
 
 import { actions } from "~/lib/actions";
 import { schema } from "./schemas";
-import { questions, researches } from "~/database/schema";
-import { db } from "~/database";
+import { questions, researches } from "iara-shared/database/schema";
+import { db } from "iara-shared/database";
 import { revalidatePath } from "next/cache";
 import { redirect } from "next/navigation";
 

@@ -1,4 +1,4 @@
-import { Category } from '../../../app/src/database/schema';
+import { Category } from 'iara-shared/database/schema';
 import { promptValidation } from './classification';
 
 describe('promptValidation', () => {

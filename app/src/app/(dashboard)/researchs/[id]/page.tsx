@@ -1,16 +1,16 @@
 import { CopyLinkForm } from "./components/copy-link-form";
 import { CloseResearch } from "./components/close-research";
-import { db } from "~/database";
+import { db } from "iara-shared/database";
 import { notFound } from "next/navigation";
 import { formatters } from "~/lib/utils";
-import { and, count, eq, inArray } from "drizzle-orm";
+import { and, count, eq, inArray } from "iara-shared/node_modules/drizzle-orm";
 import {
 	forms,
 	reports,
 	type Research,
 	researches,
 	users,
-} from "~/database/schema";
+} from "iara-shared/database/schema";
 import { auth } from "@clerk/nextjs/server";
 import { Badge } from "~/components/ui/badge";
 import { Button } from "~/components/ui/button";
