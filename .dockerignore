@@ -1,0 +1,7 @@
+*
+!/app/package.json
+!/app/package-lock.json
+!/worker/package.json
+!/worker/package-lock.json
+!/shared/package.json
+!/shared/package-lock.json

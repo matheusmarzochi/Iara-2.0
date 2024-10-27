@@ -1,6 +1,8 @@
 services:
   worker:
-    build: ./worker/.
+    build:
+      context: .
+      dockerfile: ./worker/Dockerfile
     container_name: iara-prd-worker
     image: iara-worker
     networks:

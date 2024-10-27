@@ -1,6 +1,8 @@
 services:
   app:
-    build: ./app/.
+    build:
+      context: .
+      dockerfile: ./app/Dockerfile
     container_name: iara-app
     image: iara-app
     networks:
