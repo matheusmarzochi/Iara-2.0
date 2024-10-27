@@ -1,4 +1,4 @@
-import { Form } from '../../../app/src/database/schema'
+import { Form } from 'iara-shared/database/schema'
 import {
     filterAnswersBySequence,
     filterQuestionsBySequence,

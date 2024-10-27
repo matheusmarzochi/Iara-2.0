@@ -3,7 +3,7 @@
 import { Button } from "~/components/ui/button";
 import { Input } from "~/components/ui/input";
 import { Label } from "~/components/ui/label";
-import type { Research } from "~/database/schema";
+import type { Research } from "iara-shared/database/schema";
 import { env } from "~/env";
 import { useCopyToClipboard } from "~/hooks/use-copy-to-clipboard";
 

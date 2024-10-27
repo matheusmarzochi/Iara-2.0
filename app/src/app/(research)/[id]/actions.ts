@@ -2,8 +2,8 @@
 
 import { createServerAction } from "zsa";
 import { schema } from "./schema";
-import { db } from "~/database";
-import { answers, forms } from "~/database/schema";
+import { db } from "iara-shared/database";
+import { answers, forms } from "iara-shared/database/schema";
 
 export const replyResearchAction = createServerAction()
   .input(schema)

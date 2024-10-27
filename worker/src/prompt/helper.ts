@@ -1,4 +1,4 @@
-import { type Form, Question } from "../../../app/src/database/schema"
+import { type Form, Question } from "iara-shared/database/schema"
 
 
 export const filterQuestionsBySequence = (questions: Question[], sequence: number): Question[] => {

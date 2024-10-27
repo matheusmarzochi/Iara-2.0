@@ -1,11 +1,11 @@
 import { auth } from "@clerk/nextjs/server";
-import { count, desc, eq } from "drizzle-orm";
+import { count, desc, eq } from "iara-shared/node_modules/drizzle-orm";
 import Link from "next/link";
 import { Badge } from "~/components/ui/badge";
 import { Button } from "~/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "~/components/ui/card";
-import { db } from "~/database";
-import { forms, type Research, researches, users } from "~/database/schema";
+import { db } from "iara-shared/database";
+import { forms, type Research, researches, users } from "iara-shared/database/schema";
 import { cn, formatters } from "~/lib/utils";
 
 type ResearchGroup = Record<Research["status"], Array<Research>>;

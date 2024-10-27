@@ -10,6 +10,5 @@ bash-worker:
 		--name iara-worker-bash \
 		--env-file .env.remote \
 		-v ./worker/:/code/worker \
-		-v ./app/node_modules:/code/app/node_modules \
-		-v ./app/src/database:/code/app/src/database \
+		-v ./shared/:/code/shared \
 		iara-worker bash

@@ -1,6 +1,6 @@
-import { eq } from "../../../app/node_modules/drizzle-orm";
-import { db } from "../../../app/src/database"
-import { categories, type Form, Question } from "../../../app/src/database/schema"
+import { eq } from "iara-shared/node_modules/drizzle-orm";
+import { db } from "iara-shared/database"
+import { categories, type Form, Question } from "iara-shared/database/schema"
 import { promptRequest, stringToJson } from "../integration/prompt"
 import { filterAnswersBySequence, filterQuestionsBySequence } from "./helper"
 

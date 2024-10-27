@@ -13,7 +13,8 @@ services:
     env_file:
       - .env.local
     volumes:
-      - ./app:/code
+      - ./app:/code/app
+      - ./shared:/code/shared
     ports:
       - 3001:3000
     expose:
@@ -34,8 +35,7 @@ services:
       - .env.local
     volumes:
       - ./worker:/code/worker
-      - ./app/node_modules:/code/app/node_modules
-      - ./app/src/database:/code/app/src/database
+      - ./shared:/code/shared
     command: npm run dev
   rabbitmq:
     image: rabbitmq:3-management
@@ -86,7 +86,8 @@ services:
     networks:
       - iara
     volumes:
-      - ./app/:/code
+      - ./shared/:/code/shared
+    working_dir: /code/shared
     env_file:
       - ./.env.local
     ports:

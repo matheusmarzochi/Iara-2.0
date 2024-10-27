@@ -1,8 +1,8 @@
 import "server-only";
 import { auth } from "@clerk/nextjs/server";
 import { createServerActionProcedure } from "zsa";
-import { db } from "~/database";
-import type { User } from "~/database/schema";
+import { db } from "iara-shared/database";
+import type { User } from "iara-shared/database/schema";
 
 export const actions = createServerActionProcedure().handler(async () => {
   const { userId } = auth();

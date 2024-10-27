@@ -8,7 +8,8 @@ services:
     env_file:
       - .env.remote
     volumes:
-      - ./app:/code
+      - ./app:/code/app
+      - ./shared:/code/shared
     ports:
       - 3001:3000
     expose:
@@ -21,7 +22,8 @@ services:
     networks:
       - iara
     volumes:
-      - ./app/:/code
+      - ./shared/:/code/shared
+    working_dir: /code/shared
     env_file:
       - ./.env.remote
     ports:

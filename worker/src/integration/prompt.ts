@@ -1,5 +1,5 @@
-import { db } from '../../../app/src/database';
-import { gptMessages } from '../../../app/src/database/schema';
+import { db } from 'iara-shared/database';
+import { gptMessages } from 'iara-shared/database/schema';
 
 import { ollama } from './providers/ollama'
 import { gpt } from './providers/gpt'

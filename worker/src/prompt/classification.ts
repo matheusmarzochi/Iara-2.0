@@ -1,7 +1,7 @@
-import { db } from "../../../app/src/database"
+import { db } from "iara-shared/database"
 import { promptRequest, stringToJson } from "../integration/prompt"
 import { filterQuestionsBySequence } from "./helper"
-import { Answer, Question, Form, Category, classifications } from "../../../app/src/database/schema"
+import { Answer, Question, Form, Category, classifications } from "iara-shared/database/schema"
 
 const MAX_ATTEMPT = 3
 
@@ -125,8 +125,8 @@ export const getClassification = async (researchId: string) => {
 
             if (classification) {
                 const alreadyClassificated = question
-                    .categories.map(c => c.name)
-                    .every(element => classification.names.includes(element))
+                    .categories.map((c: Category) => c.name)
+                    .every((element: string) => classification.names.includes(element))
 
                 if (alreadyClassificated) {
                     console.log(`getClassification: Classification already done for answer ID ${answer.id}`);

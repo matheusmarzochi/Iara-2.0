@@ -1,11 +1,11 @@
 "use server";
 
-import { and, eq } from "drizzle-orm";
+import { and, eq } from "iara-shared/node_modules/drizzle-orm";
 import { revalidatePath } from "next/cache";
 import { redirect } from "next/navigation";
 import { z } from "zod";
-import { db } from "~/database";
-import { researches } from "~/database/schema";
+import { db } from "iara-shared/database";
+import { researches } from "iara-shared/database/schema";
 import { actions } from "~/lib/actions";
 import { producer } from '~/queue'
 export const closeResearchAction = actions

@@ -62,7 +62,8 @@ db-generate:
 	@docker run -ti --rm \
 		--name iara-db-generate \
 		--env-file .env.staging \
-		-v ./app/:/code \
+		-v ./shared/:/code \
+		-w /code \
 		iara-app npm run db:generate
 
 db-migrate:
@@ -70,5 +71,6 @@ db-migrate:
 		--net app_iara_stg \
 		--name iara-db-migrate \
 		--env-file .env.staging \
-		-v ./app/:/code \
+		-v ./shared/:/code \
+		-w /code \
 		iara-app npm run db:migrate

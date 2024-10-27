@@ -1,4 +1,4 @@
-import { Question, Form } from "../../../app/src/database/schema"
+import { Question, Form } from "iara-shared/database/schema"
 import {
     prompt,
     promptValidation

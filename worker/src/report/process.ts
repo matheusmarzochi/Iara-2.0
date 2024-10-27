@@ -1,6 +1,6 @@
-import { db } from '../../../app/src/database'
-import { eq } from '../../../app/node_modules/drizzle-orm'
-import { reports, researches, type Research, PointOfInterest, ScoreBox, StrategyInsights, ReportData } from '../../../app/src/database/schema';
+import { db } from 'iara-shared/database'
+import { eq } from 'iara-shared/node_modules/drizzle-orm'
+import { reports, researches, type Research, PointOfInterest, ScoreBox, StrategyInsights, ReportData } from 'iara-shared/database/schema';
 
 export const getReport = async (researchId: string) => {
     const research = await db.query.researches.findFirst({
