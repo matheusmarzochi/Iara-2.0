@@ -47,8 +47,6 @@ export function CreateResearchForm() {
 			purposes: [
 				{
 					purpose: "",
-					score: "",
-					explanation: "",
 				},
 			],
 		},
@@ -144,91 +142,6 @@ export function CreateResearchForm() {
 										</FormItem>
 									)}
 								/>
-
-								<FormField
-									control={form.control}
-									name={`purposes.${index}.score`}
-									render={({ field }) => (
-										<FormItem>
-											<FormLabel>Questão de Avaliação</FormLabel>
-											<FormControl>
-												<Textarea
-													{...field}
-													className="resize-none"
-													placeholder="Quanto o produto ou serviço atendeu ao seu propósito?"
-												/>
-											</FormControl>
-											<FormMessage />
-
-											<RadioGroup>
-												<div className="flex items-start md:items-center gap-2">
-													<RadioGroupItem value="" aria-readonly disabled />
-													<Label>
-														5 - Extremamante. Recebi tudo que esperava e mais um
-														pouco.
-													</Label>
-												</div>
-
-												<div className="flex items-start md:items-center gap-2">
-													<RadioGroupItem value="" aria-readonly disabled />
-													<Label>
-														4 - Plenamente. Tudo que eu precisava foi atendido.
-													</Label>
-												</div>
-
-												<div className="flex items-start md:items-center gap-2">
-													<RadioGroupItem value="" aria-readonly disabled />
-													<Label>
-														3 - Na maior parte. Em geral foi atendido,mas algo
-														ficou faltando.
-													</Label>
-												</div>
-
-												<div className="flex items-start md:items-center gap-2">
-													<RadioGroupItem value="" aria-readonly disabled />
-													<Label>
-														2 - Parcialmente. Alguns pontos foram ok, mas uma
-														parte relevante deixou a desejar.
-													</Label>
-												</div>
-
-												<div className="flex items-start md:items-center gap-2">
-													<RadioGroupItem value="" aria-readonly disabled />
-													<Label>
-														1 - Um pouco. Houve itens positivos, mas a real
-														necessidade não foi atendida.
-													</Label>
-												</div>
-
-												<div className="flex items-start md:items-center gap-2">
-													<RadioGroupItem value="" aria-readonly disabled />
-													<Label>
-														0 - Nada. Nenhuma das minhas necessidades foi
-														atendida.
-													</Label>
-												</div>
-											</RadioGroup>
-										</FormItem>
-									)}
-								/>
-
-								<FormField
-									control={form.control}
-									name={`purposes.${index}.explanation`}
-									render={({ field }) => (
-										<FormItem>
-											<FormLabel>Questão de Avaliação</FormLabel>
-											<FormControl>
-												<Textarea
-													{...field}
-													className="resize-none"
-													placeholder="Detalhe sua resposta ao item 2"
-												/>
-											</FormControl>
-											<FormMessage />
-										</FormItem>
-									)}
-								/>
 							</div>
 						))}
 					</div>
@@ -239,7 +152,7 @@ export function CreateResearchForm() {
 							size="sm"
 							variant="outline"
 							onClick={() =>
-								append({ explanation: "", purpose: "", score: "" })
+								append({ purpose: "" })
 							}
 						>
 							Adicionar Propósito
@@ -265,7 +178,7 @@ export function CreateResearchForm() {
 							variant="outline"
 							className="hidden lg:flex"
 							onClick={() =>
-								append({ explanation: "", purpose: "", score: "" })
+								append({ purpose: "" })
 							}
 						>
 							Adicionar Propósito

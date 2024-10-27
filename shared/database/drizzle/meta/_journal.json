@@ -120,6 +120,13 @@
       "when": 1729362364042,
       "tag": "0016_regular_greymalkin",
       "breakpoints": true
+    },
+    {
+      "idx": 17,
+      "version": "7",
+      "when": 1730047473306,
+      "tag": "0017_panoramic_nehzno",
+      "breakpoints": true
     }
   ]
 }

@@ -14,9 +14,6 @@ export const prompt = (question: Question, answer: Answer) => {
     prompt += "Resposta:\n"
     prompt += `${answer.purpose}\n\n`
 
-    prompt += "Pergunta da Explicação:\n"
-    prompt += `${question.explanation}\n\n`
-
     prompt += "Explicação:\n"
     prompt += `${answer.explanation}\n\n`
 

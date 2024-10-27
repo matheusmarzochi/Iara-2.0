@@ -86,8 +86,6 @@ describe('buildQuestionReports', () => {
       questions: [
         {
           purpose: 'Question 1',
-          score: '',
-          explanation: '',
           sequence: 1,
           createdAt: new Date(),
           id: '',
@@ -101,8 +99,6 @@ describe('buildQuestionReports', () => {
         },
         {
           purpose: 'Question 2',
-          score: '',
-          explanation: '',
           sequence: 2,
           createdAt: new Date(),
           id: '',
@@ -191,8 +187,6 @@ describe('buildQuestionReports', () => {
       questions: [
         {
           purpose: 'Question 1',
-          score: '',
-          explanation: '',
           sequence: 1,
           createdAt: new Date(),
           id: '',
@@ -278,8 +272,6 @@ describe('buildQuestionReports', () => {
       questions: [
         {
           purpose: 'Question 1',
-          score: '',
-          explanation: '',
           sequence: 1,
           createdAt: new Date(),
           id: '',
@@ -416,8 +408,6 @@ describe('buildQuestionReports', () => {
       questions: [
         {
           purpose: 'Question 1',
-          score: '',
-          explanation: '',
           sequence: 1,
           createdAt: new Date(),
           id: '',
@@ -462,8 +452,6 @@ describe('buildQuestionReports', () => {
       questions: [
         {
           purpose: 'Question 1',
-          score: '',
-          explanation: '',
           sequence: 1,
           createdAt: new Date(),
           id: '',
@@ -568,8 +556,6 @@ describe('buildQuestionReports', () => {
       questions: [
         {
           purpose: 'Question 1',
-          score: '',
-          explanation: '',
           sequence: 1,
           createdAt: new Date(),
           id: '',
@@ -637,8 +623,6 @@ describe('buildQuestionReports', () => {
       questions: [
         {
           purpose: 'Question 1',
-          score: '',
-          explanation: '',
           sequence: 1,
           createdAt: new Date(),
           id: '',
