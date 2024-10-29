@@ -1,4 +1,4 @@
-import { index, integer, pgTable, text, timestamp, uuid } from 'drizzle-orm/pg-core';
+import { index, integer, pgTable, text, timestamp, uuid, boolean } from 'drizzle-orm/pg-core';
 import { relations } from 'drizzle-orm';
 import { createInsertSchema } from "drizzle-zod";
 import { researches } from './research';
@@ -11,6 +11,7 @@ export const questions = pgTable(
         researchId: uuid('research_id').notNull().references(() => researches.id),
         purpose: text('purpose').notNull(),
         sequence: integer('sequence').notNull(),
+        required: boolean('required').default(true),
         createdAt: timestamp("created_at", { mode: "date", withTimezone: true })
             .notNull()
             .defaultNow(),
