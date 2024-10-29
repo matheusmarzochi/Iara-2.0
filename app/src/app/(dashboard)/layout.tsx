@@ -9,7 +9,7 @@ export default function DashboarLayout({ children }: { children: ReactNode }) {
 		<>
 			<header className="bg-[#E0F2FE] dark:bg-[#0C4A6E]">
 				<div className="container h-20 flex justify-between items-center">
-					<Link href="/">
+					<Link href="/dashboard">
 						<Logo className="w-10" />
 					</Link>
 
