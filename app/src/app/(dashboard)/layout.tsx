@@ -27,12 +27,6 @@ export default function DashboarLayout({ children }: { children: ReactNode }) {
 			<main className="min-h-[calc(100dvh-160px)] w-full container py-10">
 				{children}
 			</main>
-
-			<footer>
-				<div className="container h-20 flex items-center">
-					<ToggleTheme />
-				</div>
-			</footer>
 		</>
 	);
 }
