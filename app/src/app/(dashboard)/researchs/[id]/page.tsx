@@ -79,7 +79,7 @@ export default async function ResearchPage({ params }: Props) {
 		})[status];
 
 	return (
-		<div className="relative">
+		<div className="flex flex-col h-[calc(100dvh-160px)]">
 			<header className="pt-4 pb-6 space-y-4">
 				<div className="flex items-center justify-between">
 					<div className="flex flex-col gap-1 lg:flex-row lg:items-center lg:gap-6">
