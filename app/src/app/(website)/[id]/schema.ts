@@ -5,13 +5,11 @@ export const schema = z.object({
 	email: z.string().email("Informe um e-mail válido"),
 	purposes: z.array(
 		z.object({
-			purpose: z
-				.string({ message: "Essa resposta é obrigatória" })
-				.min(1, "Essa resposta é obrigatória"),
-			score: z.enum(["0", "1", "2", "3", "4", "5"]),
+			purpose: z.string({ message: "Essa resposta é obrigatória" }).optional(),
+			score: z.enum(["0", "1", "2", "3", "4", "5"]).optional(),
 			explanation: z
 				.string({ message: "Essa resposta é obrigatória" })
-				.min(1, "Essa resposta é obrigatória"),
+				.optional(),
 			sequence: z.number().optional(),
 		}),
 	),
