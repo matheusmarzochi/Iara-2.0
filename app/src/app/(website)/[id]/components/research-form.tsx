@@ -48,13 +48,6 @@ function usePurposeParams(maxPurposesLength: number) {
 	return Number(paramsPurpose);
 }
 
-/**
- * @todo se for mais de um propósito:
- *  - No primeiro propósito adicionar um botão de próximo desativa se não responder
- *  - A partir do segundo:
- *    - Se for obrigatório desativar o botão de avançar até preencher
- *    - Se não for obrigatório deixar avançar para o próximo
- */
 export function ResearchForm({ questions, research }: Props) {
 	const router = useRouter();
 

@@ -7,7 +7,7 @@ export function StatusButton({
 	isPending,
 	...props
 }: ButtonProps & { isPending?: boolean }) {
-	const { isSubmitting, isValid, errors } = useFormState();
+	const { isSubmitting, isValid } = useFormState();
 
 	const isPendingStatus = isSubmitting || isPending;
 

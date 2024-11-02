@@ -13,12 +13,17 @@ export default function DashboarLayout({ children }: { children: ReactNode }) {
 						<Logo className="w-10" />
 					</Link>
 
-					<div>
+					<div className="flex gap-2">
 						<UserButton
 							appearance={{
 								elements: { userButtonOuterIdentifier: "text-foreground" },
 							}}
 							showName
+						/>
+
+						<ToggleTheme
+							variant="ghost"
+							className="rounded-full hover:bg-transparent"
 						/>
 					</div>
 				</div>

@@ -110,27 +110,35 @@ export default async function ReportsPage({ params }: Props) {
 
 				{report.data.map((question) => (
 					<TabsContent
-						className="mt-0 flex flex-col gap-6 md:grid md:grid-cols-2"
+						className="mt-0 flex flex-col gap-x-6 gap-y-4 grid-row-[20px_1fr] md:grid md:grid-cols-2"
 						value={question.question_id}
 						key={question.question_id}
 					>
-						<div className="contents space-y-6 md:block">
+						<h4 className="font-semibold text-lg">Question Purpose</h4>
+
+						<div className="contents space-y-6 md:block row-start-2">
 							{/* Score Box */}
 							<div className="space-y-2">
 								<h3 className="text-lg font-semibold">Score Box</h3>
-								<h4 className="font-medium text-blue-500">
-									{Math.round(
-										(100 * question.score_box.fit) / question.total_forms,
-									)}
+								<h4>
+									<strong className="text-green-500">
+										{Math.round(
+											(100 * question.score_box.fit) / question.total_forms,
+										)}
+									</strong>
 									/
-									{Math.round(
-										(100 * question.score_box.neutral) / question.total_forms,
-									)}
+									<strong className="text-yellow-500">
+										{Math.round(
+											(100 * question.score_box.neutral) / question.total_forms,
+										)}
+									</strong>
 									/
-									{Math.round(
-										(100 * question.score_box.unfit) / question.total_forms,
-									)}{" "}
-									({question.total_forms})
+									<strong className="text-red-500">
+										{Math.round(
+											(100 * question.score_box.unfit) / question.total_forms,
+										)}
+									</strong>
+									<span className="pl-2">({question.total_forms})</span>
 								</h4>
 
 								<div className="space-y-2">
@@ -138,20 +146,20 @@ export default async function ReportsPage({ params }: Props) {
 										Total de propósito informados: {question.total_forms}
 									</p>
 									<p className="text-sm space-x-6">
-										<span>
+										<span className="text-green-500">
 											{Math.round(
 												(100 * question.score_box.fit) / question.total_forms,
 											)}
 											% Fit
 										</span>
-										<span>
+										<span className="text-yellow-500">
 											{Math.round(
 												(100 * question.score_box.neutral) /
 													question.total_forms,
 											)}
 											% Regular
 										</span>
-										<span>
+										<span className="text-red-500">
 											{Math.round(
 												(100 * question.score_box.unfit) / question.total_forms,
 											)}
@@ -192,7 +200,7 @@ export default async function ReportsPage({ params }: Props) {
 						</div>
 
 						{/* Results and replies */}
-						<div className="order-2">
+						<div className="order-2 row-start-2">
 							<h3 className="text-lg font-semibold">
 								Resultado das Categorias de propostas
 							</h3>
@@ -219,6 +227,10 @@ export default async function ReportsPage({ params }: Props) {
 											] ({interest.answers.length}/{question.total_forms})
 										</AccordionTrigger>
 										<AccordionContent className="space-y-6">
+											<h4 className="font-bold text-md">
+												Nos conte por qual objetivo ou razão escolheu nosso
+												produto/serviço?
+											</h4>
 											<InterestGroupedAnwsers answers={interest.answers} />
 										</AccordionContent>
 									</AccordionItem>
@@ -230,7 +242,7 @@ export default async function ReportsPage({ params }: Props) {
 			</Tabs>
 
 			<div className="my-6">
-				<Button variant="outline" size="sm" asChild>
+				<Button variant="outline" size="sm" className="w-full md:w-fit" asChild>
 					<Link href={`/researchs/${params.id}`}>Voltar</Link>
 				</Button>
 			</div>
@@ -289,6 +301,7 @@ function InterestGroupedAnwsers({ answers }: { answers: Array<ReportAwnser> }) {
 						<div className="mb-2">{getBadge(key)}</div>
 
 						<div className="space-y-2">
+							{/* @todo add an answer.id here to avoid use index */}
 							{answers.map((answer, index) => (
 								<div
 									key={index}
