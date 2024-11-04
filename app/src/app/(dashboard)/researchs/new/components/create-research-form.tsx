@@ -14,14 +14,16 @@ import { Input } from "~/components/ui/input";
 import { Textarea } from "~/components/ui/textarea";
 import { Button } from "~/components/ui/button";
 import Link from "next/link";
-import { RadioGroup, RadioGroupItem } from "~/components/ui/radio-group";
-import { Label } from "~/components/ui/label";
 import { schema } from "../schemas";
 import type { z } from "zod";
 import { useServerAction } from "zsa-react";
 import { createResearchAction } from "../actions";
 import { StatusButton } from "~/components/status-button";
 import { toast } from "sonner";
+import { Checkbox } from "~/components/ui/checkbox";
+import type { CheckedState } from "@radix-ui/react-checkbox";
+import { cn } from "~/lib/utils";
+import { PlusIcon, TrashIcon } from "lucide-react";
 
 type Schema = z.infer<typeof schema>;
 
@@ -47,6 +49,7 @@ export function CreateResearchForm() {
 			purposes: [
 				{
 					purpose: "",
+					required: true,
 				},
 			],
 		},
@@ -65,7 +68,10 @@ export function CreateResearchForm() {
 
 	return (
 		<Form {...form}>
-			<form className="space-y-6" onSubmit={form.handleSubmit(submit)}>
+			<form
+				className="flex flex-col gap-6 min-h-[calc(100dvh-250px)]"
+				onSubmit={form.handleSubmit(submit)}
+			>
 				<div className="flex flex-col gap-6 lg:flex-row lg:gap-10">
 					<FormField
 						control={form.control}
@@ -103,34 +109,16 @@ export function CreateResearchForm() {
 					/>
 				</div>
 
-				<div>
-					<h3 className="text-2xl font-semibold">Propósitos</h3>
-
+				<div className="space-y-6">
 					<div>
 						{fields.map((field, index) => (
-							<div
-								key={field.id}
-								className="border-b py-10 last:border-b-0 space-y-4"
-							>
-								{index > 0 ? (
-									<div className="py-2">
-										<Button
-											size="sm"
-											variant="outline"
-											type="button"
-											onClick={() => remove(index)}
-										>
-											Remover este propósito
-										</Button>
-									</div>
-								) : null}
-
+							<div key={field.id} className="py-3 space-y-4">
 								<FormField
 									control={form.control}
 									name={`purposes.${index}.purpose`}
 									render={({ field }) => (
 										<FormItem>
-											<FormLabel>Questão de Propósito</FormLabel>
+											<FormLabel>Propósito {index + 1}</FormLabel>
 											<FormControl>
 												<Textarea
 													{...field}
@@ -142,57 +130,82 @@ export function CreateResearchForm() {
 										</FormItem>
 									)}
 								/>
+
+								<div className="flex flex-col gap-3 md:flex-row items-start md:items-center justify-between">
+									<FormField
+										control={form.control}
+										name={`purposes.${index}.required`}
+										render={({ field }) => (
+											<FormItem className="flex gap-2 items-start md:items-center space-y-0">
+												<FormControl>
+													<Checkbox
+														id={field.name}
+														checked={field.value as CheckedState}
+														onCheckedChange={field.onChange}
+														aria-readonly={index === 0}
+														className={cn("mt-0.5 md:mt-0", {
+															"pointer-events-none": index === 0,
+														})}
+													/>
+												</FormControl>
+												<FormLabel
+													htmlFor={field.name}
+													className={cn("text-sm font-normal", {
+														"pointer-events-none": index === 0,
+													})}
+												>
+													Preenchendo essa opção, este propósito ficará
+													obrigatório para ser respondido.
+												</FormLabel>
+											</FormItem>
+										)}
+									/>
+
+									{index > 0 ? (
+										<Button
+											type="button"
+											size="sm"
+											variant="outline"
+											className="text-xs gap-1"
+											onClick={() => remove(index)}
+										>
+											<TrashIcon className="size-4" /> Remover
+										</Button>
+									) : null}
+								</div>
 							</div>
 						))}
 					</div>
 
-					<div className="pt-4 flex items-center justify-end lg:hidden">
-						<Button
-							type="button"
-							size="sm"
-							variant="outline"
-							onClick={() =>
-								append({ purpose: "" })
-							}
-						>
-							Adicionar Propósito
-						</Button>
-					</div>
+					<Button
+						type="button"
+						size="sm"
+						className="gap-1 w-full md:w-fit"
+						onClick={() => append({ purpose: "", required: false })}
+					>
+						<PlusIcon className="size-4" /> Adicionar Propósito
+					</Button>
 				</div>
 
-				<div className="flex gap-4 items-center justify-between [&>*]:w-full">
+				<footer className="w-full mt-auto md:py-0 flex flex-col md:flex-row items-center justify-between gap-4">
 					<Button
 						size="sm"
+						className="order-2 md:order-1 w-full md:w-fit"
 						variant="outline"
-						type="button"
-						className="lg:max-w-fit"
+						tabIndex={-1}
 						asChild
 					>
 						<Link href="/dashboard">Voltar</Link>
 					</Button>
 
-					<div className="flex gap-4 justify-end">
-						<Button
-							type="button"
-							size="sm"
-							variant="outline"
-							className="hidden lg:flex"
-							onClick={() =>
-								append({ purpose: "" })
-							}
-						>
-							Adicionar Propósito
-						</Button>
-
-						<StatusButton
-							isPending={isPending}
-							size="sm"
-							className="w-full lg:w-[120px]"
-						>
-							Criar Pesquisa
-						</StatusButton>
-					</div>
-				</div>
+					<StatusButton
+						isPending={isPending}
+						size="sm"
+						className="w-full md:w-fit lg:w-[120px] order-1 md:order-2"
+					>
+						Criar Pesquisa
+					</StatusButton>
+				</footer>
 			</form>
 		</Form>
 	);

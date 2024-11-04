@@ -48,9 +48,14 @@ export function CloseResearch({ research, status }: Props) {
 	});
 
 	return (
-		<div className="fixed bottom-20 w-full left-0">
-			<div className="container w-full flex gap-4 lg:justify-end">
-				<Button size="sm" variant="outline" asChild className="w-full lg:w-fit">
+		<div className="w-full mt-auto">
+			<div className="container px-0 md:px-6 w-full flex flex-col md:flex-row gap-4 md:justify-between">
+				<Button
+					size="sm"
+					variant="outline"
+					asChild
+					className="w-full lg:w-fit order-2 md:order-1"
+				>
 					<Link href="/dashboard">Voltar</Link>
 				</Button>
 
@@ -61,7 +66,7 @@ export function CloseResearch({ research, status }: Props) {
 								size="sm"
 								variant="destructive"
 								disabled={status !== "CREATED"}
-								className="w-full lg:w-fit"
+								className="w-full lg:w-fit order-2"
 							>
 								Encerrar Pesquisa
 							</Button>
@@ -109,7 +114,7 @@ export function CloseResearch({ research, status }: Props) {
 								size="sm"
 								variant="destructive"
 								disabled={status !== "CREATED"}
-								className="w-full"
+								className="w-full order-1"
 							>
 								Encerrar Pesquisa
 							</Button>

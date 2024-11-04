@@ -50,11 +50,11 @@ export default async function ResearchPage({ params }: Props) {
 					{research.title}
 				</h2>
 				<p className="text-sm">{research.description}</p>
-			</header>
 
-			<small className="inline-block text-muted-foreground italic">
-				Os campos com * são obrigatórios
-			</small>
+				<small className="inline-block text-muted-foreground italic">
+					Os campos com * são obrigatórios
+				</small>
+			</header>
 
 			<ResearchForm research={params.id} questions={research.questions} />
 		</section>

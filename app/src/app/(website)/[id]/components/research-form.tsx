@@ -3,13 +3,13 @@
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";
 import {
-  Form,
-  FormControl,
-  FormDescription,
-  FormField,
-  FormItem,
-  FormLabel,
-  FormMessage,
+	Form,
+	FormControl,
+	FormDescription,
+	FormField,
+	FormItem,
+	FormLabel,
+	FormMessage,
 } from "~/components/ui/form";
 import { Input } from "~/components/ui/input";
 import { RadioGroup, RadioGroupItem } from "~/components/ui/radio-group";
@@ -21,200 +21,302 @@ import { replyResearchAction } from "../actions";
 import { StatusButton } from "~/components/status-button";
 import type { z } from "zod";
 import { toast } from "sonner";
-import { useRouter } from "next/navigation";
+import { useRouter, useSearchParams } from "next/navigation";
+import { Button } from "~/components/ui/button";
+import Link from "next/link";
+import { cn } from "~/lib/utils";
 
 type Schema = z.infer<typeof schema>;
 
 type Props = {
-  research: string;
-  questions: Array<Question>;
+	research: string;
+	questions: Array<Question>;
 };
 
+function usePurposeParams(maxPurposesLength: number) {
+	const params = useSearchParams();
+	const paramsPurpose = params.get("purpose");
+
+	if (!paramsPurpose || Number(paramsPurpose) < 1) {
+		return 1;
+	}
+
+	if (Number(paramsPurpose) > maxPurposesLength) {
+		return maxPurposesLength;
+	}
+
+	return Number(paramsPurpose);
+}
+
 export function ResearchForm({ questions, research }: Props) {
-  const router = useRouter();
+	const router = useRouter();
 
-  const { execute, isPending } = useServerAction(replyResearchAction, {
-    onSuccess: () => {
-      toast.success("Obrigado", {
-        description:
-          "Sua resposta foi registrada, muito obrigado pela sua resposta.",
-      });
+	const { execute, isPending } = useServerAction(replyResearchAction, {
+		onSuccess: () => {
+			toast.success("Obrigado", {
+				description:
+					"Sua resposta foi registrada, muito obrigado pela sua resposta.",
+			});
 
-      form.reset();
-      router.push(`/${research}/obrigado`);
-    },
-    onError: (error) => {
-      toast.error("Ops", {
-        description:
-          "Não foi possível registrar sua resposta, tente novamente por favor.",
-      });
-    },
-  });
+			form.reset();
+			router.push(`/${research}/obrigado`);
+		},
+		onError: () => {
+			toast.error("Ops", {
+				description:
+					"Não foi possível registrar sua resposta, tente novamente por favor.",
+			});
+		},
+	});
 
-  const form = useForm<Schema>({
-    defaultValues: {
-      research,
-      email: "",
-      purposes: [
-        {
-          explanation: "",
-          purpose: "",
-          score: "5",
-          sequence: 1,
-        },
-      ],
-    },
-    mode: "onBlur",
-    resolver: zodResolver(schema),
-  });
+	const HAS_MULTIPLE_PURPOSES = questions.length > 1;
 
-  const submit = () => {
-    execute(form.getValues());
-  };
+	const CURRENT_PURPOSE = usePurposeParams(questions.length);
+	const HAS_NEXT_PURPOSE = CURRENT_PURPOSE < questions.length;
+	const HAS_PREV_PURPOSE = CURRENT_PURPOSE > 1;
 
-  return (
-    <Form {...form}>
-      <form className="space-y-4" onSubmit={form.handleSubmit(submit)}>
-        <FormField
-          control={form.control}
-          name="email"
-          render={({ field }) => (
-            <FormItem>
-              <FormLabel>*Email</FormLabel>
-              <FormControl>
-                <Input {...field} />
-              </FormControl>
-              <FormMessage />
-              <FormDescription>
-                Seu e-mail é confidencial e não será compartilhado com
-                terceiros.
-              </FormDescription>
-            </FormItem>
-          )}
-        />
+	const form = useForm<Schema>({
+		defaultValues: {
+			research,
+			email: "",
+			purposes: questions.map((question) => ({
+				explanation: "",
+				purpose: "",
+				score: "5",
+				sequence: question.sequence,
+			})),
+		},
+		mode: "onBlur",
+		resolver: zodResolver(schema),
+	});
 
-        {questions.map((question, index) => (
-          <div key={question.id} className="space-y-3">
-            <FormField
-              control={form.control}
-              name={`purposes.${index}.purpose`}
-              render={({ field }) => (
-                <FormItem>
-                  <FormLabel>* {question.purpose}</FormLabel>
-                  <FormControl>
-                    <Textarea
-                      {...field}
-                      className="resize-none"
-                      placeholder="Digite sua reposta"
-                    />
-                  </FormControl>
-                  <FormMessage />
-                </FormItem>
-              )}
-            />
+	const submit = () => {
+		execute(form.getValues());
+	};
 
-            <FormField
-              control={form.control}
-              name={`purposes.${index}.score`}
-              render={({ field }) => (
-                <FormItem>
-                  <FormLabel>* Porque você escolheu nosso produto ou serviço?</FormLabel>
-                  <FormControl>
-                    <RadioGroup
-                      defaultValue={field.value}
-                      onValueChange={field.onChange}
-                    >
-                      <FormItem className="flex items-center space-x-3 space-y-0">
-                        <FormControl>
-                          <RadioGroupItem value="5" />
-                        </FormControl>
-                        <FormLabel>
-                          5 - Extremamante. Recebi tudo que esperava e mais um
-                          pouico.
-                        </FormLabel>
-                      </FormItem>
+	const currentPurposeValues = form.getValues().purposes[CURRENT_PURPOSE - 1];
+	const currentQuestion = questions[CURRENT_PURPOSE - 1];
 
-                      <FormItem className="flex items-center space-x-3 space-y-0">
-                        <FormControl>
-                          <RadioGroupItem value="4" />
-                        </FormControl>
-                        <FormLabel>
-                          4 - Plenamente. Tudo que eu precisava foi atendido.
-                        </FormLabel>
-                      </FormItem>
+	const disableNextPurpose =
+		currentQuestion.required &&
+		!Object.values(currentPurposeValues).every(Boolean);
 
-                      <FormItem className="flex items-center space-x-3 space-y-0">
-                        <FormControl>
-                          <RadioGroupItem value="3" />
-                        </FormControl>
-                        <FormLabel>
-                          3 - Na maior parte. Em geral foi atendido,mas algo
-                          ficou faltando.
-                        </FormLabel>
-                      </FormItem>
+	// Validate if all required purposes are filled
+	const hasMissingRequiredFields = questions
+		.filter(({ required }) => required)
+		.some(({ sequence }) => {
+			return !Object.values(form.getValues().purposes[sequence - 1]).every(
+				Boolean,
+			);
+		});
 
-                      <FormItem className="flex items-center space-x-3 space-y-0">
-                        <FormControl>
-                          <RadioGroupItem value="2" />
-                        </FormControl>
-                        <FormLabel>
-                          2 - Parcialmente. Alguns pontos foram ok, mas uma
-                          parte relevante deixou a desejar.
-                        </FormLabel>
-                      </FormItem>
+	return (
+		<Form {...form}>
+			<form className="space-y-6" onSubmit={form.handleSubmit(submit)}>
+				<FormField
+					control={form.control}
+					name="email"
+					render={({ field }) => (
+						<FormItem className="w-full max-w-80">
+							<FormLabel>*Email</FormLabel>
+							<FormControl>
+								<Input {...field} />
+							</FormControl>
+							<FormMessage />
+							<FormDescription>
+								Seu e-mail é confidencial e não será compartilhado com
+								terceiros.
+							</FormDescription>
+						</FormItem>
+					)}
+				/>
 
-                      <FormItem className="flex items-center space-x-3 space-y-0">
-                        <FormControl>
-                          <RadioGroupItem value="1" />
-                        </FormControl>
-                        <FormLabel>
-                          1 - Um pouco. Houve itens positivos, mas a real
-                          necessidade não foi atendida.
-                        </FormLabel>
-                      </FormItem>
+				{questions.map((question, index) => {
+					if (HAS_MULTIPLE_PURPOSES && index + 1 !== Number(CURRENT_PURPOSE)) {
+						return null;
+					}
 
-                      <FormItem className="flex items-center space-x-3 space-y-0">
-                        <FormControl>
-                          <RadioGroupItem value="0" />
-                        </FormControl>
-                        <FormLabel>
-                          0 - Nada. Nenhuma das minhas necessidades foi
-                          atendida.
-                        </FormLabel>
-                      </FormItem>
-                    </RadioGroup>
-                  </FormControl>
-                  <FormMessage />
-                </FormItem>
-              )}
-            />
+					return (
+						<div key={question.id} className="space-y-3 w-full max-w-[600px]">
+							<h3 className="text-lg font-bold">Propósito {index + 1}</h3>
 
-            <FormField
-              control={form.control}
-              name={`purposes.${index}.explanation`}
-              render={({ field }) => (
-                <FormItem>
-                  <FormLabel>* Conte-nos porque você deu sua nota</FormLabel>
-                  <FormControl>
-                    <Textarea
-                      {...field}
-                      className="resize-none"
-                      placeholder="Digite sua reposta"
-                    />
-                  </FormControl>
-                  <FormMessage />
-                </FormItem>
-              )}
-            />
-          </div>
-        ))}
+							<FormField
+								control={form.control}
+								name={`purposes.${index}.purpose`}
+								render={({ field }) => (
+									<FormItem>
+										<FormLabel>
+											{question.required ? "*" : null} {question.purpose}
+										</FormLabel>
+										<FormControl>
+											<Textarea
+												{...field}
+												className="resize-none"
+												placeholder="Digite sua reposta"
+											/>
+										</FormControl>
+										<FormMessage />
+									</FormItem>
+								)}
+							/>
 
-        <div className="flex w-full items-center justify-end">
-          <StatusButton className="w-[100px]" size="sm" isPending={isPending}>
-            Responder
-          </StatusButton>
-        </div>
-      </form>
-    </Form>
-  );
+							<FormField
+								control={form.control}
+								name={`purposes.${index}.score`}
+								render={({ field }) => (
+									<FormItem>
+										<FormLabel>
+											* Porque você escolheu nosso produto ou serviço?
+										</FormLabel>
+										<FormControl>
+											<RadioGroup
+												defaultValue={field.value}
+												onValueChange={field.onChange}
+											>
+												<FormItem className="flex items-center space-x-3 space-y-0">
+													<FormControl>
+														<RadioGroupItem value="5" />
+													</FormControl>
+													<FormLabel>
+														<span className="text-[#22C55E]">Extremamante</span>{" "}
+														- Recebi tudo que esperava e mais um pouico.
+													</FormLabel>
+												</FormItem>
+
+												<FormItem className="flex items-center space-x-3 space-y-0">
+													<FormControl>
+														<RadioGroupItem value="4" />
+													</FormControl>
+													<FormLabel>
+														<span className="text-[#22C55E]">Plenamente</span> -
+														Tudo que eu precisava foi atendido.
+													</FormLabel>
+												</FormItem>
+
+												<FormItem className="flex items-center space-x-3 space-y-0">
+													<FormControl>
+														<RadioGroupItem value="3" />
+													</FormControl>
+													<FormLabel>
+														<span className="text-yellow-500">
+															Na maior parte
+														</span>{" "}
+														- Em geral foi atendido,mas algo ficou faltando.
+													</FormLabel>
+												</FormItem>
+
+												<FormItem className="flex items-center space-x-3 space-y-0">
+													<FormControl>
+														<RadioGroupItem value="2" />
+													</FormControl>
+													<FormLabel>
+														<span className="text-yellow-500">
+															Parcialmente
+														</span>{" "}
+														- Alguns pontos foram ok, mas uma parte relevante
+														deixou a desejar.
+													</FormLabel>
+												</FormItem>
+
+												<FormItem className="flex items-center space-x-3 space-y-0">
+													<FormControl>
+														<RadioGroupItem value="1" />
+													</FormControl>
+													<FormLabel>
+														<span className="text-red-500">Um pouco</span> -
+														Houve itens positivos, mas a real necessidade não
+														foi atendida.
+													</FormLabel>
+												</FormItem>
+
+												<FormItem className="flex items-center space-x-3 space-y-0">
+													<FormControl>
+														<RadioGroupItem value="0" />
+													</FormControl>
+													<FormLabel>
+														<span className="text-red-500">Nada</span> - Nenhuma
+														das minhas necessidades foi atendida.
+													</FormLabel>
+												</FormItem>
+											</RadioGroup>
+										</FormControl>
+										<FormMessage />
+									</FormItem>
+								)}
+							/>
+
+							<FormField
+								control={form.control}
+								name={`purposes.${index}.explanation`}
+								render={({ field }) => (
+									<FormItem>
+										<FormLabel>* Conte-nos porque você deu sua nota</FormLabel>
+										<FormControl>
+											<Textarea
+												{...field}
+												className="resize-none"
+												placeholder="Digite sua reposta"
+											/>
+										</FormControl>
+										<FormMessage />
+									</FormItem>
+								)}
+							/>
+						</div>
+					);
+				})}
+
+				<div
+					className={cn(
+						"flex flex-col md:flex-row w-full gap-2 md:items-center md:justify-end",
+						{
+							"md:justify-between": HAS_MULTIPLE_PURPOSES && HAS_PREV_PURPOSE,
+						},
+					)}
+				>
+					{HAS_MULTIPLE_PURPOSES && HAS_PREV_PURPOSE ? (
+						<Button
+							type="button"
+							size="sm"
+							variant="outline"
+							className="w-full md:w-fit"
+							asChild
+						>
+							<Link
+								href={`/${research}?purpose=${Number(CURRENT_PURPOSE) - 1}`}
+							>
+								Propósito Anterior
+							</Link>
+						</Button>
+					) : null}
+
+					{HAS_MULTIPLE_PURPOSES && HAS_NEXT_PURPOSE ? (
+						<Button
+							type="button"
+							size="sm"
+							disabled={Boolean(disableNextPurpose)}
+							onClick={() =>
+								router.push(
+									`/${research}?purpose=${Number(CURRENT_PURPOSE) + 1}`,
+								)
+							}
+						>
+							Próximo Propósito
+						</Button>
+					) : null}
+
+					{!HAS_MULTIPLE_PURPOSES || CURRENT_PURPOSE === questions.length ? (
+						<StatusButton
+							className="w-full md:w-[140px]"
+							size="sm"
+							isPending={isPending}
+							disabled={hasMissingRequiredFields}
+						>
+							Enviar Formulário
+						</StatusButton>
+					) : null}
+				</div>
+			</form>
+		</Form>
+	);
 }

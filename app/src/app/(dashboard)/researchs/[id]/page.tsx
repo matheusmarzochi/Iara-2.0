@@ -79,7 +79,7 @@ export default async function ResearchPage({ params }: Props) {
 		})[status];
 
 	return (
-		<div className="relative">
+		<div className="flex flex-col h-[calc(100dvh-160px)]">
 			<header className="pt-4 pb-6 space-y-4">
 				<div className="flex items-center justify-between">
 					<div className="flex flex-col gap-1 lg:flex-row lg:items-center lg:gap-6">
@@ -110,16 +110,29 @@ export default async function ResearchPage({ params }: Props) {
 							Sua pesquisa foi precessada, você pode ver os seus resultados
 							clicando no botão abaixo:
 						</p>
-
-						<Button size="sm" className="gap-2 group" asChild>
-							<Link href={`/researchs/${research.id}/reports`}>
-								Ver Relatório{" "}
-								<MoveRightIcon className="size-4 group-hover:translate-x-1 transition-all" />
-							</Link>
-						</Button>
 					</div>
 				) : null}
 			</section>
+
+			{!isResearchActive ? (
+				<div className="w-full flex items-center flex-col gap-2 mt-auto md:flex-row md:justify-between">
+					<Button
+						size="sm"
+						className="gap-2 group w-full md:w-fit"
+						variant="outline"
+						asChild
+					>
+						<Link href={`/researchs/${research.id}`}>Voltar</Link>
+					</Button>
+
+					<Button size="sm" className="gap-2 group w-full md:w-fit" asChild>
+						<Link href={`/researchs/${research.id}/reports`}>
+							Ver Relatório{" "}
+							<MoveRightIcon className="size-4 group-hover:translate-x-1 transition-all" />
+						</Link>
+					</Button>
+				</div>
+			) : null}
 
 			{isResearchActive ? (
 				<CloseResearch research={research.id} status={research.status} />

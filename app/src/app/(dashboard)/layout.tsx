@@ -13,12 +13,17 @@ export default function DashboarLayout({ children }: { children: ReactNode }) {
 						<Logo className="w-10" />
 					</Link>
 
-					<div>
+					<div className="flex gap-2">
 						<UserButton
 							appearance={{
 								elements: { userButtonOuterIdentifier: "text-foreground" },
 							}}
 							showName
+						/>
+
+						<ToggleTheme
+							variant="ghost"
+							className="rounded-full hover:bg-transparent"
 						/>
 					</div>
 				</div>
@@ -27,12 +32,6 @@ export default function DashboarLayout({ children }: { children: ReactNode }) {
 			<main className="min-h-[calc(100dvh-160px)] w-full container py-10">
 				{children}
 			</main>
-
-			<footer>
-				<div className="container h-20 flex items-center">
-					<ToggleTheme />
-				</div>
-			</footer>
 		</>
 	);
 }
