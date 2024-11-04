@@ -23,7 +23,9 @@ export const replyResearchAction = createServerAction()
         ...purpose,
         formId: form.id,
         sequence: index + 1,
-        score: Number(purpose.score.replace(/\D+/g, "")),
+        score: Number(purpose.score?.replace(/\D+/g, "")) || 0,
+        purpose: purpose.purpose || "",
+        explanation: purpose.explanation || "",
       })),
     );
 
