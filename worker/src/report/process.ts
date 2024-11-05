@@ -86,6 +86,7 @@ export const buildQuestionReports = (research: Research): Array<ReportData> => {
         const questionReport: ReportData = {
             score_box: { fit: 0, neutral: 0, unfit: 0 },
             question_id: question.id,
+            question_propose: question.purpose,
             point_of_interests: [],
             strategy_insights: {
                 improve: [],

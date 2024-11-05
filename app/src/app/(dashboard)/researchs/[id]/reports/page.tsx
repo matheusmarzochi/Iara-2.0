@@ -114,7 +114,7 @@ export default async function ReportsPage({ params }: Props) {
 						value={question.question_id}
 						key={question.question_id}
 					>
-						<h4 className="font-semibold text-lg">Question Purpose</h4>
+						<h4 className="font-semibold text-lg col-span-2">{question.question_propose}</h4>
 
 						<div className="contents space-y-6 md:block row-start-2">
 							{/* Score Box */}
@@ -169,7 +169,7 @@ export default async function ReportsPage({ params }: Props) {
 								</div>
 							</div>
 
-							{/* Strategy keys sections */}
+							{/* Strategy keys sections 
 							<div className="order-3 space-y-4">
 								<h3 className="text-lg font-semibold">Decisões Estratégicas</h3>
 
@@ -197,6 +197,7 @@ export default async function ReportsPage({ params }: Props) {
 										))}
 								</div>
 							</div>
+							*/}
 						</div>
 
 						{/* Results and replies */}

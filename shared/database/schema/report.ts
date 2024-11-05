@@ -38,6 +38,7 @@ export type PointOfInterest = {
 
 export type ReportData = {
     question_id: string;
+    question_propose: string;
     score_box: ScoreBox;
     point_of_interests: PointOfInterest[]
     strategy_insights: StrategyInsights;
