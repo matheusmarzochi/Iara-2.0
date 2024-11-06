@@ -137,7 +137,7 @@ export function ResearchForm({ questions, research }: Props) {
 					}
 
 					return (
-						<div key={question.id} className="space-y-3 w-full max-w-[600px]">
+						<div key={question.id} className="space-y-3 w-full max-w-[700px]">
 							<h3 className="text-lg font-bold">Propósito {index + 1}</h3>
 
 							<FormField
@@ -166,7 +166,7 @@ export function ResearchForm({ questions, research }: Props) {
 								render={({ field }) => (
 									<FormItem>
 										<FormLabel>
-											* Porque você escolheu nosso produto ou serviço?
+											* Com base na resposta acima, poderia nos dizer o quanto conseguimos atender às suas expectativas?
 										</FormLabel>
 										<FormControl>
 											<RadioGroup
@@ -178,7 +178,7 @@ export function ResearchForm({ questions, research }: Props) {
 														<RadioGroupItem value="5" />
 													</FormControl>
 													<FormLabel>
-														<span className="text-[#22C55E]">Extremamante</span>{" "}
+														<span className="text-[#22C55E]">Extremamente satisfeito(a)</span>{" "}
 														- Recebi tudo que esperava e mais um pouico.
 													</FormLabel>
 												</FormItem>
@@ -188,7 +188,7 @@ export function ResearchForm({ questions, research }: Props) {
 														<RadioGroupItem value="4" />
 													</FormControl>
 													<FormLabel>
-														<span className="text-[#22C55E]">Plenamente</span> -
+														<span className="text-[#22C55E]">Plenamente satisfeito(a)</span> -
 														Tudo que eu precisava foi atendido.
 													</FormLabel>
 												</FormItem>
@@ -199,7 +199,7 @@ export function ResearchForm({ questions, research }: Props) {
 													</FormControl>
 													<FormLabel>
 														<span className="text-yellow-500">
-															Na maior parte
+															Na maior parte satisfeito(a)
 														</span>{" "}
 														- Em geral foi atendido,mas algo ficou faltando.
 													</FormLabel>
@@ -211,7 +211,7 @@ export function ResearchForm({ questions, research }: Props) {
 													</FormControl>
 													<FormLabel>
 														<span className="text-yellow-500">
-															Parcialmente
+															Parcialmente satisfeito(a)
 														</span>{" "}
 														- Alguns pontos foram ok, mas uma parte relevante
 														deixou a desejar.
@@ -223,7 +223,7 @@ export function ResearchForm({ questions, research }: Props) {
 														<RadioGroupItem value="1" />
 													</FormControl>
 													<FormLabel>
-														<span className="text-red-500">Um pouco</span> -
+														<span className="text-red-500">Um pouco satisfeito(a)</span> -
 														Houve itens positivos, mas a real necessidade não
 														foi atendida.
 													</FormLabel>
@@ -234,8 +234,8 @@ export function ResearchForm({ questions, research }: Props) {
 														<RadioGroupItem value="0" />
 													</FormControl>
 													<FormLabel>
-														<span className="text-red-500">Nada</span> - Nenhuma
-														das minhas necessidades foi atendida.
+														<span className="text-red-500">Nada satisfeito(a)</span> -
+														Nenhuma das minhas necessidades foi atendida.
 													</FormLabel>
 												</FormItem>
 											</RadioGroup>
@@ -320,3 +320,11 @@ export function ResearchForm({ questions, research }: Props) {
 		</Form>
 	);
 }
+function useEffect(arg0: () => () => void, arg1: never[]) {
+	throw new Error("Function not implemented.");
+}
+
+function useState(arg0: boolean): [any, any] {
+	throw new Error("Function not implemented.");
+}
+
