@@ -320,11 +320,3 @@ export function ResearchForm({ questions, research }: Props) {
 		</Form>
 	);
 }
-function useEffect(arg0: () => () => void, arg1: never[]) {
-	throw new Error("Function not implemented.");
-}
-
-function useState(arg0: boolean): [any, any] {
-	throw new Error("Function not implemented.");
-}
-
