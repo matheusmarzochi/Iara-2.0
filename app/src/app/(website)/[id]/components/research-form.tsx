@@ -25,6 +25,15 @@ import { useRouter, useSearchParams } from "next/navigation";
 import { Button } from "~/components/ui/button";
 import Link from "next/link";
 import { cn } from "~/lib/utils";
+import { useEffect, useState } from "react";
+import {
+	Dialog,
+	DialogClose,
+	DialogContent,
+	DialogFooter,
+	DialogHeader,
+	DialogTitle,
+} from "~/components/ui/dialog";
 
 type Schema = z.infer<typeof schema>;
 
@@ -50,6 +59,7 @@ function usePurposeParams(maxPurposesLength: number) {
 
 export function ResearchForm({ questions, research }: Props) {
 	const router = useRouter();
+	const [pending, setPending] = useState(false);
 
 	const { execute, isPending } = useServerAction(replyResearchAction, {
 		onSuccess: () => {
@@ -110,213 +120,271 @@ export function ResearchForm({ questions, research }: Props) {
 			);
 		});
 
+	useEffect(() => {
+		if (!form.formState.isDirty) {
+			return;
+		}
+
+		function handleBeforeUnload(event: BeforeUnloadEvent) {
+			event.preventDefault();
+			// biome-ignore lint/suspicious/noAssignInExpressions: <explanation>
+			return (event.returnValue = "");
+		}
+
+		window.addEventListener("beforeunload", handleBeforeUnload, {
+			capture: true,
+		});
+
+		return () => {
+			window.removeEventListener("beforeunload", handleBeforeUnload, {
+				capture: true,
+			});
+		};
+	}, [form.formState.isDirty]);
+
 	return (
-		<Form {...form}>
-			<form className="space-y-6" onSubmit={form.handleSubmit(submit)}>
-				<FormField
-					control={form.control}
-					name="email"
-					render={({ field }) => (
-						<FormItem className="w-full max-w-80">
-							<FormLabel>*Email</FormLabel>
-							<FormControl>
-								<Input {...field} />
-							</FormControl>
-							<FormMessage />
-							<FormDescription>
-								Seu e-mail é confidencial e não será compartilhado com
-								terceiros.
-							</FormDescription>
-						</FormItem>
-					)}
-				/>
+		<>
+			<Form {...form}>
+				<form className="space-y-6" onSubmit={form.handleSubmit(submit)}>
+					<FormField
+						control={form.control}
+						name="email"
+						render={({ field }) => (
+							<FormItem className="w-full max-w-80">
+								<FormLabel>*Email</FormLabel>
+								<FormControl>
+									<Input {...field} />
+								</FormControl>
+								<FormMessage />
+								<FormDescription>
+									Seu e-mail é confidencial e não será compartilhado com
+									terceiros.
+								</FormDescription>
+							</FormItem>
+						)}
+					/>
 
-				{questions.map((question, index) => {
-					if (HAS_MULTIPLE_PURPOSES && index + 1 !== Number(CURRENT_PURPOSE)) {
-						return null;
-					}
+					{questions.map((question, index) => {
+						if (
+							HAS_MULTIPLE_PURPOSES &&
+							index + 1 !== Number(CURRENT_PURPOSE)
+						) {
+							return null;
+						}
 
-					return (
-						<div key={question.id} className="space-y-3 w-full max-w-[700px]">
-							<h3 className="text-lg font-bold">Propósito {index + 1}</h3>
+						return (
+							<div key={question.id} className="space-y-3 w-full max-w-[700px]">
+								<h3 className="text-lg font-bold">Propósito {index + 1}</h3>
 
-							<FormField
-								control={form.control}
-								name={`purposes.${index}.purpose`}
-								render={({ field }) => (
-									<FormItem>
-										<FormLabel>
-											{question.required ? "*" : null} {question.purpose}
-										</FormLabel>
-										<FormControl>
-											<Textarea
-												{...field}
-												className="resize-none"
-												placeholder="Digite sua reposta"
-											/>
-										</FormControl>
-										<FormMessage />
-									</FormItem>
-								)}
-							/>
+								<FormField
+									control={form.control}
+									name={`purposes.${index}.purpose`}
+									render={({ field }) => (
+										<FormItem>
+											<FormLabel>
+												{question.required ? "*" : null} {question.purpose}
+											</FormLabel>
+											<FormControl>
+												<Textarea
+													{...field}
+													className="resize-none"
+													placeholder="Digite sua reposta"
+												/>
+											</FormControl>
+											<FormMessage />
+										</FormItem>
+									)}
+								/>
 
-							<FormField
-								control={form.control}
-								name={`purposes.${index}.score`}
-								render={({ field }) => (
-									<FormItem>
-										<FormLabel>
-											* Com base na resposta acima, poderia nos dizer o quanto conseguimos atender às suas expectativas?
-										</FormLabel>
-										<FormControl>
-											<RadioGroup
-												defaultValue={field.value}
-												onValueChange={field.onChange}
-											>
-												<FormItem className="flex items-center space-x-3 space-y-0">
-													<FormControl>
-														<RadioGroupItem value="5" />
-													</FormControl>
-													<FormLabel>
-														<span className="text-[#22C55E]">Extremamente satisfeito(a)</span>{" "}
-														- Recebi tudo que esperava e mais um pouico.
-													</FormLabel>
-												</FormItem>
+								<FormField
+									control={form.control}
+									name={`purposes.${index}.score`}
+									render={({ field }) => (
+										<FormItem>
+											<FormLabel>
+												* Com base na resposta acima, poderia nos dizer o quanto
+												conseguimos atender às suas expectativas?
+											</FormLabel>
+											<FormControl>
+												<RadioGroup
+													defaultValue={field.value}
+													onValueChange={field.onChange}
+												>
+													<FormItem className="flex items-center space-x-3 space-y-0">
+														<FormControl>
+															<RadioGroupItem value="5" />
+														</FormControl>
+														<FormLabel>
+															<span className="text-[#22C55E]">
+																Extremamente satisfeito(a)
+															</span>{" "}
+															- Recebi tudo que esperava e mais um pouico.
+														</FormLabel>
+													</FormItem>
 
-												<FormItem className="flex items-center space-x-3 space-y-0">
-													<FormControl>
-														<RadioGroupItem value="4" />
-													</FormControl>
-													<FormLabel>
-														<span className="text-[#22C55E]">Plenamente satisfeito(a)</span> -
-														Tudo que eu precisava foi atendido.
-													</FormLabel>
-												</FormItem>
+													<FormItem className="flex items-center space-x-3 space-y-0">
+														<FormControl>
+															<RadioGroupItem value="4" />
+														</FormControl>
+														<FormLabel>
+															<span className="text-[#22C55E]">
+																Plenamente satisfeito(a)
+															</span>{" "}
+															- Tudo que eu precisava foi atendido.
+														</FormLabel>
+													</FormItem>
 
-												<FormItem className="flex items-center space-x-3 space-y-0">
-													<FormControl>
-														<RadioGroupItem value="3" />
-													</FormControl>
-													<FormLabel>
-														<span className="text-yellow-500">
-															Na maior parte satisfeito(a)
-														</span>{" "}
-														- Em geral foi atendido,mas algo ficou faltando.
-													</FormLabel>
-												</FormItem>
+													<FormItem className="flex items-center space-x-3 space-y-0">
+														<FormControl>
+															<RadioGroupItem value="3" />
+														</FormControl>
+														<FormLabel>
+															<span className="text-yellow-500">
+																Na maior parte satisfeito(a)
+															</span>{" "}
+															- Em geral foi atendido,mas algo ficou faltando.
+														</FormLabel>
+													</FormItem>
 
-												<FormItem className="flex items-center space-x-3 space-y-0">
-													<FormControl>
-														<RadioGroupItem value="2" />
-													</FormControl>
-													<FormLabel>
-														<span className="text-yellow-500">
-															Parcialmente satisfeito(a)
-														</span>{" "}
-														- Alguns pontos foram ok, mas uma parte relevante
-														deixou a desejar.
-													</FormLabel>
-												</FormItem>
+													<FormItem className="flex items-center space-x-3 space-y-0">
+														<FormControl>
+															<RadioGroupItem value="2" />
+														</FormControl>
+														<FormLabel>
+															<span className="text-yellow-500">
+																Parcialmente satisfeito(a)
+															</span>{" "}
+															- Alguns pontos foram ok, mas uma parte relevante
+															deixou a desejar.
+														</FormLabel>
+													</FormItem>
 
-												<FormItem className="flex items-center space-x-3 space-y-0">
-													<FormControl>
-														<RadioGroupItem value="1" />
-													</FormControl>
-													<FormLabel>
-														<span className="text-red-500">Um pouco satisfeito(a)</span> -
-														Houve itens positivos, mas a real necessidade não
-														foi atendida.
-													</FormLabel>
-												</FormItem>
+													<FormItem className="flex items-center space-x-3 space-y-0">
+														<FormControl>
+															<RadioGroupItem value="1" />
+														</FormControl>
+														<FormLabel>
+															<span className="text-red-500">
+																Um pouco satisfeito(a)
+															</span>{" "}
+															- Houve itens positivos, mas a real necessidade
+															não foi atendida.
+														</FormLabel>
+													</FormItem>
 
-												<FormItem className="flex items-center space-x-3 space-y-0">
-													<FormControl>
-														<RadioGroupItem value="0" />
-													</FormControl>
-													<FormLabel>
-														<span className="text-red-500">Nada satisfeito(a)</span> -
-														Nenhuma das minhas necessidades foi atendida.
-													</FormLabel>
-												</FormItem>
-											</RadioGroup>
-										</FormControl>
-										<FormMessage />
-									</FormItem>
-								)}
-							/>
+													<FormItem className="flex items-center space-x-3 space-y-0">
+														<FormControl>
+															<RadioGroupItem value="0" />
+														</FormControl>
+														<FormLabel>
+															<span className="text-red-500">
+																Nada satisfeito(a)
+															</span>{" "}
+															- Nenhuma das minhas necessidades foi atendida.
+														</FormLabel>
+													</FormItem>
+												</RadioGroup>
+											</FormControl>
+											<FormMessage />
+										</FormItem>
+									)}
+								/>
 
-							<FormField
-								control={form.control}
-								name={`purposes.${index}.explanation`}
-								render={({ field }) => (
-									<FormItem>
-										<FormLabel>* Conte-nos porque você deu sua nota</FormLabel>
-										<FormControl>
-											<Textarea
-												{...field}
-												className="resize-none"
-												placeholder="Digite sua reposta"
-											/>
-										</FormControl>
-										<FormMessage />
-									</FormItem>
-								)}
-							/>
-						</div>
-					);
-				})}
+								<FormField
+									control={form.control}
+									name={`purposes.${index}.explanation`}
+									render={({ field }) => (
+										<FormItem>
+											<FormLabel>
+												* Conte-nos porque você deu sua nota
+											</FormLabel>
+											<FormControl>
+												<Textarea
+													{...field}
+													className="resize-none"
+													placeholder="Digite sua reposta"
+												/>
+											</FormControl>
+											<FormMessage />
+										</FormItem>
+									)}
+								/>
+							</div>
+						);
+					})}
 
-				<div
-					className={cn(
-						"flex flex-col md:flex-row w-full gap-2 md:items-center md:justify-end",
-						{
-							"md:justify-between": HAS_MULTIPLE_PURPOSES && HAS_PREV_PURPOSE,
-						},
-					)}
-				>
-					{HAS_MULTIPLE_PURPOSES && HAS_PREV_PURPOSE ? (
-						<Button
-							type="button"
-							size="sm"
-							variant="outline"
-							className="w-full md:w-fit"
-							asChild
-						>
-							<Link
-								href={`/${research}?purpose=${Number(CURRENT_PURPOSE) - 1}`}
+					<div
+						className={cn(
+							"flex flex-col md:flex-row w-full gap-2 md:items-center md:justify-end",
+							{
+								"md:justify-between": HAS_MULTIPLE_PURPOSES && HAS_PREV_PURPOSE,
+							},
+						)}
+					>
+						{HAS_MULTIPLE_PURPOSES && HAS_PREV_PURPOSE ? (
+							<Button
+								type="button"
+								size="sm"
+								variant="outline"
+								className="w-full md:w-fit"
+								asChild
 							>
-								Propósito Anterior
-							</Link>
-						</Button>
-					) : null}
+								<Link
+									href={`/${research}?purpose=${Number(CURRENT_PURPOSE) - 1}`}
+								>
+									Propósito Anterior
+								</Link>
+							</Button>
+						) : null}
 
-					{HAS_MULTIPLE_PURPOSES && HAS_NEXT_PURPOSE ? (
-						<Button
-							type="button"
-							size="sm"
-							disabled={Boolean(disableNextPurpose)}
-							onClick={() =>
-								router.push(
-									`/${research}?purpose=${Number(CURRENT_PURPOSE) + 1}`,
-								)
-							}
-						>
-							Próximo Propósito
-						</Button>
-					) : null}
+						{HAS_MULTIPLE_PURPOSES && HAS_NEXT_PURPOSE ? (
+							<Button
+								type="button"
+								size="sm"
+								disabled={Boolean(disableNextPurpose)}
+								onClick={() =>
+									router.push(
+										`/${research}?purpose=${Number(CURRENT_PURPOSE) + 1}`,
+									)
+								}
+							>
+								Próximo Propósito
+							</Button>
+						) : null}
 
-					{!HAS_MULTIPLE_PURPOSES || CURRENT_PURPOSE === questions.length ? (
-						<StatusButton
-							className="w-full md:w-[140px]"
-							size="sm"
-							isPending={isPending}
-							disabled={hasMissingRequiredFields}
-						>
-							Enviar Formulário
-						</StatusButton>
-					) : null}
-				</div>
-			</form>
-		</Form>
+						{!HAS_MULTIPLE_PURPOSES || CURRENT_PURPOSE === questions.length ? (
+							<StatusButton
+								className="w-full md:w-[140px]"
+								size="sm"
+								isPending={isPending}
+								disabled={hasMissingRequiredFields}
+							>
+								Enviar Formulário
+							</StatusButton>
+						) : null}
+					</div>
+				</form>
+			</Form>
+
+			<Dialog open={pending} onOpenChange={setPending} modal>
+				<DialogContent>
+					<DialogHeader>
+						<DialogTitle>Hey</DialogTitle>
+					</DialogHeader>
+					<p>
+						Você está saindo da página sem enviar suas respostas, as informações
+						preenchidas serão perdidas, deseja sair mesmo assim?
+					</p>
+					<DialogFooter>
+						<DialogClose>
+							<Button size="sm" variant="outline">
+								Continuar Respondendo
+							</Button>
+						</DialogClose>
+						<Button size="sm">Sair sem responder</Button>
+					</DialogFooter>
+				</DialogContent>
+			</Dialog>
+		</>
 	);
 }
