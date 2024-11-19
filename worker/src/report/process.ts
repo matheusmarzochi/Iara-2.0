@@ -233,7 +233,10 @@ export const buildQuestionReports = (research: Research): Array<ReportData> => {
             }
         }
 
-        questionReports.push(questionReport);
+        questionReports.push(({
+            ...questionReport,
+            point_of_interests: questionReport.point_of_interests.sort((a, b) => b.answers.length - a.answers.length)
+        }))
     }
 
     return questionReports;
