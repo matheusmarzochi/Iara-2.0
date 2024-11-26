@@ -118,7 +118,7 @@ export default async function DashboardPage() {
                     return (
                       <Card
                         key={research.id}
-                        className="relative shadow-md hover:shadow-xl transition-all"
+                        className="relative shadow-md hover:shadow-xl transition-all bg-[#F8FAFC] dark:bg-sky-900 dark:border-sky-900"
                       >
                         <CardHeader>
                           <div className="flex justify-between items-start">
