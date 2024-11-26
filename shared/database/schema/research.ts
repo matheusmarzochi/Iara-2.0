@@ -9,9 +9,9 @@ import {
 import { relations } from "drizzle-orm";
 import { createInsertSchema } from "drizzle-zod";
 import { users } from "./user";
-import { questions, Question } from "./question";
-import { forms, Form } from "./form";
-import { reports, Report } from "./report"
+import { questions, type Question } from "./question";
+import { forms, type Form } from "./form";
+import { reports, Report } from "./report";
 
 export const researchesStatus = pgEnum("researches_status", [
   "CREATED",
@@ -44,7 +44,9 @@ export const researchesRelations = relations(researches, ({ many }) => ({
   forms: many(forms),
 }));
 
-export type Research = typeof researches.$inferSelect & { forms: Form[], questions: Question[] };
+export type Research = typeof researches.$inferSelect & {
+  forms: Form[];
+  questions: Question[];
+};
 
 export const createResearchSchema = createInsertSchema(researches);
-

@@ -333,7 +333,7 @@ function InterestGroupedAnwsers({ answers }: { answers: Array<ReportAwnser> }) {
 
       return (
         <Card key={key}>
-          <CardContent className="px-6 py-2 bg-muted-foreground/5">
+          <CardContent className="px-6 py-2 bg-muted-foreground/5 dark:bg-sky-900">
             <div className="mb-2">{getBadge(key)}</div>
 
             <div className="space-y-2">
