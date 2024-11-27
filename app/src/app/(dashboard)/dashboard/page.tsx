@@ -11,11 +11,15 @@ import {
   researches,
   users,
 } from "iara-shared/database/schema";
-import { cn, formatters } from "~/lib/utils";
+import { formatters } from "~/lib/utils";
 import { EditIcon } from "lucide-react";
+import { DeleteResearchForm } from "./components/delete-research-form";
 
 type ResearchGroup = Record<Research["status"], Array<Research>>;
 
+/**
+ * @todo add a filter to not fetch a research that was deleted
+ */
 async function getUserResearchs() {
   const { userId } = auth();
 
@@ -152,6 +156,15 @@ export default async function DashboardPage() {
                                 <EditIcon className="size-4" />
                               </Link>
                             </Button>
+                          ) : null}
+
+                          {research.status === "FINISHED" ? (
+                            <DeleteResearchForm
+                              research={{
+                                id: research.id,
+                                title: research.title,
+                              }}
+                            />
                           ) : null}
                         </CardContent>
 

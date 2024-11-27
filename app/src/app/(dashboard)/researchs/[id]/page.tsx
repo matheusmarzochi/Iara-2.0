@@ -22,6 +22,9 @@ type Props = {
   };
 };
 
+/**
+ * @todo add a filter to not fetch a research that was deleted
+ */
 async function getResearchById(id: string) {
   const { userId } = auth();
 
