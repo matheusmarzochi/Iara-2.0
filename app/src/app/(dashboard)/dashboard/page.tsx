@@ -12,6 +12,7 @@ import {
   users,
 } from "iara-shared/database/schema";
 import { cn, formatters } from "~/lib/utils";
+import { EditIcon } from "lucide-react";
 
 type ResearchGroup = Record<Research["status"], Array<Research>>;
 
@@ -118,7 +119,7 @@ export default async function DashboardPage() {
                     return (
                       <Card
                         key={research.id}
-                        className="relative shadow-md hover:shadow-xl transition-all bg-[#F8FAFC] dark:bg-sky-900 dark:border-sky-900"
+                        className="relative shadow-md focus:hover-xl hover:shadow-xl transition-all bg-[#F8FAFC] dark:bg-sky-900 dark:border-sky-900"
                       >
                         <CardHeader>
                           <div className="flex justify-between items-start">
@@ -129,14 +130,29 @@ export default async function DashboardPage() {
                           </div>
                         </CardHeader>
 
-                        <CardContent>
-                          <p className="text-sm">
-                            Criado em: {formatters.date(research.createdAt)}
-                          </p>
-                          <p className="text-sm">
-                            {/* @ts-expect-error replies type is missing */}
-                            Respostas: {research.replies}
-                          </p>
+                        <CardContent className="flex items-end justify-between">
+                          <div>
+                            <p className="text-sm">
+                              Criado em: {formatters.date(research.createdAt)}
+                            </p>
+                            <p className="text-sm">
+                              {/* @ts-expect-error replies type is missing */}
+                              Respostas: {research.replies}
+                            </p>
+                          </div>
+
+                          {research.status !== "FINISHED" ? (
+                            <Button
+                              asChild
+                              size="icon"
+                              variant="ghost"
+                              className="p-0 size-8 z-10 relative"
+                            >
+                              <Link href={`/researchs/${research.id}/update`}>
+                                <EditIcon className="size-4" />
+                              </Link>
+                            </Button>
+                          ) : null}
                         </CardContent>
 
                         <Link className="absolute inset-0" href={researchURL} />
