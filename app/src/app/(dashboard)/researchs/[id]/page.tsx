@@ -3,7 +3,7 @@ import { CloseResearch } from "./components/close-research";
 import { db } from "iara-shared/database";
 import { notFound } from "next/navigation";
 import { formatters } from "~/lib/utils";
-import { and, count, eq } from "iara-shared/node_modules/drizzle-orm";
+import { and, count, eq, isNull } from "iara-shared/node_modules/drizzle-orm";
 import {
   forms,
   type Research,
@@ -22,9 +22,6 @@ type Props = {
   };
 };
 
-/**
- * @todo add a filter to not fetch a research that was deleted
- */
 async function getResearchById(id: string) {
   const { userId } = auth();
 
@@ -44,7 +41,7 @@ async function getResearchById(id: string) {
     })
     .from(researches)
     .leftJoin(forms, eq(forms.researchId, researches.id))
-    .where(and(eq(researches.id, id), eq(researches.userId, user)))
+    .where(and(eq(researches.id, id), eq(researches.userId, user), isNull(researches.deletedAt)))
     .limit(1)
     .groupBy(researches.id);
 

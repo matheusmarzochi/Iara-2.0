@@ -33,6 +33,7 @@ export const researches = pgTable(
       .notNull()
       .defaultNow(),
     updatedAt: timestamp("updated_at", { mode: "date", withTimezone: true }),
+    deletedAt: timestamp("deleted_at", { mode: "date", withTimezone: true }),
   },
   (t) => ({
     userId: index("researches_userId_index").on(t.userId),

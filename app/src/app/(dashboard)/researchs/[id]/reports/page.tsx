@@ -1,5 +1,5 @@
 import { auth } from "@clerk/nextjs/server";
-import { and, eq } from "iara-shared/node_modules/drizzle-orm";
+import { and, eq, isNull } from "iara-shared/node_modules/drizzle-orm";
 import { notFound } from "next/navigation";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "~/components/ui/tabs";
 import { db } from "iara-shared/database";
@@ -45,7 +45,7 @@ async function getResearchById({ id }: { id: string }) {
       status: researches.status,
     })
     .from(researches)
-    .where(and(eq(researches.id, id), eq(researches.userId, user)))
+    .where(and(eq(researches.id, id), eq(researches.userId, user), isNull(researches.deletedAt) ))
     .limit(1);
 
   return research;
@@ -338,10 +338,10 @@ function InterestGroupedAnwsers({ answers }: { answers: Array<ReportAwnser> }) {
 
             <div className="space-y-2">
               {/* @todo add an answer.id here to avoid use index */}
-              {answers.map((answer, index) => (
+              {answers.map((answer) => (
                 <div
                   // biome-ignore lint/suspicious/noArrayIndexKey: <explanation>
-                  key={index}
+                  key={answer.id}
                   className="space-y-2 text-balance border-b border-gray-700 last:border-none pb-4"
                 >
                   <p className="text-sm">{answer.purpose}</p>

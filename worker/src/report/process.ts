@@ -25,6 +25,7 @@ export const getReport = async (researchId: string) => {
                             score: true,
                             sequence: true,
                             explanation: true,
+                            id: true,
                         }
                     }
                 }

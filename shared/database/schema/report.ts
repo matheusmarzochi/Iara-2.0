@@ -20,6 +20,7 @@ export type StrategyKeys =
 export type StrategyInsights = Record<StrategyKeys, string[]>
 
 export type ReportAwnser = {
+    id: string;
     purpose: string;
     score: number;
     sequence: number;

@@ -1,5 +1,5 @@
 import { auth } from "@clerk/nextjs/server";
-import { count, desc, eq } from "iara-shared/node_modules/drizzle-orm";
+import { count, desc, eq, isNull, and } from "iara-shared/node_modules/drizzle-orm";
 import Link from "next/link";
 import { Badge } from "~/components/ui/badge";
 import { Button } from "~/components/ui/button";
@@ -17,16 +17,13 @@ import { DeleteResearchForm } from "./components/delete-research-form";
 
 type ResearchGroup = Record<Research["status"], Array<Research>>;
 
-/**
- * @todo add a filter to not fetch a research that was deleted
- */
 async function getUserResearchs() {
   const { userId } = auth();
 
   const user = db
     .select({ id: users.id })
     .from(users)
-    .where(eq(users.clerkId, userId as string));
+    .where(eq(users.clerkId, userId as string))
 
   const researchs = await db
     .select({
@@ -38,7 +35,12 @@ async function getUserResearchs() {
     })
     .from(researches)
     .leftJoin(forms, eq(forms.researchId, researches.id))
-    .where(eq(researches.userId, user))
+    .where(
+      and(
+        eq(researches.userId, user),
+        isNull(researches.deletedAt)
+      )
+    )
     .orderBy(desc(researches.createdAt))
     .groupBy(researches.id);
 
