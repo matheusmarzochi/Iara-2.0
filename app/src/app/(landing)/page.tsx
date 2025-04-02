@@ -1,9 +1,10 @@
 "use client"
 
-import { CheckCircle, Globe, Menu, X } from "lucide-react"
+import { CheckCircle, Globe, Menu, Moon, Sun, X } from "lucide-react"
 import Image from "next/image"
 import Link from "next/link"
-import { useState } from "react"
+import { useState, useEffect } from "react"
+import { useTheme } from "next-themes"
 import { texts } from "~/lib/texts"
 import { Logo } from "~/components/logo";
 import { SignInButton, SignUpButton, SignedIn, SignedOut } from '@clerk/nextjs'
@@ -12,11 +13,21 @@ import { Button } from "~/components/ui/button"
 export default function IaraLandingPage() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
   const [language, setLanguage] = useState<"en" | "br">("br")
+  const [mounted, setMounted] = useState(false)
+  const { theme, setTheme } = useTheme()
+
+  useEffect(() => {
+    setMounted(true)
+  }, [])
 
   const t = texts[language]
 
   const toggleLanguage = () => {
     setLanguage(language === "br" ? "en" : "br")
+  }
+
+  const toggleTheme = () => {
+    setTheme(theme === 'dark' ? 'light' : 'dark')
   }
 
   return (
@@ -55,6 +66,17 @@ export default function IaraLandingPage() {
               {t.nav.contact}
             </Link>
             <button
+              onClick={toggleTheme}
+              className="flex items-center gap-1 px-2 py-1 rounded-md hover:bg-accent"
+              aria-label="Toggle theme"
+            >
+              {mounted && (
+                theme === 'dark' ? 
+                <Sun className="h-4 w-4" /> : 
+                <Moon className="h-4 w-4" />
+              )}
+            </button>
+            <button
               onClick={toggleLanguage}
               className="flex items-center gap-1 ml-2 px-2 py-1 rounded-md hover:bg-accent"
             >
@@ -65,6 +87,17 @@ export default function IaraLandingPage() {
 
           {/* Mobile Menu Button */}
           <div className="md:hidden flex items-center gap-2">
+            <button
+              onClick={toggleTheme}
+              className="flex items-center gap-1 px-2 py-1 rounded-md hover:bg-accent"
+              aria-label="Toggle theme"
+            >
+              {mounted && (
+                theme === 'dark' ? 
+                <Sun className="h-4 w-4" /> : 
+                <Moon className="h-4 w-4" />
+              )}
+            </button>
             <button
               onClick={toggleLanguage}
               className="flex items-center gap-1 px-2 py-1 rounded-md hover:bg-accent"
@@ -615,7 +648,7 @@ export default function IaraLandingPage() {
                     strokeLinejoin="round"
                     className="h-5 w-5 text-muted-foreground"
                   >
-                    <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" />
+                    <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" />
                   </svg>
                   <span className="text-muted-foreground">{t.footer.phone}</span>
                 </li>
