@@ -59,12 +59,14 @@ export default function IaraLandingPage() {
             <Link href="#benefits" className="text-sm font-medium hover:text-primary">
               {t.nav.benefits}
             </Link>
+            {/* 
             <Link href="#testimonials" className="text-sm font-medium hover:text-primary">
               {t.nav.testimonials}
             </Link>
             <Link href="#contact" className="text-sm font-medium hover:text-primary">
               {t.nav.contact}
             </Link>
+            */}
             <button
               onClick={toggleTheme}
               className="flex items-center gap-1 px-2 py-1 rounded-md hover:bg-accent"
