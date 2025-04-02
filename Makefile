@@ -22,6 +22,14 @@ test-worker:
 		-v ./shared/:/code/shared \
 		iara-worker npm test
 
+app-lint:
+	@docker run -ti --rm \
+		--name iara-app-bash \
+		--env-file .env.local \
+		-v ./app/:/code/app \
+		-v ./shared/:/code/shared \
+		iara-app npm run lint
+
 app-build:
 	@docker run -ti --rm \
 		--name iara-app-bash \
@@ -38,7 +46,7 @@ bash-app:
 		iara-app bash
 
 ollama-init:
-	docker exec -it iara-ollama ollama run llama3.2
+	docker exec -it iara-ollama ollama run gemma3
 
 bash-shared:
 	@docker run -ti --rm \
@@ -65,7 +73,7 @@ seed-worker:
 		--env-file .env.local \
 		-v ./worker/:/code/worker \
 		-v ./shared/:/code/shared \
-		iara-worker bash
+		iara-worker npx ts-node src/seed/research-sample.ts
 
 db-generate:
 	@docker run -ti --rm \

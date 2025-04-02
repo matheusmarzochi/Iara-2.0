@@ -141,6 +141,13 @@
       "when": 1732836911100,
       "tag": "0019_public_shocker",
       "breakpoints": true
+    },
+    {
+      "idx": 20,
+      "version": "7",
+      "when": 1743534876636,
+      "tag": "0020_salty_korg",
+      "breakpoints": true
     }
   ]
 }
