@@ -1,7 +1,7 @@
 import { type ChatCompletion } from '../prompt'
 
 const OLLAMA_URL = 'http://ollama:11434/api/chat'
-const MODEL_NAME = 'llama3.2'
+const MODEL_NAME = 'gemma3'
 
 export const ollama = async (input: string): Promise<ChatCompletion> => {
     const response = await fetch(OLLAMA_URL, {
