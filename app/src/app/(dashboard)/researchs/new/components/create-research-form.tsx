@@ -82,7 +82,7 @@ export function CreateResearchForm() {
                 <FormControl>
                   <Input
                     {...field}
-                    placeholder="Digite o título do formulário"
+                    placeholder="Digite o título da pesquisa"
                   />
                 </FormControl>
                 <FormMessage />
@@ -100,7 +100,7 @@ export function CreateResearchForm() {
                   <Textarea
                     {...field}
                     className="resize-none lg:max-h-10 min-h-10"
-                    placeholder="Digite a descrição do formulário"
+                    placeholder="Digite a descrição da pesquisa"
                   />
                 </FormControl>
                 <FormMessage />

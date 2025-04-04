@@ -11,3 +11,16 @@ export const formatters = {
     return intl.format(date);
   },
 };
+
+
+export const relativeTime = (date: number | Date) => {
+  const now = new Date();
+  const diff = Math.abs(now.getTime() - new Date(date).getTime());
+  const minutes = Math.floor(diff / (1000 * 60));
+  const hours = Math.floor(diff / (1000 * 60 * 60));
+  const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+
+  if (minutes < 60) return `${minutes} minutos atrás`;
+  if (hours < 24) return `${hours} horas atrás`;
+  return `${days} dias atrás`;
+};

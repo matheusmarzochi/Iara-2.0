@@ -29,8 +29,8 @@ export const updateResearchAction = actions
       }
     });
 
-    revalidatePath("/dashboard", "page");
-    redirect("/dashboard");
+    revalidatePath(`/researchs/${id}`, "page");
+    redirect(`/researchs/${id}`);
 
     return { status: "success", data: input };
   });

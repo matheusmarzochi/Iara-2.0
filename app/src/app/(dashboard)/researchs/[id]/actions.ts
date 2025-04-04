@@ -8,6 +8,7 @@ import { db } from "iara-shared/database";
 import { researches } from "iara-shared/database/schema";
 import { actions } from "~/lib/actions";
 import { producer } from '~/queue'
+
 export const closeResearchAction = actions
   .createServerAction()
   .input(
@@ -27,6 +28,30 @@ export const closeResearchAction = actions
       );
 
     await producer.send(input.id)
+
+    revalidatePath("/dashboard", "page");
+    redirect("/dashboard");
+
+    return { success: true };
+  });
+
+export const removeResearchAction = actions
+  .createServerAction()
+  .input(
+    z.object({
+      id: z.string().uuid(),
+    }),
+  )
+  .handler(async ({ input, ctx }) => {
+    await db
+      .update(researches)
+      .set({
+        deletedAt: new Date(),
+        updatedAt: new Date(),
+      })
+      .where(
+        and(eq(researches.id, input.id), eq(researches.userId, ctx.user.id)),
+      );
 
     revalidatePath("/dashboard", "page");
     redirect("/dashboard");

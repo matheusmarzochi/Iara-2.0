@@ -1,5 +1,3 @@
-import { sign } from "crypto";
-
 export const texts = {
   en: {
     // Header

@@ -1,8 +1,9 @@
 import { CopyLinkForm } from "./components/copy-link-form";
-import { CloseResearch } from "./components/close-research";
+import { ProcessResearch } from "./components/process-research";
+import { RemoveResearch } from "./components/remove-research";
 import { db } from "iara-shared/database";
 import { notFound } from "next/navigation";
-import { formatters } from "~/lib/utils";
+import { formatters, relativeTime } from "~/lib/utils";
 import { and, count, eq, isNull } from "iara-shared/node_modules/drizzle-orm";
 import {
   forms,
@@ -13,8 +14,9 @@ import {
 import { auth } from "@clerk/nextjs/server";
 import { Button } from "~/components/ui/button";
 import Link from "next/link";
-import { ArrowLeftIcon, MoveRightIcon } from "lucide-react";
+import { ArrowLeftIcon, MoveRightIcon, Trash2Icon, PencilIcon, CpuIcon } from "lucide-react";
 import { Badge } from "~/components/ui/badge";
+import { Card } from "~/components/ui/card";
 
 type Props = {
   params: {
@@ -105,51 +107,111 @@ export default async function ResearchPage({ params }: Props) {
         </div>
       </header>
 
-      <section className="space-y-6">
-        <p>{research.description}</p>
+      <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
+        <div className="lg:col-span-2 space-y-6">
+          <section className="space-y-4">
+            <div className="flex justify-between items-center">
+              <h3 className="text-xl font-medium">Visão Geral da Pesquisa</h3>
+            </div>
 
-        <div>
-          <p>Criado em: {formatters.date(research.createdAt)}</p>
-          <p>Respostas: {research.forms}</p>
+            <p className="text-muted-foreground">{research.description}</p>
+
+            <div className="grid grid-cols-2 gap-4 mt-4">
+              <div className="p-4 rounded-lg border-gray-300 bg-[#F8FAFC] dark:bg-sky-900 dark:border-sky-900">
+                <p className="text-sm text-muted-foreground">Criado em:</p>
+                <p className="font-medium">{formatters.date(research.createdAt)}</p>
+                <p className="text-sm text-muted-foreground">
+                  (Há {relativeTime(research.createdAt)})
+                </p>
+              </div>
+              <div className="p-4 rounded-lg border-gray-300 bg-[#F8FAFC] dark:bg-sky-900 dark:border-sky-900">
+                <p className="text-sm text-muted-foreground">Respostas:</p>
+                <p className="font-medium">{research.forms}</p>
+              </div>
+            </div>
+          </section>
+
+          {isResearchActive && (
+            <section className="space-y-4">
+              <h3 className="text-xl font-medium">Compartilhe sua Pesquisa</h3>
+              <div className="space-y-4">
+                <div className="space-y-2">
+                  <CopyLinkForm research={research.id} status={research.status} />
+                </div>
+              </div>
+            </section>
+          )}
+
+          {isResearchFinished && (
+            <div className="text-balance space-y-4 bg-muted p-4 rounded-lg">
+              <p className="text-sm">
+                Sua pesquisa foi processada, você pode ver os seus resultados
+                clicando no botão abaixo:
+              </p>
+              <Button className="gap-2 group" asChild>
+                <Link href={`/researchs/${research.id}/reports`}>
+                  Ver Relatório{" "}
+                  <MoveRightIcon className="size-4 group-hover:translate-x-1 transition-all" />
+                </Link>
+              </Button>
+            </div>
+          )}
         </div>
 
-        {isResearchActive ? (
-          <CopyLinkForm research={research.id} status={research.status} />
-        ) : null}
+        {/* Action Cards */}
+        <div className="space-y-4">
+          <h3 className="text-xl font-medium">Ações</h3>
 
-        {isResearchFinished ? (
-          <div className="text-balance space-y-4">
-            <p className="text-sm">
-              Sua pesquisa foi precessada, você pode ver os seus resultados
-              clicando no botão abaixo:
-            </p>
-          </div>
-        ) : null}
-      </section>
+          {isResearchActive && (
+            <>
+              <Card className="p-4 space-y-3 border-gray-300 bg-[#F8FAFC] dark:bg-sky-900 dark:border-sky-900">
+                <h4 className="font-medium">Processar Pesquisa</h4>
+                <p className="text-sm text-muted-foreground dark:text-white">
+                  Ao clicar, você encerrará a pesquisa, não aceitará mais respostas e iniciará a análise.
+                  Os resultados serão mostrados após o processamento.
+                </p>
+                <ProcessResearch research={research.id} status={research.status} />
+              </Card>
 
-      {!isResearchActive ? (
-        <div className="w-full flex items-center flex-col gap-2 mt-auto md:flex-row md:justify-between">
-          <Button
-            size="sm"
-            className="gap-2 group w-full md:w-fit"
-            variant="outline"
-            asChild
-          >
-            <Link href={`/researchs/${research.id}`}>Voltar</Link>
-          </Button>
+              <Card className="p-4 space-y-3 border-gray-300 bg-[#F8FAFC] dark:bg-sky-900 dark:border-sky-900">
+                <h4 className="font-medium">Editar Pesquisa</h4>
+                <p className="text-sm text-muted-foreground dark:text-white">
+                  Mesmo comportamento do processamento - encerra a pesquisa, não aceita mais respostas e entra no processamento de resultados.
+                </p>
+                <Button className="w-full gap-2 focus:hover-xl hover:shadow-xl transition-all text-yellow-500 border-yellow-500 bg-[#F8FAFC] dark:bg-sky-900 dark:hover:bg-sky-800 hover:text-yellow-500 shadow-md" variant="outline" asChild>
+                  <Link href={`/researchs/${research.id}/update`}>
+                    <PencilIcon className="size-4" />
+                    Editar
+                  </Link>
+                </Button>
+              </Card>
 
-          <Button size="sm" className="gap-2 group w-full md:w-fit" asChild>
-            <Link href={`/researchs/${research.id}/reports`}>
-              Ver Relatório{" "}
-              <MoveRightIcon className="size-4 group-hover:translate-x-1 transition-all" />
-            </Link>
-          </Button>
+              <Card className="p-4 space-y-3 border-gray-300 bg-[#F8FAFC] dark:bg-sky-900 dark:border-sky-900">
+                <h4 className="font-medium">Excluir Pesquisa</h4>
+                <p className="text-sm text-muted-foreground dark:text-white">
+                  Exclui permanentemente a pesquisa e suas respostas, sem possibilidade de recuperação.
+                </p>
+                <RemoveResearch research={research.id} status={research.status} />
+              </Card>
+            </>
+          )}
+
+          {!isResearchActive && (
+            <Card className="p-4 space-y-3">
+              <h4 className="font-medium">Pesquisa Finalizada</h4>
+              <p className="text-sm text-muted-foreground">
+                Esta pesquisa já foi encerrada e seus resultados estão disponíveis.
+              </p>
+              <Button className="w-full gap-2" asChild>
+                <Link href={`/researchs/${research.id}/reports`}>
+                  Ver Relatório{" "}
+                  <MoveRightIcon className="size-4" />
+                </Link>
+              </Button>
+            </Card>
+          )}
         </div>
-      ) : null}
-
-      {isResearchActive ? (
-        <CloseResearch research={research.id} status={research.status} />
-      ) : null}
+      </div>
     </div>
   );
 }

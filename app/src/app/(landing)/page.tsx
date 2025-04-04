@@ -1,6 +1,6 @@
 "use client"
 
-import { CheckCircle, Globe, Menu, Moon, Sun, X } from "lucide-react"
+import { CheckCircle, Globe, Menu, Moon, Sun, X, Linkedin, Facebook, Twitter, MapPin, Mail, Phone } from "lucide-react"
 import Image from "next/image"
 import Link from "next/link"
 import { useState, useEffect } from "react"
@@ -67,53 +67,58 @@ export default function IaraLandingPage() {
               {t.nav.contact}
             </Link>
             */}
-            <button
+            <Button
               onClick={toggleTheme}
-              className="flex items-center gap-1 px-2 py-1 rounded-md hover:bg-accent"
+              variant={"link"}
+              className="flex items-center text-gray-900 dark:text-gray-200 gap-1 px-2 py-1 rounded-md hover:bg-accent"
               aria-label="Toggle theme"
             >
               {mounted && (
-                theme === 'dark' ? 
-                <Sun className="h-4 w-4" /> : 
-                <Moon className="h-4 w-4" />
+                theme === 'dark' ?
+                  <Sun className="h-4 w-4" /> :
+                  <Moon className="h-4 w-4" />
               )}
-            </button>
-            <button
+            </Button>
+            <Button
               onClick={toggleLanguage}
-              className="flex items-center gap-1 ml-2 px-2 py-1 rounded-md hover:bg-accent"
+              variant={"link"}
+              className="flex items-center text-gray-900 dark:text-gray-200 gap-1 ml-2 px-2 py-1 rounded-md hover:bg-accent"
             >
               <Globe className="h-4 w-4" />
               <span className="text-xs font-medium">{language.toUpperCase()}</span>
-            </button>
+            </Button>
           </nav>
 
           {/* Mobile Menu Button */}
           <div className="md:hidden flex items-center gap-2">
-            <button
+            <Button
               onClick={toggleTheme}
-              className="flex items-center gap-1 px-2 py-1 rounded-md hover:bg-accent"
+              variant={"link"}
+              className="flex items-center text-gray-900 dark:text-gray-200 gap-1 px-2 py-1 rounded-md hover:bg-accent"
               aria-label="Toggle theme"
             >
               {mounted && (
-                theme === 'dark' ? 
-                <Sun className="h-4 w-4" /> : 
-                <Moon className="h-4 w-4" />
+                theme === 'dark' ?
+                  <Sun className="h-4 w-4" /> :
+                  <Moon className="h-4 w-4" />
               )}
-            </button>
-            <button
+            </Button>
+            <Button
               onClick={toggleLanguage}
-              className="flex items-center gap-1 px-2 py-1 rounded-md hover:bg-accent"
+              variant={"link"}
+              className="flex items-center text-gray-900 dark:text-gray-200 gap-1 px-2 py-1 rounded-md hover:bg-accent"
             >
               <Globe className="h-4 w-4" />
               <span className="text-xs font-medium">{language.toUpperCase()}</span>
-            </button>
-            <button
-              className="flex items-center justify-center rounded-md p-2 hover:bg-accent/50"
+            </Button>
+            <Button
+              variant={"link"}
+              className="flex items-center text-gray-900 dark:text-gray-200 justify-center rounded-md p-2 hover:bg-accent/50"
               onClick={() => setIsMenuOpen(!isMenuOpen)}
             >
               {isMenuOpen ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
               <span className="sr-only">Toggle menu</span>
-            </button>
+            </Button>
           </div>
         </div>
 
@@ -530,56 +535,15 @@ export default function IaraLandingPage() {
               <p className="text-sm text-muted-foreground">{t.footer.tagline}</p>
               <div className="flex gap-4">
                 <Link href="#" className="text-muted-foreground hover:text-foreground">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="24"
-                    height="24"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    strokeWidth="2"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    className="h-5 w-5"
-                  >
-                    <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z" />
-                  </svg>
+                  <Facebook className="h-5 w-5" />
                   <span className="sr-only">Facebook</span>
                 </Link>
                 <Link href="#" className="text-muted-foreground hover:text-foreground">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="24"
-                    height="24"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    strokeWidth="2"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    className="h-5 w-5"
-                  >
-                    <path d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z" />
-                  </svg>
+                  <Twitter className="h-5 w-5" />
                   <span className="sr-only">Twitter</span>
                 </Link>
                 <Link href="#" className="text-muted-foreground hover:text-foreground">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="24"
-                    height="24"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    strokeWidth="2"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    className="h-5 w-5"
-                  >
-                    <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" />
-                    <rect width="4" height="12" x="2" y="9" />
-                    <circle cx="4" cy="4" r="2" />
-                  </svg>
+                  <Linkedin className="h-5 w-5" />
                   <span className="sr-only">LinkedIn</span>
                 </Link>
               </div>
@@ -638,56 +602,15 @@ export default function IaraLandingPage() {
               <h3 className="text-sm font-medium">{t.footer.contact}</h3>
               <ul className="space-y-2 text-sm">
                 <li className="flex items-start gap-2">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="24"
-                    height="24"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    strokeWidth="2"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    className="h-5 w-5 text-muted-foreground"
-                  >
-                    <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" />
-                  </svg>
+                  <Phone className="h-5 w-8 text-muted-foreground" />
                   <span className="text-muted-foreground">{t.footer.phone}</span>
                 </li>
                 <li className="flex items-start gap-2">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="24"
-                    height="24"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    strokeWidth="2"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    className="h-5 w-5 text-muted-foreground"
-                  >
-                    <rect width="20" height="16" x="2" y="4" rx="2" />
-                    <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7" />
-                  </svg>
+                  <Mail className="h-5 w-8 text-muted-foreground" />
                   <span className="text-muted-foreground">{t.footer.email}</span>
                 </li>
                 <li className="flex items-start gap-2">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="24"
-                    height="24"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    strokeWidth="2"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    className="h-5 w-5 text-muted-foreground"
-                  >
-                    <path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z" />
-                    <circle cx="12" cy="10" r="3" />
-                  </svg>
+                  <MapPin className="lg:w-9 lg:h-9 md:h-7 md:w-7 sm:w-7 ml-1 text-muted-foreground" />
                   <span className="text-muted-foreground">{t.footer.address}</span>
                 </li>
               </ul>
