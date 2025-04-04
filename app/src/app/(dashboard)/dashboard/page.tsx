@@ -88,7 +88,7 @@ export default async function DashboardPage() {
     <>
       <section className="flex flex-col items-end md:items-start pt-4 pb-8 gap-6">
         <Button size="sm" className="order-1 md:order-2" asChild>
-          <Link href="/researchs/new">Criar Pesquisa</Link>
+          <Link href="/researches/new">Criar Pesquisa</Link>
         </Button>
 
         {researchs.length <= 0 ? (
@@ -117,8 +117,8 @@ export default async function DashboardPage() {
                   {researchsByStatus[status].map((research) => {
                     const researchURL =
                       status === "FINISHED"
-                        ? `/researchs/${research.id}/reports`
-                        : `/researchs/${research.id}`;
+                        ? `/researches/${research.id}/reports`
+                        : `/researches/${research.id}`;
 
                     return (
                       <Card

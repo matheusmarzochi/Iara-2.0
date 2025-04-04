@@ -149,7 +149,7 @@ export default async function ResearchPage({ params }: Props) {
                 clicando no botão abaixo:
               </p>
               <Button className="gap-2 group" asChild>
-                <Link href={`/researchs/${research.id}/reports`}>
+                <Link href={`/researches/${research.id}/reports`}>
                   Ver Relatório{" "}
                   <MoveRightIcon className="size-4 group-hover:translate-x-1 transition-all" />
                 </Link>
@@ -178,7 +178,7 @@ export default async function ResearchPage({ params }: Props) {
                   Permite alterar as informações da pesquisa. As alterações serão visiveis apenas para às novas respostas.
                 </p>
                 <Button className="w-full gap-2 focus:hover-xl hover:shadow-xl transition-all text-yellow-500 border-yellow-500 bg-[#F8FAFC] dark:bg-sky-900 dark:hover:bg-sky-800 hover:text-yellow-500 shadow-md" variant="outline" asChild>
-                  <Link href={`/researchs/${research.id}/update`}>
+                  <Link href={`/researches/${research.id}/update`}>
                     <PencilIcon className="size-4" />
                     Editar
                   </Link>
@@ -202,7 +202,7 @@ export default async function ResearchPage({ params }: Props) {
                 Esta pesquisa já foi encerrada e seus resultados estão disponíveis.
               </p>
               <Button className="w-full gap-2" asChild>
-                <Link href={`/researchs/${research.id}/reports`}>
+                <Link href={`/researches/${research.id}/reports`}>
                   Ver Relatório{" "}
                   <MoveRightIcon className="size-4" />
                 </Link>
