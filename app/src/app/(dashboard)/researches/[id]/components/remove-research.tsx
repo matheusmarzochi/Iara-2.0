@@ -80,7 +80,7 @@ export function RemoveResearch({ research, status }: Props) {
 								variant="destructive"
 								onClick={() => execute({ id: research })}
 								disabled={isPending}
-								className="min-w-[80px] w-full gap-2 focus:hover-xl hover:shadow-xl transition-all"
+								className="w-full"
 							>
 								{isPending ? (
 									<>
@@ -99,8 +99,8 @@ export function RemoveResearch({ research, status }: Props) {
 					<DrawerTrigger asChild>
 						<Button
 							size="sm"
-							variant="destructive"
-							className="w-full order-1 gap-2 focus:hover-xl hover:shadow-xl transition-all"
+                            variant="outline"
+							className="w-full order-1 gap-2 focus:hover-xl hover:shadow-xl transition-all text-red-500 border-red-500 bg-[#F8FAFC] dark:bg-sky-900 dark:hover:bg-sky-800 hover:text-red-500 shadow-md"
 						>
 							<TrashIcon className="size-4" />
 							Remover

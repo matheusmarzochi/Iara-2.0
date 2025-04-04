@@ -183,7 +183,7 @@ export function UpdateResearchForm({ research }: Props) {
             tabIndex={-1}
             asChild
           >
-            <Link href="/dashboard">Voltar</Link>
+            <Link href={`/researches/${research.id}`}>Voltar</Link>
           </Button>
 
           <Button
