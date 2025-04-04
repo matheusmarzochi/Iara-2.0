@@ -167,8 +167,7 @@ export default async function ResearchPage({ params }: Props) {
               <Card className="p-4 space-y-3 border-gray-300 bg-[#F8FAFC] dark:bg-sky-900 dark:border-sky-900">
                 <h4 className="font-medium">Processar Pesquisa</h4>
                 <p className="text-sm text-muted-foreground dark:text-white">
-                  Ao clicar, você encerrará a pesquisa, não aceitará mais respostas e iniciará a análise.
-                  Os resultados serão mostrados após o processamento.
+                  Inicia o processamento da pesquisa para gerar o relatório. Após iniciar do processo, não será mais possível receber novas respostas.
                 </p>
                 <ProcessResearch research={research.id} status={research.status} />
               </Card>
@@ -176,7 +175,7 @@ export default async function ResearchPage({ params }: Props) {
               <Card className="p-4 space-y-3 border-gray-300 bg-[#F8FAFC] dark:bg-sky-900 dark:border-sky-900">
                 <h4 className="font-medium">Editar Pesquisa</h4>
                 <p className="text-sm text-muted-foreground dark:text-white">
-                  Mesmo comportamento do processamento - encerra a pesquisa, não aceita mais respostas e entra no processamento de resultados.
+                  Permite alterar as informações da pesquisa. As alterações serão visiveis apenas para às novas respostas.
                 </p>
                 <Button className="w-full gap-2 focus:hover-xl hover:shadow-xl transition-all text-yellow-500 border-yellow-500 bg-[#F8FAFC] dark:bg-sky-900 dark:hover:bg-sky-800 hover:text-yellow-500 shadow-md" variant="outline" asChild>
                   <Link href={`/researchs/${research.id}/update`}>
@@ -189,7 +188,7 @@ export default async function ResearchPage({ params }: Props) {
               <Card className="p-4 space-y-3 border-gray-300 bg-[#F8FAFC] dark:bg-sky-900 dark:border-sky-900">
                 <h4 className="font-medium">Excluir Pesquisa</h4>
                 <p className="text-sm text-muted-foreground dark:text-white">
-                  Exclui permanentemente a pesquisa e suas respostas, sem possibilidade de recuperação.
+                  Remove permanentemente a pesquisa e todas as respostas associadas. Esta ação não poderá ser desfeita.
                 </p>
                 <RemoveResearch research={research.id} status={research.status} />
               </Card>
