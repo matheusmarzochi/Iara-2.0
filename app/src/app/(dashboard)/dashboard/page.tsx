@@ -12,8 +12,6 @@ import {
   users,
 } from "iara-shared/database/schema";
 import { formatters } from "~/lib/utils";
-import { EditIcon } from "lucide-react";
-import { DeleteResearchForm } from "./components/delete-research-form";
 
 type ResearchGroup = Record<Research["status"], Array<Research>>;
 
@@ -90,13 +88,13 @@ export default async function DashboardPage() {
     <>
       <section className="flex flex-col items-end md:items-start pt-4 pb-8 gap-6">
         <Button size="sm" className="order-1 md:order-2" asChild>
-          <Link href="/researchs/new">Criar Formulário</Link>
+          <Link href="/researchs/new">Criar Pesquisa</Link>
         </Button>
 
         {researchs.length <= 0 ? (
           <section className="order-2 md:order-1">
             <p className="text-muted-foreground">
-              Você não possui nenhum formulário. Clique em “Criar formulário”
+              Você não possui nenhuma pesquisa. Clique em “Criar pesquisa”
               para descobrir as necessidades e expectativas dos seus clientes!
             </p>
           </section>
@@ -146,28 +144,6 @@ export default async function DashboardPage() {
                               Respostas: {research.replies}
                             </p>
                           </div>
-
-                          {research.status !== "FINISHED" ? (
-                            <Button
-                              asChild
-                              size="icon"
-                              variant="ghost"
-                              className="p-0 size-8 z-10 relative"
-                            >
-                              <Link href={`/researchs/${research.id}/update`}>
-                                <EditIcon className="size-4" />
-                              </Link>
-                            </Button>
-                          ) : null}
-
-                          {research.status === "FINISHED" ? (
-                            <DeleteResearchForm
-                              research={{
-                                id: research.id,
-                                title: research.title,
-                              }}
-                            />
-                          ) : null}
                         </CardContent>
 
                         <Link className="absolute inset-0" href={researchURL} />

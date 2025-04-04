@@ -340,7 +340,6 @@ function InterestGroupedAnwsers({ answers }: { answers: Array<ReportAwnser> }) {
               {/* @todo add an answer.id here to avoid use index */}
               {answers.map((answer) => (
                 <div
-                  // biome-ignore lint/suspicious/noArrayIndexKey: <explanation>
                   key={answer.id}
                   className="space-y-2 text-balance border-b border-gray-700 last:border-none pb-4"
                 >
