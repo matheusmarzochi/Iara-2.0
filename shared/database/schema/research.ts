@@ -14,6 +14,8 @@ import { forms, type Form } from "./form";
 import { reports, Report } from "./report";
 
 export const researchesStatus = pgEnum("researches_status", [
+  "OPENED",
+  "ANALYSIS",
   "CREATED",
   "PROCESSING",
   "FINISHED",
@@ -28,7 +30,7 @@ export const researches = pgTable(
     userId: uuid("user_id")
       .notNull()
       .references(() => users.id),
-    status: researchesStatus("status").default("CREATED").notNull(),
+    status: researchesStatus("status").default("OPENED").notNull(),
     createdAt: timestamp("created_at", { mode: "date", withTimezone: true })
       .notNull()
       .defaultNow(),

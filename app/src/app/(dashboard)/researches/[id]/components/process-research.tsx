@@ -53,7 +53,7 @@ export function ProcessResearch({ research, status }: Props) {
 					<DialogTrigger asChild>
 						<Button
 							size="sm"
-							disabled={status !== "CREATED"}
+							disabled={status !== "CREATED" && status !== "OPENED"}
 							className="w-full gap-2 focus:hover-xl hover:shadow-xl transition-all text-white bg-green-500 hover:bg-green-600 dark:text-gray-900 shadow-md"
 						>
 							<CpuIcon className="size-4" />
@@ -80,7 +80,7 @@ export function ProcessResearch({ research, status }: Props) {
 							<Button
 								size="sm"
 								onClick={() => execute({ id: research })}
-								disabled={status !== "CREATED" || isPending}
+								disabled={status !== "CREATED" && status !== "OPENED" || isPending}
 								className="min-w-[80px] w-full gap-2 focus:hover-xl hover:shadow-xl transition-all text-white bg-green-500 hover:bg-green-600 dark:text-gray-900 shadow-md"
 							>
 								{isPending ? (
@@ -101,7 +101,7 @@ export function ProcessResearch({ research, status }: Props) {
 						<Button
 							size="sm"
 							variant="destructive"
-							disabled={status !== "CREATED"}
+							disabled={status !== "CREATED" && status !== "OPENED"}
 							className="w-full order-1 gap-2 focus:hover-xl hover:shadow-xl transition-all text-white bg-green-500 hover:bg-green-600 dark:text-gray-900 shadow-md"
 						>
 							<CpuIcon className="size-4" />
@@ -128,7 +128,7 @@ export function ProcessResearch({ research, status }: Props) {
 							<Button
 								size="sm"
 								onClick={() => execute({ id: research })}
-								disabled={status !== "CREATED" || isPending}
+								disabled={status !== "CREATED" && status !== "OPENED" || isPending}
 								className="bg-green-500 hover:bg-green-600 dark:text-gray-900 shadow-md"
 							>
 								{isPending ? (

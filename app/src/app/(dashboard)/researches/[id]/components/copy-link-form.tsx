@@ -31,7 +31,7 @@ export function CopyLinkForm({ research, status }: Props) {
         <Button
           className="w-[120px]"
           onClick={() => copy(researchUrl)}
-          disabled={status !== "CREATED"}
+          disabled={status !== "CREATED" && status !== "OPENED"}
         >
           <ClipboardCopy className="size-4 mr-2" />
           {copied ? "Copiado!" : "Copiar"}

@@ -127,6 +127,19 @@ services:
       - ./ollama:/root/.ollama
     expose:
       - 11434
+  minio:
+    image: quay.io/minio/minio
+    container_name: iara-minio
+    networks:
+      - iara
+    ports:
+      - 9000:9000
+      - 9001:9001
+    env_file:
+      - ./.env.local
+    volumes:
+      - ./minio:/data
+    command: server /data --console-address ":9001"
 networks:
   iara:
     name: iara

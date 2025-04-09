@@ -112,3 +112,14 @@ prd-bash-worker:
 		-v ./app/node_modules:/code/app/node_modules \
 		-v ./app/src/database:/code/app/src/database \
 		iara-worker bash
+
+minio-build:
+	@docker build -t iara-mc-shell ./scripts
+
+minio-bootstrap:
+	@docker run --rm -ti \
+		--network iara \
+		-v ./scripts:/scripts \
+		-w /scripts \
+		--env-file .env.local \
+		iara-mc-shell ./minio-bootstrap.sh
