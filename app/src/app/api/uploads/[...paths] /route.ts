@@ -1,8 +1,8 @@
-import { NextRequest, NextResponse } from 'next/server';
-import path from 'path';
+import { type NextRequest, NextResponse } from 'next/server';
+import path from 'node:path';
 import mime from 'mime-types';
 import download from 'iara-shared/storage/download';
-import crypto from 'crypto';
+import crypto from 'node:crypto';
 
 // Configure where the uploads are stored
 const uploadsDirectory = path.join('/', 'code', 'uploads');
@@ -17,6 +17,9 @@ export async function GET(
   context: { params: Promise<{ paths: string[] }> }
 ) {
   try {
+    if (!context.params) {
+      return new NextResponse('Missing parameters', { status: 400 });
+    }
     const { paths } = await context.params;
     const filePath = path.join(uploadsDirectory, ...paths);
 
@@ -25,7 +28,7 @@ export async function GET(
       return new NextResponse('Invalid path', { status: 400 });
     }
 
-    let fileBuffer;
+    let fileBuffer: Buffer;
     try {
       fileBuffer = await download(filePath);
     } catch {

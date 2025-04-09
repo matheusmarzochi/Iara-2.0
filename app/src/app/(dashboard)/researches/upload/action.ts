@@ -1,8 +1,8 @@
 'use server';
 
-import { writeFile, unlink } from 'fs/promises';
-import { join } from 'path';
-import os from 'os';
+import { writeFile, unlink } from 'node:fs/promises';
+import { join } from 'node:path';
+import os from 'node:os';
 import { db } from "iara-shared/database";
 import { eq } from "iara-shared/node_modules/drizzle-orm";
 import { researches, users } from "iara-shared/database/schema";

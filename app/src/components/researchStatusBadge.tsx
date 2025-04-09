@@ -1,6 +1,6 @@
 import React from "react";
 import { Badge } from "~/components/ui/badge";
-import { Research } from "iara-shared/database/schema";
+import type { Research } from "iara-shared/database/schema";
 
 interface ResearchStatusBadgeProps {
   status: Research["status"];

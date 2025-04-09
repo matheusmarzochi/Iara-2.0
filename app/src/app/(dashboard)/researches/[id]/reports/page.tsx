@@ -22,7 +22,8 @@ import { Button } from "~/components/ui/button";
 import Link from "next/link";
 import { Card, CardContent } from "~/components/ui/card";
 import { Badge } from "~/components/ui/badge";
-import { ArrowLeftIcon, ChevronLeftIcon, MoveLeftIcon } from "lucide-react";
+import { ArrowLeftIcon } from "lucide-react";
+import { ResearchStatusBadge } from "~/components/researchStatusBadge"
 
 type Props = {
   params: {
@@ -94,25 +95,6 @@ export default async function ReportsPage({ params }: Props) {
     }[key];
   };
 
-  const status = (status: Research["status"]) =>
-    ({
-      CREATED: (
-        <Badge className="whitespace-nowrap w-fit bg-yellow-500 text-black hover:bg-yellow-400">
-          Em Andamento
-        </Badge>
-      ),
-      FINISHED: (
-        <Badge className="whitespace-nowrap w-fit bg-green-400 text-black hover:bg-green-300">
-          Encerrada
-        </Badge>
-      ),
-      PROCESSING: (
-        <Badge className="whitespace-nowrap w-fit bg-orange-500 text-black hover:bg-orange-400">
-          Processando
-        </Badge>
-      ),
-    })[status];
-
   return (
     <div>
       <header className="space-y-6">
@@ -130,7 +112,7 @@ export default async function ReportsPage({ params }: Props) {
           </Button>
 
           <h2 className="font-semibold text-3xl">{research.title}</h2>
-          {status(research.status)}
+          <ResearchStatusBadge status={research.status} />
         </div>
         <h3 className="text-lg font-bold">Resultados</h3>
       </header>
