@@ -1,5 +1,6 @@
 "use client";
 import { useEffect, useState } from "react";
+import { useSearchParams } from "next/navigation";
 import type { Research } from "iara-shared/database/schema";
 import { researchList, type ResearchItem } from "./action"
 import { ResearchStatusBadge } from "~/components/researchStatusBadge";
@@ -9,15 +10,15 @@ import Link from "next/link";
 type ResearchStatus = Research["status"];
 
 export default function AdminResearchList() {
-    const [researchItems, setResearchItems] = useState<ResearchItem[]>([]);
-    const [emailFilter, setEmailFilter] = useState("");
+    const searchParams = useSearchParams();
+    const initialEmail = searchParams.get("email") || "";
+    const [emailFilter, setEmailFilter] = useState(initialEmail);
     const [titleFilter, setTitleFilter] = useState("");
     const [statusFilter, setStatusFilter] = useState<ResearchStatus | "">("");
     const [currentPage, setCurrentPage] = useState(1);
     const [totalCount, setTotalCount] = useState(0);
+    const [researchItems, setResearchItems] = useState<ResearchItem[]>([]);
     const pageSize = 10;
-
-    
 
     useEffect(() => {
         const fetchResearches = async ({
@@ -67,51 +68,53 @@ export default function AdminResearchList() {
                     placeholder="User Email"
                     value={emailFilter}
                     onChange={(e) => { setEmailFilter(e.target.value); setCurrentPage(1); }}
-                    className="border rounded p-2"
+                    className="border rounded p-2 dark:bg-gray-700 dark:border-gray-600 dark:text-white"
                 />
                 <input
                     type="text"
                     placeholder="Research Title"
                     value={titleFilter}
                     onChange={(e) => { setTitleFilter(e.target.value); setCurrentPage(1); }}
-                    className="border rounded p-2"
+                    className="border rounded p-2 dark:bg-gray-700 dark:border-gray-600 dark:text-white"
                 />
                 <select
                     value={statusFilter}
                     onChange={(e) => { setStatusFilter(e.target.value as ResearchStatus | ""); setCurrentPage(1); }}
-                    className="border rounded p-2"
+                    className="border rounded p-2 dark:bg-gray-700 dark:border-gray-600 dark:text-white"
                 >
-                    <option value="">Any Status</option>
-                    <option value="OPENED">OPENED</option>
-                    <option value="ANALYSIS">ANALYSIS</option>
-                    <option value="CREATED">CREATED</option>
-                    <option value="PROCESSING">PROCESSING</option>
-                    <option value="FINISHED">FINISHED</option>
+                    <option value="">Qualquer Status</option>
+                    <option value="OPENED">Aberta</option>
+                    <option value="ANALYSIS">Em Análise</option>
+                    <option value="CREATED">Aberta</option>
+                    <option value="PROCESSING">Processando</option>
+                    <option value="FINISHED">Encerrada</option>
                 </select>
-                <button type="submit" className="bg-sky-700 text-white px-4 py-2 rounded hover:bg-sky-900">Filter</button>
+                <button type="submit" className="bg-sky-700 text-white px-4 py-2 rounded hover:bg-sky-900 dark:bg-sky-600 dark:hover:bg-sky-700">
+                    Filter
+                </button>
             </form>
             <div className="overflow-x-auto">
-                <table className="min-w-full divide-y divide-gray-200">
-                    <thead className="bg-gray-50">
+                <table className="min-w-full divide-y divide-gray-200 dark:divide-gray-700">
+                    <thead className="bg-gray-50 dark:bg-gray-800">
                         <tr>
-                            <th className="px-6 py-3 text-left text-xs font-medium text-gray-700 uppercase tracking-wider">Owner Email</th>
-                            <th className="px-6 py-3 text-left text-xs font-medium text-gray-700 uppercase tracking-wider">Research Title</th>
-                            <th className="px-6 py-3 text-left text-xs font-medium text-gray-700 uppercase tracking-wider">Created At</th>
-                            <th className="px-6 py-3 text-left text-xs font-medium text-gray-700 uppercase tracking-wider">Status</th>
-                            <th className="px-6 py-3 text-left text-xs font-medium text-gray-700 uppercase tracking-wider">Questions</th>
-                            <th className="px-6 py-3 text-left text-xs font-medium text-gray-700 uppercase tracking-wider">Answers</th>
-                            <th className="px-6 py-3 text-left text-xs font-medium text-gray-700 uppercase tracking-wider">Access</th> {/* New header */}
+                            <th className="px-6 py-3 text-left text-xs font-medium text-gray-700 uppercase tracking-wider dark:text-gray-200">Owner Email</th>
+                            <th className="px-6 py-3 text-left text-xs font-medium text-gray-700 uppercase tracking-wider dark:text-gray-200">Research Title</th>
+                            <th className="px-6 py-3 text-left text-xs font-medium text-gray-700 uppercase tracking-wider dark:text-gray-200">Created At</th>
+                            <th className="px-6 py-3 text-left text-xs font-medium text-gray-700 uppercase tracking-wider dark:text-gray-200">Status</th>
+                            <th className="px-6 py-3 text-left text-xs font-medium text-gray-700 uppercase tracking-wider dark:text-gray-200">Questions</th>
+                            <th className="px-6 py-3 text-left text-xs font-medium text-gray-700 uppercase tracking-wider dark:text-gray-200">Answers</th>
+                            <th className="px-6 py-3 text-left text-xs font-medium text-gray-700 uppercase tracking-wider dark:text-gray-200">Access</th>
                         </tr>
                     </thead>
-                    <tbody className="bg-white divide-y divide-gray-200">
+                    <tbody className="bg-white dark:bg-gray-900 divide-y divide-gray-200 dark:divide-gray-700">
                         {researchItems.map((research) => (
                             <tr key={research.researchId}>
-                                <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-700">{research.userEmail}</td>
-                                <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-700">{research.title}</td>
-                                <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-700">
+                                <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-700 dark:text-gray-300">{research.userEmail}</td>
+                                <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-700 dark:text-gray-300">{research.title}</td>
+                                <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-700 dark:text-gray-300">
                                     {new Date(research.createdAt).toLocaleDateString()}
                                 </td>
-                                <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-700">
+                                <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-700 dark:text-gray-300">
                                     {research.uploadPath ? (
                                         <span className="mr-2" title="File Uploaded">
                                             <Paperclip className="w-4 h-4 inline-block" />
@@ -121,10 +124,10 @@ export default function AdminResearchList() {
                                     )}
                                     <ResearchStatusBadge status={research.status} />
                                 </td>
-                                <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-700">{research.questionsQuantity}</td>
-                                <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-700">{research.answersQuantity}</td>
-                                <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-700"> {/* New column */}
-                                    <Link href={`/admin/${research.researchId}`} className="bg-sky-700 text-white px-3 py-1 rounded hover:bg-sky-900">
+                                <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-700 dark:text-gray-300">{research.questionsQuantity}</td>
+                                <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-700 dark:text-gray-300">{research.answersQuantity}</td>
+                                <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-700 dark:text-gray-300">
+                                    <Link href={`/admin/${research.researchId}`} className="bg-sky-700 text-white px-3 py-1 rounded hover:bg-sky-900 dark:bg-sky-600 dark:hover:bg-sky-700">
                                         Access
                                     </Link>
                                 </td>
@@ -132,13 +135,13 @@ export default function AdminResearchList() {
                         ))}
                         {researchItems.length === 0 && (
                             <tr>
-                                <td colSpan={7} className="px-6 py-4 text-center text-sm text-gray-700">No researches found.</td>
+                                <td colSpan={7} className="px-6 py-4 text-center text-sm text-gray-700 dark:text-gray-300">No researches found.</td>
                             </tr>
                         )}
                     </tbody>
                 </table>
             </div>
-            <div className="mt-2 text-sm text-gray-700">
+            <div className="mt-2 text-sm text-gray-700 dark:text-gray-300">
                 Total Researches: {totalCount}
             </div>
             <div className="mt-4 flex justify-between">
@@ -150,11 +153,11 @@ export default function AdminResearchList() {
                     }}
                     type="button"
                     disabled={currentPage === 1}
-                    className="bg-sky-700 text-white px-4 py-2 rounded disabled:opacity-50"
+                    className="bg-sky-700 text-white px-4 py-2 rounded disabled:opacity-50 dark:bg-sky-600 dark:hover:bg-sky-700"
                 >
                     Previous
                 </button>
-                <span>Page {currentPage}</span>
+                <span className="dark:text-gray-300">Page {currentPage}</span>
                 <button
                     onClick={() => {
                         if (researchItems.length === pageSize) {
@@ -163,7 +166,7 @@ export default function AdminResearchList() {
                     }}
                     type="button"
                     disabled={researchItems.length < pageSize}
-                    className="bg-sky-700 text-white px-4 py-2 rounded disabled:opacity-50"
+                    className="bg-sky-700 text-white px-4 py-2 rounded disabled:opacity-50 dark:bg-sky-600 dark:hover:bg-sky-700"
                 >
                     Next
                 </button>

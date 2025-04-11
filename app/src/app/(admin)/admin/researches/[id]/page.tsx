@@ -71,7 +71,7 @@ export default async function ResearchPage({ params }: Props) {
                             className="p-0 text-foreground inline-flex"
                             asChild
                         >
-                            <Link href="/admin">
+                            <Link href="/admin/researches">
                                 <span className="sr-only">
                                     Voltar para a lista de relatórios
                                 </span>
