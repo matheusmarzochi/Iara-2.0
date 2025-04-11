@@ -1,9 +1,9 @@
 "use server"
 
 import download from "iara-shared/storage/download";
-import { db } from "iara-shared/database/"; // existing import
-import { researches } from "iara-shared/database/schema"; // new import
-import { eq } from "iara-shared/node_modules/drizzle-orm"; // new import
+import { db } from "iara-shared/database/";
+import { researches } from "iara-shared/database/schema";
+import { eq } from "iara-shared/node_modules/drizzle-orm";
 
 // Helper to slugify a string
 const slugify = (text: string) =>
