@@ -3,6 +3,7 @@ import { count, desc, eq, isNull, and } from "iara-shared/node_modules/drizzle-o
 import Link from "next/link";
 import { Badge } from "~/components/ui/badge";
 import { Button } from "~/components/ui/button";
+import { Plus, Upload } from "lucide-react";
 import { Card, CardContent, CardHeader, CardTitle } from "~/components/ui/card";
 import { db } from "iara-shared/database";
 import {
@@ -12,6 +13,7 @@ import {
   users,
 } from "iara-shared/database/schema";
 import { formatters } from "~/lib/utils";
+import { ResearchStatusBadge } from "~/components/researchStatusBadge";
 
 type ResearchGroup = Record<Research["status"], Array<Research>>;
 
@@ -48,28 +50,11 @@ async function getUserResearchs() {
 export default async function DashboardPage() {
   const researchs = await getUserResearchs();
 
-  const researchStatus = (status: Research["status"]) =>
-    ({
-      CREATED: (
-        <Badge className="whitespace-nowrap w-fit bg-yellow-500 text-black">
-          Em Andamento
-        </Badge>
-      ),
-      FINISHED: (
-        <Badge className="whitespace-nowrap w-fit bg-green-400 text-black">
-          Encerrada
-        </Badge>
-      ),
-      PROCESSING: (
-        <Badge className="whitespace-nowrap w-fit bg-orange-500 text-black">
-          Processando
-        </Badge>
-      ),
-    })[status];
-
   const researchStatusTitle = (status: Research["status"]) =>
     ({
       CREATED: <h3 className="font-bold text-2xl">Em Andamento</h3>,
+      OPENED: <h3 className="font-bold text-2xl">Aberta</h3>,
+      ANALYSIS: <h3 className="font-bold text-2xl">Em Analise</h3>,
       PROCESSING: <h3 className="font-bold text-2xl">Em Processamento</h3>,
       FINISHED: <h3 className="font-bold text-2xl">Encerrado</h3>,
     })[status];
@@ -81,15 +66,30 @@ export default async function DashboardPage() {
 
       return researchs;
     },
-    { CREATED: [], PROCESSING: [], FINISHED: [] } as ResearchGroup,
+    { CREATED: [], PROCESSING: [], FINISHED: [], ANALYSIS: [], OPENED: [] } as ResearchGroup,
   );
 
   return (
     <>
       <section className="flex flex-col items-end md:items-start pt-4 pb-8 gap-6">
-        <Button size="sm" className="order-1 md:order-2" asChild>
-          <Link href="/researches/new">Criar Pesquisa</Link>
-        </Button>
+        <div className="flex gap-4">
+          <Button size="sm" className="order-1 md:order-2" asChild>
+            <Link href="/researches/new">
+              <span className="flex items-center gap-2">
+                <Plus className="w-4 h-4" />
+                Criar Pesquisa
+              </span>
+            </Link>
+          </Button>
+          <Button size="sm" className="order-1 md:order-2" asChild>
+            <Link href="/researches/upload">
+              <span className="flex items-center gap-2">
+                <Upload className="w-4 h-4" />
+                Upload Data
+              </span>
+            </Link>
+          </Button>
+        </div>
 
         {researchs.length <= 0 ? (
           <section className="order-2 md:order-1">
@@ -127,10 +127,10 @@ export default async function DashboardPage() {
                       >
                         <CardHeader>
                           <div className="flex justify-between items-start">
-                            <CardTitle className="text-xl">
+                            <CardTitle className="text-xl truncate">
                               {research.title}
                             </CardTitle>
-                            {researchStatus(research.status)}
+                            <ResearchStatusBadge status={research.status} />
                           </div>
                         </CardHeader>
 

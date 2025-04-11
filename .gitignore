@@ -1,4 +1,5 @@
 /postgres
+/minio
 /queue
 /ollama
 .env.local

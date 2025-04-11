@@ -39,7 +39,7 @@ export default async function ResearchQRCodePage({ params }: Props) {
         return notFound();
     }
 
-    if (research.status !== "CREATED") {
+    if (research.status !== "CREATED" && research.status !== "OPENED") {
         return (
             <section className="space-y-6 h-[calc(100dvh-160px)] flex items-center">
                 <header className="pt-4 pb-6 space-y-4">

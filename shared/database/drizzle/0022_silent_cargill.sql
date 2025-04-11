@@ -1,0 +1,1 @@
+ALTER TABLE "researches" ALTER COLUMN "status" SET DEFAULT 'OPENED';

@@ -63,4 +63,4 @@ db-migrate:
 		--env-file .env.staging \
 		-v ./shared/:/code \
 		-w /code \
-		iara-app npm run db:migrate
+		iara-app npm run db:push

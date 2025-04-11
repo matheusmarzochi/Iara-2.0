@@ -14,8 +14,8 @@ import {
 import { auth } from "@clerk/nextjs/server";
 import { Button } from "~/components/ui/button";
 import Link from "next/link";
-import { ArrowLeftIcon, MoveRightIcon, Trash2Icon, PencilIcon, CpuIcon } from "lucide-react";
-import { Badge } from "~/components/ui/badge";
+import { ArrowLeftIcon, MoveRightIcon, PencilIcon, Search } from "lucide-react";
+import { ResearchStatusBadge } from "~/components/researchStatusBadge";
 import { Card } from "~/components/ui/card";
 
 type Props = {
@@ -57,27 +57,9 @@ export default async function ResearchPage({ params }: Props) {
     return notFound();
   }
 
-  const isResearchActive = research.status === "CREATED";
+  const isResearchInAnalysis = research.status === "ANALYSIS";
+  const isResearchActive = research.status === "CREATED" || research.status === "OPENED";
   const isResearchFinished = research.status === "FINISHED";
-
-  const status = (status: Research["status"]) =>
-    ({
-      CREATED: (
-        <Badge className="whitespace-nowrap w-fit bg-yellow-500 text-black hover:bg-yellow-400">
-          Em Andamento
-        </Badge>
-      ),
-      FINISHED: (
-        <Badge className="whitespace-nowrap w-fit bg-green-400 text-black hover:bg-green-300">
-          Encerrada
-        </Badge>
-      ),
-      PROCESSING: (
-        <Badge className="whitespace-nowrap w-fit bg-orange-500 text-black hover:bg-orange-400">
-          Processando
-        </Badge>
-      ),
-    })[status];
 
   return (
     <div className="flex flex-col h-[calc(100dvh-160px)]">
@@ -102,7 +84,7 @@ export default async function ResearchPage({ params }: Props) {
               {research.title}
             </h2>
 
-            {status(research.status)}
+            <ResearchStatusBadge status={research.status} />
           </div>
         </div>
       </header>
@@ -126,7 +108,17 @@ export default async function ResearchPage({ params }: Props) {
               </div>
               <div className="p-4 rounded-lg border-gray-300 bg-[#F8FAFC] dark:bg-sky-900 dark:border-sky-900">
                 <p className="text-sm text-muted-foreground">Respostas:</p>
-                <p className="font-medium">{research.forms}</p>
+                {isResearchInAnalysis ? (
+                  <div className="flex items-center gap-2">
+                    <span className="relative flex size-4">
+                      <Search className="absolute inline-flex size-4 animate-ping opacity-75" />
+                      <Search className="relative inline-flex size-4" />
+                    </span>
+                    <p className="font-medium">Em Análise</p>
+                  </div>
+                ) : (
+                  <p className="font-medium">{research.forms}</p>
+                )}
               </div>
             </div>
           </section>
@@ -162,29 +154,12 @@ export default async function ResearchPage({ params }: Props) {
         <div className="space-y-4">
           <h3 className="text-xl font-medium">Ações</h3>
 
-          {isResearchActive && (
+          {isResearchInAnalysis ? (
             <>
-              <Card className="p-4 space-y-3 border-gray-300 bg-[#F8FAFC] dark:bg-sky-900 dark:border-sky-900">
-                <h4 className="font-medium">Processar Pesquisa</h4>
-                <p className="text-sm text-muted-foreground dark:text-white">
-                  Inicia o processamento da pesquisa para gerar o relatório. Após iniciar do processo, não será mais possível receber novas respostas.
-                </p>
-                <ProcessResearch research={research.id} status={research.status} />
-              </Card>
-
-              <Card className="p-4 space-y-3 border-gray-300 bg-[#F8FAFC] dark:bg-sky-900 dark:border-sky-900">
-                <h4 className="font-medium">Editar Pesquisa</h4>
-                <p className="text-sm text-muted-foreground dark:text-white">
-                  Permite alterar as informações da pesquisa. As alterações serão visiveis apenas para às novas respostas.
-                </p>
-                <Button className="w-full gap-2 focus:hover-xl hover:shadow-xl transition-all text-yellow-500 border-yellow-500 bg-[#F8FAFC] dark:bg-sky-900 dark:hover:bg-sky-800 hover:text-yellow-500 shadow-md" variant="outline" asChild>
-                  <Link href={`/researches/${research.id}/update`}>
-                    <PencilIcon className="size-4" />
-                    Editar
-                  </Link>
-                </Button>
-              </Card>
-
+              <div className="mb-4 p-4 bg-yellow-100 text-yellow-800 rounded">
+                A pesquisa está em análise. Este processo pode levar um tempo para concluir.
+                Enquanto isso, apenas a opção de exclusão está disponível.
+              </div>
               <Card className="p-4 space-y-3 border-gray-300 bg-[#F8FAFC] dark:bg-sky-900 dark:border-sky-900">
                 <h4 className="font-medium">Excluir Pesquisa</h4>
                 <p className="text-sm text-muted-foreground dark:text-white">
@@ -193,21 +168,54 @@ export default async function ResearchPage({ params }: Props) {
                 <RemoveResearch research={research.id} status={research.status} />
               </Card>
             </>
-          )}
+          ) : (
+            <>
+              {isResearchActive ? (
+                <>
+                  <Card className="p-4 space-y-3 border-gray-300 bg-[#F8FAFC] dark:bg-sky-900 dark:border-sky-900">
+                    <h4 className="font-medium">Processar Pesquisa</h4>
+                    <p className="text-sm text-muted-foreground dark:text-white">
+                      Inicia o processamento da pesquisa para gerar o relatório. Após iniciar o processo, não será mais possível receber novas respostas.
+                    </p>
+                    <ProcessResearch research={research.id} status={research.status} />
+                  </Card>
 
-          {!isResearchActive && (
-            <Card className="p-4 space-y-3">
-              <h4 className="font-medium">Pesquisa Finalizada</h4>
-              <p className="text-sm text-muted-foreground">
-                Esta pesquisa já foi encerrada e seus resultados estão disponíveis.
-              </p>
-              <Button className="w-full gap-2" asChild>
-                <Link href={`/researches/${research.id}/reports`}>
-                  Ver Relatório{" "}
-                  <MoveRightIcon className="size-4" />
-                </Link>
-              </Button>
-            </Card>
+                  <Card className="p-4 space-y-3 border-gray-300 bg-[#F8FAFC] dark:bg-sky-900 dark:border-sky-900">
+                    <h4 className="font-medium">Editar Pesquisa</h4>
+                    <p className="text-sm text-muted-foreground dark:text-white">
+                      Permite alterar as informações da pesquisa. As alterações serão visíveis apenas para as novas respostas.
+                    </p>
+                    <Button className="w-full gap-2 focus:hover-xl hover:shadow-xl transition-all text-yellow-500 border-yellow-500 bg-[#F8FAFC] dark:bg-sky-900 dark:hover:bg-sky-800 hover:text-yellow-500 shadow-md" variant="outline" asChild>
+                      <Link href={`/researches/${research.id}/update`}>
+                        <PencilIcon className="size-4" />
+                        Editar
+                      </Link>
+                    </Button>
+                  </Card>
+
+                  <Card className="p-4 space-y-3 border-gray-300 bg-[#F8FAFC] dark:bg-sky-900 dark:border-sky-900">
+                    <h4 className="font-medium">Excluir Pesquisa</h4>
+                    <p className="text-sm text-muted-foreground dark:text-white">
+                      Remove permanentemente a pesquisa e todas as respostas associadas. Esta ação não poderá ser desfeita.
+                    </p>
+                    <RemoveResearch research={research.id} status={research.status} />
+                  </Card>
+                </>
+              ) : (
+                <Card className="p-4 space-y-3">
+                  <h4 className="font-medium">Pesquisa Finalizada</h4>
+                  <p className="text-sm text-muted-foreground">
+                    Esta pesquisa já foi encerrada e seus resultados estão disponíveis.
+                  </p>
+                  <Button className="w-full gap-2" asChild>
+                    <Link href={`/researches/${research.id}/reports`}>
+                      Ver Relatório{" "}
+                      <MoveRightIcon className="size-4" />
+                    </Link>
+                  </Button>
+                </Card>
+              )}
+            </>
           )}
         </div>
       </div>
