@@ -1,0 +1,1 @@
+ALTER TABLE "researches" ADD COLUMN "upload_path" text;

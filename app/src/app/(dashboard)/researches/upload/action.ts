@@ -71,6 +71,11 @@ export async function uploadResearchFile(formData: FormData) {
     // Remove the temporary file
     await unlink(filePath);
     
+    // Update research record with uploadPath containing filePath and objectName
+    await db.update(researches)
+      .set({ uploadPath: objectName })
+      .where(eq(researches.id, researchId));
+    
     return {
       success: true,
       researchId,

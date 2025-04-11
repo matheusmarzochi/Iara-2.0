@@ -30,6 +30,7 @@ export const researches = pgTable(
     userId: uuid("user_id")
       .notNull()
       .references(() => users.id),
+    uploadPath: text("upload_path"),
     status: researchesStatus("status").default("OPENED").notNull(),
     createdAt: timestamp("created_at", { mode: "date", withTimezone: true })
       .notNull()
