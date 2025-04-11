@@ -4,18 +4,16 @@ import { formatters, relativeTime } from "~/lib/utils";
 import { and, count, eq, isNull } from "iara-shared/node_modules/drizzle-orm";
 import {
     forms,
-    type Research,
     researches,
     users,
 } from "iara-shared/database/schema";
 import { auth } from "@clerk/nextjs/server";
 import { Button } from "~/components/ui/button";
 import Link from "next/link";
-import { ArrowLeftIcon, MoveRightIcon, PencilIcon, Search } from "lucide-react";
+import { ArrowLeftIcon, Search } from "lucide-react";
 import { ResearchStatusBadge } from "~/components/researchStatusBadge";
-import download from "iara-shared/storage/download";
 import { Card } from "~/components/ui/card";
-import { downloadAction } from "./action";
+
 
 type Props = {
     params: {
@@ -39,10 +37,11 @@ async function getResearchById(id: string) {
             status: researches.status,
             forms: count(forms.id),
             createdAt: researches.createdAt,
+            uploadPath: researches.uploadPath,
         })
         .from(researches)
         .leftJoin(forms, eq(forms.researchId, researches.id))
-        .where(isNull(researches.deletedAt))
+        .where(and(isNull(researches.deletedAt), eq(researches.id, id)))
         .limit(1)
         .groupBy(researches.id);
 
@@ -57,8 +56,7 @@ export default async function ResearchPage({ params }: Props) {
     }
 
     const isResearchInAnalysis = research.status === "ANALYSIS";
-    const isResearchActive = research.status === "CREATED" || research.status === "OPENED";
-    const isResearchFinished = research.status === "FINISHED";
+    const asUpload = research.uploadPath !== null
 
     return (
         <div className="flex flex-col h-[calc(100dvh-160px)] container">
@@ -145,17 +143,19 @@ export default async function ResearchPage({ params }: Props) {
                         </div>
                     )}
                     {/* Card para download do arquivo */}
-                    <Card className="p-4 space-y-3 border-gray-300 bg-[#F8FAFC] dark:bg-sky-900 dark:border-sky-900">
-                        <h4 className="font-medium">Download do Arquivo</h4>
-                        <p className="text-sm text-muted-foreground dark:text-white">
-                            Clique no botão abaixo para baixar o arquivo relacionado à pesquisa.
-                        </p>
-                        <Button asChild className="w-full">
-                            <a href={`/admin/${research.id}/download`} target="_blank" rel="noopener noreferrer">
-                                Baixar Arquivo
-                            </a>
-                        </Button>
-                    </Card>
+                    {asUpload && (
+                        <Card className="p-4 space-y-3 border-gray-300 bg-[#F8FAFC] dark:bg-sky-900 dark:border-sky-900">
+                            <h4 className="font-medium">Download do Arquivo</h4>
+                            <p className="text-sm text-muted-foreground dark:text-white">
+                                Clique no botão abaixo para baixar o arquivo relacionado à pesquisa.
+                            </p>
+                            <Button asChild className="w-full">
+                                <a href={`/admin/researches/${research.id}/download`} target="_blank" rel="noopener noreferrer">
+                                    Baixar Arquivo
+                                </a>
+                            </Button>
+                        </Card>
+                    )}
                 </div>
             </div>
         </div>

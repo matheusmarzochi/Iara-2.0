@@ -127,7 +127,7 @@ export default function AdminResearchList() {
                                 <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-700 dark:text-gray-300">{research.questionsQuantity}</td>
                                 <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-700 dark:text-gray-300">{research.answersQuantity}</td>
                                 <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-700 dark:text-gray-300">
-                                    <Link href={`/admin/${research.researchId}`} className="bg-sky-700 text-white px-3 py-1 rounded hover:bg-sky-900 dark:bg-sky-600 dark:hover:bg-sky-700">
+                                    <Link href={`/admin/researches/${research.researchId}`} className="bg-sky-700 text-white px-3 py-1 rounded hover:bg-sky-900 dark:bg-sky-600 dark:hover:bg-sky-700">
                                         Access
                                     </Link>
                                 </td>
