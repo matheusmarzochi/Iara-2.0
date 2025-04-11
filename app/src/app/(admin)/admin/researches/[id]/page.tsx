@@ -13,7 +13,7 @@ import Link from "next/link";
 import { ArrowLeftIcon, Search } from "lucide-react";
 import { ResearchStatusBadge } from "~/components/researchStatusBadge";
 import { Card } from "~/components/ui/card";
-
+import { processResearch } from "./action";
 
 type Props = {
     params: {
@@ -142,6 +142,21 @@ export default async function ResearchPage({ params }: Props) {
                             Enquanto isso, apenas a opção de exclusão está disponível.
                         </div>
                     )}
+
+                    {/* Updated card for sending research to queue */}
+                    <div className="mb-4 p-4 border rounded">
+                        <h4 className="font-medium">Processar Pesquisa</h4>
+                        <p className="text-sm text-muted-foreground">
+                            Clique abaixo para enviar a pesquisa para processamento.
+                        </p>
+                        <form action={processResearch}>
+                            <input type="hidden" name="researchId" value={research.id} />
+                            <Button type="submit" variant="outline" className="w-full">
+                                Enviar para Processamento
+                            </Button>
+                        </form>
+                    </div>
+
                     {/* Card para download do arquivo */}
                     {asUpload && (
                         <Card className="p-4 space-y-3 border-gray-300 bg-[#F8FAFC] dark:bg-sky-900 dark:border-sky-900">
