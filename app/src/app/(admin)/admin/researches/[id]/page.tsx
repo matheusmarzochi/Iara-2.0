@@ -55,7 +55,9 @@ export default async function ResearchPage({ params }: Props) {
         return notFound();
     }
 
-    const isResearchInAnalysis = research.status === "ANALYSIS";
+    const isOpened = research.status === "OPENED";
+    const inAnalysis = research.status === "ANALYSIS";
+    const inProcessing = research.status === "PROCESSING";
     const asUpload = research.uploadPath !== null
 
     return (
@@ -105,7 +107,7 @@ export default async function ResearchPage({ params }: Props) {
                             </div>
                             <div className="p-4 rounded-lg border-gray-300 bg-[#F8FAFC] dark:bg-sky-900 dark:border-sky-900">
                                 <p className="text-sm text-muted-foreground">Respostas:</p>
-                                {isResearchInAnalysis ? (
+                                {inAnalysis ? (
                                     <div className="flex items-center gap-2">
                                         <span className="relative flex size-4">
                                             <Search className="absolute inline-flex size-4 animate-ping opacity-75" />
@@ -136,15 +138,8 @@ export default async function ResearchPage({ params }: Props) {
                 <div className="space-y-4">
                     <h3 className="text-xl font-medium">Ações</h3>
 
-                    {isResearchInAnalysis && (
-                        <div className="mb-4 p-4 bg-yellow-100 text-yellow-800 rounded">
-                            A pesquisa está em análise. Este processo pode levar um tempo para concluir.
-                            Enquanto isso, apenas a opção de exclusão está disponível.
-                        </div>
-                    )}
-
-                    {/* Updated card for sending research to queue */}
-                    <div className="mb-4 p-4 border rounded">
+                    {(inAnalysis || inProcessing) && (
+                        <div className="mb-4 p-4 border rounded">
                         <h4 className="font-medium">Processar Pesquisa</h4>
                         <p className="text-sm text-muted-foreground">
                             Clique abaixo para enviar a pesquisa para processamento.
@@ -156,6 +151,13 @@ export default async function ResearchPage({ params }: Props) {
                             </Button>
                         </form>
                     </div>
+                    )}
+
+                    {isOpened && (
+                        <div className="mb-4 p-4 border-gray-300 bg-[#F8FAFC] dark:bg-sky-900 dark:border-sky-900 rounded">
+                            A pesquisa está aberta. Aguardando uma ação do usuário.
+                        </div>
+                    )}
 
                     {/* Card para download do arquivo */}
                     {asUpload && (
@@ -167,6 +169,19 @@ export default async function ResearchPage({ params }: Props) {
                             <Button asChild className="w-full">
                                 <a href={`/admin/researches/${research.id}/download`} target="_blank" rel="noopener noreferrer">
                                     Baixar Arquivo
+                                </a>
+                            </Button>
+                        </Card>
+                    )}
+                    {research.status === "FINISHED" && (
+                        <Card className="p-4 space-y-3 border rounded">
+                            <h4 className="font-medium">Relatório</h4>
+                            <p className="text-sm text-muted-foreground">
+                                Clique abaixo para acessar o relatório final da pesquisa.
+                            </p>
+                            <Button asChild className="w-full">
+                                <a href={`/admin/researches/${research.id}/reports`}>
+                                    Acessar Relatório
                                 </a>
                             </Button>
                         </Card>
