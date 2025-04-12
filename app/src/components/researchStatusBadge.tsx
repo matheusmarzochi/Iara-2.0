@@ -29,7 +29,7 @@ export const ResearchStatusBadge = ({ status }: ResearchStatusBadgeProps) => {
       </Badge>
     ),
     PROCESSING: (
-      <Badge className="whitespace-nowrap w-fit bg-orange-500 text-black">
+      <Badge className="whitespace-nowrap w-fit bg-orange-500 text-white">
         Processando
       </Badge>
     ),
