@@ -1,15 +1,12 @@
-import { clerkMiddleware, createRouteMatcher, clerkClient } from "@clerk/nextjs/server";
+import { clerkMiddleware, clerkClient } from "@clerk/nextjs/server";
 import { NextResponse } from "next/server";
-
-const isPrivateRoute = createRouteMatcher(["/dashboard", "/researches(.*)", "/admin(.*)"]);
 
 export default clerkMiddleware(async (auth, request) => {
   const url = new URL(request.url);
 
-  // Admin route check: if path starts with "/admin", enforce Admin role.
+  // Rota /admin: Apenas usuários com role "Admin" podem acessar
   if (url.pathname.startsWith("/admin")) {
     const { userId } = await auth();
-        
     if (!userId) {
       return NextResponse.redirect(new URL("/dashboard", request.url));
     }
@@ -18,11 +15,17 @@ export default clerkMiddleware(async (auth, request) => {
       return NextResponse.redirect(new URL("/dashboard", request.url));
     }
   }
-
-  if (isPrivateRoute(request)) {
-    console.log("Private route accessed:", url.pathname);
-    auth().protect();
+  
+  // Rotas /dashboard e /researches: Necessitam que o usuário esteja logado
+  if (url.pathname.startsWith("/dashboard") || url.pathname.startsWith("/researches")) {
+    const { userId } = await auth();
+    if (!userId) {
+      return NextResponse.redirect(new URL("/", request.url));
+    }
   }
+  
+  // Outras rotas (/dashboard, /researches e demais) são abertas para todos
+  return NextResponse.next();
 });
 
 export const config = {
