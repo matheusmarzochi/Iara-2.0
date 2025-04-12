@@ -1,16 +1,13 @@
-import { auth } from "@clerk/nextjs/server";
 import { and, eq, isNull } from "iara-shared/node_modules/drizzle-orm";
 import { notFound } from "next/navigation";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "~/components/ui/tabs";
 import { db } from "iara-shared/database";
 import {
   researches,
-  users,
   reports,
   type Report,
   type StrategyKeys,
   type ReportAwnser,
-  type Research,
 } from "iara-shared/database/schema";
 import {
   Accordion,
@@ -32,12 +29,6 @@ type Props = {
 };
 
 async function getResearchById({ id }: { id: string }) {
-  const { userId } = auth();
-
-  const user = db
-    .select({ id: users.id })
-    .from(users)
-    .where(eq(users.clerkId, userId as string));
 
   const [research] = await db
     .select({
@@ -46,7 +37,7 @@ async function getResearchById({ id }: { id: string }) {
       status: researches.status,
     })
     .from(researches)
-    .where(and(eq(researches.id, id), eq(researches.userId, user), isNull(researches.deletedAt) ))
+    .where(and(eq(researches.id, id), isNull(researches.deletedAt) ))
     .limit(1);
 
   return research;
