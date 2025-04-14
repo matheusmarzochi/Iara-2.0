@@ -8,6 +8,7 @@ import { eq } from "iara-shared/node_modules/drizzle-orm";
 import { researches, users } from "iara-shared/database/schema";
 import { auth } from "@clerk/nextjs/server";
 import upload from "iara-shared/storage/upload";
+import { sendNewResearchUploadNotification } from "iara-shared/discord";
 
 export async function uploadResearchFile(formData: FormData) {
   try {
@@ -32,7 +33,7 @@ export async function uploadResearchFile(formData: FormData) {
     // Get current user
     const { userId } = await auth();
     const user = await db
-        .select({ id: users.id })
+        .select({ id: users.id, email: users.email })
         .from(users)
         .where(eq(users.clerkId, userId as string))
         .then(result => result[0]);
@@ -76,6 +77,8 @@ export async function uploadResearchFile(formData: FormData) {
       .set({ uploadPath: objectName })
       .where(eq(researches.id, researchId));
     
+    await sendNewResearchUploadNotification(user.email, researchName, researchId);
+
     return {
       success: true,
       researchId,

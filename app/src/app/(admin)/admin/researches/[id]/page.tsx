@@ -41,7 +41,7 @@ async function getResearchById(id: string) {
         })
         .from(researches)
         .leftJoin(forms, eq(forms.researchId, researches.id))
-        .where(and(isNull(researches.deletedAt), eq(researches.id, id)))
+        .where(eq(researches.id, id))
         .limit(1)
         .groupBy(researches.id);
 

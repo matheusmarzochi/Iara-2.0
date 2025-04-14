@@ -6,6 +6,7 @@ import { questions, researches } from "iara-shared/database/schema";
 import { db } from "iara-shared/database";
 import { revalidatePath } from "next/cache";
 import { redirect } from "next/navigation";
+import { sendNewResearchNotification } from "iara-shared/discord";
 
 export const createResearchAction = actions
   .createServerAction()
@@ -29,6 +30,8 @@ export const createResearchAction = actions
         sequence: index + 1,
       })),
     );
+
+    await sendNewResearchNotification(ctx.user.email, input.title, research.id);
 
     revalidatePath("/dashboard", "page");
     redirect("/dashboard");
