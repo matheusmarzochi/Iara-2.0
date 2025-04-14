@@ -18,6 +18,7 @@ export interface ResearchItem {
     status: ResearchStatus;
     uploadPath: string | null;
     createdAt: Date;
+    deletedAt: Date | null;
     userEmail: string | null;
     questionsQuantity: number;
     answersQuantity: number;
@@ -71,6 +72,7 @@ export const researchList = async (filter: FilterData): Promise<ResearchListResp
             description: researches.description,
             status: researches.status,
             createdAt: researches.createdAt,
+            deletedAt: researches.deletedAt,
             uploadPath: researches.uploadPath,
             userEmail: users.email,
             questionsQuantity: countDistinct(questions.id),

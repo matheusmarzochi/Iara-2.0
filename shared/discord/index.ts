@@ -8,25 +8,25 @@ export async function sendNewUserNotification(email: string): Promise<void> {
 
 export async function sendNewResearchNotification(userEmail: string, researchName: string, researchId: string): Promise<void> {
     const researchLink = `${process.env.NEXT_PUBLIC_APP_URL}/admin/researches/${researchId}`;
-    const message = `:bulb: **Nova pesquisa criada!**\n**Usuário:** ${userEmail}\n**Pesquisa:** ${researchName}\n**Confira:** ${researchLink}`;
+    const message = `:bulb: **Nova pesquisa criada!**\n**Usuário:** ${userEmail}\n**Pesquisa:** ${researchName}\n**Confira:** [Ver Pesquisa](${researchLink})`;
     await sendMessage(message);
 }
 
 export async function sendResearchStatusUpdateNotification(userEmail: string, researchName: string, newStatus: Research["status"], researchId: string): Promise<void> {
     const researchLink = `${process.env.NEXT_PUBLIC_APP_URL}/admin/researches/${researchId}`;
-    const message = `:arrow_up: **Status da pesquisa alterado!**\n**Usuário:** ${userEmail}\n**Pesquisa:** ${researchName}\n**Novo Status:** ${newStatus}\n**Acesse:** ${researchLink}`;
+    const message = `:arrow_up: **Status da pesquisa alterado!**\n**Usuário:** ${userEmail}\n**Pesquisa:** ${researchName}\n**Novo Status:** ${newStatus}\n**Acesse:** [Ver Pesquisa](${researchLink})`;
     await sendMessage(message);
 }
 
 export async function sendNewResearchUploadNotification(userEmail: string, researchName: string, researchId: string): Promise<void> {
     const researchLink = `${process.env.NEXT_PUBLIC_APP_URL}/admin/researches/${researchId}`;
-    const message = `:inbox_tray: **Novo upload de arquivo!**\n**Usuário:** ${userEmail}\n**Pesquisa:** ${researchName}\n**Confira:** ${researchLink}`;
+    const message = `:inbox_tray: **Novo upload de arquivo!**\n**Usuário:** ${userEmail}\n**Pesquisa:** ${researchName}\n**Confira:** [Ver Pesquisa](${researchLink})`;
     await sendMessage(message);
 }
 
 export async function sendResearchDeletedNotification(userEmail: string, researchName: string, researchId: string): Promise<void> {
     const researchLink = `${process.env.NEXT_PUBLIC_APP_URL}/admin/researches/${researchId}`;
-    const message = `:wastebasket: **Pesquisa deletada!**\n**Usuário:** ${userEmail}\n**Pesquisa:** "${researchName}" foi removida.\n**Link:** ${researchLink}`;
+    const message = `:wastebasket: **Pesquisa deletada!**\n**Usuário:** ${userEmail}\n**Pesquisa:** "${researchName}" foi removida.\n**Link (contexto):** [Ver Detalhes](${researchLink})`;
     await sendMessage(message);
 }
 

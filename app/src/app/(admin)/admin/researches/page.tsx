@@ -4,7 +4,7 @@ import { useSearchParams } from "next/navigation";
 import type { Research } from "iara-shared/database/schema";
 import { researchList, type ResearchItem } from "./action"
 import { ResearchStatusBadge } from "~/components/researchStatusBadge";
-import { Paperclip } from "lucide-react";
+import { Paperclip, Trash2 } from "lucide-react";
 import Link from "next/link";
 
 type ResearchStatus = Research["status"];
@@ -41,7 +41,7 @@ export default function AdminResearchList() {
                 page,
                 limit,
             });
-            setResearchItems(data.items);
+            setResearchItems(data.items as ResearchItem[]);
             setTotalCount(data.total);
         };
 
@@ -114,15 +114,24 @@ export default function AdminResearchList() {
                                 <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-700 dark:text-gray-300">
                                     {new Date(research.createdAt).toLocaleDateString()}
                                 </td>
-                                <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-700 dark:text-gray-300">
-                                    {research.uploadPath ? (
-                                        <span className="mr-2" title="File Uploaded">
-                                            <Paperclip className="w-4 h-4 inline-block" />
-                                        </span>
-                                    ) : (
-                                        <span className="mr-2 inline-block w-4 h-4"/>
-                                    )}
+                                <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-700 dark:text-gray-300 flex justify-between items-center">
                                     <ResearchStatusBadge status={research.status} />
+                                    <div className="flex items-center space-x-2">
+                                        {research.uploadPath ? (
+                                            <span className="mr-2" title="File Uploaded">
+                                                <Paperclip className="w-4 h-4 inline-block" />
+                                            </span>
+                                        ) : (
+                                            <span className="mr-2 inline-block w-4 h-4" />
+                                        )}
+                                        {research.deletedAt ? (
+                                            <span className="mr-2 text-red-500" title={`Deleted at ${new Date(research.deletedAt).toLocaleString()}`}>
+                                                <Trash2 className="w-4 h-4 inline-block" />
+                                            </span>
+                                        ) : (
+                                            <span className="mr-2 inline-block w-4 h-4" />
+                                        )}
+                                    </div>
                                 </td>
                                 <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-700 dark:text-gray-300">{research.questionsQuantity}</td>
                                 <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-700 dark:text-gray-300">{research.answersQuantity}</td>
