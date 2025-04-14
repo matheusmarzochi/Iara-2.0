@@ -31,9 +31,15 @@ export async function sendResearchDeletedNotification(userEmail: string, researc
 }
 
 export async function sendMessage(message: string): Promise<void> {
+    // Check if Discord notifications are enabled
+    if (process.env.DISCORD_NOTIFICATIONS_ENABLED !== 'true') {
+        console.log("ℹ️ Discord notifications are disabled via DISCORD_NOTIFICATIONS_ENABLED env var.");
+        return; // Exit early if not enabled
+    }
+
     const webhookUrl = process.env.DISCORD_WEBHOOK_URL;
     if (!webhookUrl) {
-        console.error("❌ DISCORD_WEBHOOK_URL is not set in .env");
+        console.error("❌ DISCORD_WEBHOOK_URL is not set in .env, but notifications are enabled.");
         return; // Or throw an error if preferred
     }
 
