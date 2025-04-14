@@ -51,8 +51,6 @@ export const researchList = async (filter: FilterData): Promise<ResearchListResp
         conditions.push(ilike(users.email, `%${filter.email}%`));
     }
 
-    conditions.push(isNull(researches.deletedAt));
-
     const page = filter.page || 1;
     const limit = filter.limit || 10;
     const offset = (page - 1) * limit;
