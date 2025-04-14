@@ -10,7 +10,7 @@ import {
 import { auth } from "@clerk/nextjs/server";
 import { Button } from "~/components/ui/button";
 import Link from "next/link";
-import { ArrowLeftIcon, Search } from "lucide-react";
+import { ArrowLeftIcon, Search, Trash2 } from "lucide-react";
 import { ResearchStatusBadge } from "~/components/researchStatusBadge";
 import { Card } from "~/components/ui/card";
 import { processResearch } from "./action";
@@ -38,6 +38,7 @@ async function getResearchById(id: string) {
             forms: count(forms.id),
             createdAt: researches.createdAt,
             uploadPath: researches.uploadPath,
+            deletedAt: researches.deletedAt,
         })
         .from(researches)
         .leftJoin(forms, eq(forms.researchId, researches.id))
@@ -84,6 +85,13 @@ export default async function ResearchPage({ params }: Props) {
                         </h2>
 
                         <ResearchStatusBadge status={research.status} />
+                        {research.deletedAt ? (
+                            <span className="mb-2 text-red-500" title={`Deleted at ${new Date(research.deletedAt).toLocaleString()}`}>
+                                <Trash2 className="w-4 h-4 inline-block" />
+                            </span>
+                        ) : (
+                            <span className="mb-2 inline-block w-4 h-4" />
+                        )}
                     </div>
                 </div>
             </header>
@@ -120,6 +128,17 @@ export default async function ResearchPage({ params }: Props) {
                                 )}
                             </div>
                         </div>
+                        {research.deletedAt && (
+                            <div className="p-4 rounded-lg border-gray-300 bg-[#F8FAFC] dark:bg-sky-900 dark:border-sky-900">
+                                <p className="text-sm text-muted-foreground">Deletado em:</p>
+                                <p className="font-medium text-red-600 dark:text-red-300">
+                                    {formatters.date(research.deletedAt)}
+                                </p>
+                                <p className="text-sm text-muted-foreground">
+                                    (Há {relativeTime(research.deletedAt)})
+                                </p>
+                            </div>
+                        )}
                     </section>
                     {/* Atualizar dados da pesquisa (Quetões e formularios) */}
                     <section className="space-y-4 mt-6">
