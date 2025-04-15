@@ -1,23 +1,27 @@
 "use client";
-import { useEffect, useState } from "react";
+import { useEffect, useState, useMemo } from "react";
 import { useSearchParams } from "next/navigation";
 import type { Research } from "iara-shared/database/schema";
-import { researchList, type ResearchItem } from "./action"
+import { researchList, type ResearchItem } from "./action";
 import { ResearchStatusBadge } from "~/components/researchStatusBadge";
 import { Paperclip, Trash2 } from "lucide-react";
 import Link from "next/link";
 
-type ResearchStatus = Research["status"];
+type ResearchStatusType = Research["status"];
+type SortByType = 'userEmail' | 'title' | 'createdAt' | 'status' | 'questionsQuantity' | 'answersQuantity';
+type SortOrderType = 'asc' | 'desc';
 
 export default function AdminResearchList() {
     const searchParams = useSearchParams();
     const initialEmail = searchParams.get("email") || "";
     const [emailFilter, setEmailFilter] = useState(initialEmail);
     const [titleFilter, setTitleFilter] = useState("");
-    const [statusFilter, setStatusFilter] = useState<ResearchStatus | "">("");
+    const [statusFilter, setStatusFilter] = useState<ResearchStatusType | "">("");
     const [currentPage, setCurrentPage] = useState(1);
     const [totalCount, setTotalCount] = useState(0);
     const [researchItems, setResearchItems] = useState<ResearchItem[]>([]);
+    const [sortBy, setSortBy] = useState<SortByType>('createdAt');
+    const [sortOrder, setSortOrder] = useState<SortOrderType>('desc');
     const pageSize = 10;
 
     useEffect(() => {
@@ -27,12 +31,16 @@ export default function AdminResearchList() {
             status,
             page,
             limit,
+            sortBy,
+            sortOrder
         }: {
             email: string;
             title: string;
-            status: ResearchStatus | "";
+            status: ResearchStatusType | "";
             page: number;
             limit: number;
+            sortBy: SortByType;
+            sortOrder: SortOrderType;
         }) => {
             const data = await researchList({
                 email,
@@ -40,6 +48,8 @@ export default function AdminResearchList() {
                 status,
                 page,
                 limit,
+                sortBy,
+                sortOrder,
             });
             setResearchItems(data.items as ResearchItem[]);
             setTotalCount(data.total);
@@ -51,13 +61,38 @@ export default function AdminResearchList() {
             status: statusFilter,
             page: currentPage,
             limit: pageSize,
+            sortBy,
+            sortOrder,
         });
-    }, [currentPage, emailFilter, titleFilter, statusFilter]);
+    }, [currentPage, emailFilter, titleFilter, statusFilter, sortBy, sortOrder]);
 
     const handleFilter = (e: React.FormEvent) => {
         e.preventDefault();
         setCurrentPage(1); // reset page; fetchResearches will be auto-triggered by useEffect
     };
+
+    const handleSort = (column: SortByType) => {
+        if (sortBy === column) {
+            setSortOrder(sortOrder === 'asc' ? 'desc' : 'asc');
+        } else {
+            setSortBy(column);
+            setSortOrder('asc'); // Default to ascending when changing column
+        }
+        setCurrentPage(1); // Reset to first page on sort change
+    };
+
+    const SortArrow = ({ column }: { column: SortByType }) => {
+        if (sortBy !== column) return null;
+        return sortOrder === 'asc' ? ' ▲' : ' ▼';
+    };
+
+    const researchStatusOptions = useMemo(() => [
+        { value: "", label: "Todas" },
+        { value: "OPENED", label: "Aberta" },
+        { value: "ANALYSIS", label: "Em Analise" },
+        { value: "PROCESSING", label: "Processando" },
+        { value: "FINISHED", label: "Encerrada" },
+    ], []);
 
     return (
         <div className="p-8">
@@ -79,15 +114,14 @@ export default function AdminResearchList() {
                 />
                 <select
                     value={statusFilter}
-                    onChange={(e) => { setStatusFilter(e.target.value as ResearchStatus | ""); setCurrentPage(1); }}
+                    onChange={(e) => { setStatusFilter(e.target.value as ResearchStatusType | ""); setCurrentPage(1); }}
                     className="border rounded p-2 dark:bg-gray-700 dark:border-gray-600 dark:text-white"
                 >
-                    <option value="">Qualquer Status</option>
-                    <option value="OPENED">Aberta</option>
-                    <option value="ANALYSIS">Em Análise</option>
-                    <option value="CREATED">Aberta</option>
-                    <option value="PROCESSING">Processando</option>
-                    <option value="FINISHED">Encerrada</option>
+                    {researchStatusOptions.map(option => (
+                        <option key={option.value} value={option.value}>
+                            {option.label}
+                        </option>
+                    ))}
                 </select>
                 <button type="submit" className="bg-sky-700 text-white px-4 py-2 rounded hover:bg-sky-900 dark:bg-sky-600 dark:hover:bg-sky-700">
                     Filter
@@ -97,12 +131,42 @@ export default function AdminResearchList() {
                 <table className="min-w-full divide-y divide-gray-200 dark:divide-gray-700">
                     <thead className="bg-gray-50 dark:bg-gray-800">
                         <tr>
-                            <th className="px-6 py-3 text-left text-xs font-medium text-gray-700 uppercase tracking-wider dark:text-gray-200">Owner Email</th>
-                            <th className="px-6 py-3 text-left text-xs font-medium text-gray-700 uppercase tracking-wider dark:text-gray-200">Research Title</th>
-                            <th className="px-6 py-3 text-left text-xs font-medium text-gray-700 uppercase tracking-wider dark:text-gray-200">Created At</th>
-                            <th className="px-6 py-3 text-left text-xs font-medium text-gray-700 uppercase tracking-wider dark:text-gray-200">Status</th>
-                            <th className="px-6 py-3 text-left text-xs font-medium text-gray-700 uppercase tracking-wider dark:text-gray-200">Questions</th>
-                            <th className="px-6 py-3 text-left text-xs font-medium text-gray-700 uppercase tracking-wider dark:text-gray-200">Answers</th>
+                            <th className="px-6 py-3 text-left text-xs font-medium text-gray-700 uppercase tracking-wider dark:text-gray-200">
+                                <button onClick={() => handleSort('userEmail')} className="flex items-center space-x-1 hover:text-gray-500 dark:hover:text-gray-400">
+                                    <span>Owner Email</span>
+                                    <SortArrow column="userEmail" />
+                                </button>
+                            </th>
+                            <th className="px-6 py-3 text-left text-xs font-medium text-gray-700 uppercase tracking-wider dark:text-gray-200">
+                                <button onClick={() => handleSort('title')} className="flex items-center space-x-1 hover:text-gray-500 dark:hover:text-gray-400">
+                                    <span>Research Title</span>
+                                    <SortArrow column="title" />
+                                </button>
+                            </th>
+                            <th className="px-6 py-3 text-left text-xs font-medium text-gray-700 uppercase tracking-wider dark:text-gray-200">
+                                <button onClick={() => handleSort('createdAt')} className="flex items-center space-x-1 hover:text-gray-500 dark:hover:text-gray-400">
+                                    <span>Created At</span>
+                                    <SortArrow column="createdAt" />
+                                </button>
+                            </th>
+                            <th className="px-6 py-3 text-left text-xs font-medium text-gray-700 uppercase tracking-wider dark:text-gray-200">
+                                <button onClick={() => handleSort('status')} className="flex items-center space-x-1 hover:text-gray-500 dark:hover:text-gray-400">
+                                    <span>Status</span>
+                                    <SortArrow column="status" />
+                                </button>
+                            </th>
+                            <th className="px-6 py-3 text-left text-xs font-medium text-gray-700 uppercase tracking-wider dark:text-gray-200">
+                                <button onClick={() => handleSort('questionsQuantity')} className="flex items-center space-x-1 hover:text-gray-500 dark:hover:text-gray-400">
+                                    <span>Questions</span>
+                                    <SortArrow column="questionsQuantity" />
+                                </button>
+                            </th>
+                            <th className="px-6 py-3 text-left text-xs font-medium text-gray-700 uppercase tracking-wider dark:text-gray-200">
+                                <button onClick={() => handleSort('answersQuantity')} className="flex items-center space-x-1 hover:text-gray-500 dark:hover:text-gray-400">
+                                    <span>Answers</span>
+                                    <SortArrow column="answersQuantity" />
+                                </button>
+                            </th>
                             <th className="px-6 py-3 text-left text-xs font-medium text-gray-700 uppercase tracking-wider dark:text-gray-200">Access</th>
                         </tr>
                     </thead>
