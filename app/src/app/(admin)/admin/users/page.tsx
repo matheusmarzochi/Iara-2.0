@@ -61,7 +61,6 @@ export default function AdminUserList() {
 			setSortBy(column);
 			setSortOrder('asc');
 		}
-		setCurrentPage(1);
 	};
 
 	const SortArrow = ({ column }: { column: SortByType }) => {
@@ -89,19 +88,19 @@ export default function AdminUserList() {
 					<thead className="bg-gray-50 dark:bg-gray-800">
 						<tr>
 							<th className="px-6 py-3 text-left text-xs font-medium text-gray-700 uppercase tracking-wider dark:text-gray-200">
-								<button onClick={() => handleSort('email')} className="flex items-center space-x-1 hover:text-gray-500 dark:hover:text-gray-400">
+								<button type="button" onClick={() => handleSort('email')} className="flex items-center space-x-1 hover:text-gray-500 dark:hover:text-gray-400">
 									<span>Email</span>
 									<SortArrow column="email" />
 								</button>
 							</th>
 							<th className="px-6 py-3 text-left text-xs font-medium text-gray-700 uppercase tracking-wider dark:text-gray-200">
-								<button onClick={() => handleSort('researchCount')} className="flex items-center space-x-1 hover:text-gray-500 dark:hover:text-gray-400">
+								<button type="button" onClick={() => handleSort('researchCount')} className="flex items-center space-x-1 hover:text-gray-500 dark:hover:text-gray-400">
 									<span>Research Count</span>
 									<SortArrow column="researchCount" />
 								</button>
 							</th>
 							<th className="px-6 py-3 text-left text-xs font-medium text-gray-700 uppercase tracking-wider dark:text-gray-200">
-								<button onClick={() => handleSort('createdAt')} className="flex items-center space-x-1 hover:text-gray-500 dark:hover:text-gray-400">
+								<button type="button" onClick={() => handleSort('createdAt')} className="flex items-center space-x-1 hover:text-gray-500 dark:hover:text-gray-400">
 									<span>Created At</span>
 									<SortArrow column="createdAt" />
 								</button>

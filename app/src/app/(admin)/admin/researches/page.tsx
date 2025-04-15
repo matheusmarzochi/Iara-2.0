@@ -68,7 +68,7 @@ export default function AdminResearchList() {
 
     const handleFilter = (e: React.FormEvent) => {
         e.preventDefault();
-        setCurrentPage(1); // reset page; fetchResearches will be auto-triggered by useEffect
+        setCurrentPage(1);
     };
 
     const handleSort = (column: SortByType) => {
@@ -78,7 +78,6 @@ export default function AdminResearchList() {
             setSortBy(column);
             setSortOrder('asc'); // Default to ascending when changing column
         }
-        setCurrentPage(1); // Reset to first page on sort change
     };
 
     const SortArrow = ({ column }: { column: SortByType }) => {
@@ -132,37 +131,37 @@ export default function AdminResearchList() {
                     <thead className="bg-gray-50 dark:bg-gray-800">
                         <tr>
                             <th className="px-6 py-3 text-left text-xs font-medium text-gray-700 uppercase tracking-wider dark:text-gray-200">
-                                <button onClick={() => handleSort('userEmail')} className="flex items-center space-x-1 hover:text-gray-500 dark:hover:text-gray-400">
+                                <button type="button" onClick={() => handleSort('userEmail')} className="flex items-center space-x-1 hover:text-gray-500 dark:hover:text-gray-400">
                                     <span>Owner Email</span>
                                     <SortArrow column="userEmail" />
                                 </button>
                             </th>
                             <th className="px-6 py-3 text-left text-xs font-medium text-gray-700 uppercase tracking-wider dark:text-gray-200">
-                                <button onClick={() => handleSort('title')} className="flex items-center space-x-1 hover:text-gray-500 dark:hover:text-gray-400">
+                                <button type="button" onClick={() => handleSort('title')} className="flex items-center space-x-1 hover:text-gray-500 dark:hover:text-gray-400">
                                     <span>Research Title</span>
                                     <SortArrow column="title" />
                                 </button>
                             </th>
                             <th className="px-6 py-3 text-left text-xs font-medium text-gray-700 uppercase tracking-wider dark:text-gray-200">
-                                <button onClick={() => handleSort('createdAt')} className="flex items-center space-x-1 hover:text-gray-500 dark:hover:text-gray-400">
+                                <button type="button" onClick={() => handleSort('createdAt')} className="flex items-center space-x-1 hover:text-gray-500 dark:hover:text-gray-400">
                                     <span>Created At</span>
                                     <SortArrow column="createdAt" />
                                 </button>
                             </th>
                             <th className="px-6 py-3 text-left text-xs font-medium text-gray-700 uppercase tracking-wider dark:text-gray-200">
-                                <button onClick={() => handleSort('status')} className="flex items-center space-x-1 hover:text-gray-500 dark:hover:text-gray-400">
+                                <button type="button" onClick={() => handleSort('status')} className="flex items-center space-x-1 hover:text-gray-500 dark:hover:text-gray-400">
                                     <span>Status</span>
                                     <SortArrow column="status" />
                                 </button>
                             </th>
                             <th className="px-6 py-3 text-left text-xs font-medium text-gray-700 uppercase tracking-wider dark:text-gray-200">
-                                <button onClick={() => handleSort('questionsQuantity')} className="flex items-center space-x-1 hover:text-gray-500 dark:hover:text-gray-400">
+                                <button type="button" onClick={() => handleSort('questionsQuantity')} className="flex items-center space-x-1 hover:text-gray-500 dark:hover:text-gray-400">
                                     <span>Questions</span>
                                     <SortArrow column="questionsQuantity" />
                                 </button>
                             </th>
                             <th className="px-6 py-3 text-left text-xs font-medium text-gray-700 uppercase tracking-wider dark:text-gray-200">
-                                <button onClick={() => handleSort('answersQuantity')} className="flex items-center space-x-1 hover:text-gray-500 dark:hover:text-gray-400">
+                                <button type="button" onClick={() => handleSort('answersQuantity')} className="flex items-center space-x-1 hover:text-gray-500 dark:hover:text-gray-400">
                                     <span>Answers</span>
                                     <SortArrow column="answersQuantity" />
                                 </button>

@@ -69,7 +69,6 @@ export const userList = async (filter: FilterData): Promise<UserListResponse> =>
 		case 'researchCount':
 			orderedQuery = baseQuery.orderBy(orderDirection(countDistinct(researches.id)));
 			break;
-		case 'createdAt':
 		default:
 			orderedQuery = baseQuery.orderBy(orderDirection(users.createdAt));
 			break;
