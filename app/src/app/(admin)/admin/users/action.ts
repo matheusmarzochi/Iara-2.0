@@ -1,5 +1,5 @@
 "use server"
-import { ilike, eq, and, countDistinct, isNull } from "iara-shared/node_modules/drizzle-orm";
+import { ilike, eq, and, countDistinct, isNull, asc, desc } from "iara-shared/node_modules/drizzle-orm";
 import { db } from "iara-shared/database";
 import { users, researches } from "iara-shared/database/schema";
 
@@ -19,6 +19,8 @@ type FilterData = {
 	email: string;
 	page?: number;
 	limit?: number;
+	sortBy?: 'email' | 'researchCount' | 'createdAt';
+	sortOrder?: 'asc' | 'desc';
 }
 
 export const userList = async (filter: FilterData): Promise<UserListResponse> => {
@@ -26,21 +28,21 @@ export const userList = async (filter: FilterData): Promise<UserListResponse> =>
 	if (filter.email) {
 		conditions.push(ilike(users.email, `%${filter.email}%`));
 	}
-	// Optionally add a condition if soft-deletes are implemented, e.g. isNull(users.deletedAt)
 
 	const page = filter.page || 1;
 	const limit = filter.limit || 10;
 	const offset = (page - 1) * limit;
+	const sortBy = filter.sortBy || 'createdAt';
+	const sortOrder = filter.sortOrder || 'desc';
 
-	// Count total users matching the filter
+
 	const countResult = await db
 		.select({ total: countDistinct(users.id) })
 		.from(users)
 		.where(and(...conditions));
 	const total = countResult[0]?.total ?? 0;
 
-	// Query users with aggregation count (researchCount)
-	const query = await db
+	const baseQuery = db
 		.select({
 			id: users.id,
 			email: users.email,
@@ -52,13 +54,28 @@ export const userList = async (filter: FilterData): Promise<UserListResponse> =>
 			researches,
 			and(
 				eq(researches.userId, users.id),
-				isNull(researches.deletedAt) // only count researches not soft-deleted
 			)
 		)
 		.where(and(...conditions))
-		.groupBy(users.id, users.email, users.createdAt)
-		.limit(limit)
-		.offset(offset);
+		.groupBy(users.id, users.email, users.createdAt);
+
+	let orderedQuery;
+	const orderDirection = sortOrder === 'asc' ? asc : desc;
+
+	switch (sortBy) {
+		case 'email':
+			orderedQuery = baseQuery.orderBy(orderDirection(users.email));
+			break;
+		case 'researchCount':
+			orderedQuery = baseQuery.orderBy(orderDirection(countDistinct(researches.id)));
+			break;
+		case 'createdAt':
+		default:
+			orderedQuery = baseQuery.orderBy(orderDirection(users.createdAt));
+			break;
+	}
+
+	const query = await orderedQuery.limit(limit).offset(offset);
 
 	return { items: query, total };
 }
