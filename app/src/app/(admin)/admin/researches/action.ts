@@ -1,5 +1,5 @@
 "use server"
-import { ilike, eq, and, countDistinct, isNull } from "iara-shared/node_modules/drizzle-orm";
+import { ilike, eq, and, countDistinct, isNull, asc, desc } from "iara-shared/node_modules/drizzle-orm";
 import { db } from "iara-shared/database";
 import {
     type Research,
@@ -35,6 +35,8 @@ type FilterData = {
     status: ResearchStatus | "";
     page?: number;
     limit?: number;
+    sortBy?: 'userEmail' | 'title' | 'createdAt' | 'status' | 'questionsQuantity' | 'answersQuantity';
+    sortOrder?: 'asc' | 'desc';
 }
 
 export const researchList = async (filter: FilterData): Promise<ResearchListResponse> => {
@@ -55,6 +57,8 @@ export const researchList = async (filter: FilterData): Promise<ResearchListResp
     const page = filter.page || 1;
     const limit = filter.limit || 10;
     const offset = (page - 1) * limit;
+    const sortBy = filter.sortBy || 'createdAt';
+    const sortOrder = filter.sortOrder || 'desc';
 
     // Count query to get the total researches matching the filter
     const countResult = await db
@@ -65,7 +69,7 @@ export const researchList = async (filter: FilterData): Promise<ResearchListResp
     const total = countResult[0]?.total ?? 0;
 
     // Build the query with left joins and aggregation.
-    const query = await db
+    const baseQuery = db
         .select({
             researchId: researches.id,
             title: researches.title,
@@ -83,7 +87,34 @@ export const researchList = async (filter: FilterData): Promise<ResearchListResp
         .leftJoin(questions, eq(questions.researchId, researches.id))
         .leftJoin(forms, eq(forms.researchId, researches.id))
         .where(and(...conditions))
-        .groupBy(researches.id, researches.title, researches.description, researches.status, researches.createdAt, users.email)
+        .groupBy(researches.id, researches.title, researches.description, researches.status, researches.createdAt, users.email);
+
+    let orderedQuery;
+    const orderDirection = sortOrder === 'asc' ? asc : desc;
+
+    // Apply sorting based on the sortBy parameter
+    switch (sortBy) {
+        case 'userEmail':
+            orderedQuery = baseQuery.orderBy(orderDirection(users.email));
+            break;
+        case 'title':
+            orderedQuery = baseQuery.orderBy(orderDirection(researches.title));
+            break;
+        case 'status':
+            orderedQuery = baseQuery.orderBy(orderDirection(researches.status));
+            break;
+        case 'questionsQuantity':
+            orderedQuery = baseQuery.orderBy(orderDirection(countDistinct(questions.id)));
+            break;
+        case 'answersQuantity':
+            orderedQuery = baseQuery.orderBy(orderDirection(countDistinct(forms.id)));
+            break;
+        default:
+            orderedQuery = baseQuery.orderBy(orderDirection(researches.createdAt));
+            break;
+    }
+
+    const query = await orderedQuery
         .limit(limit)
         .offset(offset);
 

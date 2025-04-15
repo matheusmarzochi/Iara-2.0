@@ -3,27 +3,38 @@ import { useEffect, useState } from "react";
 import Link from "next/link";
 import { userList, type UserItem } from "./action";
 
+type SortByType = 'email' | 'researchCount' | 'createdAt';
+type SortOrderType = 'asc' | 'desc';
+
 export default function AdminUserList() {
 	const [usersData, setUsersData] = useState<UserItem[]>([]);
 	const [emailFilter, setEmailFilter] = useState("");
 	const [currentPage, setCurrentPage] = useState(1);
 	const [totalCount, setTotalCount] = useState(0);
+	const [sortBy, setSortBy] = useState<SortByType>('createdAt');
+	const [sortOrder, setSortOrder] = useState<SortOrderType>('desc');
 	const pageSize = 10;
 
 	useEffect(() => {
 		const fetchUsers = async ({
 			email,
 			page,
-			limit
+			limit,
+			sortBy,
+			sortOrder
 		}: {
 			email: string;
 			page: number;
 			limit: number;
+			sortBy: SortByType;
+			sortOrder: SortOrderType;
 		}) => {
 			const data = await userList({
 				email,
 				page,
 				limit,
+				sortBy,
+				sortOrder,
 			});
 			setUsersData(data.items);
 			setTotalCount(data.total);
@@ -33,12 +44,28 @@ export default function AdminUserList() {
 			email: emailFilter,
 			page: currentPage,
 			limit: pageSize,
+			sortBy,
+			sortOrder,
 		});
-	}, [emailFilter, currentPage]);
+	}, [emailFilter, currentPage, sortBy, sortOrder]);
 
 	const handleFilter = (e: React.FormEvent) => {
 		e.preventDefault();
 		setCurrentPage(1);
+	};
+
+	const handleSort = (column: SortByType) => {
+		if (sortBy === column) {
+			setSortOrder(sortOrder === 'asc' ? 'desc' : 'asc');
+		} else {
+			setSortBy(column);
+			setSortOrder('asc');
+		}
+	};
+
+	const SortArrow = ({ column }: { column: SortByType }) => {
+		if (sortBy !== column) return null;
+		return sortOrder === 'asc' ? ' ▲' : ' ▼';
 	};
 
 	return (
@@ -60,9 +87,24 @@ export default function AdminUserList() {
 				<table className="min-w-full divide-y divide-gray-200 dark:divide-gray-700">
 					<thead className="bg-gray-50 dark:bg-gray-800">
 						<tr>
-							<th className="px-6 py-3 text-left text-xs font-medium text-gray-700 uppercase tracking-wider dark:text-gray-200">Email</th>
-							<th className="px-6 py-3 text-left text-xs font-medium text-gray-700 uppercase tracking-wider dark:text-gray-200">Research Count</th>
-							<th className="px-6 py-3 text-left text-xs font-medium text-gray-700 uppercase tracking-wider dark:text-gray-200">Created At</th>
+							<th className="px-6 py-3 text-left text-xs font-medium text-gray-700 uppercase tracking-wider dark:text-gray-200">
+								<button type="button" onClick={() => handleSort('email')} className="flex items-center space-x-1 hover:text-gray-500 dark:hover:text-gray-400">
+									<span>Email</span>
+									<SortArrow column="email" />
+								</button>
+							</th>
+							<th className="px-6 py-3 text-left text-xs font-medium text-gray-700 uppercase tracking-wider dark:text-gray-200">
+								<button type="button" onClick={() => handleSort('researchCount')} className="flex items-center space-x-1 hover:text-gray-500 dark:hover:text-gray-400">
+									<span>Research Count</span>
+									<SortArrow column="researchCount" />
+								</button>
+							</th>
+							<th className="px-6 py-3 text-left text-xs font-medium text-gray-700 uppercase tracking-wider dark:text-gray-200">
+								<button type="button" onClick={() => handleSort('createdAt')} className="flex items-center space-x-1 hover:text-gray-500 dark:hover:text-gray-400">
+									<span>Created At</span>
+									<SortArrow column="createdAt" />
+								</button>
+							</th>
 							<th className="px-6 py-3 text-left text-xs font-medium text-gray-700 uppercase tracking-wider dark:text-gray-200">Access</th>
 						</tr>
 					</thead>
