@@ -67,6 +67,19 @@ export default function IaraLandingPage() {
               {t.nav.contact}
             </Link>
             */}
+            <SignedOut>
+              <SignInButton>
+                <Button variant="outline" size="sm">{t.hero.signIn}</Button>
+              </SignInButton>
+              <SignUpButton>
+                <Button size="sm">{t.hero.signUp}</Button>
+              </SignUpButton>
+            </SignedOut>
+            <SignedIn>
+              <Link href="/dashboard">
+                <Button variant="outline" size="sm">{t.hero.dashboard}</Button>
+              </Link>
+            </SignedIn>
             <Button
               onClick={toggleTheme}
               variant={"link"}
@@ -161,6 +174,21 @@ export default function IaraLandingPage() {
               >
                 {t.nav.contact}
               </Link>
+              <div className="flex flex-col space-y-2 pt-4 border-t">
+                <SignedOut>
+                  <SignInButton>
+                    <Button variant="outline" onClick={() => setIsMenuOpen(false)}>{t.hero.signIn}</Button>
+                  </SignInButton>
+                  <SignUpButton>
+                    <Button onClick={() => setIsMenuOpen(false)}>{t.hero.signUp}</Button>
+                  </SignUpButton>
+                </SignedOut>
+                <SignedIn>
+                  <Link href="/dashboard">
+                    <Button variant="outline" onClick={() => setIsMenuOpen(false)} className="w-full">{t.hero.dashboard}</Button>
+                  </Link>
+                </SignedIn>
+              </div>
             </nav>
           </div>
         )}
