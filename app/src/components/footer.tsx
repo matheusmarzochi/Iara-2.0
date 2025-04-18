@@ -84,7 +84,7 @@ export default function IaraNavbar({
                                 </Link>
                             </li>
                             <li>
-                                <Link href="#" className="text-muted-foreground hover:text-foreground">
+                                <Link href="/f4p-guide" className="text-muted-foreground hover:text-foreground">
                                     {t.footer.f4pGuide}
                                 </Link>
                             </li>
@@ -107,7 +107,7 @@ export default function IaraNavbar({
                                 <span className="text-muted-foreground">{t.footer.email}</span>
                             </li>
                             <li className="flex items-start gap-2">
-                                <MapPin className="lg:w-9 lg:h-9 md:h-7 md:w-7 sm:w-7 ml-1 text-muted-foreground" />
+                                <MapPin className="h-5 w-8 text-muted-foreground" />
                                 <span className="text-muted-foreground">{t.footer.address}</span>
                             </li>
                         </ul>
