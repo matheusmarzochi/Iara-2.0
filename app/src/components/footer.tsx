@@ -49,12 +49,12 @@ export default function IaraNavbar({
                         <h3 className="text-sm font-medium">{t.footer.company}</h3>
                         <ul className="space-y-2 text-sm">
                             <li>
-                                <Link href="#" className="text-muted-foreground hover:text-foreground">
+                                <Link href="/about" className="text-muted-foreground hover:text-foreground">
                                     {t.footer.aboutUs}
                                 </Link>
                             </li>
                             <li>
-                                <Link href="/careers" className="text-muted-foreground hover:text-foreground">
+                                <Link href="#" className="text-muted-foreground hover:text-foreground">
                                     {t.footer.careers}
                                 </Link>
                             </li>
