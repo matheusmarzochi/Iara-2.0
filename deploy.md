@@ -1,4 +1,4 @@
-2025-04-12 #1 - SEO / Robots
+2025-04-18 #2 - SEO / Robots, F4P Guode
 2025-04-17 #1 - Careers Page
 2025-04-15 #1
 2025-04-13 #2
