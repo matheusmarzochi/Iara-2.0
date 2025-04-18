@@ -84,7 +84,7 @@ services:
     build: 
       context: .
       dockerfile: ./app/Dockerfile
-    image: iara-app
+    image: iara-drizzle
     container_name: iara-drizzle-studio
     depends_on:
       postgres:
