@@ -12,7 +12,7 @@ export const texts = {
     
     // Hero Section
     hero: {
-      title: "Understand What Truly Drives Your Users",
+      title: "Understand what truly drives your users",
       description: "Iara uses the F4P method to pinpoint the core reasons behind product choice, helping you align with genuine user needs and drive success.",
       getStarted: "Get Started",
       signIn: "Sign In",
@@ -25,7 +25,7 @@ export const texts = {
     about: {
       title: "About Iara",
       description: "Iara is a pioneering project that leverages the Fit for Purpose (F4P) method to transform how companies understand their users.",
-      f4pMethodTitle: "The F4P Method",
+      f4pMethodTitle: "The F4P method",
       f4pMethodDesc1: "Unlike traditional research methods that focus on features or satisfaction scores, the F4P method digs deeper to uncover the true purposes behind why users choose your product.",
       f4pMethodDesc2: "By understanding these core motivations, you can align your product development with what truly matters to your users, creating solutions that genuinely fit their purposes.",
       altText: "F4P Method Illustration",
@@ -33,7 +33,7 @@ export const texts = {
     
     // How It Works Section
     howItWorks: {
-      title: "How It Works",
+      title: "How it works",
       description: "The F4P method follows a structured approach to reveal what truly drives your users' decisions.",
       step1Title: "Feedback Collection",
       step1Desc: "Utilize the F4P Card to capture the top three reasons behind a user's product choice, along with a satisfaction score.",
@@ -47,7 +47,7 @@ export const texts = {
     
     // Benefits Section
     benefits: {
-      title: "Benefits & Resources",
+      title: "Benefits & resources",
       description: "Discover how Iara and the F4P method can transform your product development process.",
       keyBenefitsTitle: "Key Benefits",
       benefit1: "Enhanced understanding of user motivations and needs",
@@ -64,7 +64,7 @@ export const texts = {
     
     // Testimonials Section
     testimonials: {
-      title: "What Our Clients Say",
+      title: "What our clients say",
       description: "Hear from companies that have transformed their products with Iara.",
       testimonial1: {
         text: "The F4P method revealed insights about our users that we never would have discovered through traditional surveys. It completely changed our product roadmap for the better.",
@@ -85,7 +85,7 @@ export const texts = {
     
     // CTA Section
     cta: {
-      title: "Experience Iara and Transform Your Product",
+      title: "Experience Iara and transform your product",
       description: "Ready to discover the true purposes that drive your users? Get in touch with us today.",
       nameLabel: "Name",
       namePlaceholder: "Enter your name",
@@ -113,8 +113,8 @@ export const texts = {
       webinars: "Webinars",
       contact: "Contact",
       phone: "+1 (555) 123-4567",
-      email: "info@iara-f4p.com",
-      address: "123 Innovation Street, San Francisco, CA 94103",
+      email: "iara.research.app@gmail.com",
+      address: "São Paulo, SP, Brazil",
       copyright: "All rights reserved.",
       privacy: "Privacy Policy",
       terms: "Terms of Service",
@@ -133,7 +133,7 @@ export const texts = {
     brand: "Iara",
     nav: {
       about: "Sobre",
-      howItWorks: "Como Funciona",
+      howItWorks: "Como funciona",
       benefits: "Benefícios",
       testimonials: "Depoimentos",
       contact: "Contato",
@@ -141,7 +141,7 @@ export const texts = {
     
     // Hero Section
     hero: {
-      title: "Entenda O Que Realmente Motiva Seus Usuários",
+      title: "Entenda o que realmente motiva seus usuários",
       description: "Iara utiliza o método F4P para identificar os principais motivos por trás da escolha do produto, ajudando você a alinhar-se com as necessidades reais dos usuários e impulsionar o sucesso.",
       getStarted: "Começar",
       learnMore: "Saiba Mais",
@@ -154,15 +154,15 @@ export const texts = {
     about: {
       title: "Sobre a Iara",
       description: "Iara é um projeto pioneiro que utiliza o método Fit for Purpose (F4P) para transformar como as empresas entendem seus usuários.",
-      f4pMethodTitle: "O Método F4P",
+      f4pMethodTitle: "O método F4P",
       f4pMethodDesc1: "Diferente dos métodos tradicionais de pesquisa que se concentram em recursos ou pontuações de satisfação, o método F4P vai mais fundo para descobrir os verdadeiros propósitos por trás da escolha dos usuários pelo seu produto.",
       f4pMethodDesc2: "Ao entender essas motivações centrais, você pode alinhar o desenvolvimento do seu produto com o que realmente importa para seus usuários, criando soluções que se adequam genuinamente aos seus propósitos.",
-      altText: "Ilustração do Método F4P",
+      altText: "Ilustração do método F4P",
     },
     
     // How It Works Section
     howItWorks: {
-      title: "Como Funciona",
+      title: "Como funciona",
       description: "O método F4P segue uma abordagem estruturada para revelar o que realmente impulsiona as decisões dos seus usuários.",
       step1Title: "Coleta de Feedback",
       step1Desc: "Utilize o Cartão F4P para capturar os três principais motivos por trás da escolha do produto pelo usuário, junto com uma pontuação de satisfação.",
@@ -176,7 +176,7 @@ export const texts = {
     
     // Benefits Section
     benefits: {
-      title: "Benefícios e Recursos",
+      title: "Benefícios e recursos",
       description: "Descubra como a Iara e o método F4P podem transformar seu processo de desenvolvimento de produto.",
       keyBenefitsTitle: "Principais Benefícios",
       benefit1: "Melhor compreensão das motivações e necessidades dos usuários",
@@ -193,7 +193,7 @@ export const texts = {
     
     // Testimonials Section
     testimonials: {
-      title: "O Que Nossos Clientes Dizem",
+      title: "O que nossos clientes dizem",
       description: "Ouça empresas que transformaram seus produtos com a Iara.",
       testimonial1: {
         text: "O método F4P revelou insights sobre nossos usuários que nunca teríamos descoberto por meio de pesquisas tradicionais. Ele mudou completamente nosso roteiro de produto para melhor.",
@@ -214,7 +214,7 @@ export const texts = {
     
     // CTA Section
     cta: {
-      title: "Experimente a Iara e Transforme Seu Produto",
+      title: "Experimente a Iara e transforme seu produto",
       description: "Pronto para descobrir os verdadeiros propósitos que motivam seus usuários? Entre em contato conosco hoje.",
       nameLabel: "Nome",
       namePlaceholder: "Digite seu nome",
@@ -229,7 +229,7 @@ export const texts = {
     
     // Footer
     footer: {
-      tagline: "Descobrindo o Propósito Que Impulsiona Seu Produto",
+      tagline: "Descobrindo o propósito que impulsiona seu produto",
       company: "Empresa",
       aboutUs: "Sobre Nós",
       careers: "Carreiras",
@@ -242,8 +242,8 @@ export const texts = {
       webinars: "Webinars",
       contact: "Contato",
       phone: "+1 (555) 123-4567",
-      email: "info@iara-f4p.com",
-      address: "Rua da Inovação, 123, São Paulo, SP, 01234-567",
+      email: "iara.research.app@gmail.com",
+      address: "São Paulo, SP, Brasil",
       copyright: "Todos os direitos reservados.",
       privacy: "Política de Privacidade",
       terms: "Termos de Serviço",
