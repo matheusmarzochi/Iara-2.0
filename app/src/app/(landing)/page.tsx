@@ -129,8 +129,14 @@ export default function IaraLandingPage() {
             </div>
             <div className="mx-auto grid max-w-5xl gap-8 py-12 md:grid-cols-2 lg:grid-cols-4">
               <div className="flex flex-col items-center space-y-2 border rounded-lg p-6 bg-background">
-                <div className="flex h-12 w-12 items-center justify-center rounded-full bg-primary/10 text-primary">
-                  <span className="text-xl font-bold">1</span>
+                <div className="flex h-20 w-20 items-center justify-center rounded-full bg-primary/10 text-primary dark:bg-primary/40">
+                  <Image
+                    src="/images/how-it-works-01.png"
+                    alt="Step 1"
+                    width={64}
+                    height={64}
+                    className="object-contain"
+                  />
                 </div>
                 <h3 className="text-xl font-bold text-center">{t.howItWorks.step1Title}</h3>
                 <p className="text-sm text-center text-muted-foreground">
@@ -138,8 +144,14 @@ export default function IaraLandingPage() {
                 </p>
               </div>
               <div className="flex flex-col items-center space-y-2 border rounded-lg p-6 bg-background">
-                <div className="flex h-12 w-12 items-center justify-center rounded-full bg-primary/10 text-primary">
-                  <span className="text-xl font-bold">2</span>
+                <div className="flex h-20 w-20 items-center justify-center rounded-full bg-primary/10 text-primary dark:bg-primary/40">
+                  <Image
+                    src="/images/how-it-works-02.png"
+                    alt="Step 2"
+                    width={64}
+                    height={64}
+                    className="object-contain"
+                  />
                 </div>
                 <h3 className="text-xl font-bold text-center">{t.howItWorks.step2Title}</h3>
                 <p className="text-sm text-center text-muted-foreground">
@@ -147,8 +159,14 @@ export default function IaraLandingPage() {
                 </p>
               </div>
               <div className="flex flex-col items-center space-y-2 border rounded-lg p-6 bg-background">
-                <div className="flex h-12 w-12 items-center justify-center rounded-full bg-primary/10 text-primary">
-                  <span className="text-xl font-bold">3</span>
+                <div className="flex h-20 w-20 items-center justify-center rounded-full bg-primary/10 text-primary dark:bg-primary/40">
+                  <Image
+                    src="/images/how-it-works-03.png"
+                    alt="Step 3"
+                    width={64}
+                    height={64}
+                    className="object-contain"
+                  />
                 </div>
                 <h3 className="text-xl font-bold text-center">{t.howItWorks.step3Title}</h3>
                 <p className="text-sm text-center text-muted-foreground">
@@ -156,8 +174,14 @@ export default function IaraLandingPage() {
                 </p>
               </div>
               <div className="flex flex-col items-center space-y-2 border rounded-lg p-6 bg-background">
-                <div className="flex h-12 w-12 items-center justify-center rounded-full bg-primary/10 text-primary">
-                  <span className="text-xl font-bold">4</span>
+                <div className="flex h-20 w-20 items-center justify-center rounded-full bg-primary/10 text-primary dark:bg-primary/40">
+                  <Image
+                    src="/images/how-it-works-04.png"
+                    alt="Step 4"
+                    width={64}
+                    height={64}
+                    className="object-contain"
+                  />
                 </div>
                 <h3 className="text-xl font-bold text-center">{t.howItWorks.step4Title}</h3>
                 <p className="text-sm text-center text-muted-foreground">

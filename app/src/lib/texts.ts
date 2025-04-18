@@ -165,13 +165,13 @@ export const texts = {
       title: "Como funciona",
       description: "O método F4P segue uma abordagem estruturada para revelar o que realmente impulsiona as decisões dos seus usuários.",
       step1Title: "Coleta de Feedback",
-      step1Desc: "Utilize o Cartão F4P para capturar os três principais motivos por trás da escolha do produto pelo usuário, junto com uma pontuação de satisfação.",
+      step1Desc: "Utilize o Cartão F4P para capturar os principais motivos por trás da escolha do produto pelo usuário, junto com uma pontuação de satisfação.",
       step2Title: "Análise de Dados",
       step2Desc: "Agregue respostas em um Fitness Box Score para medir o quão bem seu produto atende às expectativas dos usuários.",
       step3Title: "Segmentação por Propósito",
       step3Desc: "Identifique perfis ou segmentos distintos de usuários com base em seus propósitos específicos para usar seu produto.",
       step4Title: "Ação e Métricas",
-      step4Desc: "Defina KPIs e ações de melhoria focadas nas áreas que mais importam para seus usuários.",
+      step4Desc: "Definir ações de melhoria focadas em impactar os principais propósitos mapeados em sua base de usuários.",
     },
     
     // Benefits Section
