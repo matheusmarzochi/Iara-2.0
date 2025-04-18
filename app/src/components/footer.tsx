@@ -31,6 +31,7 @@ export default function IaraNavbar({
                         </div>
                         <p className="text-sm text-muted-foreground">{t.footer.tagline}</p>
                         <div className="flex gap-4">
+                            {/*
                             <Link href="#" className="text-muted-foreground hover:text-foreground">
                                 <Facebook className="h-5 w-5" />
                                 <span className="sr-only">Facebook</span>
@@ -39,6 +40,7 @@ export default function IaraNavbar({
                                 <Twitter className="h-5 w-5" />
                                 <span className="sr-only">Twitter</span>
                             </Link>
+                            */}
                             <Link href="#" className="text-muted-foreground hover:text-foreground">
                                 <Linkedin className="h-5 w-5" />
                                 <span className="sr-only">LinkedIn</span>
@@ -58,6 +60,7 @@ export default function IaraNavbar({
                                     {t.footer.careers}
                                 </Link>
                             </li>
+                            {/*
                             <li>
                                 <Link href="#" className="text-muted-foreground hover:text-foreground">
                                     {t.footer.blog}
@@ -68,11 +71,13 @@ export default function IaraNavbar({
                                     {t.footer.press}
                                 </Link>
                             </li>
+                            */}
                         </ul>
                     </div>
                     <div className="space-y-4">
                         <h3 className="text-sm font-medium">{t.footer.resources}</h3>
                         <ul className="space-y-2 text-sm">
+                            {/*
                             <li>
                                 <Link href="#" className="text-muted-foreground hover:text-foreground">
                                     {t.footer.documentation}
@@ -83,6 +88,7 @@ export default function IaraNavbar({
                                     {t.footer.caseStudies}
                                 </Link>
                             </li>
+                            */}
                             <li>
                                 <Link href="/f4p-guide" className="text-muted-foreground hover:text-foreground">
                                     {t.footer.f4pGuide}
@@ -118,6 +124,7 @@ export default function IaraNavbar({
                         &copy; {new Date().getFullYear()} Iara Research. {t.footer.copyright}
                     </p>
                     <div className="flex gap-4">
+                        {/*
                         <Link href="#" className="text-xs text-muted-foreground hover:text-foreground">
                             {t.footer.privacy}
                         </Link>
@@ -127,6 +134,7 @@ export default function IaraNavbar({
                         <Link href="#" className="text-xs text-muted-foreground hover:text-foreground">
                             {t.footer.cookie}
                         </Link>
+                        */}
                     </div>
                 </div>
             </div>

@@ -110,7 +110,7 @@ export default function F4PGuidePage() {
                         <h2 className="text-2xl font-semibold text-sky-800 dark:text-sky-200 mb-3">Passo a passo para aplicar o F4P</h2>
                         <h3 className="text-lg font-semibold text-sky-700 dark:text-sky-300 mt-6 mb-2">1. Colete feedback com o <strong>F4P Card</strong></h3>
                         <p className="dark:text-gray-200">
-                            Envie um questionário curto (in-app, e-mail ou entrevista) contendo <strong>três perguntas</strong>:
+                            Conduza uma entrevista ou envie um questionário, utilizando o f4p card (in-app, e-mai) <strong>contendo três perguntas</strong>:
                         </p>
                         <ol className="list-decimal ml-6 my-3 space-y-1 dark:text-gray-200">
                             <li><em>Quais foram até 3 motivos para você escolher nosso produto?</em></li>
@@ -164,10 +164,9 @@ export default function F4PGuidePage() {
                     <section className="mb-12">
                         <h2 className="text-2xl font-semibold text-sky-800 dark:text-sky-200 mb-3">Melhores práticas e dicas rápidas</h2>
                         <ul className="list-disc ml-6 my-3 space-y-2 dark:text-gray-200">
-                            <li><strong>Integre ao seu fluxo ágil</strong>: adicione o envio do F4P Card como parte da “Definition of Done” de features críticas.</li>
+                            <li><strong>Integre ao seu fluxo de trabalho</strong>: adicione o envio do F4P Card como parte da “Coleta de Resultados” de features críticas.</li>
                             <li><strong>Combine métodos</strong>: use testes de usabilidade para encontrar problemas de interação e o F4P para saber se a solução cobre o objetivo macro.</li>
                             <li><strong>Evite métricas de vaidade</strong>: se não reflete valor ao usuário, não deveria ser KPI.</li>
-                            <li><strong>Documente aprendizados</strong>: converta segmentos em personas orientadas a objetivos, inspiradas em <em>Goal-Directed Design</em> de Alan Cooper.</li>
                         </ul>
                     </section>
 
@@ -178,15 +177,12 @@ export default function F4PGuidePage() {
                         </p>
                         <ol className="list-decimal ml-6 my-3 space-y-1 dark:text-gray-200">
                             <li><strong>Alinha produto, UX e negócio</strong> na mesma métrica de sucesso.</li>
-                            <li><strong>Prioriza features</strong> que movem agulhas de satisfação.</li>
+                            <li><strong>Prioriza features</strong> que movem indicadores reais de satisfação.</li>
                             <li><strong>Aumenta retenção</strong> ao servir segmentos mais valiosos.</li>
                         </ol>
                         <p className="dark:text-gray-200">
                             Pronto para testar o F4P? Comece criando seu primeiro F4P Card e descubra <strong>por que</strong> seus clientes ficam — ou desistem — do seu produto.
                         </p>
-                        <blockquote className="border-l-4 border-sky-400 dark:border-sky-600 bg-sky-50/60 dark:bg-slate-800/60 rounded-r px-5 py-4 my-6 text-sky-900 dark:text-sky-200">
-                            <strong>⚡ Dica final</strong>: adote o mantra <em>“No propósito, sem feature”</em>. Se não há propósito claro, talvez valha reavaliar a iniciativa.
-                        </blockquote>
                     </section>
                 </article>
             </main>
