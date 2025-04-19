@@ -95,7 +95,7 @@ export default function IaraNavbar({
                                 </Link>
                             </li>
                             <li>
-                                <Link href="#" className="text-muted-foreground hover:text-foreground">
+                                <Link href="/webinars" className="text-muted-foreground hover:text-foreground">
                                     {t.footer.webinars}
                                 </Link>
                             </li>
