@@ -1,45 +1,46 @@
-import type { Metadata } from "next";
+import type { Metadata, ResolvingMetadata } from 'next'
 import { ClerkProvider } from "@clerk/nextjs";
+import dynamic from 'next/dynamic';
 import { ptBR } from "@clerk/localizations";
 import { ThemeProvider } from "~/components/theme/provider";
-import { SeoJsonLd } from '~/components/seo-jsonls';
 import "./globals.css";
 import { Toaster } from "~/components/ui/sonner";
 
-// eslint-disable-next-line react-refresh/only-export-components
-export const metadata = {
-  title: {
-    default: 'Iara • Fit for Purpose (F4P) para UX Research',
-    template: '%s | Iara',
-  },
-  description:
-    'Iara aplica o método Fit for Purpose (F4P) para revelar o que realmente motiva seus usuários.',
-  alternates: {
-    canonical: 'https://iara.one',
-    languages: {
-      'en': 'https://iara.one/en',
-      'pt-BR': 'https://iara.one',
+export async function generateMetadata(): Promise<Metadata> {
+  return {
+    title: {
+      default: 'Iara • Fit for Purpose (F4P) para UX Research',
+      template: '%s | Iara',
     },
-  },
-  openGraph: {
-    type: 'website',
-    locale: 'pt_BR',
-    url: 'https://iara.one',
-    siteName: 'Iara',
-    images: [
-      {
-        url: 'https://iara.one/favicon/web-app-manifest-512x512.png',
-        width: 512,
-        height: 512,
-        alt: 'Dashboard da Iara exibindo Fitness Box Score',
+    description:
+      'Iara aplica o método Fit for Purpose (F4P) para revelar o que realmente motiva seus usuários.',
+    alternates: {
+      canonical: 'https://iara.one',
+      languages: {
+        'en': 'https://iara.one/en',
+        'pt-BR': 'https://iara.one',
       },
-    ],
-  },
-  twitter: {
-    card: 'summary_large_image',
-    site: '@IaraOne',
-  },
-};
+    },
+    openGraph: {
+      type: 'website',
+      locale: 'pt_BR',
+      url: 'https://iara.one',
+      siteName: 'Iara',
+      images: [
+        {
+          url: 'https://iara.one/favicon/web-app-manifest-512x512.png',
+          width: 512,
+          height: 512,
+          alt: 'Dashboard da Iara exibindo Fitness Box Score',
+        },
+      ],
+    },
+    twitter: {
+      card: 'summary_large_image',
+      site: '@IaraOne',
+    },
+  }
+}
 
 export default function RootLayout({
   children,
@@ -72,7 +73,6 @@ export default function RootLayout({
           <link rel="manifest" href="/favicon/site.webmanifest" />
         </head>
         <body className="dark:bg-sky-950">
-          <SeoJsonLd />
           <ThemeProvider
             attribute="class"
             defaultTheme="system"
