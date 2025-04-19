@@ -11,6 +11,15 @@ const nextConfig = {
       fullUrl: process.env.NODE_ENV === "development",
     },
   },
+  images: {
+    remotePatterns: [
+      {
+        protocol: "https",
+        hostname: "img.youtube.com",
+        pathname: "/vi/**",
+      },
+    ],
+  },
 };
 
 export default nextConfig;

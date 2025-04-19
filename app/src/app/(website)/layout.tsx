@@ -1,7 +1,4 @@
-import Link from "next/link";
 import type { ReactNode } from "react";
-import { AuthButton } from "~/components/auth-button";
-import { Logo } from "~/components/logo";
 import { ToggleTheme } from "~/components/theme/toggle-theme";
 
 export default function WebsiteLayout({ children }: { children: ReactNode }) {
