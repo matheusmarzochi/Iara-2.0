@@ -50,6 +50,7 @@ describe('prompt function', () => {
             researchId: 'r1',
             purpose: 'Qual é o seu hobby favorito?',
             sequence: 1,
+            required: false,
             categories: []
         };
 
@@ -126,6 +127,7 @@ describe('prompt function', () => {
             researchId: 'r1',
             purpose: 'Qual é o seu hobby favorito?',
             sequence: 1,
+            required: false,
             categories: []
         };
 
