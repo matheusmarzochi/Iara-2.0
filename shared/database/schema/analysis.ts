@@ -25,7 +25,7 @@ export const analysis = pgTable(
     },
     (t) => ({
         questionId: index("analysis_questionId_index").on(t.questionId),
-        questionIdUnique: unique("analysis_questionId_unique").on(t.questionId),
+        questionIdCriteriaUnique: unique("analysis_questionId_criteria_unique").on(t.questionId, t.criteria),
     }),
 );
 

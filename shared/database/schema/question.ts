@@ -3,6 +3,7 @@ import { relations } from 'drizzle-orm';
 import { createInsertSchema } from "drizzle-zod";
 import { researches } from './research';
 import { categories, type Category } from './category';
+import { analysis } from './analysis';
 
 export const questions = pgTable(
     'questions',
@@ -26,7 +27,8 @@ export const questionsRelations = relations(questions, ({ one, many }) => ({
         fields: [questions.researchId],
         references: [researches.id]
     }),
-    categories: many(categories)
+    categories: many(categories),
+    analysis: many(analysis)
 }))
 
 export type Question = typeof questions.$inferSelect & { categories: Category[] };

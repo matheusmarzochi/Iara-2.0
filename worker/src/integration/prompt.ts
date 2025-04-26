@@ -49,7 +49,7 @@ export const promptRequest = async (input: string, model_type: string, model_id:
     if (!data) {
         return ""
     }
-
+    console.log(`${isOpenAI ? "OpenAI" : "Ollama" }: Attempt ${attempt} - Prompt: ${input} - Response: ${data.choices[0].message.content}`)
     await db.insert(gptMessages).values({
         completion_tokens: data.usage.completion_tokens,
         model_id,

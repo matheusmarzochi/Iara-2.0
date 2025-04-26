@@ -169,6 +169,20 @@
       "when": 1744311323962,
       "tag": "0023_purple_callisto",
       "breakpoints": true
+    },
+    {
+      "idx": 24,
+      "version": "7",
+      "when": 1745682520700,
+      "tag": "0024_flaky_multiple_man",
+      "breakpoints": true
+    },
+    {
+      "idx": 25,
+      "version": "7",
+      "when": 1745682862553,
+      "tag": "0025_worthless_the_stranger",
+      "breakpoints": true
     }
   ]
 }

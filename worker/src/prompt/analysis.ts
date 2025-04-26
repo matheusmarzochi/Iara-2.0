@@ -4,8 +4,25 @@ import { analysis, questions, type Form, Question } from "iara-shared/database/s
 import { promptRequest, stringToJson } from "../integration/prompt"
 import { filterAnswersBySequence, filterQuestionsBySequence } from "./helper"
 
-// Gera o prompt para análise de uma pergunta com base nas respostas
-export const prompt = (question: Question, forms: Form[]) => {
+// Agrupa respostas por score
+function groupAnswersByScore(forms: Form[], sequence: number) {
+    const fit: Form["answers"] = [];
+    const regular: Form["answers"] = [];
+    const unfit: Form["answers"] = [];
+    forms.forEach(form => {
+        form.answers
+            .filter(answer => answer.sequence === sequence)
+            .forEach(answer => {
+                if (answer.score === 5 || answer.score === 4) fit.push(answer);
+                else if (answer.score === 3 || answer.score === 2) regular.push(answer);
+                else if (answer.score === 1 || answer.score === 0) unfit.push(answer);
+            });
+    });
+    return { fit, regular, unfit };
+}
+
+// Gera o prompt para análise de uma pergunta com base nas respostas e critério
+export const prompt = (question: Question, forms: Form[], criteria: string) => {
     let prompt = "Você recebeu uma pesquisa com a seguinte pergunta e lista de respostas.\n";
     prompt += "Seu objetivo é analisar as respostas e sugerir uma ação para a pergunta, escolhendo um critério e uma ação recomendada.\n\n";
     prompt += "Pergunta da pesquisa:\n";
@@ -18,10 +35,10 @@ export const prompt = (question: Question, forms: Form[]) => {
     })
     prompt += "\n";
     prompt += "Instruções:\n";
-    prompt += "Analise as respostas e escolha um critério entre: PIVOT, IMPROVE, MAINTAIN, ABANDON, FOCUS, RETHINK.\n";
+    prompt += `Analise as respostas e utilize o critério: ${criteria}.\n`;
     prompt += "Depois, sugira uma ação clara e objetiva para a pergunta.\n";
     prompt += "Responda no formato JSON:\n";
-    prompt += `{"criteria": "CRITÉRIO", "action": "AÇÃO SUGERIDA"}\n`;
+    prompt += `{"criteria": "${criteria}", "action": "AÇÃO SUGERIDA"}\n`;
     return prompt;
 }
 
@@ -78,35 +95,52 @@ export const getAnalysis = async (researchId: string) => {
         let attempt = 0;
         let isValid = false;
 
-        // Remove análises anteriores para a pergunta
         await db.delete(analysis).where(eq(analysis.questionId, question.id))
 
-        while (attempt < 3 && !isValid) {
-            const promptInput = prompt(
-                filterQuestionsBySequence(questions, question.sequence)[0],
-                filterAnswersBySequence(forms, question.sequence)
-            );
+        // Agrupa respostas por score
+        const { fit, regular, unfit } = groupAnswersByScore(forms, question.sequence);
 
-            const output = await promptRequest(promptInput, "analysis", question.id);
-            const { object } = stringToJson(output);
+        // Determina critérios de acordo com o grupo majoritário
+        let criteriaList: string[] = [];
+        if (fit.length >= regular.length && fit.length >= unfit.length) {
+            criteriaList = ["MAINTAIN", "RETHINK"];
+        } else if (regular.length > fit.length && regular.length >= unfit.length) {
+            criteriaList = ["IMPROVE", "FOCUS"];
+        } else {
+            criteriaList = ["PIVOT", "ABANDON"];
+        }
 
-            const { ok, data } = promptValidation(object);
-            isValid = ok
+        for (const criteria of criteriaList) {
+            attempt = 0;
+            isValid = false;
+            while (attempt < 3 && !isValid) {
+                const promptInput = prompt(
+                    filterQuestionsBySequence(questions, question.sequence)[0],
+                    filterAnswersBySequence(forms, question.sequence),
+                    criteria
+                );
 
-            if (!isValid) {
-                attempt++;
-                if (attempt >= 3) {
-                    console.error(`Validation failed after ${attempt} attempts for question ID ${question.id}`);
+                const output = await promptRequest(promptInput, "analysis", question.id + "-" + criteria);
+                const { object } = stringToJson(output);
+
+                const { ok, data } = promptValidation(object);
+                isValid = ok
+
+                if (!isValid) {
+                    attempt++;
+                    if (attempt >= 3) {
+                        console.error(`Validation failed after ${attempt} attempts for question ID ${question.id} and criteria ${criteria}`);
+                    }
+                    continue
                 }
-                continue
-            }
 
-            if (data) {
-                await db.insert(analysis).values({
-                    questionId: question.id,
-                    criteria: data.criteria as "PIVOT" | "IMPROVE" | "MAINTAIN" | "ABANDON" | "FOCUS" | "RETHINK",
-                    action: data.action,
-                })
+                if (data) {
+                    await db.insert(analysis).values({
+                        questionId: question.id,
+                        criteria: data.criteria as "PIVOT" | "IMPROVE" | "MAINTAIN" | "ABANDON" | "FOCUS" | "RETHINK",
+                        action: data.action,
+                    })
+                }
             }
         }
     }
