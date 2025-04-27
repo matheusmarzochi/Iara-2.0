@@ -41,6 +41,12 @@ export const getReport = async (researchId: string) => {
                         columns: {
                             name: true
                         }
+                    },
+                    analysis: {
+                        columns: {
+                            criteria: true,
+                            action: true,
+                        }
                     }
                 }
             }
@@ -96,6 +102,10 @@ export const buildQuestionReports = (research: Research): Array<ReportData> => {
                 focus: [],
                 pivot: [],
                 abandon: [],
+            },
+            analysis: {
+                on_target: { criteria: '', action: '' },
+                off_target: { criteria: '', action: '' },
             },
             total_forms: 0,
         };
@@ -230,6 +240,22 @@ export const buildQuestionReports = (research: Research): Array<ReportData> => {
                     questionReport.strategy_insights.focus.push(category.name);
                 } else {
                     questionReport.strategy_insights.abandon.push(category.name);
+                }
+            }
+        }
+
+        if (question.analysis && Array.isArray(question.analysis)) {
+            for (const a of question.analysis) {
+                if (['PIVOT', 'IMPROVE', 'MAINTAIN'].includes(a.criteria)) {
+                    questionReport.analysis.on_target = {
+                        criteria: a.criteria,
+                        action: a.action
+                    };
+                } else if (['ABANDON', 'FOCUS', 'RETHINK'].includes(a.criteria)) {
+                    questionReport.analysis.off_target = {
+                        criteria: a.criteria,
+                        action: a.action
+                    };
                 }
             }
         }

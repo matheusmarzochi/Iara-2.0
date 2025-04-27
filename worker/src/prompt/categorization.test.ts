@@ -51,7 +51,8 @@ describe('prompt function', () => {
             purpose: 'Qual é o seu hobby favorito?',
             sequence: 1,
             required: false,
-            categories: []
+            categories: [],
+            analysis: []
         };
 
         const forms: Form[] = [
@@ -128,7 +129,8 @@ describe('prompt function', () => {
             purpose: 'Qual é o seu hobby favorito?',
             sequence: 1,
             required: false,
-            categories: []
+            categories: [],
+            analysis: []
         };
 
         const forms: Form[] = [];

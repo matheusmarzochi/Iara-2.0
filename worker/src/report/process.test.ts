@@ -97,8 +97,8 @@ describe('buildQuestionReports', () => {
             { name: 'Category A', target: true, createdAt: new Date(), id: '', questionId: '' },
             { name: 'Category B', target: false, createdAt: new Date(), id: '', questionId: '' },
             { name: 'Category C', target: true, createdAt: new Date(), id: '', questionId: '' },
-
           ],
+          analysis: []
         },
         {
           purpose: 'Question 2',
@@ -112,8 +112,10 @@ describe('buildQuestionReports', () => {
             { name: 'Category B', target: true, createdAt: new Date(), id: '', questionId: '' },
             { name: 'Category C', target: false, createdAt: new Date(), id: '', questionId: '' },
           ],
+          analysis: [],
         },
       ],
+      
     };
 
     const reports = buildQuestionReports(research);
@@ -199,6 +201,7 @@ describe('buildQuestionReports', () => {
           id: '',
           researchId: '',
           categories: [{ name: 'Category A', target: true, createdAt: new Date(), id: '', questionId: '' }],
+          analysis: [],
         },
       ],
     };
@@ -290,6 +293,7 @@ describe('buildQuestionReports', () => {
             { name: 'Category A', target: true, createdAt: new Date(), id: '', questionId: '' },
             { name: 'Category B', target: false, createdAt: new Date(), id: '', questionId: '' },
           ],
+          analysis: [],
         },
       ],
     };
@@ -429,8 +433,8 @@ describe('buildQuestionReports', () => {
             { name: 'Category X', target: true, createdAt: new Date(), id: '', questionId: '' },
             { name: 'Category Y', target: false, createdAt: new Date(), id: '', questionId: '' },
             { name: 'Category Z', target: true, createdAt: new Date(), id: '', questionId: '' },
-
           ],
+          analysis: [],
         },
       ],
     };
@@ -476,6 +480,7 @@ describe('buildQuestionReports', () => {
             { name: 'Category A', target: true, createdAt: new Date(), id: '', questionId: '' },
             { name: 'Category B', target: false, createdAt: new Date(), id: '', questionId: '' },
           ],
+          analysis: [],
         },
       ],
     };
@@ -580,6 +585,7 @@ describe('buildQuestionReports', () => {
           id: '',
           researchId: '',
           categories: [{ name: 'Category A', target: true, createdAt: new Date(), id: '', questionId: '' }],
+          analysis: [],
         },
       ],
     };
@@ -653,6 +659,7 @@ describe('buildQuestionReports', () => {
             { name: 'Category A', target: true, createdAt: new Date(), id: '', questionId: '' },
             { name: 'Category B', target: false, createdAt: new Date(), id: '', questionId: '' },
           ],
+          analysis: [],
         },
       ],
     };

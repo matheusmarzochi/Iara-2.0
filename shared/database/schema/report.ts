@@ -43,6 +43,16 @@ export type ReportData = {
     score_box: ScoreBox;
     point_of_interests: PointOfInterest[]
     strategy_insights: StrategyInsights;
+    analysis: {
+        on_target: {
+            criteria: string;
+            action: string;
+        };
+        off_target: {
+            criteria: string;
+            action: string;
+        };
+    }
     total_forms: number;
 }
 
