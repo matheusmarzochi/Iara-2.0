@@ -114,6 +114,13 @@ services:
   ollama:
     image: ollama/ollama
     container_name: iara-ollama
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - driver: nvidia
+              count: 1
+              capabilities: [gpu]
     networks:
       - iara
     volumes:

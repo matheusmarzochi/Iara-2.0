@@ -10,8 +10,8 @@ const researchProcessor = {
   async process(msg: string): Promise<boolean> {
 
     console.log(`Start processing ResearchID: ${msg}`)
-    //await getCategories(msg)
-    //await getClassification(msg)
+    await getCategories(msg)
+    await getClassification(msg)
     await getAnalysis(msg)
     await getReport(msg)
     

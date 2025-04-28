@@ -1,6 +1,6 @@
 import { type ChatCompletion } from '../prompt'
 
-const OLLAMA_URL = 'http://host.docker.internal:11434/api/chat'
+const OLLAMA_URL = 'http://ollama:11434/api/chat'
 const MODEL_NAME = 'gemma3'
 
 export const ollama = async (input: string): Promise<ChatCompletion> => {
