@@ -11,6 +11,8 @@ describe('buildQuestionReports', () => {
       status: 'CREATED',
       createdAt: new Date(),
       updatedAt: null,
+      uploadPath: null,
+      deletedAt: null,
       forms: [
         {
           id: 'form1',
@@ -88,28 +90,30 @@ describe('buildQuestionReports', () => {
           purpose: 'Question 1',
           sequence: 1,
           createdAt: new Date(),
+          required: false,
           id: '',
           researchId: '',
           categories: [
-            { name: 'Category A', target: true, createdAt: new Date(), id: '', questionId: '' },
-            { name: 'Category B', target: false, createdAt: new Date(), id: '', questionId: '' },
-            { name: 'Category C', target: true, createdAt: new Date(), id: '', questionId: '' },
-
+            { name: 'Category A', target: true, createdAt: new Date(), id: '', questionId: '', analysis: [] },
+            { name: 'Category B', target: false, createdAt: new Date(), id: '', questionId: '', analysis: [] },
+            { name: 'Category C', target: true, createdAt: new Date(), id: '', questionId: '', analysis: [] },
           ],
         },
         {
           purpose: 'Question 2',
           sequence: 2,
           createdAt: new Date(),
+          required: false,
           id: '',
           researchId: '',
           categories: [
-            { name: 'Category A', target: false, createdAt: new Date(), id: '', questionId: '' },
-            { name: 'Category B', target: true, createdAt: new Date(), id: '', questionId: '' },
-            { name: 'Category C', target: false, createdAt: new Date(), id: '', questionId: '' },
+            { name: 'Category A', target: false, createdAt: new Date(), id: '', questionId: '', analysis: [] },
+            { name: 'Category B', target: true, createdAt: new Date(), id: '', questionId: '', analysis: [] },
+            { name: 'Category C', target: false, createdAt: new Date(), id: '', questionId: '', analysis: [] },
           ],
         },
       ],
+      
     };
 
     const reports = buildQuestionReports(research);
@@ -164,6 +168,8 @@ describe('buildQuestionReports', () => {
       status: 'CREATED',
       createdAt: new Date(),
       updatedAt: null,
+      uploadPath: null,
+      deletedAt: null,
       forms: [
         {
           id: 'form1',
@@ -189,9 +195,10 @@ describe('buildQuestionReports', () => {
           purpose: 'Question 1',
           sequence: 1,
           createdAt: new Date(),
+          required: false,
           id: '',
           researchId: '',
-          categories: [{ name: 'Category A', target: true, createdAt: new Date(), id: '', questionId: '' }],
+          categories: [{ name: 'Category A', target: true, createdAt: new Date(), id: '', questionId: '', analysis: [] }],
         },
       ],
     };
@@ -223,6 +230,8 @@ describe('buildQuestionReports', () => {
       status: 'CREATED',
       createdAt: new Date(),
       updatedAt: null,
+      uploadPath: null,
+      deletedAt: null,
       forms: [
         {
           id: 'form1',
@@ -274,11 +283,12 @@ describe('buildQuestionReports', () => {
           purpose: 'Question 1',
           sequence: 1,
           createdAt: new Date(),
+          required: false,
           id: '',
           researchId: '',
           categories: [
-            { name: 'Category A', target: true, createdAt: new Date(), id: '', questionId: '' },
-            { name: 'Category B', target: false, createdAt: new Date(), id: '', questionId: '' },
+            { name: 'Category A', target: true, createdAt: new Date(), id: '', questionId: '', analysis: [] },
+            { name: 'Category B', target: false, createdAt: new Date(), id: '', questionId: '', analysis: [] },
           ],
         },
       ],
@@ -325,6 +335,8 @@ describe('buildQuestionReports', () => {
       status: 'CREATED',
       createdAt: new Date(),
       updatedAt: null,
+      uploadPath: null,
+      deletedAt: null,
       forms: [
         {
           id: 'form1',
@@ -410,13 +422,13 @@ describe('buildQuestionReports', () => {
           purpose: 'Question 1',
           sequence: 1,
           createdAt: new Date(),
+          required: false,
           id: '',
           researchId: '',
           categories: [
-            { name: 'Category X', target: true, createdAt: new Date(), id: '', questionId: '' },
-            { name: 'Category Y', target: false, createdAt: new Date(), id: '', questionId: '' },
-            { name: 'Category Z', target: true, createdAt: new Date(), id: '', questionId: '' },
-
+            { name: 'Category X', target: true, createdAt: new Date(), id: '', questionId: '', analysis: [] },
+            { name: 'Category Y', target: false, createdAt: new Date(), id: '', questionId: '', analysis: [] },
+            { name: 'Category Z', target: true, createdAt: new Date(), id: '', questionId: '', analysis: [] },
           ],
         },
       ],
@@ -448,17 +460,20 @@ describe('buildQuestionReports', () => {
       status: 'CREATED',
       createdAt: new Date(),
       updatedAt: null,
+      uploadPath: null,
+      deletedAt: null,
       forms: [],
       questions: [
         {
           purpose: 'Question 1',
           sequence: 1,
           createdAt: new Date(),
+          required: false,
           id: '',
           researchId: '',
           categories: [
-            { name: 'Category A', target: true, createdAt: new Date(), id: '', questionId: '' },
-            { name: 'Category B', target: false, createdAt: new Date(), id: '', questionId: '' },
+            { name: 'Category A', target: true, createdAt: new Date(), id: '', questionId: '', analysis: [] },
+            { name: 'Category B', target: false, createdAt: new Date(), id: '', questionId: '', analysis: [] },
           ],
         },
       ],
@@ -488,6 +503,8 @@ describe('buildQuestionReports', () => {
       userId: 'user6',
       status: 'CREATED',
       createdAt: new Date(),
+      uploadPath: null,
+      deletedAt: null,
       updatedAt: null,
       forms: [
         {
@@ -558,9 +575,10 @@ describe('buildQuestionReports', () => {
           purpose: 'Question 1',
           sequence: 1,
           createdAt: new Date(),
+          required: false,
           id: '',
           researchId: '',
-          categories: [{ name: 'Category A', target: true, createdAt: new Date(), id: '', questionId: '' }],
+          categories: [{ name: 'Category A', target: true, createdAt: new Date(), id: '', questionId: '', analysis: [] }],
         },
       ],
     };
@@ -592,6 +610,8 @@ describe('buildQuestionReports', () => {
       status: 'CREATED',
       createdAt: new Date(),
       updatedAt: null,
+      uploadPath: null,
+      deletedAt: null,
       forms: [
         {
           id: 'form1',
@@ -626,10 +646,11 @@ describe('buildQuestionReports', () => {
           sequence: 1,
           createdAt: new Date(),
           id: '',
+          required: false,
           researchId: '',
           categories: [
-            { name: 'Category A', target: true, createdAt: new Date(), id: '', questionId: '' },
-            { name: 'Category B', target: false, createdAt: new Date(), id: '', questionId: '' },
+            { name: 'Category A', target: true, createdAt: new Date(), id: '', questionId: '', analysis: [] },
+            { name: 'Category B', target: false, createdAt: new Date(), id: '', questionId: '', analysis: [] },
           ],
         },
       ],

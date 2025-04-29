@@ -50,7 +50,8 @@ describe('prompt function', () => {
             researchId: 'r1',
             purpose: 'Qual é o seu hobby favorito?',
             sequence: 1,
-            categories: []
+            required: false,
+            categories: [],
         };
 
         const forms: Form[] = [
@@ -126,7 +127,8 @@ describe('prompt function', () => {
             researchId: 'r1',
             purpose: 'Qual é o seu hobby favorito?',
             sequence: 1,
-            categories: []
+            required: false,
+            categories: [],
         };
 
         const forms: Form[] = [];

@@ -26,7 +26,7 @@ export const questionsRelations = relations(questions, ({ one, many }) => ({
         fields: [questions.researchId],
         references: [researches.id]
     }),
-    categories: many(categories)
+    categories: many(categories),
 }))
 
 export type Question = typeof questions.$inferSelect & { categories: Category[] };

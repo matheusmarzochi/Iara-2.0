@@ -44,7 +44,6 @@ export default function UploadResearchPage() {
 			const result = await uploadResearchFile(formData);
 			
 			if (result.success) {
-				console.log("Arquivo enviado com sucesso:", file.name);
 				router.push(`/researches/${result.researchId}`);
 			} else {
 				setError(result.error || "Ocorreu um erro ao enviar o arquivo. Tente novamente.");

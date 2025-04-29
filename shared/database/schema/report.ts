@@ -34,6 +34,16 @@ export type ReportAwnser = {
 export type PointOfInterest = {
     name: string;
     score_box: ScoreBox;
+    analysis: {
+        on_target: {
+            criteria: string;
+            action: string;
+        };
+        off_target: {
+            criteria: string;
+            action: string;
+        };
+    }
     answers: ReportAwnser[]
 }
 

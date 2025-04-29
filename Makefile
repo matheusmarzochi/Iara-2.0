@@ -90,7 +90,7 @@ db-migrate:
 		--env-file .env.local \
 		-v ./shared/:/code \
 		-w /code \
-		iara-app npm run db:migrate
+		iara-app npm run db:push
 
 db-sync:
 	@rm -rf worker/src/database/
