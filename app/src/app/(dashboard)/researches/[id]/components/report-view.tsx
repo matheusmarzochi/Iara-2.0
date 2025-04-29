@@ -1,13 +1,14 @@
 "use client"
 
 import type React from "react"
-import { useState, useMemo } from "react"
+import { useState, useMemo, useTransition } from "react"
 import { ChevronDown, ChevronUp } from "lucide-react"
 import { Card, CardContent } from "~/components/ui/card"
 import { Tabs, TabsList, TabsTrigger, TabsContent } from "~/components/ui/tabs"
 import { Switch } from "~/components/ui/switch"
 import { cn } from "~/lib/utils"
 import { Category, ReportData, Research, ScoreBox } from "iara-shared/database/schema"
+import { updateCategoryTarget } from "./update-category-target-action"
 
 type Props = {
     reports: ReportData[];
@@ -24,7 +25,6 @@ export interface Response {
 export interface PurposeData {
     id: string
     title: string
-    poiId: string
     analysis: {
         on_target: {
             criteria: string;
@@ -64,7 +64,6 @@ function mapReportsToTabs(reports: ReportData[]): TabData[] {
         purposes: report.point_of_interests.map((poi) => ({
             id: poi.name,
             title: poi.name,
-            poiId: poi.id,
             analysis: poi.analysis,
             targetAudience: true, // Placeholder, adjust as needed
             insight: (report.strategy_insights.improve && report.strategy_insights.improve[0]) || "",
@@ -188,13 +187,20 @@ interface PurposeBlockProps {
 }
 
 function PurposeBlock({ purpose, isExpanded, categories, onToggleExpand }: PurposeBlockProps) {
-    
-    
-    const category = categories.find((c) => (c.id == purpose.poiId ))
-    console.log("caregory", category)
-    console.log("purpose.poiId", purpose.poiId)
+    const category = categories.find((c) => (c.name == purpose.title ))
     const [showOnTarget, setShowOnTarget] = useState(category?.target)
     const [purposeFilter, setPurposeFilter] = useState("todas")
+    const [isPending, startTransition] = useTransition()
+
+    // Função para atualizar o target da categoria
+    const handleTargetChange = (checked: boolean) => {
+        if (!category) return
+        setShowOnTarget(checked)
+        startTransition(async () => {
+            await updateCategoryTarget(category.id, checked)
+            // Opcional: você pode adicionar lógica para feedback ao usuário aqui
+        })
+    }
 
     const analysis = showOnTarget ? purpose.analysis.on_target : purpose.analysis.off_target
     
@@ -240,7 +246,7 @@ function PurposeBlock({ purpose, isExpanded, categories, onToggleExpand }: Purpo
                             <span className="text-sm font-medium mr-2">
                                 Público Alvo
                             </span>
-                            <Switch checked={showOnTarget} onCheckedChange={setShowOnTarget} />
+                            <Switch checked={showOnTarget} onCheckedChange={handleTargetChange} disabled={isPending} />
                         </div>
                     </div>
 

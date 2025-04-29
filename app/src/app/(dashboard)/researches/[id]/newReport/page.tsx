@@ -21,7 +21,11 @@ export default async function SurveyDashboard({ params }: Props) {
     with: {
       questions: {
         with: {
-          categories: true
+          categories: {
+            with: {
+              analysis: true
+            }
+          }
         }
       }
     }

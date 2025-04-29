@@ -12,7 +12,7 @@ const researchProcessor = {
     console.log(`Start processing ResearchID: ${msg}`)
     //await getCategories(msg)
     //await getClassification(msg)
-    //await getAnalysis(msg)
+    await getAnalysis(msg)
     await getReport(msg)
     
     return true 

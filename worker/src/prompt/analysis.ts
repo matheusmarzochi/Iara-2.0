@@ -20,6 +20,15 @@ function groupAnswersByScore(forms: Form[], sequence: number) {
     return { fit, regular, unfit };
 }
 
+const criteriaInstructions: Record<string, string> = {
+    "PIVOT": "Considere que a maioria das respostas sugere uma mudança significativa de direção. Analise as respostas e proponha uma ação para pivotar a abordagem.",
+    "IMPROVE": "Considere que as respostas indicam necessidade de melhorias. Analise as respostas e proponha uma ação para aprimorar a questão.",
+    "MAINTAIN": "Considere que as respostas indicam satisfação com a situação atual. Analise as respostas e proponha uma ação para manter o que está funcionando.",
+    "ABANDON": "Considere que as respostas sugerem abandonar a abordagem atual. Analise as respostas e proponha uma ação para abandonar ou substituir a questão.",
+    "FOCUS": "Considere que as respostas indicam a necessidade de foco em pontos específicos. Analise as respostas e proponha uma ação para concentrar esforços.",
+    "RETHINK": "Considere que as respostas sugerem repensar a abordagem. Analise as respostas e proponha uma ação para reavaliar a questão."
+};
+
 export const prompt = (question: Question, forms: Form[], criteria: string) => {
     let prompt = "Você recebeu uma pesquisa com a seguinte pergunta e lista de respostas.\n";
     prompt += "Seu objetivo é analisar as respostas e sugerir uma ação para a pergunta, escolhendo um critério e uma ação recomendada.\n\n";
@@ -33,7 +42,7 @@ export const prompt = (question: Question, forms: Form[], criteria: string) => {
     })
     prompt += "\n";
     prompt += "Instruções:\n";
-    prompt += `Analise as respostas e utilize o critério: ${criteria}.\n`;
+    prompt += criteriaInstructions[criteria] ? criteriaInstructions[criteria] + "\n" : "";
     prompt += "Depois, sugira uma ação clara e objetiva para a pergunta.\n";
     prompt += "Responda no formato JSON:\n";
     prompt += `{"criteria": "${criteria}", "action": "AÇÃO SUGERIDA"}\n`;
