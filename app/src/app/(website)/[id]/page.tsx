@@ -17,7 +17,11 @@ async function getResearchForm(id: string) {
 		with: {
 			questions: {
 				with: {
-					categories: true,
+					categories: {
+						with: {
+							analysis: true
+						}
+					},
 				},
 			},
 		},

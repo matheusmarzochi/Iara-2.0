@@ -94,11 +94,10 @@ describe('buildQuestionReports', () => {
           id: '',
           researchId: '',
           categories: [
-            { name: 'Category A', target: true, createdAt: new Date(), id: '', questionId: '' },
-            { name: 'Category B', target: false, createdAt: new Date(), id: '', questionId: '' },
-            { name: 'Category C', target: true, createdAt: new Date(), id: '', questionId: '' },
+            { name: 'Category A', target: true, createdAt: new Date(), id: '', questionId: '', analysis: [] },
+            { name: 'Category B', target: false, createdAt: new Date(), id: '', questionId: '', analysis: [] },
+            { name: 'Category C', target: true, createdAt: new Date(), id: '', questionId: '', analysis: [] },
           ],
-          analysis: []
         },
         {
           purpose: 'Question 2',
@@ -108,11 +107,10 @@ describe('buildQuestionReports', () => {
           id: '',
           researchId: '',
           categories: [
-            { name: 'Category A', target: false, createdAt: new Date(), id: '', questionId: '' },
-            { name: 'Category B', target: true, createdAt: new Date(), id: '', questionId: '' },
-            { name: 'Category C', target: false, createdAt: new Date(), id: '', questionId: '' },
+            { name: 'Category A', target: false, createdAt: new Date(), id: '', questionId: '', analysis: [] },
+            { name: 'Category B', target: true, createdAt: new Date(), id: '', questionId: '', analysis: [] },
+            { name: 'Category C', target: false, createdAt: new Date(), id: '', questionId: '', analysis: [] },
           ],
-          analysis: [],
         },
       ],
       
@@ -200,8 +198,7 @@ describe('buildQuestionReports', () => {
           required: false,
           id: '',
           researchId: '',
-          categories: [{ name: 'Category A', target: true, createdAt: new Date(), id: '', questionId: '' }],
-          analysis: [],
+          categories: [{ name: 'Category A', target: true, createdAt: new Date(), id: '', questionId: '', analysis: [] }],
         },
       ],
     };
@@ -290,10 +287,9 @@ describe('buildQuestionReports', () => {
           id: '',
           researchId: '',
           categories: [
-            { name: 'Category A', target: true, createdAt: new Date(), id: '', questionId: '' },
-            { name: 'Category B', target: false, createdAt: new Date(), id: '', questionId: '' },
+            { name: 'Category A', target: true, createdAt: new Date(), id: '', questionId: '', analysis: [] },
+            { name: 'Category B', target: false, createdAt: new Date(), id: '', questionId: '', analysis: [] },
           ],
-          analysis: [],
         },
       ],
     };
@@ -430,11 +426,10 @@ describe('buildQuestionReports', () => {
           id: '',
           researchId: '',
           categories: [
-            { name: 'Category X', target: true, createdAt: new Date(), id: '', questionId: '' },
-            { name: 'Category Y', target: false, createdAt: new Date(), id: '', questionId: '' },
-            { name: 'Category Z', target: true, createdAt: new Date(), id: '', questionId: '' },
+            { name: 'Category X', target: true, createdAt: new Date(), id: '', questionId: '', analysis: [] },
+            { name: 'Category Y', target: false, createdAt: new Date(), id: '', questionId: '', analysis: [] },
+            { name: 'Category Z', target: true, createdAt: new Date(), id: '', questionId: '', analysis: [] },
           ],
-          analysis: [],
         },
       ],
     };
@@ -477,10 +472,9 @@ describe('buildQuestionReports', () => {
           id: '',
           researchId: '',
           categories: [
-            { name: 'Category A', target: true, createdAt: new Date(), id: '', questionId: '' },
-            { name: 'Category B', target: false, createdAt: new Date(), id: '', questionId: '' },
+            { name: 'Category A', target: true, createdAt: new Date(), id: '', questionId: '', analysis: [] },
+            { name: 'Category B', target: false, createdAt: new Date(), id: '', questionId: '', analysis: [] },
           ],
-          analysis: [],
         },
       ],
     };
@@ -584,8 +578,7 @@ describe('buildQuestionReports', () => {
           required: false,
           id: '',
           researchId: '',
-          categories: [{ name: 'Category A', target: true, createdAt: new Date(), id: '', questionId: '' }],
-          analysis: [],
+          categories: [{ name: 'Category A', target: true, createdAt: new Date(), id: '', questionId: '', analysis: [] }],
         },
       ],
     };
@@ -656,10 +649,9 @@ describe('buildQuestionReports', () => {
           required: false,
           researchId: '',
           categories: [
-            { name: 'Category A', target: true, createdAt: new Date(), id: '', questionId: '' },
-            { name: 'Category B', target: false, createdAt: new Date(), id: '', questionId: '' },
+            { name: 'Category A', target: true, createdAt: new Date(), id: '', questionId: '', analysis: [] },
+            { name: 'Category B', target: false, createdAt: new Date(), id: '', questionId: '', analysis: [] },
           ],
-          analysis: [],
         },
       ],
     };

@@ -81,7 +81,11 @@ export const getClassification = async (researchId: string) => {
     const questions = await db.query.questions.findMany({
         where: (questions, { eq }) => (eq(questions.researchId, researchId)),
         with: {
-            categories: true,
+            categories: {
+                with: {
+                    analysis: true
+                }
+            },
         },
     })
 

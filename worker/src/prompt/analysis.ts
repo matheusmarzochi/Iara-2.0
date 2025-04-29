@@ -44,6 +44,8 @@ export const prompt = (question: Question, forms: Form[], criteria: string) => {
     prompt += "Instruções:\n";
     prompt += criteriaInstructions[criteria] ? criteriaInstructions[criteria] + "\n" : "";
     prompt += "Depois, sugira uma ação clara e objetiva para a pergunta.\n";
+    prompt += "Não mencione as respostas, foque apenas na ação\n";
+    prompt += "Não altera o criteria\n";
     prompt += "Responda no formato JSON:\n";
     prompt += `{"criteria": "${criteria}", "action": "AÇÃO SUGERIDA"}\n`;
     return prompt;
@@ -59,7 +61,8 @@ export const promptValidation = (output: any): PromptValidation => {
         typeof output !== "object" ||
         !output ||
         typeof output.criteria !== "string" ||
-        typeof output.action !== "string"
+        typeof output.action !== "string" ||
+        output.action.trim() === ""
     ) {
         return { ok: false, data: null }
     }
@@ -120,7 +123,7 @@ export const getAnalysis = async (researchId: string) => {
             for (const criteria of criteriaList) {
                 attempt = 0;
                 isValid = false;
-                while (attempt < 3 && !isValid) {
+                while (attempt < 7 && !isValid) {
                     const promptInput = prompt(
                         filterQuestionsBySequence([question], question.sequence)[0],
                         filterAnswersBySequence(forms, question.sequence),
@@ -135,9 +138,10 @@ export const getAnalysis = async (researchId: string) => {
 
                     if (!isValid) {
                         attempt++;
-                        if (attempt >= 3) {
+                        if (attempt >= 7) {
                             console.error(`Validation failed after ${attempt} attempts for category ID ${category.id} and criteria ${criteria}`);
                         }
+                        console.error(`Validation failed after ${attempt} attempts for category ID ${category.id} and criteria ${criteria}`);
                         continue
                     }
 

@@ -62,15 +62,6 @@ const researchIdStatistics = async(researchId: string) => {
             questionsCompletionTokens += gptMessage.completion_tokens    
         })
     }
-
-    console.log({ 
-        anwserCompletionTokens,
-        anwserPromptTokens,
-        anwserRequests,
-        questionsPromptTokens,
-        questionsCompletionTokens,
-        questionsRequests
-    })
 }
 
 const reprocessResearch = async(researchId: string) => {

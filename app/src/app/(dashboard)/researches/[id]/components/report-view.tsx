@@ -7,7 +7,7 @@ import { Card, CardContent } from "~/components/ui/card"
 import { Tabs, TabsList, TabsTrigger, TabsContent } from "~/components/ui/tabs"
 import { Switch } from "~/components/ui/switch"
 import { cn } from "~/lib/utils"
-import { Category, ReportData, Research, ScoreBox } from "iara-shared/database/schema"
+import type { Category, ReportData, Research, ScoreBox } from "iara-shared/database/schema"
 import { updateCategoryTarget } from "./update-category-target-action"
 
 type Props = {
@@ -66,7 +66,7 @@ function mapReportsToTabs(reports: ReportData[]): TabData[] {
             title: poi.name,
             analysis: poi.analysis,
             targetAudience: true, // Placeholder, adjust as needed
-            insight: (report.strategy_insights.improve && report.strategy_insights.improve[0]) || "",
+            insight: (report.strategy_insights.improve?.[0]) || "",
             scores: poi.score_box,
             responseCount: poi.answers.length,
             totalCount: report.total_forms,
@@ -82,6 +82,15 @@ function mapReportsToTabs(reports: ReportData[]): TabData[] {
 export default function ReportView({ reports, research, categories }: Props) {
     const tabData = useMemo(() => mapReportsToTabs(reports), [reports])
     const [expandedPurpose, setExpandedPurpose] = useState<string | null>(null)
+
+    const [categoryTargets, setCategoryTargets] = useState<Record<string, boolean>>(
+        () => Object.fromEntries(categories.map(c => [c.id, c.target]))
+    )
+
+    const handleTargetChange = (categoryId: string, checked: boolean) => {
+        setCategoryTargets(prev => ({ ...prev, [categoryId]: checked }))
+        updateCategoryTarget(categoryId, checked)
+    }
 
     const toggleExpand = (purposeId: string) => {
         setExpandedPurpose(expandedPurpose === purposeId ? null : purposeId)
@@ -130,15 +139,20 @@ export default function ReportView({ reports, research, categories }: Props) {
                             <>
                                 <h2 className="text-lg font-bold mb-4">Propósitos Individuais</h2>
                                 <div className="space-y-4">
-                                    {tab.purposes.map((purpose) => (
-                                        <PurposeBlock
-                                            key={purpose.id}
-                                            purpose={purpose}
-                                            categories={categories}
-                                            isExpanded={expandedPurpose === purpose.id}
-                                            onToggleExpand={() => toggleExpand(purpose.id)}
-                                        />
-                                    ))}
+                                    {tab.purposes.map((purpose) => {
+                                        const category = categories.find((c) => c.name === purpose.title)
+                                        return (
+                                            <PurposeBlock
+                                                key={purpose.id}
+                                                purpose={purpose}
+                                                categories={categories}
+                                                isExpanded={expandedPurpose === purpose.id}
+                                                onToggleExpand={() => toggleExpand(purpose.id)}
+                                                showOnTarget={category ? categoryTargets[category.id] : true}
+                                                onTargetChange={category ? (checked) => handleTargetChange(category.id, checked) : undefined}
+                                            />
+                                        )
+                                    })}
                                 </div>
                             </>
                         ) : (
@@ -163,12 +177,12 @@ function ScoreBoxView({ fit, neutral, unfit, className }: ScoreBox & { className
                     <span className="text-green-600 font-bold text-lg">{fit}%</span>
                     <span className="text-xs text-gray-600">Fit</span>
                 </div>
-                <div className="h-full w-px bg-gray-300 mx-2"></div>
+                <div className="h-full w-px bg-gray-300 mx-2"/>
                 <div className="flex flex-col items-center">
                     <span className="text-amber-500 font-bold text-lg">{neutral}%</span>
                     <span className="text-xs text-gray-600">Neutral</span>
                 </div>
-                <div className="h-full w-px bg-gray-300 mx-2"></div>
+                <div className="h-full w-px bg-gray-300 mx-2"/>
                 <div className="flex flex-col items-center">
                     <span className="text-red-500 font-bold text-lg">{unfit}%</span>
                     <span className="text-xs text-gray-600">Unfit</span>
@@ -184,26 +198,25 @@ interface PurposeBlockProps {
     isExpanded: boolean
     categories: Category[]
     onToggleExpand: () => void
+    showOnTarget: boolean
+    onTargetChange?: (checked: boolean) => void
 }
 
-function PurposeBlock({ purpose, isExpanded, categories, onToggleExpand }: PurposeBlockProps) {
-    const category = categories.find((c) => (c.name == purpose.title ))
-    const [showOnTarget, setShowOnTarget] = useState(category?.target)
+function PurposeBlock({ purpose, isExpanded, categories, onToggleExpand, showOnTarget, onTargetChange }: PurposeBlockProps) {
+    const category = categories.find((c) => (c.name === purpose.title ))
     const [purposeFilter, setPurposeFilter] = useState("todas")
     const [isPending, startTransition] = useTransition()
 
     // Função para atualizar o target da categoria
-    const handleTargetChange = (checked: boolean) => {
-        if (!category) return
-        setShowOnTarget(checked)
-        startTransition(async () => {
-            await updateCategoryTarget(category.id, checked)
-            // Opcional: você pode adicionar lógica para feedback ao usuário aqui
+    const handleSwitchChange = (checked: boolean) => {
+        if (!category || !onTargetChange) return
+        startTransition(() => {
+            onTargetChange(checked)
         })
     }
 
     const analysis = showOnTarget ? purpose.analysis.on_target : purpose.analysis.off_target
-    
+
     const criteriaColor = {
         MAINTAIN: "text-green-600",
         IMPROVE: "text-amber-500",
@@ -246,7 +259,7 @@ function PurposeBlock({ purpose, isExpanded, categories, onToggleExpand }: Purpo
                             <span className="text-sm font-medium mr-2">
                                 Público Alvo
                             </span>
-                            <Switch checked={showOnTarget} onCheckedChange={handleTargetChange} disabled={isPending} />
+                            <Switch checked={showOnTarget} onCheckedChange={handleSwitchChange} disabled={isPending} />
                         </div>
                     </div>
 
@@ -267,6 +280,7 @@ function PurposeBlock({ purpose, isExpanded, categories, onToggleExpand }: Purpo
                     {/* Expansion toggle below Score Box */}
                     <button
                         onClick={onToggleExpand}
+                        type="button"
                         className="flex items-center justify-center text-sm text-gray-600 hover:text-gray-900 mt-2 py-1 w-full border border-gray-200 rounded-md"
                         aria-expanded={isExpanded}
                         aria-controls={`${purpose.id}-responses`}
@@ -334,6 +348,7 @@ function FilterPill({
     return (
         <button
             onClick={onClick}
+            type="button"
             className={cn(
                 "px-3 py-1 rounded-full text-sm",
                 active ? "bg-gray-200 border border-gray-300" : "text-gray-500 hover:bg-gray-100",
