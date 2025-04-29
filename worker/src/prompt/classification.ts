@@ -82,7 +82,6 @@ export const getClassification = async (researchId: string) => {
         where: (questions, { eq }) => (eq(questions.researchId, researchId)),
         with: {
             categories: true,
-            analysis: true
         },
     })
 

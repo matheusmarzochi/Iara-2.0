@@ -34,15 +34,6 @@ export type ReportAwnser = {
 export type PointOfInterest = {
     name: string;
     score_box: ScoreBox;
-    answers: ReportAwnser[]
-}
-
-export type ReportData = {
-    question_id: string;
-    question_propose: string;
-    score_box: ScoreBox;
-    point_of_interests: PointOfInterest[]
-    strategy_insights: StrategyInsights;
     analysis: {
         on_target: {
             criteria: string;
@@ -53,6 +44,15 @@ export type ReportData = {
             action: string;
         };
     }
+    answers: ReportAwnser[]
+}
+
+export type ReportData = {
+    question_id: string;
+    question_propose: string;
+    score_box: ScoreBox;
+    point_of_interests: PointOfInterest[]
+    strategy_insights: StrategyInsights;
     total_forms: number;
 }
 

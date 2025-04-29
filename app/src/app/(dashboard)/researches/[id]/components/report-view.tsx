@@ -7,23 +7,24 @@ import { Card, CardContent } from "~/components/ui/card"
 import { Tabs, TabsList, TabsTrigger, TabsContent } from "~/components/ui/tabs"
 import { Switch } from "~/components/ui/switch"
 import { cn } from "~/lib/utils"
-import { Analysis, ReportData, Research, ScoreBox } from "iara-shared/database/schema"
+import { Category, ReportData, Research, ScoreBox } from "iara-shared/database/schema"
 
 type Props = {
-    reports: ReportData[],
-    research: Omit<Research, "forms" | "questions">
+    reports: ReportData[];
+    research: Omit<Research, "forms" | "questions">;
+    categories: Category[];
 }
-// Define types for our data structure
+
 export interface Response {
     type: "fit" | "neutral" | "unfit"
     title: string
     description: string
 }
 
-
 export interface PurposeData {
     id: string
     title: string
+    poiId: string
     analysis: {
         on_target: {
             criteria: string;
@@ -51,6 +52,7 @@ export interface TabData {
     purposes: PurposeData[]
 }
 
+
 // Helper to map report data to TabData
 function mapReportsToTabs(reports: ReportData[]): TabData[] {
     return reports.map((report, idx) => ({
@@ -62,7 +64,8 @@ function mapReportsToTabs(reports: ReportData[]): TabData[] {
         purposes: report.point_of_interests.map((poi) => ({
             id: poi.name,
             title: poi.name,
-            analysis: report.analysis,
+            poiId: poi.id,
+            analysis: poi.analysis,
             targetAudience: true, // Placeholder, adjust as needed
             insight: (report.strategy_insights.improve && report.strategy_insights.improve[0]) || "",
             scores: poi.score_box,
@@ -77,7 +80,7 @@ function mapReportsToTabs(reports: ReportData[]): TabData[] {
     }))
 }
 
-export default function ReportView({ reports, research }: Props) {
+export default function ReportView({ reports, research, categories }: Props) {
     const tabData = useMemo(() => mapReportsToTabs(reports), [reports])
     const [expandedPurpose, setExpandedPurpose] = useState<string | null>(null)
 
@@ -132,6 +135,7 @@ export default function ReportView({ reports, research }: Props) {
                                         <PurposeBlock
                                             key={purpose.id}
                                             purpose={purpose}
+                                            categories={categories}
                                             isExpanded={expandedPurpose === purpose.id}
                                             onToggleExpand={() => toggleExpand(purpose.id)}
                                         />
@@ -179,19 +183,21 @@ function ScoreBoxView({ fit, neutral, unfit, className }: ScoreBox & { className
 interface PurposeBlockProps {
     purpose: PurposeData
     isExpanded: boolean
+    categories: Category[]
     onToggleExpand: () => void
 }
 
-function PurposeBlock({ purpose, isExpanded, onToggleExpand }: PurposeBlockProps) {
-    // Estado para alternar entre on_target e off_target
-    const [showOnTarget, setShowOnTarget] = useState(true)
+function PurposeBlock({ purpose, isExpanded, categories, onToggleExpand }: PurposeBlockProps) {
+    
+    
+    const category = categories.find((c) => (c.id == purpose.poiId ))
+    console.log("caregory", category)
+    console.log("purpose.poiId", purpose.poiId)
+    const [showOnTarget, setShowOnTarget] = useState(category?.target)
     const [purposeFilter, setPurposeFilter] = useState("todas")
 
-    // Seleciona analysis e insight conforme o switch
     const analysis = showOnTarget ? purpose.analysis.on_target : purpose.analysis.off_target
-    const insight = purpose.insight // Ajuste se houver insights distintos para on/off target
-
-    // Mapeamento de cor baseado no criteria
+    
     const criteriaColor = {
         MAINTAIN: "text-green-600",
         IMPROVE: "text-amber-500",
@@ -201,7 +207,15 @@ function PurposeBlock({ purpose, isExpanded, onToggleExpand }: PurposeBlockProps
         RETHINK: "text-gray-600",
     }[analysis.criteria] || "text-gray-600"
 
-    // Filter responses based on selected filter
+    const criteriaTranslation: Record<string, string> = {
+        MAINTAIN: "Manter",
+        IMPROVE: "Melhorar",
+        ABANDON: "Abandonar",
+        PIVOT: "Pivotar",
+        FOCUS: "Focar",
+        RETHINK: "Repensar",
+    }
+
     const filteredResponses =
         purposeFilter === "todas"
             ? purpose.responses
@@ -209,19 +223,17 @@ function PurposeBlock({ purpose, isExpanded, onToggleExpand }: PurposeBlockProps
 
     return (
         <div className="border rounded-lg p-4 mb-6">
-            {/* Header row with title only */}
             <div className="flex items-center mb-3">
                 <h3 className="text-lg font-semibold">{purpose.title}</h3>
             </div>
 
             <div className="flex flex-col md:flex-row justify-between gap-4">
                 <div className="flex-1">
-                    {/* Critério e ação do analysis + switch para on_target/off_target */}
                     <div className="flex flex-wrap items-center justify-between mb-3">
                         <div className="flex items-center">
                             <span className="text-sm text-gray-600 mr-2">Análise:</span>
                             <span className={cn("text-sm font-medium uppercase", criteriaColor)}>
-                                {analysis.criteria}
+                                {criteriaTranslation[analysis.criteria] || analysis.criteria}
                             </span>
                         </div>
                         <div className="flex items-center mt-2 sm:mt-0">

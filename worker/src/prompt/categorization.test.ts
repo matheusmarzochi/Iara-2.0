@@ -52,7 +52,6 @@ describe('prompt function', () => {
             sequence: 1,
             required: false,
             categories: [],
-            analysis: []
         };
 
         const forms: Form[] = [
@@ -130,7 +129,6 @@ describe('prompt function', () => {
             sequence: 1,
             required: false,
             categories: [],
-            analysis: []
         };
 
         const forms: Form[] = [];

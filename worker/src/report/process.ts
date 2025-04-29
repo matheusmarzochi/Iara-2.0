@@ -1,6 +1,6 @@
 import { db } from 'iara-shared/database'
 import { eq } from 'iara-shared/node_modules/drizzle-orm'
-import { reports, researches, type Research, PointOfInterest, ScoreBox, StrategyInsights, ReportData } from 'iara-shared/database/schema';
+import { reports, researches, type Research, PointOfInterest, ScoreBox, StrategyInsights, ReportData, analysis } from 'iara-shared/database/schema';
 
 export const getReport = async (researchId: string) => {
     const research = await db.query.researches.findFirst({
@@ -39,15 +39,13 @@ export const getReport = async (researchId: string) => {
                 with: {
                     categories: {
                         columns: {
+                            id: true,
                             name: true
+                        },
+                        with: {
+                            analysis: true
                         }
                     },
-                    analysis: {
-                        columns: {
-                            criteria: true,
-                            action: true,
-                        }
-                    }
                 }
             }
         },
@@ -103,10 +101,6 @@ export const buildQuestionReports = (research: Research): Array<ReportData> => {
                 pivot: [],
                 abandon: [],
             },
-            analysis: {
-                on_target: { criteria: '', action: '' },
-                off_target: { criteria: '', action: '' },
-            },
             total_forms: 0,
         };
 
@@ -159,10 +153,13 @@ export const buildQuestionReports = (research: Research): Array<ReportData> => {
                     // Ensure the answer is assigned to only one PointOfInterest
                     if (selectedName) {
                         if (!poiMap[selectedName]) {
-                            // Initialize PointOfInterest
                             poiMap[selectedName] = {
                                 name: selectedName,
                                 score_box: { fit: 0, neutral: 0, unfit: 0 },
+                                analysis: {
+                                    on_target: { criteria: '', action: '' },
+                                    off_target: { criteria: '', action: '' },
+                                },
                                 answers: [],
                             };
                         }
@@ -244,21 +241,27 @@ export const buildQuestionReports = (research: Research): Array<ReportData> => {
             }
         }
 
-        if (question.analysis && Array.isArray(question.analysis)) {
-            for (const a of question.analysis) {
-                if (['PIVOT', 'IMPROVE', 'MAINTAIN'].includes(a.criteria)) {
-                    questionReport.analysis.on_target = {
-                        criteria: a.criteria,
-                        action: a.action
-                    };
-                } else if (['ABANDON', 'FOCUS', 'RETHINK'].includes(a.criteria)) {
-                    questionReport.analysis.off_target = {
-                        criteria: a.criteria,
-                        action: a.action
-                    };
+        for (const poi of questionReport.point_of_interests) {
+            const category = question.categories.find(c => c.name === poi.name)
+            if (category) {
+                for (const a of category.analysis) {
+                    if (a.categoryId == category.id) {
+                        if (['PIVOT', 'IMPROVE', 'MAINTAIN'].includes(a.criteria)) {
+                            poi.analysis.on_target = {
+                                criteria: a.criteria,
+                                action: a.action
+                            };
+                        } else if (['ABANDON', 'FOCUS', 'RETHINK'].includes(a.criteria)) {
+                            poi.analysis.off_target = {
+                                criteria: a.criteria,
+                                action: a.action
+                            };
+                        }
+                    }
                 }
             }
         }
+
 
         questionReports.push(({
             ...questionReport,

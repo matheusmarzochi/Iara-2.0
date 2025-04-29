@@ -1,7 +1,7 @@
 import { index, pgEnum, pgTable, text, timestamp, uuid, unique } from 'drizzle-orm/pg-core';
 import { relations } from 'drizzle-orm';
 import { createInsertSchema } from "drizzle-zod";
-import { questions } from './question';
+import { categories } from './category';
 
 export const analysisCriteria = pgEnum("analysis_criteria", [
     'PIVOT',
@@ -16,7 +16,7 @@ export const analysis = pgTable(
     'analysis',
     {
         id: uuid('id').primaryKey().defaultRandom(),
-        questionId: uuid('question_id').notNull().references(() => questions.id),
+        categoryId: uuid('category_id').notNull().references(() => categories.id),
         criteria: analysisCriteria("criteria").notNull(),
         action: text('action').notNull(),
         createdAt: timestamp("created_at", { mode: "date", withTimezone: true })
@@ -24,15 +24,15 @@ export const analysis = pgTable(
             .defaultNow(),
     },
     (t) => ({
-        questionId: index("analysis_questionId_index").on(t.questionId),
-        questionIdCriteriaUnique: unique("analysis_questionId_criteria_unique").on(t.questionId, t.criteria),
+        categoryId: index("analysis_categoryId_index").on(t.categoryId),
+        categoryIdCriteriaUnique: unique("analysis_categoryId_criteria_unique").on(t.categoryId, t.criteria),
     }),
 );
 
 export const analysisRelations = relations(analysis, ({ one }) => ({
-    question: one(questions, {
-        fields: [analysis.questionId],
-        references: [questions.id]
+    category: one(categories, {
+        fields: [analysis.categoryId],
+        references: [categories.id]
     }),
 }))
 

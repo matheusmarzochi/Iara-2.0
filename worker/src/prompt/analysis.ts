@@ -1,10 +1,9 @@
 import { eq } from "iara-shared/node_modules/drizzle-orm";
 import { db } from "iara-shared/database"
-import { analysis, questions, type Form, Question } from "iara-shared/database/schema"
+import { analysis, type Form, Question } from "iara-shared/database/schema"
 import { promptRequest, stringToJson } from "../integration/prompt"
 import { filterAnswersBySequence, filterQuestionsBySequence } from "./helper"
 
-// Agrupa respostas por score
 function groupAnswersByScore(forms: Form[], sequence: number) {
     const fit: Form["answers"] = [];
     const regular: Form["answers"] = [];
@@ -21,7 +20,6 @@ function groupAnswersByScore(forms: Form[], sequence: number) {
     return { fit, regular, unfit };
 }
 
-// Gera o prompt para análise de uma pergunta com base nas respostas e critério
 export const prompt = (question: Question, forms: Form[], criteria: string) => {
     let prompt = "Você recebeu uma pesquisa com a seguinte pergunta e lista de respostas.\n";
     prompt += "Seu objetivo é analisar as respostas e sugerir uma ação para a pergunta, escolhendo um critério e uma ação recomendada.\n\n";
@@ -47,7 +45,6 @@ type PromptValidation = {
     data: { criteria: string, action: string } | null
 }
 
-// Valida se a saída do modelo está no formato esperado
 export const promptValidation = (output: any): PromptValidation => {
     if (
         typeof output !== "object" ||
@@ -57,7 +54,7 @@ export const promptValidation = (output: any): PromptValidation => {
     ) {
         return { ok: false, data: null }
     }
-    // Critérios válidos
+
     const validCriteria = ["PIVOT", "IMPROVE", "MAINTAIN", "ABANDON", "FOCUS", "RETHINK"];
     if (!validCriteria.includes(output.criteria)) {
         return { ok: false, data: null }
@@ -65,7 +62,7 @@ export const promptValidation = (output: any): PromptValidation => {
     return { ok: true, data: { criteria: output.criteria, action: output.action } }
 }
 
-// Executa a análise para todas as perguntas de uma pesquisa e salva no banco
+
 export const getAnalysis = async (researchId: string) => {
     const questions = await db.query.questions.findMany({
         where: (questions, { eq }) => (eq(questions.researchId, researchId)),
@@ -91,55 +88,57 @@ export const getAnalysis = async (researchId: string) => {
         return
     }
 
-    for await (const question of questions) {
-        let attempt = 0;
-        let isValid = false;
+    for (const question of questions) {
+        if (!question.categories || question.categories.length === 0) continue;
 
-        await db.delete(analysis).where(eq(analysis.questionId, question.id))
+        for (const category of question.categories) {
+            let attempt = 0;
+            let isValid = false;
 
-        // Agrupa respostas por score
-        const { fit, regular, unfit } = groupAnswersByScore(forms, question.sequence);
+            await db.delete(analysis).where(eq(analysis.categoryId, category.id))
 
-        // Determina critérios de acordo com o grupo majoritário
-        let criteriaList: string[] = [];
-        if (fit.length >= regular.length && fit.length >= unfit.length) {
-            criteriaList = ["MAINTAIN", "RETHINK"];
-        } else if (regular.length > fit.length && regular.length >= unfit.length) {
-            criteriaList = ["IMPROVE", "FOCUS"];
-        } else {
-            criteriaList = ["PIVOT", "ABANDON"];
-        }
+            const { fit, regular, unfit } = groupAnswersByScore(forms, question.sequence);
 
-        for (const criteria of criteriaList) {
-            attempt = 0;
-            isValid = false;
-            while (attempt < 3 && !isValid) {
-                const promptInput = prompt(
-                    filterQuestionsBySequence(questions, question.sequence)[0],
-                    filterAnswersBySequence(forms, question.sequence),
-                    criteria
-                );
+            let criteriaList: string[] = [];
+            if (fit.length >= regular.length && fit.length >= unfit.length) {
+                criteriaList = ["MAINTAIN", "RETHINK"];
+            } else if (regular.length > fit.length && regular.length >= unfit.length) {
+                criteriaList = ["IMPROVE", "FOCUS"];
+            } else {
+                criteriaList = ["PIVOT", "ABANDON"];
+            }
 
-                const output = await promptRequest(promptInput, "analysis", question.id + "-" + criteria);
-                const { object } = stringToJson(output);
+            for (const criteria of criteriaList) {
+                attempt = 0;
+                isValid = false;
+                while (attempt < 3 && !isValid) {
+                    const promptInput = prompt(
+                        filterQuestionsBySequence([question], question.sequence)[0],
+                        filterAnswersBySequence(forms, question.sequence),
+                        criteria
+                    );
 
-                const { ok, data } = promptValidation(object);
-                isValid = ok
+                    const output = await promptRequest(promptInput, "analysis", category.id + "-" + criteria);
+                    const { object } = stringToJson(output);
 
-                if (!isValid) {
-                    attempt++;
-                    if (attempt >= 3) {
-                        console.error(`Validation failed after ${attempt} attempts for question ID ${question.id} and criteria ${criteria}`);
+                    const { ok, data } = promptValidation(object);
+                    isValid = ok
+
+                    if (!isValid) {
+                        attempt++;
+                        if (attempt >= 3) {
+                            console.error(`Validation failed after ${attempt} attempts for category ID ${category.id} and criteria ${criteria}`);
+                        }
+                        continue
                     }
-                    continue
-                }
 
-                if (data) {
-                    await db.insert(analysis).values({
-                        questionId: question.id,
-                        criteria: data.criteria as "PIVOT" | "IMPROVE" | "MAINTAIN" | "ABANDON" | "FOCUS" | "RETHINK",
-                        action: data.action,
-                    })
+                    if (data) {
+                        await db.insert(analysis).values({
+                            categoryId: category.id,
+                            criteria: data.criteria as "PIVOT" | "IMPROVE" | "MAINTAIN" | "ABANDON" | "FOCUS" | "RETHINK",
+                            action: data.action,
+                        })
+                    }
                 }
             }
         }

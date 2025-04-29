@@ -1,6 +1,6 @@
 import type React from "react"
 import { db } from "iara-shared/database"
-import { reports, researches } from "iara-shared/database/schema"
+import { reports, researches, categories } from "iara-shared/database/schema"
 import { eq } from "iara-shared/node_modules/drizzle-orm"
 import ReportView from "../components/report-view"
 
@@ -18,11 +18,23 @@ export default async function SurveyDashboard({ params }: Props) {
 
   const research = await db.query.researches.findFirst({
     where: eq(researches.id, params.id),
+    with: {
+      questions: {
+        with: {
+          categories: true
+        }
+      }
+    }
   })
 
   if (!report || !research) {
     return <div>No report or research found</div>
   }
 
-  return <ReportView reports={report.data} research={research} />
+  
+
+  const categoryList = research?.questions.map((question) => question.categories).flat()
+  console.log(categoryList)
+
+  return <ReportView reports={report.data} research={research} categories={categoryList} />
 }
