@@ -63,7 +63,7 @@ export default async function SurveyDashboard({ params }: Props) {
         </div>
         <h3 className="text-lg font-bold">Resultados</h3>
       </header>
-      <ReportView reports={report.data} research={research} categories={categoryList} />
+      <ReportView reports={report.data} research={research} categories={categoryList} enableSwitch={true} />
     </div>
   )
 }

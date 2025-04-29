@@ -14,6 +14,7 @@ type Props = {
     reports: ReportData[];
     research: Omit<Research, "forms" | "questions">;
     categories: Category[];
+    enableSwitch: boolean;
 }
 
 export interface Response {
@@ -79,7 +80,7 @@ function mapReportsToTabs(reports: ReportData[]): TabData[] {
     }))
 }
 
-export default function ReportView({ reports, research, categories }: Props) {
+export default function ReportView({ reports, research, categories, enableSwitch }: Props) {
     const tabData = useMemo(() => mapReportsToTabs(reports), [reports])
     const [expandedPurpose, setExpandedPurpose] = useState<string | null>(null)
 
@@ -89,7 +90,9 @@ export default function ReportView({ reports, research, categories }: Props) {
 
     const handleTargetChange = (categoryId: string, checked: boolean) => {
         setCategoryTargets(prev => ({ ...prev, [categoryId]: checked }))
-        updateCategoryTarget(categoryId, checked)
+        if (enableSwitch) {
+            updateCategoryTarget(categoryId, checked)
+        }
     }
 
     const toggleExpand = (purposeId: string) => {
