@@ -42,4 +42,4 @@ db-migrate:
 		--env-file .env.production \
 		-v ./shared/:/code \
 		-w /code \
-		iara-app npm run db:migrate
+		iara-app npm run db:push

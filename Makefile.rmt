@@ -12,3 +12,11 @@ bash-worker:
 		-v ./worker/:/code/worker \
 		-v ./shared/:/code/shared \
 		iara-worker bash
+
+db-migrate:
+	@docker run -ti --rm \
+		--name iara-db-migrate \
+		--env-file .env.remote \
+		-v ./shared/:/code \
+		-w /code \
+		iara-app npm run db:push

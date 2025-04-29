@@ -157,7 +157,7 @@ export default async function ResearchPage({ params }: Props) {
                 <div className="space-y-4">
                     <h3 className="text-xl font-medium">Ações</h3>
 
-                    {(inAnalysis || inProcessing) && (
+                    {(inAnalysis || isOpened) && (
                         <div className="mb-4 p-4 border rounded">
                         <h4 className="font-medium">Processar Pesquisa</h4>
                         <p className="text-sm text-muted-foreground">
