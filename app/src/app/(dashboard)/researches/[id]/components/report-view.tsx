@@ -102,8 +102,8 @@ export default function ReportView({ reports, research, categories, enableSwitch
     if (!tabData.length) {
         return (
             <div className="container mx-auto py-6 px-4 max-w-6xl">
-                <div className="bg-gray-50 rounded-lg p-8 text-center">
-                    <p className="text-gray-500">Nenhum relatório disponível.</p>
+                <div className="bg-[#F8FAFC] dark:bg-sky-900 rounded-lg p-8 text-center border border-gray-300 dark:border-sky-800">
+                    <p className="text-muted-foreground dark:text-white">Nenhum relatório disponível.</p>
                 </div>
             </div>
         )
@@ -112,13 +112,13 @@ export default function ReportView({ reports, research, categories, enableSwitch
     return (
         <div className="container mx-auto py-6 px-4 max-w-6xl">
             <Tabs defaultValue={tabData[0].id} className="w-full">
-                <div className="border-b mb-6">
+                <div className="border-b dark:border-sky-800 mb-6">
                     <TabsList className="w-full justify-start h-auto p-0 bg-transparent">
                         {tabData.map((tab) => (
                             <TabsTrigger
                                 key={tab.id}
                                 value={tab.id}
-                                className="data-[state=active]:bg-gray-100 data-[state=active]:border-b-2 data-[state=active]:border-gray-900 data-[state=active]:rounded-none data-[state=active]:shadow-none rounded-t-lg px-6 py-3 text-base font-medium"
+                                className="data-[state=active]:bg-[#F8FAFC] dark:data-[state=active]:bg-sky-900 data-[state=active]:border-b-2 data-[state=active]:border-gray-900 dark:data-[state=active]:border-sky-200 data-[state=active]:rounded-none data-[state=active]:shadow-none rounded-t-lg px-6 py-3 text-base font-medium"
                             >
                                 {tab.title} ({tab.count})
                             </TabsTrigger>
@@ -129,7 +129,7 @@ export default function ReportView({ reports, research, categories, enableSwitch
                 {tabData.map((tab) => (
                     <TabsContent key={tab.id} value={tab.id} className="mt-0 focus-visible:outline-none focus-visible:ring-0">
                         <div className="flex flex-col md:flex-row justify-between items-start md:items-center mb-8 gap-4">
-                            <h1 className="text-lg md:text-xl font-bold flex-1">{tab.question}</h1>
+                            <h1 className="text-lg md:text-xl font-bold flex-1 text-foreground dark:text-white">{tab.question}</h1>
                             <ScoreBoxView
                                 fit={Math.round(100 * tab.overallScores.fit / tab.count )}
                                 neutral={Math.round(100 * tab.overallScores.neutral / tab.count)}
@@ -140,7 +140,7 @@ export default function ReportView({ reports, research, categories, enableSwitch
 
                         {tab.purposes.length > 0 ? (
                             <>
-                                <h2 className="text-lg font-bold mb-4">Propósitos Individuais</h2>
+                                <h2 className="text-lg font-bold mb-4 text-foreground dark:text-white">Propósitos Individuais</h2>
                                 <div className="space-y-4">
                                     {tab.purposes.map((purpose) => {
                                         const category = categories.find((c) => c.name === purpose.title)
@@ -159,9 +159,9 @@ export default function ReportView({ reports, research, categories, enableSwitch
                                 </div>
                             </>
                         ) : (
-                            <div className="bg-gray-50 rounded-lg p-8 text-center">
-                                <p className="text-gray-500">Conteúdo do {tab.title} seria exibido aqui.</p>
-                                <p className="text-gray-400 text-sm mt-2">Dados ainda em análise.</p>
+                            <div className="bg-[#F8FAFC] dark:bg-sky-900 rounded-lg p-8 text-center border border-gray-300 dark:border-sky-800">
+                                <p className="text-muted-foreground dark:text-white">Conteúdo do {tab.title} seria exibido aqui.</p>
+                                <p className="text-gray-400 dark:text-gray-200 text-sm mt-2">Dados ainda em análise.</p>
                             </div>
                         )}
                     </TabsContent>
@@ -171,31 +171,29 @@ export default function ReportView({ reports, research, categories, enableSwitch
     )
 }
 
-// Score Box Component
 function ScoreBoxView({ fit, neutral, unfit, className }: ScoreBox & { className?: string }) {
     return (
-        <div className={cn("bg-blue-50 rounded-lg p-4 flex flex-col justify-center", className)}>
+        <div className={cn("bg-[#F8FAFC] dark:bg-sky-900 rounded-lg p-4 flex flex-col justify-center border border-gray-300 dark:border-sky-800", className)}>
             <div className="flex items-center justify-between h-full">
                 <div className="flex flex-col items-center">
-                    <span className="text-green-600 font-bold text-lg">{fit}%</span>
-                    <span className="text-xs text-gray-600">Fit</span>
+                    <span className="text-green-600 dark:text-green-400 font-bold text-lg">{fit}%</span>
+                    <span className="text-xs text-muted-foreground dark:text-white">Fit</span>
                 </div>
-                <div className="h-full w-px bg-gray-300 mx-2"/>
+                <div className="h-full w-px bg-gray-300 dark:bg-sky-800 mx-2"/>
                 <div className="flex flex-col items-center">
-                    <span className="text-amber-500 font-bold text-lg">{neutral}%</span>
-                    <span className="text-xs text-gray-600">Neutral</span>
+                    <span className="text-amber-500 dark:text-amber-400 font-bold text-lg">{neutral}%</span>
+                    <span className="text-xs text-muted-foreground dark:text-white">Neutral</span>
                 </div>
-                <div className="h-full w-px bg-gray-300 mx-2"/>
+                <div className="h-full w-px bg-gray-300 dark:bg-sky-800 mx-2"/>
                 <div className="flex flex-col items-center">
-                    <span className="text-red-500 font-bold text-lg">{unfit}%</span>
-                    <span className="text-xs text-gray-600">Unfit</span>
+                    <span className="text-red-500 dark:text-red-400 font-bold text-lg">{unfit}%</span>
+                    <span className="text-xs text-muted-foreground dark:text-white">Unfit</span>
                 </div>
             </div>
         </div>
     )
 }
 
-// Purpose Block Component
 interface PurposeBlockProps {
     purpose: PurposeData
     isExpanded: boolean
@@ -210,7 +208,6 @@ function PurposeBlock({ purpose, isExpanded, categories, onToggleExpand, showOnT
     const [purposeFilter, setPurposeFilter] = useState("todas")
     const [isPending, startTransition] = useTransition()
 
-    // Função para atualizar o target da categoria
     const handleSwitchChange = (checked: boolean) => {
         if (!category || !onTargetChange) return
         startTransition(() => {
@@ -244,35 +241,44 @@ function PurposeBlock({ purpose, isExpanded, categories, onToggleExpand, showOnT
             : purpose.responses.filter((response) => response.type === purposeFilter)
 
     return (
-        <div className="border rounded-lg p-4 mb-6">
+        <div className="border dark:border-sky-800 rounded-lg p-4 mb-6 bg-white dark:bg-sky-950">
             <div className="flex items-center mb-3">
-                <h3 className="text-lg font-semibold">{purpose.title}</h3>
+                <h3 className="text-lg font-semibold text-foreground dark:text-white">{purpose.title}</h3>
             </div>
 
             <div className="flex flex-col md:flex-row justify-between gap-4">
                 <div className="flex-1">
                     <div className="flex flex-wrap items-center justify-between mb-3">
                         <div className="flex items-center">
-                            <span className="text-sm text-gray-600 mr-2">Análise:</span>
+                            <span className="text-sm text-muted-foreground dark:text-white mr-2">Análise:</span>
                             <span className={cn("text-sm font-medium uppercase", criteriaColor)}>
                                 {criteriaTranslation[analysis.criteria] || analysis.criteria}
                             </span>
                         </div>
                         <div className="flex items-center mt-2 sm:mt-0">
-                            <span className="text-sm font-medium mr-2">
+                            <span className="text-sm font-medium mr-2 text-muted-foreground dark:text-white">
                                 Público Alvo
                             </span>
-                            <Switch checked={showOnTarget} onCheckedChange={handleSwitchChange} disabled={isPending} />
+                            {/* Ajuste visual do Switch */}
+                            <Switch
+                                checked={showOnTarget}
+                                onCheckedChange={handleSwitchChange}
+                                disabled={isPending}
+                                className={cn(
+                                    showOnTarget
+                                        ? "data-[state=checked]:bg-sky-600 dark:data-[state=checked]:bg-sky-400"
+                                        : ""
+                                )}
+                            />
                         </div>
                     </div>
 
-                    <div className="bg-blue-50 p-3 rounded-md mb-4">
-                        <p className="text-sm">{analysis.action}</p>
+                    <div className="bg-[#F8FAFC] dark:bg-sky-900 p-3 rounded-md mb-4 border border-gray-300 dark:border-sky-800">
+                        <p className="text-sm text-foreground dark:text-white">{analysis.action}</p>
                     </div>
                 </div>
 
                 <div className="md:w-[180px] flex flex-col">
-                    {/* Score Box */}
                     <ScoreBoxView
                         fit={Math.round(100 * purpose.scores.fit / purpose.responseCount)}
                         neutral={Math.round(100 * purpose.scores.neutral / purpose.responseCount)}
@@ -280,11 +286,10 @@ function PurposeBlock({ purpose, isExpanded, categories, onToggleExpand, showOnT
                         className="flex-1"
                     />
 
-                    {/* Expansion toggle below Score Box */}
                     <button
                         onClick={onToggleExpand}
                         type="button"
-                        className="flex items-center justify-center text-sm text-gray-600 hover:text-gray-900 mt-2 py-1 w-full border border-gray-200 rounded-md"
+                        className="flex items-center justify-center text-sm text-muted-foreground dark:text-white hover:text-foreground dark:hover:text-white mt-2 py-1 w-full border border-gray-200 dark:border-sky-700 rounded-md"
                         aria-expanded={isExpanded}
                         aria-controls={`${purpose.id}-responses`}
                     >
@@ -294,11 +299,10 @@ function PurposeBlock({ purpose, isExpanded, categories, onToggleExpand, showOnT
                 </div>
             </div>
 
-            {/* Integrated Response Block - only visible when expanded */}
             {isExpanded && (
-                <div id={`${purpose.id}-responses`} className="mt-4 border-t pt-4">
+                <div id={`${purpose.id}-responses`} className="mt-4 border-t dark:border-sky-800 pt-4">
                     <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center mb-4">
-                        <h4 className="font-medium text-gray-900">Respostas:</h4>
+                        <h4 className="font-medium text-foreground dark:text-white">Respostas:</h4>
                         <div className="flex space-x-2 mt-2 sm:mt-0">
                             <FilterPill active={purposeFilter === "todas"} onClick={() => setPurposeFilter("todas")}>
                                 Todas ({purpose.responseCount})
@@ -315,7 +319,6 @@ function PurposeBlock({ purpose, isExpanded, categories, onToggleExpand, showOnT
                         </div>
                     </div>
 
-                    {/* Response cards grid */}
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
                         {filteredResponses.map((response, index) => (
                             <ResponseCard
@@ -327,7 +330,7 @@ function PurposeBlock({ purpose, isExpanded, categories, onToggleExpand, showOnT
                         ))}
 
                         {filteredResponses.length === 0 && (
-                            <div className="col-span-3 py-8 text-center text-gray-500">
+                            <div className="col-span-3 py-8 text-center text-muted-foreground dark:text-white">
                                 Nenhuma resposta encontrada com este filtro.
                             </div>
                         )}
@@ -338,7 +341,6 @@ function PurposeBlock({ purpose, isExpanded, categories, onToggleExpand, showOnT
     )
 }
 
-// Filter Pill Component
 function FilterPill({
     children,
     active,
@@ -354,7 +356,9 @@ function FilterPill({
             type="button"
             className={cn(
                 "px-3 py-1 rounded-full text-sm",
-                active ? "bg-gray-200 border border-gray-300" : "text-gray-500 hover:bg-gray-100",
+                active
+                    ? "bg-[#F8FAFC] dark:bg-sky-900 border border-gray-300 dark:border-sky-800 text-foreground dark:text-white"
+                    : "text-muted-foreground dark:text-white hover:bg-gray-100 dark:hover:bg-sky-800",
             )}
         >
             {children}
@@ -362,26 +366,24 @@ function FilterPill({
     )
 }
 
-// Response Card Component
 function ResponseCard({ type, title, description }: Response) {
     const tagColors = {
-        fit: "bg-green-100 text-green-800",
-        neutral: "bg-amber-100 text-amber-800",
-        unfit: "bg-red-100 text-red-800",
+        fit: "bg-green-100 dark:bg-green-900 text-green-800 dark:text-green-300",
+        neutral: "bg-amber-100 dark:bg-amber-900 text-amber-800 dark:text-amber-300",
+        unfit: "bg-red-100 dark:bg-red-900 text-red-800 dark:text-red-300",
     }
 
     return (
-        <Card className="bg-blue-50">
+        <Card className="bg-[#F8FAFC] dark:bg-sky-900 border border-gray-300 dark:border-sky-800">
             <CardContent className="p-4">
                 <div className="flex flex-col gap-2">
-                    {/* Title row with sentiment tag on the right */}
                     <div className="flex justify-between items-center">
-                        <h4 className="font-bold text-gray-900">{title}</h4>
+                        <h4 className="font-bold text-foreground dark:text-white">{title}</h4>
                         <span className={cn("text-xs px-2 py-0.5 rounded-full", tagColors[type])}>
                             {type.charAt(0).toUpperCase() + type.slice(1)}
                         </span>
                     </div>
-                    <p className="text-sm text-gray-600">{description}</p>
+                    <p className="text-sm text-muted-foreground dark:text-white">{description}</p>
                 </div>
             </CardContent>
         </Card>
