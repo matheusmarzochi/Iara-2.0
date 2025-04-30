@@ -1,12 +1,11 @@
 "use client"
 
-import { CheckCircle, Linkedin, Facebook, Twitter, MapPin, Mail, Phone } from "lucide-react"
+import { CheckCircle } from "lucide-react"
 import Image from "next/image"
 import Link from "next/link"
 import { useState, useEffect } from "react"
 import { useTheme } from "next-themes"
 import { texts } from "~/lib/texts"
-import { Logo } from "~/components/logo";
 import { SignInButton, SignUpButton, SignedIn, SignedOut } from '@clerk/nextjs'
 import { Button } from "~/components/ui/button"
 import Navbar from "~/components/navbar"
@@ -18,8 +17,18 @@ export default function IaraLandingPage() {
   const { theme, setTheme } = useTheme()
 
   useEffect(() => {
+    const savedLang = typeof window !== "undefined" ? localStorage.getItem("iara-lang") : null;
+    if (savedLang === "en" || savedLang === "br") {
+      setLanguage(savedLang);
+    }
     setMounted(true)
   }, [])
+
+  useEffect(() => {
+    if (mounted) {
+      localStorage.setItem("iara-lang", language);
+    }
+  }, [language, mounted])
 
   const t = texts[language]
 

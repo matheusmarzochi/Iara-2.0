@@ -74,8 +74,18 @@ export default function WebnarsPage() {
     const { theme, setTheme } = useTheme()
 
     useEffect(() => {
+        const savedLang = typeof window !== "undefined" ? localStorage.getItem("iara-lang") : null;
+        if (savedLang === "en" || savedLang === "br") {
+            setLanguage(savedLang);
+        }
         setMounted(true)
     }, [])
+
+    useEffect(() => {
+        if (mounted) {
+            localStorage.setItem("iara-lang", language);
+        }
+    }, [language, mounted])
 
     return (
         <div className="flex min-h-screen flex-col">

@@ -79,8 +79,18 @@ export default function CarrearPage() {
     const { theme, setTheme } = useTheme()
 
     useEffect(() => {
+        const savedLang = typeof window !== "undefined" ? localStorage.getItem("iara-lang") : null;
+        if (savedLang === "en" || savedLang === "br") {
+            setLanguage(savedLang);
+        }
         setMounted(true)
     }, [])
+
+    useEffect(() => {
+        if (mounted) {
+            localStorage.setItem("iara-lang", language);
+        }
+    }, [language, mounted])
 
     // Adiciona textos internacionalizados para o título e descrição
     const teamTexts = {
