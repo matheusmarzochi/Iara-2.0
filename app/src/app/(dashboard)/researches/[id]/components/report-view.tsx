@@ -134,7 +134,7 @@ export default function ReportView({ reports, research, categories, enableSwitch
                                 fit={Math.round(100 * tab.overallScores.fit / tab.count )}
                                 neutral={Math.round(100 * tab.overallScores.neutral / tab.count)}
                                 unfit={Math.round(100 * tab.overallScores.unfit / tab.count)}
-                                className="min-w-[180px]"
+                                className="w-full md:w-[200px]"
                             />
                         </div>
 
@@ -320,14 +320,19 @@ function PurposeBlock({ purpose, isExpanded, categories, onToggleExpand, showOnT
                     </div>
 
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-                        {filteredResponses.map((response, index) => (
-                            <ResponseCard
-                                key={`${purpose.id}-response-${index}`}
-                                type={response.type}
-                                title={response.title}
-                                description={response.description}
-                            />
-                        ))}
+                        {filteredResponses
+                            .sort((a, b) => {
+                                const order = { fit: 1, neutral: 2, unfit: 3 }
+                                return order[a.type] - order[b.type]
+                            })
+                            .map((response, index) => (
+                                <ResponseCard
+                                    key={`${purpose.id}-response-${index}`}
+                                    type={response.type}
+                                    title={response.title}
+                                    description={response.description}
+                                />
+                            ))}
 
                         {filteredResponses.length === 0 && (
                             <div className="col-span-3 py-8 text-center text-muted-foreground dark:text-white">
