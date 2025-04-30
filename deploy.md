@@ -1,4 +1,4 @@
-2025-04-30 #2 - Landing Page Language
+2025-04-30 #3 - Landing Page Language
 2025-04-29 #7 - New Report
 2025-04-19 #1 - Webinar
 2025-04-18 #2 - SEO / Robots, F4P Guode, Landing Page Updates
