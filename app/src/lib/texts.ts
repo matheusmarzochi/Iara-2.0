@@ -126,6 +126,100 @@ export const texts = {
       en: "English",
       pt: "Portuguese",
     },
+    f4pGuide: {
+      title: "Complete Guide to the F4P Method",
+      titleHighlight: " (Fit for Purpose)",
+      readingTimeLabel: "Reading time:",
+      readingTime: "8 minutes",
+      levelLabel: "Level:",
+      level: "Intermediate",
+      publishedAt: "Published on 04/18/2025",
+      author: "By Projeto Iara",
+      tags: [
+        "UX Research",
+        "Product Management",
+        "Fit for Purpose",
+        "F4P",
+        "Product Metrics"
+      ],
+      intro: "Have you ever wondered why your customers choose — and keep using — your product? If your answer relies more on guesses than concrete data, the F4P (Fit for Purpose) method might be the compass your strategy is missing. In this guide, we show what it is, why it matters, and, most importantly, how to apply F4P in software development and user research.",
+      whatIsTitle: "What is the F4P Method?",
+      whatIsDesc: "Created by David J. Anderson and Alexei Zheglov in 2017, F4P starts from a simple premise: a product only succeeds when it perfectly fits the purpose for which the customer adopted it. To assess this fit, the framework considers four dimensions:",
+      dimensions: [
+        { title: "Fit for Purpose", desc: "Does it deliver the customer's core objective?" },
+        { title: "Fit for Use", desc: "Is it usable, reliable, and easy to use?" },
+        { title: "Fit for the World", desc: "Does it remain relevant in a constantly changing market context?" },
+        { title: "Fit for Perceived Value", desc: "Is it worth the price and effort invested, according to the customer's perception?" }
+      ],
+      whatIsBottom: "By bringing the 'why' to the center of product decisions, F4P helps UX and Product teams segment users by motivation and measure metrics that truly matter.",
+      whyTitle: "Why use F4P in Software Development and UX?",
+      tableHeaders: ["Benefit", "Impact", "How F4P helps"],
+      tableRows: [
+        {
+          benefit: "Waste reduction",
+          impact: "Fewer useless features, leaner backlog",
+          how: "Segments by purpose → prioritizes what generates real value"
+        },
+        {
+          benefit: "Customer-oriented metrics",
+          impact: "KPIs that reflect satisfaction, not 'vanity'",
+          how: "Converts fitness criteria into trackable metrics"
+        },
+        {
+          benefit: "Discovery of new segments",
+          impact: "Opens opportunities for new products or plans",
+          how: "Analyzes purpose patterns in F4P Card data"
+        },
+        {
+          benefit: "Strategic alignment",
+          impact: "Roadmap guided by clear objectives",
+          how: "Continuous feedback cycle → improvement actions"
+        }
+      ],
+      stepsTitle: "Step-by-step to apply F4P",
+      step1Title: "1. Collect feedback with the F4P Card",
+      step1Desc: "Conduct an interview or send a questionnaire, using the F4P card (in-app, email) containing three questions:",
+      step1Questions: [
+        "What were up to 3 reasons you chose our product?",
+        "From 0 to 5, how well was each reason met?",
+        "Why did you give that score?"
+      ],
+      step1Bottom: "Limiting to three reasons forces the customer to focus on what really matters.",
+      cardExampleTitle: "Example of F4P Card (Management SaaS):",
+      cardExample: "1. I chose the product because: (a) Ease of use (b) Affordable price (c) ERP integration.\n2. Scores: Use - 5 · Price - 4 · Integration - 2\n3. Explanation: Very intuitive interface, fair price, but integration had errors.",
+      step2Title: "2. Build the Fitness Box Score",
+      step2Desc: "Tabulate the answers and visualize how many purposes received high (4-5), medium (3), or low (0-2) scores. This quickly reveals where the product is (or is not) fit for purpose.",
+      boxScoreExample: `Fitness Box Score - Release 24.03
+┌─────────────┬────────┬───────┬───────┐
+│ Purposes    │  4-5   │   3   │  0-2  │
+├─────────────┼────────┼───────┼───────┤
+│ 29          │  62%   │  28%  │  10%  │
+└─────────────┴────────┴───────┴───────┘`,
+      step3Title: "3. Identify segments by purpose",
+      step3Desc: "Group similar answers. For example, you might discover:",
+      step3Segments: [
+        { title: "Casual Segment", desc: "seeks speed and low price, dissatisfied with speed." },
+        { title: "Pro Segment", desc: "needs robust integrations and support, satisfied with both." }
+      ],
+      step3Bottom: "Decide which segments to prioritize or adjust in the next iteration.",
+      step4Title: "4. Define metrics and close the improvement cycle",
+      step4Desc: "Turn the criteria into trackable KPIs (e.g., API response time < 300 ms, 99.9% SLA). Track them release by release and redo the F4P Card periodically.",
+      cycleAlt: "F4P Cycle",
+      tipsTitle: "Best practices and quick tips",
+      tips: [
+        { strong: "Integrate into your workflow: ", text: "add sending the F4P Card as part of the 'Results Collection' for critical features." },
+        { strong: "Combine methods: ", text: "use usability tests to find interaction problems and F4P to see if the solution covers the macro objective." },
+        { strong: "Avoid vanity metrics: ", text: "if it doesn't reflect user value, it shouldn't be a KPI." }
+      ],
+      conclusionTitle: "Conclusion",
+      conclusionDesc: "F4P does not replace classic UX Research methods — it complements your toolkit by answering the most important question: 'Are we delivering what the customer really wants?' By collecting purposes, scores, and justifications in a lightweight, recurring process, you:",
+      conclusionList: [
+        { strong: "Align product, UX, and business", text: "on the same success metric." },
+        { strong: "Prioritize features", text: "that move real satisfaction indicators." },
+        { strong: "Increase retention", text: "by serving the most valuable segments." }
+      ],
+      conclusionBottom: "Ready to try F4P? Start by creating your first F4P Card and discover why your customers stay — or leave — your product."
+    },
   },
   
   br: {
@@ -254,6 +348,100 @@ export const texts = {
     languageSelector: {
       en: "Inglês",
       pt: "Português",
+    },
+    f4pGuide: {
+      title: "Guia Completo do Método F4P",
+      titleHighlight: " (Fit for Purpose)",
+      readingTimeLabel: "Tempo de leitura:",
+      readingTime: "8 minutos",
+      levelLabel: "Nível:",
+      level: "Intermediário",
+      publishedAt: "Publicado em 18/04/2025",
+      author: "Por Projeto Iara",
+      tags: [
+        "UX Research",
+        "Product Management",
+        "Fit for Purpose",
+        "F4P",
+        "Métricas de Produto"
+      ],
+      intro: "Você já se perguntou por que seus clientes escolhem — e permanecem usando — o seu produto? Se a resposta envolver mais palpites do que dados concretos, o método F4P (Fit for Purpose) pode ser exatamente a bússola que faltava na sua estratégia. Neste guia, mostramos o que é, por que importa e, principalmente, como aplicar o F4P no desenvolvimento de software e na pesquisa com usuários.",
+      whatIsTitle: "O que é o Método F4P?",
+      whatIsDesc: "Criado por David J. Anderson e Alexei Zheglov em 2017, o F4P parte de uma premissa simples: um produto só tem sucesso quando é perfeitamente adequado ao propósito pelo qual o cliente o adotou. Para avaliar essa adequação, o framework considera quatro dimensões:",
+      dimensions: [
+        { title: "Fit for Purpose", desc: "Entrega o objetivo central do cliente?" },
+        { title: "Fit for Use", desc: "É usável, confiável e fácil de utilizar?" },
+        { title: "Fit for the World", desc: "Continua relevante em um contexto de mercado em constante mudança?" },
+        { title: "Fit for Perceived Value", desc: "Vale o preço e o esforço investidos segundo a percepção do cliente?" }
+      ],
+      whatIsBottom: "Ao trazer o “porquê” para o centro das decisões de produto, o F4P ajuda times de UX e Produto a segmentarem usuários por motivação e medirem métricas que realmente importam.",
+      whyTitle: "Por que usar o F4P em Desenvolvimento de Software e UX?",
+      tableHeaders: ["Benefício", "Impacto", "Como o F4P ajuda"],
+      tableRows: [
+        {
+          benefit: "Redução de desperdício",
+          impact: "Menos features inúteis, backlog mais enxuto",
+          how: "Segmenta por propósito → prioriza o que gera valor real"
+        },
+        {
+          benefit: "Métricas orientadas ao cliente",
+          impact: "KPIs que espelham satisfação, não “vaidade”",
+          how: "Converte critérios de adequação em métricas rastreáveis"
+        },
+        {
+          benefit: "Descoberta de novos segmentos",
+          impact: "Abre oportunidades de novos produtos ou planos",
+          how: "Analisa padrões de propósito nos dados do F4P Card"
+        },
+        {
+          benefit: "Alinhamento estratégico",
+          impact: "Roadmap guiado por objetivos claros",
+          how: "Ciclo contínuo de feedback → ações de melhoria"
+        }
+      ],
+      stepsTitle: "Passo a passo para aplicar o F4P",
+      step1Title: "1. Colete feedback com o F4P Card",
+      step1Desc: "Conduza uma entrevista ou envie um questionário, utilizando o f4p card (in-app, e-mail) contendo três perguntas:",
+      step1Questions: [
+        "Quais foram até 3 motivos para você escolher nosso produto?",
+        "De 0 a 5, quanto cada motivo foi atendido?",
+        "Por que você deu essa nota?"
+      ],
+      step1Bottom: "Limitar a três razões força o cliente a focar no que realmente importa.",
+      cardExampleTitle: "Exemplo de F4P Card (SaaS de gestão):",
+      cardExample: "1. Escolhi o produto porque: (a) Facilidade de uso (b) Preço acessível (c) Integração com ERP.\n2. Notas: Uso - 5 · Preço - 4 · Integração - 2\n3. Explicação: Interface muito intuitiva, preço justo, mas integração deu erros.",
+      step2Title: "2. Construa o Fitness Box Score",
+      step2Desc: "Tabule as respostas e visualize quantos propósitos receberam notas altas (4-5), médias (3) ou baixas (0-2). Isso revela rapidamente onde o produto está (ou não) fit for purpose.",
+      boxScoreExample: `Fitness Box Score - Release 24.03
+┌─────────────┬────────┬───────┬───────┐
+│ Propósitos  │  4-5   │   3   │  0-2  │
+├─────────────┼────────┼───────┼───────┤
+│ 29          │  62%   │  28%  │  10%  │
+└─────────────┴────────┴───────┴───────┘`,
+      step3Title: "3. Identifique segmentos por propósito",
+      step3Desc: "Agrupe respostas semelhantes. Você pode descobrir, por exemplo:",
+      step3Segments: [
+        { title: "Segmento Casual", desc: "busca rapidez e preço baixo, insatisfeito com velocidade." },
+        { title: "Segmento Pro", desc: "precisa de integrações robustas e suporte, satisfeito nos dois quesitos." }
+      ],
+      step3Bottom: "Decida quais segmentos priorizar ou ajustar na próxima iteração.",
+      step4Title: "4. Defina métricas e feche o ciclo de melhoria",
+      step4Desc: "Transforme os critérios em KPIs rastreáveis (por exemplo, tempo de resposta da API < 300 ms, SLA de 99,9%). Acompanhe-os release a release e refaça o F4P Card periodicamente.",
+      cycleAlt: "Ciclo F4P",
+      tipsTitle: "Melhores práticas e dicas rápidas",
+      tips: [
+        { strong: "Integre ao seu fluxo de trabalho: ", text: "adicione o envio do F4P Card como parte da “Coleta de Resultados” de features críticas." },
+        { strong: "Combine métodos: ", text: "use testes de usabilidade para encontrar problemas de interação e o F4P para saber se a solução cobre o objetivo macro." },
+        { strong: "Evite métricas de vaidade: ", text: "se não reflete valor ao usuário, não deveria ser KPI." }
+      ],
+      conclusionTitle: "Conclusão",
+      conclusionDesc: "O F4P não substitui os métodos clássicos de UX Research — ele completa o arsenal ao responder a pergunta que mais interessa: “Estamos entregando o que o cliente realmente quer?”. Ao coletar propósitos, notas e justificativas num processo leve e recorrente, você:",
+      conclusionList: [
+        { strong: "Alinha produto, UX e negócio", text: "na mesma métrica de sucesso." },
+        { strong: "Prioriza features", text: "que movem indicadores reais de satisfação." },
+        { strong: "Aumenta retenção", text: "ao servir segmentos mais valiosos." }
+      ],
+      conclusionBottom: "Pronto para testar o F4P? Comece criando seu primeiro F4P Card e descubra por que seus clientes ficam — ou desistem — do seu produto."
     },
   }
 };
