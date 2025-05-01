@@ -41,7 +41,7 @@ export default function IaraNavbar({
                                 <span className="sr-only">Twitter</span>
                             </Link>
                             */}
-                            <Link href="#" className="text-muted-foreground hover:text-foreground">
+                            <Link href="https://www.linkedin.com/company/iara-research" className="text-muted-foreground hover:text-foreground">
                                 <Linkedin className="h-5 w-5" />
                                 <span className="sr-only">LinkedIn</span>
                             </Link>
@@ -55,12 +55,13 @@ export default function IaraNavbar({
                                     {t.footer.aboutUs}
                                 </Link>
                             </li>
+                            {/*
                             <li>
                                 <Link href="#" className="text-muted-foreground hover:text-foreground">
                                     {t.footer.careers}
                                 </Link>
                             </li>
-                            {/*
+                            
                             <li>
                                 <Link href="#" className="text-muted-foreground hover:text-foreground">
                                     {t.footer.blog}
