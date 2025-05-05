@@ -20,6 +20,28 @@ function groupAnswersByScore(forms: Form[], sequence: number) {
     return { fit, regular, unfit };
 }
 
+// Novo helper para filtrar respostas por categoria
+function filterAnswersByCategory(forms: Form[], sequence: number, categoryName: string) {
+    const filteredForms: Form[] = [];
+    forms.forEach(form => {
+        // Filtra as respostas da questão e da categoria
+        const filteredAnswers = form.answers.filter(answer => {
+            if (answer.sequence !== sequence) return false;
+            // Verifica se alguma classificação tem o nome da categoria
+            return answer.classifications.some(classification =>
+                classification.names.includes(categoryName)
+            );
+        });
+        if (filteredAnswers.length > 0) {
+            filteredForms.push({
+                ...form,
+                answers: filteredAnswers
+            });
+        }
+    });
+    return filteredForms;
+}
+
 const criteriaInstructions: Record<string, string> = {
     "PIVOT": "Considere que a maioria das respostas sugere uma mudança significativa de direção. Analise as respostas e proponha uma ação para pivotar a abordagem.",
     "IMPROVE": "Considere que as respostas indicam necessidade de melhorias. Analise as respostas e proponha uma ação para aprimorar a questão.",
@@ -45,7 +67,7 @@ export const prompt = (question: Question, forms: Form[], criteria: string) => {
     prompt += criteriaInstructions[criteria] ? criteriaInstructions[criteria] + "\n" : "";
     prompt += "Depois, sugira uma ação clara e objetiva para a pergunta.\n";
     prompt += "Não mencione as respostas, foque apenas na ação\n";
-    prompt += "Não altera o criteria\n";
+    prompt += `Mantenha a criteria como: ${criteria}\n`;
     prompt += "Responda no formato JSON:\n";
     prompt += `{"criteria": "${criteria}", "action": "AÇÃO SUGERIDA"}\n`;
     return prompt;
@@ -91,7 +113,11 @@ export const getAnalysis = async (researchId: string) => {
     const forms = (await db.query.forms.findMany({
         where: (forms, { eq }) => (eq(forms.researchId, researchId)),
         with: {
-            answers: true
+            answers: {
+                with: {
+                    classifications: true
+                }
+            }
         },
     })) as Form[]
 
@@ -109,12 +135,16 @@ export const getAnalysis = async (researchId: string) => {
 
             await db.delete(analysis).where(eq(analysis.categoryId, category.id))
 
-            const { fit, regular, unfit } = groupAnswersByScore(forms, question.sequence);
+            // Filtra forms e respostas apenas para esta categoria e questão
+            const categoryForms = filterAnswersByCategory(forms, question.sequence, category.name);
+
+            // Agrupa respostas por score, considerando apenas respostas da categoria
+            const { fit, regular, unfit } = groupAnswersByScore(categoryForms, question.sequence);
 
             let criteriaList: string[] = [];
             if (fit.length >= regular.length && fit.length >= unfit.length) {
                 criteriaList = ["MAINTAIN", "RETHINK"];
-            } else if (regular.length > fit.length && regular.length >= unfit.length) {
+            } else if (regular.length >= fit.length && regular.length >= unfit.length) {
                 criteriaList = ["IMPROVE", "FOCUS"];
             } else {
                 criteriaList = ["PIVOT", "ABANDON"];
@@ -124,9 +154,10 @@ export const getAnalysis = async (researchId: string) => {
                 attempt = 0;
                 isValid = false;
                 while (attempt < 7 && !isValid) {
+                    // Usa apenas respostas da categoria para o prompt
                     const promptInput = prompt(
                         filterQuestionsBySequence([question], question.sequence)[0],
-                        filterAnswersBySequence(forms, question.sequence),
+                        categoryForms,
                         criteria
                     );
 

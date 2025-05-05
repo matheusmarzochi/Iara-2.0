@@ -36,8 +36,6 @@ export interface PurposeData {
             action: string;
         },
     },
-    targetAudience: boolean
-    insight: string
     scores: ScoreBox
     responseCount: number
     totalCount: number
@@ -66,8 +64,6 @@ function mapReportsToTabs(reports: ReportData[]): TabData[] {
             id: poi.name,
             title: poi.name,
             analysis: poi.analysis,
-            targetAudience: true, // Placeholder, adjust as needed
-            insight: (report.strategy_insights.improve?.[0]) || "",
             scores: poi.score_box,
             responseCount: poi.answers.length,
             totalCount: report.total_forms,
@@ -221,18 +217,18 @@ function PurposeBlock({ purpose, isExpanded, categories, onToggleExpand, showOnT
         MAINTAIN: "text-green-600",
         IMPROVE: "text-amber-500",
         ABANDON: "text-red-500",
-        PIVOT: "text-blue-600",
-        FOCUS: "text-purple-600",
-        RETHINK: "text-gray-600",
+        PIVOT: "text-red-500",
+        FOCUS: "text-amber-500",
+        RETHINK: "text-green-600",
     }[analysis.criteria] || "text-gray-600"
 
     const criteriaTranslation: Record<string, string> = {
-        MAINTAIN: "Manter",
-        IMPROVE: "Melhorar",
-        ABANDON: "Abandonar",
-        PIVOT: "Pivotar",
-        FOCUS: "Focar",
-        RETHINK: "Repensar",
+        MAINTAIN: "Manter, estimlar e aprimorar",
+        IMPROVE: "Melhorar e ajustar",
+        ABANDON: "Abandonar?",
+        PIVOT: "Pivotar?",
+        FOCUS: "Vale dar Foco?",
+        RETHINK: "Ajustar estratégia?",
     }
 
     const filteredResponses =

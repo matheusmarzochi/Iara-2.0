@@ -244,24 +244,38 @@ export const buildQuestionReports = (research: Research): Array<ReportData> => {
         for (const poi of questionReport.point_of_interests) {
             const category = question.categories.find(c => c.name === poi.name)
             if (category) {
-                for (const a of category.analysis) {
-                    if (a.categoryId == category.id) {
-                        if (['PIVOT', 'IMPROVE', 'MAINTAIN'].includes(a.criteria)) {
-                            poi.analysis.on_target = {
-                                criteria: a.criteria,
-                                action: a.action
-                            };
-                        } else if (['ABANDON', 'FOCUS', 'RETHINK'].includes(a.criteria)) {
-                            poi.analysis.off_target = {
-                                criteria: a.criteria,
-                                action: a.action
-                            };
-                        }
-                    }
+                // Calcule a maioria dos scores deste POI
+                const fit = poi.score_box.fit;
+                const neutral = poi.score_box.neutral;
+                const unfit = poi.score_box.unfit;
+                
+                let majority = 'fit';
+                if (fit >= neutral && fit >= unfit) {
+                    majority = 'fit';
+                } else if (neutral >= fit && neutral >= unfit) {
+                    majority = 'neutral';
+                } else {
+                    majority = 'unfit';
+                }
+
+                // Função auxiliar para buscar a action correspondente ao criteria
+                const findAction = (criteria: string) => {
+                    const found = category.analysis.find(a => a.criteria === criteria);
+                    return found ? found.action : '';
+                };
+
+                if (majority === 'unfit') {
+                    poi.analysis.on_target = { criteria: 'PIVOT', action: findAction('PIVOT') };
+                    poi.analysis.off_target = { criteria: 'ABANDON', action: findAction('ABANDON') };
+                } else if (majority === 'neutral') {
+                    poi.analysis.on_target = { criteria: 'IMPROVE', action: findAction('IMPROVE') };
+                    poi.analysis.off_target = { criteria: 'FOCUS', action: findAction('FOCUS') };
+                } else {
+                    poi.analysis.on_target = { criteria: 'MAINTAIN', action: findAction('MAINTAIN') };
+                    poi.analysis.off_target = { criteria: 'RETHINK', action: findAction('RETHINK') };
                 }
             }
         }
-
 
         questionReports.push(({
             ...questionReport,
