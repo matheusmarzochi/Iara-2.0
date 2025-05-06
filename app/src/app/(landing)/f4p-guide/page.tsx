@@ -72,7 +72,7 @@ export default function F4PGuidePage() {
                         </p>
                         <ol className="list-decimal ml-6 my-4 space-y-1 dark:text-gray-200">
                             {t.dimensions.map((item, i) => (
-                                <li key={i}><strong>{item.title}</strong> - {item.desc}</li>
+                                <li key={`dimensions-${i}`}><strong>{item.title}</strong> - {item.desc}</li>
                             ))}
                         </ol>
                         <p className="dark:text-gray-200">
@@ -112,7 +112,7 @@ export default function F4PGuidePage() {
                         </p>
                         <ol className="list-decimal ml-6 my-3 space-y-1 dark:text-gray-200">
                             {t.step1Questions.map((q, i) => (
-                                <li key={i}><em>{q}</em></li>
+                                <li key={`steps-questions-${i}`}><em>{q}</em></li>
                             ))}
                         </ol>
                         <p className="dark:text-gray-200">
@@ -137,7 +137,7 @@ export default function F4PGuidePage() {
                         </p>
                         <ul className="list-disc ml-6 my-3 space-y-1 dark:text-gray-200">
                             {t.step3Segments.map((seg, i) => (
-                                <li key={i}><strong>{seg.title}</strong> - {seg.desc}</li>
+                                <li key={`steps-segments-${i}`}><strong>{seg.title}</strong> - {seg.desc}</li>
                             ))}
                         </ul>
                         <p className="dark:text-gray-200">
@@ -157,7 +157,7 @@ export default function F4PGuidePage() {
                         <h2 className="text-2xl font-semibold text-sky-800 dark:text-sky-200 mb-3">{t.tipsTitle}</h2>
                         <ul className="list-disc ml-6 my-3 space-y-2 dark:text-gray-200">
                             {t.tips.map((tip, i) => (
-                                <li key={i}><strong>{tip.strong}</strong>{tip.text}</li>
+                                <li key={`tips-${i}`}><strong>{tip.strong}</strong>{tip.text}</li>
                             ))}
                         </ul>
                     </section>
@@ -169,7 +169,7 @@ export default function F4PGuidePage() {
                         </p>
                         <ol className="list-decimal ml-6 my-3 space-y-1 dark:text-gray-200">
                             {t.conclusionList.map((item, i) => (
-                                <li key={i}><strong>{item.strong}</strong> {item.text}</li>
+                                <li key={`conclusions-${i}`}><strong>{item.strong}</strong> {item.text}</li>
                             ))}
                         </ol>
                         <p className="dark:text-gray-200">
