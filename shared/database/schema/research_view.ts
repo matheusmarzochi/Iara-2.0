@@ -10,6 +10,7 @@ export const researchViews = pgTable(
             .notNull()
             .references(() => researches.id, { onDelete: "cascade" }),
         sessionId: text("session_id").notNull(),
+        ip: text("ip").notNull(),
         viewedAt: timestamp("viewed_at", { mode: "date", withTimezone: true })
             .notNull()
             .defaultNow(),

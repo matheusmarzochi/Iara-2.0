@@ -68,7 +68,7 @@ export default async function SurveyDashboard({ params }: Props) {
               className="p-0 text-foreground"
               asChild
             >
-              <Link href="/dashboard">
+              <Link href="/dashboard?status=FINISHED">
                 <span className="sr-only">Voltar para a lista de relatórios</span>
                 <ArrowLeftIcon className="size-10" />
               </Link>

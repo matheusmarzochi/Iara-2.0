@@ -4,10 +4,11 @@ import { RemoveResearch } from "./components/remove-research";
 import { db } from "iara-shared/database";
 import { notFound } from "next/navigation";
 import { formatters, relativeTime } from "~/lib/utils";
-import { and, count, eq, isNull } from "iara-shared/node_modules/drizzle-orm";
+import { and, count, eq, isNull, countDistinct } from "iara-shared/node_modules/drizzle-orm";
 import {
   forms,
   type Research,
+  researchViews,
   researches,
   users,
 } from "iara-shared/database/schema";
@@ -50,8 +51,20 @@ async function getResearchById(id: string) {
   return research;
 }
 
+async function getViewCounts(id: string) {
+  const uniqueViews = await db
+    .select({
+      uniqueViews: countDistinct(researchViews.sessionId),
+    })
+    .from(researchViews)
+    .where(eq(researchViews.researchId, id));
+
+  return uniqueViews[0]?.uniqueViews || 0;
+}
+
 export default async function ResearchPage({ params }: Props) {
   const research = await getResearchById(params.id);
+  const totalViews = await getViewCounts(params.id);
 
   if (!research) {
     return notFound();
@@ -119,6 +132,9 @@ export default async function ResearchPage({ params }: Props) {
                 ) : (
                   <p className="font-medium">{research.forms}</p>
                 )}
+                <p className="text-xs text-muted-foreground mt-2">
+                  Visualizações: <span className="font-semibold">{totalViews}</span>
+                </p>
               </div>
             </div>
           </section>

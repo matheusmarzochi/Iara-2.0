@@ -218,6 +218,13 @@
       "when": 1746589528172,
       "tag": "0030_yummy_thunderball",
       "breakpoints": true
+    },
+    {
+      "idx": 31,
+      "version": "7",
+      "when": 1746619034499,
+      "tag": "0031_slim_zombie",
+      "breakpoints": true
     }
   ]
 }

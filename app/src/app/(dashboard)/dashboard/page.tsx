@@ -15,35 +15,30 @@ import { formatters, cn } from "~/lib/utils";
 import { ResearchStatusBadge } from "~/components/researchStatusBadge";
 import { StatusFilterSelect } from "~/components/status-filter-select";
 
-// Define StatusDetail type including iconName
+
+const iconMap = { MailOpen, Cog, CheckCircle, Search, PencilRuler, List };
+
 type StatusDetail = {
   value: Research["status"];
   label: string;
-  iconName: keyof typeof iconMap; // Use the keys from the icon map
+  iconName: keyof typeof iconMap;
 };
-
-// Define the icon map (ensure all used icons are imported and included)
-const iconMap = { MailOpen, Cog, CheckCircle, Search, PencilRuler, List }; // Add any other icons if needed
 
 type ResearchGroup = Record<
   Research["status"],
   Array<Pick<Research, "id" | "title" | "createdAt" | "status"> & { replies: number }>
 >;
 
-// Update statusDetails to match the StatusDetail type
 const statusDetails: Readonly<Array<StatusDetail>> = [
   { value: "OPENED", label: "Aberta", iconName: "MailOpen" },
   { value: "PROCESSING", label: "Em Processamento", iconName: "Cog" },
   { value: "FINISHED", label: "Encerrado", iconName: "CheckCircle" },
   { value: "ANALYSIS", label: "Em Análise", iconName: "Search" },
-  // Add other statuses if necessary, ensuring iconName is a valid key in iconMap
 ] as const;
 
-// Modify getUserResearchs to accept an optional status and default to 'OPENED'
 async function getUserResearchs(status?: Research["status"]) {
   const { userId } = auth();
 
-  // Determine the status to filter by, defaulting to 'OPENED' if none is provided
   const filterStatus = status ?? "OPENED";
 
   const user = db
@@ -51,18 +46,11 @@ async function getUserResearchs(status?: Research["status"]) {
     .from(users)
     .where(eq(users.clerkId, userId as string))
 
-  // Build the where conditions dynamically
   const whereConditions = [
     eq(researches.userId, user),
     isNull(researches.deletedAt),
-    // Use the determined filterStatus for the query
     eq(researches.status, filterStatus),
   ];
-
-  // Remove the conditional push for status as it's now always included
-  // if (status) {
-  //   whereConditions.push(eq(researches.status, status));
-  // }
 
   const researchs = await db
     .select({
@@ -74,11 +62,10 @@ async function getUserResearchs(status?: Research["status"]) {
     })
     .from(researches)
     .leftJoin(forms, eq(forms.researchId, researches.id))
-    .where(and(...whereConditions)) // Use the dynamic conditions
+    .where(and(...whereConditions))
     .orderBy(desc(researches.createdAt))
     .groupBy(researches.id);
 
-  // Explicitly type the return value if needed, or ensure the select matches the expected type
   return researchs as Array<
     Pick<Research, "id" | "title" | "status" | "createdAt"> & { replies: number }
   >;
@@ -89,9 +76,9 @@ export default async function DashboardPage({
 }: {
   searchParams?: { status?: Research["status"] };
 }) {
-  // Use the provided status or default to 'OPENED' when fetching
+
   const currentStatus = searchParams?.status ?? "OPENED";
-  // Pass the currentStatus (or default) to getUserResearchs
+
   const researchs = await getUserResearchs(currentStatus);
 
   const researchStatusTitle = (status: Research["status"]) =>
@@ -103,23 +90,6 @@ export default async function DashboardPage({
       FINISHED: <h3 className="font-bold text-2xl">Encerrado</h3>,
     })[status];
 
-  const researchsByStatus = researchs.reduce(
-    (acc, research) => {
-      // Ensure research.status is a valid key
-      if (acc[research.status]) {
-        acc[research.status].push(research);
-      } else {
-        // Initialize if status key doesn't exist (e.g., for 'CREATED')
-        acc[research.status] = [research];
-      }
-      return acc;
-    },
-    // Initialize with all possible statuses, including those not in statusDetails if needed
-    { CREATED: [], PROCESSING: [], FINISHED: [], ANALYSIS: [], OPENED: [] } as ResearchGroup,
-  );
-
-  // Calculate counts for each status defined in statusDetails
-  // Fetch all researches *without* status filter to get accurate total counts for the sidebar
   const allUserResearchs = await db
     .select({ status: researches.status })
     .from(researches)
@@ -137,37 +107,31 @@ export default async function DashboardPage({
 
   const statusDetailsWithCounts = statusDetails.map(detail => ({
     ...detail,
-    // Use counts from the unfiltered query
     count: countsByStatus[detail.value] ?? 0,
   }));
 
-  // Determine which statuses to display based on the *filtered* results
-  // If a specific status is requested, only show that one (if it has results)
-  // If no status is requested (implicitly 'OPENED'), show 'OPENED' results
   const statusesToDisplay = researchs.length > 0 ? [currentStatus] : [];
 
-
   return (
-    // Use Flexbox for overall layout: Sidebar | Main Content
     <div className="flex gap-8">
       {/* Sidebar */}
-      <aside className="w-64 hidden md:block pt-4"> {/* Hide on small screens */}
-        <nav className="flex flex-col gap-2 sticky top-4"> {/* Make sidebar sticky */}
+      <aside className="w-64 hidden md:block pt-4">
+        <nav className="flex flex-col gap-2 sticky top-4">
           <h2 className="text-lg font-semibold mb-2 px-4">Status</h2>
-          {/* Use statusDetailsWithCounts for rendering */}
+
           {statusDetailsWithCounts.map(({ value, label, iconName, count }) => {
-            const Icon = iconMap[iconName]; // Map name to component using the defined iconMap
-            // Highlight the active status based on currentStatus (which defaults to OPENED)
+            const Icon = iconMap[iconName];
+
             const isActive = currentStatus === value;
-            const href = `/dashboard?status=${value}`; // Always include status
+            const href = `/dashboard?status=${value}`;
             return (
               <Link
-                key={value} // Use value as key
+                key={value}
                 href={href}
                 className={cn(
                   "flex items-center gap-3 rounded-lg px-4 py-2 text-muted-foreground transition-colors hover:text-primary",
-                  "dark:text-slate-400 dark:hover:text-slate-50", // Dark mode default/hover text
-                  isActive && "bg-muted text-primary font-semibold dark:bg-slate-800 dark:text-slate-50" // Dark mode active state
+                  "dark:text-slate-400 dark:hover:text-slate-50",
+                  isActive && "bg-muted text-primary font-semibold dark:bg-slate-800 dark:text-slate-50"
                 )}
               >
                 {Icon && <Icon className="h-5 w-5 flex-shrink-0" />}
@@ -178,8 +142,8 @@ export default async function DashboardPage({
                     <span className={cn(
                       "text-xs font-medium rounded-full px-2 py-0.5",
                       isActive
-                        ? "bg-primary text-primary-foreground dark:bg-sky-500 dark:text-white" // Dark mode active badge
-                        : "bg-gray-200 text-muted-foreground dark:bg-slate-700 dark:text-slate-200" // Dark mode inactive badge
+                        ? "bg-primary text-primary-foreground dark:bg-sky-500 dark:text-white"
+                        : "bg-gray-200 text-muted-foreground dark:bg-slate-700 dark:text-slate-200"
                     )}>
                       {count}
                     </span>
@@ -194,8 +158,7 @@ export default async function DashboardPage({
       {/* Main Content Area */}
       <main className="flex-1">
 
-        <section className="flex flex-col items-end md:items-start pt-4 md:pt-0 pb-8 gap-6"> {/* Remove pt-4 on md+ */}
-          {/* ... existing buttons ... */}
+        <section className="flex flex-col items-end md:items-start pt-4 md:pt-0 pb-8 gap-6">
           <div className="flex gap-4">
             <Button size="sm" className="order-1 md:order-2" asChild>
               <Link href="/researches/new">
@@ -226,33 +189,22 @@ export default async function DashboardPage({
         </section>
 
         {/* Add Select Filter for Mobile */}
-        <div className="md:hidden mb-6 pt-4"> {/* Visible only on mobile, add padding top */}
+        <div className="md:hidden mb-6 pt-4">
           <h2 className="text-lg font-semibold mb-2">Filtrar Status</h2>
-          {/* Pass statusDetailsWithCounts (or just statusDetails if counts aren't needed in select) */}
-          {/* Ensure currentStatus passed here reflects the default */}
           <StatusFilterSelect currentStatus={currentStatus} statuses={statusDetailsWithCounts} />
         </div>
 
         {/* Main Research Display */}
         <section className="space-y-10">
-          {/* Display only the researches for the currentStatus (defaulting to OPENED) */}
           {statusesToDisplay.map((status) => {
-              // Since we filter beforehand, researchsByStatus is not needed here
-              // We directly use the 'researchs' array which is already filtered
-              const researchesInStatus = researchs; // Already filtered by getUserResearchs
-
-              // No need to check length again as statusesToDisplay handles empty cases
-              // if (!researchesInStatus || researchesInStatus.length === 0) {
-              //   return null;
-              // }
+              const researchesInStatus = researchs;
 
               return (
                 <div key={status} className="space-y-6">
                   {researchStatusTitle(status)}
 
-                  <div className="flex flex-col gap-6 md:grid md:grid-cols-1 lg:grid-cols-2">
+                  <div className="w-full max-w-full flex flex-col gap-6 md:grid md:grid-cols-1 lg:grid-cols-2 overflow-x-auto">
                     {researchesInStatus.map((research) => {
-                      // ... existing card rendering ...
                       const researchURL =
                         status === "FINISHED"
                           ? `/researches/${research.id}/reports`
@@ -261,11 +213,11 @@ export default async function DashboardPage({
                       return (
                         <Card
                           key={research.id}
-                          className="relative shadow-md focus:hover-xl hover:shadow-xl transition-all bg-[#F8FAFC] dark:bg-sky-900 dark:border-sky-900"
+                          className="relative w-full max-w-xs md:max-w-[600px] shadow-md focus:hover-xl hover:shadow-xl transition-all bg-[#F8FAFC] dark:bg-sky-900 dark:border-sky-900"
                         >
                           <CardHeader>
                             <div className="flex justify-between items-start">
-                              <CardTitle className="text-xl truncate">
+                              <CardTitle className="text-xl truncate max-w-[10rem] md:max-w-full">
                                 {research.title}
                               </CardTitle>
                               <ResearchStatusBadge status={research.status} />
@@ -291,7 +243,6 @@ export default async function DashboardPage({
                 </div>
               );
             })}
-          {/* Message when no researches match the current filter (including default 'OPENED') */}
           {researchs.length === 0 && (
             <p className="text-muted-foreground">Nenhuma pesquisa encontrada para o status "{statusDetails.find(s => s.value === currentStatus)?.label ?? currentStatus}".</p>
           )}

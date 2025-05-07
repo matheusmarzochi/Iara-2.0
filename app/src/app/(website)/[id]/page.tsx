@@ -4,6 +4,7 @@ import { ResearchForm } from "./components/research-form";
 import { notFound } from "next/navigation";
 import { cookies } from "next/headers";
 import { researchViews } from "iara-shared/database/schema/research_view";
+import { headers } from "next/headers";
 
 type Props = {
 	params: {
@@ -42,10 +43,12 @@ export default async function ResearchPage({ params }: Props) {
 	const cookieStore = cookies()
   	const sessionId = cookieStore.get(sessionCookieName)?.value;
 
-	// Não tente setar o cookie aqui, apenas registre a view se o sessionId existir
+	const forwardedFor = headers().get('x-forwarded-for');
+	const ip = forwardedFor?.split(',')[0]?.trim();
+
 	if (sessionId) {
 		await db.insert(researchViews)
-			.values({ researchId: params.id, sessionId })
+			.values({ researchId: params.id, sessionId, ip: ip ?? "" })
 			.onConflictDoNothing();
 	}
 
