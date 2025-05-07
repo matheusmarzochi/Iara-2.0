@@ -59,7 +59,7 @@ export default async function SurveyDashboard({ params }: Props) {
   // Cabeçalho igual ao ReportsPage
   return (
     <div>
-      <header className="space-y-6">
+      <header className="space-y-6 px-2">
         <div className="flex flex-col items-start gap-1 lg:flex-row lg:items-center lg:gap-6 justify-between">
           <div className="flex items-center gap-2">
             <Button
@@ -75,9 +75,11 @@ export default async function SurveyDashboard({ params }: Props) {
             </Button>
             <h2 className="font-semibold text-3xl">{research.title}</h2>
           </div>
-          <div className="flex flex-col items-end">
-            <ResearchStatusBadge status={research.status} />
-            <span className="flex items-center gap-3 text-muted-foreground text-sm mt-1">
+        </div>
+        <div className="flex flex-row items-center justify-between lg:gap-6">
+          <h3 className="text-lg font-bold ml-4">Resultados</h3>
+          <div className="flex flex-row items-center gap-2 lg:gap-4 w-full justify-end">
+            <span className="flex items-center gap-3 text-muted-foreground text-sm">
               <span
                 className="flex items-center gap-1"
                 title="Número de visualizações únicas deste relatório"
@@ -93,9 +95,9 @@ export default async function SurveyDashboard({ params }: Props) {
                 {research.forms.length}
               </span>
             </span>
+            <ResearchStatusBadge status={research.status} />
           </div>
         </div>
-        <h3 className="text-lg font-bold ml-4">Resultados</h3>
       </header>
       <ReportView reports={report.data} research={research} categories={categoryList} enableSwitch={true} />
     </div>
