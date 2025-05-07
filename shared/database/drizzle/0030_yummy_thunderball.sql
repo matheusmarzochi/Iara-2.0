@@ -1,0 +1,1 @@
+ALTER TABLE "research_views" ADD CONSTRAINT "research_views_research_id_session_id_unique" UNIQUE("research_id","session_id");
