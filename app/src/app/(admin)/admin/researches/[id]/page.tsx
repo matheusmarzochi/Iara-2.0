@@ -1,18 +1,20 @@
 import { db } from "iara-shared/database";
 import { notFound } from "next/navigation";
 import { formatters, relativeTime } from "~/lib/utils";
-import { and, count, eq, isNull } from "iara-shared/node_modules/drizzle-orm";
+import { count, eq, countDistinct } from "iara-shared/node_modules/drizzle-orm";
 import {
     forms,
     researches,
     users,
+    researchViews
 } from "iara-shared/database/schema";
 import { auth } from "@clerk/nextjs/server";
 import { Button } from "~/components/ui/button";
 import Link from "next/link";
 import { ArrowLeftIcon, Search, Trash2 } from "lucide-react";
-import { ResearchStatusBadge } from "~/components/researchStatusBadge";
+import { ResearchStatusBadge } from "~/components/research/researchStatusBadge";
 import { Card } from "~/components/ui/card";
+import ResearchInteractionsCount from "~/components/research/researchInteractionsCount";
 import { processResearch } from "./action";
 
 type Props = {
@@ -49,8 +51,20 @@ async function getResearchById(id: string) {
     return research;
 }
 
+async function getViewCounts(id: string) {
+  const uniqueViews = await db
+    .select({
+      uniqueViews: countDistinct(researchViews.sessionId),
+    })
+    .from(researchViews)
+    .where(eq(researchViews.researchId, id));
+
+  return uniqueViews[0]?.uniqueViews || 0;
+}
+
 export default async function ResearchPage({ params }: Props) {
     const research = await getResearchById(params.id);
+    const totalViews = await getViewCounts(params.id);
 
     if (!research) {
         return notFound();
@@ -124,7 +138,9 @@ export default async function ResearchPage({ params }: Props) {
                                         <p className="font-medium">Em Análise</p>
                                     </div>
                                 ) : (
-                                    <p className="font-medium">{research.forms}</p>
+                                    <p className="font-medium">
+                                        <ResearchInteractionsCount formsLength={research.forms} totalViews={totalViews}  />
+                                    </p>
                                 )}
                             </div>
                         </div>

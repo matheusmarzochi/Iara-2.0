@@ -12,7 +12,7 @@ import {
   users,
 } from "iara-shared/database/schema";
 import { formatters, cn } from "~/lib/utils";
-import { ResearchStatusBadge } from "~/components/researchStatusBadge";
+import { ResearchStatusBadge } from "~/components/research/researchStatusBadge";
 import { StatusFilterSelect } from "~/components/status-filter-select";
 
 

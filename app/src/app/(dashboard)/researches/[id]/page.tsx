@@ -15,8 +15,10 @@ import { auth } from "@clerk/nextjs/server";
 import { Button } from "~/components/ui/button";
 import Link from "next/link";
 import { ArrowLeftIcon, MoveRightIcon, PencilIcon, Search, UserCheck, EyeIcon, ClipboardListIcon } from "lucide-react";
-import { ResearchStatusBadge } from "~/components/researchStatusBadge";
+import { ResearchStatusBadge } from "~/components/research/researchStatusBadge";
 import { Card } from "~/components/ui/card";
+import ResearchInteractionsCount from "~/components/research/researchInteractionsCount";
+
 
 type Props = {
   params: {
@@ -130,32 +132,7 @@ export default async function ResearchPage({ params }: Props) {
                   </div>
                 ) : (
                   <p className="font-medium">
-                    <span className="flex items-center gap-3">
-                      <span
-                        className="flex items-center gap-1"
-                        title="Número de visualizações únicas desta pesquisa"
-                      >
-                        <EyeIcon className="size-4" />
-                        {totalViews}
-                      </span>
-                      <span
-                        className="flex items-center gap-1"
-                        title="Número de respostas recebidas"
-                      >
-                        <ClipboardListIcon className="size-4" />
-                        {research.forms}
-                      </span>
-                      <span
-                        className="flex items-center gap-1"
-                        title="Porcentagem de Conversão"
-                      >
-                        <UserCheck className="size-4" />
-                        {`(${research.forms > totalViews
-                          ? 100
-                          : Math.round(Math.min(100, research.forms * 100 / totalViews))
-                          }%)`}
-                      </span>
-                    </span>
+                    <ResearchInteractionsCount formsLength={research.forms} totalViews={totalViews}  />
                   </p>
                 )}
 
