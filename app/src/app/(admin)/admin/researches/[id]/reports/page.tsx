@@ -1,13 +1,10 @@
 import type React from "react"
 import { db } from "iara-shared/database"
-import { reports, researches, categories } from "iara-shared/database/schema"
-import { eq } from "iara-shared/node_modules/drizzle-orm"
+import { reports, researches, researchViews } from "iara-shared/database/schema"
+import { eq, countDistinct } from "iara-shared/node_modules/drizzle-orm"
 import ReportView from "~/app/(dashboard)/researches/[id]/components/report-view"
+import ReportHeader from "~/components/report/reportHeader"
 
-import Link from "next/link"
-import { Button } from "~/components/ui/button"
-import { ArrowLeftIcon } from "lucide-react"
-import { ResearchStatusBadge } from "~/components/researchStatusBadge"
 
 type Props = {
   params: {
@@ -32,9 +29,23 @@ export default async function SurveyDashboard({ params }: Props) {
             }
           }
         }
+      },
+      forms: {
+        columns: {
+          id: true
+        }
       }
     }
   })
+
+  const uniqueViews = await db
+    .select({
+      uniqueViews: countDistinct(researchViews.sessionId),
+    })
+    .from(researchViews)
+    .where(eq(researchViews.researchId, params.id));
+
+  const totalViews = uniqueViews[0]?.uniqueViews || 0;
 
   if (!report || !research) {
     return <div>No report or research found</div>
@@ -44,26 +55,9 @@ export default async function SurveyDashboard({ params }: Props) {
 
   // Cabeçalho igual ao ReportsPage
   return (
-    <div className="container">
-      <header className="space-y-6">
-        <div className="flex flex-col items-start gap-1 lg:flex-row lg:items-center lg:gap-6">
-          <Button
-            size="sm"
-            variant="link"
-            className="p-0 text-foreground"
-            asChild
-          >
-            <Link href="/admin/researches">
-              <span className="sr-only">Voltar para a lista de relatórios</span>
-              <ArrowLeftIcon className="size-10" />
-            </Link>
-          </Button>
-          <h2 className="font-semibold text-3xl">{research.title}</h2>
-          <ResearchStatusBadge status={research.status} />
-        </div>
-        <h3 className="text-lg font-bold">Resultados</h3>
-      </header>
-      <ReportView reports={report.data} research={research} categories={categoryList} enableSwitch={false} />
+    <div>
+      <ReportHeader formsLength={research.forms.length} research={research} totalViews={totalViews} />
+      <ReportView reports={report.data} research={research} categories={categoryList} enableSwitch={true} />
     </div>
   )
 }

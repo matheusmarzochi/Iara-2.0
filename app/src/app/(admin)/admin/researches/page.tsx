@@ -3,7 +3,7 @@ import { useEffect, useState, useMemo } from "react";
 import { useSearchParams } from "next/navigation";
 import type { Research } from "iara-shared/database/schema";
 import { researchList, type ResearchItem } from "./action";
-import { ResearchStatusBadge } from "~/components/researchStatusBadge";
+import { ResearchStatusBadge } from "~/components/research/researchStatusBadge";
 import { Paperclip, Trash2 } from "lucide-react";
 import Link from "next/link";
 

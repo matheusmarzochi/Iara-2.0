@@ -30,6 +30,14 @@ app-lint:
 		-v ./shared/:/code/shared \
 		iara-app npm run lint
 
+app-test:
+	@docker run -ti --rm \
+		--name iara-app-bash \
+		--env-file .env.local \
+		-v ./app/:/code/app \
+		-v ./shared/:/code/shared \
+		iara-app npm run test
+
 app-build:
 	@docker run -ti --rm \
 		--name iara-app-bash \
