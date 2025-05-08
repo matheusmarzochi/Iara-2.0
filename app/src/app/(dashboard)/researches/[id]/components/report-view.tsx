@@ -106,7 +106,7 @@ export default function ReportView({ reports, research, categories, enableSwitch
     }
 
     return (
-        <div className="container mx-auto py-6 px-2 md:px-4 max-w-6xl">
+        <div className="container mx-auto py-6 px-0 max-w-6xl">
             <Tabs defaultValue={tabData[0].id} className="w-full">
                 <div className="border-b dark:border-sky-800 mb-6">
                     <div className="relative">

@@ -6,7 +6,7 @@ import ReportView from "../components/report-view"
 // Adicione as importações necessárias
 import Link from "next/link"
 import { Button } from "~/components/ui/button"
-import { ArrowLeftIcon, EyeIcon, ClipboardListIcon } from "lucide-react"
+import { ArrowLeftIcon, EyeIcon, ClipboardListIcon, UserCheck,  } from "lucide-react"
 import { ResearchStatusBadge } from "~/components/researchStatusBadge"
 
 type Props = {
@@ -59,7 +59,7 @@ export default async function SurveyDashboard({ params }: Props) {
   // Cabeçalho igual ao ReportsPage
   return (
     <div>
-      <header className="space-y-6 px-2">
+      <header className="space-y-6">
         <div className="flex flex-col items-start gap-1 lg:flex-row lg:items-center lg:gap-6 justify-between">
           <div className="flex items-center gap-2">
             <Button
@@ -82,7 +82,7 @@ export default async function SurveyDashboard({ params }: Props) {
             <span className="flex items-center gap-3 text-muted-foreground text-sm">
               <span
                 className="flex items-center gap-1"
-                title="Número de visualizações únicas deste relatório"
+                title="Número de visualizações únicas desta pesquisa"
               >
                 <EyeIcon className="size-4" />
                 {reportTotalUniqueViews}
@@ -93,6 +93,17 @@ export default async function SurveyDashboard({ params }: Props) {
               >
                 <ClipboardListIcon className="size-4" />
                 {research.forms.length}
+              </span>
+              <span
+                className="flex items-center gap-1"
+                title="Porcentagem de Conversão"
+              >
+                <UserCheck className="size-4" />
+                {`(${
+                  research.forms.length > reportTotalUniqueViews
+                    ? 100
+                    : Math.round(Math.min(100, research.forms.length  * 100 / reportTotalUniqueViews))
+                }%)`}
               </span>
             </span>
             <ResearchStatusBadge status={research.status} />

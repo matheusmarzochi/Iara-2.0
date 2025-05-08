@@ -203,7 +203,7 @@ export default async function DashboardPage({
                 <div key={status} className="space-y-6">
                   {researchStatusTitle(status)}
 
-                  <div className="w-full max-w-full flex flex-col gap-6 md:grid md:grid-cols-1 lg:grid-cols-2 overflow-x-auto">
+                  <div className="w-full max-w-full flex flex-col gap-6 md:grid lg:grid-cols-2 overflow-x-auto">
                     {researchesInStatus.map((research) => {
                       const researchURL =
                         status === "FINISHED"
@@ -213,7 +213,7 @@ export default async function DashboardPage({
                       return (
                         <Card
                           key={research.id}
-                          className="relative w-full max-w-xs md:max-w-[600px] shadow-md focus:hover-xl hover:shadow-xl transition-all bg-[#F8FAFC] dark:bg-sky-900 dark:border-sky-900"
+                          className="relative w-full md:max-w-[600px] shadow-md focus:hover-xl hover:shadow-xl transition-all bg-[#F8FAFC] dark:bg-sky-900 dark:border-sky-900"
                         >
                           <CardHeader>
                             <div className="flex justify-between items-start">
