@@ -29,7 +29,7 @@ export default function DashboarLayout({ children }: { children: ReactNode }) {
         </div>
       </header>
 
-      <main className="min-h-[calc(100dvh-160px)] w-full container py-10">
+      <main className="min-h-[calc(100dvh-160px)] w-full md:container px-2 py-10">
         {children}
       </main>
     </>

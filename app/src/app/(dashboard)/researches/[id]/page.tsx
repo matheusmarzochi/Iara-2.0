@@ -4,17 +4,17 @@ import { RemoveResearch } from "./components/remove-research";
 import { db } from "iara-shared/database";
 import { notFound } from "next/navigation";
 import { formatters, relativeTime } from "~/lib/utils";
-import { and, count, eq, isNull } from "iara-shared/node_modules/drizzle-orm";
+import { and, count, eq, isNull, countDistinct } from "iara-shared/node_modules/drizzle-orm";
 import {
   forms,
-  type Research,
+  researchViews,
   researches,
   users,
 } from "iara-shared/database/schema";
 import { auth } from "@clerk/nextjs/server";
 import { Button } from "~/components/ui/button";
 import Link from "next/link";
-import { ArrowLeftIcon, MoveRightIcon, PencilIcon, Search } from "lucide-react";
+import { ArrowLeftIcon, MoveRightIcon, PencilIcon, Search, UserCheck, EyeIcon, ClipboardListIcon } from "lucide-react";
 import { ResearchStatusBadge } from "~/components/researchStatusBadge";
 import { Card } from "~/components/ui/card";
 
@@ -50,8 +50,20 @@ async function getResearchById(id: string) {
   return research;
 }
 
+async function getViewCounts(id: string) {
+  const uniqueViews = await db
+    .select({
+      uniqueViews: countDistinct(researchViews.sessionId),
+    })
+    .from(researchViews)
+    .where(eq(researchViews.researchId, id));
+
+  return uniqueViews[0]?.uniqueViews || 0;
+}
+
 export default async function ResearchPage({ params }: Props) {
   const research = await getResearchById(params.id);
+  const totalViews = await getViewCounts(params.id);
 
   if (!research) {
     return notFound();
@@ -107,7 +119,7 @@ export default async function ResearchPage({ params }: Props) {
                 </p>
               </div>
               <div className="p-4 rounded-lg border-gray-300 bg-[#F8FAFC] dark:bg-sky-900 dark:border-sky-900">
-                <p className="text-sm text-muted-foreground">Respostas:</p>
+                <p className="text-sm text-muted-foreground">Situação:</p>
                 {isResearchInAnalysis ? (
                   <div className="flex items-center gap-2">
                     <span className="relative flex size-4">
@@ -117,8 +129,36 @@ export default async function ResearchPage({ params }: Props) {
                     <p className="font-medium">Em Análise</p>
                   </div>
                 ) : (
-                  <p className="font-medium">{research.forms}</p>
+                  <p className="font-medium">
+                    <span className="flex items-center gap-3">
+                      <span
+                        className="flex items-center gap-1"
+                        title="Número de visualizações únicas desta pesquisa"
+                      >
+                        <EyeIcon className="size-4" />
+                        {totalViews}
+                      </span>
+                      <span
+                        className="flex items-center gap-1"
+                        title="Número de respostas recebidas"
+                      >
+                        <ClipboardListIcon className="size-4" />
+                        {research.forms}
+                      </span>
+                      <span
+                        className="flex items-center gap-1"
+                        title="Porcentagem de Conversão"
+                      >
+                        <UserCheck className="size-4" />
+                        {`(${research.forms > totalViews
+                          ? 100
+                          : Math.round(Math.min(100, research.forms * 100 / totalViews))
+                          }%)`}
+                      </span>
+                    </span>
+                  </p>
                 )}
+
               </div>
             </div>
           </section>

@@ -1,0 +1,1 @@
+ALTER TABLE "research_views" ADD COLUMN "ip" text NOT NULL;
