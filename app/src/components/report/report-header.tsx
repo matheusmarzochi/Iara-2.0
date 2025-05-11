@@ -1,18 +1,26 @@
+"use client"
+
 import type React from "react"
 import Link from "next/link"
+import { usePathname } from "next/navigation"
 import { Button } from "~/components/ui/button"
+import type { Research } from 'iara-shared/database/schema'
 import { ArrowLeftIcon } from "lucide-react"
 import { ResearchStatusBadge } from "~/components/research/researchStatusBadge"
 import ResearchInteractionsCount from "~/components/research/researchInteractionsCount"
-import { Research } from "iara-shared/database/schema"
 
 export interface ReportHeaderProps {
     research: Omit<Research, "forms" | "questions">
-    formsLength: number
-    totalViews: number
+    formsLength: number,
+    totalViews: number,
 }
 
 export default function ReportHeader({ research, formsLength, totalViews }: ReportHeaderProps) {
+    const pathname = usePathname();
+    const backHref = pathname.startsWith("/admin")
+        ? "/admin/researches"
+        : "/dashboard?status=FINISHED";
+
     return (
         <header className="space-y-6">
             <div className="flex flex-col items-start gap-1 lg:flex-row lg:items-center lg:gap-6 justify-between">
@@ -23,7 +31,7 @@ export default function ReportHeader({ research, formsLength, totalViews }: Repo
                         className="p-0 text-foreground"
                         asChild
                     >
-                        <Link href="/dashboard?status=FINISHED">
+                        <Link href={backHref}>
                             <span className="sr-only">Voltar para a lista de relatórios</span>
                             <ArrowLeftIcon className="size-10" />
                         </Link>

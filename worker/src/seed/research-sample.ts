@@ -14,15 +14,17 @@ type FormData = {
     }[]
 }
 
-type AnswerData = {
-    explanation: string,
-    formId: string,
-    score: number,
-    purpose: string,
-    sequence: number
+type ResearchData = {
+    title: string,
+    description: string,
+    questions: {
+        purpose: string,
+        sequence: number
+    }[]
+    forms: FormData[]
 }
 
-const formsData = JSON.parse(fs.readFileSync('/code/worker/src/seed/forms.json').toString()) as FormData[]
+const researchData = JSON.parse(fs.readFileSync('/code/worker/src/seed/researches/sicredi-2025-04.json').toString()) as ResearchData
 
 const seed = async (email: string) => {
     const user = await db.query.users.findFirst({
@@ -33,43 +35,43 @@ const seed = async (email: string) => {
         return "Email not found"
     }
 
+    // Insere a research a partir do JSON
     const [researchReturn] = await db.insert(researches).values({
-        description: "Pesquisa do curso de Agilidade para medir a satisfação do usuário",
-        title: "Pesquisa de Satisfação F4P",
+        description: researchData.description,
+        title: researchData.title,
         userId: user.id,
     }).returning()
 
-    const [questionsReturn] = await db.insert(questions).values([{
+    // Insere as questions a partir do JSON
+    const questionsToInsert = researchData.questions.map(q => ({
         researchId: researchReturn.id,
-        purpose: "Qual foi o seu objetivo PRIMÁRIO em escolher o Treinamento Kanban (KMP I)?",
-        sequence: 1,
-    }, {
-        researchId: researchReturn.id,
-        purpose: "(opcional) Qual foi o seu objetivo SECUNDÁRIO em escolher o KMP I?",
-        sequence: 2,
-    }, {
-        researchId: researchReturn.id,
-        purpose: "(opcional) Teve algum OUTRO OBJETIVO além dos dois acima?",
-        sequence: 3,
-    }]).returning()
+        purpose: q.purpose,
+        sequence: q.sequence,
+    }))
+    await db.insert(questions).values(questionsToInsert).returning()
 
-    for await (const formData of formsData) {
+    // Para cada form no JSON, insere o form e as respostas
+    for await (const formData of researchData.forms) {
         const [formReturn] = await db.insert(forms).values({
             email: formData.email,
             researchId: researchReturn.id
-        }).returning() 
+        }).returning()
 
-        const insertData: AnswerData[] = [] 
+        const insertData: {
+            explanation: string,
+            formId: string,
+            score: number,
+            purpose: string,
+            sequence: number
+        }[] = [];
 
         formData.answers.forEach((data, index) => {
-
             const validated = [
                 data.purpose.length > 0,
                 parseInt(data.score) > 0,
                 data.explanation.length > 0
             ].every(Boolean)
 
-            
             if (validated) {
                 insertData.push({
                     explanation: data.explanation,
@@ -78,18 +80,18 @@ const seed = async (email: string) => {
                     purpose: data.purpose,
                     sequence: index + 1
                 })
-
             }
         })
 
-        const [answerReturn] = await db
-            .insert(answers)
-            .values(insertData)
-            .returning()
+        if (insertData.length > 0) {
+            await db
+                .insert(answers)
+                .values(insertData)
+                .returning()
+        }
     }
 
     process.exit(0)
 }
-
 
 seed("ivanmicai@gmail.com")

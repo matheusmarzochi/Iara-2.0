@@ -1,0 +1,2202 @@
+{
+    "title": "Sicredi App - 2019",
+    "description": "Pesquisa do App da Sicrede para medir a satisfação do usuário",
+    "questions": [
+        {
+            "purpose": "Pensando no seu principal objetivo ao usar nosso aplicativo, o quão bem ele te ajudou a alcançar esse propósito e por quê?",
+            "sequence": 1
+        }
+    ],
+    "forms": [
+        {
+            "email": "um.usuario.do.google.20190104000000@example.com",
+            "answers": [
+                {
+                    "purpose": "Principal objetivo: Ver o extrato do pagamento e realizar transferências. O usuário quer que o extrato mostre o nome do beneficiário e que seja possível ver mais de um mês, além de realizar transferências em qualquer horário. O aplicativo não atendeu totalmente, pois: \"ao abrir o extrato aparecer o nome do beneficiário que recebeu pagamento\" e \"extrato só consigo ver do mês atual ou do mês anterior\". Também criticou que \"em outros aplicativos era possível realizar transferências durante o final de semana ou em qualquer horário\".",
+                    "score": "3",
+                    "explanation": "Nota 3: Usuário descreve como 'ao abrir o extrato aparecer o nome do beneficiário que recebeu pagamento' e que 'extrato só consigo ver do mês atual ou do mês anterior'. Conclusão do usuário: 'Por exemplo: extrato só consigo ver do mês atual ou do mês anterior, teria que ter uma opção para escolher qual mês quero ver. Em outros aplicativos era possível realizar transferências durante o final de semana ou em qualquer horário, no qual o dinheiro já não aparecia mais na conta'."
+                }
+            ]
+        },
+        {
+            "email": "um.usuario.do.google.20190102000000@example.com",
+            "answers": [
+                {
+                    "purpose": "Principal objetivo: Ver a movimentação da minha conta. App não ajudou pois: 'antes conseguia ver a movimentação da minha conta, e agora não consigo mais, e a única opção que achei tem que pagar, o que não concordo'.",
+                    "score": "4",
+                    "explanation": "Nota 4: Usuário descreve como 'O aplicativo melhorou muito', mas não marcou a última estrela, pois antes conseguia ver a movimentação da minha conta, e agora não consigo mais, e a única opção que achei tem que pagar, o que não concordo, pois os outros bancos dão acesso as movimentações da conta corrente, como era o Sicredi antes da ultima actualização do app."
+                }
+            ]
+        },
+        {
+            "email": "um.usuario.do.google.20190104000000@example.com",
+            "answers": [
+                {
+                    "purpose": "Principal objetivo: aprimorar o programa em alguns aspectos como: precisa ser mais ágil só realizar as operações, pois meus com internet de alta velocidade demora a realizá-las; poderia ter opção de geração de cartões de crédito e débito online para fazer pagamentos diversos com o smartphone sem a necessidade do plástico.",
+                    "score": "3",
+                    "explanation": "Nota 3: Usuário descreve como 'O programa precisa ser aprimorado em alguns aspectos como: precisa ser mais ágil só realizar as operações, pois meus com internet de alta velocidade demora a realizá-las; poderia ter opção de geração de cartões de crédito e débito online para fazer pagamentos diversos com o smartphone sem a necessidade do plástico; a captura automática de código de barras funciona, mas várias vezes tava a operação de pagamento; há problemas quanto a leitura do código de barras que aponta sempre uma data de vencim'. Conclusão do usuário: 'O programa precisa ser aprimorado em alguns aspectos'."
+                }
+            ]
+        },
+        {
+            "email": "um.usuario.do.google.20190107000000@example.com",
+            "answers": [
+                {
+                    "purpose": "Principal objetivo: Usar o aplicativo para gerenciar minha conta e fazer transações. O app não ajuda pois: 'As atualizações não aparecem automaticamente no app, você tem que advinhar que houve atualização', 'nem todas as opções de conta estão no aplicativo', 'fiz um novo cartão de crédito, ele não aparece', 'o horário para fazer transações é ridículo'.",
+                    "score": "1",
+                    "explanation": "Nota 1: Usuário descreve como 'Aplicativo ruim'. Principais queixas do review que justificam a nota: 'Aplicativo ruim', 'As atualizações não aparecem automaticamente no app', 'nem todas as opções de conta estão no aplicativo', 'ele não aparece', 'o horário para fazer transações é ridículo'. Conclusão do usuário: 'fiz um novo cartão de crédito, ele não aparece, o horário para fazer transações é ridículo, tem mais, mas nem cabe aqui'."
+                }
+            ]
+        },
+        {
+            "email": "um.usuario.do.google.20190114000000@example.com",
+            "answers": [
+                {
+                    "purpose": "Principal objetivo: usar o aplicativo para transferências. O app obriga que você informe a função de uma transferência, o que não confundir com a opcional que funciona como lembrete. Algumas funções não carregam, dando como inválidas ('null'), o que impede a transferência.",
+                    "score": "1",
+                    "explanation": "Nota 1: Usuário descreve como 'Toda atualização do aplicativo é problemática, o deixa mais lento ou simplesmente buga algumas de suas funções'. A última atualização obriga que você informe a função de uma transferência (não confundir com a opcional que funciona como lembrete). As opções não carregam, dando como inválidas ('null'), que por conseguinte, impedem a transferência. Se essa 'obrigatoriedade' não for uma determinação do BC, não apenas não tem qualquer utilidade para o usuário como é uma invasão de privacidade."
+                }
+            ]
+        },
+        {
+            "email": "um.usuario.do.google.20190107000000@example.com",
+            "answers": [
+                {
+                    "purpose": "Principal objetivo: visualizar o extrato e conferir minha lista de cheques. O usuário tentou visualizar no extrato o tipo de transação, código/número da transação e valores, mas agora tem que clicar na transação para aparecer as demais informações. Para ele, isto é um retrocesso, pois do modo antigo ajudava muito para conferir sua lista de cheques, que era só ir rolando a tela para cima e para baixo.",
+                    "score": "1",
+                    "explanation": "Nota 1: Usuário descreve como 'Acabaram com o extrato! antes eu conseguia visualizar no extrato, o tipo de transação + código/número da transação + valores. Agora tem que clicar na transação para aparecer as demais informações.' Principais queixas do review que justificam a nota: 'Acabaram com o extrato!', 'agora tem que clicar na transação para aparecer as demais informações', 'isto é um retrocesso', 'ajudava muito para conferir minha lista de cheques'. Conclusão do usuário: 'Somente para complementar.... tentei acessar agora o mês de dezembro de 2018 e não dá, somente anteriores!'"
+                }
+            ]
+        },
+        {
+            "email": "um.usuario.do.google.20190112000000@example.com",
+            "answers": [
+                {
+                    "purpose": "Principal objetivo: pagar meu cartão e usar o DDA. O app não funciona direito, não consegui pagar meu cartão pois estava no débito automático e não tinha saldo no dia, cancelei o débito automático e adivinha não consegui pagar mesmo tendo dinheiro na conta.",
+                    "score": "1",
+                    "explanation": "Nota 1: Usuário descreve como 'App muito inferior aos outros bancos, com vários problemas, DDA não funciona direito, não consegui pagar meu cartão pois estava no débito automático, e não tinha saldo no dia, cancelei o débito automático e adivinha não consegui pagar mesmo tendo dinheiro na conta, depois fui no caixa eletrônico também não consegui, fui obrigado a ir na agência pra conseguir pagar, não me deram nenhum ressarcimento e explicaram que era assim mesmo.'"
+                }
+            ]
+        },
+        {
+            "email": "um.usuario.do.google.20190109000000@example.com",
+            "answers": [
+                {
+                    "purpose": "Principal objetivo: Ver um período específico do mês e acompanhar o saldo a cada transação. App não ajudou pois: 'Extrato não permite ver um período específico do mês, os filtros estão com problemas' e 'ele também não traz o saldo a cada transação feita'.",
+                    "score": "3",
+                    "explanation": "Nota 3: Usuário descreve como 'Extrato não permite ver um período específico do mês, os filtros estão com problemas. Além disso, ele também não traz o saldo a cada transação feita. A atualização não trouxe melhorias.'"
+                }
+            ]
+        },
+        {
+            "email": "um.usuario.do.google.20190117000000@example.com",
+            "answers": [
+                {
+                    "purpose": "Principal objetivo: acompanhar meus investimentos como a carta de credito por exemplo. Desnecessario ter um canal so pra isso sendo que o aplicativo e mais pratico!",
+                    "score": "4",
+                    "explanation": "Nota 4: Usuário descreve como 'Uma melhoria, seria poder acompanhar meus investimentos como a carta de credito por exemplo'. Principais queixas do review que justificam a nota: 'Desnecessario ter um canal so pra isso sendo que o aplicativo e mais pratico!'. Conclusão do usuário: 'Uma melhoria'."
+                }
+            ]
+        },
+        {
+            "email": "um.usuario.do.google.20190216000000@example.com",
+            "answers": [
+                {
+                    "purpose": "Principal objetivo: Fazer pagamentos de boleto pelo aplicativo. O usuário tentou fazer dois pagamentos, mas demorou uma semana e o pagamento não foi feito pelos bancos dos boletos, tendo que transferir o dinheiro para sua conta do Bradesco para realizar os pagamentos.",
+                    "score": 1,
+                    "explanation": "Nota 1: Usuário descreve como 'Estou decepcionada com esse sicredi, fiz dois pagamentos de boleto pelo aplicativo, demorou uma semana e esse sicredi não fez o pagamento para os bancos dos boletos, tive que ir ao sicredi transferir o dinheiro para a minha conta do Bradesco para poder realizar os pagamentos porque pelo sicredi não teve jeito... Muitíssimo decepcionada, pois paguei juros dos boletos que não foram creditados...😡'. Conclusão do usuário: 'Muitíssimo decepcionada'."
+                }
+            ]
+        },
+        {
+            "email": "um.usuario.do.google.20190228000000@example.com",
+            "answers": [
+                {
+                    "purpose": "Principal objetivo: fazer operações pelo aplicativo. O usuário tentou usar o aplicativo para fazer operações, mas não consegue mais fazer nenhuma operação pelo mesmo, precisando abrir a conta pelo site do banco.",
+                    "score": 1,
+                    "explanation": "Nota 1: Usuário descreve como 'Péssimo aplicativo! Nunca consigo entrar na minha conta, mesmo com todos os dados corretos.' e 'não consigo mais fazer nenhuma operação pelo mesmo!'. Conclusão do usuário: 'Precisa melhorar muito para ofertar um serviço de qualidade, perdendo feio para aplicativos de concorrentes!'."
+                }
+            ]
+        },
+        {
+            "email": "um.usuario.do.google.20190221000000@example.com",
+            "answers": [
+                {
+                    "purpose": "Principal objetivo: usar o aplicativo para verificar as informações do cartão de crédito. O usuário quer saber exatamente quanto está gastando, mas as informações somente vão aparecer no app em uns 2 dias seguintes.",
+                    "score": 2,
+                    "explanation": "Nota 2: Usuário descreve como 'O aplicativo tem muito a melhorar. Com relação as informaçoes do cartao de credito. Uso o mesmo em um dia, e as informaçoes somente vao aparecer no app em uns 2 dias seguintes.' Conclusão do usuário: 'Dessa forma de voces é dificil saber exatamente quanto estou gastando... corrijam!'."
+                }
+            ]
+        },
+        {
+            "email": "um.usuario.do.google.20190216000000@example.com",
+            "answers": [
+                {
+                    "purpose": "Partes do review do usuário que descrevem seu objetivo, se foi alcançado e os motivos diretos, usando suas palavras.",
+                    "score": 3,
+                    "explanation": "Partes do review do usuário que explicam diretamente a nota (stars) atribuída, usando suas palavras. Tela continua piscando. Ao pagar uma conta de consumo(RGE), o vencimento da conta, puxa a data atual e não o vencimento que aparece na fatura. As comprar no cartão de crédito demoram muito para aparecer no app."
+                }
+            ]
+        },
+        {
+            "email": "um.usuario.do.google.20190202200000@example.com",
+            "answers": [
+                {
+                    "purpose": "Principal objetivo: ter a opção \"Lançamentos Futuros do cartão de crédito ou seja mostrar o local onde gastou, data e etc pra ter uma noção das faturas seguintes\". O usuário sentiu falta dessa funcionalidade.",
+                    "score": 4,
+                    "explanation": "Achei muito bom aplicativo, porém só senti falta em ter a opção \"Lançamentos Futuros do cartão de crédito ou seja mostrar o local onde gastou, data e etc pra ter uma noção das faturas seguintes\"."
+                }
+            ]
+        },
+        {
+            "email": "um.usuario.do.google.20190201000000@example.com",
+            "answers": [
+                {
+                    "purpose": "Principal objetivo: Acessar minha conta pelo app. O usuário tentou usar o app para acessar sua conta, mas não conseguiu pois pede pra eu cadastrar uma senha em uma \"unidade de atendimento\".",
+                    "score": 1,
+                    "explanation": "Nota 1: Usuário descreve como 'Baixei o app e nao consegui usar, pede pra eu cadastrar uma senha em uma \"unidade de atendimento\"'. Principais queixas do review que justificam a nota: 'se eu quisesse ter que ir ao banco eu não precisaria indtalar esse app', 'até o app da caixa é bem mais facil de usar', 'que só me fez perder tempo tentando acessar minha conta', 'Nao á facilidade no acesso', 'voce precisa ir ate a agência para poder acessar a sua conta em um aplicativo? sério isso?'. Conclusão do usuário: 'sério isso?...'."
+                }
+            ]
+        },
+        {
+            "email": "um.usuario.do.google.20190410200000@example.com",
+            "answers": [
+                {
+                    "purpose": "Principal objetivo: Usar o app para facilitar transações bancárias, como atualizar dados, solicitar cartão de crédito e efetuar transações como débito de empréstimo antes da data sem precisar ligar no banco. O usuário gostou do app, mas mencionou que poderia ter a possibilidade de atualizar os dados, o que indica que esse era seu objetivo principal.",
+                    "score": 4,
+                    "explanation": "Nota 4: Usuário descreve como 'O app é bom gostei'. Principais queixas do review que justificam a nota: 'podia ter a possibilidade de atualizar os dados', 'solicita cartão de crédito, e efetuar transações como débito de empréstimo antes da data sem precisar ligar no banco'. Conclusão do usuário: 'o app é bom'."
+                }
+            ]
+        },
+        {
+            "email": "um.usuario.do.google.20190426000000@example.com",
+            "answers": [
+                {
+                    "purpose": "Principal objetivo: fazer transferências e utilizar o mobile token. O usuário tentou usar o app para fazer uma transferência, mas não conseguiu pois tive que reinstalar o app e perdi o direito de utilizar o mobile token que me foi dado.",
+                    "score": 1,
+                    "explanation": "Nota 1: Usuário descreve como 'Honestamente, eu baixei faz um dia, travou desde o começo. Mas ainda funcionava. Foi atualizar e eu não conseguia mais mexer. Não abria. Sou uma associada nova, ainda não possuo cartão e preciso fazer uma transferência - e não consegui pois tive que reinstalar o app e perdi o direito de utilizar o mobile token que me foi dado. Agora devo esperar até segunda-feira para ir até o banco e realizar o processo de recuperação de código.' Principais queixas do review que justificam a nota: 'travou desde o começo', 'não abria', 'não consegui mais mexer', 'perdi o direito de utilizar o mobile token'. Conclusão do usuário: 'Deveriam ser mais atentos ao app de vocês. Vi muitas reclamações.'"
+                }
+            ]
+        },
+        {
+            "email": "um.usuario.do.google.20190413000000@example.com",
+            "answers": [
+                {
+                    "purpose": "Principal objetivo: usar o aplicativo para verificar extratos e melhorar a segurança. O aplicativo esta cada vez melhor, mais seguro. Eu gostaria de dar uma sugestão para o demonstrativo do extrato, apenas por linhas para separar as informações.",
+                    "score": 5,
+                    "explanation": "Nota 5: Usuário descreve como 'O aplicarivo esta cada vez melhor, mais seguro'. Principais queixas do review que justificam a nota: nenhuma, o usuário está satisfeito e elogia a melhora do aplicativo."
+                }
+            ]
+        },
+        {
+            "email": "um.usuario.do.google.20190430000000@example.com",
+            "answers": [
+                {
+                    "purpose": "Principal objetivo: usar o aplicativo para acessar o banco. O usuário relata que após a atualização do dia 25/04/18 o aplicativo não abre mais, já reinstalei e não resolveu. Está pensando seriamente em fechar minha conta nesse banco.",
+                    "score": 1,
+                    "explanation": "Nota 1: Usuário descreve como 'Desde que saiu o novo app não tive mais problemas com ele, mas após a atualização do dia 25/04/18 o aplicativo não abre mais, já reinstalei e não resolveu. A atualização do dia 30 não resolveu, estou pensando seriamente em fechar minha conta nesse banco, tive alguns problemas atrás na agência e agora estou sem poder usar o aplicativo e só recebo respostas automáticas!'. Conclusão do usuário: 'estou sem poder usar o aplicativo e só recebo respostas automáticas!'."
+                }
+            ]
+        },
+        {
+            "email": "um.usuario.do.google.20190425000000@example.com",
+            "answers": [
+                {
+                    "purpose": "Principal objetivo: abrir uma conta, fazer portabilidade e receber salário por ela. O usuário tentou usar o aplicativo para esses fins, mas não obteve benefícios ou melhorias.",
+                    "score": 1,
+                    "explanation": "Nota 1: Usuário descreve como 'é horrível este Sicredi', 'não gostei', 'não tive nenhum benefício', 'só taixas e cestas de serviços alta'. Conclusão do usuário: 'não se iludam'."
+                }
+            ]
+        },
+        {
+            "email": "um.usuario.do.google.20190428000000@example.com",
+            "answers": [
+                {
+                    "purpose": "Parou de funcionar na última atualização. Clico para abrir o app e ele abre e fecha rapidamente. Parece que aparece alguma mensagem mas nem sequer é possível ler a mensagem.",
+                    "score": 1,
+                    "explanation": "Nota 1: Usuário descreve como 'Parou de funcionar na última atualização. Clico para abrir o app e ele abre e fecha rapidamente. Parece que aparece alguma mensagem mas nem sequer é possível ler a mensagem.' Principais queixas do review que justificam a nota: 'Parou de funcionar', 'abre e fecha rapidamente', 'não é possível ler a mensagem'. Conclusão do usuário: 'Parou de funcionar na última atualização'."
+                }
+            ]
+        },
+        {
+            "email": "um.usuario.do.google.20190416000000@example.com",
+            "answers": [
+                {
+                    "purpose": "Não estou conseguindo acessar o aplicativo. Ele fica processando e não abre minha conta corrente e nem a poupança. Aparece a mensagem \"falha na conexão com os servidores\". Saliento que minha internet está funcionando corretamente.",
+                    "score": 2,
+                    "explanation": "Nota 2: Usuário descreve como 'Não estou conseguindo acessar o aplicativo. Ele fica processando e não abre minha conta corrente e nem a poupança. Aparece a mensagem \"falha na conexão com os servidores\"'. Principais queixas do review que justificam a nota: 'não estou conseguindo acessar', 'fica processando', 'não abre minha conta', 'falha na conexão com os servidores'. Conclusão do usuário: 'Saliento que minha internet está funcionando corretamente'."
+                }
+            ]
+        },
+        {
+            "email": "um.usuario.do.google.20190415000000@example.com",
+            "answers": [
+                {
+                    "purpose": "Aplicativo é horrível para fazer transferências, sempre que preciso usar este recurso é necessária muita paciência! Simplesmente não me permite digitar nenhum dado corretamente, tenho que repetir o processo diversas vezes até que funcione.",
+                    "score": 2,
+                    "explanation": "Aplicativo é horrível para fazer transferências, sempre que preciso usar este recurso é necessária muita paciência! Simplesmente não me permite digitar nenhum dado corretamente, tenho que repetir o processo diversas vezes até que funcione."
+                }
+            ]
+        },
+        {
+            "email": "um.usuario.do.google.20190430000000@example.com",
+            "answers": [
+                {
+                    "purpose": "Principal objetivo: usar o app após a atualização do dia 25/04. O app não abre mais em meu celular e aparece uma mensagem que meu aparelho não tem segurança mínima.",
+                    "score": 1,
+                    "explanation": "Nota 1: Usuário descreve como 'o app não abre mais em meu celular'. Principais queixas do review que justificam a nota: 'aparece uma mensagem que meu aparelho não tem segurança mínima'. Conclusão do usuário: 'Fico no aguardo com urgência'."
+                }
+            ]
+        },
+        {
+            "email": "um.usuario.do.google.20190417000000@example.com",
+            "answers": [
+                {
+                    "purpose": "Principal objetivo: Acessar o gerenciamento de chamadas telefônicas. O App obrigou seus associados a autorizar esse acesso, e se não autoriza, não consegue acessar. Gostaria desse esclarecimento.",
+                    "score": 4,
+                    "explanation": "Nota 4: Usuário atribui 4 estrelas. Principais queixas do review que justificam a nota: 'Com a nova atualização do App, no dia 08/04, a Sicredi obrigou seus associados a lhe autorizar a acessar o gerenciamento de chamadas telefônicas. Se não autoriza, não consegue acessar. Pq o App precisa desse tipo de acesso? Gostaria desse esclarecimento.'"
+                }
+            ]
+        },
+        {
+            "email": "um.usuario.do.google.20190411000000@example.com",
+            "answers": [
+                {
+                    "purpose": "Principal objetivo: usar o aplicativo para conferir o extrato e verificar o saldo. O app ficou muito ruim na tela de extrato não aparece o saldo.",
+                    "score": 3,
+                    "explanation": "Nota 3: Usuário descreve como 'ja esteve muito melhor ta travando e miuto lento, da falha e pede para conferir a confecção mesmo conectado co um bom sinal. sem contar que ficou muito ruim na tela de extrato não aparece o saldo.'"
+                }
+            ]
+        },
+        {
+            "email": "um.usuario.do.google.20190501000000@example.com",
+            "answers": [
+                {
+                    "purpose": "Principal objetivo: verificar se o saldo está liberado/ bloqueado. App não ajudou pois: 'Não é possível saber se o saldo está liberado/ bloqueado. Aparece o valor positivo, mas as vezes tem chegue ainda bloqueado e vc tenta passar o cartão e descobre que aquele saldo não é real.'",
+                    "score": 3,
+                    "explanation": "Nota 3: Usuário descreve como 'Não é possível saber se o saldo está liberado/ bloqueado'. Principais queixas do review que justificam a nota: 'aparece o valor positivo, mas as vezes tem chegue ainda bloqueado e vc tenta passar o cartão e descobre que aquele saldo não é real'."
+                }
+            ]
+        },
+        {
+            "email": "um.usuario.do.google.20190527000000@example.com",
+            "answers": [
+                {
+                    "purpose": "Principal objetivo: Melhorar funções referentes ao pagamento da fatura do cartão. Há a função disponível no app, mas não permite fazer o pagamento antecipado porque a fatura está cadastrada como débito automático.",
+                    "score": 3,
+                    "explanation": "Nota 3: Usuário descreve como 'Melhorar funções referentes ao pagamento da fatura do cartão'. Principais queixas do review que justificam a nota: 'Há a função disponível no app, mas não permite fazer o pagamento antecipado porque a fatura está cadastrada como débito automático. Até na agência meu gerente teve dificuldade de me enviar o código de barras para pagar, e aí demora varios dias para disponibilizar o limite.' Conclusão do usuário: 'É uma questão que merece atenção e melhorias, visto que outros apps similares são melhores neste quesito.'"
+                }
+            ]
+        },
+        {
+            "email": "um.usuario.do.google.20190511000000@example.com",
+            "answers": [
+                {
+                    "purpose": "Principal objetivo: pagar a fatura do cartão quando está em débito automático. O usuário tentou pagar a fatura, mas não conseguiu, mesmo transferindo o valor que faltava.",
+                    "score": 1,
+                    "explanation": "Nota 1: Usuário descreve como 'Não sei porque não consigo pagar a fatura do cartão quando está em débito automático'. Principais queixas do review que justificam a nota: 'não consigo pagar a fatura do cartão', 'só desconta o valor remanescente', 'não dá para pagar', 'brincadeira ai vou pagar atrasado e com juros', devido a limitação do sistema."
+                }
+            ]
+        },
+        {
+            "email": "um.usuario.do.google.20190529000000@example.com",
+            "answers": [
+                {
+                    "purpose": "Principal objetivo: usar o app e resolver problemas relacionados à conta. O usuário tentou usar o app desde quando abriu a conta, mas enfrentou diversos erros e problemas que não foram resolvidos.",
+                    "score": 1,
+                    "explanation": "Nota 1: Usuário descreve como 'App ruim, atendimento central péssimo, atendimento no banco mesma coisa que falar com as paredes. Ninguém resolve nada, enfrento diversos erros no app desde quando abri a conta e até hj sem solução.' Principais queixas do review que justificam a nota: 'App ruim', 'atendimento central péssimo', 'ninguém resolve nada', 'diversos erros no app desde quando abri a conta e até hj sem solução'. Conclusão do usuário: 'Dêem atendimento adequado aos seus associados, o que dar a entender que não tem vontade de resolver nada. Melhorem!'."
+                }
+            ]
+        },
+        {
+            "email": "um.usuario.do.google.20190517000000@example.com",
+            "answers": [
+                {
+                    "purpose": "Principal objetivo: usar o app sem bloqueios e acesso ao banco/cooperativa. O usuário tentou usar o app por 2 anos no mesmo celular com root, mas eles resolveram bloquear permanente o acesso do app a celulares com acesso root, encerrando sua conta.",
+                    "score": 1,
+                    "explanation": "Nota 1: Usuário descreve como 'literalmente uma grande merd4' e que o app fica bloqueado após atualizações, além de bloquear permanentemente o acesso a celulares com root, encerrando sua conta."
+                }
+            ]
+        },
+        {
+            "email": "um.usuario.do.google.20190519000000@example.com",
+            "answers": [
+                {
+                    "purpose": "Principal objetivo: Usar o app para realizar operações bancárias, como pagar contas. O app não ajudou pois: 'opção de pagar as contas limitada, não tem opção de preenchimento de GPS'.",
+                    "score": 1,
+                    "explanation": "Nota 1: Usuário descreve como 'App MUITO RUIM'. Principais queixas do review que justificam a nota: 'Muito lento', 'Limitado', 'não tem opção de preenchimento de GPS', 'App é muito lento, não dar resposta tátil nem visual ao click nos ícones', 'acaba gerando um novo toque'. Conclusão do usuário: 'contratem uma equipe que consiga resolver os problemas com urgência'."
+                }
+            ]
+        },
+        {
+            "email": "um.usuario.do.google.20190519000000@example.com",
+            "answers": [
+                {
+                    "purpose": "Principal objetivo: usar o aplicativo para efetuar transações rotineiras. O app era ótimo, maravilhoso, agora com a última atualização parou de funcionar abrindo uma msg q meu aparelho não tem segurança mínima.",
+                    "score": 1,
+                    "explanation": "Nota 1: Usuário descreve como 'O aplicativo era ótimo, maravilhoso'. Principais queixas do review que justificam a nota: 'parou de funcionar abrindo uma msg q meu aparelho não tem segurança mínima'. Conclusão do usuário: 'Eu tinha root porém faz tempo q removi, agora só consigo acessar pelo PC do meu trabalho. Pelo jeito q estou vendo vou ter q trocar de aparelho sem ter a condição financeira pra isso simplesmente pq necessito do App pra efetuar transações rotineiras.'"
+                }
+            ]
+        },
+        {
+            "email": "um.usuario.do.google.20190531000000@example.com",
+            "answers": [
+                {
+                    "purpose": "Principal objetivo: acessar ou mudar de operação no aplicativo. O usuário tentou usar o app para essas funções, mas encontrou que ele é um pouco lento e trava várias vezes quando tenta acessar ou mudar de operação.",
+                    "score": 3,
+                    "explanation": "Nota 3: Usuário descreve como 'Um pouco lento e trava várias vezes quando tento acessar ou mudar de operação'. Conclusão do usuário: 'Fora isso, a ergonomia é boa, e fácil de usar.'"
+                }
+            ]
+        },
+        {
+            "email": "um.usuario.do.google.20190521000000@example.com",
+            "answers": [
+                {
+                    "purpose": "Principal objetivo: Resolver o problema de autenticação do mobile token. O usuário tentou usar a funcionalidade de pagamento pelo app, mas apresenta erro, e mesmo após corrigir na agência, o problema persiste.",
+                    "score": 1,
+                    "explanation": "Nota 1: Usuário descreve como 'O problema de autenticação do mobile token continua, mesmo apos obter novos códigos de ativação, dias depois apresenta falhas'. Conclusão do usuário: 'por esse motivo somente 1 estrela'."
+                }
+            ]
+        },
+        {
+            "email": "um.usuario.do.google.20190501000000@example.com",
+            "answers": [
+                {
+                    "purpose": "Principal objetivo: usar o aplicativo para recargas. App é completo e prático, porém, na opcao de recargas poderiam ficar registrados os últimos números assim facilitaria muito.",
+                    "score": 4,
+                    "explanation": "Nota 4: Usuário descreve como 'o aplicativo é sem sombra de dúvidas completo e prático'. Principais queixas do review que justificam a nota: 'porém, na opcao de recargas poderiam ficar registrados os últimos números assim facilitaria muito. pois na correia ja cheguei a por um crédito no numero errado. se ja estivesse nas opções, seria muito mais prático'."
+                }
+            ]
+        },
+        {
+            "email": "um.usuario.do.google.20190511000000@example.com",
+            "answers": [
+                {
+                    "purpose": "Principal objetivo: Usar o app para realizar pagamentos e transferências. O app me ajuda muito, mas existem campos de digitação que travam e não consigo escrever mais que duas letras, descrição do pagamento é um. E na transferência entre contas Sicredi com favorecido cadastrado, não consigo selecionar transferência para conta poupança, fica sempre em corrente, ai tenho que digitar os dados da conta sempre.",
+                    "score": 2,
+                    "explanation": "Nota 2: Usuário descreve como 'O App me ajuda muito', mas também aponta problemas como 'campos de digitação que travam e não consigo escrever mais que duas letras', 'não consigo selecionar transferência para conta poupança, fica sempre em corrente', e que 'após a última atualização também não consigo agendar pagamentos'. Conclusão do usuário: 'Favor verificar a solução dos problemas'."
+                }
+            ]
+        },
+        {
+            "email": "um.usuario.do.google.20190531000000@example.com",
+            "answers": [
+                {
+                    "purpose": "Principal objetivo: pagar guias do DetranRS. O aplicativo tem melhorado aos poucos, mas sinto muita falta de poder pagar guias do DetranRS.",
+                    "score": 3,
+                    "explanation": "Nota 3: Usuário descreve como 'O aplicativo tem melhorado aos poucos', mas também menciona que 'sinto muita falta de poder pagar guias do DetranRS'."
+                }
+            ]
+        },
+        {
+            "email": "um.usuario.do.google.20190519000000@example.com",
+            "answers": [
+                {
+                    "purpose": "Principal objetivo: Entrar no aplicativo e usar seus recursos. O usuário tentou abrir o aplicativo, mas aparece uma mensagem dizendo que o celular precisa de mais segurança. Ele quer entender esse erro e resolver o problema.",
+                    "score": 1,
+                    "explanation": "Nota 1: Usuário descreve como 'Quando baixo o aplicativo e tento entrar, automaticamente aparece uma mensagem falando que o meu celular precisa de mais segurança.' Principais queixas do review que justificam a nota: 'poderiam me ajudar a entender esse erro e resolver? Não, não é problrma com o root.'"
+                }
+            ]
+        },
+        {
+            "email": "um.usuario.do.google.20190527000000@example.com",
+            "answers": [
+                {
+                    "purpose": "Principal objetivo: Usar o aplicativo para gerenciar o limite de crédito do cartão. O app não ajudou pois: 'o limite de crédito do meu cartão muda toda hora! sexta estava com 310 reais de limite, utilizei o cartão e fiquei com 71. hoje de repente voltou pra os 310.'",
+                    "score": 2,
+                    "explanation": "Nota 2: Usuário descreve como 'bagunçado demais!'. Principais queixas do review que justificam a nota: 'o limite de crédito do meu cartão muda toda hora! sexta estava com 310 reais de limite, utilizei o cartão e fiquei com 71. hoje de repente voltou pra os 310. ja atualizei o app e continua do mesmo jeito, sacanagem.' Conclusão do usuário: 'a gente gasta acaba pagando juros depois'."
+                }
+            ]
+        },
+        {
+            "email": "um.usuario.do.google.20190527000000@example.com",
+            "answers": [
+                {
+                    "purpose": "Principal objetivo: Ver o saldo da conta salário. O usuário queria saber se seu pagamento está na conta sem ir ao banco, mas o app não tem essa opção.",
+                    "score": 1,
+                    "explanation": "Nota 1: Usuário descreve como 'Saldo Conta Salário Outros bancos tem opção para ver o saldo da conta salário, menos esse.' e 'Não tenho como saber se meu pagamento está na conta sem ir ao banco.' Conclusão do usuário: 'Por favor mudem isso. Obrigada.'"
+                }
+            ]
+        },
+        {
+            "email": "um.usuario.do.google.20190510000000@example.com",
+            "answers": [
+                {
+                    "purpose": "Principal objetivo: fazer transações em horários e finais de semana. App não ajudou pois: 'não podemos fazer transações em certos horários e nem em finais de semana.'",
+                    "score": 2,
+                    "explanation": "Nota 2: Usuário descreve como 'Dei duas estrelas porque não podemos fazer transações em certos horários e nem em finais de semana.'. Principais queixas do review que justificam a nota: 'Já fiquei na mão por causa disso. E depois que atualizaram o aplicativo não consigo ver o saldo da poupança, aparece como se eu não tivesse nenhum investimento.' Conclusão do usuário: 'Dei duas estrelas porque não podemos fazer transações em certos horários e nem em finais de semana. Já fiquei na mão por causa disso. E depois que atualizaram o aplicativo não consigo ver o saldo da poupança, aparece como se eu não tivesse nenhum investimento.'"
+                }
+            ]
+        },
+        {
+            "email": "um.usuario.do.google.20190530000000@example.com",
+            "answers": [
+                {
+                    "purpose": "Aplicativo excelente! Opções de saldo, crédito e investimentos sao disponibilizados logo de cara quando do acesso sem complicações. Também nao tive problemas quando das movimentações como transferências e pagamentos.",
+                    "score": 5,
+                    "explanation": "Estou super satisfeita. Parabéns."
+                }
+            ]
+        },
+        {
+            "email": "um.usuario.do.google.20190507000000@example.com",
+            "answers": [
+                {
+                    "purpose": "Principal objetivo: usar o aplicativo do Sicredi no meu celular. O aplicativo do Sicredi diz que meu sistema não é compatível. Antes da atualização eu usava sem problema algum.",
+                    "score": 3,
+                    "explanation": "Nota 3: Usuário descreve como 'Após a atualizaçao não está funciobando no meu celular'. Principais queixas do review que justificam a nota: 'não está funciobando no meu celular', 'O aplicativo do Sicredi diz que meu sistema não é compatível', 'Já estou sem usar o aplicativo há alguns dias'."
+                }
+            ]
+        },
+        {
+            "email": "um.usuario.do.google.20190503000000@example.com",
+            "answers": [
+                {
+                    "purpose": "Principal objetivo: usar o app, mas após a última atualização parou de funcionar no meu smartphone, já desinstalei o app e instalei de novo, e não funcionou, já desinstalei e desliguei o smart e instalei novamente e não funcionou.",
+                    "score": 3,
+                    "explanation": "Nota 3: Usuário descreve como 'App ótimo, porém após a última atualização parou de funcionar no meu smartphone'. Principais queixas do review que justificam a nota: 'parou de funcionar no meu smartphone', 'já desinstalei o app e instalei de novo, e não funcionou', 'já desinstalei e desliguei o smart e instalei novamente e não funcionou'. Conclusão do usuário: 'Aguardo', solicitando contato do responsável pelo app."
+                }
+            ]
+        },
+        {
+            "email": "um.usuario.do.google.20190524000000@example.com",
+            "answers": [
+                {
+                    "purpose": "Principal objetivo: usar o aplicativo para realizar operações, login ou procedimentos no APP. O usuário quer que o aplicativo funcione de forma mais estável e com melhor desempenho, pois ainda sofre com lentidão ao processar uma operação na hora do login ou para efetuar algum procedimento no APP.",
+                    "score": 3,
+                    "explanation": "Nota 3: Usuário descreve como 'Ótimo aplicativo, mas poderia melhorar um pouco a estabilidade e o desempenho do mesmo, pois ainda o usuário sofre muito na lentidão de processar uma operação sendo ela na hora do login ou para efetuar algum procedimento no APP, no mais o aplicativo fornecido é ótimo.'"
+                }
+            ]
+        },
+        {
+            "email": "um.usuario.do.google.20190531000000@example.com",
+            "answers": [
+                {
+                    "purpose": "Principal objetivo: usar o app para gerenciar transações e calendário. O app não ajudou pois: 'Ele era perfeito!!! Agora mandaram atualizar e o troço simplesmente não reconhece mais o calendário. Nenhuma transação é possível por que diz que a data é invalida!!'",
+                    "score": 1,
+                    "explanation": "Nota 1: Usuário descreve como 'Mas o que fizeram com o app???? Estragaram por estragar?'. Principais queixas do review que justificam a nota: 'Ele era perfeito!!! Agora mandaram atualizar e o troço simplesmente não reconhece mais o calendário. Nenhuma transação é possível por que diz que a data é invalida!!'. Conclusão do usuário: 'Por favor, devolvam meu aplicativo!!!'."
+                }
+            ]
+        },
+        {
+            "email": "um.usuario.do.google.20190516000000@example.com",
+            "answers": [
+                {
+                    "purpose": "Principal objetivo: usar o app no meu celular. O que acontece: nao estou conseguindo abrir o app no meu celular.",
+                    "score": 1,
+                    "explanation": "Nota 1: Usuário descreve como 'nao estou conseguindo abrir o app no meu celular'. Principais queixas do review que justificam a nota: 'o que sera que acontece?? Descobri o que acontece - A empresa adptou um novo sistema de segurança, onde celulares com ROOT não funcionam o app. O que me incomoda é que quem faz essa opção de ter root em seu celular sabe dos riscos de segurança, entao por que agora nem a liberdade de mexer em meu celular eu posso por que APENAS esse app não aceita root.'"
+                }
+            ]
+        },
+        {
+            "email": "um.usuario.do.google.20190509000000@example.com",
+            "answers": [
+                {
+                    "purpose": "Principal objetivo: usar o aplicativo após a atualização. O app não funcionou após a atualização e dá o mesmo erro que a maioria está relatando dizendo que o aparelho não possui configurações mínimas de segurança.",
+                    "score": 1,
+                    "explanation": "Nota 1: Usuário descreve como 'Não funcionou após a atualização'. Principais queixas do review que justificam a nota: 'Dá o mesmo erro que a maioria está relatando dizendo que o aparelho não possui configurações mínimas de segurança'. Conclusão do usuário: 'O banco orientou desativar moto root porém meu celular não possui root.'"
+                }
+            ]
+        },
+        {
+            "email": "um.usuario.do.google.20190506000000@example.com",
+            "answers": [
+                {
+                    "purpose": "Estava tudo ok, mas fazem 2 semanas que não consigo acessar, por algum erro de segurança do app, e nada resolve. Aconteceu do nada isso, e simplesmente não abre mais.",
+                    "score": 1,
+                    "explanation": "Nota 1: Usuário descreve como 'Estava tudo ok', mas que 'fazem 2 semanas que não consigo acessar, por algum erro de segurança do app, e nada resolve'. Conclusão do usuário: 'simplesmente não abre mais, só dá o erro e fecha em seguida'."
+                }
+            ]
+        },
+        {
+            "email": "um.usuario.do.google.20190517000000@example.com",
+            "answers": [
+                {
+                    "purpose": "Principal objetivo: facilitar o acesso às contas no app. Os desenvolvedores deveriam criar um campo onde podemos escolher apenas pelo nome do usuário da conta para facilitar quem acessa diversas contas pelo app.",
+                    "score": 4,
+                    "explanation": "Nota 4: Usuário descreve como 'os desenvolvedores deveriam criar um campo onde podemos escolher apenas pelo nome do usuário da conta para facilitar quem acessa diversas contas pelo app'."
+                }
+            ]
+        },
+        {
+            "email": "um.usuario.do.google.20190504000000@example.com",
+            "answers": [
+                {
+                    "purpose": "Principal objetivo: usar o aplicativo para desbloquear com digital e senha. O app não ajuda pois: 'não abre com a digital de forma alguma' e 'não reconhece a senha, às vezes, mesmo estando correta.'",
+                    "score": 1,
+                    "explanation": "Nota 1: Usuário descreve como 'Horrível não abre com a digital de forma alguma e vive travando, muito lento, além disso, não reconhece a senha, às vezes, mesmo estando correta.' Principais queixas do review que justificam a nota: 'não abre com a digital de forma alguma', 'vive travando', 'muito lento', 'não reconhece a senha, às vezes, mesmo estando correta.' Conclusão do usuário: 'Horrível'."
+                }
+            ]
+        },
+        {
+            "email": "um.usuario.do.google.20190504000000@example.com",
+            "answers": [
+                {
+                    "purpose": "Principal objetivo: usar o aplicativo bancário. O app retorna problemas de segurança, provavelmente por conta do root, sugiro que removam isso, uso a anos o aplicativo.",
+                    "score": 1,
+                    "explanation": "Nota 1: Usuário descreve como 'Depois de atualizado o app retorna problemas de segurança, provavelmente por conta do root'. Conclusão do usuário: 'esse é o único app bancário com esse tipo de besteira, TODOS os outros funcionam normalmente.'"
+                }
+            ]
+        },
+        {
+            "email": "um.usuario.do.google.20190514000000@example.com",
+            "answers": [
+                {
+                    "purpose": "Meu app está parecendo uma msg de erro: 'Este dispositivo não atende aos requisitos de segurança mínimos para este aplicativo. Entre em contato com o editor do aplicativo para mais detalhes.' o que devo fazer? já desinstalei e instalei o app várias vezes e não deu certo.",
+                    "score": 3,
+                    "explanation": "Nota 3: Usuário descreve como 'boa noite, meu app esta parecendo uma msg de erro: Este dispositivo não atende aos requisitos de segurança mínimos para este aplicativo. Entre em contato com o editor do aplicativo para mais detalhes. o que devo fazer? já desinstalei e instalei o app varias vezes e não deu certo.' Principais queixas do review que justificam a nota: 'msg de erro', 'não deu certo', mesmo após desinstalar e instalar várias vezes."
+                }
+            ]
+        },
+        {
+            "email": "um.usuario.do.google.20190611000000@example.com",
+            "answers": [
+                {
+                    "purpose": "Principal objetivo: usar o aplicativo. O aplicativo a uns 3 meses mais ou menos funcionava. Após a penúltima atualização não funcionou mais no meu aparelho. Consegui contornar o problema instalado uma versão anterior que ainda rodava em meu aparelho, funcionou normalmente.",
+                    "score": 1,
+                    "explanation": "Nota 1: Usuário descreve como 'O aplicativo a uns 3 meses mais ou menos funcionava'. Principais queixas do review que justificam a nota: 'Após a penúltima atualização não funcionou mais no meu aparelho', 'e até tentaram contato com o suporte técnico do app, mas sem êxito'. Conclusão do usuário: 'estou sem poder usar o app'."
+                }
+            ]
+        },
+        {
+            "email": "um.usuario.do.google.20190610000000@example.com",
+            "answers": [
+                {
+                    "purpose": "Principal objetivo: usar o App para pagar contas e Darf. O App funcionou bem somente uma semana, agora não consigo pagar uma Darf, não consigo pagar uma conta de celular.",
+                    "score": 1,
+                    "explanation": "Nota 1: Usuário descreve como 'o App do Sicredi está deixando a desejar... troquei de banco para dar mais comodidade... mas até o momento só estou tendo dor de cabeça'."
+                }
+            ]
+        },
+        {
+            "email": "um.usuario.do.google.20190610000000@example.com",
+            "answers": [
+                {
+                    "purpose": "Principal objetivo: usar o aplicativo para realizar operações financeiras. O usuário tentou mexer nele, mas ficou impossível, pois fica só carregando, trava muito, não realiza pagamento pois pede pra entrar em contato com a agência.",
+                    "score": 1,
+                    "explanation": "Nota 1: Usuário descreve como 'antes era bom. agora ficou impossível mecher nele. fica só carregando, não conclui operação, trava muito, não realiza pagamento pois pede pra entrar em contato com a agência, enfim, ficou horrível.'"
+                }
+            ]
+        },
+        {
+            "email": "um.usuario.do.google.20190612000000@example.com",
+            "answers": [
+                {
+                    "purpose": "Principal objetivo: usar o aplicativo normalmente. O usuário percebeu que o aplicativo funcionava normalmente até a última atualização, mas o problema está devido ao fato do aparelho estar com root. Ele tem outros 3 aplicativos de banco e todos funcionam normalmente. Lembrando que nao é uma configuração que pode ser alterada, uma vez feito root nao volta mais ao estado original.",
+                    "score": 1,
+                    "explanation": "Nota 1: Usuário descreve como 'o aplicativo funcionava normalmente ate a última atualização'. Principais queixas do review que justificam a nota: 'esta devido so fato do meu aparelho estar com root', 'não é uma configuração que pode ser alterada, uma vez feito root nao volta mais ao estado original', e 'perco o acesso ao aplicativo'. Conclusão do usuário: 'Lamentável...'."
+                }
+            ]
+        },
+        {
+            "email": "um.usuario.do.google.20190610000000@example.com",
+            "answers": [
+                {
+                    "purpose": "Principal objetivo: Usar o aplicativo de forma responsiva e com boa usabilidade. O usuário tentou usar o app, mas encontrou problemas como 'não é responsivo', 'problemas com lag no teclado', 'muito lento no tempo de resposta ao clicar em qualquer link' e dificuldades no acesso ao home para digitar senha.",
+                    "score": 1,
+                    "explanation": "Nota 1: Usuário descreve como 'não é responsivo, problemas com lag no teclado, muito lento no tempo de resposta ao clicar em qualquer link, problemas no home para acessar o tolken (fica bloqueado pelo teclado que aparece automaticamente para digitar senha)...enfim, muito ruim na usabilidade.'"
+                }
+            ]
+        },
+        {
+            "email": "um.usuario.do.google.20190601000000@example.com",
+            "answers": [
+                {
+                    "purpose": "Fazer tudo o que preciso e realizar minhas transações pelo aplicativo.",
+                    "score": 5,
+                    "explanation": "Nenhuma queixa ref ao aplicativo. Faz tudo o que preciso e realmente esta funcionando. faco praticamente todas as minhas transações por ele e nao tem dificuldade alguma.... muito facil de ser utilizado. Parabens aos desenvolvedores, pois como programador, sei da dificuldade de fazer um software que agrade e facilite a vida das pessoas"
+                }
+            ]
+        },
+        {
+            "email": "um.usuario.do.google.20190612000000@example.com",
+            "answers": [
+                {
+                    "purpose": "Principal objetivo: usar o aplicativo para gerenciar minhas finanças e visualizar a fatura do cartão de crédito.",
+                    "score": 2,
+                    "explanation": "Nota 2: Usuário descreve como 'O outro era melhor depois que atualizaram'. Principais queixas do review que justificam a nota: 'ele já teve vários bugs', 'é a vez dos cartões de crédito aonde vc vizualiza a fatura e vê um valor totalmente diferente do quê vc gastou'. Conclusão do usuário: 'me disse que era para mim ir anotando o que eu ia gastando para não perder o controle, me poupe, descaso com o cliente'."
+                }
+            ]
+        },
+        {
+            "email": "um.usuario.do.google.20190603000000@example.com",
+            "answers": [
+                {
+                    "purpose": "Pessoal Sicredi, gostaria de deixar minha opinião quanto cliente novo. Banco de vocês é excelente, porém o aplicativo deixa muito a desejar, varios bugs, trava facielmente, conferências de extrato falta dados, conferência de Cartao de Crédito nao atualiza, consta a ultima fatura como fatura atual/ nao atualiza demais parcelas (recurso precisa melhorar).",
+                    "score": 5,
+                    "explanation": "Pessoal espero que entendam como uma critica construtiva, pois ja usei apps de outro banco, e infelizmente nisso voces estao perdendo."
+                }
+            ]
+        },
+        {
+            "email": "um.usuario.do.google.20190608000000@example.com",
+            "answers": [
+                {
+                    "purpose": "Principal objetivo: pagar uma conta. O usuário tentou pagar uma conta, mas o sistema não aceita a data de vencimento mesmo 2 horas antes de ser amanhã.",
+                    "score": 1,
+                    "explanation": "Nota 1: Usuário descreve como 'Tá uma meleca esse APP depois da atualização'. Principais queixas do review que justificam a nota: 'melhor perder 3 hrs no caixa pra pagar uma conta', 'o sistema não aceita a data do vencimento hj, e mesmo 2 hrs antes de ser amanhã'. Conclusão do usuário: 'melhor mudar de banco se continuar assim! Vc ter hora pra pagar uma conta,......data do vencimento hj, e mesmo 2 hrs antes de ser amanhã, o sistema não aceita!'."
+                }
+            ]
+        },
+        {
+            "email": "um.usuario.do.google.20190616000000@example.com",
+            "answers": [
+                {
+                    "purpose": "usuário está cadastrado, segurança está habilitada e mesmo assim o aplicativo informa que usuário não está cadastrado",
+                    "score": 1,
+                    "explanation": "cada dia um novo problema, cada vez que tem um problema tem que ir na agência pra resolver, praticidade é zero"
+                }
+            ]
+        },
+        {
+            "email": "um.usuario.do.google.20190617000000@example.com",
+            "answers": [
+                {
+                    "purpose": "Principal objetivo: usar o aplicativo para agendar pagamento de contas. App não funciona o agendamento de pagamento de contas e é muito ruim de mexer, mesmo depois da ultima atualizaçao demora muito para abrir e dar informaçoes basicas como o saldo da conta.",
+                    "score": 1,
+                    "explanation": "Nota 1: Usuário descreve como 'HORRIVEL!!!! Nao funciona o agendamento de pagamento de contas e é muito ruim de mexer, mesmo depois da ultima atualizaçao demora muito para abrir e dar informaçoes basicas como o saldo da conta. UMA VERDADEIRA DECEPÇAO!'. Conclusão do usuário: 'UMA VERDADEIRA DECEPÇAO!'."
+                }
+            ]
+        },
+        {
+            "email": "um.usuario.do.google.20190617000000@example.com",
+            "answers": [
+                {
+                    "purpose": "Principal objetivo: usar o app para ações rápidas, como redirecionamento para atualização do app na tela principal. O usuário tentou fazer ações no app, mas encontrou dificuldades.",
+                    "score": 3,
+                    "explanation": "Nota 3: Usuário descreve como 'falta algumas ações rápidas por exemplo, redirecionamento para atualização do app na tela principal. Esse app, dá muito problema e impossibilita ações no mesmo. Com muita frequência isso ocorre. Muito falho.'."
+                }
+            ]
+        },
+        {
+            "email": "um.usuario.do.google.20190616000000@example.com",
+            "answers": [
+                {
+                    "purpose": "Principal objetivo: acompanhar a fatura pelo aplicativo. O usuário tentou usar o aplicativo para acompanhar sua fatura, mas agora demora muito para atualizar e não consegue saber qual o valor real que vai pagar.",
+                    "score": 1,
+                    "explanation": "Nota 1: Usuário descreve como 'estragaram o aplicativo' e que o aplicativo 'demora muito pra atualizar' e que 'não consegue saber qual o valor real que vou pagar'. Principais queixas do review que justificam a nota: 'estragaram o aplicativo', 'demora muito pra atualizar', 'não consigo saber qual o valor real que vou pagar'. Conclusão do usuário: 'o APLICATIVO JÁ FOI ÓTIMO, MAS AGORA ESTÁ PÉSSIMO'."
+                }
+            ]
+        },
+        {
+            "email": "um.usuario.do.google.20190605200000@example.com",
+            "answers": [
+                {
+                    "purpose": "Aplicativo problemático, troquei de celular, instalei novamente o app, consegui movimentar minha conta uma única vez, daí ele simplesmente não funciona mais, e ninguém consegue resolver isso.",
+                    "score": 3,
+                    "explanation": "Nota 3: Usuário descreve como 'Aplicativo problemático'. Principais queixas do review que justificam a nota: 'troquei de celular, instalei novamente o app, consegui movimentar minha conta uma única vez, daí ele simplesmente não funciona mais, e ninguém consegue resolver isso'. Conclusão do usuário: 'algo que deveria facilitar meus dias, só está dando dor de cabeça'."
+                }
+            ]
+        },
+        {
+            "email": "um.usuario.do.google.20190622000000@example.com",
+            "answers": [
+                {
+                    "purpose": "Principal objetivo: conectar na rede wireless. App funciona na minha casa mas nao funciona na empresa.",
+                    "score": 3,
+                    "explanation": "Nota 3: Usuário descreve como 'Erro ao conectar na rede wireless, funciona na minha casa mas nao funciona na empresa'. Conclusão do usuário: 'funcionava corretamente mas depois da ultima atualizaçao ja era o app fica travando, espero que saia uma correção rápido!'"
+                }
+            ]
+        },
+        {
+            "email": "um.usuario.do.google.20190614000000@example.com",
+            "answers": [
+                {
+                    "purpose": "Pensando no seu principal objetivo ao usar nosso aplicativo, o quão bem ele te ajudou a alcançar esse propósito e os motivos diretos, usando suas palavras.",
+                    "score": 1,
+                    "explanation": "Nota 1: Usuário descreve como 'Cuidado quando for viajar para fora do Brasil. Gosto muito de trabalhar com o Sicredi, porém em viagem para Cartagena das Índias fiquei totalmente sem acesso ao App e ao site do sicredi...'. Conclusão do usuário: 'coisas que não aconteceram por exemplo com a Caixa e o cartão Nubank'."
+                }
+            ]
+        },
+        {
+            "email": "um.usuario.do.google.20190601000000@example.com",
+            "answers": [
+                {
+                    "purpose": "Principal objetivo: usar o aplicativo para fazer compras na internet e fazer portabilidade de salário. O usuário comentou que está ficando cada dia mais bom, indicando que o aplicativo está atendendo bem esses propósitos.",
+                    "score": 5,
+                    "explanation": "Nota 5: Usuário descreve como 'Está ficando cada dia mais bom', indicando satisfação geral com o aplicativo. Não há críticas específicas, apenas uma sugestão de fornecer um cartão virtual para compras na internet, o que não compromete a nota alta."
+                }
+            ]
+        },
+        {
+            "email": "um.usuario.do.google.20190603000000@example.com",
+            "answers": [
+                {
+                    "purpose": "Principal objetivo: Acessar o App do Cicredi. O usuário não conseguiu acessar o App, pois inicialmente aparece uma tela preta e após a logo do banco, aparece 'O App Cicredi parou!'.",
+                    "score": 1,
+                    "explanation": "Nota 1: Usuário descreve como 'não estou conseguindo acessar o App do Cicredi! inicialmente aparece uma tela preta e após a logo do banco. Após isso aparece O App Cicredi parou!'. Principais queixas do review que justificam a nota: 'não estou conseguindo acessar', 'tela preta', 'O App Cicredi parou!'. Conclusão do usuário: 'Gostaria que fosse solucionado esse problema'."
+                }
+            ]
+        },
+        {
+            "email": "um.usuario.do.google.20190630000000@example.com",
+            "answers": [
+                {
+                    "purpose": "Principal objetivo: usar o App em meu celular um J7 Pro. Gostaria que os desenvolvedores corrigissem o problema do app pois uso muito a conta e não consigo fazer transações pelo celular.",
+                    "score": 1,
+                    "explanation": "Nota 1: Usuário descreve como 'aplicativo nao abre em meu celular um j7 pro'. Principais queixas do review que justificam a nota: 'aplicativo nao abre em meu celular um j7 pro', 'não consigo fazer transações pelo celular'. Conclusão do usuário: 'gostaria que os desenvolvedores corrigissem o problema do app'."
+                }
+            ]
+        },
+        {
+            "email": "um.usuario.do.google.20190605000000@example.com",
+            "answers": [
+                {
+                    "purpose": "Principal objetivo: usar o aplicativo do Sicredi. O app trava no meio da transação e já para, dificultando o uso.",
+                    "score": 1,
+                    "explanation": "Nota 1: Usuário descreve como 'Péssimo!! Quando tenho a sorte de abrir o aplicativo, já que o \"sicredi\" sempre para, ele trava no meio da transação!!'. Principais queixas do review que justificam a nota: 'trava no meio da transação', 'já que o \"sicredi\" sempre para'. Conclusão do usuário: 'A paciência já está no limite e o próximo passo é abandonar o banco!'."
+                }
+            ]
+        },
+        {
+            "email": "um.usuario.do.google.20190613000000@example.com",
+            "answers": [
+                {
+                    "purpose": "Aplicativo intuitivo, de fácil uso, funciona até quando a conexão não é tão boa, e agora com a possibilidade de acompanhar a Fatura pelo app ficou perfeito!",
+                    "score": 5,
+                    "explanation": "Aplicativo intuitivo, de fácil uso, funciona até quando a conexão não é tão boa, e agora com a possibilidade de acompanhar a Fatura pelo app ficou perfeito!"
+                }
+            ]
+        },
+        {
+            "email": "um.usuario.do.google.20190601000000@example.com",
+            "answers": [
+                {
+                    "purpose": "Principal objetivo: fazer uma transação. O usuário tentou por mais de dez vezes fazer uma transação e não conseguiu, pois 'não abria o aplicativo de forma alguma'.",
+                    "score": 4,
+                    "explanation": "Nota 4: Usuário descreve como 'não abria o aplicativo de forma alguma..desliguei o celular e reiniciei varias vezes a na dava certo ai exclui o aplicativo pra baixar novamente.. agora não baixa mais'."
+                }
+            ]
+        },
+        {
+            "email": "um.usuario.do.google.20190617000000@example.com",
+            "answers": [
+                {
+                    "purpose": "Principal objetivo: verificar meus dados e receber o cartão. O usuário tentou colocar agência e conta no app, mas diz que conta inválida, e mesmo ainda não tendo acesso à senha, esperava que aparecesse alguma coisa que pudesse identificar.",
+                    "score": 1,
+                    "explanation": "Nota 1: Usuário descreve como 'Eu ainda não recebi o cartão acredito que essa semana esteja em mãos, baixei o app coloco agência e conta e diz conta inválida, pra eu verificar meus dados como assim, mesmo ainda não tendo acesso a senha era pra aparecer alguma coisa que eu possa identificar. Fiquei sem entender isso. Por que conta inválida??'."
+                }
+            ]
+        },
+        {
+            "email": "um.usuario.do.google.20190627000000@example.com",
+            "answers": [
+                {
+                    "purpose": "Principal objetivo: usar o app para abrir e verificar mensagens. O App simplesmente não abre mais. Quando Clico no ícone aparece uma mensagem, mas é extremamente rápida, não permitindo lê-la.",
+                    "score": 1,
+                    "explanation": "Nota 1: Usuário descreve como 'O App simplesmente não abre mais'. Principais queixas do review que justificam a nota: 'Quando Clico no ícone aparece uma mensagem, mas é extremamente rápida, não permitindo lê-la'. Conclusão do usuário: 'Já desinstalei e instalei novamente e nada'."
+                }
+            ]
+        },
+        {
+            "email": "um.usuario.do.google.20190623000000@example.com",
+            "answers": [
+                {
+                    "purpose": "Principal objetivo: usar o app para pagar contas, fazer recargas e verificar saldo. O app ficou complicado desde a última atualização, toda hora com falha na comunicação com o servidor, não consigo nem ver o saldo da conta.",
+                    "score": 1,
+                    "explanation": "Nota 1: Usuário descreve como 'ta complicado desde a ultima atualização toda hora com falha na comunicação com o servidor\n            nao consigo nem ver o saldo da conta'. Principais queixas do review que justificam a nota: 'ta complicado', 'falha na comunicação com o servidor', 'não consigo nem ver o saldo da conta'. Conclusão do usuário: 'sempre gostei muito do app pq pago minhas contas todas por ele, faço recargas, mas após a ultima att não pude mais usar...'."
+                }
+            ]
+        },
+        {
+            "email": "um.usuario.do.google.20190730000000@example.com",
+            "answers": [
+                {
+                    "purpose": "Principal objetivo: usar um app bancário com funcionalidades básicas. O usuário espera receber notificações quando ocorre movimentação na conta e no cartão de crédito/débito, e também quer compatibilidade com o Google Pay.",
+                    "score": 3,
+                    "explanation": "Nota 3: Usuário descreve que o app possui as funcionalidades básicas que espera de um app bancário. Principais queixas do review que justificam a nota: 'sinto falta de receber alguma notificação quando ocorre movimentação na minha conta corrente', 'o mesmo para o cartão de crédito/debito que não notifica quando uma compra ou saque é realizado', e 'também poderia ser compatível com o Google Pay'."
+                }
+            ]
+        },
+        {
+            "email": "um.usuario.do.google.20190714000000@example.com",
+            "answers": [
+                {
+                    "purpose": "Principal objetivo: consultar extrato e visualizar saldo na mesma tela, além de ter um totalizador de lançamentos futuros. O usuário tentou usar o aplicativo para essas funções, mas encontrou dificuldades.",
+                    "score": 3,
+                    "explanation": "Nota 3: Usuário descreve como 'Talvez uma planilha tenha mais facilidades que o aplicativo. Você consulta um extrato e não consegue visualizar o saldo na mesma tela, você consulta lançamentos futuros e não tem um totalizador sendo necessário fazer a soma no papel de açougue.'"
+                }
+            ]
+        },
+        {
+            "email": "um.usuario.do.google.20190710000000@example.com",
+            "answers": [
+                {
+                    "purpose": "Principal objetivo: usar o app para alguma função que não foi claramente especificada. O usuário não conseguiu sair da tela inicial, mesmo com todos os dados corretos, e o app diz que um ou os dois estão incorretos.",
+                    "score": 1,
+                    "explanation": "Nota 1: Usuário descreve como 'Bom, n tive muito oq avaliar ainda, por isso dei uma estrela'. Principais queixas do review que justificam a nota: 'n saiu da tela inicial, apensar de todos os dados estarem corretos o app diz q um ou os dois estão incorretos'. Conclusão do usuário: 'n sei se é por a conta ter sido aberta a menos de 24hs a razão disso, mas ativa está..'."
+                }
+            ]
+        },
+        {
+            "email": "um.usuario.do.google.20190717000000@example.com",
+            "answers": [
+                {
+                    "purpose": "Principal objetivo: usar o app para alguma funcionalidade do banco. O app não funciona pois: 'não funciona! app não abre, aparece uma mensagem: \"dispositivo não atende requisitos de segurança\".'",
+                    "score": 1,
+                    "explanation": "Nota 1: Usuário descreve como 'não funciona! app não abre, aparece uma mensagem: \"dispositivo não atende requisitos de segurança\"'. Principais queixas do review que justificam a nota: 'não funciona! app não abre, aparece uma mensagem: \"dispositivo não atende requisitos de segurança\". Liguei na central de atendimento do banco e indicaram formatar e restaurar configurações de fábrica em meu celular, fiz o solicitado e continua aparecendo a mesma mensagem... só perdi meu tempo!!!'. Conclusão do usuário: 'só perdi meu tempo!!!'."
+                }
+            ]
+        },
+        {
+            "email": "um.usuario.do.google.20190716000000@example.com",
+            "answers": [
+                {
+                    "purpose": "Principal objetivo: usar o aplicativo para adiantar as parcelas da fatura e pagar as compras nos comércios sem o cartão pelo celular. O usuário quer essas funcionalidades e acredita que elas ainda não estão disponíveis, pois faltam 2 coisas pra ser um dos melhores.",
+                    "score": 4,
+                    "explanation": "Faltam 2 coisas pra ser um dos melhores, uma é adiantar as parcelas da fatura quando quisermos e quantas parcelas quisermos pagar pelo aplicativo, a outra é pagar as compras nos comércios sem o cartão pelo celular só."
+                }
+            ]
+        },
+        {
+            "email": "um.usuario.do.google.20190701000000@example.com",
+            "answers": [
+                {
+                    "purpose": "Principal objetivo: verificar os dados na conta. O app aparece sempre os dados inválido. tentei várias vezes mas sempre a mesma coisa. A cooperativa e a conta diz que são inválidos, não sei mais como fazer não tem opção de configurar.",
+                    "score": 1,
+                    "explanation": "Nota 1: Usuário descreve como 'aparece sempre os dados inválido'. Principais queixas do review que justificam a nota: 'tentei várias vezes mas sempre a mesma coisa', 'A cooperativa e a conta diz que são inválidos', 'não sei mais como fazer não tem opção de configurar'. Conclusão do usuário: 'aparece sempre os dados inválido'."
+                }
+            ]
+        },
+        {
+            "email": "um.usuario.do.google.20190726000000@example.com",
+            "answers": [
+                {
+                    "purpose": "Principal objetivo: testar o aplicativo antes de colocar na play store. App não testa mais um aplicativo antes de colocar na\n            play store? vcs estão usando o que para fazer este aplicativo ,(maquina de datilografia)",
+                    "score": 1,
+                    "explanation": "Nota 1: Usuário descreve como 'vive aparecendo (ocorreu erro inesperado)'. Principais queixas do review que justificam a nota: 'não se testa mais um aplicativo antes de colocar na\n            play store? vcs estão usando o que para fazer este aplicativo ,(maquina de datilografia)'. Conclusão do usuário: 'e nunca resolvem nada , para que atualizar se fica sempre com os mesmos defeitos'."
+                }
+            ]
+        },
+        {
+            "email": "um.usuario.do.google.20190720000000@example.com",
+            "answers": [
+                {
+                    "purpose": "App está em constante aprimoramento...mas já está me atendendo super bem... rápido e minimalista... porém poderia ter uma guia somente para emissão de segunda via de comprovantes.",
+                    "score": 4,
+                    "explanation": "App está em constante aprimoramento...mas já está me atendendo super bem... rápido e minimalista... porém poderia ter uma guia somente para emissão de segunda via de comprovantes."
+                }
+            ]
+        },
+        {
+            "email": "um.usuario.do.google.20190712000000@example.com",
+            "answers": [
+                {
+                    "purpose": "Gostaria que tivesse a opção de depósitos de cheques através do App. gostaria tbm de voltar a ter o valor total somando investimentos mais valor na conta corrente como era a um tempo atras.",
+                    "score": 4,
+                    "explanation": "Gostaria que tivesse a opção de depósitos de cheques através do App. gostaria tbm de voltar a ter o valor total somando investimentos mais valor na conta corrente como era a um tempo atras."
+                }
+            ]
+        },
+        {
+            "email": "um.usuario.do.google.20190704000000@example.com",
+            "answers": [
+                {
+                    "purpose": "Ridículo, o app não funcionar porque fiz root no meu celular, o Bradesco funciona utilizo token e transações numa boa, banco do Brasil funcionana, Santander, Caixa e esse app do Sicredi que ja era ruim nao funciona nem para ver o saldo.",
+                    "score": 1,
+                    "explanation": "Nota 1: Usuário descreve como 'Ridículo, o app não funcionar porque fiz root no meu celular'. Principais queixas do review que justificam a nota: 'o app não funcionar', 'não funciona nem para ver o saldo'. Conclusão do usuário: 'PARABENS'."
+                }
+            ]
+        },
+        {
+            "email": "um.usuario.do.google.20190726000000@example.com",
+            "answers": [
+                {
+                    "purpose": "Principal objetivo: usar o app para alguma finalidade, mas está ocorrendo com frequência o app fecha do nada. Só aparece a mensagem \"o Sicredi parou\" e fecha.",
+                    "score": 1,
+                    "explanation": "Nota 1: Usuário descreve como \"Bom dia! Estou com muita dificuldade com esse app. Esta ocorrendo com frequência o app fecha do nada. Só aparece a mensagem \"o Sicredi parou\" e fecha.\""
+                }
+            ]
+        },
+        {
+            "email": "um.usuario.do.google.20190712000000@example.com",
+            "answers": [
+                {
+                    "purpose": "Principal objetivo: usar o aplicativo para conexão e acesso à Cc. O usuário tentou ligar na Cc pelo app, mas de duas semanas pra cá aparece \"ocorreu um erro. Verifique sua conexão e tente novamente\". No wifi ou 4g não consegue ligar na Cc.",
+                    "score": 2,
+                    "explanation": "Nota 2: Usuário descreve como 'Estava funcionando bem, mas de duas semanas pra cá aparece \"ocorreu um erro. Verifique sua conexão e tente novamente\". No wifi ou 4g não consigo ligar na Cc. Só às vezes tem funcionado.'. Conclusão do usuário: 'Só às vezes tem funcionado.'."
+                }
+            ]
+        },
+        {
+            "email": "um.usuario.do.google.20190806000000@example.com",
+            "answers": [
+                {
+                    "purpose": "Principal objetivo: usar o app para funcionalidades básicas. App atende os requisitos básicos, porém é bem chato ter que pedir o gerente para liberar cadastros de transferência, uma dependência desnecessária. A função de simular e amortecer financiamentos também não funciona, então não entendo para que existe no app.",
+                    "score": 3,
+                    "explanation": "Nota 3: Usuário descreve como 'De modo geral as funcionalidades do app são boas, atendem os requisitos básicos'. Principais queixas do review que justificam a nota: 'É bem chato ter que pedir o gerente para liberar cadastros de transferência', 'a função de simular e amortecer financiamentos também não funciona'. Conclusão do usuário: 'não entendo para que existe no app'."
+                }
+            ]
+        },
+        {
+            "email": "um.usuario.do.google.20190831200000@example.com",
+            "answers": [
+                {
+                    "purpose": "Principal objetivo: consultar saldo em conta e verificar pagamentos. O App é bom para consultar saldo em conta. Quando a fatura cartão Sicredi é paga, não consta no App que já foi paga, tem que ficar procurando lembrar. Poderia ser bem visível! Igual app nubank por exemplo. Compras realizadas, poderia constar no app data e horário individual da compra.",
+                    "score": 2,
+                    "explanation": "Nota 2: Usuário descreve como 'O App é bom para consultar saldo em conta'. Principais queixas do review que justificam a nota: 'quando a fatura cartão Sicredi é paga, não consta no App que já foi paga, tem que ficar procurando lembrar', além de mencionar que o app é lento até em smartphones potentes."
+                }
+            ]
+        },
+        {
+            "email": "um.usuario.do.google.20190821000000@example.com",
+            "answers": [
+                {
+                    "purpose": "Principal objetivo: Usar o aplicativo para verificar transações e acompanhar o cartão de crédito. O usuário tentou usar o app para acompanhar as transações de setembro, mas não conseguiu pois: 'Na parte do cartão de crédito demora pra aparecer os meses seguintes' e 'ainda não aparecem as minhas transações de setembro'.",
+                    "score": 2,
+                    "explanation": "Nota 2: Usuário descreve como 'não funciona 100%'. Principais queixas do review que justificam a nota: 'Na parte do cartão de crédito demora pra aparecer os meses seguintes', 'hoje é dia 20/08, já foi descontada a fatura de agosto no débito automático e ainda não aparecem as minhas transações de setembro' e 'Sem contar no lag gigantesco'."
+                }
+            ]
+        },
+        {
+            "email": "um.usuario.do.google.20190810200000@example.com",
+            "answers": [
+                {
+                    "purpose": "Principal objetivo: ter uma opção de chat no aplicativo igual o whoop sicredito e a opção de aumento no cartão de crédito mesmo se isso dependesse da corporativa de crédito aonde o associado possui conta. Pois se alguém pedisse o aumento de cartão de crédito no aplicativo vocês de imediato passaria essa solicitação para agência do associado com uma política diferenciada.",
+                    "score": 4,
+                    "explanation": "Nota 4: Usuário descreve como 'Vocês deveria ter a opção de chat no aplicativo igual o whoop sicredito. É também a opção de aumento no cartão de crédito mesmo se isso dependesse da corporativa de crédito aonde o associado possui conta.' Conclusão do usuário: 'pois se alguém pedisse o aumento de cartão de crédito no aplicativo vocês de imediato passaria essa solicitação para agência do associado com uma política diferenciada.'"
+                }
+            ]
+        },
+        {
+            "email": "um.usuario.do.google.20190802200000@example.com",
+            "answers": [
+                {
+                    "purpose": "Principal objetivo: usar o aplicativo para fazer transferências sem problemas. O usuário tenta fazer transferências, mas não consegue sem fazer isso, com mensagens de falha de autenticação.",
+                    "score": 1,
+                    "explanation": "Nota 1: Usuário descreve como 'Péssimo'. Principais queixas do review que justificam a nota: 'Todos os meses tenho que desinstalar o aplicativo e instalá-lo novamente', 'Não consigo fazer transferências sem que faça isso', 'com mensagens de falha de autenticação'. Conclusão do usuário: 'Tal problema já deveria ter sido corrigido há muito tempo'."
+                }
+            ]
+        },
+        {
+            "email": "um.usuario.do.google.20190813000000@example.com",
+            "answers": [
+                {
+                    "purpose": "Aplicativo fica dando erro de autenticação, fiquei dois dias sem, desinstalei e vou ter que solicitar novamente para meu gerente cadastrar as senhas, toda vez que atualiza o aplicativo da esses erros, aconteceu com quase todos os celulares da familia.",
+                    "score": 3,
+                    "explanation": "Aplicativo fica dando erro de autenticação, fiquei dois dias sem, desinstalei e vou ter que solicitar novamente para meu gerente cadastrar as senhas, toda vez que atualiza o aplicativo da esses erros, aconteceu com quase todos os celulares da familia."
+                }
+            ]
+        },
+        {
+            "email": "um.usuario.do.google.20190811000000@example.com",
+            "answers": [
+                {
+                    "purpose": "Principal objetivo: Acessar minha conta no app. App em si é bom porém simplesmente parou de funcionar, não consigo mais acessar minha conta.",
+                    "score": 1,
+                    "explanation": "Nota 1: Usuário descreve como 'O app em si é bom porém simplesmente parou de funcionar, não consigo mais acessar minha conta'. Principais queixas do review que justificam a nota: 'Diz que está com falta de conexão de Internet sendo que estou conectada no wifi e os outros apps estão funcionando perfeitamente'. Conclusão do usuário: 'simplesmente parou de funcionar, não consigo mais acessar minha conta'."
+                }
+            ]
+        },
+        {
+            "email": "um.usuario.do.google.20190811000000@example.com",
+            "answers": [
+                {
+                    "purpose": "Principal objetivo: usar o app para trocar de aparelho e acessar o serviço. O usuário tentou trocar de aparelho, mas começou com erro que não gerava o código de segurança, e agora com o novo aparelho diz que não está conectado à internet.",
+                    "score": 4,
+                    "explanation": "Nota 4: Usuário descreve como 'Estou com problemas no app, apos a atualizacao fui trocar de aparelho, ja comecou com erro que nao gerava o codigo de seguranca pra mudar de aparelho, troquei para um moto one e agora apos instalar o app diz que meu aparelho nao esta conectado a internet e nao consigo acessar'."
+                }
+            ]
+        },
+        {
+            "email": "um.usuario.do.google.20190827000000@example.com",
+            "answers": [
+                {
+                    "purpose": "Principal objetivo: Usar o aplicativo para acessar e gerenciar minha poupança. O app não ajudou pois: 'botei um Certo valor na poupança e eles me bloqueou não consigo tirar o meu dinheiro', 'fui na agência desbloquear nao fui bem atendida, não desbloqueou o meu acesso no app'.",
+                    "score": 1,
+                    "explanation": "Nota 1: Usuário descreve como 'Orrivel'. Principais queixas do review que justificam a nota: 'botei um Certo valor na poupança e eles me bloqueou não consigo tirar o meu dinheiro', 'não desbloqueou o meu acesso no app'. Conclusão do usuário: 'mais devido essas ocasiões esta se tornando um banco qualquer'."
+                }
+            ]
+        },
+        {
+            "email": "um.usuario.do.google.20190826000000@example.com",
+            "answers": [
+                {
+                    "purpose": "Principal objetivo: Trabalhar com o Sicredi e tirar dúvidas. App ajuda pois: 'Sempre que preciso tirar dúvidas sou muito bem atendida por todos na agência' e 'o aplicativo é ótimo também'.",
+                    "score": 5,
+                    "explanation": "Nota 5: Usuário descreve como 'Muito bom trabalhar com o Sicredi'. Principais razões que justificam a nota: 'Sempre que preciso tirar dúvidas sou muito bem atendida por todos na agência' e 'o aplicativo é ótimo também', além de mencionar que seu cartão veio com um limite muito bom."
+                }
+            ]
+        },
+        {
+            "email": "um.usuario.do.google.20190821000000@example.com",
+            "answers": [
+                {
+                    "purpose": "Principal objetivo: usar o aplicativo para pagar pelo App ou pelo PC. O usuário está tendo inconvenientes na autenticação na hora de pagar, gerando o código da error_1310, tendo que desinstalar e pedir para sua gerente reativar seu dispositivo.",
+                    "score": 4,
+                    "explanation": "Nota 4: Usuário descreve como 'O aplicativo é muito bom' mas está tendo inconvenientes que de autenticação na hora de pagar pelo App ou pelo PC gerando o código da error_1310, tendo que desinstalar e pedir para minha gerente reativar meu dispositivo. Isto tem acontecido frequentemente."
+                }
+            ]
+        },
+        {
+            "email": "um.usuario.do.google.20190821000000@example.com",
+            "answers": [
+                {
+                    "purpose": "Principal objetivo: usar o banco e o atendimento da minha conta. O banco em si é bom, porém não gostei do atendimento da nova gerência da minha conta. Precisei de um código de acesso não quiseram me passar porque tinha que ir na agência. Quando abri a conta nem precisei ir lá.",
+                    "score": 1,
+                    "explanation": "Nota 1: Usuário descreve como 'Insatisfeita'. Principais queixas do review que justificam a nota: 'não gostei do atendimento da nova gerência da minha conta', 'precisei de um código de acesso não quiseram me passar porque tinha que ir na agência'. Conclusão do usuário: 'era uma urgência'."
+                }
+            ]
+        },
+        {
+            "email": "um.usuario.do.google.20190922000000@example.com",
+            "answers": [
+                {
+                    "purpose": "Principal objetivo: visualização do saldo e extratos. O usuário tentou usar o app para ver saldo e extratos, mas ficou pior do que era antes.",
+                    "score": 1,
+                    "explanation": "Nota 1: Usuário descreve como 'na visualização do saldo ficou pior do que era antes 😢'. Principais queixas do review que justificam a nota: 'nada se cria e sim se copia', 'Banrisul é excelente a visualização dos extratos e saldos', 'mudaram sem motivo', 'vi uma cobrança de 4,00 para poder ter acesso a visualização', 'achei absurdo ja que somos clientes'. Conclusão do usuário: 'nada se cria e sim se copia... ainda vi uma cobrança de 4,00 para poder ter acesso a visualização, achei absurdo'."
+                }
+            ]
+        },
+        {
+            "email": "um.usuario.do.google.20190930000000@example.com",
+            "answers": [
+                {
+                    "purpose": "Principal objetivo: usar o App para fazer operações como pagamento ou transferência. O usuário relata que o App travou após fazer alguma operação e, ao finalizar, não consegue fazer outra operação sem sair e entrar novamente no App.",
+                    "score": 3,
+                    "explanation": "Nota 3: Usuário descreve como 'Antes o App funcionava normalmente, agora, há cerca de 1 mês, ele trava após fazer alguma operação. Entro, faço um pagamento/ transferência (por exemplo) e, ao finalizar, não consigo fazer outra operação sem ter que sair e entrar no App novamente... Não está funcional...'."
+                }
+            ]
+        },
+        {
+            "email": "um.usuario.do.google.20190928000000@example.com",
+            "answers": [
+                {
+                    "purpose": "Principal objetivo: usar o aplicativo para resolver tudo de maneira rápida. App está muito melhor, consigo resolver tudo o que preciso de maneira rápida, perfeito!",
+                    "score": 5,
+                    "explanation": "Nota 5: Usuário descreve como 'O Aplicativo é bom' e 'realmente, o APK está muito melhor, consigo resolver tudo o que preciso de maneira rápida, perfeito!'. Conclusão do usuário: 'Voltei para dar 5 estrelas, pois realmente, o APK está muito melhor, consigo resolver tudo o que preciso de maneira rápida, perfeito!'."
+                }
+            ]
+        },
+        {
+            "email": "um.usuario.do.google.20190901000000@example.com",
+            "answers": [
+                {
+                    "purpose": "Principal objetivo: salvar a fatura do cartão de crédito do dispositivo ou visualizar em algum aplicativo instalado como o Adobe Acrobat ou outros. O usuário quer visualizar direto no app ou em algum aplicativo, mas somente é possível salvar em drivers na nuvem como GDrive ou OneDrive.",
+                    "score": 4,
+                    "explanation": "Nota 4: Usuário descreve como 'Poderia dar a opção de salvar a fatura do cartão de crédito do dispositivo ou de visualizar em algum aplicativo instalado como o Adobe Acrobat ou outros. Somente é possível salvar em drivers na nuvem como GDrive ou OneDrive e não consigo visualizar direto no app ou em algum aplicativo.'"
+                }
+            ]
+        },
+        {
+            "email": "um.usuario.do.google.20190930000000@example.com",
+            "answers": [
+                {
+                    "purpose": "Pensando no seu principal objetivo ao usar nosso aplicativo, o quão bem ele te ajudou a alcançar esse propósito e por quê? Eu acho q a cooperativa é boa ,porém o app,deixa a desejar ,onde já se viu ,o cliente tentar enviar um extrato ,e não ter nenhuma opção de pdf, só arquivos q nem PC ,abre! É brincadeira, ter q ir na agência só pra tirar extrato ,pacabá",
+                    "score": 2,
+                    "explanation": "Conte-nos porque você deu sua nota. Usuário descreve como 'Eu acho q a cooperativa é boa ,porém o app,deixa a desejar' e justifica a nota com 'o app...não ter nenhuma opção de pdf, só arquivos q nem PC ,abre! É brincadeira, ter q ir na agência só pra tirar extrato ,pacabá'."
+                }
+            ]
+        },
+        {
+            "email": "um.usuario.do.google.20190926000000@example.com",
+            "answers": [
+                {
+                    "purpose": "Principal objetivo: Usar o app para realizar operações financeiras e aproveitar o sistema cooperativo. O usuário gosta do Sicredi e está contente com o sistema cooperativo, mas acha que o app precisa melhorar disponibilizando mais funções como pagamento sem código de barras, além de deixar o app mais funcional e mais bonito.",
+                    "score": 2,
+                    "explanation": "Nota 2: Usuário descreve como 'O app funciona bem mas precisa melhorar disponibilizar mais funções como pagamento sem código de barras, além de deixar o app mais funcional,e mais bonito também. Gosto do Sicredi estou contente com o sistema cooperativo. Espero que melhore ainda mais o app obrigado Sicredi.'."
+                }
+            ]
+        },
+        {
+            "email": "um.usuario.do.google.20190924000000@example.com",
+            "answers": [
+                {
+                    "purpose": "No momento estou com problemas com meu app, eu digito a senha e o mesmo informa que estou sem conexao de internet. Já tentei acessar o app em varias rede wifi que estavam funcionando perfeitamente e o problema persiste em aparecer.",
+                    "score": 4,
+                    "explanation": "Gosto muito. Obs. Estou com o app atualizado."
+                }
+            ]
+        },
+        {
+            "email": "um.usuario.do.google.20191008@example.com",
+            "answers": [
+                {
+                    "purpose": "Principal objetivo: realizar transferências da poupança para poupança e usar a aba de pagamento com código de barras. App não ajudou pois: 'nada mudou... Continuo não conseguindo realizar transferências da poupança para poupança e também não dispõe da aba de pagamento com código de barras no aplicativo de poupança apenas para conta corrente.'",
+                    "score": 1,
+                    "explanation": "Nota 1: Usuário descreve como 'nada mudou... Continuo não conseguindo realizar transferências da poupança para poupança e também não dispõe da aba de pagamento com código de barras no aplicativo de poupança apenas para conta corrente.' Principais queixas do review que justificam a nota: 'não conseguindo realizar transferências da poupança para poupança' e 'não dispõe da aba de pagamento com código de barras no aplicativo de poupança apenas para conta corrente.' Conclusão do usuário: 'Deveria ter essas opções para ambos os casos como os aplicativos de outros bancos.'"
+                }
+            ]
+        },
+        {
+            "email": "um.usuario.do.google.20191029000000@example.com",
+            "answers": [
+                {
+                    "purpose": "Principal objetivo: Acessar a conta no app. App não ajudou pois: 'Depois da última atualização não consigo mais acessar a minha conta. Quando tento o login aparece a mensagem \"não foi possível identificar o seu dispositivo de forma segura\" e não me dá acesso ao app. Pede tbm pra verificar a conexão com a internet mas já tentei com o WiFi e com os dados móveis, não acessa.'",
+                    "score": 2,
+                    "explanation": "Nota 2: Usuário descreve como 'Depois da última atualização não consigo mais acessar a minha conta'. Principais queixas do review que justificam a nota: 'aparece a mensagem \"não foi possível identificar o seu dispositivo de forma segura\" e não me dá acesso ao app. Pede tbm pra verificar a conexão com a internet mas já tentei com o WiFi e com os dados móveis, não acessa.'"
+                }
+            ]
+        },
+        {
+            "email": "um.usuario.do.google.20191031@example.com",
+            "answers": [
+                {
+                    "purpose": "Principal objetivo: identificar a rede do celular. App não ajudou pois: 'A atualização 5.10.2 não identifica a rede do celular, sendo assim, emite uma notificação informado que não foi possível identificar o aparelho celular de forma segura, e pede para verificar a conexão da internet.'",
+                    "score": 1,
+                    "explanation": "Nota 1: Usuário descreve como 'Nada!'. Principais queixas do review que justificam a nota: 'A atualização 5.10.2 não identifica a rede do celular, sendo assim, emite uma notificação informado que não foi possível identificar o aparelho celular de forma segura, e pede para verificar a conexão da internet. Já liguei, desliguei a internet do celular, tentei usando o wi-fi. Já reiniciei o celular... Nada!'. Conclusão do usuário: 'Nada!'."
+                }
+            ]
+        },
+        {
+            "email": "um.usuario.do.google.20191021000000@example.com",
+            "answers": [
+                {
+                    "purpose": "Tentando reinstalar o app e pagar minhas contas pelo app, pois resolvo quase tudo por lá.",
+                    "score": 1,
+                    "explanation": "Nota 1: Usuário descreve como 'Muito insatisfeita com a Sicredi'. Principais queixas do review que justificam a nota: 'Tem uma semana que estou tentando reinstalar o app é não consigo', 'já dei feedback, já liguei na Central, já mandei e-mail e até hoje nada', 'Preciso pagar minhas contas e resolvo quase tudo pelo App', 'Pior banco que já tive'. Conclusão do usuário: 'deviam olhar mais por quem é associado'."
+                }
+            ]
+        },
+        {
+            "email": "um.usuario.do.google.20191028000000@example.com",
+            "answers": [
+                {
+                    "purpose": "Principal objetivo: Acessar o app e usar os serviços do banco. O app não está sendo possível de acessar após a atualização recente.",
+                    "score": 0,
+                    "explanation": "Nota 1: Usuário descreve como 'ficou horrível não está sendo possível acessar, o app já não é grande coisa'. Principais queixas do review que justificam a nota: 'ficou horrível', 'não está sendo possível acessar', 'o app já não é grande coisa'. Conclusão do usuário: 'aceitem que o APP é ruim e arrumem'."
+                }
+            ]
+        },
+        {
+            "email": "um.usuario.do.google.20191003000000@example.com",
+            "answers": [
+                {
+                    "purpose": "Principal objetivo: usar o app para não perder tempo indo até a agência. O usuário quer que o app funcione corretamente para realizar transferências e outras funções.",
+                    "score": 1,
+                    "explanation": "Nota 1: Usuário descreve como 'Toda vez que atualizam o app alguma função para de funcionar' e 'Agora não consigo fazer transferência'. Principais queixas do review que justificam a nota: 'Toda vez que atualizo preciso ir a uma agência resolver isso' e 'Gostava do Sicredi, mas economizar em TI da nisso. O app do Itaú dá de 10 nesse aí'. Conclusão do usuário: 'Se eu uso o app é justamente pra não perder tempo indo até a agência, mas toda vez que atualizo preciso ir a uma agência resolver isso'."
+                }
+            ]
+        },
+        {
+            "email": "um.usuario.do.google.20191022000000@example.com",
+            "answers": [
+                {
+                    "purpose": "Principal objetivo: usar o App para realizar transações. O App ajuda em determinados momentos, porém é muito limitado. Precisa melhorar em alguns pontos... O princial é quanto aos horários e datas para efetuar transações, qual o sentido em não permitir transferências nos finais de semanas e feriados? Incluam uma opção mais prática para transferir da poupança para conta corrente, isso facilitaria muito.",
+                    "score": 1,
+                    "explanation": "Nota 1: Usuário descreve como 'Este App ajuda em determinados momentos, porém é muito limitado'. Principais queixas do review que justificam a nota: 'Precisa melhorar em alguns pontos... O princial é quanto aos horários e datas para efetuar transações, qual o sentido em não permitir transferências nos finais de semanas e feriados? Há também bloqueio para realizar transferências em determinados horários até mesmo em dias úteis. Incluam uma opção mais prática para transferir da poupança para conta corrente, isso facilitaria muito.' Conclusão do usuário: 'Este App ajuda em determinados momentos, porém é muito limitado.'"
+                }
+            ]
+        },
+        {
+            "email": "um.usuario.do.google.20191028000000@example.com",
+            "answers": [
+                {
+                    "purpose": "Depois da última atualização o app ficou um lixo, é como a maioria dos usuários descrevem, não consigo acessar. E não adianta passar o link porque já acessei e tentei fazer a reclamação por lá, mas só aceitam anexos em pdf, e porque orientam que pode mandar prints? Sinceramente estou muito insatisfeito com isso, resolvam isso o quanto antes, porque estou sem acompanhar minha conta há dias, e não só eu, como milhares de pessoas.",
+                    "score": 1,
+                    "explanation": "Nota 1: Usuário descreve como 'App lixo!!!'. Principais queixas do review que justificam a nota: 'Depois da última atualização o app ficou um lixo', 'não consigo acessar', 'só aceitam anexos em pdf', 'estou muito insatisfeito', 'resolvam isso o quanto antes', 'estou sem acompanhar minha conta há dias'. Conclusão do usuário: 'App lixo!!!'."
+                }
+            ]
+        },
+        {
+            "email": "um.usuario.do.google.20191030@example.com",
+            "answers": [
+                {
+                    "purpose": "Principal objetivo: fazer transferências e pagar boletos pelo aplicativo. O usuário tentou usar essas funções, mas aparece a mensagem \"Dispositivo de segurança bloqueado para o usuário, por favor, verifique seus dados\". Já foi à agência 3 vezes para resolver isso e disseram que solucionaram, mas quando tenta usar nunca funciona.",
+                    "score": 1,
+                    "explanation": "Nota 1: Usuário descreve como \"Não consigo mais fazer transferências e nem pagar boletos pelo aplicativo\". Principais queixas do review que justificam a nota: \"aparece a mensagem 'Dispositivo de segurança bloqueado para o usuário, por favor, verifique seus dados'\", \"Já fui à agência 3 vezes para resolver isso e me disseram que solucionaram, mas quando tento usar nunca funciona\". Conclusão do usuário: \"App me servindo apenas para ver o saldo\"."
+                }
+            ]
+        },
+        {
+            "email": "um.usuario.do.google.20191001@example.com",
+            "answers": [
+                {
+                    "purpose": "Principal objetivo: usar o aplicativo, mas toda vez que preciso do aplicativo ele não abre, aparece uma mensagem dizendo que o aplicativo parou de funcionar! Eu desinstalo e instalo novamente... Porém perco o código de acesso... Que quando tento inserir novamente fala que já está sendo utilizado em outro aparelho.",
+                    "score": 1,
+                    "explanation": "Nota 1: Usuário descreve como 'Toda vez que preciso do aplicativo ele não abre, aparece uma mensagem dizendo que o aplicativo parou de funcionar!'. Principais queixas do review que justificam a nota: 'aparece uma mensagem dizendo que o aplicativo parou de funcionar', 'desinstalo e instalo novamente', 'perco o código de acesso', 'quando tento inserir novamente fala que já está sendo utilizado em outro aparelho'. Conclusão do usuário: 'Toda vez que preciso do aplicativo ele não abre...'"
+                }
+            ]
+        },
+        {
+            "email": "um.usuario.do.google.20191021000000@example.com",
+            "answers": [
+                {
+                    "purpose": "Principal objetivo: usar o app e evitar perder dados ao iniciar. O usuário gostaria de uma confirmação de limpar dados no início, pois ao apertar automaticamente em entrar, às vezes acaba apertando sem querer o limpar dados.",
+                    "score": 4,
+                    "explanation": "Nota 4: Usuário descreve como 'Gostei muito', mas aponta que poderia colocar uma confirmação de limpar dados no início. Conclusão do usuário: 'quando inicia o app lento apertamos automaticamente mais uma vez em entrar e nessa segunda apertada acontece de apertar sem querer o limpar dados, depois precisamos colocar novamente tudo os dados'."
+                }
+            ]
+        },
+        {
+            "email": "um.usuario.do.google.20191030@example.com",
+            "answers": [
+                {
+                    "purpose": "Principal objetivo: usar o App sem precisar atualizar constantemente. O usuário quer que o App funcione normalmente sem a obrigatoriedade de atualização, como outros bancos que oferecem a opção de atualizar ou não.",
+                    "score": 1,
+                    "explanation": "Nota 1: Usuário descreve como 'Não sei porque essa obrigação de estar atualizando constantemente... Se não atualizar não podemos mais usar o App...'. Principais queixas do review que justificam a nota: 'obrigam a gente a atualizar para tornar o mesmo inútil, pois, atualizando ou não perde-se toda a funcionalidade...'. Conclusão do usuário: 'Por favor, parem com isso!'."
+                }
+            ]
+        },
+        {
+            "email": "um.usuario.do.google.20191029000000@example.com",
+            "answers": [
+                {
+                    "purpose": "Principal objetivo: usar o aplicativo para efetuar login. O app sempre funcionou bem, mas depois da ultima atualização não estou conseguindo efetuar o login.",
+                    "score": 3,
+                    "explanation": "Nota 3: Usuário descreve como 'O aplicativo sempre funcionou bem. Depois da ultima atualização não estou conseguindo efetuar o login.' e 'aparece a mensagem \"Não foi possível identificar seu dispositivo de forma segura. Por favor, verifique sua conexão com a internet e tente novamente.\" Minha conexão esta normal, necessito de um feedback.'"
+                }
+            ]
+        },
+        {
+            "email": "um.usuario.do.google.20191003000000@example.com",
+            "answers": [
+                {
+                    "purpose": "Aplicativo deixa a desejar quando o assunto é praticidade... toda vez que atualiza o app, precisa ir no banco ou fazer várias ligações até resolver. Realmente espero que melhorem esse ponto, pois assim fica difícil ter conta com um banco onde o app não ajuda.",
+                    "score": 1,
+                    "explanation": "Nota 1: Usuário descreve como 'Aplicativo deixa a desejar quando o assunto é praticidade...'. Principais queixas do review que justificam a nota: 'quando o app atualiza, precisa ir no banco ou fazer várias ligações até resolver'. Conclusão do usuário: 'assim fica difícil ter conta com um banco onde o app não ajuda'."
+                }
+            ]
+        },
+        {
+            "email": "um.usuario.do.google.20191025000000@example.com",
+            "answers": [
+                {
+                    "purpose": "Principal objetivo: Acessar o aplicativo com senha. O usuário tentou acessar o app, mas só aparece que dispositivo não é seguro, verificar acesso a internet, mesmo sem mudar a maneira que acessa, só com internet do próprio aparelho ou wifi de casa.",
+                    "score": 4,
+                    "explanation": "Nota 4: Usuário descreve como 'se repete mesma coisa de novo' e que foi na agência da sua cidade, desinstalaram e instalaram novamente o aplicativo, pq mudaram senha de segurança, foi q me falaram... Hoje fui usar e para minha surpresa se repete mesma coisa de novo😢😢."
+                }
+            ]
+        },
+        {
+            "email": "um.usuario.do.google.20191030@example.com",
+            "answers": [
+                {
+                    "purpose": "Principal objetivo: Acessar o aplicativo. O usuário tentou acessar após a atualização, mas não conseguiu mais.",
+                    "score": 1,
+                    "explanation": "Nota 1: Usuário descreve como 'Realmente um lixo... Depois da atualização não consegui mais acessar o aplicativo. Sempre dá erro.' Principais queixas do review que justificam a nota: 'Realmente um lixo', 'não consegui mais acessar', 'sempre dá erro', 'assistência péssima!!!'. Conclusão do usuário: 'Realmente muito ruim, assistência péssima!!!'."
+                }
+            ]
+        },
+        {
+            "email": "um.usuario.do.google.20191023000000@example.com",
+            "answers": [
+                {
+                    "purpose": "Aplicativo está com problemas, só aparece \"início\" e \"conta corrente\" porém não acessa nada, a interface não está como nas fotos, sem acesso algum. Precisa atualizar e arrumar.",
+                    "score": 1,
+                    "explanation": "Aplicativo está com problemas, só aparece \"início\" e \"conta corrente\" porém não acessa nada, a interface não está como nas fotos, sem acesso algum. Precisa atualizar e arrumar."
+                }
+            ]
+        },
+        {
+            "email": "um.usuario.do.google.20191030000000@example.com",
+            "answers": [
+                {
+                    "purpose": "Principal objetivo: usar o app para identificar seu dispositivo de forma segura. O app inutilizou e agora sempre que tento entrar dá o erro de \"Não foi possível\n            identificar seu dispositivo de forma segura.\".",
+                    "score": 1,
+                    "explanation": "Nota 1: Usuário descreve como 'Atualização inutilizou o app'. Principais queixas do review que justificam a nota: 'agora sempre que tento entrar dá o erro de \"Não foi possível\n            identificar seu dispositivo de forma segura.\"' e 'mais uma vez eu preciso ir atrás de concertar alguma cagada\n            que a Sicredi fez'. Conclusão do usuário: 'Saco cheio já'."
+                }
+            ]
+        },
+        {
+            "email": "um.usuario.do.google.20191004000000@example.com",
+            "answers": [
+                {
+                    "purpose": "Principal objetivo: pagar boleto. App é bom, mas dá muito problema para pagar boleto. A data de vencimento fica errada, ele diz que não pode mais pagar, etc.",
+                    "score": 4,
+                    "explanation": "Nota 4: Usuário descreve como 'O app é bom, mas dá muito problema para pagar boleto'. Principais queixas do review que justificam a nota: 'A data de vencimento fica errada, ele diz que não pode mais pagar, etc'. Aconselhamento do usuário: 'Nunca deixe pra pagar nele no último dia!'."
+                }
+            ]
+        },
+        {
+            "email": "um.usuario.do.google.20191030000000@example.com",
+            "answers": [
+                {
+                    "purpose": "Depois da ultima atualização não estou conseguindo acessar o sistema pois sempre da mensagem\n            Ocorreu um erro no sistema tente novamente mais tarde.",
+                    "score": 2,
+                    "explanation": "Sempre acesso pelo Wi-Fi. Agradeço"
+                }
+            ]
+        },
+        {
+            "email": "um.usuario.do.google.20191028000000@example.com",
+            "answers": [
+                {
+                    "purpose": "Principal objetivo: usar o aplicativo para verificar extratos, saldos e compras com cartão de crédito. O usuário tentou melhorias, mas acha que é muita atualização em período curto sem se ver melhorias, apenas aumento de espaço em memória a cada atualização. As formas de exibição dos dados em extratos e saldos parecem ultrapassadas. Já esteve melhor em versão anterior. O usuário também mencionou que compras com cartão de crédito aparecem no extrato às vezes três dias após.",
+                    "score": 2,
+                    "explanation": "Nota 2: Usuário descreve como 'Eu acho que é muita atualização em período curto sem se ver melhorias', 'Apenas aumento de espaço em memória a cada atualização', 'Forma de exibições dos dados em extratos saldos parecem ultrapassado', 'Já esteve melhor em versão anterior' e 'Não abre mais o aplicativo'. Conclusão do usuário: 'Última atualização Como já mencionado por demais Não abre mais o aplicativo'."
+                }
+            ]
+        },
+        {
+            "email": "um.usuario.do.google.20191027@example.com",
+            "answers": [
+                {
+                    "purpose": "Principal objetivo: usar o aplicativo para abrir e usar sem problemas. O app não ajuda pois: 'toda hora fica pedindo pra atualizar. Enquanto vc não atualiza ele não abre.'",
+                    "score": 2,
+                    "explanation": "Nota 2: Usuário descreve como 'Bom o aplicativo mais toda hora fica pedindo pra atualizar. Enquanto vc não atualiza ele não abre.' Principais queixas do review que justificam a nota: 'fica pedindo pra atualizar' e 'não abre enquanto não atualiza'. Conclusão do usuário: 'Isso é horrível!'"
+                }
+            ]
+        },
+        {
+            "email": "um.usuario.do.google.20191003000000@example.com",
+            "answers": [
+                {
+                    "purpose": "Sugiro implementar leitura de Captura de Tela ou de PDF, já que algumas lojas online não fornecem o código separado para cópia e espero que o problema com a fatura do cartão tenha sido corrigida, pois não estava atualizando no app.",
+                    "score": 3,
+                    "explanation": "Nota 3: Usuário dá uma nota intermediária. Principais razões para a nota: 'não estava atualizando no app, somente notificações por sms'."
+                }
+            ]
+        },
+        {
+            "email": "um.usuario.do.google.20191003000000@example.com",
+            "answers": [
+                {
+                    "purpose": "Pensando no seu principal objetivo ao usar nosso aplicativo, o quão bem ele te ajudou a alcançar esse propósito e os motivos diretos, usando suas palavras. Principal objetivo: fazer depósito de cheques por foto, antecipar parcelado do cartão de crédito com desconto, verificar taxas aplicadas em investimentos e rendimentos, transferir gratuitamente pelo aplicativo para qualquer banco. O usuário quer uma opção mais prática e transparente para essas funcionalidades.",
+                    "score": 4,
+                    "explanation": "Conte-nos porque você deu sua nota. Poderia fazer depósito de cheques por foto, opção muito boa seria antecipar parcelado do cartão de crédito com desconto assim liberaria o limite mas rápido, específica quanto de taxas esta sendo aplicada em nossos investimentos e rendimentos, transferências gratuitas sempre pelo aplicativo para qualquer Banco."
+                }
+            ]
+        },
+        {
+            "email": "um.usuario.do.google.20191007200000@example.com",
+            "answers": [
+                {
+                    "purpose": "App depois das últimas atualizações ficou muito muito lento. Já chegou demorar mais de 5 min para conseguir ver o saldo. O App está tao lento está valendo apena ir em uma agência do que utilizar o App.",
+                    "score": 1,
+                    "explanation": "App depois das últimas atualizações ficou muito muito lento. Já chegou demorar mais de 5 min para conseguir ver o saldo. O App está tao lento está valendo apena ir em uma agência do que utilizar o App."
+                }
+            ]
+        },
+        {
+            "email": "um.usuario.do.google.20191022000000@example.com",
+            "answers": [
+                {
+                    "purpose": "Estou na Colômbia e não consigo acessar o Aplicativo. Minha esposa tentou acessar a conta dela com o celular dela e acontece a mesma coisa. Outros sites e Apps funcionam normalmente.",
+                    "score": 4,
+                    "explanation": "Nota 4: Usuário descreve como 'não consigo acessar o Aplicativo' e 'diz pra verificar acesso a internet'. Conclusão do usuário: 'Sabem me dizer por que não consigo acessar? Tem alguma configuração que devo fazer em meu aparelho?'."
+                }
+            ]
+        },
+        {
+            "email": "um.usuario.do.google.20191030@example.com",
+            "answers": [
+                {
+                    "purpose": "Principal objetivo: Acessar o app Sicredi. O usuário tentou resolver o problema acessando configurações do celular, gerenciando o app, procurando pelo app Sicredi, clicando em cima e indo em restringir uso de dados, clicando em permitir quando necessário, e assim conseguiu.",
+                    "score": 5,
+                    "explanation": "Nota 5: Usuário descreve como 'Galera pra quem na está conseguindo acessar o app, vai em configurações do celular, em seguida gerenciar app, procure pelo app Sicredi, clica em cima e vai em restringir uso de dados, o que estiver em x vermelho, clica em cima vai aparecer opções clica em permitir, o meu deu certo,...'."
+                }
+            ]
+        },
+        {
+            "email": "um.usuario.do.google.20191028000000@example.com",
+            "answers": [
+                {
+                    "purpose": "Após a atualização do app não estou conseguindo ter acesso aparece uma mensagem que prescisa verificar conexão de internet e tentar novamente tanto com o wi-fi como o sinal 3g outros app estão funcionando normal.",
+                    "score": 3,
+                    "explanation": "Após a atualização do app não estou conseguindo ter acesso aparece uma mensagem que prescisa verificar conexão de internet e tentar novamente tanto com o wi-fi como o sinal 3g outros app estão funcionando normal."
+                }
+            ]
+        },
+        {
+            "email": "um.usuario.do.google.20191110200000@example.com",
+            "answers": [
+                {
+                    "purpose": "Principal objetivo: usar o aplicativo para realizar comandos e tarefas. O que acontece que eu aperto no comando e como ele é lento eu acabo achando que nao pressionei e assim repito minha ação.",
+                    "score": 3,
+                    "explanation": "Nota 3: Usuário descreve como 'Aplicativo está bem lento para meu lg k10'. Principais queixas do review que justificam a nota: 'Aplicativo está bem lento', 'quando eu aperto no comando e como ele é lento eu acabo achando que nao pressionei e assim repito minha ação', 'o aplicativo trava'. Conclusão do usuário: 'Recomendo tratar cada touth nao permitindo eu pressionar varias vezes a mesma coisa e não travaria a ponto de mandar relatorio pra vcs.'"
+                }
+            ]
+        },
+        {
+            "email": "um.usuario.do.google.20191108200000@example.com",
+            "answers": [
+                {
+                    "purpose": "Principal objetivo: entrar no app. O usuário tentou acessar após a última atualização, mas não conseguiu mais entrar no app, sempre aparecendo a mensagem \"Não foi possível identificar seu dispositivo de forma segura. Por favor, verifique sua conexão com a Internet e tente novamente.\"",
+                    "score": 4,
+                    "explanation": "Nota 4: Usuário descreve como \"Depois da última atualização não consigo mais entrar no app, sempre aparece a mensagem 'Não foi possível identificar seu dispositivo de forma segura. Por favor, verifique sua conexão com a Internet e tente novamente.'\" Porém, o usuário conseguiu acessar normalmente depois de limpar os dados do app e reiniciar o celular."
+                }
+            ]
+        },
+        {
+            "email": "um.usuario.do.google.20191113000000@example.com",
+            "answers": [
+                {
+                    "purpose": "Principal objetivo: aproveitar a oportunidade para dar minha opinião à plataforma do site, que na parte de gerenciamento de boletos poderia haver uma opção para visualizá-los em ordem cronológica de emissão ou de vencimento.",
+                    "score": 5,
+                    "explanation": "Nota 5: Usuário descreve como 'O app do celular é muito bom'. Principais queixas do review que justificam a nota: 'só gostaria de aproveitar a oportunidade para dar minha opinião a plataforma do site, que na parte de gerenciamento de boletos poderia haver uma opção para visualizá-los em ordem cronológica de emissão, ou de vencimento pois às vezes eu quero verificar justamente o vencimento e tenho que buscar informações do cliente ou da nota para achar o boleto. Bem se desse para visualizar todos em ordem cronológica de emissão seria bem prático no mais é uma ótima plataforma!'"
+                }
+            ]
+        },
+        {
+            "email": "um.usuario.do.google.20191119000000@example.com",
+            "answers": [
+                {
+                    "purpose": "Gostaria de sugestionar referente ao teclado numérico, quando se tenta utilizá-lo, o aplicatico nao permite pois após digitar o 1 número qualquer ele retorna para o teclado de letras, e isso dificulta o uso.",
+                    "score": 4,
+                    "explanation": "Gostaria de sugestionar referente ao teclado numérico, quando se tenta utilizá-lo, o aplicatico nao permite pois após digitar o 1 número qualquer ele retorna para o teclado de letras, e isso dificulta o uso. No mais o aplicativo moderno e muito intuitivo, estão de parabéns, linguagem de facil assimilação!"
+                }
+            ]
+        },
+        {
+            "email": "um.usuario.do.google.20191105200000@example.com",
+            "answers": [
+                {
+                    "purpose": "Principal objetivo: criar uma ferramenta que mande email pedindo a confirmação de algum pagamento que o sistema entenda que não é seguro. Uso essa funcionalidade em outro banco.",
+                    "score": 4,
+                    "explanation": "Nota 4: Usuário descreve como 'Indico criar uma ferramenta que mande email pedindo a confirmação de algum pagamento que o sistema entenda que não é seguro'. Conclusão do usuário: 'fui pagar o aluguel e pela segunda vez tive o app bloqueado, precisei desinstalar o app, ir até uma agência, gerar uma senha nova e tudo isso por conta de o sistema não entender que é uma transação segura, se no primeiro momento verificarem que não é seguro e enviar um email para liberação da transação, nada disse seria necessário'."
+                }
+            ]
+        },
+        {
+            "email": "um.usuario.do.google.20191110200000@example.com",
+            "answers": [
+                {
+                    "purpose": "Principal objetivo: usar o App para facilitar o recebimento de cartões e cheques via Correios. O usuário achou o App bom, mas ficaria melhor se disponibilizasse algumas funções aonde o cliente tenha maior liberdade, como por exemplo, função onde possa solicitar cartões, inclusive, adicionais caso deseje.",
+                    "score": 4,
+                    "explanation": "Fora isso App bom!!"
+                }
+            ]
+        },
+        {
+            "email": "um.usuario.do.google.20191107200000@example.com",
+            "answers": [
+                {
+                    "purpose": "Principal objetivo: ajudar no dia a dia. O usuário sentiu falta de uma opção para pagar a fatura do cartão à vista no dia que quiser mesmo ela estando cadastrada para débito automático, pois sempre precisa do cartão para fazer certos pagamentos e sempre paga a fatura à vista ou até adianta o valor, pois facilita muito seus pagamentos.",
+                    "score": 4,
+                    "explanation": "Nota 4: Usuário descreve como 'Gostei muito, ajuda muito no dia a dia'. Razões para a nota: 'senti falta de uma opção para pagar a fatura do cartão à vista no dia que você quiser mesmo ela estando cadastrada para débito automático', pois 'sempre preciso do cartão para fazer certos pagamentos e sempre pago a fatura à vista ou até adianto o valor', o que facilita seus pagamentos."
+                }
+            ]
+        },
+        {
+            "email": "um.usuario.do.google.20191119000000@example.com",
+            "answers": [
+                {
+                    "purpose": "Principal objetivo: usar o app para leitura de código barra dos boletos. O app ajuda muito quando funciona certinho, pois poupa nosso tempo corrido do dia dia, mas às vezes o app trava ou não autoriza pagamentos e pede pra entrarmos em contato com agência para autorizar, aí é necessário fazer todo passo a passo novamente, desinstalar app e baixar novamente.",
+                    "score": 3,
+                    "explanation": "Nota 3: Usuário descreve como 'A leitura de código barra dos boletos não funciona sempre, as vezes o app trava ou não autoriza pagamentos e pede pra entrarmos em contato com agência para autorizar, aí é necessário fazer todo passo a passo novamente, desinstalar app e baixar novamente.' Conclusão do usuário: 'Quando ele funciona certinho ajuda muito, poupa nosso tempo corrido do dia dia.'"
+                }
+            ]
+        },
+        {
+            "email": "um.usuario.do.google.20191111200000@example.com",
+            "answers": [
+                {
+                    "purpose": "Principal objetivo: usar o App para gerenciar contas e transferências. O usuário quer que a conta corrente fique cadastrada para facilitar as transferências, pois atualmente precisa digitar todos os dados toda vez que faz a operação inversa.",
+                    "score": 4,
+                    "explanation": "Nota 4: Usuário descreve como 'É muito bom o App'. Principais queixas do review que justificam a nota: 'a única coisa que me incomoda é que eu não consigo salvar a minha própria conta corrente pra transferência', 'quando quero fazer a operação inversa (Tirar da poupança para a corrente) eu tenho que fazer a operação desde o início, digitando todos os dados e tal'. Conclusão do usuário: 'Se a conta ficasse cadastrada seria melhor!'."
+                }
+            ]
+        },
+        {
+            "email": "um.usuario.do.google.20191122000000@example.com",
+            "answers": [
+                {
+                    "purpose": "Principal objetivo: usar a opção DDA. O sistema traz TODOS os títulos pendentes, o que demora uma eternidade para carregar. Para quem trabalha com muitos documentos, é um suplício. Sugestão, deixem como padrão para carregar uma semana e um filtro por data para carregar outros períodos.",
+                    "score": 1,
+                    "explanation": "Nota 1: Usuário descreve como 'A opção DDA está muito ruim, demora uma eternidade para carregar porque o sistema traz TODOS os títulos pendentes'. Principais queixas do review que justificam a nota: 'demora uma eternidade para carregar', 'para quem trabalha com muitos documentos é um suplício'. Conclusão do usuário: 'Sugestão, deixem como padrão para carregar uma semana e um filtro por data para carregar outros períodos.'"
+                }
+            ]
+        },
+        {
+            "email": "um.usuario.do.google.20191115000000@example.com",
+            "answers": [
+                {
+                    "purpose": "Principal objetivo: Resolver quase tudo pelo aplicativo e telefone com a gerente. O usuário consegue resolver quase tudo por aqui e pelo telefone com a gerente.",
+                    "score": 4,
+                    "explanation": "Nota 4: Usuário descreve como 'Aplicativo muito bom, quase não vou na agência. Consigo resolver quase tudo por aqui e pelo telefone com a gerente.'. Principais queixas do review que justificam a nota: 'Porém acho ele um pouco lento demais. E não consigo acompanhar o gastos do cartão de crédito instantaneamente, pois demora para as compras serem faturadas no cartão.'. Conclusão do usuário: 'Aplicativo muito bom'."
+                }
+            ]
+        },
+        {
+            "email": "um.usuario.do.google.20191108200000@example.com",
+            "answers": [
+                {
+                    "purpose": "Principal objetivo: visualizar o saldo disponível na consulta do saldo. O usuário quer uma informação que seja prática e ágil, mostrando tanto o saldo positivo quanto o negativo, para facilitar a visualização de quanto ainda está disponível do saldo.",
+                    "score": 4,
+                    "explanation": "Nota 4: Usuário descreve como 'Olá Sicredi. Meus amigos tb tem essa dificuldade. Sugerir uma melhoria simples, porém q impacta significativamente. É com relação a visualização na Consulta do Saldo. Na tela qdo utilizo p checar o Saldo (por exemplo: estou em utilização do ch especial) ele aparece o valor negativo apenas. Teria a possibilidade de ajustar a informação do valor do q ainda está disponível desse Saldo? Assim fica prático e ágil eu visualizar qto de Saldo eu possuo, tanto positivo quando em negativo (a cobrir).'. Conclusão do usuário: 'impacta significativamente' e 'fica prático e ágil eu visualizar qto de Saldo eu possuo'."
+                }
+            ]
+        },
+        {
+            "email": "um.usuario.do.google.20191108200000@example.com",
+            "answers": [
+                {
+                    "purpose": "Principal objetivo: usar o app para acompanhar em tempo real todas movimentações em nossos cartões de crédito. O app está sensacional, especialmente essa última atualização que nos permite acompanhar em tempo real todas as movimentações.",
+                    "score": 5,
+                    "explanation": "Nota 5: Usuário descreve como 'O Banco que ja e excelente!!! Agora conta com esse APP, que está sensacional, em especial essa ultima atualização, que nos permite acompanha em tem real todas movimentações em nossos cartões de credito.'"
+                }
+            ]
+        },
+        {
+            "email": "um.usuario.do.google.20191126000000@example.com",
+            "answers": [
+                {
+                    "purpose": "Principal objetivo: resolver questões na agência e assinar termos. O app bloqueia com muita facilidade e tudo que acontece temos que ir até a agência pra resolver e assinar termos. Isso deveria ser validado por código de SMS como as outras instituições.",
+                    "score": 3,
+                    "explanation": "Nota 3: Usuário descreve como 'O app bloqueia com muita facilidade e tudo que acontece temos que ir até a agência pra resolver e assinar termos'. Conclusão do usuário: 'Isso deveria ser validado por código de SMS como as outras instituições. Não faz sentido ser dessa forma com tantas facilidades da época atual.'"
+                }
+            ]
+        },
+        {
+            "email": "um.usuario.do.google.20191120000000@example.com",
+            "answers": [
+                {
+                    "purpose": "Bom app, resolvo todos os problemas diários o acessando. Gosto muito da parte de investimentos onde é possível separar por objetivos. A parte de cartões melhorou muito na visualização das faturas.",
+                    "score": 5,
+                    "explanation": "Bom app, resolvo todos os problemas diários o acessando. Gosto muito da parte de investimentos onde é possível separar por objetivos. A parte de cartões melhorou muito na visualização das faturas."
+                }
+            ]
+        },
+        {
+            "email": "um.usuario.do.google.20191107000000@example.com",
+            "answers": [
+                {
+                    "purpose": "Após a última atualização, problemas ao acessar, dizendo que meu dispositivo não foi reconhecido, é o App ficou muito lento, mas muito lento. Quase 3 minutos para acessar e verificar um extrato.",
+                    "score": 2,
+                    "explanation": "Deixando a desejar."
+                }
+            ]
+        },
+        {
+            "email": "um.usuario.do.google.20191108200000@example.com",
+            "answers": [
+                {
+                    "purpose": "Principal objetivo: usar o app para fazer recarga de celular, transferência, pagamento de boletos, etc. App super rápido de utilizar, tudo que vc faz é quase que na hora.",
+                    "score": 5,
+                    "explanation": "Nota 5: Usuário descreve como 'Ótimo app, super simples e muito prático, tem tudo e mais um pouco pra vc fazer nas suas mãos, estão de parabéns e mais uma coisa super rápido de utilizar, tudo que vc faz é quase que na hora, recarga de celular, transferência, pagamento de boletos, etc, um app top eu diria.'"
+                }
+            ]
+        },
+        {
+            "email": "um.usuario.do.google.20191112000000@example.com",
+            "answers": [
+                {
+                    "purpose": "Principal objetivo: usar o app para efetuar pagamentos, como abrir a câmera para pagar um boleto. O app é bom, porém em diversos momentos o mesmo é lento, por exemplo ao abrir a câmera para efetuar o pagamento de um boleto. Uma sugestão a cooperativa, seria a possibilidades de vincular o cartão com o Google Pay.",
+                    "score": 3,
+                    "explanation": "Nota 3: Usuário descreve como 'O app é bom, porém em diversos momentos o mesmo é lento, por exemplo ao abrir a câmera para efetuar o pagamento de um boleto'. Conclusão do usuário: 'Uma sugestão a cooperativa, seria a possibilidades de vincular o cartão com o Google Pay.'"
+                }
+            ]
+        },
+        {
+            "email": "um.usuario.do.google.20191111200000@example.com",
+            "answers": [
+                {
+                    "purpose": "Principal objetivo: Efetuar pagamentos de contas. App já me deixou várias vezes na mão na hora de efetuar pagamentos de contas.",
+                    "score": 3,
+                    "explanation": "Nota 3: Usuário descreve como 'O app já me deixou várias vezes na mão na hora de efetuar pagamentos de contas'. Principais queixas do review que justificam a nota: 'Aparece uma mensagem de falha de coneção e não tem quem o faça funcionar'. Conclusão do usuário: 'Já testei a coneção e a mesma estava funcionando todas as vezes que o app não funcionou.'"
+                }
+            ]
+        },
+        {
+            "email": "um.usuário.do.google.20191112000000@example.com",
+            "answers": [
+                {
+                    "purpose": "Principal objetivo: usar o app para verificar compras e demonstrativos. O usuário ficou feliz porque após uma atualização esse problema foi resolvido.",
+                    "score": 5,
+                    "explanation": "Nota 5: Usuário descreve como 'fiquei muito feliz' e 'Sicredi melhor banco da vida ♥️'."
+                }
+            ]
+        },
+        {
+            "email": "um.usuario.do.google.20191108200000@example.com",
+            "answers": [
+                {
+                    "purpose": "Principal objetivo: pagar boletos pelo app. O usuário quer pagar todos os boletos sem perder tempo, especialmente quando a quantidade é grande.",
+                    "score": 4,
+                    "explanation": "Nota 4: Usuário descreve como 'O intervalo de 30 segundos para pagamento de cada boleto pelo app, poderia ser retirado. Quando a quantidade de boletos é grande, perde-se muito tempo para pagar todos. Os apps dos outros bancos não pede esse intervalo.'"
+                }
+            ]
+        },
+        {
+            "email": "um.usuario.do.google.20191119000000@example.com",
+            "answers": [
+                {
+                    "purpose": "Possui todas funções necessárias para o dia a dia. Desde o cadastramento de contas para o débito automático, transferências entre contas, bloqueio e desbloqueio de cartão, saque sem cartão!",
+                    "score": 5,
+                    "explanation": "O aplicativo é ótimo! Parabéns aos seus desenvolvedores! Recomendo 100%."
+                }
+            ]
+        },
+        {
+            "email": "um.usuario.do.google.20191116000000@example.com",
+            "answers": [
+                {
+                    "purpose": "Partes do review do usuário que descrevem seu objetivo, se foi alcançado e os motivos diretos, usando suas palavras.",
+                    "score": 4,
+                    "explanation": "Tem alguns itens que podiam melhorar. Põe exemplo: Paga uma conta no final de semana,não desconta do saldo. Outros bancos já desconta a direto do saldo,mesmo se a fatura for compensada só num dia útil."
+                }
+            ]
+        },
+        {
+            "email": "um.usuario.do.google.20191114000000@example.com",
+            "answers": [
+                {
+                    "purpose": "Principal objetivo: colocar o DDA e liberar as transferências, com cadastro e liberação de favorecidos. App muito engessado! Agora com DDA focou muito bom! Mas poderiam tirar essa necessidade de cadastro de outros bancos pra poder transferir! Se eu tenho o toquem, tenho que poder transferir para qualquer conta!",
+                    "score": 4,
+                    "explanation": "Nota 4: Usuário descreve como 'Tá muito engessado! Agora com DDA focou muito bom!'. Principais queixas do review que justificam a nota: 'Precisam colocar o DDA, faz muita falta. E liberar as transferências, com cadastro e liberação de favorecidos. Tá muito engessado! Agora com DDA focou muito bom! Mas poderiam tirar essa necessidade de cadastro de outros bancos pra poder transferir! Se eu tenho o toquem, tenho que poder transferir para qualquer conta!'. Conclusão do usuário: 'Tá muito engessado! Agora com DDA focou muito bom!'."
+                }
+            ]
+        },
+        {
+            "email": "um.usuario.do.google.20191105200000@example.com",
+            "answers": [
+                {
+                    "purpose": "Principal objetivo: usar o app para abrir e acessar suas funcionalidades. O app não está abrindo à dias, só aparece uma msg dizendo \"Não é possível identificar seu dispositivo de forma segura. Por favor, verifique sua conexão com internet e tente novamente.\"",
+                    "score": 1,
+                    "explanation": "Nota 1: Usuário descreve como \"O App não está abrindo à dias\" e \"só aparece uma msg dizendo 'Não é possível identificar seu dispositivo de forma segura. Por favor, verifique sua conexão com internet e tente novamente.'\". Principais queixas do review que justificam a nota: \"não está abrindo à dias\" e \"nada\" foi resolvido, além de expressar frustração com \"Muitas pessoas prejudicadas e vocês não resolvem isso. Vergonha!\"."
+                }
+            ]
+        },
+        {
+            "email": "um.usuario.do.google.20191113000000@example.com",
+            "answers": [
+                {
+                    "purpose": "Utilizo pra pagamento de boletos da empresa. Vai normal até o dia que resolve falhar as autenticações e bloqueia.",
+                    "score": 1,
+                    "explanation": "A cada atualização o aplicativo apresenta erros de autenticação no pagamento de contas. Gerente não sabe dizer o que aconteceu. Com isso deixa de ser confiável. Tem que ficar correndo na agência."
+                }
+            ]
+        },
+        {
+            "email": "um.usuario.do.google.20191129000000@example.com",
+            "answers": [
+                {
+                    "purpose": "Aplicativo horrível, não pode nem atualizar o sistema do celular que ele já dá problema no itoken, e pra piorar vc liga na agência e eles não te atendem, não recomendo, se tivesse como dar meia estrela eu daria, uma burocracia pra poder pagar um boleto, aplicativo muito ruim!!",
+                    "score": 1,
+                    "explanation": "Nota 1: Usuário descreve como 'Aplicativo horrível'. Principais queixas do review que justificam a nota: 'não pode nem atualizar o sistema do celular que ele já dá problema no itoken', 'vc liga na agência e eles não te atendem', 'uma burocracia pra poder pagar um boleto', 'aplicativo muito ruim!!', 'Péssimo péssimo'. Conclusão do usuário: 'não recomendo'."
+                }
+            ]
+        },
+        {
+            "email": "um.usuario.do.google.20191122000000@example.com",
+            "answers": [
+                {
+                    "purpose": "Principal objetivo: Trabalhar em parceria com a Sicredi, aproveitando as taxas e o atendimento excelente, tanto por telefone quanto na agência.",
+                    "score": 5,
+                    "explanation": "Nota 5: Usuário descreve como 'Ótima experiência, mais de um ano trabalhando em parceria com a Sicredi, ótimas taxas e o que me chama atenção é o atendimento, tanto por telefone quanto na agência é excelente.' App precisa melhorar nos quesitos investimentos e no marketplace, talvez um cashback seria interessante. Sucesso."
+                }
+            ]
+        },
+        {
+            "email": "um.usuario.do.google.20191103200000@example.com",
+            "answers": [
+                {
+                    "purpose": "Principal objetivo: usar o aplicativo para transações financeiras. O problema é o banco e o cartão. Principalmente o cartão que apresenta falha na transação e debita duas vezes da sua conta.",
+                    "score": 2,
+                    "explanation": "Nota 2: Usuário descreve como 'O aplicativo é até ok'. Principais queixas do review que justificam a nota: 'o banco e o cartão. Principalmente o cartão que apresenta falha na transação e debita duas vezes da sua conta. Daí quando liga pro 0800 não podem resolver, quem tem que ir atrás de receber de volta é você mesmo.'"
+                }
+            ]
+        },
+        {
+            "email": "um.usuario.do.google.20191111200000@example.com",
+            "answers": [
+                {
+                    "purpose": "Principal objetivo: usar o aplicativo para verificar o extrato e informações de gastos. O usuário acha um aplicativo bom, mas a única coisa que mudaria é que no extrato, coisas que gasto em final de semana ele coloca a data da próxima segunda-feira, o que dificulta se eu precisar me informar com mais precisão a longo prazo.",
+                    "score": 4,
+                    "explanation": "Nota 4: Usuário descreve como 'Acho um aplicativo bom'. Principais queixas do review que justificam a nota: 'a única coisa que mudaria é que no extrato, coisas que gasto em final de semana ele coloca a data da próxima segunda-feira, o que dificulta se eu precisar me informar com mais precisão a longo prazo'."
+                }
+            ]
+        },
+        {
+            "email": "um.usuario.do.google.20191111200000@example.com",
+            "answers": [
+                {
+                    "purpose": "Principal objetivo: usar o aplicativo para transferências. O app atende a maioria das minhas espectativas! Se mudassem o tempo para transferência com certeza era 5 🌟, na minha opinião não podiam restringir o horário de transferência.",
+                    "score": 4,
+                    "explanation": "Aplicativo muito bom atende a maioria das minhas espectativas! . Se mudassem o tempo para transferência com certeza era 5 🌟, na minha opinião não podiam restringir o horário de transferência."
+                }
+            ]
+        },
+        {
+            "email": "um.usuario.do.google.20191111200000@example.com",
+            "answers": [
+                {
+                    "purpose": "De modo geral ok mas a parte de cartões deveria ser facil como a do nubank. N mostra minhas contas futuras e nem itens parcelados. É muito fácil de gastar a mais no cartão se vc n tiver real noção dos gastos mensais.",
+                    "score": 1,
+                    "explanation": "Nota 1: Usuário descreve como 'De modo geral ok' mas também critica que a parte de cartões deveria ser facil como a do nubank. Principais queixas do review que justificam a nota: 'N mostra minhas contas futuras e nem itens parcelados' e 'É muito fácil de gastar a mais no cartão se vc n tiver real noção dos gastos mensais'. Conclusão do usuário: 'Acabo usando mais o do nubank devido a facilidade no uso do app'."
+                }
+            ]
+        },
+        {
+            "email": "um.usuario.do.google.20191112000000@example.com",
+            "answers": [
+                {
+                    "purpose": "Principal objetivo: Ter controle de praticamente tudo da minha conta. O app é bom. Muito prático e tenho controle de praticamente tudo da minha conta.",
+                    "score": 4,
+                    "explanation": "Nota 4: Usuário descreve como 'O app é bom. Muito prático e tenho controle de praticamente tudo da minha conta'. O app poderia ser mais rápido, em algumas funções ele demora ou se não o fizer devagar não funciona, como é o caso da escrita. Tem pontos de melhoria."
+                }
+            ]
+        },
+        {
+            "email": "um.usuario.do.google.20191113200000@example.com",
+            "answers": [
+                {
+                    "purpose": "Principal objetivo: usar o app para pagamentos e verificar saldo. O app poderia ter muito mais opções de itens no menu, para pagamentos etc. O Saldo da conta quando tem cheque depositado não aparecer já somado, algumas coisas do dia a dia precisa melhorar no app.",
+                    "score": 3,
+                    "explanation": "Nota 3: Usuário descreve como 'Poderia ter muito mais opções de itens no menu, para pagamentos etc. O Saldo da conta quando tem cheque depositado não aparecer já somado, algumas coisas do dia a dia precisa melhorar no app. Não é ruim, mas pode melhorar muito.'"
+                }
+            ]
+        },
+        {
+            "email": "um.usuario.do.google.20191112000000@example.com",
+            "answers": [
+                {
+                    "purpose": "Principal objetivo: fazer transferências, pagar contas, liberar limites pré aprovados e autorizar terceiros a sacarem dinheiro direto no caixa eletrônico do Sicredi. O usuário fez tudo isso com facilidade e sem problemas.",
+                    "score": 5,
+                    "explanation": "Nota 5: Usuário descreve como 'Nunca tive problemas com o aplicativo , faço transferência com facilidade , pago contas , libero limites pré aprovados além de autorizar terceiros a sacarem dinheiro direto no caixa eletrônico do Sicredi sem custo algum em qualquer lugar do país'. Conclusão do usuário: 'Muito bom mesmo , recomendo'."
+                }
+            ]
+        },
+        {
+            "email": "um.usuario.do.google.20191109000000@example.com",
+            "answers": [
+                {
+                    "purpose": "Principal objetivo: usar o app para pagar a fatura do cartão. App não ajudou pois: 'não poder pagar a fatura do cartão pelo app por estar em débito automático'.",
+                    "score": 4,
+                    "explanation": "Nota 4: Usuário descreve como 'Muito bom app'. Principais queixas do review que justificam a nota: 'não poder pagar a fatura do cartão pelo app por estar em débito automático'. Conclusão do usuário: 'Por favor mudem isso, libere o pagamento de fatura pelo app mesmo sendo em débito? Dai sim ficaria perfeito o app.'"
+                }
+            ]
+        },
+        {
+            "email": "um.usuario.do.google.20191107200000@example.com",
+            "answers": [
+                {
+                    "purpose": "Principal objetivo: Usar o app do Sicredi para gerenciar minha conta e pagar contas. O app foi bem simplificado de entender até mesmo para um leigo, tem o melhor leitor de códigos de barras, não dá trabalho nenhum na hora de pagar as contas.",
+                    "score": 5,
+                    "explanation": "Nota 5: Usuário descreve como 'Excelente!!! parabéns toda equipe Sicredi'. Principais queixas do review que justificam a nota: 'foi um dos primeiros bancos abrir minha conta e nunca me arrependi', 'Tem um dos melhores app do mercado bem simplificado de entender', 'Tem o melhor leitor de códigos de barras ,não dá trabalho nenhum na hora de pagar as contas', 'Resumindo cumpre com o que promete, parabéns continue sempre assim melhorando a cada passo...'. Conclusão do usuário: 'nunca me arrependi'."
+                }
+            ]
+        },
+        {
+            "email": "um.usuario.do.google.20191112000000@example.com",
+            "answers": [
+                {
+                    "purpose": "Facilitar o pagamento. Um sugestão e gerar o extrato em PDF. Caso seja necessário enviar para o email.",
+                    "score": 5,
+                    "explanation": "É muito bom está facilidade de efetuar o pagamento. Um sugestão e gerar o extrato em PDF. Pois estes formato que tem, fica desfigurado se for enviado."
+                }
+            ]
+        },
+        {
+            "email": "um.usuario.do.google.20191113000000@example.com",
+            "answers": [
+                {
+                    "purpose": "Principal objetivo: usar o App para aproveitar o ótimo atendimento nas plataformas físicas do banco e ter um App completo e acolhedor para o cliente. O usuário afirma que o Sicredi se superou, e que o App é absurdamente completo e acolhedor, além de amar o Sicredi e não trocar por outro banco de jeito nenhum.",
+                    "score": 5,
+                    "explanation": "Nota 5: Usuário descreve como 'Impossível descrever o quão útil e incrível é este App, realmente o sicredi se superou'. Conclusão do usuário: 'não troco por outro banco de jeito nenhum'."
+                }
+            ]
+        },
+        {
+            "email": "um.usuario.do.google.20191117000000@example.com",
+            "answers": [
+                {
+                    "purpose": "Principal objetivo: usar o aplicativo para verificar comprovantes de pagamentos e facilitar procedimentos no banco. O usuário criticou que os comprovantes não ficam disponíveis no bankline para os pagamentos feitos no aplicativo, débito automático e caixas de atendimento, indicando que o objetivo de ter acesso fácil aos comprovantes não foi totalmente atendido.",
+                    "score": 3,
+                    "explanation": "Nota 3: Usuário descreve como 'Bom aplicativo'. Principais queixas do review que justificam a nota: 'os comprovantes não ficam disponíveis no bankline', 'o que se paga em débito automático também não ficam os comprovantes no aplicativo', 'para o que se paga nos caixas de atendimento'. Conclusão do usuário: 'Também acho absurdo precisar pedir o codigo de validação ao gerente. Por que não fazer isso no caixa eletrônico como no Bradesco? E se dá um bug no fds?'."
+                }
+            ]
+        },
+        {
+            "email": "um.usuario.do.google.20191118000000@example.com",
+            "answers": [
+                {
+                    "purpose": "Ser cliente Sicredi é maravilhoso, e um dos motivos é o fácil acesso e realização de serviços pelo aplicativo. O aplicativo funciona super bem, é rápido, intuitivo e prático, facilita muitas ações do dia a dia.",
+                    "score": 5,
+                    "explanation": "Nota 5: Usuário descreve como 'Ser cliente Sicredi é maravilhoso' e que 'o aplicativo funciona super bem, é rápido, intuitivo e prático, facilita muitas ações do dia a dia'."
+                }
+            ]
+        },
+        {
+            "email": "um.usuario.do.google.20191111000000@example.com",
+            "answers": [
+                {
+                    "purpose": "Principal objetivo: usar o aplicativo para realizar pagamentos. O usuário quer uma maior segurança, pois o aplicativo não pede senha ao realizar pagamentos, e prefere segurança à facilidade.",
+                    "score": 4,
+                    "explanation": "Nota 4: Usuário descreve como 'O aplicativo está muito bom, bem intuitivo!'. Principais queixas do review que justificam a nota: 'necessitam melhorar a segurança do aplicativo. Aí realizar pagamentos, o aplicativo não pede senha. Seria interessante aumentarem a segurança.'"
+                }
+            ]
+        },
+        {
+            "email": "um.usuario.do.google.20191119000000@example.com",
+            "answers": [
+                {
+                    "purpose": "Principal objetivo: usar o Aplicativo do SICREDI, que é sensacional, auto explicativo, completo, de fácil entendimento, possui todas as funções necessárias para o seu dia a dia. SICREDI facilitando a vida do seu associado cada vez mais.",
+                    "score": 5,
+                    "explanation": "Nota 5: Usuário descreve o aplicativo como sensacional, auto explicativo, completo, de fácil entendimento, e que facilita a vida do seu associado cada vez mais. Agradece por entender e atender às nossas necessidades."
+                }
+            ]
+        },
+        {
+            "email": "um.usuario.do.google.20191105200000@example.com",
+            "answers": [
+                {
+                    "purpose": "Principal objetivo: Ver a fatura do cartão e transferir pontos. O usuário quer que a fatura mostre a soma de várias compras para fatura futura e deseja transferir pontos do cartão para qualquer empresa de milhas.",
+                    "score": 3,
+                    "explanation": "Nota 3: Usuário descreve como 'Com a nova atualização. na fatura do cartao atual, esta aparecendo a soma de varias compras para fatura futura. Poderiam a Colocar no aplicativo tambem a opção de transferir meus pontos do cartao para qualquer empresa de milhas.'"
+                }
+            ]
+        },
+        {
+            "email": "um.usuario.do.google.20191108000000@example.com",
+            "answers": [
+                {
+                    "purpose": "Principal objetivo: usar o app para funcionalidades de autoatendimento. O app está cada vez mais completo, mas faltam ainda algumas funcionalidades de autoatendimento.",
+                    "score": 5,
+                    "explanation": "Nota 5: Usuário descreve como 'Muito bom. Cada vez mais completo.' e comenta que 'Faltam ainda algumas funcionalidades de autoatendimento.'"
+                }
+            ]
+        },
+        {
+            "email": "um.usuario.do.google.20191111200000@example.com",
+            "answers": [
+                {
+                    "purpose": "Principal objetivo: acompanhar o limite de gastos. O app mostra o negativo e tenho que calcular quanto ainda tenho de limite.",
+                    "score": 2,
+                    "explanation": "Nota 2: Usuário descreve como 'Gostava mais da versão anterior que mostrava o quanto eu tinha no limite especial para gastar. Nessa versão mostra o negativo e tenho que calcular quanto ainda tenho de limite. E por conta disso não consigo acompanhar.'. Conclusão do usuário: 'não consigo acompanhar'."
+                }
+            ]
+        },
+        {
+            "email": "um.usuario.do.google.20191111230000@example.com",
+            "answers": [
+                {
+                    "purpose": "Principal objetivo: Usar o App para TED, meu namorado me enviou dinheiro e até agora não entrou, ontem depositei um valor alto, até agora não caiu o valor na conta.",
+                    "score": 2,
+                    "explanation": "Nota 2: Usuário descreve como 'Muito ruim o uso do App para TED, meu namorado me enviou dinheiro e até agora não entrou, ontem depositei um valor alto, até agora não caiu o valor na conta'. Conclusão do usuário: 'resumindo o aplicativo de vocês é horrível, e se tem problema, vocês vem aqui e comentam as mesmas coisas de sempre. Quero soluções de verdade, caso contrário tomarei medidas mais drásticas.'"
+                }
+            ]
+        },
+        {
+            "email": "um.usuario.do.google.20191119000000@example.com",
+            "answers": [
+                {
+                    "purpose": "Principal objetivo: usar o app para transações com digital. App teve algumas melhorias nas últimas versões, porém tenho receio de cadastrar minha digital para transações novamente.",
+                    "score": 4,
+                    "explanation": "Nota 4: Usuário descreve como 'App teve algumas melhorias nas últimas versões', porém expressa preocupação com 'tenho receio de cadastrar minha digital para transações novamente' e relata que 'Nas últimas tentativas o App bloqueou o serviço mesmo fazendo o processo corretamente. Precisei ir na agência para desbloquear.'"
+                }
+            ]
+        },
+        {
+            "email": "um.usuario.do.google.20191108200000@example.com",
+            "answers": [
+                {
+                    "purpose": "Principal objetivo: Não funciona. Desabilita o código de segurança do nada. Sem atualizar celular ou atualizar aplicativo.",
+                    "score": 1,
+                    "explanation": "Nota 1: Usuário descreve como 'Deixa muito a desejar. Não funciona. Desabilita o código de segurança do nada. Sem atualizar celular ou atualizar aplicativo. Simplesmente pára de funcionar do NADA. Estou muito insatisfeita.'"
+                }
+            ]
+        },
+        {
+            "email": "um.usuario.do.google.20191101@example.com",
+            "answers": [
+                {
+                    "purpose": "Partes do review do usuário que descrevem seu objetivo, se foi alcançado e os motivos diretos, usando suas palavras.",
+                    "score": 3,
+                    "explanation": "Partes do review do usuário que explicam diretamente a nota (stars) atribuída, usando suas palavras. O usuário diz: 'o app está com erro ao mostrar a quantia de dinheiro na parte de poupança quando checo a quantia, porém na parte de baixo mostra corretamente, por favor arrumem isso pois o app é muito bom nunca havia tido problema até agora...'."
+                }
+            ]
+        },
+        {
+            "email": "um.usuario.do.google.20191111230000@example.com",
+            "answers": [
+                {
+                    "purpose": "Muito bom app, fácil e rápido. A nota não foi máximo pois acho que na parte de cartões poderia ter a opção de adiantar algumas compras parceladas.",
+                    "score": 4,
+                    "explanation": "Nota 4: Usuário descreve como 'Muito bom app, fácil e rápido'. Principais queixas do review que justificam a nota: 'A nota não foi máximo pois acho que na parte de cartões poderia ter a opção de adiantar algumas compras parceladas'."
+                }
+            ]
+        },
+        {
+            "email": "um.usuario.do.google.20191118000000@example.com",
+            "answers": [
+                {
+                    "purpose": "Partes do review do usuário que descrevem seu objetivo, se foi alcançado e os motivos diretos, usando suas palavras.",
+                    "score": 4,
+                    "explanation": "Partes do review do usuário que explicam diretamente a nota (stars) atribuída, usando suas palavras. O app mostra muitas facilidades para o nosso dia a dia, porém poderia também nos mostrar algum meio de contatar com alguém de dentro do banco se surgir alguma dúvida não achei essa opção no app se tiver eu não vi mas fora isso tá tudo muito show."
+                }
+            ]
+        },
+        {
+            "email": "um.usuario.do.google.20191116000000@example.com",
+            "answers": [
+                {
+                    "purpose": "Principal objetivo: usar o aplicativo para pagar contas e cartões de crédito. O usuário tentou pagar um cartão de crédito de outro banco e não autorizou o pagamento do boleto, além de não conseguir pagar o cartão do Sicredi via boleto.",
+                    "score": 3,
+                    "explanation": "Nota 3: Usuário descreve como 'Fraco' e 'Péssimo'. Principais queixas do review que justificam a nota: 'não autorizou o pagamento do boleto', 'não consigo pagar o cartão do Sicredi via boleto', além de mencionar que 'tem várias funções que tem lá que esse não possui'. Conclusão do usuário: 'Péssimo'."
+                }
+            ]
+        },
+        {
+            "email": "um.usuario.do.google.20191114000000@example.com",
+            "answers": [
+                {
+                    "purpose": "Aplicativo é de fácil utilização, todas as funcionalidades disponíveis suprem as necessidades. Constantemente é atualizado com mais novidades.",
+                    "score": 5,
+                    "explanation": "Recomendo a utilização. Aplicativo é de fácil utilização, todas as funcionalidades disponíveis suprem as necessidades. Constantemente é atualizado com mais novidades, e não trava."
+                }
+            ]
+        },
+        {
+            "email": "um.usuario.do.google.20191125@example.com",
+            "answers": [
+                {
+                    "purpose": "Principal objetivo: Funciona bem, mas gostaria que o AP permitisse fazer programação de pagamentos em massa em datas diferentes de pagamento para ganhar tempo.",
+                    "score": 5,
+                    "explanation": "Nota 5: Usuário descreve como 'Funciona bem', mas também menciona que gostaria que o AP permitisse fazer programação de pagamentos em massa em datas diferentes de pagamento para ganhar tempo. Conclusão do usuário: 'Atende bem, mas poderia melhorar na programação de pagamentos em massa.'"
+                }
+            ]
+        },
+        {
+            "email": "um.usuario.do.google.20191115200000@example.com",
+            "answers": [
+                {
+                    "purpose": "Principal objetivo: pagar boletos em dias que não são dias úteis. O usuário quer pagar boleto em dias que não são dias úteis sem ter que agendar.",
+                    "score": 1,
+                    "explanation": "Nota 1: Usuário descreve como 'Ei, vocês deveriam mudar essa função de pagar boletos apenas em dias úteis'. Principais queixas do review que justificam a nota: 'hoje em dia é muito cotidiano gerar boletos em aplicativos digitais, ai temos que agendar para um dia útil, vamos progredir gente, vamos acompanhar as mudanças as inovações, o mundo está mudando, têm se almentado muito as compras pela internet, pagamentos digitais, transferêcias digitais, gerações de boletos digitais, emptrestimos digitais, eu quero pagar boleto em dias que não são dias úteis! Sem ter que agendar!'. Conclusão do usuário: 'Eu quero pagar boleto em dias que não são dias úteis! Sem ter que agendar!'."
+                }
+            ]
+        },
+        {
+            "email": "um.usuario.do.google.20191108200000@example.com",
+            "answers": [
+                {
+                    "purpose": "Principal problema: as falhas que acontecem no aplicativo! Bloqueia sem motivo nenhum. E sempre gerando um transtorno. Pois sempre acontece quando mais precisa.",
+                    "score": 3,
+                    "explanation": "Nota 3: Usuário descreve como 'O maior problema são as falhas que acontecem no aplicativo! Bloqueia sem motivo nenhum. E sempre gerando um transtorno. Pois sempre acontece quando mais precisa.'"
+                }
+            ]
+        },
+        {
+            "email": "um.usuario.do.google.20191108000000@example.com",
+            "answers": [
+                {
+                    "purpose": "Principal objetivo: Fazer 99% de minhas movimentações pelo aplicativo, aonde eu estiver e a hora que eu quiser, economizando tempo e evitando filas.",
+                    "score": 5,
+                    "explanation": "Nota 5: Usuário descreve como 'Ótimo' e que faz 99% de suas movimentações pelo aplicativo, aonde estiver e a hora que quiser, economizando tempo e evitando filas. Conclusão do usuário: 'Muito seguro também, até hoje não tive nenhum problema.'"
+                }
+            ]
+        },
+        {
+            "email": "um.usuario.do.google.20191113000000@example.com",
+            "answers": [
+                {
+                    "purpose": "Principal objetivo: entrar no App e inserir os dados. App não ajudou pois: 'não consigo entrar no App... minha conta é nova e quando eu abro o App pra inserir os dados fala que está incorreto, mas está tudo certo, porém não entra.... o App alega que minha conta e a cooperativa está inválida'.",
+                    "score": 1,
+                    "explanation": "Nota 1: Usuário descreve como 'Não consigo entrar no App... minha conta é nova e quando eu abro o App pra inserir os dados fala que está incorreto, mas está tudo certo, porém não entra.... o App alega que minha conta e a cooperativa está inválida'. Principais queixas do review que justificam a nota: 'não consigo entrar no App', 'fala que está incorreto', 'não entra', 'alega que minha conta e a cooperativa está inválida'. Conclusão do usuário: 'Não consigo entrar no App... minha conta é nova e quando eu abro o App pra inserir os dados fala que está incorreto, mas está tudo certo, porém não entra.... o App alega que minha conta e a cooperativa está inválida'."
+                }
+            ]
+        },
+        {
+            "email": "um.usuario.do.google.20191110200000@example.com",
+            "answers": [
+                {
+                    "purpose": "Principal objetivo: fazer pagamentos, transferir dinheiro e realizar operações pelo aplicativo. O usuário disse que 'não precisa ir ao banco você consegue fazer tudo aqui pelo aplicativo', indicando que o objetivo foi alcançado com sucesso.",
+                    "score": 5,
+                    "explanation": "Nota 5: Usuário descreve como 'Muito bom, melhoraram muito, transformação total'. Principais motivos que justificam a nota: 'na hora de pagar uma conta, transferir dinheiro e muito mais, não precisa ir ao banco você consegue fazer tudo aqui pelo aplicativo'."
+                }
+            ]
+        },
+        {
+            "email": "um.usuario.do.google.20191126000000@example.com",
+            "answers": [
+                {
+                    "purpose": "Principal objetivo: fazer pagamento por app. O usuário queria cadastrar o smartphone para poder fazer pagamento por app, mas acha que poderia ser melhor... Se pudesse cadastrar em qualquer agencia.",
+                    "score": 3,
+                    "explanation": "Nota 3: Usuário descreve como 'Esta nova forma de ter que cadastrar o smartphone para poder fazer pagamento por app poderia ser melhor... Muitas vezes estamos em outras cidades e precisamos formatar o aparelho e ficamos sem poder efetuar pagamento por nao poder cadastrar o aplicativo'."
+                }
+            ]
+        },
+        {
+            "email": "um.usuario.do.google.20191114000000@example.com",
+            "answers": [
+                {
+                    "purpose": "Principal objetivo: usar o aplicativo para realizar operações bancárias de forma rápida, prática e fácil. O usuário afirmou que é ótimo, bem rápido, prático e fácil.",
+                    "score": 5,
+                    "explanation": "Nota 5: Usuário descreve como 'É ótimo bem rápido prático e fácil'. Menciona que em alguns momentos fora do horário de funcionamento do banco ele trava e não abre ou finais de semana ou feriados mas nem sempre isso acontece."
+                }
+            ]
+        },
+        {
+            "email": "um.usuario.do.google.20191111230000@example.com",
+            "answers": [
+                {
+                    "purpose": "Tem me favorecido muito e ajudado com contas e controle econômico!",
+                    "score": 4,
+                    "explanation": "O aplicativo trava às vezes, mas já melhorou muito de como era no passado."
+                }
+            ]
+        },
+        {
+            "email": "um.usuario.do.google.20191121000000@example.com",
+            "answers": [
+                {
+                    "purpose": "Principal objetivo: fazer pagamentos, transferências ou resgates de aplicações. O app informa que está com problemas no sistema e só posso conferir saldo.",
+                    "score": 1,
+                    "explanation": "Nota 1: Usuário descreve como 'Com a ultima att não pude mais fazer pagamentos, transferencias ou resgates de aplicações. O app informa que está com problemas no sistema e só posso conferir saldo.' Principais queixas do review que justificam a nota: 'não pude mais fazer pagamentos, transferencias ou resgates de aplicações' e 'app informa que está com problemas no sistema'. Conclusão do usuário: 'só posso conferir saldo'."
+                }
+            ]
+        },
+        {
+            "email": "um.usuario.do.google.20191202200000@example.com",
+            "answers": [
+                {
+                    "purpose": "Principal objetivo: usar o App para acompanhar movimentações financeiras. O App é muito bom, mas pode melhorar em alguns aspectos, por exemplo, criar a Notificação Push que já existe em outros aplicativos bancários.",
+                    "score": 5,
+                    "explanation": "Vamos lá Sicredi...dei ⭐⭐⭐⭐⭐ porque meu pedido é muito simples."
+                }
+            ]
+        },
+        {
+            "email": "um.usuario.do.google.20191221200000@example.com",
+            "answers": [
+                {
+                    "purpose": "Principal objetivo: usar o app para facilitar meu dia a dia. O app vale as 5 estrelas, com várias funcionalidades e facilidades.",
+                    "score": 5,
+                    "explanation": "Nota 5: Usuário descreve como 'Excelente app, várias funcionalidades e facilidades pro meu dia a dia'. Principais queixas do review que justificam a nota: 'quando vou digitar uma descrição pra uma transferência, por exemplo, se digitar muito rápido as palavras nao ficam completas (exemplo dpsit ai invés de depósito)'. Conclusão do usuário: 'mas o app vale as 5 estrelas'."
+                }
+            ]
+        },
+        {
+            "email": "um.usuario.do.google.20191224000000@example.com",
+            "answers": [
+                {
+                    "purpose": "Principal objetivo: Utilizar o aplicativo para realizar tarefas diárias. O app é ótimo, utilizo muito, porém faz umas duas semanas que estou tendo problemas para realizar as funções, dando falha de autenticação, o app bloqueou pedi ao meu gerente desbloqueio e novamente deu falha na autenticação, não consigo realizar as tarefas que utilizo sempre.",
+                    "score": 5,
+                    "explanation": "Nota 5: Usuário descreve como 'O aplicativo é ótimo utilizo muito'. Principais razões para a nota: 'faz umas duas semanas que estou tendo problemas para realizar as funções, dando falha de autenticação, o app bloqueou pedi ao meu gerente desbloqueio e novamente deu falha na autenticação, não consigo realizar as tarefas que utilizo sempre'."
+                }
+            ]
+        },
+        {
+            "email": "um.usuario.do.google.20191211200000@example.com",
+            "answers": [
+                {
+                    "purpose": "Principal objetivo: usar o aplicativo para acessar a conta. O usuário achou o aplicativo ótimo, fácil e bonito, porém, após a última atualização, surgiu um erro que impede o acesso à conta e pede para tentar mais tarde.",
+                    "score": 3,
+                    "explanation": "Nota 3: Usuário descreve como 'O aplicativo é ótimo, fácil e bonito'. Principais queixas do review que justificam a nota: 'surgiu um erro depois a última atualização, não é possível acessar a conta e pede para tentar mais tarde. Não consigo mais acessar a conta PF'. Conclusão do usuário: 'Porém, surgiu um erro depois a última atualização, não é possível acessar a conta e pede para tentar mais tarde. Não consigo mais acessar a conta PF'."
+                }
+            ]
+        },
+        {
+            "email": "um.usuario.do.google.20191205200000@example.com",
+            "answers": [
+                {
+                    "purpose": "Principal objetivo: Acessar minha conta. O aplicativo me trava e quando fui fazer meu primeiro acesso não consigo concluir as etapas.",
+                    "score": 1,
+                    "explanation": "Nota 1: Usuário descreve como 'Se eu pudesse eu não daria nenhuma estrela pois o aplicativo é horrível'. Principais queixas do review que justificam a nota: 'não consigo acessar minha conta', 'o aplicativo me trava' e 'não consigo concluir as etapas'. Conclusão do usuário: 'fica difícil a caixa está ganhando com seu aplicativo fácil de entender e fácil de se cadastrar'."
+                }
+            ]
+        },
+        {
+            "email": "um.usuario.do.google.20191211000000@example.com",
+            "answers": [
+                {
+                    "purpose": "Principal objetivo: solicitar um código de segurança na agência. O usuário acha que seria mais fácil com a senha e CPF do responsável, através de um SMS ou ligação, para receber o código de segurança, para liberar ações como transferência, pagamentos e resgates.",
+                    "score": 5,
+                    "explanation": "Nota 5: Usuário atribui 5 estrelas e descreve o app como muito bom, na verdade excelente. O usuário comenta que a parte de ir até a agência pra solicitar um código de segurança é um ponto que poderia ser melhorado, mas o restante do app é muito bom."
+                }
+            ]
+        },
+        {
+            "email": "um.usuario.do.google.20191219000000@example.com",
+            "answers": [
+                {
+                    "purpose": "Principal objetivo: fazer o primeiro acesso ao aplicativo. O usuário tentou entrar, mas a senha que colocou estava inválida, e ao tentar refazer o cadastro, consta como já cadastrado. O usuário quer que isso seja corrigido para que possam corrigir os erros.",
+                    "score": 1,
+                    "explanation": "Nota 1: Usuário descreve como 'Tentei fazer o primeiro acesso, a senha que coloquei estava inválida, cancelei a ação e tentei entrar, aparece meus dados, mas a senha final que coloquei não dá certo, tentei mudar, mas consta como se eu não tivesse cadastro, tentei refazer o cadastro e consta como já cadastrado'. Conclusão do usuário: 'por favor corrijam isso para que possamos corrigir os erros'."
+                }
+            ]
+        },
+        {
+            "email": "um.usuario.do.google.20191219000000@example.com",
+            "answers": [
+                {
+                    "purpose": "Principal objetivo: fazer pagamentos pelo aplicativo. O aplicativo é excelente, porém desde o início da semana quando tento fazer algum pagamento da falha de autenticação, entrei em contato com minha agência desbloquearam meu aplicativo, hoje tentei fazer novamente pagamento da minha fatura da vivo e continua com falha de autenticação. Eu uso muito meu aplicativo.",
+                    "score": 5,
+                    "explanation": "Nota 5: Usuário atribui a nota como 5 estrelas. Principais razões que justificam a nota: 'O aplicativo é excelente', mas também menciona que 'desde o início da semana quando tento fazer algum pagamento da falha de autenticação', e que 'hoje tentei fazer novamente pagamento da minha fatura da vivo e continua com falha de autenticação'. Conclusão do usuário: 'Eu uso muito meu aplicativo.'"
+                }
+            ]
+        },
+        {
+            "email": "um.usuario.do.google.20191217200000@example.com",
+            "answers": [
+                {
+                    "purpose": "Principal objetivo: Utilizar o aplicativo de forma prática e fácil de se utilizar. App atende ao propósito de ser prático e fácil, porém sinto falta da opção de fazer a alteração (fazer proposta) do limite do cartão de crédito pelo próprio App.",
+                    "score": 5,
+                    "explanation": "Nota 5: Usuário descreve como 'Aplicativo excelente. Muito prático e fácil de se utilizar.' Apenas sente falta da opção de fazer a alteração (fazer proposta) do limite do cartão de crédito pelo próprio App."
+                }
+            ]
+        },
+        {
+            "email": "um.usuario.do.google.20191204000000@example.com",
+            "answers": [
+                {
+                    "purpose": "Principal objetivo: usar o App como utilitário facilitador. Me atende dentro das minhas necessidades.",
+                    "score": 5,
+                    "explanation": "Nota 5: Usuário descreve como 'O App é muito Bom. Sem dúvida um Ótimo utilitário facilitador.. Me atende dentro das minhas necessidades.'"
+                }
+            ]
+        },
+        {
+            "email": "um.usuario.do.google.20191215200000@example.com",
+            "answers": [
+                {
+                    "purpose": "Principal objetivo: usar o Aplicativo para realização de pagamentos e transferências. O App simplesmente não faz autenticação e após 3 tentativas ele bloqueia. Preciso ir na agência toda vez para desbloquear o aplicativo.",
+                    "score": 1,
+                    "explanation": "Nota 1: Usuário descreve como 'o App simplesmente não faz autenticação e após 3 tentativas ele bloqueia'. Principais queixas do review que justificam a nota: 'preciso ir na agência para desbloquear o Aplicativo', 'não faz autenticação', 'bloqueia'. Conclusão do usuário: 'É um saco ir em agência toda vez'."
+                }
+            ]
+        },
+        {
+            "email": "um.usuario.do.google.20191203200000@example.com",
+            "answers": [
+                {
+                    "purpose": "Principal objetivo: usar o app. App lento. Algumas letras além de serem MT pequenas aparecem cortadas. No geral ė bom, mas precisa ser mais organizado e intuitivo como por exemplo a nuconta.",
+                    "score": 3,
+                    "explanation": "Nota 3: Usuário descreve como 'App lento. Algumas letras além de serem MT pequenas aparecem cortadas. No geral ė bom, mas precisa ser mais organizado e intuitivo como por exemplo a nuconta.'."
+                }
+            ]
+        },
+        {
+            "email": "um.usuario.do.google.20191211000000@example.com",
+            "answers": [
+                {
+                    "purpose": "Principal objetivo: Usar o app para fazer várias coisas e ganhar tempo. O usuário consegue fazer muita coisa pelo App, mas tem que ver sobre fatura.",
+                    "score": 5,
+                    "explanation": "Nota 5: Usuário descreve como 'Ótimo app. Consigo fazer muita coisa pelo App. Ganhando tempo.' e menciona que 'Tá bem complicado' sobre a fatura, que 'estão tentando melhorar isso'."
+                }
+            ]
+        },
+        {
+            "email": "um.usuario.do.google.20191202200000@example.com",
+            "answers": [
+                {
+                    "purpose": "Principal objetivo: usar o aplicativo para digitar os dados e acompanhar o uso dos cartões de crédito e débito. O usuário quer que o teclado pare de travar na hora de digitar os dados e poder acompanhar o uso dos cartões.",
+                    "score": 4,
+                    "explanation": "Nota 4: Usuário descreve como 'Só falta parar de travar o teclado na hora de digitar os dados (tem que fazer devagar se não ele não pega todos os dígitos) e poder acompanhar o uso dos cartões de crédito e débito'."
+                }
+            ]
+        },
+        {
+            "email": "um.usuario.do.google.20191203000000@example.com",
+            "answers": [
+                {
+                    "purpose": "Pensando no seu principal objetivo ao usar nosso aplicativo, o quão bem ele te ajudou a alcançar esse propósito e por quê? Todas as compras feitas no final de semana são descritas no aplicativo na segunda feira, atrapalha na visualização e organização, não consigo fazer nem resgate de poupança nos finais de semana.",
+                    "score": 3,
+                    "explanation": "Conte-nos porque você deu sua nota. O usuário diz que 'fora esses itens o app é bom', mas também menciona que 'todas as compras feitas no final de semana são descritas no aplicativo na segunda feira' e que isso 'atrapalha na visualização e organização', além de que 'não consegue fazer nem resgate de poupança nos finais de semana'."
+                }
+            ]
+        },
+        {
+            "email": "um.usuario.do.google.20191219000000@example.com",
+            "answers": [
+                {
+                    "purpose": "Principal objetivo: verificar o extrato da minha conta poupança. App não ajudou pois: 'não consigo verificar o extrato da minha conta poupança, nao tem a opção na janela ao lado.'",
+                    "score": 3,
+                    "explanation": "Nota 3: Usuário descreve como 'O app é bom'. Principais queixas do review que justificam a nota: 'o aplicativo esta lento. Dia 19 de Dezembro e continua lento o aplicativo.'"
+                }
+            ]
+        },
+        {
+            "email": "um.usuario.do.google.20191219000000@example.com",
+            "answers": [
+                {
+                    "purpose": "Principal objetivo: Acessar o menu do aplicativo. App não ajudou pois: 'tenta voltar para acessar o menu e do nada o aplicativo trava', 'tem que fechar e fazer novamente o login para ter acesso'.",
+                    "score": 1,
+                    "explanation": "Nota 1: Usuário descreve como 'o aplicativo trava', 'tem que fechar e fazer novamente o login para ter acesso'. Principais queixas do review que justificam a nota: 'o aplicativo trava', 'tem que fechar e fazer novamente o login para ter acesso'. Conclusão do usuário: 'Assim não dá'."
+                }
+            ]
+        }
+    ]
+}
