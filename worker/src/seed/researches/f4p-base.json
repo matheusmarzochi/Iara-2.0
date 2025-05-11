@@ -1,0 +1,1100 @@
+{
+  "title": "Pesquisa de Satisfação F4P",
+  "description": "Pesquisa do curso de Agilidade para medir a satisfação do usuário",
+  "questions": [
+    {
+      "purpose": "Qual foi o seu objetivo PRIMÁRIO em escolher o Treinamento Kanban (KMP I)?",
+      "sequence": 1
+    },
+    {
+      "purpose": "(opcional) Qual foi o seu objetivo SECUNDÁRIO em escolher o KMP I?",
+      "sequence": 2
+    },
+    {
+      "purpose": "(opcional) Teve algum OUTRO OBJETIVO além dos dois acima?",
+      "sequence": 3
+    }
+  ],
+  "forms": [
+    {
+      "email": "user-1@example.com",
+      "answers": [
+        {
+          "purpose": "Pretendo a começar a utilizar o método Kanban com os meus times.",
+          "score": "4",
+          "explanation": "É a que mais me identifiquei."
+        },
+        {
+          "purpose": "Ampliar meus conhecimentos.",
+          "score": "4",
+          "explanation": "É a que mais me identifiquei."
+        },
+        {
+          "purpose": "",
+          "score": "",
+          "explanation": ""
+        }
+      ]
+    },
+    {
+      "email": "user-2@example.com",
+      "answers": [
+        {
+          "purpose": "Conhecimento método Kanban",
+          "score": "4",
+          "explanation": "Atendeu minhas expectativas "
+        },
+        {
+          "purpose": "Certificação ",
+          "score": "4",
+          "explanation": ""
+        },
+        {
+          "purpose": "",
+          "score": "",
+          "explanation": ""
+        }
+      ]
+    },
+    {
+      "email": "user-3@example.com",
+      "answers": [
+        {
+          "purpose": "Conhecer o Kanban",
+          "score": "4",
+          "explanation": "O jogos ajudaram a entender a dinâmica do método"
+        },
+        {
+          "purpose": "",
+          "score": "",
+          "explanation": ""
+        },
+        {
+          "purpose": "",
+          "score": "",
+          "explanation": ""
+        }
+      ]
+    },
+    {
+      "email": "user-4@example.com",
+      "answers": [
+        {
+          "purpose": "Compreender melhor sobre o Kanban e como aplicar isso na empresa na qual eu trabalho",
+          "score": "5",
+          "explanation": "Ficou realmente bem claro sobre alguns pontos na qual eu tinha dúvida em como rodar o Kanban, e o Kaizen game deixou isso bem claro e faz uma simulação bem próxima a nossa realidade"
+        },
+        {
+          "purpose": "Em como levar o Kanban para C-level e diretoria",
+          "score": "2",
+          "explanation": "Entendo que precisamos ter mais base sobre o Kanban para subirmos isso de nível e passar a para o C-level"
+        },
+        {
+          "purpose": "Como utilizar isso para a empresa inteira e não apenas na área em que eu tranbalho",
+          "score": "2",
+          "explanation": "O mesmo se aplica para a empresa inteira"
+        }
+      ]
+    },
+    {
+      "email": "user-5@example.com",
+      "answers": [
+        {
+          "purpose": "Conhecer de fato o método a partir de pessoas que são referências no assunto",
+          "score": "5",
+          "explanation": "O treinamento de fato acabou superando as minhas expectativas, pois, foi possível observar em todos os instrutores muito segurança na abordagem do conteúdo."
+        },
+        {
+          "purpose": "Ter o conhecimento necessário para conseguir aplicar de forma eficiente no ambiente de trabalho",
+          "score": "5",
+          "explanation": "O treinamento foi muito prático no geral."
+        },
+        {
+          "purpose": "",
+          "score": "",
+          "explanation": ""
+        }
+      ]
+    },
+    {
+      "email": "user-6@example.com",
+      "answers": [
+        {
+          "purpose": "Aprender sobre como o metódo kanban pode me ajudar a melhorar os processos da empresa que trabalho",
+          "score": "5",
+          "explanation": "O conhecimento dos instrutores e os exemplos abordados me permitiu clarear muito bem sobre como executar após o curso as atividades em meu ambiente de trabalho"
+        },
+        {
+          "purpose": "Praticar atividades que simulem o dia a dia",
+          "score": "5",
+          "explanation": "As atividades executadas em sala serviram para praticar situações reais de como aplicar o método"
+        },
+        {
+          "purpose": "",
+          "score": "",
+          "explanation": ""
+        }
+      ]
+    },
+    {
+      "email": "user-7@example.com",
+      "answers": [
+        {
+          "purpose": "Evoluir com o que pratico atualmente",
+          "score": "5",
+          "explanation": "O treinamento mostrou um caminho para evoluir/amadurecer nosso processo de trabalho de forma sustentável e sistêmica, de uma forma direta, sem enrolação, hight five ou firula."
+        },
+        {
+          "purpose": "Extrair e analisar métricas",
+          "score": "5",
+          "explanation": "Mostrando que com dados relativamente simples de serem extraídos é possível fazer análises elaboradas e agir de forma certeira"
+        },
+        {
+          "purpose": "Conhecimento para ajudar resolver problemas pontuais",
+          "score": "4",
+          "explanation": "Durante o treinamento foram resolvidas muitas das dúvidas que tive, mas algumas acabaram não dando tempo, mas enfim, o principal foi esclarecido."
+        }
+      ]
+    },
+    {
+      "email": "user-8@example.com",
+      "answers": [
+        {
+          "purpose": "aprender e aplicar, conhecer",
+          "score": "5",
+          "explanation": "muito bom ter mesclado a pratica com o teorico mais problematicas do mercado"
+        },
+        {
+          "purpose": "",
+          "score": "",
+          "explanation": ""
+        },
+        {
+          "purpose": "",
+          "score": "",
+          "explanation": ""
+        }
+      ]
+    },
+    {
+      "email": "user-9@example.com",
+      "answers": [
+        {
+          "purpose": "Me aprimorar no conhecimento do Kanban",
+          "score": "4",
+          "explanation": "Já tinha um pouco de conhecimento prévio do Kanban e também sobre como era o curso, logo atendeu minhas expectativas"
+        },
+        {
+          "purpose": "Obter mais reconhecimento no mercado",
+          "score": "4",
+          "explanation": "A Aspercom e a LKU são reconhecidas no mercado e esse curso dá uma credibilidade significativa ao currículo profissional."
+        },
+        {
+          "purpose": "Possibilitar aplicar meus conhecimentos a diversas áreas",
+          "score": "4",
+          "explanation": "Com o que aprendi consigo repassar/aplicar esses conhecimentos às equipes em que atuo. O curso permitiu explorar mais cenários e trocar mais experiências que enriquecem nosso conhecimento."
+        }
+      ]
+    },
+    {
+      "email": "user-10@example.com",
+      "answers": [
+        {
+          "purpose": "Aprimorar e aperfeiçoar conhecimento",
+          "score": "5",
+          "explanation": "Treinamento muito bem ministrado mesclando teoria e prática"
+        },
+        {
+          "purpose": "Networking",
+          "score": "4",
+          "explanation": "Deu para conhecer bastante gente"
+        },
+        {
+          "purpose": "",
+          "score": "",
+          "explanation": ""
+        }
+      ]
+    },
+    {
+      "email": "user-11@example.com",
+      "answers": [
+        {
+          "purpose": "Melhorar meu conhecimento em Kanban",
+          "score": "3",
+          "explanation": "Achei a parte do CFD foi apresentada muito rápida, como não tinha muito conhecimento sobre o assunto tive dificuldade de acompanhar "
+        },
+        {
+          "purpose": "Enriquecer o meu CV",
+          "score": "4",
+          "explanation": "Curso de um bom nível "
+        },
+        {
+          "purpose": "",
+          "score": "",
+          "explanation": ""
+        }
+      ]
+    },
+    {
+      "email": "user-12@example.com",
+      "answers": [
+        {
+          "purpose": "Obter novos insights para melhorar minha prática com kanban",
+          "score": "4",
+          "explanation": "Trazer mais valor para o meu trabalho"
+        },
+        {
+          "purpose": "Aprender mais sobre o CFD",
+          "score": "4",
+          "explanation": "Melhorar a aplicação em meu dia a dia no trabalho para tomar melhores decisões"
+        },
+        {
+          "purpose": "Certificado",
+          "score": "4",
+          "explanation": "Demanda do mercado"
+        }
+      ]
+    },
+    {
+      "email": "user-13@example.com",
+      "answers": [
+        {
+          "purpose": "Adquirir conhecimento em Kanban para auxiliar na melhoria de processos.",
+          "score": "3",
+          "explanation": "O curso foi ótimo, mas exige que você já tenha um conhecimento sobre o assunto. Como eu tinha pouco, tive dificuldades em assimilar algumas partes do conteúdo (analise gráfica, principalmente). Poderia também ter nos mostrado algumas dicas práticas de quais formas podemos executar os passos propostos no STATIK."
+        },
+        {
+          "purpose": "",
+          "score": "",
+          "explanation": ""
+        },
+        {
+          "purpose": "",
+          "score": "",
+          "explanation": ""
+        }
+      ]
+    },
+    {
+      "email": "user-14@example.com",
+      "answers": [
+        {
+          "purpose": "Vontade de atuar com Kanban em consultoria",
+          "score": "4",
+          "explanation": "O treinamento me capacitou para atuar com kanban"
+        },
+        {
+          "purpose": "",
+          "score": "",
+          "explanation": ""
+        },
+        {
+          "purpose": "",
+          "score": "",
+          "explanation": ""
+        }
+      ]
+    },
+    {
+      "email": "user-15@example.com",
+      "answers": [
+        {
+          "purpose": "Adquirir conhecimento sobre kanban.",
+          "score": "5",
+          "explanation": "Não conhecia Kanban."
+        },
+        {
+          "purpose": "Ser diferenciada na busca de novas oportunidades no mercado.",
+          "score": "5",
+          "explanation": "Embora esteja empregada em uma instituição sólida, mudanças sempre devem ser avaliadas e quero estar preparada caso haja uma oportunidade desafiadora."
+        },
+        {
+          "purpose": "Aplicar as técnicas na empresa atual.",
+          "score": "5",
+          "explanation": "Atualmente a empresa utiliza Scrum e Safe, não acredito que vão implementar o Kanban em sua totalidade, porém eu atuo como Scrum Master e poderei, por conta própria, aplicar conceitos e técnicas aprendidos no curso para melhorar nosso dia a dia."
+        }
+      ]
+    },
+    {
+      "email": "user-16@example.com",
+      "answers": [
+        {
+          "purpose": "Aprimorar meus conhecimento em Kanban.",
+          "score": "4",
+          "explanation": "Como eu já possuía o conhecimento prévio (inclusive já havia feio o TKP), o conhecimento adquirio está dentro do esperado."
+        },
+        {
+          "purpose": "Obter um certificado de um curso reconhecido no mercado.",
+          "score": "5",
+          "explanation": "Agora possuo uma credencial reconhecida no mercado. O próximo passo é realizar o KMP II para poder ter ainda mais conhecimentos - Kanban escalado."
+        },
+        {
+          "purpose": "",
+          "score": "",
+          "explanation": ""
+        }
+      ]
+    },
+    {
+      "email": "user-17@example.com",
+      "answers": [
+        {
+          "purpose": "Métricas",
+          "score": "4",
+          "explanation": "Consegui entender bastante os números e principalmente como interpretá-los. Qual mudança pode afetar as métricas também."
+        },
+        {
+          "purpose": "Statik",
+          "score": "3",
+          "explanation": "Sobre o STATIK, meu conhecimento era baixo e acredito que foi um pouco acelerado as explicações, acabei ficando com algumas dúvidas."
+        },
+        {
+          "purpose": "Cadências",
+          "score": "2",
+          "explanation": "Não consegui perceber algumas coisas em relação às cadências abordadas, como qual melhor momento para realizar, como conduzir as cadências e quais dinâmicas abordar."
+        }
+      ]
+    },
+    {
+      "email": "user-18@example.com",
+      "answers": [
+        {
+          "purpose": "Ajudar os times da empresa na melhoria continua",
+          "score": "4",
+          "explanation": "-"
+        },
+        {
+          "purpose": "",
+          "score": "",
+          "explanation": ""
+        },
+        {
+          "purpose": "",
+          "score": "",
+          "explanation": ""
+        }
+      ]
+    },
+    {
+      "email": "user-19@example.com",
+      "answers": [
+        {
+          "purpose": "Ajudar os times da empresa na melhoria continua",
+          "score": "4",
+          "explanation": "-"
+        },
+        {
+          "purpose": "",
+          "score": "",
+          "explanation": ""
+        },
+        {
+          "purpose": "",
+          "score": "",
+          "explanation": ""
+        }
+      ]
+    },
+    {
+      "email": "user-20@example.com",
+      "answers": [
+        {
+          "purpose": "Ajudar os times da empresa na melhoria continua",
+          "score": "4",
+          "explanation": "-"
+        },
+        {
+          "purpose": "",
+          "score": "",
+          "explanation": ""
+        },
+        {
+          "purpose": "",
+          "score": "",
+          "explanation": ""
+        }
+      ]
+    },
+    {
+      "email": "user-21@example.com",
+      "answers": [
+        {
+          "purpose": "Implantar um processo de melhoria contínua na empresa onde atuo, focado em realizar entregas de valor ao cliente",
+          "score": "4",
+          "explanation": "Ajustaria apenas alguns temas como limitar WIP e insistiria um pouco mais na prática do STATIK, especialmente com dicas sobre como organizar os questionamentos ao cliente."
+        },
+        {
+          "purpose": "Me tornar um especialista no método Kanban, capaz de implantar em qualquer organização",
+          "score": "4",
+          "explanation": ""
+        },
+        {
+          "purpose": "Não",
+          "score": "",
+          "explanation": ""
+        }
+      ]
+    },
+    {
+      "email": "user-22@example.com",
+      "answers": [
+        {
+          "purpose": "Adquirir conceitos, tecnicas, linguajar dessa ferramenta bem como sua aplicabilidade",
+          "score": "4",
+          "explanation": "o formato do treinamento permite a abordagem dos topicos colocados como expectativa"
+        },
+        {
+          "purpose": "Preparar para o KMP II",
+          "score": "5",
+          "explanation": "a finalizacao do treinamento KMP I permite a continuidade."
+        },
+        {
+          "purpose": "",
+          "score": "",
+          "explanation": ""
+        }
+      ]
+    },
+    {
+      "email": "user-23@example.com",
+      "answers": [
+        {
+          "purpose": "Adquirir familiaridade com as tecnicas",
+          "score": "5",
+          "explanation": "O workshop ser conduzido através de um jogo. Bem interessante!!!!"
+        },
+        {
+          "purpose": "Certificacao para continuidade, rumo ao KMP II",
+          "score": "5",
+          "explanation": "Contiuidade no aprendizado Kanban para atingimento da certificação AKT"
+        },
+        {
+          "purpose": "",
+          "score": "",
+          "explanation": ""
+        }
+      ]
+    },
+    {
+      "email": "user-24@example.com",
+      "answers": [
+        {
+          "purpose": "Aprimorar e estruturar os conhecimentos em Kanban.",
+          "score": "5",
+          "explanation": "Superou devido a algumas dicas valiosas dada pelo instrutor."
+        },
+        {
+          "purpose": "Iniciar o processo para escalar Kanban em um cliente.",
+          "score": "3",
+          "explanation": "Porque preciso de respostas a nível de escala, interface entre times e o KMP I é voltado para iniciar ainda o processo."
+        },
+        {
+          "purpose": "",
+          "score": "",
+          "explanation": ""
+        }
+      ]
+    },
+    {
+      "email": "user-25@example.com",
+      "answers": [
+        {
+          "purpose": "Conhecer o Kanban",
+          "score": "5",
+          "explanation": "O treinamento foi extremamente aplicado e dinâmico refletindo a realidade"
+        },
+        {
+          "purpose": "",
+          "score": "",
+          "explanation": ""
+        },
+        {
+          "purpose": "",
+          "score": "",
+          "explanation": ""
+        }
+      ]
+    },
+    {
+      "email": "user-26@example.com",
+      "answers": [
+        {
+          "purpose": "Aprender técnicas para melhorar os processos dos clientes que atuo, e ser capaz de entender a ciência que existe no Kanban ",
+          "score": "4",
+          "explanation": "expectativas atendidas "
+        },
+        {
+          "purpose": "Ter oportunidade de aprender na proposta hands on  com os profissionais mais renomados do brasil",
+          "score": "4",
+          "explanation": "expectativas atendidas"
+        },
+        {
+          "purpose": "",
+          "score": "",
+          "explanation": ""
+        }
+      ]
+    },
+    {
+      "email": "user-27@example.com",
+      "answers": [
+        {
+          "purpose": "Aprofundar conhecimentos sobre Kanban",
+          "score": "2",
+          "explanation": "Houve pouco aprofundamento teórico e a maioria das minha dúvidas foram transferidas para outros treinamentos (KMP II, KMM e KCP). Mas sou obrigado a fazer o KMP I para poder fazer o restante"
+        },
+        {
+          "purpose": "",
+          "score": "",
+          "explanation": ""
+        },
+        {
+          "purpose": "",
+          "score": "",
+          "explanation": ""
+        }
+      ]
+    },
+    {
+      "email": "user-28@example.com",
+      "answers": [
+        {
+          "purpose": "Aprimorar o conhecimento sobre Kanban, pois, no passado tive experiências valiosas. Hoje, posso aplicar no dia a dia da empresa.",
+          "score": "1",
+          "explanation": "Treinamento muito prático, com cases reais e muita mão na massa."
+        },
+        {
+          "purpose": "Identificar pontos de melhorias no processo atual",
+          "score": "1",
+          "explanation": ""
+        },
+        {
+          "purpose": "",
+          "score": "1",
+          "explanation": ""
+        }
+      ]
+    },
+    {
+      "email": "user-29@example.com",
+      "answers": [
+        {
+          "purpose": "Aprofundar meus conhecimentos para apoiar à implantação dessa ferramenta de gestão na empresa em que trabalho.",
+          "score": "4",
+          "explanation": "Porque atendeu minhas expectativas, consegui aprimorar meus conhecimentos de forma dinâmica. Principalmente, com o uso do Kaizen Games."
+        },
+        {
+          "purpose": "Trocar experiência sobre a aplicação do Kanban com os demais participantes.",
+          "score": "4",
+          "explanation": ""
+        },
+        {
+          "purpose": "",
+          "score": "",
+          "explanation": ""
+        }
+      ]
+    },
+    {
+      "email": "user-30@example.com",
+      "answers": [
+        {
+          "purpose": "conhecimento",
+          "score": "2",
+          "explanation": "Faltou melhor organização do tempo, e reservar algum tempo para tirar duvidas."
+        },
+        {
+          "purpose": "conhecimento",
+          "score": "2",
+          "explanation": "Faltou melhor organização do tempo, e reservar algum tempo para tirar duvidas."
+        },
+        {
+          "purpose": "não",
+          "score": "2",
+          "explanation": "Faltou melhor organização do tempo, e reservar algum tempo para tirar duvidas."
+        }
+      ]
+    },
+    {
+      "email": "user-31@example.com",
+      "answers": [
+        {
+          "purpose": "Melhoria contínua em meus processos",
+          "score": "5",
+          "explanation": "Mostrou problemas práticas que vivenciamos nas empresas e o KANBAN irá nos ajudar a entregar mais em menos tempo assim que amadurecermos neste framework sensacional."
+        },
+        {
+          "purpose": "Entregas sem gargalos",
+          "score": "5",
+          "explanation": ""
+        },
+        {
+          "purpose": "",
+          "score": "5",
+          "explanation": ""
+        }
+      ]
+    },
+    {
+      "email": "user-32@example.com",
+      "answers": [
+        {
+          "purpose": "entender os conceitos e verificar onde poderei aplicar na gestão de portfólio",
+          "score": "4",
+          "explanation": "conteúdo bem elaborado e experiência do instrutor"
+        },
+        {
+          "purpose": "certificação",
+          "score": "4",
+          "explanation": ""
+        },
+        {
+          "purpose": "",
+          "score": "",
+          "explanation": ""
+        }
+      ]
+    },
+    {
+      "email": "user-33@example.com",
+      "answers": [
+        {
+          "purpose": "Desenvolver habilidades para atuar como Agile Master ",
+          "score": "5",
+          "explanation": "Está sendo possível aplicar os conhecimentos facilmente na equipe"
+        },
+        {
+          "purpose": "Aprimorar habilidades para realizar Gestão de fluxo",
+          "score": "5",
+          "explanation": "Está sendo possível aplicar os conhecimentos facilmente na equipe"
+        },
+        {
+          "purpose": "",
+          "score": "",
+          "explanation": ""
+        }
+      ]
+    },
+    {
+      "email": "user-34@example.com",
+      "answers": [
+        {
+          "purpose": "Aprimoramento",
+          "score": "4",
+          "explanation": "Atendeu o que eu esperava"
+        },
+        {
+          "purpose": "Aumentar meu leque de ferraments para atuar como AC",
+          "score": "4",
+          "explanation": "Atendeu o que eu esperava"
+        },
+        {
+          "purpose": "Nao",
+          "score": "4",
+          "explanation": "Atendeu o que eu esperava"
+        }
+      ]
+    },
+    {
+      "email": "user-35@example.com",
+      "answers": [
+        {
+          "purpose": "Conhecer mais a fundo sobre Kanban",
+          "score": "4",
+          "explanation": "ampliar conhecimento"
+        },
+        {
+          "purpose": "melhorar os processos utilizado no time",
+          "score": "4",
+          "explanation": "disseminar esse conhecimento"
+        },
+        {
+          "purpose": "expandir para demais áreas na empresa ",
+          "score": "4",
+          "explanation": "experimentar em outras areas"
+        }
+      ]
+    },
+    {
+      "email": "user-36@example.com",
+      "answers": [
+        {
+          "purpose": "Aperfeiçoar o conhecimento outrora adquirido de forma autodidata e ter melhor compreensão.",
+          "score": "5",
+          "explanation": "Pois foi possível melhorar minha compreensão e ter uma visão ampla do assunto."
+        },
+        {
+          "purpose": "Estar habilitado para o KMP II",
+          "score": "4",
+          "explanation": "Pois estou me sentindo pronta para o próximo momento."
+        },
+        {
+          "purpose": "",
+          "score": "",
+          "explanation": ""
+        }
+      ]
+    },
+    {
+      "email": "user-37@example.com",
+      "answers": [
+        {
+          "purpose": "Visualizar e aprimorar os processos",
+          "score": "3",
+          "explanation": "A resposta para algumas perguntas não foram dadas, a resposta que recebemos no lugar foi isso é conteúdo do KMP II"
+        },
+        {
+          "purpose": "",
+          "score": "",
+          "explanation": ""
+        },
+        {
+          "purpose": "",
+          "score": "",
+          "explanation": ""
+        }
+      ]
+    },
+    {
+      "email": "user-38@example.com",
+      "answers": [
+        {
+          "purpose": "Aprender sobre fluxo do trabalho do conhecimento",
+          "score": "4",
+          "explanation": "Achei o jogo bem pratico e didático"
+        },
+        {
+          "purpose": "estar atualizado com as praticas do mercado",
+          "score": "4",
+          "explanation": "as trocas de experiencias foram boas"
+        },
+        {
+          "purpose": "Isso é um fit for purpose hahaha controle de WIP",
+          "score": "5",
+          "explanation": "O jogo ajudou a entender bem o controle de WIP"
+        }
+      ]
+    },
+    {
+      "email": "user-39@example.com",
+      "answers": [
+        {
+          "purpose": "Aprofundar meu conhecimento no metodo.",
+          "score": "4",
+          "explanation": "Entendo que há uma continuidade no KMP II"
+        },
+        {
+          "purpose": "Aplicá-lo em trabalhos onde atuo como consultor.",
+          "score": "5",
+          "explanation": "O método realmente vai além do quadro. A experiência do Kaizen Game me surpreendeu. Aliar as técnicas com a gestão financeira dos projetos e, construir o CFD, histograma e lead time run chart, fizeram a diferença entre as notas 4 e 5."
+        },
+        {
+          "purpose": "",
+          "score": "",
+          "explanation": ""
+        }
+      ]
+    },
+    {
+      "email": "user-40@example.com",
+      "answers": [
+        {
+          "purpose": "Validar o meu entendimento sobre Kanban, melhorar a minha utilização do método com as minhas equipes e principalmente aprender bastante.",
+          "score": "5",
+          "explanation": "XXXX é um excelente instrutor, tem uma dinâmica e uma didática fantástica. Ele realmente consegue transmitir o conhecimento e as experiências. Juliano está sempre presente nos times, passando nas mesas e fazendo ajustes e dando dicas para melhorar o funcionamento do fluxo. Sai do curso com todas as expectativas atendidas. "
+        },
+        {
+          "purpose": "Tudo junto no objetivo principal. ",
+          "score": "5",
+          "explanation": "Junto ao principal "
+        },
+        {
+          "purpose": "Junto ao principal. ",
+          "score": "5",
+          "explanation": "Junto ao principal "
+        }
+      ]
+    },
+    {
+      "email": "user-41@example.com",
+      "answers": [
+        {
+          "purpose": "Lecionar, sou professor do _____ e leciono Eng. Software, Gerência de Projetos, Qualidade de Software e Gestão de Processos. Tenho comigo que esse treinamento iria agregar.",
+          "score": "4",
+          "explanation": "Saí do treinamento com mais conhecimento que entrei. Porém, penso que como meu nível de conhecimento é básico. Seja necessário um material de consulta mais completo para consulta. Disponibilizar apenas a apresentação é pouco."
+        },
+        {
+          "purpose": "Ampliar meus conhecimentos",
+          "score": "4",
+          "explanation": "Aprendi muito"
+        },
+        {
+          "purpose": "Networking",
+          "score": "5",
+          "explanation": "Conheci muitas pessoas."
+        }
+      ]
+    },
+    {
+      "email": "user-42@example.com",
+      "answers": [
+        {
+          "purpose": "Dominar melhor a ferramenta",
+          "score": "2",
+          "explanation": "O instrutor XXXX é nota 10. Mas achei o conteúdo do curso fraco, a não ser o kanban game."
+        },
+        {
+          "purpose": "Certificacao",
+          "score": "3",
+          "explanation": "O KMP1 e KMP2 poderiam ser 1 treinamento. A impressão que eu tive foi que diluiram o cobteúdo em água para render mais sessões."
+        },
+        {
+          "purpose": "",
+          "score": "",
+          "explanation": ""
+        }
+      ]
+    },
+    {
+      "email": "user-43@example.com",
+      "answers": [
+        {
+          "purpose": "Aumentar meu conhecimento na metodologia.",
+          "score": "3",
+          "explanation": "Trabalho com Kanban há alguns anos, o Kanban Tour foi a oportunidade de ter o treinamento em Campinas e a um custo acessível (comprei na Black Friday)."
+        },
+        {
+          "purpose": "Oficializar o que já venho aplicando em Kanban.",
+          "score": "4",
+          "explanation": ""
+        },
+        {
+          "purpose": "Trocar experiências com outras pessoas que aplicam Kanban.",
+          "score": "4",
+          "explanation": ""
+        }
+      ]
+    },
+    {
+      "email": "user-44@example.com",
+      "answers": [
+        {
+          "purpose": "Consolidar o aprendizado do STATIK",
+          "score": "4",
+          "explanation": "Acredito que por já ter estudado sobre o assunto, a expectativa estava alinhada ao que foi apresentado."
+        },
+        {
+          "purpose": "Compreender melhor o currículo da carreira como especialista em Kanban",
+          "score": "4",
+          "explanation": "Minhas dúvidas foram esclarecidas."
+        },
+        {
+          "purpose": "Networking",
+          "score": "4",
+          "explanation": "Eu acredito que deveria ter mais mulheres"
+        }
+      ]
+    },
+    {
+      "email": "user-45@example.com",
+      "answers": [
+        {
+          "purpose": "Obter conhecimento",
+          "score": "4",
+          "explanation": "Proporcional ao acréscimo de conhecimento"
+        },
+        {
+          "purpose": "Obter a designação KMP",
+          "score": "4",
+          "explanation": "Proporcional ao primeiro passo necessário para atingir o objetivo"
+        },
+        {
+          "purpose": "",
+          "score": "",
+          "explanation": ""
+        }
+      ]
+    },
+    {
+      "email": "user-46@example.com",
+      "answers": [
+        {
+          "purpose": "Aprimorar meu conhecimento",
+          "score": "5",
+          "explanation": "Conhecimento do professor"
+        },
+        {
+          "purpose": "Compartilhar experiencias e cases",
+          "score": "5",
+          "explanation": "Material, casos apresentados e a turma também auxiliou bastante."
+        },
+        {
+          "purpose": "",
+          "score": "",
+          "explanation": ""
+        }
+      ]
+    },
+    {
+      "email": "user-47@example.com",
+      "answers": [
+        {
+          "purpose": "Conhecer a ferramenta e entender suas aplicações diante de minha realidade profissional",
+          "score": "4",
+          "explanation": "Acho que supriu as minhas dúvidas e me fizeram entender quais as aplicações da ferramenta."
+        },
+        {
+          "purpose": "",
+          "score": "",
+          "explanation": ""
+        },
+        {
+          "purpose": "",
+          "score": "",
+          "explanation": ""
+        }
+      ]
+    },
+    {
+      "email": "user-48@example.com",
+      "answers": [
+        {
+          "purpose": "Aplicar mudanças via Kanban",
+          "score": "3",
+          "explanation": "Senti falta de mais conteúdo, pois somente 2 dinâmicas longas apesar de aplicado não senti que meu conhecimento aumentou. Praticamente eu já conhecia tudo que foi apresentado, sem ter a necessidade de pagar pelo treinamento."
+        },
+        {
+          "purpose": "",
+          "score": "",
+          "explanation": ""
+        },
+        {
+          "purpose": "",
+          "score": "",
+          "explanation": ""
+        }
+      ]
+    },
+    {
+      "email": "user-49@example.com",
+      "answers": [
+        {
+          "purpose": "Capacitação profissional. Busca de insumos para tomada de decisões.",
+          "score": "4",
+          "explanation": "Crescimento e reciclagem profissional com tendencias do mercado. "
+        },
+        {
+          "purpose": "",
+          "score": "",
+          "explanation": ""
+        },
+        {
+          "purpose": "",
+          "score": "",
+          "explanation": ""
+        }
+      ]
+    },
+    {
+      "email": "user-50@example.com",
+      "answers": [
+        {
+          "purpose": "Iniciar a formação em Kanban",
+          "score": "5",
+          "explanation": "O curso abordou temas que eu nem sabia que existiam!"
+        },
+        {
+          "purpose": "",
+          "score": "5",
+          "explanation": ""
+        },
+        {
+          "purpose": "",
+          "score": "5",
+          "explanation": ""
+        }
+      ]
+    },
+    {
+      "email": "user-51@example.com",
+      "answers": [
+        {
+          "purpose": "Me sentir mais segura para aplicar o kanban em meu dia-a-dia",
+          "score": "5",
+          "explanation": "O treinamento foi excelente, o instrutor demonstrou ter muito conhecimento e prática. "
+        },
+        {
+          "purpose": "",
+          "score": "",
+          "explanation": "O treinamento fluiu muito bem, foi rápido e aprendi na prática"
+        },
+        {
+          "purpose": "",
+          "score": "",
+          "explanation": "os colegas do treinamento realizaram perguntas estratégicas que deu para tirar proveito."
+        }
+      ]
+    },
+    {
+      "email": "user-52@example.com",
+      "answers": [
+        {
+          "purpose": "entender melhor como utilizar kanban no dia a dia",
+          "score": "5",
+          "explanation": "Instrutor muito bem preparado, a aula bem dinâmica e exercícios práticos"
+        },
+        {
+          "purpose": "",
+          "score": "",
+          "explanation": ""
+        },
+        {
+          "purpose": "",
+          "score": "",
+          "explanation": ""
+        }
+      ]
+    },
+    {
+      "email": "user-53@example.com",
+      "answers": [
+        {
+          "purpose": "Conhecer e saber como aplicar o método Kanban na minha organização ",
+          "score": "5",
+          "explanation": "Consegui aprender na prática, não somente em teoria o que era ensinado pelo instrutor "
+        },
+        {
+          "purpose": "",
+          "score": "",
+          "explanation": ""
+        },
+        {
+          "purpose": "",
+          "score": "",
+          "explanation": ""
+        }
+      ]
+    },
+    {
+      "email": "user-54@example.com",
+      "answers": [
+        {
+          "purpose": "Aprofundar o assunto para GP",
+          "score": "4",
+          "explanation": "Tirei minhas dúvidas"
+        },
+        {
+          "purpose": "",
+          "score": "",
+          "explanation": ""
+        },
+        {
+          "purpose": "",
+          "score": "",
+          "explanation": ""
+        }
+      ]
+    }
+  ]
+}

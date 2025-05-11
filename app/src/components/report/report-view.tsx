@@ -8,12 +8,12 @@ import { Tabs, TabsList, TabsTrigger, TabsContent } from "~/components/ui/tabs"
 import { Switch } from "~/components/ui/switch"
 import { cn } from "~/lib/utils"
 import type { Category, ReportData, Research, ScoreBox } from "iara-shared/database/schema"
-import { updateCategoryTarget } from "./update-category-target-action"
+import { updateCategoryTarget } from "./report-view-action"
 
-type Props = {
+export interface ReportViewProps {
     reports: ReportData[];
     research: Omit<Research, "forms" | "questions">;
-    categories: Category[];
+    categories: Omit<Category, "analysis">[];
     enableSwitch: boolean;
 }
 
@@ -76,7 +76,7 @@ function mapReportsToTabs(reports: ReportData[]): TabData[] {
     }))
 }
 
-export default function ReportView({ reports, research, categories, enableSwitch }: Props) {
+export default function ReportView({ reports, research, categories, enableSwitch }: ReportViewProps) {
     const tabData = useMemo(() => mapReportsToTabs(reports), [reports])
     const [expandedPurpose, setExpandedPurpose] = useState<string | null>(null)
 
@@ -199,7 +199,7 @@ function ScoreBoxView({ fit, neutral, unfit, className }: ScoreBox & { className
 interface PurposeBlockProps {
     purpose: PurposeData
     isExpanded: boolean
-    categories: Category[]
+    categories: Omit<Category, "analysis">[],
     onToggleExpand: () => void
     showOnTarget: boolean
     onTargetChange?: (checked: boolean) => void

@@ -1,0 +1,2972 @@
+{
+    "title": "Sicredi App - 2025 (Abril)",
+    "description": "Pesquisa do App da Sicrede para medir a satisfação do usuário",
+    "questions": [
+        {
+            "purpose": "Pensando no seu principal objetivo ao usar nosso aplicativo, o quão bem ele te ajudou a alcançar esse propósito e por quê?",
+            "sequence": 1
+        }
+    ],
+    "forms": [
+        {
+            "email": "sanon.belleus.20250424000000@example.com",
+            "answers": [
+                {
+                    "purpose": "Principal objetivo: usar o aplicativo para facilitar tarefas financeiras. O usuário achou o app muito bom, fácil para mexer, mas gostaria de ter a opção de portabilidade de salário ou trazer salário na conta corrente e acompanhar o andamento, para não precisar ir ao banco. Também mencionou que o app falta a opção de upgrade do cartão de crédito, atualizar a renda e outras opções, e que o Sicredi precisa evoluir para deixar o aplicativo top igual aos outros.",
+                    "score": 5,
+                    "explanation": "Nota 5: Usuário descreve como 'Muito bom esse aplicativo. Fácil para mexer.' e comenta que o app falta a opção de upgrade do cartão de crédito, de atualizar a renda, e que o Sicredi precisa evoluir com o tempo deixando o aplicativo top igual aos outros."
+                }
+            ]
+        },
+        {
+            "email": "luciano.faria.lima.20250429000000@example.com",
+            "answers": [
+                {
+                    "purpose": "Principal objetivo: usar o banco para saques e suporte remoto. O usuário tentou realizar um saque na boca do caixa, mas o sistema pede senha de letras que não é possível localizar em nenhum local do app, inclusive nem o atendimento da agência remoto consegue identificar. Por isso, vai ter que ir na cidade vizinha por conta de um sistema ultrapassado.",
+                    "score": 1,
+                    "explanation": "Nota 1: Usuário descreve como 'Banco ultrapassado! sistema de saque na boca do caixa pede senha de letras que não é possível localizar em nenhum local do app. inclusive nem o atendimento da agência remoto não conseguem identificar.' Principais queixas do review que justificam a nota: 'perderam um cliente', 'vou ter que ir na cidade vizinha por conta de um sistema ultrapassado', além de cobrar taxa de manutenção por menos suporte que banco digital."
+                }
+            ]
+        },
+        {
+            "email": "thiago.botelho.20250424000000@example.com",
+            "answers": [
+                {
+                    "purpose": "Principal objetivo: usar o app de banco. O app é muito bom, fluido e estável. Consideram a remoção da função \"arraste para cima para próxima página\" dentro da função DDA pois isso atrapalha a usabilidade; disponibilizar na tela de login do app um botão de acesso direto ao cartão virtual, assim como já existe para o Pix.",
+                    "score": 4,
+                    "explanation": "Nota 4: Usuário descreve como 'De modo geral, o app é muito bom, fluido e estável'. Principais queixas do review que justificam a nota: 'considerem a remoção da função \"arraste para cima para próxima página\" dentro da função DDA pois isso atrapalha a usabilidade; alguns cadastros de débito automático permanecem com o status ativo mesmo após a exclusão'."
+                }
+            ]
+        },
+        {
+            "email": "ms.20250412000000@example.com",
+            "answers": [
+                {
+                    "purpose": "Principal objetivo: usar o aplicativo para pagar contas. O usuário disse que foi pagar uma conta e pediu pra atualizar o aplicativo.",
+                    "score": 5,
+                    "explanation": "Nota 5: Usuário descreve como 'Ótimo aplicativo, eficiente e fácil de usar. Não trava e não te deixa na mão!'. Conclusão do usuário: 'Fui pagar uma conta e pediu pra atualizar o aplicativo. Deu ruim!!!!!! Não abre nada, está uma tela cinza que não sai disso. Precisei pagar uma conta atrasada e agora estou sem ter como fazer isso! O dinheiro preso e mais tempo de atraso no pagamento! 😳'."
+                }
+            ]
+        },
+        {
+            "email": "vera.lucia.20250429000000@example.com",
+            "answers": [
+                {
+                    "purpose": "Principal objetivo: ter todas as opções liberadas no aplicativo, principalmente na hora de adiantar as parcelas de empréstimo. O usuário tentou usar essa funcionalidade pelo app, mas ela não fica disponível, tendo que ir na agência ou entrar em contato por whatsapp.",
+                    "score": 2,
+                    "explanation": "Nota 2: Usuário descreve como 'aplicativo deveria ter todos as opções liberadas, principalmente na hora de adiantar as parcelas de empréstimo, não fica disponível no aplicativo tem sempre que ir na agência ou entrar em contato por whatsapp'. Conclusão do usuário: 'atendimento lá é demorado demais horrível'."
+                }
+            ]
+        },
+        {
+            "email": "franco.20250422000000@example.com",
+            "answers": [
+                {
+                    "purpose": "Principal objetivo: Conquistar a minha \"independência financeira\" e fazer transferências sem depender dos meus pais. App ajudou pois: \"Graças a ele conseguiu conquistar a minha \"independência financeira\", não dependendo mais dos meus pais pra fazer transferências\".",
+                    "score": 5,
+                    "explanation": "Nota 5: Usuário descreve como 'Ótimo app😙'. Principais razões que justificam a nota: \"Graças a ele conseguiu conquistar a minha \"independência financeira\", não dependendo mais dos meus pais pra fazer transferências, ou guardar meu dinheiro. E graças também a função de Pix, consegui começar a fazer compras online e assinaturas em canais de streaming ❤️‍🩹\"."
+                }
+            ]
+        },
+        {
+            "email": "camila.albano.20250428000000@example.com",
+            "answers": [
+                {
+                    "purpose": "Principal objetivo: usar o app para funções financeiras como tirar extrato anual e segurança nas transações. O usuário comentou que não tem disponível no app o extrato anual, o que ajuda na hora do IR, e que não pedem senha para finalizar transações, sugerindo que deveria pedir como método de segurança.",
+                    "score": 3,
+                    "explanation": "Nota 3: Usuária descreve como 'Tem várias funções que não tem disponível no app, como por exemplo não dá pra tirar extrato anual, o que ajuda na hora do IR. E também não pedem senha para finalizar transações, deveriam pedir como método de segurança.'"
+                }
+            ]
+        },
+        {
+            "email": "alex.araujo.20250429000000@example.com",
+            "answers": [
+                {
+                    "purpose": "Ótimo! Atende a todas as minhas demandas perfeitamente. Ainda sentindo falta da função PAGAR BOLETOS não cadastrados a partir de DOCUMENTOS PDF. Que seria mais uma opção, deixando o aplicativo mais completo ainda.",
+                    "score": 5,
+                    "explanation": "Ótimo! Atende a todas as minhas demandas perfeitamente. Ainda sentindo falta da função PAGAR BOLETOS não cadastrados a partir de DOCUMENTOS PDF. Que seria mais uma opção, deixando o aplicativo mais completo ainda."
+                }
+            ]
+        },
+        {
+            "email": "joao.paulo.20250408000000@example.com",
+            "answers": [
+                {
+                    "purpose": "Principal objetivo: usar o app do banco para resolver problemas com o dispositivo de segurança e evitar ir na agência. O usuário está tendo cada vez mais problemas com esse app e o suporte não funciona, tem que ir na agência para resolver.",
+                    "score": 1,
+                    "explanation": "Nota 1: Usuário descreve como 'cada vez tendo mais problemas com esse app'. Principais queixas do review que justificam a nota: 'o tempo todo dá problema com o dispositivo de segurança e o suporte não funciona. Tem que ir na agência para resolver. ou seja se o app dá problema em um final de semana ou fora do horário de atendimento, esquece'. Conclusão do usuário: 'por isso cada vez uso menos esse banco'."
+                }
+            ]
+        },
+        {
+            "email": "claudenice.vieira.20250405000000@example.com",
+            "answers": [
+                {
+                    "purpose": "Principal objetivo: fazer pix. App foi ótimo mas depois de um tempo começou a travar ao fazer pix, e mesmo com limite definido toda vez aparece uma mensagem que o valor do pix é superior ao limite.",
+                    "score": 3,
+                    "explanation": "Nota 3: Usuária descreve como 'de início o app foi ótimo mas depois de um tempo começou a travar ao fazer pix, e mesmo com limite definido toda vez aparece uma mensagem que o valor do pix é superior ao limite'. Conclusão do usuário: 'não consigo mais fazer pix e as vezes preciso fazer transferência para outro banco para conseguir fazer os pagamentos de pix'."
+                }
+            ]
+        },
+        {
+            "email": "samira.godinho.20250405000000@example.com",
+            "answers": [
+                {
+                    "purpose": "Gosto da facilidade em realizar operações no app. Pix é ágil, sem muitas senhas. Mas sinto falta de alguns benefícios, o banco não me oferece ajuste de limite e nem melhorias no cartão ou conta! Tenho que ir na agência pedir, quando preciso aumentar meu limite por exemplo...",
+                    "score": 5,
+                    "explanation": "Gosto da facilidade em realizar operações no app. Pix é ágil, sem muitas senhas. Mas sinto falta de alguns benefícios, o banco não me oferece ajuste de limite e nem melhorias no cartão ou conta! Tenho que ir na agência pedir, quando preciso aumentar meu limite por exemplo..."
+                }
+            ]
+        },
+        {
+            "email": "ricardo.azzis.20250414000000@example.com",
+            "answers": [
+                {
+                    "purpose": "Principal objetivo: fazer pagamentos em DDA. O usuário tentou fazer o pagamento sem fazer por computador e validar com o token do celular, mas na hora de validar não aceita. Precisa de suporte, pois ultimamente somente aceita pagamento pelo celular App.",
+                    "score": 5,
+                    "explanation": "Nota 5: Usuário descreve como 'Bom dia'. Principais queixas do review que justificam a nota: 'Já venho a meses tentando fazer o pagamentos em DDA, mas na hora de validar não aceita. Preciso de um suporte, o processo para pagamento sem fiz por computador e valido com o token do cel, ma ultimamente somente aceita pagamento pelo celular App'."
+                }
+            ]
+        },
+        {
+            "email": "baita.tche.rs.20250414000000@example.com",
+            "answers": [
+                {
+                    "purpose": "Principal objetivo: entrega de cartão. O usuário tentou cumprir esse procedimento, mas o problema não foi o app.",
+                    "score": 2,
+                    "explanation": "Nota 2: Usuário descreve como 'merece menos q 2 ⭐'. Principais queixas do review que justificam a nota: 'O QUE ACONT3CE COM OS BASTIDORES DE ATENDIMENTO, q combina uma simples entrega de cartão e NÃO CONSEGUEM CUMPRIR COM O COMBINADO??O problema não foi o APP não.'. Conclusão do usuário: '15/04/24-Até 30 dias atrás, dentre os 6anos que sou correntista, sempre fui bem atendido por todos, porém (...)merece menos q 2 ⭐. Editado em 14/04/25.'"
+                }
+            ]
+        },
+        {
+            "email": "joao.gilberto.20250401000000@example.com",
+            "answers": [
+                {
+                    "purpose": "Principal objetivo: fazer pagamentos pelo DDA/Agendar Boletos. O app não ajudou pois: 'quando se faz um pagamento pelo DDA/Agendar Boletos, o valor pago continua como pendente. O correto seria o valor ficar zerado ou desaparecer, após o pagamento ser feito.'",
+                    "score": 3,
+                    "explanation": "Nota 3: Usuário descreve como 'Continuo com a avaliação de 3*'. Principais queixas do review que justificam a nota: 'quando se faz um pagamento pelo DDA/Agendar Boletos, o valor pago continua como pendente. O correto seria o valor ficar zerado ou desaparecer, após o pagamento ser feito.' Conclusão do usuário: 'Isso é um erro básico que já deveria ter sido corrigido.'"
+                }
+            ]
+        },
+        {
+            "email": "biango.motos.20250425000000@example.com",
+            "answers": [
+                {
+                    "purpose": "Principal objetivo: usar o aplicativo para pagar a fatura do cartão de crédito. App só consegue pagar minha fatura se agendar p dia seguinte.",
+                    "score": 3,
+                    "explanation": "Nota 3: Usuário descreve como 'aplicativo bom'. Principais queixas do review que justificam a nota: 'porém na área de cartão de crédito só consigo pagar minha fatura se agendar p dia seguinte e quando tento entrar em contato com o banco simplesmente o app encerra'. Bora dá uma modernizada no app p acompanhar as outras plataformas."
+                }
+            ]
+        },
+        {
+            "email": "flavio.jose.20250402000000@example.com",
+            "answers": [
+                {
+                    "purpose": "Principal objetivo: não recomendo: não consigo adiantar fatura do cartão. No iphone trava muito, carteira digital não funciona.",
+                    "score": 1,
+                    "explanation": "Nota 1: Usuário descreve como 'não recomendo'. Principais queixas do review que justificam a nota: 'não consigo adiantar fatura do cartão', 'No iphone trava muito', 'carteira digital não funciona', 'App lento', 'não aparece o limite de cheque especial na conta', 'não amortiza parcelas de empréstimo, tudo tem que falar com agência, aí é um parto'."
+                }
+            ]
+        },
+        {
+            "email": "edmundo.gama.20250415000000@example.com",
+            "answers": [
+                {
+                    "purpose": "Atendimento voltado para atender o cliente da melhor forma possível. Gerente capacitada, atenciosa, educada e muito simpática.",
+                    "score": 5,
+                    "explanation": "nota 10."
+                }
+            ]
+        },
+        {
+            "email": "simone.silva.20250416000000@example.com",
+            "answers": [
+                {
+                    "purpose": "Principal objetivo: usar o app para ativar e desativar a aproximação do cartão. O app poderia melhorar na questão de ativar e desativar a aproximação do cartão pelo app, e nao ter que fazer esse serviço pelo atendimento.",
+                    "score": 4,
+                    "explanation": "Nota 4: Usuária descreve como 'o app é bom'. Principais queixas do review que justificam a nota: 'vcs poderiam melhorar na questão de ativar e desativar a aproximação do cartão pelo app, e nao ter que fazer esse serviço pelo atendimento..'."
+                }
+            ]
+        },
+        {
+            "email": "douglas.miranda.20250418000000@example.com",
+            "answers": [
+                {
+                    "purpose": "Interface desintegrada. Confusa. Muitos cliques e navegação sem logica. Copiem de outros bancos como o Santander.",
+                    "score": 1,
+                    "explanation": "Nota 1: Usuário descreve como 'Interface desintegrada. Confusa. Muitos cliques e navegação sem logica'. Principais queixas do review que justificam a nota: 'Interface desintegrada', 'Confusa', 'Muitos cliques e navegação sem logica'. Conclusão do usuário: 'Copiem de outros bancos como o Santander'."
+                }
+            ]
+        },
+        {
+            "email": "luiz.henrique.moreno.20250418000000@example.com",
+            "answers": [
+                {
+                    "purpose": "Ainda acho lento, mas agradeço o botão inicial para PIX. A alteração foi muito bem-vinda, pois poupa vários cliques.",
+                    "score": 4,
+                    "explanation": "Ainda acho lento, mas agradeço o botão inicial para PIX. A alteração foi muito bem-vinda, pois poupa vários cliques."
+                }
+            ]
+        },
+        {
+            "email": "tiago.gloeden.20250423000000@example.com",
+            "answers": [
+                {
+                    "purpose": "Principal objetivo: Acessar o aplicativo. O usuário tentou acessar o aplicativo, mas faz uma semana que não consegue, pois ele simplesmente não abre.",
+                    "score": 1,
+                    "explanation": "Nota 1: Usuário descreve como 'faz uma semana que não estou conseguindo acessar o aplicativo ele simplesmente não abre'."
+                }
+            ]
+        },
+        {
+            "email": "fernando.barcelos.20250427000000@example.com",
+            "answers": [
+                {
+                    "purpose": "Principal objetivo: usar o APP para verificar saldo e movimentações. O usuário gostaria que o APP tivesse, como outros após de banco, a funcionalidade de aparecer o saldo total da conta, junto com as movimentações feitas ex: venda R$200,00 saldo anterior R$1.000,00.",
+                    "score": 5,
+                    "explanation": "Muito bom, uma coisa que eu gostaria que o APP tivesse, como outros após de banco tem, era aparecer o saldo total da conta, junto com as movimentações feitas ex: venda R$200,00 saldo anterior R$1.000,00."
+                }
+            ]
+        },
+        {
+            "email": "miguel.felipe.20250422000000@example.com",
+            "answers": [
+                {
+                    "purpose": "Principal objetivo: usar o banco. App é o melhor banco que eu tive até o momento. Nunca tive problemas com nada.",
+                    "score": 5,
+                    "explanation": "Nota 5: Usuário descreve como 'simplesmente o melhor banco que eu tive até o momento'. Principais razões para a nota: 'Nunca tive problemas com nada, e sempre que precisei de auxílio, fui atendido da melhor forma possível'."
+                }
+            ]
+        },
+        {
+            "email": "valdic.passos.20250414000000@example.com",
+            "answers": [
+                {
+                    "purpose": "Principal objetivo: ter uma boa experiência com a Cooperativa Sicred, pois a minha experiência foi excelente, pois todas as vezes que fui na agência, fui bem recebida.",
+                    "score": 5,
+                    "explanation": "Nota 5: Usuária descreve como 'Bom dia! A minha experiência com a Cooperativa sicred é excelente, pois todas as vezes que fui na agência, fui bem recebida.'"
+                }
+            ]
+        },
+        {
+            "email": "hanna.favero.20250430000000@example.com",
+            "answers": [
+                {
+                    "purpose": "Bem intuitivo e simples, dá forma como gostaríamos de acessar em todas as plataformas.",
+                    "score": 5,
+                    "explanation": "Nota 5: Usuário descreve como 'Bem intuitivo e simples', e que o app 'dá forma como gostaríamos de acessar em todas as plataformas'."
+                }
+            ]
+        },
+        {
+            "email": "leandro.macedo.20250410000000@example.com",
+            "answers": [
+                {
+                    "purpose": "Principal objetivo: pagar antecipado ou liquidar parcelas referentes a alguns tipos de crédito. App não permite isso, necessitando acionar a agência.",
+                    "score": 4,
+                    "explanation": "Nota 4: Usuário descreve como 'O aplicativo não permite o pagamento antecipado ou a liquidação de parcelas referentes a alguns tipos de crédito, necessitando acionar a agência'."
+                }
+            ]
+        },
+        {
+            "email": "jessica.kopsell.20250422000000@example.com",
+            "answers": [
+                {
+                    "purpose": "Melhor app para agilizar as coisas que a correria da semana não deixam realizar presencialmente.",
+                    "score": 5,
+                    "explanation": "atenção e assistência dos gerentes de contas e atendentes são sempre excepcional 🙏🏻"
+                }
+            ]
+        },
+        {
+            "email": "maicon.gavazzoni.20250405000000@example.com",
+            "answers": [
+                {
+                    "purpose": "Principal objetivo: Poder ler o pdf da fatura. O app é amigável e fluido com leveza na navegação.",
+                    "score": 4,
+                    "explanation": "Nota 4: Usuário descreve como 'excelente app!'. Principais razões para a nota: 'o app é amigável e fluido com leveza na navegação' e 'Poderia ler o pdf da fatura, isso seria muito bom!'."
+                }
+            ]
+        },
+        {
+            "email": "ricardo.bastiani.20250414000000@example.com",
+            "answers": [
+                {
+                    "purpose": "Aplicativo está com dificuldade de escanear qr code e cofldigo de barras, seria bom se procurassem melhorar isso!",
+                    "score": 3,
+                    "explanation": "Aplicativo está com dificuldade de escanear qr code e cofldigo de barras, seria bom se procurassem melhorar isso!"
+                }
+            ]
+        },
+        {
+            "email": "jefferson.luiz.20250416000000@example.com",
+            "answers": [
+                {
+                    "purpose": "Partes do review do usuário que descrevem seu objetivo, se foi alcançado e os motivos diretos, usando suas palavras.",
+                    "score": 5,
+                    "explanation": "Partes do review do usuário que explicam diretamente a nota (stars) atribuída, usando suas palavras. 'só uma observação. que pudéssemos partilhar boletos para pagamento, pois fica muito ruim digitar copiando do celular, os números que estão no boleto digital.'"
+                }
+            ]
+        },
+        {
+            "email": "mateus.matana.20250428000000@example.com",
+            "answers": [
+                {
+                    "purpose": "experiência excepcional, não tenho nenhuma reclamação, aplicativi muito rápido e intuitivo, recomendo muito!",
+                    "score": 5,
+                    "explanation": "Nota 5: Usuário descreve como 'experiência excepcional, não tenho nenhuma reclamação, aplicativi muito rápido e intuitivo, recomendo muito!'. Principais queixas do review que justificam a nota: nenhuma, tudo foi ótimo. Conclusão do usuário: 'recomendo muito!'."
+                }
+            ]
+        },
+        {
+            "email": "edder.jr.20250411000000@example.com",
+            "answers": [
+                {
+                    "purpose": "Conhecendo agora o App, se poderia ter a opção criar de caixinhas para melhor guardar de forma organizada o dinheiro dentro da poupança assim como outros bancos tem..(dica construtiva)",
+                    "score": 5,
+                    "explanation": "conhecendo agora o App, se poderia ter a opção criar de caixinhas para melhor guardar de forma organizada o dinheiro dentro da poupança assim como outros bancos tem..(dica construtiva)"
+                }
+            ]
+        },
+        {
+            "email": "lucas.lisboa.20250410000000@example.com",
+            "answers": [
+                {
+                    "purpose": "Principal objetivo: usar os objetivos da seção investimento. App ajuda em relação às regras gerais, mas ao tirar dinheiro de um objetivo, ele altera proporcionalmente o valor de todos os outros objetivos.",
+                    "score": 5,
+                    "explanation": "Nota 5: Usuário descreve como 'eu gosto em regras geral do aplicativo'. Principais queixas do review que justificam a nota: 'mas eu uso bastante os objetivos da seção investimento é quando você tira dinheiro de um objetivo ele altera proporcionalmente o valor de todos os outros objetivos. isso tem me sacaneando d+'. Conclusão do usuário: 'isso tem me sacaneando d+'."
+                }
+            ]
+        },
+        {
+            "email": "guilherme.souza.cruz.20250409000000@example.com",
+            "answers": [
+                {
+                    "purpose": "Principal objetivo: fazer movimentações, pagamentos, crédito, investimentos, enfim muito completo e fácil de usar. O app é muito intuitivo, moderno, fácil de fazer as movimentações, pagamentos, crédito, Investimentos, enfim muito completo e fácil de usar!",
+                    "score": 5,
+                    "explanation": "Nota 5: Usuário descreve como 'Muito intuitivo, moderno, fácil de fazer as movimentações, pagamentos, crédito, Investimentos, enfim muito completo e fácil de usar!'. Conclusão do usuário: 'Muito completo e fácil de usar!'."
+                }
+            ]
+        },
+        {
+            "email": "fabio.schons.20250409000000@example.com",
+            "answers": [
+                {
+                    "purpose": "Aplicativo muito simples e funcional. atendimento de excelência. Todas as dúvidas que tenho. Meu gerente está disposição a qualquer hora.",
+                    "score": 5,
+                    "explanation": "Aplicativo muito simples e funcional. atendimento de excelência. Todas as dúvidas que tenho. Meu gerente está disposição a qualquer hora."
+                }
+            ]
+        },
+        {
+            "email": "elanildo.martins.20250405000000@example.com",
+            "answers": [
+                {
+                    "purpose": "Principal objetivo: fazer movimentação nas contas. App foi atualizado. No momento está muito bom.",
+                    "score": 4,
+                    "explanation": "Nota 4: Usuário descreve como 'Não conecta nem a pau. O tempo todo dizendo que o servidor não tem conexão. Uma miséria.' e também menciona que 'aplicativo foi atualizado. No momento está muito bom. grato'."
+                }
+            ]
+        },
+        {
+            "email": "clayton.reis.20250403000000@example.com",
+            "answers": [
+                {
+                    "purpose": "Principal objetivo: manuseio simples e fácil, rápido e ágil. App bem melhor que outros apps de bancos que são lentos e complicados de manusear.",
+                    "score": 5,
+                    "explanation": "Nota 5: Usuário descreve como 'simples e fácil manuseio... rápido e ágil'. Principais queixas do review que justificam a nota: 'bem melhor que outros apps de bancos que são lentos e complicados de manusear...'. Conclusão do usuário: 'rápido e ágil , bem melhor que outros apps de bancos que são\n            lentos e complicados de manusear...'."
+                }
+            ]
+        },
+        {
+            "email": "marisaemmel.20250405000000@example.com",
+            "answers": [
+                {
+                    "purpose": "Principal objetivo: usar o App para agilidade e praticidade. O App é super funcional, sempre a mão, dando agilidade. Confirmado avaliações...100% Sempre muito ágil. Prático e ágil. SEMPRE agilizando tudo.",
+                    "score": 5,
+                    "explanation": "Nota 5: Usuária descreve como 'Excelente! Um App super funcional.Estou super satisfeita.Sempre a mão dando agilidade.' e reforça a agilidade e praticidade do app com frases como 'Confirmado avaliações...100% Sempre muito ágil. Prático e ágil. SEMPRE agilizando tudo.'"
+                }
+            ]
+        },
+        {
+            "email": "michel.barbosa.20250422000000@example.com",
+            "answers": [
+                {
+                    "purpose": "Principal objetivo: usar o app para conexão e estabilidade. App não ajudou pois: 'não conseguimos nos conectarmos' e 'estabilidades' não estão boas.",
+                    "score": 2,
+                    "explanation": "Nota 2: Usuário descreve como 'bom dia meu app está com estabilidades não conseguimos nos conectarmos' e 'isso nos causa atrasos em nossos compromissos'. Conclusão do usuário: 'isso causa nos transtornos'."
+                }
+            ]
+        },
+        {
+            "email": "dudu.souza.20250428000000@example.com",
+            "answers": [
+                {
+                    "purpose": "Principal objetivo: desbloqueio facial. Todas as vezes que troco de celular é um protocolo pra desbloquear o app para transferências.",
+                    "score": 3,
+                    "explanation": "Nota 3: Usuário descreve como 'Já era pra ter desbloqueio facial. Todas as vezes que troco de celular é um protocolo pra desbloquear o app para transferências'."
+                }
+            ]
+        },
+        {
+            "email": "lucia.helena.20250417000000@example.com",
+            "answers": [
+                {
+                    "purpose": "Prático fácil e seguro, além de nos dar comodidade. Estou gostando cada vez mais, só tenho a agradecer.",
+                    "score": 5,
+                    "explanation": "Nota 5: Usuária descreve como 'Prático fácil e seguro, além de nos dar comodidade'. Principais motivos que justificam a nota: 'Estou gostando cada vez mais, só tenho a agradecer'."
+                }
+            ]
+        },
+        {
+            "email": "marcelo.pessoa.20250418000000@example.com",
+            "answers": [
+                {
+                    "purpose": "Gosto demais! É um banco completo e o App é fácil e autoexplicativo! Tudo muito simples e fácil!",
+                    "score": 5,
+                    "explanation": "Super recomendo!"
+                }
+            ]
+        },
+        {
+            "email": "lucas.aquino.20250425000000@example.com",
+            "answers": [
+                {
+                    "purpose": "Principal objetivo: usar o app da cooperativa Sicredi. O app é ótimo, fácil de mexer e tem uma plataforma completa.",
+                    "score": 5,
+                    "explanation": "Nota 5: Usuário descreve como 'a cooperativa Sicredi é maravilhosa. e o app é ótimo, fácil de mexer e tem uma plataforma\n            completa.'. Conclusão do usuário: 'a cooperativa Sicredi é maravilhosa'."
+                }
+            ]
+        },
+        {
+            "email": "altair.zago.20250423000000@example.com",
+            "answers": [
+                {
+                    "purpose": "App muito bom de usar. Uso a muito tempo e nunca deu problema.",
+                    "score": 5,
+                    "explanation": "Sugestão: fornecer suporte ao Garmin Pay."
+                }
+            ]
+        },
+        {
+            "email": "edenise.anjos.20250419000000@example.com",
+            "answers": [
+                {
+                    "purpose": "O App está melhorando com o tempo, mas ainda precisamos ir presencialmente dependendo do tipo de transação.",
+                    "score": 5,
+                    "explanation": "O App está melhorando com o tempo, mas ainda precisamos ir presencialmente dependendo do tipo de transação."
+                }
+            ]
+        },
+        {
+            "email": "edna.franca.bastos.20250410000000@example.com",
+            "answers": [
+                {
+                    "purpose": "Principal objetivo: Confirmar o pagamento sem ver o valor ao copiar o código de barras. App ajudou pois: 'fui testar com o papel da água esse deu certo'.",
+                    "score": 3,
+                    "explanation": "Nota 3: Usuária descreve como 'Eu estava com medo de pagar um código de barras que copiei e apareceu para confirmar sem eu ver o valor, aí fui testar com o papel da água esse deu certo obrigada'."
+                }
+            ]
+        },
+        {
+            "email": "angelita.dorneles.20250428000000@example.com",
+            "answers": [
+                {
+                    "purpose": "Aplicativo intuitivo e de fácil manuseio...só gratidão ao Sicredi.",
+                    "score": 5,
+                    "explanation": "Aplicativo intuitivo e de fácil manuseio...só gratidão ao Sicredi."
+                }
+            ]
+        },
+        {
+            "email": "kétly.silva.20250408000000@example.com",
+            "answers": [
+                {
+                    "purpose": "Banco excelente! Atendimento impecável, todos bem solícitos e pacientes. Boas oportunidades de Crédito e de investimentos.",
+                    "score": 5,
+                    "explanation": "Nota 5: Usuário descreve como 'Banco excelente! Atendimento impecável, todos bem solícitos e pacientes. Boas oportunidades de Crédito e de investimentos.'. Conclusão do usuário: 'Banco excelente!'."
+                }
+            ]
+        },
+        {
+            "email": "caroline.felix.20250410000000@example.com",
+            "answers": [
+                {
+                    "purpose": "Ótima instituição financeira cooperativa! Aplicativo muito intuitivo e fácil de usar 💚",
+                    "score": 5,
+                    "explanation": "Ótima instituição financeira cooperativa! Aplicativo muito intuitivo e fácil de usar 💚"
+                }
+            ]
+        },
+        {
+            "email": "carlosney.souza.coutinho.20250407000000@example.com",
+            "answers": [
+                {
+                    "purpose": "é muito bom e muito prático, vou a agência só quando é muito necessário ou pra visitar",
+                    "score": 5,
+                    "explanation": "é muito bom e muito prático, vou a agência só quando é muito necessário ou pra visitar e tomar aquele cafezinho delicioso."
+                }
+            ]
+        },
+        {
+            "email": "olecio.silva.20250407000000@example.com",
+            "answers": [
+                {
+                    "purpose": "Principal objetivo: usar o app sem obstáculos. O usuário tentou clicar para fazer um pix, mas a tarja no meio do app oferecendo seguro atrapalha muito na pressa.",
+                    "score": 2,
+                    "explanation": "Nota 2: Usuário descreve como 'Ficou péssimo a tarja no meio do app oferecendo seguro, atrapalha muito vc na pressa vai clicar para fazer um pix a tarja abre e vc clica nela.'"
+                }
+            ]
+        },
+        {
+            "email": "helbert.luiz.20250401000000@example.com",
+            "answers": [
+                {
+                    "purpose": "para android, no s24U, n consigo para um simples boleto",
+                    "score": 1,
+                    "explanation": "só bugs, nada funciona direito."
+                }
+            ]
+        },
+        {
+            "email": "jose.carlos.nascimento.20250402000000@example.com",
+            "answers": [
+                {
+                    "purpose": "Principal objetivo: usar o app para melhorar a gestão de faturas. App está melhorando a cada atualização.",
+                    "score": 5,
+                    "explanation": "Nota 5: Usuário descreve como 'Ótimo app! Está melhorando a cada atualização'. Principais queixas do review que justificam a nota: 'Só podia ser menos complicado a questão de fatura'. Conclusão do usuário: 'Ótimo app! Está melhorando a cada atualização'."
+                }
+            ]
+        },
+        {
+            "email": "valdeci.roni.feuser.20250411000000@example.com",
+            "answers": [
+                {
+                    "purpose": "Principal objetivo: usar o aplicativo de forma fácil. O usuário achou fácil de usar, mas o leitor de código de barras não funciona para IPTU.",
+                    "score": 4,
+                    "explanation": "Nota 4: Usuário descreve como 'fácil de usar'. Principais queixas do review que justificam a nota: 'mas o leitor de código de barras não funciona para IPTU'. Conclusão do usuário: 'fácil de usar. mas o leitor de código de barras não funciona para IPTU.'"
+                }
+            ]
+        },
+        {
+            "email": "danilo.oliveira.20250421000000@example.com",
+            "answers": [
+                {
+                    "purpose": "Principal objetivo: usar o aplicativo para consultar veículos e pagar IPVA RS. O restante dos recursos são satisfatórios, mas na opção pagamento IPVA RS não permite excluir lista de veículos consultados.",
+                    "score": 4,
+                    "explanation": "Nota 4: Usuário descreve como 'só não dou 5 estrelas pois na opção pagamento IPVA RS não permite excluir lista de veículos consultados , restante de recursos são satisfatórios'."
+                }
+            ]
+        },
+        {
+            "email": "thiago.vedovoto.20250424000000@example.com",
+            "answers": [
+                {
+                    "purpose": "Principal objetivo: fazer pix pela rede móvel. App não ajudou pois: 'aplicativo com muita falha de comunicação, todas as vezes que preciso fazer pix pela rede móvel ele não funciona'.",
+                    "score": 1,
+                    "explanation": "Nota 1: Usuário descreve como 'aplicativo com muita falha de comunicação, todas as vezes que preciso fazer pix pela rede móvel ele não funciona'. Principais queixas do review que justificam a nota: 'aplicativo com muita falha de comunicação' e 'não funciona' ao fazer pix pela rede móvel. Conclusão do usuário: 'todas as vezes que preciso fazer pix pela rede móvel ele não funciona'."
+                }
+            ]
+        },
+        {
+            "email": "donizete.oliveira.20250420000000@example.com",
+            "answers": [
+                {
+                    "purpose": "Principal objetivo: usar o aplicativo, mas experiência péssima, aplicativo mal projetado, não atende a questões de usabilidade mínima.",
+                    "score": 1,
+                    "explanation": "Nota 1: Usuário descreve como 'experiência péssima', 'aplicativo mal projetado', 'não atende a questões de usabilidade mínima'. Principais queixas do review que justificam a nota: 'experiência péssima', 'aplicativo mal projetado', 'fora dos padrões de desenvolvimento de software e normas brasileiras de segurança de dados'. Conclusão do usuário: 'NÃO RECOMENDO!'"
+                }
+            ]
+        },
+        {
+            "email": "edimar.rosa.20250414000000@example.com",
+            "answers": [
+                {
+                    "purpose": "Principal objetivo: usar o app Sicredi x. O usuário disse que o app Sicredi x é melhor que este, mas não pode usar porque seu acesso foi feito neste app.",
+                    "score": 4,
+                    "explanation": "Nota 4: Usuário descreve como 'O app Sicredi x é melhor que este más não posso usar porque meu acesso foi feito neste app'."
+                }
+            ]
+        },
+        {
+            "email": "claudio.correia.20250416000000@example.com",
+            "answers": [
+                {
+                    "purpose": "fundamental no dia a dia funciona muito bem muito fácil de usar muita praticidade daria nota",
+                    "score": 5,
+                    "explanation": "review muito positivo, o aplicativo funciona muito bem, é fácil de usar, muito prático, e daria nota 10 se tivesse."
+                }
+            ]
+        },
+        {
+            "email": "tania.marques.20250430000000@example.com",
+            "answers": [
+                {
+                    "purpose": "Gosto muito do aplicativo, tem me ajudado muito e sobretudo me otimizando meu tempo.",
+                    "score": 5,
+                    "explanation": "Gosto muito do aplicativo, tem me ajudado muito e sobretudo me otimizando meu tempo."
+                }
+            ]
+        },
+        {
+            "email": "rosangela.dominguini.20250428000000@example.com",
+            "answers": [
+                {
+                    "purpose": "Principal objetivo: ter um atendimento diferenciado no banco. App ajudou pois: 'aqui no sicredi do meu bairro, tem um atendimento diferenciado, sempre estão prontos para nós ajudar'.",
+                    "score": 5,
+                    "explanation": "Nota 5: Usuária descreve como 'sicredi e top'. Principais razões que justificam a nota: 'aqui no sicredi do meu bairro, tem um atendimento diferenciado, sempre estão prontos para nós ajudar'."
+                }
+            ]
+        },
+        {
+            "email": "marines.teles.de.vargas.20250427000000@example.com",
+            "answers": [
+                {
+                    "purpose": "Principal objetivo: programar a aplicação nas ofertas especiais fora de um dia útil para o próximo dia útil. O usuário tentou fazer isso, mas o app não deixa.",
+                    "score": 3,
+                    "explanation": "Nota 3: Usuário descreve como 'Nao deixa programar a aplicação nas ofertas especiais fora de um dia util para o próximo dia útil'. Principais queixas do review que justificam a nota: 'Nao deixa programar a aplicação nas ofertas especiais fora de um dia util para o próximo dia útil'. Conclusão do usuário: 'Nao deixa programar a aplicação nas ofertas especiais fora de um dia util para o próximo dia útil'."
+                }
+            ]
+        },
+        {
+            "email": "frederico.coutinho.20250419000000@example.com",
+            "answers": [
+                {
+                    "purpose": "Partes do review do usuário que descrevem seu objetivo, se foi alcançado e os motivos diretos, usando suas palavras.",
+                    "score": 5,
+                    "explanation": "Partes do review do usuário que explicam diretamente a nota (stars) atribuída, usando suas palavras. Ótimo atendimento dos funcionários, com conhecimento dos produtos e procurando atender com presteza."
+                }
+            ]
+        },
+        {
+            "email": "roberta.lopes.coelho.20250430000000@example.com",
+            "answers": [
+                {
+                    "purpose": "Partes do review do usuário que descrevem seu objetivo, se foi alcançado e os motivos diretos, usando suas palavras.",
+                    "score": 5,
+                    "explanation": "Partes do review do usuário que explicam diretamente a nota (stars) atribuída, usando suas palavras. \"É um banco com ótimos serviços. E os funcionários te atendem com o maior carinho e atenção. É um banco super família!🥰\""
+                }
+            ]
+        },
+        {
+            "email": "sergio.murilo.duarte.20250411000000@example.com",
+            "answers": [
+                {
+                    "purpose": "Principal objetivo: usar o aplicativo de forma completa. O usuário achou muito bom, mas gostaria que colocassem algumas opções que só é possível no desktop.",
+                    "score": 4,
+                    "explanation": "Nota 4: Usuário descreve como 'muito bom', mas acrescenta que 'poderia colocar algumas opções que só é possível no desktop'."
+                }
+            ]
+        },
+        {
+            "email": "lais.braga.20250416000000@example.com",
+            "answers": [
+                {
+                    "purpose": "Principal objetivo: criar uma conta. Eu quero entrar na conta só.",
+                    "score": 1,
+                    "explanation": "Nota 1: Usuário descreve como 'eu quero criar uma conta, solicitei e mandou eu baixar Sicredi X, fiz a conta e disse que enviaram um email de recuperação de senha, sendo que nem pedi ,céu quero entrar na conta só'. Principais queixas do review que justificam a nota: 'enviaram um email de recuperação de senha, sendo que nem pedi'. Conclusão do usuário: 'só quero entrar na conta'."
+                }
+            ]
+        },
+        {
+            "email": "rubem.x.tais.cezar.20240414000000@example.com",
+            "answers": [
+                {
+                    "purpose": "Principal objetivo: ter um cartão de crédito negócio. O usuário gosta muito do Sicredi, mas não conseguiu liberar um cartão de crédito para negócios há anos.",
+                    "score": 5,
+                    "explanation": "Nota 5: Usuário descreve como 'gosto muito do Sicredi mas gostaria muito de ter um cartão de crédito negócio a anos no Sicredi e não me liberam um cartão de crédito'. Principais queixas do review que justificam a nota: 'não me liberam um cartão de crédito'. Conclusão do usuário: 'gosto muito do Sicredi'."
+                }
+            ]
+        },
+        {
+            "email": "nilton.eduardo.paloschi.20250422000000@example.com",
+            "answers": [
+                {
+                    "purpose": "Principal objetivo: autenticar o pagamento. App não ajudou pois: 'Demorou muito para autenticar o pagamento, tive que seis vezes até conseguir.'",
+                    "score": 2,
+                    "explanation": "Nota 2: Usuário descreve como 'Demorou muito para autenticar o pagamento, tive que seis vezes até conseguir.'. Principais queixas do review que justificam a nota: 'Demorou muito para autenticar o pagamento' e 'tive que seis vezes até conseguir'. Conclusão do usuário: 'Demorou muito para autenticar o pagamento, tive que seis vezes até conseguir.'."
+                }
+            ]
+        },
+        {
+            "email": "silvio.leite.20250424000000@example.com",
+            "answers": [
+                {
+                    "purpose": "Gosto do app pois é bem simples e direto ,mostra as informações que preciso sem enrolação",
+                    "score": 5,
+                    "explanation": "Gosto do app pois é bem simples e direto ,mostra as informações que preciso sem enrolação"
+                }
+            ]
+        },
+        {
+            "email": "daniela.vilela.20250412000000@example.com",
+            "answers": [
+                {
+                    "purpose": "Eficiente e prático. Só falta poder fazer autorização de DDA através do APP.",
+                    "score": 5,
+                    "explanation": "Eficiente e prático. Só falta poder fazer autorização de DDA através do APP."
+                }
+            ]
+        },
+        {
+            "email": "luciana.dias.20250430000000@example.com",
+            "answers": [
+                {
+                    "purpose": "Muito rápido e prático e sempre nos mantém informados sobre cada movimentação da conta.",
+                    "score": 5,
+                    "explanation": "Muito , rápido e prático e sempre nos mantém informados sobre cada movimentação da conta"
+                }
+            ]
+        },
+        {
+            "email": "irmano.ropke.20250415000000@example.com",
+            "answers": [
+                {
+                    "purpose": "gostei muito desse aplicativo, ali eu posso ver meu saldo e pagar contas com facilidade",
+                    "score": 4,
+                    "explanation": "gostei muito desse aplicativo"
+                }
+            ]
+        },
+        {
+            "email": "marcia.gregorio.20250427000000@example.com",
+            "answers": [
+                {
+                    "purpose": "Apesar de eu ter uma certa dificuldade mas admito que o aplicativo é maravilhoso e atende as minhas necessidades.",
+                    "score": 5,
+                    "explanation": "Nota 5: Usuária descreve como 'Apesar de eu ter uma certa dificuldade mas admito que o aplicativo é maravilhoso e atende as minhas necessidades.'"
+                }
+            ]
+        },
+        {
+            "email": "anderson.martins.20250429000000@example.com",
+            "answers": [
+                {
+                    "purpose": "Principal objetivo: usar o aplicativo de forma fácil e confiável. O usuário disse que o aplicativo é ótimo, muito fácil de navegar nele e melhor não te deixa na mão.",
+                    "score": 5,
+                    "explanation": "Nota 5: Usuário descreve como 'ótimo aplicativo muito fácil de navegar nele e melhor não te deixa na mão'. Conclusão do usuário: 'ótimo aplicativo muito fácil de navegar nele e melhor não te deixa na mão.'"
+                }
+            ]
+        },
+        {
+            "email": "cristiano.finger.20250417000000@example.com",
+            "answers": [
+                {
+                    "purpose": "Simples e funcional, tudo funciona muito bem e rápido",
+                    "score": 5,
+                    "explanation": "Simples e funcional, tudo funciona muito bem e rápido"
+                }
+            ]
+        },
+        {
+            "email": "edilene.furtado.20250430000000@example.com",
+            "answers": [
+                {
+                    "purpose": "Partes do review do usuário que descrevem seu objetivo, se foi alcançado e os motivos diretos, usando suas palavras.",
+                    "score": 5,
+                    "explanation": "Partes do review do usuário que explicam diretamente a nota (stars) atribuída, usando suas palavras. Excelente agência, funcionários educados e bem dispostos a ajudar"
+                }
+            ]
+        },
+        {
+            "email": "milena.cunha.20250416000000@example.com",
+            "answers": [
+                {
+                    "purpose": "Melhor aplicativo, consigo resolver tudo por ele, não trava.",
+                    "score": 5,
+                    "explanation": "nota 10: Usuário descreve como 'Melhor aplicativo, consigo resolver tudo por ele, não trava'. Principais queixas do review que justificam a nota: nenhuma, o usuário está satisfeito e atribui a nota máxima."
+                }
+            ]
+        },
+        {
+            "email": "nataniel.santos.20250427000000@example.com",
+            "answers": [
+                {
+                    "purpose": "Principal objetivo: usar o crédito do aplicativo. O usuário tentou remover o crédito se não usar limite total, usou o mínimo, mas depois removeram totalmente o crédito Mobi.",
+                    "score": 1,
+                    "explanation": "Nota 1: Usuário descreve como 'totalmente o crédito Mobi ???? DESONESTO'. Principais queixas do review que justificam a nota: 'da crédito depois remove se não usar limite total usei o mínimo depois de dias removeram totalmente o crédito Mobi ???? DESONESTO'. Conclusão do usuário: 'TOTALMENTE O CRÉDITO MOBI ???? DESONESTO'."
+                }
+            ]
+        },
+        {
+            "email": "eduardo.martinez.20250414000000@example.com",
+            "answers": [
+                {
+                    "purpose": "Principal objetivo: usar o aplicativo de forma fácil e prática. O usuário descreve que é 'Muito fácil e prático, simples e desconplicado'.",
+                    "score": 4,
+                    "explanation": "Nota 4: Usuário descreve como 'Muito fácil e prático, simples e desconplicado'. Principais queixas do review que justificam a nota: nenhuma, o usuário parece satisfeito com a facilidade e praticidade do app."
+                }
+            ]
+        },
+        {
+            "email": "gilvando.messias.20250425000000@example.com",
+            "answers": [
+                {
+                    "purpose": "só falta a opção no APP para contribuir INSS, mas acredito que logo como as demais instituições terão.",
+                    "score": 5,
+                    "explanation": "Nota 5: Usuário descreve como 'só falta a opção no APP para contribuir INSS, mas acredito que logo como as demais instituições terão'. Principais queixas do review que justificam a nota: nenhuma, pois o usuário demonstra confiança e expectativa de melhorias futuras."
+                }
+            ]
+        },
+        {
+            "email": "joao.lucas.rodrigues.porto.20250417000000@example.com",
+            "answers": [
+                {
+                    "purpose": "Principal objetivo: usar o aplicativo para obter agilidade, praticidade, segurança e qualidade. O usuário descreve seu objetivo com as palavras: \"ótima agilidade, praticidade, segurança e qualidade.\"",
+                    "score": 5,
+                    "explanation": "Nota 5: Usuário descreve como \"ótima agilidade, praticidade, segurança e qualidade.\" Principais razões para a nota: o aplicativo oferece esses benefícios de forma excelente."
+                }
+            ]
+        },
+        {
+            "email": "felipe.nunes.20250414000000@example.com",
+            "answers": [
+                {
+                    "purpose": "o leitor de QR cold continua horrível. vamos corrigir isso por favor.",
+                    "score": 1,
+                    "explanation": "o leitor de QR cold continua horrível. vamos corrigir isso por favor."
+                }
+            ]
+        },
+        {
+            "email": "giancarlos.telo.20250408000000@example.com",
+            "answers": [
+                {
+                    "purpose": "Principal objetivo: usar o aplicativo para pagar contas. App não ajudou pois: 'péssimo. lento. pra pagar contas tem q esperar 30 segundos pra próxima.'",
+                    "score": 1,
+                    "explanation": "Nota 1: Usuário descreve como 'péssimo. lento. pra pagar contas tem q esperar 30 segundos pra próxima.' Principais queixas do review que justificam a nota: 'péssimo. lento. pra pagar contas tem q esperar 30 segundos pra próxima. aplicativo cheio de erros e ruim de mexer'. Conclusão do usuário: 'aplicativo cheio de erros e ruim de mexer'."
+                }
+            ]
+        },
+        {
+            "email": "vanessa.cermaria.20250418000000@example.com",
+            "answers": [
+                {
+                    "purpose": "Principal objetivo: rapidez, e agilidade.",
+                    "score": 5,
+                    "explanation": "ruim é o juros muito alto"
+                }
+            ]
+        },
+        {
+            "email": "ailton.cezar.20250403000000@example.com",
+            "answers": [
+                {
+                    "purpose": "Pensando no seu principal objetivo ao usar nosso aplicativo, o quão bem ele te ajudou a alcançar esse propósito e por quê? Principal objetivo: usar o banco. O usuário pensa que o app é uma comédia, pois durante a noite não funciona, saldo não atualiza, e o app dá erro para abrir.",
+                    "score": 1,
+                    "explanation": "Conte-nos porque você deu sua nota. Nota 1: Usuário descreve como 'app e desenvolvimento são uns comedias'. Principais queixas do review que justificam a nota: 'durante a noite não funciona', 'saldo não atualiza', 'app da erro para abrir'. Conclusão do usuário: 'app e desenvolvimento são uns comedias'."
+                }
+            ]
+        },
+        {
+            "email": "gislaine.cavalheiro.20250407000000@example.com",
+            "answers": [
+                {
+                    "purpose": "o app é razoável de utilizar, só pra mim o difícil é como participar das assembleia através dele, ainda não aprendi como fazer.",
+                    "score": 5,
+                    "explanation": "o app é razoável de utilizar, só pra mim o difícil é como participar das assembleia através dele, ainda não aprendi como fazer."
+                }
+            ]
+        },
+        {
+            "email": "jaqueline.moraes.20250430000000@example.com",
+            "answers": [
+                {
+                    "purpose": "Principal objetivo: usar o aplicativo para tarefas rápidas, e ele foi fácil, intuitivo, e rápido.",
+                    "score": 5,
+                    "explanation": "Nota 5: Usuária descreve como 'fácil, intuitivo, e rápido'. Principais queixas do review que justificam a nota: nenhuma, a avaliação é positiva."
+                }
+            ]
+        },
+        {
+            "email": "rodrigo.dch.20250409000000@example.com",
+            "answers": [
+                {
+                    "purpose": "Principal objetivo: Abrir minha conta. O app não ajudou pois: 'se negaram a abrir minha conta'.",
+                    "score": 1,
+                    "explanation": "Nota 1: Usuário descreve como 'Péssimo! Estou com nome limpo, score médio, e se negaram a abrir minha conta!'. Conclusão do usuário: 'Não recomendo!'."
+                }
+            ]
+        },
+        {
+            "email": "maria.20250408000000@example.com",
+            "answers": [
+                {
+                    "purpose": "Tudo em mãos, muita simplicidade e confiança, obrigada Sicredi, por fazer parte de minha vida.",
+                    "score": 5,
+                    "explanation": "Nota 5: Usuária descreve como 'tudo em mãos, muita simplicidade e confiança, obrigada Sicredi, por fazer parte de minha vida.'"
+                }
+            ]
+        },
+        {
+            "email": "luiza.negrini.20250409000000@example.com",
+            "answers": [
+                {
+                    "purpose": "Principal objetivo: realizar as atividades e consultar o app de forma prática e ágil. O app ajudou nesse sentido, sendo muito prático e ágil de realizar as atividades e consultar o app.",
+                    "score": 5,
+                    "explanation": "Nota 5: Usuária descreve como 'muito prático e ágil de realizar as atividades e consultar o app'."
+                }
+            ]
+        },
+        {
+            "email": "gabriel.de.araujo.20250408000000@example.com",
+            "answers": [
+                {
+                    "purpose": "Principal objetivo: usar um aplicativo seguro e fácil de navegar. O usuário descreve que o aplicativo é excelente, muito seguro e fácil de navegar.",
+                    "score": 5,
+                    "explanation": "Nota 5: Usuário descreve como 'excelente aplicativo, muito seguro e fácil de navegar'. Conclusão do usuário: 'excelente aplicativo, muito seguro e fácil de navegar.'"
+                }
+            ]
+        },
+        {
+            "email": "jaime.magneze.20250414000000@example.com",
+            "answers": [
+                {
+                    "purpose": "Principal objetivo: usar o app para acessar a instituição financeira. O usuário achou o app ótimo, fácil de mexer e considera a instituição a melhor do país.",
+                    "score": 5,
+                    "explanation": "Nota 5: Usuário descreve como 'ótimo app fácil de mexer a instituição é a melhor que tem no nosso país'. Conclusão do usuário: 'amo o Sicredi'."
+                }
+            ]
+        },
+        {
+            "email": "claudio.marcelo.20250410000000@example.com",
+            "answers": [
+                {
+                    "purpose": "Principal objetivo: movimentar e conferir dados. O usuário disse que é fácil de movimentar e conferência de dados.",
+                    "score": 5,
+                    "explanation": "Nota 5: Usuário descreve como 'Fácil de movimentar e conferência de dados'. Principais queixas do review que justificam a nota: nenhuma, o usuário está satisfeito com a facilidade de movimentar e conferir dados."
+                }
+            ]
+        },
+        {
+            "email": "silvana.darienco.20250410000000@example.com",
+            "answers": [
+                {
+                    "purpose": "Top!!! Rapidinho, pago todas as minhas contas pelo aplicativo, sem precisar sair de casa.",
+                    "score": 5,
+                    "explanation": "Top!!! Rapidinho, pago todas as minhas contas pelo aplicativo, sem precisar sair de casa... Muito bom!💚"
+                }
+            ]
+        },
+        {
+            "email": "juclei.polli.20250430000000@example.com",
+            "answers": [
+                {
+                    "purpose": "o aplicativo é muito bom mesmo. É simples, prático e seguro!",
+                    "score": 5,
+                    "explanation": "o aplicativo é muito bom mesmo. É simples, prático e seguro!"
+                }
+            ]
+        },
+        {
+            "email": "osaneide.rosa.santos.20250414000000@example.com",
+            "answers": [
+                {
+                    "purpose": "Facil manuseio e entendimento. Atende perfeitamente minhas necessidades.",
+                    "score": 5,
+                    "explanation": "Facil manuseio e entendimento. Atende perfeitamente minhas necessidades. Plenamente satisfeita"
+                }
+            ]
+        },
+        {
+            "email": "arthur.coimbra.20250415000000@example.com",
+            "answers": [
+                {
+                    "purpose": "Principal objetivo: usar o aplicativo de banco. O app não ajudou pois: 'Pior aplicativo de banco que tenho! Tenho 6 bancos e todos são melhores e mais fácil pra usar!'",
+                    "score": 1,
+                    "explanation": "Nota 1: Usuário descreve como 'Pior aplicativo de banco que tenho!'. Principais queixas do review que justificam a nota: 'Tenho 6 bancos e todos são melhores e mais fácil pra usar!'. Conclusão do usuário: 'Pior aplicativo de banco que tenho!'."
+                }
+            ]
+        },
+        {
+            "email": "l.l.20250416000000@example.com",
+            "answers": [
+                {
+                    "purpose": "Muito bom de operar, informações claras e objetivas",
+                    "score": 5,
+                    "explanation": "Muito bom de operar, informações claras e objetivas"
+                }
+            ]
+        },
+        {
+            "email": "jose.antonio.braga.20250407000000@example.com",
+            "answers": [
+                {
+                    "purpose": "Principal objetivo: facilitar o nosso dia-a-dia. App prático e intuitivo, facilitando o nosso dia-a-dia.",
+                    "score": 5,
+                    "explanation": "Muito bom mesmo."
+                }
+            ]
+        },
+        {
+            "email": "junior.cindra.20250405000000@example.com",
+            "answers": [
+                {
+                    "purpose": "Partes do review do usuário que descrevem seu objetivo, se foi alcançado e os motivos diretos, usando suas palavras.",
+                    "score": 1,
+                    "explanation": "Partes do review do usuário que explicam diretamente a nota (stars) atribuída, usando suas palavras. Usuário abriu a conta no Sicred visto a possibilidade de conseguir amortizar um empréstimo e agora o aplicativo não mostra mais a opção."
+                }
+            ]
+        },
+        {
+            "email": "fabio.drunn.20250406000000@example.com",
+            "answers": [
+                {
+                    "purpose": "Principal objetivo: ter uma conta completa. App atende pois: 'O Sicredi é uma conta completa. Tem tudo que preciso'.",
+                    "score": 5,
+                    "explanation": "Nota 5: Usuário descreve como 'O Sicredi é uma conta completa'. Principais motivos que justificam a nota: 'Tem tudo que preciso e o atendimento é muito humanizado'."
+                }
+            ]
+        },
+        {
+            "email": "vitor.hugo.zanatta.20250407000000@example.com",
+            "answers": [
+                {
+                    "purpose": "Aplicativo intuitivo e prático, só podiam liberar logo meu acesso ao home broke da cooperariva.",
+                    "score": 5,
+                    "explanation": "Aplicativo intuitivo e prático, só podiam liberar logo meu acesso ao home broke da cooperariva."
+                }
+            ]
+        },
+        {
+            "email": "antonio.f.oliveira.20250407000000@example.com",
+            "answers": [
+                {
+                    "purpose": "Principal objetivo: usar o aplicativo para gerenciar limites de pagamento. O usuário tentou, mas fizeram uma bagunça em meu limites de pagamento.",
+                    "score": 2,
+                    "explanation": "Nota 2: Usuário descreve como 'ja foi bom, fizeram uma bagunça em meu limites de pagamento'. Principais queixas do review que justificam a nota: 'nao consigo pagar mais nada...'. Conclusão do usuário: 'ja foi bom' mas atualmente está insatisfeito devido aos limites de pagamento."
+                }
+            ]
+        },
+        {
+            "email": "victor.hugo.20250403000000@example.com",
+            "answers": [
+                {
+                    "purpose": "Principal objetivo: usar um banco fácil e intuitivo, com atendimento humanizado. O usuário descreve que o app é fácil e intuitivo, e que o atendimento é humanizado, parabéns!",
+                    "score": 5,
+                    "explanation": "Nota 5: Usuário descreve como 'fácil e intuitivo, aliás um dos melhores Bancos atendimento humanizado'."
+                }
+            ]
+        },
+        {
+            "email": "shirley.avelar.20250406000000@example.com",
+            "answers": [
+                {
+                    "purpose": "a grande deficiência é que somente é possível utilizar o spp em um único aparelho celular.",
+                    "score": 3,
+                    "explanation": "a grande deficiência é que somente é possível utilizar o spp em um único aparelho celular."
+                }
+            ]
+        },
+        {
+            "email": "sidnei.santos.20250403000000@example.com",
+            "answers": [
+                {
+                    "purpose": "Simples, prático, objetivo e muito estável.",
+                    "score": 5,
+                    "explanation": "Simples, prático, objetivo e muito estável."
+                }
+            ]
+        },
+        {
+            "email": "jose.carlos.20250404000000@example.com",
+            "answers": [
+                {
+                    "purpose": "a aplicativo até que funciona bem",
+                    "score": 1,
+                    "explanation": "a aplicativo até que funciona bem, já o atendimento dos funcionários é péssimo"
+                }
+            ]
+        },
+        {
+            "email": "samir.assan.badala.20250405000000@example.com",
+            "answers": [
+                {
+                    "purpose": "Principal objetivo: atender bem o cliente. App simples e prático! o banco inteiro é voltado para atender bem o cliente!",
+                    "score": 5,
+                    "explanation": "Nota 5: Usuário descreve como 'simples e prático! o banco inteiro é voltado para atender bem o cliente!'. Conclusão do usuário: 'simples e prático! o banco inteiro é voltado para atender bem o cliente!'."
+                }
+            ]
+        },
+        {
+            "email": "eneias.rocha.20250407000000@example.com",
+            "answers": [
+                {
+                    "purpose": "excelente App, prático, fácil de usar.",
+                    "score": 5,
+                    "explanation": "Parabéns aos desenvolvedores..👏👏👏👏"
+                }
+            ]
+        },
+        {
+            "email": "guilherme.rosa.20250407000000@example.com",
+            "answers": [
+                {
+                    "purpose": "Principal objetivo: resolver algumas coisas simples pelo app. O usuário acha que às vezes não sabe por que tem app se pra conseguir resolver algumas coisas simples é só ligando ou pelo Whats.",
+                    "score": 1,
+                    "explanation": "Nota 1: Usuário descreve como 'muito limitado'. Principais queixas do review que justificam a nota: 'às vezes não sei pq tem app se pra conseguir resolver algumas coisas simples é só ligando ou pelo whats'. Conclusão do usuário: 'muito limitado'."
+                }
+            ]
+        },
+        {
+            "email": "alice.silvana.20250407000000@example.com",
+            "answers": [
+                {
+                    "purpose": "Principal objetivo: atendimento e sanar dúvidas. App sempre que preciso, minhas dúvidas são sanadas.",
+                    "score": 5,
+                    "explanation": "Nota 5: Usuário descreve como 'ótimo atendimento'. Principais queixas do review que justificam a nota: 'sempre que preciso, minhas dúvidas são sanadas'. Conclusão do usuário: 'ótimo atendimento'."
+                }
+            ]
+        },
+        {
+            "email": "eliziel.da.silva.20250407000000@example.com",
+            "answers": [
+                {
+                    "purpose": "Principal objetivo: Atendimento do MEI. App ajudou inicialmente, mas agora só descaso, se for MEI não abram conta aqui.",
+                    "score": 1,
+                    "explanation": "Nota 1: Usuário descreve como 'só descaso, se for MEI não abram conta aqui'. Principais queixas do review que justificam a nota: 'Depois que o atendimento do MEI foi gerente virtual, só descaso', 'no início foi ótimo agora tem que ficar implorando atendimento, péssimo'. Conclusão do usuário: 'péssimo'."
+                }
+            ]
+        },
+        {
+            "email": "jose.elenilson.20250401000000@example.com",
+            "answers": [
+                {
+                    "purpose": "Muito satisfatória! e condições excelentes dentro do nosso orçamento",
+                    "score": 5,
+                    "explanation": "muito satisfatória! e condições excelentes dentro do nosso orçamento"
+                }
+            ]
+        },
+        {
+            "email": "mauricio.westhauser.20250403000000@example.com",
+            "answers": [
+                {
+                    "purpose": "Principal objetivo: usar o app nas agências. O usuário disse que foi sempre bem atendido, com agilidade.",
+                    "score": 5,
+                    "explanation": "Nota 5: Usuário descreve como 'ótimo app, nas agências sempre bem atendido, com agilidade'. Principais queixas do review que justificam a nota: nenhuma, o usuário está satisfeito com o atendimento e a agilidade. Conclusão do usuário: 'ótimo app, nas agências sempre bem atendido, com agilidade'."
+                }
+            ]
+        },
+        {
+            "email": "albuquerque.mendonca.20250405000000@example.com",
+            "answers": [
+                {
+                    "purpose": "App muito bom, comodidade e confiança na palma da mão.",
+                    "score": 5,
+                    "explanation": "App muito bom, comodidade e confiança na palma da mão"
+                }
+            ]
+        },
+        {
+            "email": "victor.sf.20250411000000@example.com",
+            "answers": [
+                {
+                    "purpose": "Principal objetivo: acessar a conta no aplicativo. O app não ajudou pois: 'toda vez tem algo que impossibilita o acesso a conta', 'segunda vez que bloqueia a senha ao tentar acessar', 'quando precisa usar, sempre tem um problema'.",
+                    "score": 1,
+                    "explanation": "Nota 1: Usuário descreve como 'aplicativo e muito ruim'. Principais queixas do review que justificam a nota: 'toda vez tem algo que impossibilita o acesso a conta', 'segunda vez que bloqueia a senha ao tentar acessar', 'quando precisa usar, sempre tem um problema'. Conclusão do usuário: 'sinceramente e péssimo. quando precisa usar, sempre tem um problema.'"
+                }
+            ]
+        },
+        {
+            "email": "walter.20240410000000@example.com",
+            "answers": [
+                {
+                    "purpose": "Fácil de operar-orientacoes muito claras e precisas",
+                    "score": 5,
+                    "explanation": "Fácil de operar-orientacoes muito claras e precisas"
+                }
+            ]
+        },
+        {
+            "email": "george.miller.20250416000000@example.com",
+            "answers": [
+                {
+                    "purpose": "app mto bom. extremamente funcional e prático.",
+                    "score": 5,
+                    "explanation": "app mto bom. extremamente funcional e prático."
+                }
+            ]
+        },
+        {
+            "email": "lizuina.oliveira.20250430000000@example.com",
+            "answers": [
+                {
+                    "purpose": "Propósito: acessar o aplicativo de forma rápida e eficiente. O usuário tentou usar o app, mas ultimamente o acesso está muito ruim e demora muito pra abrir.",
+                    "score": 1,
+                    "explanation": "Nota 1: Usuário descreve como 'ultimamente o acesso do aplicativo está muito ruim demora muito pra abrir'. Principais queixas do review que justificam a nota: 'o acesso do aplicativo está muito ruim' e 'demora muito pra abrir'. Conclusão do usuário: 'ultimamente o acesso do aplicativo está muito ruim'."
+                }
+            ]
+        },
+        {
+            "email": "sirlei.magalhaes.20250414000000@example.com",
+            "answers": [
+                {
+                    "purpose": "Principal objetivo: usar o aplicativo e ter uma experiência rápida, prática e que fosse recomendada. O usuário disse: 'olha eu gostei muito recomendo e rápido e muito prático estou amando a esperiencia.'",
+                    "score": 5,
+                    "explanation": "Nota 5: Usuário descreve como 'olha eu gostei muito recomendo e rápido e muito prático estou amando a esperiencia.'"
+                }
+            ]
+        },
+        {
+            "email": "cesar.scheffler.20250419000000@example.com",
+            "answers": [
+                {
+                    "purpose": "Principal objetivo: usar o aplicativo de forma prática, intuitiva e fácil de usar. O usuário achou o app muito prático, intuitivo, fácil de usar.",
+                    "score": 5,
+                    "explanation": "Nota 5: Usuário descreve como 'Muito prático, intuitivo, fácil de usar'. Principais razões para a nota: o app é prático, intuitivo e fácil de usar."
+                }
+            ]
+        },
+        {
+            "email": "leandreo.erika.20250429000000@example.com",
+            "answers": [
+                {
+                    "purpose": "Principal objetivo: usar o aplicativo de forma fácil e intuitiva.",
+                    "score": 5,
+                    "explanation": "Nota 5: Usuário descreve como 'Fácil de usar, muito intuitivo!'. Principais queixas do review que justificam a nota: nenhuma, o usuário está satisfeito com a facilidade de uso e a intuição do aplicativo. Conclusão do usuário: 'Fácil de usar, muito intuitivo!'."
+                }
+            ]
+        },
+        {
+            "email": "roseli.bormann.20250423000000@example.com",
+            "answers": [
+                {
+                    "purpose": "Principal objetivo: ajuda quando preciso, de empréstimo, salário certo, sem complicações.",
+                    "score": 5,
+                    "explanation": "Nota 5: Usuário descreve como 'ajuda quando preciso,de empréstimo, salário certo,sem complicações'. Principais queixas do review que justificam a nota: nenhuma, o usuário está satisfeito com o app."
+                }
+            ]
+        },
+        {
+            "email": "ione.gomes.20250423000000@example.com",
+            "answers": [
+                {
+                    "purpose": "melhor atendimento e eficiência e conforto!",
+                    "score": 5,
+                    "explanation": "melhor atendimento e eficiência e conforto!"
+                }
+            ]
+        },
+        {
+            "email": "janosque.marciano.20250428000000@example.com",
+            "answers": [
+                {
+                    "purpose": "Partes do review do usuário que descrevem seu objetivo, se foi alcançado e os motivos diretos, usando suas palavras.",
+                    "score": 5,
+                    "explanation": "Partes do review do usuário que explicam diretamente a nota (stars) atribuída, usando suas palavras. Bem fácil e prático de manusear."
+                }
+            ]
+        },
+        {
+            "email": "marcos.escarabelo.20250429000000@example.com",
+            "answers": [
+                {
+                    "purpose": "Principal objetivo: fazer todas as movimentações. App ajudou pois: 'fácil de fazer todas as movimentações'.",
+                    "score": 5,
+                    "explanation": "Nota 5: Usuário descreve como 'fácil de fazer todas as movimentações'. Principais queixas do review que justificam a nota: nenhuma, o usuário está satisfeito com a facilidade. Conclusão do usuário: 'fácil de fazer todas as movimentações'."
+                }
+            ]
+        },
+        {
+            "email": "rosimara.parreira.20250428000000@example.com",
+            "answers": [
+                {
+                    "purpose": "Principal objetivo: usar o aplicativo de forma prática, rápida e dinâmica.",
+                    "score": 4,
+                    "explanation": "Nota 4: Usuária descreve como 'prático, rápido e dinâmico'. Principais razões para a nota: a facilidade e agilidade do app. Conclusão do usuário: 'prático, rápido e dinâmico.'"
+                }
+            ]
+        },
+        {
+            "email": "hellen.20250414000000@example.com",
+            "answers": [
+                {
+                    "purpose": "Aplicativo bom, fácil de usar. Gosto do banco em si.",
+                    "score": 5,
+                    "explanation": "Aplicativo bom, fácil de usar. Gosto do banco em si."
+                }
+            ]
+        },
+        {
+            "email": "francisco.madeira.aragao.20250416000000@example.com",
+            "answers": [
+                {
+                    "purpose": "Bom aplicativo, vem melhorando cada edição.",
+                    "score": 4,
+                    "explanation": "Nota 4: Usuário descreve como 'Bom aplicativo, vem melhorando cada edição'. Principais queixas do review que justificam a nota: nenhuma específica, o usuário apenas comenta que o app vem melhorando."
+                }
+            ]
+        },
+        {
+            "email": "aline.daniele.20250416000000@example.com",
+            "answers": [
+                {
+                    "purpose": "Funciona direitinho",
+                    "score": 5,
+                    "explanation": "Funciona direitinho... sem bugs ou erros."
+                }
+            ]
+        },
+        {
+            "email": "joao.biolchi.20250409000000@example.com",
+            "answers": [
+                {
+                    "purpose": "Minha impressão digital do dedo não está sendo reconhecida",
+                    "score": 3,
+                    "explanation": "Minha impressão digital do dedo não está sendo reconhecida"
+                }
+            ]
+        },
+        {
+            "email": "marcos.oliveira.20250422000000@example.com",
+            "answers": [
+                {
+                    "purpose": "Fácil e intuitivo!",
+                    "score": 5,
+                    "explanation": "Fácil e intuitivo!"
+                }
+            ]
+        },
+        {
+            "email": "edinalva.almeida.20250417000000@example.com",
+            "answers": [
+                {
+                    "purpose": "Principal objetivo: usar o aplicativo de forma fácil e prática. O usuário está satisfeita c o aplicativo.",
+                    "score": 5,
+                    "explanation": "Nota 5: Usuária descreve como 'acho fácil e prático de mexer'. Principais queixas do review que justificam a nota: nenhuma, ela está satisfeita c o aplicativo."
+                }
+            ]
+        },
+        {
+            "email": "emcartaz.aguiar.20250429000000@example.com",
+            "answers": [
+                {
+                    "purpose": "Muito bom fácil utilizar e encontrar os tópicos",
+                    "score": 5,
+                    "explanation": "Nota 5: Usuário descreve como 'muito bom fácil utilizar e encontrar os tópicos'. Principais queixas do review que justificam a nota: nenhuma, o usuário expressa satisfação total com a facilidade de uso e a navegação."
+                }
+            ]
+        },
+        {
+            "email": "claudineia.nascimento.20250403000000@example.com",
+            "answers": [
+                {
+                    "purpose": "Principal objetivo: bem explicado e fácil acesso. App ajudou pois: 'muito boa pois bem explicado e fácil acesso.'",
+                    "score": 5,
+                    "explanation": "Nota 5: Usuária descreve como 'muito boa pois bem explicado e fácil acesso'. Principais queixas do review que justificam a nota: nenhuma, o review é positivo. Conclusão do usuário: 'muito boa pois bem explicado e fácil acesso.'."
+                }
+            ]
+        },
+        {
+            "email": "marcelo.silva.20250407000000@example.com",
+            "answers": [
+                {
+                    "purpose": "Poderiam desenvolver, no campo agendamento de pagamento o aplicativo somar os valores agendados",
+                    "score": 3,
+                    "explanation": "Nota 3: Usuário descreve como 'poderiam desenvolver, no campo agendamento de pagamento o aplicativo somar os valores agendados'. Conclusão do usuário: 'poderiam desenvolver' e a nota reflete uma sugestão de melhoria, não uma insatisfação total."
+                }
+            ]
+        },
+        {
+            "email": "dalir.aves.20250401000000@example.com",
+            "answers": [
+                {
+                    "purpose": "É muito bom, excelente e bem simples de usar, gostei bastante.",
+                    "score": 5,
+                    "explanation": "Nota 5: Usuário descreve como 'É muito bom, excelente e bem simples de usar, gostei bastante'. Principais queixas do review que justificam a nota: nenhuma, o usuário expressa satisfação total."
+                }
+            ]
+        },
+        {
+            "email": "odair.jose.20250408000000@example.com",
+            "answers": [
+                {
+                    "purpose": "achei que era difícil mas não é bem simples fácil de lidar",
+                    "score": 5,
+                    "explanation": "achei que era difícil mas não é bem simples fácil de lidar"
+                }
+            ]
+        },
+        {
+            "email": "felipe.pazio.20250422000000@example.com",
+            "answers": [
+                {
+                    "purpose": "app leve e fácil de usar. tudo muito bem explicado",
+                    "score": 5,
+                    "explanation": "app leve e fácil de usar. tudo muito bem explicado"
+                }
+            ]
+        },
+        {
+            "email": "josias.oliveira.20250426000000@example.com",
+            "answers": [
+                {
+                    "purpose": "Principal objetivo: confiável, prático e de grande vantagem.",
+                    "score": 5,
+                    "explanation": "Nota 5: Usuário descreve como 'confiável, prático e de grande vantagem'. Principais queixas do review que justificam a nota: nenhuma, o review é positivo e destaca as qualidades do aplicativo."
+                }
+            ]
+        },
+        {
+            "email": "ronaldo.cruz.20250424000000@example.com",
+            "answers": [
+                {
+                    "purpose": "Principal objetivo: acessar o aplicativo de forma fácil e rápida.",
+                    "score": 5,
+                    "explanation": "fácil e rápido de acessar."
+                }
+            ]
+        },
+        {
+            "email": "stenio.schades.20250409000000@example.com",
+            "answers": [
+                {
+                    "purpose": "bom atendimento e app fácil de trabalhar",
+                    "score": 5,
+                    "explanation": "bom atendimento e app fácil de trabalhar"
+                }
+            ]
+        },
+        {
+            "email": "neire.sueli.20250429000000@example.com",
+            "answers": [
+                {
+                    "purpose": "excelente banco e o atendimento é muito bom",
+                    "score": 5,
+                    "explanation": "excelente banco e o atendimento é muito bom"
+                }
+            ]
+        },
+        {
+            "email": "arilson.correa.20250422000000@example.com",
+            "answers": [
+                {
+                    "purpose": "Simples, prático e rápido",
+                    "score": 5,
+                    "explanation": "Simples, prático e rápido"
+                }
+            ]
+        },
+        {
+            "email": "carlos.machado.20250423000000@example.com",
+            "answers": [
+                {
+                    "purpose": "Principal objetivo: usar o aplicativo de forma rápida e fácil. O usuário disse que é muito rápido e fácil de usar, parabéns Sicredi!!!",
+                    "score": 5,
+                    "explanation": "Nota 5: Usuário descreve como 'muito rápido e fácil de usar, parabéns Sicredi!!!'. Principais razões que justificam a nota: 'muito rápido e fácil de usar'. Conclusão do usuário: 'parabéns Sicredi!!!'."
+                }
+            ]
+        },
+        {
+            "email": "eder.martins.20250412000000@example.com",
+            "answers": [
+                {
+                    "purpose": "app muito bom rápido o melhor banco que já abri conta",
+                    "score": 5,
+                    "explanation": "app muito bom rápido o melhor banco que já abri conta"
+                }
+            ]
+        },
+        {
+            "email": "santista.roxo.20250415000000@example.com",
+            "answers": [
+                {
+                    "purpose": "Excelente App, muito fácil e completo",
+                    "score": 5,
+                    "explanation": "Excelente App, muito fácil e completo"
+                }
+            ]
+        },
+        {
+            "email": "gilmar.santos.20250417000000@example.com",
+            "answers": [
+                {
+                    "purpose": "bom atendimento nada de muita espera tudo muito rápido",
+                    "score": 5,
+                    "explanation": "nota 5: usuário descreve como 'bom atendimento nada de muita espera tudo muito rápido'. principais queixas do review que justificam a nota: nenhuma, o usuário está satisfeito com o atendimento e a rapidez."
+                }
+            ]
+        },
+        {
+            "email": "leonei.kuhn.20250418000000@example.com",
+            "answers": [
+                {
+                    "purpose": "Principal objetivo: usar o aplicativo de forma prática, simples e ágil. O usuário achou o app muito prático, simples e agil.",
+                    "score": 5,
+                    "explanation": "Nota 5: Usuário descreve como 'muito prático, simples e agil'. Principais queixas do review que justificam a nota: nenhuma, o usuário expressa satisfação total com o aplicativo."
+                }
+            ]
+        },
+        {
+            "email": "fabrício.henrique.ribeiro.neves.20250416000000@example.com",
+            "answers": [
+                {
+                    "purpose": "Muito bom eficiência na palma da mão.",
+                    "score": 5,
+                    "explanation": "Muito bom eficiência na palma da mão."
+                }
+            ]
+        },
+        {
+            "email": "acidelson.alexandre.20250425000000@example.com",
+            "answers": [
+                {
+                    "purpose": "simples e fácil de entender",
+                    "score": 5,
+                    "explanation": "simples e fácil de entender"
+                }
+            ]
+        },
+        {
+            "email": "reginaldo.almeida.20250415000000@example.com",
+            "answers": [
+                {
+                    "purpose": "App muito fácil para usar e completo",
+                    "score": 4,
+                    "explanation": "App muito fácil para usar e completo 👏"
+                }
+            ]
+        },
+        {
+            "email": "jhonattan.rojer.20250424000000@example.com",
+            "answers": [
+                {
+                    "purpose": "Excelente App, simples e útil!!!",
+                    "score": 5,
+                    "explanation": "Excelente App, simples e útil!!!"
+                }
+            ]
+        },
+        {
+            "email": "sara.heloisa.20250422000000@example.com",
+            "answers": [
+                {
+                    "purpose": "gosto bastante porém trava com certa frequência",
+                    "score": 4,
+                    "explanation": "Nota 4: Usuário descreve como 'gosto bastante porém trava com certa frequência'. Principais queixas do review que justificam a nota: 'trava com certa frequência'. Conclusão do usuário: nenhuma observação adicional, apenas que gosta, mas o travamento ocorre."
+                }
+            ]
+        },
+        {
+            "email": "wando.silva.20250429000000@example.com",
+            "answers": [
+                {
+                    "purpose": "Partes do review do usuário que descrevem seu objetivo, se foi alcançado e os motivos diretos, usando suas palavras.",
+                    "score": 5,
+                    "explanation": "Partes do review do usuário que explicam diretamente a nota (stars) atribuída, usando suas palavras. \"só poderia melhorar oferendo a opção de ver lançamentos futuros\"."
+                }
+            ]
+        },
+        {
+            "email": "cmaria.balma.20250421000000@example.com",
+            "answers": [
+                {
+                    "purpose": "Principal objetivo: pagar todas as contas pelo app. App consegue ajudar nisso pois: 'Consigo pagar todas as contas pelo app'.",
+                    "score": 5,
+                    "explanation": "Nota 5: Usuário descreve como 'Muito bom'. Principais queixas do review que justificam a nota: 'Consigo pagar todas as contas pelo app'. Conclusão do usuário: 'Rápido'."
+                }
+            ]
+        },
+        {
+            "email": "jonas.albiere.20250404000000@example.com",
+            "answers": [
+                {
+                    "purpose": "Principal objetivo: tratar a todos do mais rico ao mais pobre com excelência e humildade. O usuário elogia o atendimento físico, dizendo que é um dos melhores do mundo, especialmente aqui em Ouro Branco MG.",
+                    "score": 5,
+                    "explanation": "Nota 5: Usuário descreve como 'parabéns, é um dos melhores do mundo'. Principais razões que justificam a nota: 'banco de raízes brasileiras porém com o melhor atendimento físico que já pude ter tratando a todos do mais rico ao mais pobre com excelência e humildade'."
+                }
+            ]
+        },
+        {
+            "email": "wellington.gomes.20250418000000@example.com",
+            "answers": [
+                {
+                    "purpose": "o app muito bom , só que muito demorado para fazer um pix",
+                    "score": 5,
+                    "explanation": "o app muito bom , só que muito demorado para fazer um pix"
+                }
+            ]
+        },
+        {
+            "email": "sergio.souza.20250422000000@example.com",
+            "answers": [
+                {
+                    "purpose": "Muito satisfeito, rápido e prático",
+                    "score": 5,
+                    "explanation": "muito satisfeito, rápido e prático"
+                }
+            ]
+        },
+        {
+            "email": "leo.silva.20250422000000@example.com",
+            "answers": [
+                {
+                    "purpose": "só não estou achando melhor porque está com um ano e um mês que uso o cartão e ainda não ganhei o cartão de crédito",
+                    "score": 3,
+                    "explanation": "Nota 3: Usuário descreve como 'só não estou achando melhor porque está com um ano e um mês que uso o cartão e ainda não ganhei o cartão de crédito'. Principais queixas do review que justificam a nota: 'ainda não ganhei o cartão de crédito'. Conclusão do usuário: 'só não estou achando melhor'."
+                }
+            ]
+        },
+        {
+            "email": "francisco.mariano.20240414000000@example.com",
+            "answers": [
+                {
+                    "purpose": "simples e intuitivo",
+                    "score": 5,
+                    "explanation": "simples e intuitivo"
+                }
+            ]
+        },
+        {
+            "email": "claicson.camargo.20250422000000@example.com",
+            "answers": [
+                {
+                    "purpose": "experiência excelente !!! fácil e ágil",
+                    "score": 5,
+                    "explanation": "experiência excelente !!! fácil e ágil"
+                }
+            ]
+        },
+        {
+            "email": "jany.magno.20250416000000@example.com",
+            "answers": [
+                {
+                    "purpose": "App muito bom, rápido e eficaz.",
+                    "score": 5,
+                    "explanation": "App muito bom, rápido e eficaz."
+                }
+            ]
+        },
+        {
+            "email": "fabio.simoes.20250416000000@example.com",
+            "answers": [
+                {
+                    "purpose": "Principal objetivo: operações seguras. App é muito seguro, o que é a maior vantagem.",
+                    "score": 4,
+                    "explanation": "Nota 4: Usuário descreve como 'é muito seguro', e destaca que 'é simples em termos de operações, porém é muito seguro', justificando a nota por ser seguro e fácil de usar."
+                }
+            ]
+        },
+        {
+            "email": "gilberto.benedicto.20250420000000@example.com",
+            "answers": [
+                {
+                    "purpose": "Principal objetivo: fácil uso e prático. O usuário amou porque é fácil uso e muito prático.",
+                    "score": 5,
+                    "explanation": "Nota 5: Usuário descreve como 'fácil uso e muito prático amando'. Principais queixas do review que justificam a nota: nenhuma, o review é totalmente positivo."
+                }
+            ]
+        },
+        {
+            "email": "carla.conti.20250430000000@example.com",
+            "answers": [
+                {
+                    "purpose": "hoje só está dando erro 099 não consigo movimentar o dinheiro...",
+                    "score": 5,
+                    "explanation": "Nota 5: Usuário descreve como 'hoje só está dando erro 099 não consigo movimentar o dinheiro...'. Principais queixas do review que justificam a nota: 'hoje só está dando erro 099 não consigo movimentar o dinheiro...'. Conclusão do usuário: 'não consigo movimentar o dinheiro...'."
+                }
+            ]
+        },
+        {
+            "email": "tiago.tavares.20250425000000@example.com",
+            "answers": [
+                {
+                    "purpose": "Partes do review do usuário que descrevem seu objetivo, se foi alcançado e os motivos diretos, usando suas palavras.",
+                    "score": 3,
+                    "explanation": "Partes do review do usuário que explicam diretamente a nota (stars) atribuída, usando suas palavras. 'muito fácil de executar a aplicação'."
+                }
+            ]
+        },
+        {
+            "email": "day.m.albuquerque.20250423000000@example.com",
+            "answers": [
+                {
+                    "purpose": "Principal objetivo: usar o banco para realizar operações financeiras. App ajudou pois é tudo rápido e certinho.",
+                    "score": 5,
+                    "explanation": "Nota 5: Usuário descreve como 'melhor banco que existe pois é tudo rápido e certinho...'. Principais queixas do review que justificam a nota: nenhuma, o usuário está satisfeito com a rapidez e a precisão do serviço."
+                }
+            ]
+        },
+        {
+            "email": "fernando.dewes.20250430000000@example.com",
+            "answers": [
+                {
+                    "purpose": "app amigável, simpático e ágil",
+                    "score": 5,
+                    "explanation": "app amigável, simpático e ágil"
+                }
+            ]
+        },
+        {
+            "email": "murilo.mantovani.20250429000000@example.com",
+            "answers": [
+                {
+                    "purpose": "não funciona com dados móveis, na minha cidade",
+                    "score": 1,
+                    "explanation": "não funciona com dados móveis, na minha cidade"
+                }
+            ]
+        },
+        {
+            "email": "carine.aguiar.20250413000000@example.com",
+            "answers": [
+                {
+                    "purpose": "um excelente banco e um excelente app",
+                    "score": 5,
+                    "explanation": "um excelente banco e um excelente app"
+                }
+            ]
+        },
+        {
+            "email": "ivo.andrade.20250416000000@example.com",
+            "answers": [
+                {
+                    "purpose": "app fácil acesso e confiável",
+                    "score": 5,
+                    "explanation": "app fácil acesso e confiável"
+                }
+            ]
+        },
+        {
+            "email": "marcio.souza.20250420000000@example.com",
+            "answers": [
+                {
+                    "purpose": "Principal objetivo: Atendimento personalizado. Equipe preparada para melhorar atender.",
+                    "score": 5,
+                    "explanation": "Nota 5: Usuário descreve como 'Atendimento personalizado. Equipe preparada para melhorar atender'. Principais queixas do review que justificam a nota: nenhuma, o usuário está satisfeito com o atendimento e a equipe."
+                }
+            ]
+        },
+        {
+            "email": "leandro.santos.20250421000000@example.com",
+            "answers": [
+                {
+                    "purpose": "Muito bom o app muito simples e prático",
+                    "score": 5,
+                    "explanation": "muito bom o app muito simples e prático"
+                }
+            ]
+        },
+        {
+            "email": "rafael.matheus.20250428000000@example.com",
+            "answers": [
+                {
+                    "purpose": "Principal objetivo: usar o aplicativo de forma fácil e prática.",
+                    "score": 5,
+                    "explanation": "fácil e prático!"
+                }
+            ]
+        },
+        {
+            "email": "daniel.alonso.lage.20250415000000@example.com",
+            "answers": [
+                {
+                    "purpose": "Intuitivo e funcinal",
+                    "score": 5,
+                    "explanation": "Intuitivo e funcinal"
+                }
+            ]
+        },
+        {
+            "email": "samuel.xavier.20250415000000@example.com",
+            "answers": [
+                {
+                    "purpose": "Principal objetivo: usar o aplicativo de forma fácil e estar sempre presente. O usuário descreve como 'Muito fácil de usar, sempre presente'.",
+                    "score": 5,
+                    "explanation": "Nota 5: Usuário descreve como 'Muito fácil de usar, sempre presente'. Principais queixas do review que justificam a nota: nenhuma, o usuário está satisfeito com a facilidade de uso e presença constante do app."
+                }
+            ]
+        },
+        {
+            "email": "calvin.flores.20250425000000@example.com",
+            "answers": [
+                {
+                    "purpose": "Principal objetivo: usar o aplicativo de forma prática, rápida e segura.",
+                    "score": 5,
+                    "explanation": "Muito prático rápido e seguro."
+                }
+            ]
+        },
+        {
+            "email": "ruberval.schulz.20250423000000@example.com",
+            "answers": [
+                {
+                    "purpose": "muito fácil e prático, gostei",
+                    "score": 5,
+                    "explanation": "muito fácil e prático, gostei"
+                }
+            ]
+        },
+        {
+            "email": "felipe.macedo.20250416000000@example.com",
+            "answers": [
+                {
+                    "purpose": "um ótimo banco que atende todas as minhas necessidades índico muito",
+                    "score": 5,
+                    "explanation": "um ótimo banco que atende todas as minhas necessidades índico muito"
+                }
+            ]
+        },
+        {
+            "email": "antonio.neres.20250422000000@example.com",
+            "answers": [
+                {
+                    "purpose": "Principal objetivo: Atendimento confiável. App ajudou pois: 'excelente atendimento muito confiável.'",
+                    "score": 5,
+                    "explanation": "Nota 5: Usuário descreve como 'excelente atendimento muito confiável.' Principais queixas do review que justificam a nota: nenhuma, o review é totalmente positivo. Conclusão do usuário: 'excelente atendimento muito confiável.'"
+                }
+            ]
+        },
+        {
+            "email": "ricardo.papa.20250428000000@example.com",
+            "answers": [
+                {
+                    "purpose": "obrigado pelo modernização e espero trabalhar muito com vocês também.",
+                    "score": 5,
+                    "explanation": "obrigado pelo modernização e espero trabalhar muito com vocês também."
+                }
+            ]
+        },
+        {
+            "email": "thiago.sauerbier.20250422000000@example.com",
+            "answers": [
+                {
+                    "purpose": "complicado mas é rápido pra abrir",
+                    "score": 3,
+                    "explanation": "complicado mas é rápido pra abrir"
+                }
+            ]
+        },
+        {
+            "email": "leonardo.soares.20250430000000@example.com",
+            "answers": [
+                {
+                    "purpose": "simples e funcional",
+                    "score": 5,
+                    "explanation": "simples e funcional"
+                }
+            ]
+        },
+        {
+            "email": "vanderson.branquinho.20250427000000@example.com",
+            "answers": [
+                {
+                    "purpose": "melhor banco pra trabalhar ,estou muito satisfeito",
+                    "score": 5,
+                    "explanation": "melhor banco pra trabalhar ,estou muito satisfeito"
+                }
+            ]
+        },
+        {
+            "email": "cleber.molinero.20250405000000@example.com",
+            "answers": [
+                {
+                    "purpose": "Eficiente e de fácil usabilidade",
+                    "score": 5,
+                    "explanation": "Eficiente e de fácil usabilidade"
+                }
+            ]
+        },
+        {
+            "email": "eliudes.santos.20250423000000@example.com",
+            "answers": [
+                {
+                    "purpose": "Eu confesso que fiquei surpreso com o atendimento e apoio que a Sicredi nos deu. muito feliz em fazer parte da família Sicredi",
+                    "score": 5,
+                    "explanation": "Eu confesso que fiquei surpreso com o atendimento e apoio que a Sicredi nos deu. muito feliz"
+                }
+            ]
+        },
+        {
+            "email": "leonel.garcia.20250422000000@example.com",
+            "answers": [
+                {
+                    "purpose": "Principal objetivo: usar o aplicativo de forma prática e eficiente. O usuário descreve seu objetivo como 'muito bom, prático e eficiente'.",
+                    "score": 5,
+                    "explanation": "Nota 5: Usuário descreve como 'muito bom, prático e eficiente'. Principais queixas do review que justificam a nota: nenhuma, o usuário expressa satisfação total com o aplicativo."
+                }
+            ]
+        },
+        {
+            "email": "cleocir.cagarotto.20250423000000@example.com",
+            "answers": [
+                {
+                    "purpose": "Principal objetivo: usar o aplicativo para algo que ele faz de forma fácil e ágil. O usuário disse que é 'muito bom mesmo fácil e agil'.",
+                    "score": 5,
+                    "explanation": "Nota 5: Usuário descreve como 'muito bom mesmo fácil e agil'. Principais queixas do review que justificam a nota: nenhuma, o usuário está satisfeito com a facilidade e agilidade do app. Conclusão do usuário: 'muito bom mesmo fácil e agil'."
+                }
+            ]
+        },
+        {
+            "email": "francisco.aldo.amorim.20250422000000@example.com",
+            "answers": [
+                {
+                    "purpose": "Principal objetivo: fácil, rápido, simples, muito bom.",
+                    "score": 5,
+                    "explanation": "Nota 5: Usuário descreve como 'fácil rápido simples muito bom'. Principais queixas do review que justificam a nota: nenhuma, o review é totalmente positivo."
+                }
+            ]
+        },
+        {
+            "email": "daiane.aparecida.lopes.20250415000000@example.com",
+            "answers": [
+                {
+                    "purpose": "Ótimo banco atende todas as nossas necessidades",
+                    "score": 5,
+                    "explanation": "ótimo banco atende todas as nossas necessidades parabéns"
+                }
+            ]
+        },
+        {
+            "email": "miguel.paulista.20250415000000@example.com",
+            "answers": [
+                {
+                    "purpose": "Principal objetivo: fácil e prático.",
+                    "score": 5,
+                    "explanation": "Nota 5: Usuário descreve como 'fácil e prático'. Principais queixas do review que justificam a nota: nenhuma, o review é positivo e indica satisfação com a facilidade e praticidade do aplicativo."
+                }
+            ]
+        },
+        {
+            "email": "gesiel.rosa.20250413000000@example.com",
+            "answers": [
+                {
+                    "purpose": "Partes do review do usuário que descrevem seu objetivo, se foi alcançado e os motivos diretos, usando suas palavras.",
+                    "score": 5,
+                    "explanation": "Partes do review do usuário que explicam diretamente a nota (stars) atribuída, usando suas palavras. \"ótimo o aplicativo, faço tudo por aqui não preciso me deslocar até o banco\"."
+                }
+            ]
+        },
+        {
+            "email": "deborabuarque.20250425000000@example.com",
+            "answers": [
+                {
+                    "purpose": "Funciona perfeitamente bem !!",
+                    "score": 5,
+                    "explanation": "Funciona perfeitamente bem !!"
+                }
+            ]
+        },
+        {
+            "email": "durval.bonfim.20250430000000@example.com",
+            "answers": [
+                {
+                    "purpose": "Prático e fácil de usar eu recomendo!!!",
+                    "score": 5,
+                    "explanation": "PRÁTICO E FÁCIL DE USAR EU RECOMENDO!!!"
+                }
+            ]
+        },
+        {
+            "email": "vitor.chagas.20250415000000@example.com",
+            "answers": [
+                {
+                    "purpose": "Muito fácil. tdo na palma da mão",
+                    "score": 5,
+                    "explanation": "muito fácil. tdo na palma da mão"
+                }
+            ]
+        },
+        {
+            "email": "eder.maciel.20250427000000@example.com",
+            "answers": [
+                {
+                    "purpose": "rápido e prático",
+                    "score": 5,
+                    "explanation": "rápido e prático"
+                }
+            ]
+        },
+        {
+            "email": "romenia.batista.20250422000000@example.com",
+            "answers": [
+                {
+                    "purpose": "horrível quando precisa mesmo falha",
+                    "score": 1,
+                    "explanation": "horrível quando precisa mesmo falha"
+                }
+            ]
+        },
+        {
+            "email": "joao.aparecido.ferraz.fiuza.20250416000000@example.com",
+            "answers": [
+                {
+                    "purpose": "Principal objetivo: muito rápido e prático.",
+                    "score": 5,
+                    "explanation": "Nota 5: Usuário descreve como 'muito rápido e prático'. Principais queixas do review que justificam a nota: nenhuma, o usuário está satisfeito com a rapidez e praticidade."
+                }
+            ]
+        },
+        {
+            "email": "mozai.helio.20250417000000@example.com",
+            "answers": [
+                {
+                    "purpose": "muito bom, simples e confiável",
+                    "score": 5,
+                    "explanation": "muito bom, simples e confiável"
+                }
+            ]
+        },
+        {
+            "email": "raylan.benjamim.20250427000000@example.com",
+            "answers": [
+                {
+                    "purpose": "aplicativo e o banco são muito bom",
+                    "score": 5,
+                    "explanation": "aplicativo e o banco são muito bom"
+                }
+            ]
+        },
+        {
+            "email": "carlosbarbim.20250412000000@example.com",
+            "answers": [
+                {
+                    "purpose": "Tenho algumas dificuldades com aplicativo e mesmo assim consigo utilizar",
+                    "score": 5,
+                    "explanation": "Tenho algumas dificuldades com aplicativo e mesmo assim consigo utilizar"
+                }
+            ]
+        },
+        {
+            "email": "hemerson.vieira.20250423000000@example.com",
+            "answers": [
+                {
+                    "purpose": "Ótimo e fácil de se mexer",
+                    "score": 5,
+                    "explanation": "Ótimo e fácil de se mexer"
+                }
+            ]
+        },
+        {
+            "email": "waldemar.depra.20250415000000@example.com",
+            "answers": [
+                {
+                    "purpose": "fácil e objetivo",
+                    "score": 5,
+                    "explanation": "fácil e objetivo"
+                }
+            ]
+        },
+        {
+            "email": "magna.silva.20250422000000@example.com",
+            "answers": [
+                {
+                    "purpose": "estou gostando muito desse APP e muito maravilhoso adorei esta de parabéns",
+                    "score": 5,
+                    "explanation": "estou gostando muito desse APP e muito maravilhoso adorei esta de parabéns"
+                }
+            ]
+        },
+        {
+            "email": "carolina.correia.20250416000000@example.com",
+            "answers": [
+                {
+                    "purpose": "Faz 2 anos que eu estou com esse banco e até agora não tive nenhum problema.",
+                    "score": 5,
+                    "explanation": "Faz 2 anos que eu estou com esse banco e até agora não tive nenhum problema."
+                }
+            ]
+        },
+        {
+            "email": "andrea.maria.simas.20250416000000@example.com",
+            "answers": [
+                {
+                    "purpose": "fácil e rápido",
+                    "score": 5,
+                    "explanation": "fácil e rápido"
+                }
+            ]
+        },
+        {
+            "email": "eliane.ribeiro.20250403000000@example.com",
+            "answers": [
+                {
+                    "purpose": "Principal objetivo: prático e de fácil entendimento.",
+                    "score": 5,
+                    "explanation": "Nota 5: Usuária descreve como 'prático e de fácil entendimento'. Principais queixas do review que justificam a nota: nenhuma, a avaliação é positiva."
+                }
+            ]
+        },
+        {
+            "email": "antonio.carlos.rafagnin.20250425000000@example.com",
+            "answers": [
+                {
+                    "purpose": "Tempo de trabalho em conjunto com o sicredi",
+                    "score": 5,
+                    "explanation": "tempo de trabalho em conjunto com o sicredi"
+                }
+            ]
+        },
+        {
+            "email": "flavio.oliveira.20250413000000@example.com",
+            "answers": [
+                {
+                    "purpose": "Muito bom fácil de utilizar e bem seguro",
+                    "score": 5,
+                    "explanation": "Nota 5: Usuário descreve como 'Muito bom fácil de utilizar e bem seguro'. Principais queixas do review que justificam a nota: nenhuma, o review é positivo e destaca que o app é fácil de usar e seguro. Conclusão do usuário: 'Muito bom fácil de utilizar e bem seguro'."
+                }
+            ]
+        },
+        {
+            "email": "jurandir.silva.20250422000000@example.com",
+            "answers": [
+                {
+                    "purpose": "Principal objetivo: rápido e fácil.",
+                    "score": 5,
+                    "explanation": "Nota 5: Usuário descreve como 'rápido e fácil'. Principais queixas do review que justificam a nota: nenhuma, o usuário apenas afirmou que é rápido e fácil. Conclusão do usuário: 'rápido e fácil'."
+                }
+            ]
+        },
+        {
+            "email": "maria.marlene.20250422000000@example.com",
+            "answers": [
+                {
+                    "purpose": "Principal objetivo: fácil e rápido.",
+                    "score": 5,
+                    "explanation": "Nota 5: Usuária descreve como 'fácil e rápido'. Principais queixas do review que justificam a nota: nenhuma, o review é positivo. Conclusão do usuário: 'fácil e rápido'."
+                }
+            ]
+        },
+        {
+            "email": "egon.dobler.20250403000000@example.com",
+            "answers": [
+                {
+                    "purpose": "Poderia ser mais intuitiva e clara",
+                    "score": 4,
+                    "explanation": "Poderia ser mais intuitiva e clara"
+                }
+            ]
+        },
+        {
+            "email": "edilene.pinheiro.20250411000000@example.com",
+            "answers": [
+                {
+                    "purpose": "Tudo está simples e fácil.",
+                    "score": 5,
+                    "explanation": "Nota 5: Usuário descreve como 'tudo está simples e fácil'. Principais queixas do review que justificam a nota: nenhuma, o review é totalmente positivo."
+                }
+            ]
+        },
+        {
+            "email": "mercadinho.sodre.20250426000000@example.com",
+            "answers": [
+                {
+                    "purpose": "fácil é prático",
+                    "score": 5,
+                    "explanation": "fácil é prático"
+                }
+            ]
+        },
+        {
+            "email": "esau.maciel.20250423000000@example.com",
+            "answers": [
+                {
+                    "purpose": "Facilidade E comforto.",
+                    "score": 4,
+                    "explanation": "Facilidade E comforto."
+                }
+            ]
+        },
+        {
+            "email": "djan.neri.20250401000000@example.com",
+            "answers": [
+                {
+                    "purpose": "Meu app do Sicredi,não está funcionando pagamentos por QR Code e não está lendo códigos de barras, o que fazer ?",
+                    "score": 4,
+                    "explanation": "Meu app do Sicredi,não está funcionando pagamentos por QR Code e não está lendo códigos de barras,o que fazer ?"
+                }
+            ]
+        },
+        {
+            "email": "edilson.20240410000000@example.com",
+            "answers": [
+                {
+                    "purpose": "ótimo app. simples e objetivo.",
+                    "score": 5,
+                    "explanation": "ótimo app. simples e objetivo."
+                }
+            ]
+        },
+        {
+            "email": "jurandir.batista.20250417000000@example.com",
+            "answers": [
+                {
+                    "purpose": "Ótimo aplicativo suple todas as necessidades",
+                    "score": 5,
+                    "explanation": "ótimo aplicativo suple todas as necessidades"
+                }
+            ]
+        },
+        {
+            "email": "claudia.novaes.20250420000000@example.com",
+            "answers": [
+                {
+                    "purpose": "Principal objetivo: movimentar por aqui. Sou iniciante associada mais já gosto de movimentar por aqui.",
+                    "score": 4,
+                    "explanation": "Nota 4: Usuária descreve como 'sou iniciante associada mais já gosto de movimentar por aqui'. Principais queixas do review que justificam a nota: nenhuma específica, mas ela expressa que gosta de usar o app mesmo sendo iniciante."
+                }
+            ]
+        },
+        {
+            "email": "rafael.guilerme.20250418000000@example.com",
+            "answers": [
+                {
+                    "purpose": "Principal objetivo: usar o aplicativo. O usuário descreve seu propósito como 'muito bom e fácil de mecher'.",
+                    "score": 5,
+                    "explanation": "Nota 5: Usuário descreve como 'muito bom e fácil de mecher'. Principais queixas do review que justificam a nota: nenhuma, o usuário está satisfeito com a facilidade e qualidade do app."
+                }
+            ]
+        },
+        {
+            "email": "ione.anger.20250406000000@example.com",
+            "answers": [
+                {
+                    "purpose": "Tenho um bom relacionamento com a cooperativa e colaboradores treinados competentes na área de investimentos, sempre fui bem atendida.",
+                    "score": 5,
+                    "explanation": "Tenho um bom relacionamento com a cooperativa e colaboradores treinados competentes na área de investimentos, sempre fui bem atendida, obrigada"
+                }
+            ]
+        },
+        {
+            "email": "linei.de.freitas.20250420000000@example.com",
+            "answers": [
+                {
+                    "purpose": "Ótimas Sicredi sempre apoiando quem trabalha.",
+                    "score": 5,
+                    "explanation": "Nota 5: Usuário descreve como 'ótimas Sicredi sempre apoiando quem trabalha'. Principais queixas do review que justificam a nota: nenhuma, o review é positivo. Conclusão do usuário: 'ótimas Sicredi sempre apoiando quem trabalha'."
+                }
+            ]
+        },
+        {
+            "email": "xbox.360.rgh.games.20250406000000@example.com",
+            "answers": [
+                {
+                    "purpose": "Principal objetivo: usar o aplicativo. O usuário descreve que é 'muito bom uma ótima interface facil de se usar'.",
+                    "score": 5,
+                    "explanation": "Nota 5: Usuário descreve como 'muito bom uma ótima interface facil de se usar'."
+                }
+            ]
+        },
+        {
+            "email": "mertayn.sistemas.20250409000000@example.com",
+            "answers": [
+                {
+                    "purpose": "Layout bonito, fácil de manusear...",
+                    "score": 5,
+                    "explanation": "Nota 5: Usuário descreve como 'Layout bonito, fácil de manusear...'. Principais queixas do review que justificam a nota: nenhuma, o usuário parece satisfeito com o layout e a facilidade de uso."
+                }
+            ]
+        },
+        {
+            "email": "dorival.tome.junior.20250403000000@example.com",
+            "answers": [
+                {
+                    "purpose": "Principal objetivo: mexer na melhor instituição financeira fácil e descomplicado para isso.",
+                    "score": 5,
+                    "explanation": "melhor instituição financeira fácil e descomplicado para mexer"
+                }
+            ]
+        },
+        {
+            "email": "edegar.binello.20250411000000@example.com",
+            "answers": [
+                {
+                    "purpose": "Estou me adaptando com, mais fácil de eu pegar as contas",
+                    "score": 5,
+                    "explanation": "Estou me adaptando com, mais fácil de eu pegar as contas"
+                }
+            ]
+        },
+        {
+            "email": "jhaverson.henrique.20250417000000@example.com",
+            "answers": [
+                {
+                    "purpose": "Ótimo banco, app completo",
+                    "score": 5,
+                    "explanation": "ótimo banco, app completo"
+                }
+            ]
+        },
+        {
+            "email": "thiago.padaria.20250414000000@example.com",
+            "answers": [
+                {
+                    "purpose": "simples e objetovo",
+                    "score": 5,
+                    "explanation": "simples e objetovo"
+                }
+            ]
+        },
+        {
+            "email": "marines.dias.20250401000000@example.com",
+            "answers": [
+                {
+                    "purpose": "Simples e fácil de utilizar",
+                    "score": 5,
+                    "explanation": "Simples e fácil de utilizar"
+                }
+            ]
+        },
+        {
+            "email": "darlan.melo.20250411000000@example.com",
+            "answers": [
+                {
+                    "purpose": "Dificuldade no pagamento do boleto fica dando erro.",
+                    "score": 1,
+                    "explanation": "dificuldade no pagamento do boleto fica dando erro"
+                }
+            ]
+        },
+        {
+            "email": "diego.van.20250411000000@example.com",
+            "answers": [
+                {
+                    "purpose": "Principal objetivo: entender o aplicativo e receber suporte. O usuário diz que é fácil entendimento e qualquer dúvida sua gerente responde prontamente.",
+                    "score": 5,
+                    "explanation": "Nota 5: Usuário descreve como 'fácil entendimento e qualquer dúvida minha gerente responde prontamente'. Principais queixas do review que justificam a nota: nenhuma, o usuário está satisfeito com o entendimento e o suporte."
+                }
+            ]
+        },
+        {
+            "email": "dirceu.klann.20250407000000@example.com",
+            "answers": [
+                {
+                    "purpose": "Aplicativo pede para mudar a senha com muita frequência",
+                    "score": 2,
+                    "explanation": "Nota 2: Usuário descreve como 'Aplicativo pede para mudar a senha com muita frequência'. Principais queixas do review que justificam a nota: 'pede para mudar a senha com muita frequência'. Conclusão do usuário: 'Aplicativo pede para mudar a senha com muita frequência'."
+                }
+            ]
+        },
+        {
+            "email": "adilson.cardoso.20250411000000@example.com",
+            "answers": [
+                {
+                    "purpose": "Simples e confortável.",
+                    "score": 5,
+                    "explanation": "Simples e confortável."
+                }
+            ]
+        },
+        {
+            "email": "helenakashino.2014200520250408@example.com",
+            "answers": [
+                {
+                    "purpose": "Principal objetivo: usar o aplicativo de forma fácil. App ajudou pois: 'Fácil! Mas precisei de ajuda.'",
+                    "score": 4,
+                    "explanation": "Nota 4: Usuário descreve como 'Fácil! Mas precisei de ajuda.'. Principais queixas do review que justificam a nota: 'precisei de ajuda'. Conclusão do usuário: 'Fácil!'."
+                }
+            ]
+        },
+        {
+            "email": "julio.cesar.20250414000000@example.com",
+            "answers": [
+                {
+                    "purpose": "Muita facilidade corresponde com o meu perfil",
+                    "score": 5,
+                    "explanation": "Muita facilidade corresponde com o meu perfil parabéns"
+                }
+            ]
+        },
+        {
+            "email": "ramão.fortes.20250411000000@example.com",
+            "answers": [
+                {
+                    "purpose": "Ótima, não custa pra ler o código de barra",
+                    "score": 5,
+                    "explanation": "Ótima, não custa pra ler o código de barra"
+                }
+            ]
+        },
+        {
+            "email": "darta.clementi.20250409000000@example.com",
+            "answers": [
+                {
+                    "purpose": "Achei que funciona muito bem o aplicativo. Melhor do que alguns bancos.",
+                    "score": 5,
+                    "explanation": "Achei que funciona muito bem o aplicativo. Melhor do que alguns bancos."
+                }
+            ]
+        },
+        {
+            "email": "tadeu.chicora.20250409000000@example.com",
+            "answers": [
+                {
+                    "purpose": "Principal objetivo: resolver tudo de forma fácil. App muito fácil e resolve tudo.",
+                    "score": 5,
+                    "explanation": "Nota 5: Usuário descreve como 'muito fácil e resolve tudo'. Principais queixas do review que justificam a nota: nenhuma, o usuário está satisfeito com a facilidade e a resolução de tudo pelo app. Conclusão do usuário: 'muito fácil e resolve tudo.'"
+                }
+            ]
+        },
+        {
+            "email": "romecildo.genovez.20250410000000@example.com",
+            "answers": [
+                {
+                    "purpose": "Fácil e prático.",
+                    "score": 5,
+                    "explanation": "Fácil e prático."
+                }
+            ]
+        },
+        {
+            "email": "josy.lisa.calsavara.20250408000000@example.com",
+            "answers": [
+                {
+                    "purpose": "Ótimo aplicativo. Muito fácil de usar.",
+                    "score": 5,
+                    "explanation": "Ótimo aplicativo. Muito fácil de usar."
+                }
+            ]
+        },
+        {
+            "email": "eucalipto.saligna.20250410000000@example.com",
+            "answers": [
+                {
+                    "purpose": "Principal objetivo: ágil e prático.",
+                    "score": 5,
+                    "explanation": "Nota 5: Usuário descreve como 'ágil e prático'. Principais queixas do review que justificam a nota: nenhuma, o usuário parece satisfeito com o aplicativo. Conclusão do usuário: 'ágil e prático'."
+                }
+            ]
+        },
+        {
+            "email": "fagner.braatz.20250411000000@example.com",
+            "answers": [
+                {
+                    "purpose": "Principal objetivo: usar o aplicativo de forma fácil e segura.",
+                    "score": 5,
+                    "explanation": "Nota 5: Usuário descreve como 'Fácil de usar e seguro'. Principais queixas do review que justificam a nota: nenhuma, o usuário expressa satisfação total com a facilidade de uso e segurança."
+                }
+            ]
+        },
+        {
+            "email": "carlos.aquino.20250409000000@example.com",
+            "answers": [
+                {
+                    "purpose": "Principal objetivo: utilizar o aplicativo. O aplicatibo é fácil utilizar, melhorou muito.",
+                    "score": 5,
+                    "explanation": "Nota 5: Usuário descreve como 'O aplicatibo é fácil utilizar, melhorou muito'. Principais queixas do review que justificam a nota: nenhuma, o usuário está satisfeito com a facilidade de uso e a melhora percebida."
+                }
+            ]
+        },
+        {
+            "email": "jonasstorck.20250410000000@example.com",
+            "answers": [
+                {
+                    "purpose": "Muito eficiente e prático de manuzia.",
+                    "score": 5,
+                    "explanation": "Nota 5: Usuário descreve como 'muito eficiente e prático de manuzia'. Principais queixas do review que justificam a nota: nenhuma, o usuário expressa satisfação total com a eficiência e praticidade do aplicativo."
+                }
+            ]
+        },
+        {
+            "email": "jaison.noronha.20250409000000@example.com",
+            "answers": [
+                {
+                    "purpose": "Top demais me arrependo de não ter feito minha conta antes, Sicredi é top",
+                    "score": 5,
+                    "explanation": "top demais me arrependo de não ter feito minha conta antes, Sicredi é top"
+                }
+            ]
+        },
+        {
+            "email": "margarida.lozano.20250409000000@example.com",
+            "answers": [
+                {
+                    "purpose": "Pagamos as contas sem sair de casa facilita muito principalmente nos que moramos na zona",
+                    "score": 5,
+                    "explanation": "Pagamos as contas sem sair de casa facilita muito principalmente nos que moramos na zona"
+                }
+            ]
+        },
+        {
+            "email": "andreia.azevedo.20250410000000@example.com",
+            "answers": [
+                {
+                    "purpose": "Principal objetivo: 'Excelente e fácil'.",
+                    "score": 5,
+                    "explanation": "Nota 5: Usuária descreve como 'Excelente e fácil'. Principais queixas do review que justificam a nota: nenhuma, ela expressa satisfação total. Conclusão do usuário: 'Excelente e fácil'."
+                }
+            ]
+        },
+        {
+            "email": "sebastiao.f.freitas.20250413000000@example.com",
+            "answers": [
+                {
+                    "purpose": "Principal objetivo: facilitar e fazer rápido.",
+                    "score": 5,
+                    "explanation": "fácil e rapido"
+                }
+            ]
+        },
+        {
+            "email": "samuel.goncalves.20250414000000@example.com",
+            "answers": [
+                {
+                    "purpose": "Partes do review do usuário que descrevem seu objetivo, se foi alcançado e os motivos diretos, usando suas palavras.",
+                    "score": 5,
+                    "explanation": "Partes do review do usuário que explicam diretamente a nota (stars) atribuída, usando suas palavras. 'adoro a cooperativa, me ajuda bastante no dia a dia'."
+                }
+            ]
+        },
+        {
+            "email": "flavia.jacobowski.20250409000000@example.com",
+            "answers": [
+                {
+                    "purpose": "Principal objetivo: gostar dos serviços e ser bem atendida. App ajudou pois: 'gosto muito dos serviços sou bem atendida'.",
+                    "score": 5,
+                    "explanation": "Nota 5: Usuária descreve como 'gosto muito dos serviços sou bem atendida'. Principais queixas do review que justificam a nota: nenhuma, ela expressa satisfação total. Conclusão do usuário: 'obgda tudo que preciso'."
+                }
+            ]
+        },
+        {
+            "email": "riva.barros.20250413000000@example.com",
+            "answers": [
+                {
+                    "purpose": "Amo minha agência sicredi. So fico triste quando trava e preciso pagar meus boletos.",
+                    "score": 5,
+                    "explanation": "Amo minha agência sicredi. So fico triste quando trava e preciso pagar meus boletos."
+                }
+            ]
+        },
+        {
+            "email": "charderson.santos.20250420000000@example.com",
+            "answers": [
+                {
+                    "purpose": "Muito boa cooperativa pra ajudar o associado",
+                    "score": 5,
+                    "explanation": "Muito boa cooperativa pra ajudar o associado"
+                }
+            ]
+        },
+        {
+            "email": "ediane.sgarbossa.20250407000000@example.com",
+            "answers": [
+                {
+                    "purpose": "E prático...eficiente...e para as mamães facilta as saídas de casa...",
+                    "score": 5,
+                    "explanation": "E prático...eficiente...e para as mamães facilta as saídas de casa..."
+                }
+            ]
+        },
+        {
+            "email": "sidenir.bento.de.souza.20250407000000@example.com",
+            "answers": [
+                {
+                    "purpose": "muito bom app simples e fácil",
+                    "score": 5,
+                    "explanation": "muito bom app simples e fácil top"
+                }
+            ]
+        },
+        {
+            "email": "santacecilia.soares.20250407000000@example.com",
+            "answers": [
+                {
+                    "purpose": "Facilidade de usar o dispositivo.",
+                    "score": 5,
+                    "explanation": "facilidade de usar o dispositivo"
+                }
+            ]
+        },
+        {
+            "email": "cristiani.correa.20250402000000@example.com",
+            "answers": [
+                {
+                    "purpose": "Muito bom o aplicativo. funciona perfeitamente, nem sei viver sem ele.",
+                    "score": 5,
+                    "explanation": "Muito bom o aplicativo.funciona perfeitamente,nem sei viver sem ele."
+                }
+            ]
+        },
+        {
+            "email": "darli.perreira.20250407000000@example.com",
+            "answers": [
+                {
+                    "purpose": "simplicidade do aplicativo",
+                    "score": 5,
+                    "explanation": "simplicidade do aplicativo"
+                }
+            ]
+        },
+        {
+            "email": "jose.correia.20250407000000@example.com",
+            "answers": [
+                {
+                    "purpose": "Partes do review do usuário que descrevem seu objetivo, se foi alcançado e os motivos diretos, usando suas palavras.",
+                    "score": 5,
+                    "explanation": "Partes do review do usuário que explicam diretamente a nota (stars) atribuída, usando suas palavras. Excelente, ótimo atendimento todos muito educados."
+                }
+            ]
+        },
+        {
+            "email": "valnice.santos.20250403000000@example.com",
+            "answers": [
+                {
+                    "purpose": "fácil de acessar e rápido",
+                    "score": 5,
+                    "explanation": "fácil de acessar e rápido"
+                }
+            ]
+        },
+        {
+            "email": "agronosa.prod.e.com.20250407000000@example.com",
+            "answers": [
+                {
+                    "purpose": "Partes do review do usuário que descrevem seu objetivo, se foi alcançado e os motivos diretos, usando suas palavras.",
+                    "score": 1,
+                    "explanation": "Partes do review do usuário que explicam diretamente a nota (stars) atribuída, usando suas palavras. Usuário diz: 'só problemas e poucas soluções'."
+                }
+            ]
+        },
+        {
+            "email": "robsom.freitas.20250402000000@example.com",
+            "answers": [
+                {
+                    "purpose": "Principal objetivo: fácil e prático!",
+                    "score": 5,
+                    "explanation": "Nota 5: Usuário descreve como 'fácil e prático!'. Principais queixas do review que justificam a nota: nenhuma, o usuário está satisfeito com a facilidade e praticidade do aplicativo."
+                }
+            ]
+        },
+        {
+            "email": "luis.gustavo.isnardi.20250403000000@example.com",
+            "answers": [
+                {
+                    "purpose": "Principal objetivo: usar o app. O usuário descreve seu propósito como 'ótimo app', indicando que queria um aplicativo eficiente e de qualidade.",
+                    "score": 3,
+                    "explanation": "Nota 3: Usuário descreve como 'ótimo app', mas também menciona que é uma má vontade muito forte pra abrir, o que indica que o objetivo de um app eficiente e fácil de abrir não foi totalmente atingido."
+                }
+            ]
+        },
+        {
+            "email": "salete.maria.20250406000000@example.com",
+            "answers": [
+                {
+                    "purpose": "Principal objetivo: Os lançamentos futuros poderiam ficar no extrato geral. Facilitaria",
+                    "score": 5,
+                    "explanation": "Nota 5: Usuário descreve como 'Os lançamentos futuros poderiam ficar no extrato geral. Facilitaria'. Principais queixas do review que justificam a nota: nenhuma, o usuário deu a nota máxima e não expressou insatisfação."
+                }
+            ]
+        },
+        {
+            "email": "bryzz.aa.20250406000000@example.com",
+            "answers": [
+                {
+                    "purpose": "O aplicativo fecha sozinho quando abre.",
+                    "score": 1,
+                    "explanation": "O aplicativo fecha sozinho quando abre."
+                }
+            ]
+        },
+        {
+            "email": "rennyo.pereira.borges.melo.20250408000000@example.com",
+            "answers": [
+                {
+                    "purpose": "Principal objetivo: usar o aplicativo de forma ágil, prática e fácil de usar.",
+                    "score": 5,
+                    "explanation": "Agil, prático e fácil de usar!!!"
+                }
+            ]
+        },
+        {
+            "email": "terezinha.toledo.20250407000000@example.com",
+            "answers": [
+                {
+                    "purpose": "atendimento mto excelente. sem burocracia.",
+                    "score": 5,
+                    "explanation": "atendimento mto excelente. sem burocracia."
+                }
+            ]
+        },
+        {
+            "email": "mariza.gracielli.20250404000000@example.com",
+            "answers": [
+                {
+                    "purpose": "Muito prático e funcional.",
+                    "score": 5,
+                    "explanation": "Muito prático e funcional."
+                }
+            ]
+        },
+        {
+            "email": "lurdes.schreiber.20250401000000@example.com",
+            "answers": [
+                {
+                    "purpose": "Rápido, simples maravilhoso",
+                    "score": 5,
+                    "explanation": "rápido, simples maravilhoso"
+                }
+            ]
+        },
+        {
+            "email": "maria.carmo.20250401000000@example.com",
+            "answers": [
+                {
+                    "purpose": "parabéns aplicativo muito fácil de responder",
+                    "score": 5,
+                    "explanation": "nota 5: usuário descreve como 'parabéns aplicativo muito fácil de responder'. principais queixas do review que justificam a nota: nenhuma, o usuário expressa satisfação total. conclusão do usuário: 'parabéns aplicativo muito fácil de responder'."
+                }
+            ]
+        },
+        {
+            "email": "jose.sinkarczuk.20250407000000@example.com",
+            "answers": [
+                {
+                    "purpose": "Principal objetivo: rápido e prático. App ajudou pois: 'rápido e prático'.",
+                    "score": 5,
+                    "explanation": "Nota 5: Usuário descreve como 'rápido e prático'. Principais queixas do review que justificam a nota: nenhuma, o usuário apenas elogia o app. Conclusão do usuário: 'rápido e prático'."
+                }
+            ]
+        },
+        {
+            "email": "jane.do.2025040420250404@example.com",
+            "answers": [
+                {
+                    "purpose": "Método simples oara pagar as contas",
+                    "score": 5,
+                    "explanation": "Nota 5: Usuário descreve como 'Método simples oara pagar as contas'. Principais queixas do review que justificam a nota: nenhuma, o usuário parece satisfeito com o método."
+                }
+            ]
+        },
+        {
+            "email": "everaldo.fabian.20250403000000@example.com",
+            "answers": [
+                {
+                    "purpose": "estou iniciando ainda está um pouco demorado pra entender, mais estou gostando",
+                    "score": 3,
+                    "explanation": "estou iniciando ainda está um pouco demorado pra entender, mais estou gostando"
+                }
+            ]
+        },
+        {
+            "email": "alexandre.mauricio.20250406000000@example.com",
+            "answers": [
+                {
+                    "purpose": "Parabéns o app e muitos de usar, o sicred está de parabéns.",
+                    "score": 5,
+                    "explanation": "parabéns o app e muitos de usar, o sicred está de parabéns."
+                }
+            ]
+        },
+        {
+            "email": "giovanna.loria.20250407000000@example.com",
+            "answers": [
+                {
+                    "purpose": "Simples.e intuitivo",
+                    "score": 5,
+                    "explanation": "Simples.e intuitivo"
+                }
+            ]
+        },
+        {
+            "email": "eduardo.silva.20250407000000@example.com",
+            "answers": [
+                {
+                    "purpose": "Principal objetivo: pagar a fatura na hora que quiser. App não ajudou pois: 'pior coisa desse banco e que nao pode pagar a fatura na hora que quiser'.",
+                    "score": 3,
+                    "explanation": "Nota 3: Usuário descreve como 'pior coisa desse banco e que nao pode pagar a fatura na hora que quiser'. Principais queixas do review que justificam a nota: 'pior coisa desse banco e que nao pode pagar a fatura na hora que quiser'. Conclusão do usuário: 'pior coisa desse banco e que nao pode pagar a fatura na hora que quiser'."
+                }
+            ]
+        },
+        {
+            "email": "manoel.christo.20250404000000@example.com",
+            "answers": [
+                {
+                    "purpose": "Tem sido rápido e eficiente",
+                    "score": 5,
+                    "explanation": "Tem sido rápido e eficiente"
+                }
+            ]
+        },
+        {
+            "email": "sergio.tedesco.20250405000000@example.com",
+            "answers": [
+                {
+                    "purpose": "Principal objetivo: facilidade de acesso.",
+                    "score": 5,
+                    "explanation": "Nota 5: Usuário descreve como 'facilidade de acesso'. Principais queixas do review que justificam a nota: nenhuma, o review é positivo. Conclusão do usuário: 'facilidade de acesso'."
+                }
+            ]
+        },
+        {
+            "email": "junior.diesel.20250422000000@example.com",
+            "answers": [
+                {
+                    "purpose": "Principal objetivo: usar o aplicativo de forma rápida e com opções de configuração na tela principal. O app não atende pois: 'Muito lento, sem opção de configuração do que uso mais na tela principal.'",
+                    "score": 2,
+                    "explanation": "Nota 2: Usuário descreve como 'Muito lento, sem opção de configuração do que uso mais na tela principal.' Conclusão do usuário: 'E ele não aparece opção de ler QRCode em foto, um atraso.'"
+                }
+            ]
+        },
+        {
+            "email": "alexandre.evang.20250416000000@example.com",
+            "answers": [
+                {
+                    "purpose": "Meus milhões estão moderadamente guardados e seguros. Sem contar os avisos a cada compra oque me ajuda na hora das contas, minha filhinha de 7 anos já tem sua própria conta oque ajuda muito na hora de aprender mais na economia.",
+                    "score": 5,
+                    "explanation": "Muito bom. Meu propósito era guardar meus milhões de forma segura e receber avisos a cada compra, o que me ajuda na hora das contas. Além disso, minha filhinha de 7 anos já tem sua própria conta, o que ajuda muito na hora de aprender mais na economia. Obrigado."
+                }
+            ]
+        },
+        {
+            "email": "daniel.gomes.20250427000000@example.com",
+            "answers": [
+                {
+                    "purpose": "Principal objetivo: usar o app para receber corridas da Uber e verificar limites de crédito. O app é fácil de mexer, a plataforma é boa, só o limite de crédito que nunca aumenta.",
+                    "score": 1,
+                    "explanation": "Nota 1: Usuário descreve como 'o app é fácil de mexer, sim plataforma é boa', mas critica que 'só o limite de crédito que nunca aumenta'. Conclusão do usuário: 'meu limite é 2 mil e no banco do Brasil 10 mil e aqui 350 reais que já faz tempo eu recebia as corridas da Uber por aqui daí mudei para o BB e meu limite só vem crescendo'."
+                }
+            ]
+        },
+        {
+            "email": "express.garcia.transportes.20250428000000@example.com",
+            "answers": [
+                {
+                    "purpose": "Principal objetivo: Utilizar o aplicativo de transporte. App muito fácil de utilizar e encontrar as coisas, nunca tive nenhum problema.",
+                    "score": 5,
+                    "explanation": "Nota 5: Usuário descreve como 'Muito fácil de utilizar e encontrar as coisas', e que 'nunca tive nenhum problema e sempre que precisei o suporte me atendeu prontamente, resolvendo meu problema'."
+                }
+            ]
+        },
+        {
+            "email": "dorgival.f.nascimento.20250402000000@example.com",
+            "answers": [
+                {
+                    "purpose": "fácil e rápido",
+                    "score": 5,
+                    "explanation": "fácil e rápido"
+                }
+            ]
+        },
+        {
+            "email": "heraldo.carducci.20250403000000@example.com",
+            "answers": [
+                {
+                    "purpose": "Principal objetivo: Recomendar o aplicativo e que está sempre disponível.",
+                    "score": 5,
+                    "explanation": "aplicativo muito bom recomendo está sempre disponível"
+                }
+            ]
+        },
+        {
+            "email": "joao.20250427000000@example.com",
+            "answers": [
+                {
+                    "purpose": "não estou conseguindo entrar no aplicativo do Sicredi",
+                    "score": 1,
+                    "explanation": "não estou conseguindo entrar no aplicativo do Sicredi"
+                }
+            ]
+        },
+        {
+            "email": "nabil.tohme.20250409000000@example.com",
+            "answers": [
+                {
+                    "purpose": "Ainda não utilizei integralmente. Muito bom app até agora.",
+                    "score": 4,
+                    "explanation": "Muito bom app até agora."
+                }
+            ]
+        },
+        {
+            "email": "evandro.assis.20250424000000@example.com",
+            "answers": [
+                {
+                    "purpose": "um pouco e ficas nas operações",
+                    "score": 4,
+                    "explanation": "um pouco e ficas nas operações"
+                }
+            ]
+        },
+        {
+            "email": "fabiana.teles.20250425000000@example.com",
+            "answers": [
+                {
+                    "purpose": "Principal objetivo: usar o aplicativo de forma fácil e rápida. O usuário achou muito fácil de usar.",
+                    "score": 5,
+                    "explanation": "Nota 5: Usuária descreve como 'muito fácil de usar'. Principais queixas do review que justificam a nota: nenhuma, o review é positivo e indica satisfação com a facilidade de uso."
+                }
+            ]
+        },
+        {
+            "email": "genario.ferreira.20250411000000@example.com",
+            "answers": [
+                {
+                    "purpose": "Principal objetivo: muito fácil e ágil.",
+                    "score": 4,
+                    "explanation": "Nota 4: Usuário descreve como 'muito fácil e ágil'. Principais queixas do review que justificam a nota: nenhuma, o usuário apenas comentou que é fácil e ágil."
+                }
+            ]
+        },
+        {
+            "email": "francisco.martins.20250430000000@example.com",
+            "answers": [
+                {
+                    "purpose": "Muito bom trabalhar com o sicredi",
+                    "score": 5,
+                    "explanation": "muito bom trabalhar com o sicredi"
+                }
+            ]
+        },
+        {
+            "email": "jocelino.depaula.20250424000000@example.com",
+            "answers": [
+                {
+                    "purpose": "Principal objetivo: mais praticidade menos burocracia.",
+                    "score": 5,
+                    "explanation": "Nota 5: Usuário descreve como 'mais praticidade menos burocracia'. Principais queixas do review que justificam a nota: nenhuma, o usuário está satisfeito com o aplicativo. Conclusão do usuário: nenhuma observação negativa, o review é positivo."
+                }
+            ]
+        },
+        {
+            "email": "anderson.gomes.20250417000000@example.com",
+            "answers": [
+                {
+                    "purpose": "bem útil a forma de usar,",
+                    "score": 5,
+                    "explanation": "bem útil a forma de usar,"
+                }
+            ]
+        },
+        {
+            "email": "lima.neto.20250402000000@example.com",
+            "answers": [
+                {
+                    "purpose": "Principal objetivo: operar o aplicativo de forma simples e eficiente. O usuário descreve como 'muito bom e simples de operar'.",
+                    "score": 5,
+                    "explanation": "Nota 5: Usuário descreve como 'muito bom e simples de operar'. Principais queixas do review que justificam a nota: nenhuma, o usuário expressa satisfação total com a simplicidade e bom funcionamento do app."
+                }
+            ]
+        },
+        {
+            "email": "marilia.natalia.20250415000000@example.com",
+            "answers": [
+                {
+                    "purpose": "Atendimento do Sicredi é outro nível",
+                    "score": 5,
+                    "explanation": "Atendimento do Sicredi é outro nível"
+                }
+            ]
+        },
+        {
+            "email": "eva.belizario.20250425000000@example.com",
+            "answers": [
+                {
+                    "purpose": "Principal objetivo: usar o aplicativo para alguma finalidade relacionada a finanças. App ajudou pois: 'Bom'.",
+                    "score": 5,
+                    "explanation": "Nota 5: Usuário descreve como 'Bom'. Principais queixas do review que justificam a nota: 'Mas os juros estão altos'. Conclusão do usuário: 'Mas os juros estão altos'."
+                }
+            ]
+        },
+        {
+            "email": "carlos.amorim.20250402000000@example.com",
+            "answers": [
+                {
+                    "purpose": "Tento abrir conta nesse app mas sempre sou negado, só permite abrir conta poupança ao qual não tenho interesse, uma pena pois gostaria muito de ter uma conta de cooperativa.",
+                    "score": 1,
+                    "explanation": "😢Tento abrir conta nesse app mas sempre sou negado, só permite abrir conta poupança ao qual não tenho interesse, uma pena pois gostaria muito de ter uma conta de cooperativa."
+                }
+            ]
+        }
+    ]
+}

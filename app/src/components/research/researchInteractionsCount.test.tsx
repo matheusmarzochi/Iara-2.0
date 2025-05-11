@@ -1,7 +1,8 @@
+import "@testing-library/jest-dom";
+
 import { conversionRate } from "./researchInteractionsCount";
 import { render, screen } from "@testing-library/react";
 import ResearchInteractionsCount from "./researchInteractionsCount";
-import "@testing-library/jest-dom";
 
 describe("conversionRate", () => {
   it("returns 0 when both formsLength and totalViews are 0", () => {
