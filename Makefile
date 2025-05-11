@@ -49,8 +49,8 @@ app-build:
 bash-app:
 	@docker run -ti --rm \
 		--name iara-app-bash \
-		--env-file .env.local \
-		-v ./reviewScraper/:/code/app \
+		-v ./app/:/code/app \
+		-v ./shared/:/code/shared \
 		iara-app bash
 
 ollama-init:
@@ -78,7 +78,7 @@ seed-worker:
 	@docker run -ti --rm \
 		--net iara \
 		--name iara-worker-bash \
-		--env-file .env.remote \
+		--env-file .env.local \
 		-v ./worker/:/code/worker \
 		-v ./shared/:/code/shared \
 		iara-worker npx ts-node src/seed/research-sample.ts
