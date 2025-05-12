@@ -16,6 +16,12 @@ import { ResearchStatusBadge } from "~/components/research/researchStatusBadge";
 import { Card } from "~/components/ui/card";
 import ResearchInteractionsCount from "~/components/research/researchInteractionsCount";
 import { processResearch } from "./action";
+import { duplicateResearch } from "~/lib/data/research";
+import { useState, useEffect } from "react";
+import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogFooter } from "~/components/ui/dialog";
+import { Select, SelectTrigger, SelectValue, SelectContent, SelectItem } from "~/components/ui/select";
+import { userList } from "~/app/(admin)/admin/users/action";
+import { DuplicateResearchButton } from "./duplicate-research";
 
 type Props = {
     params: {
@@ -24,13 +30,6 @@ type Props = {
 };
 
 async function getResearchById(id: string) {
-    const { userId } = auth();
-
-    const user = db
-        .select({ id: users.id })
-        .from(users)
-        .where(eq(users.clerkId, userId as string));
-
     const [research] = await db
         .select({
             id: researches.id,
@@ -221,6 +220,13 @@ export default async function ResearchPage({ params }: Props) {
                             </Button>
                         </Card>
                     )}
+                    <Card className="p-4 space-y-3 border rounded">
+                        <h4 className="font-medium">Duplicar Pesquisa</h4>
+                        <p className="text-sm text-muted-foreground">
+                            Duplique esta pesquisa para outro usuário.
+                        </p>
+                        <DuplicateResearchButton researchId={research.id} />
+                    </Card>
                 </div>
             </div>
         </div>
