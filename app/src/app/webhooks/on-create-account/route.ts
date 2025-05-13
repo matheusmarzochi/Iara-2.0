@@ -4,6 +4,8 @@ import { Webhook, type WebhookRequiredHeaders } from "svix";
 import { db } from "iara-shared/database";
 import { users } from "iara-shared/database/schema";
 import { env } from "~/env";
+import { sendNewUserNotification } from "iara-shared/discord"
+import { duplicateResearch } from "~/lib/data/research"
 
 async function handler(request: Request) {
   const payload = (await request.json()) as string;
@@ -48,9 +50,15 @@ async function createAccountEvent(user: UserJSON) {
     name: `${user.first_name} ${user.last_name}`,
   };
 
-  await db.insert(users).values({
+  const newUser = await db.insert(users).values({
     clerkId: payload.id,
     email: payload.email,
     name: payload.name,
-  });
+  }).returning({ id: users.id });
+
+  await sendNewUserNotification(payload.email);
+
+  if (process.env.DEFAULT_RESEARCH_ID && newUser[0]?.id) {
+    await duplicateResearch(newUser[0].id, process.env.DEFAULT_RESEARCH_ID);
+  }
 }
