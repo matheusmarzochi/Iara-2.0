@@ -55,7 +55,7 @@ const reportData = async (researchId: string): Promise<ReportData | undefined> =
 
     return {
         categories: categoryList,
-        enableSwitch: false, // Admin always false to prevent update targetSwitch
+        enableSwitch: false,
         formsLength: research?.forms.length,
         reports: report.data,
         research,

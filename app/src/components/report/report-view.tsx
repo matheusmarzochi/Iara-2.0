@@ -15,6 +15,8 @@ export interface ReportViewProps {
     research: Omit<Research, "forms" | "questions">;
     categories: Omit<Category, "analysis">[];
     enableSwitch: boolean;
+    defaultTabId?: string;
+    onTabSelect?: (tabId: string) => void;
 }
 
 export interface Response {
@@ -52,7 +54,6 @@ export interface TabData {
 }
 
 
-// Helper to map report data to TabData
 function mapReportsToTabs(reports: ReportData[]): TabData[] {
     return reports.map((report, idx) => ({
         id: report.question_id,
@@ -76,9 +77,11 @@ function mapReportsToTabs(reports: ReportData[]): TabData[] {
     }))
 }
 
-export default function ReportView({ reports, research, categories, enableSwitch }: ReportViewProps) {
+export default function ReportView({ reports, categories, enableSwitch, defaultTabId, onTabSelect }: ReportViewProps) {
     const tabData = useMemo(() => mapReportsToTabs(reports), [reports])
     const [expandedPurpose, setExpandedPurpose] = useState<string | null>(null)
+    const initialTab = defaultTabId && tabData.some(tab => tab.id === defaultTabId) ? defaultTabId : (tabData[0]?.id ?? "")
+    const [selectedTab, setSelectedTab] = useState<string>(initialTab)
 
     const [categoryTargets, setCategoryTargets] = useState<Record<string, boolean>>(
         () => Object.fromEntries(categories.map(c => [c.id, c.target]))
@@ -107,7 +110,14 @@ export default function ReportView({ reports, research, categories, enableSwitch
 
     return (
         <div className="container mx-auto py-6 px-0 max-w-6xl">
-            <Tabs defaultValue={tabData[0].id} className="w-full">
+            <Tabs
+                value={selectedTab}
+                onValueChange={(tabId) => {
+                    setSelectedTab(tabId)
+                    if (onTabSelect) onTabSelect(tabId)
+                }}
+                className="w-full"
+            >
                 <div className="border-b dark:border-sky-800 mb-6">
                     <div className="relative">
                         <TabsList

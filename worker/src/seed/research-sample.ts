@@ -24,7 +24,18 @@ type ResearchData = {
     forms: FormData[]
 }
 
-const researchData = JSON.parse(fs.readFileSync('/code/worker/src/seed/researches/sicredi-2025-04.json').toString()) as ResearchData
+const researchFiles = [
+    '/code/worker/src/seed/researches/f4p-base.json',
+    '/code/worker/src/seed/researches/sicredi-2019.json',
+    '/code/worker/src/seed/researches/sicredi-2020.json',
+    '/code/worker/src/seed/researches/sicredi-2021.json',
+    '/code/worker/src/seed/researches/sicredi-2022.json',
+    '/code/worker/src/seed/researches/sicredi-2023.json',
+    '/code/worker/src/seed/researches/sicredi-2024.json',
+    '/code/worker/src/seed/researches/sicredi-2025-01.json',
+    '/code/worker/src/seed/researches/sicredi-2025-02.json',
+    '/code/worker/src/seed/researches/sicredi-2025-04.json'
+]
 
 const seed = async (email: string) => {
     const user = await db.query.users.findFirst({
@@ -35,59 +46,63 @@ const seed = async (email: string) => {
         return "Email not found"
     }
 
-    // Insere a research a partir do JSON
-    const [researchReturn] = await db.insert(researches).values({
-        description: researchData.description,
-        title: researchData.title,
-        userId: user.id,
-    }).returning()
+    for (const filePath of researchFiles) {
+        const researchData = JSON.parse(fs.readFileSync(filePath).toString()) as ResearchData
 
-    // Insere as questions a partir do JSON
-    const questionsToInsert = researchData.questions.map(q => ({
-        researchId: researchReturn.id,
-        purpose: q.purpose,
-        sequence: q.sequence,
-    }))
-    await db.insert(questions).values(questionsToInsert).returning()
-
-    // Para cada form no JSON, insere o form e as respostas
-    for await (const formData of researchData.forms) {
-        const [formReturn] = await db.insert(forms).values({
-            email: formData.email,
-            researchId: researchReturn.id
+        // Insere a research a partir do JSON
+        const [researchReturn] = await db.insert(researches).values({
+            description: researchData.description,
+            title: researchData.title,
+            userId: user.id,
         }).returning()
 
-        const insertData: {
-            explanation: string,
-            formId: string,
-            score: number,
-            purpose: string,
-            sequence: number
-        }[] = [];
+        // Insere as questions a partir do JSON
+        const questionsToInsert = researchData.questions.map(q => ({
+            researchId: researchReturn.id,
+            purpose: q.purpose,
+            sequence: q.sequence,
+        }))
+        await db.insert(questions).values(questionsToInsert).returning()
 
-        formData.answers.forEach((data, index) => {
-            const validated = [
-                data.purpose.length > 0,
-                parseInt(data.score) > 0,
-                data.explanation.length > 0
-            ].every(Boolean)
+        // Para cada form no JSON, insere o form e as respostas
+        for await (const formData of researchData.forms) {
+            const [formReturn] = await db.insert(forms).values({
+                email: formData.email,
+                researchId: researchReturn.id
+            }).returning()
 
-            if (validated) {
-                insertData.push({
-                    explanation: data.explanation,
-                    formId: formReturn.id,
-                    score: parseInt(data.score),
-                    purpose: data.purpose,
-                    sequence: index + 1
-                })
+            const insertData: {
+                explanation: string,
+                formId: string,
+                score: number,
+                purpose: string,
+                sequence: number
+            }[] = [];
+
+            formData.answers.forEach((data, index) => {
+                const validated = [
+                    data.purpose.length > 0,
+                    parseInt(data.score) > 0,
+                    data.explanation.length > 0
+                ].every(Boolean)
+
+                if (validated) {
+                    insertData.push({
+                        explanation: data.explanation,
+                        formId: formReturn.id,
+                        score: parseInt(data.score),
+                        purpose: data.purpose,
+                        sequence: index + 1
+                    })
+                }
+            })
+
+            if (insertData.length > 0) {
+                await db
+                    .insert(answers)
+                    .values(insertData)
+                    .returning()
             }
-        })
-
-        if (insertData.length > 0) {
-            await db
-                .insert(answers)
-                .values(insertData)
-                .returning()
         }
     }
 
@@ -95,3 +110,4 @@ const seed = async (email: string) => {
 }
 
 seed("ivanmicai@gmail.com")
+

@@ -68,7 +68,6 @@ const reportData = async (researchId: string): Promise<ReportData | undefined> =
     reports: report.data,
     research,
     totalViews: uniqueViews[0]?.uniqueViews || 0
-
   }
 }
 
