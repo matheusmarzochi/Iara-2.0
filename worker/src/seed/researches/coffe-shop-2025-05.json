@@ -1,0 +1,380 @@
+{
+  "title": "Café Aconchego - (2025-Mai)",
+  "description": "Queremos saber o que mais te agrada! Sua avaliação positiva nos inspira a continuar oferecendo o melhor.",
+  "questions": [
+    {
+      "purpose": "Qualidade do Café: Como você avalia o sabor, temperatura e aroma do café que consumiu?",
+      "sequence": 1
+    },
+    {
+      "purpose": "Ambiente da Loja: Sua percepção sobre a limpeza, conforto, música e decoração do nosso espaço.",
+      "sequence": 2
+    },
+    {
+      "purpose": "Atendimento Recebido: Como foi a cordialidade, agilidade e eficiência da nossa equipe?",
+      "sequence": 3
+    }
+  ],
+  "forms": [
+    {
+      "email": "cliente_positivo_1@example.com",
+      "answers": [
+        { "purpose": "Café muito saboroso e na temperatura ideal!", "score": "4", "explanation": "Um dos melhores que já tomei." },
+        { "purpose": "Ambiente super aconchegante e limpo.", "score": "5", "explanation": "Adorei a decoração e a música." },
+        { "purpose": "Atendimento rápido, cordial e eficiente.", "score": "4", "explanation": "Equipe muito simpática." }
+      ]
+    },
+    {
+      "email": "cliente_positivo_2@example.com",
+      "answers": [
+        { "purpose": "O café estava excelente, aroma incrível.", "score": "5", "explanation": "Qualidade de grão superior." },
+        { "purpose": "Lugar muito agradável, confortável e bem decorado.", "score": "4", "explanation": "Ótimo para relaxar." },
+        { "purpose": "Atendimento foi bom, atencioso na medida certa.", "score": "3", "explanation": "Profissional e correto." }
+      ]
+    },
+    {
+      "email": "cliente_positivo_3@example.com",
+      "answers": [
+        { "purpose": "Café bom, saboroso e bem tirado.", "score": "3", "explanation": "Atendeu às expectativas." },
+        { "purpose": "Ambiente perfeito! Limpeza impecável e muito confortável.", "score": "5", "explanation": "Música ambiente no volume ideal." },
+        { "purpose": "Equipe extremamente atenciosa e prestativa.", "score": "5", "explanation": "Fizeram me sentir especial." }
+      ]
+    },
+    {
+      "email": "cliente_positivo_4@example.com",
+      "answers": [
+        { "purpose": "Gostei muito do café, bem equilibrado.", "score": "4", "explanation": "" },
+        { "purpose": "Ambiente muito bom, limpo e com uma atmosfera calma.", "score": "4", "explanation": "Ideal para uma pausa." },
+        { "purpose": "Atendimento satisfatório, foram ágeis.", "score": "3", "explanation": "Sem queixas." }
+      ]
+    },
+    {
+      "email": "cliente_positivo_5@example.com",
+      "answers": [
+        { "purpose": "Café excelente, forte e aromático como gosto.", "score": "5", "explanation": "" },
+        { "purpose": "Decoração charmosa e ambiente muito limpo.", "score": "4", "explanation": "Confortável." },
+        { "purpose": "Atendimento muito bom, simpáticos e eficientes.", "score": "4", "explanation": "Recomendo." }
+      ]
+    },
+    {
+      "email": "cliente_positivo_6@example.com",
+      "answers": [
+        { "purpose": "Café saboroso e na temperatura correta.", "score": "3", "explanation": "Bom padrão." },
+        { "purpose": "Ambiente impecável, desde a limpeza até a organização.", "score": "5", "explanation": "Dá gosto de ficar." },
+        { "purpose": "Atendimento foi muito bom, pessoal bem treinado.", "score": "4", "explanation": "" }
+      ]
+    },
+    {
+      "email": "cliente_positivo_7@example.com",
+      "answers": [
+        { "purpose": "Café com sabor marcante e muito agradável.", "score": "4", "explanation": "Qualidade perceptível." },
+        { "purpose": "Ambiente muito confortável e com ótima iluminação.", "score": "4", "explanation": "Bom para ler." },
+        { "purpose": "Atendimento excepcional, superou minhas expectativas.", "score": "5", "explanation": "Muito gentis." }
+      ]
+    },
+    {
+      "email": "cliente_positivo_8@example.com",
+      "answers": [
+        { "purpose": "O café é sempre muito bom aqui, qualidade consistente.", "score": "4", "explanation": "" },
+        { "purpose": "Ambiente agradável e música ambiente de bom gosto.", "score": "3", "explanation": "Volume adequado." },
+        { "purpose": "Atendimento excelente, rápido e muito cortês.", "score": "5", "explanation": "" }
+      ]
+    },
+    {
+      "email": "cliente_positivo_9@example.com",
+      "answers": [
+        { "purpose": "Café bom, atendeu ao que eu esperava.", "score": "3", "explanation": "" },
+        { "purpose": "Ambiente muito limpo e bem cuidado.", "score": "4", "explanation": "Detalhes que fazem a diferença." },
+        { "purpose": "Atendimento muito atencioso e ágil.", "score": "4", "explanation": "" }
+      ]
+    },
+    {
+      "email": "cliente_positivo_10@example.com",
+      "answers": [
+        { "purpose": "Café perfeito! Sabor, aroma e corpo excelentes.", "score": "5", "explanation": "" },
+        { "purpose": "Ambiente muito agradável, ótimo para um encontro.", "score": "4", "explanation": "" },
+        { "purpose": "Atendimento bom, equipe prestativa.", "score": "3", "explanation": "" }
+      ]
+    },
+    {
+      "email": "cliente_positivo_11@example.com",
+      "answers": [
+        { "purpose": "Café muito bom, especialmente o expresso.", "score": "4", "explanation": "Bem tirado." },
+        { "purpose": "Ambiente com decoração de muito bom gosto e super confortável.", "score": "5", "explanation": "" },
+        { "purpose": "Atendimento atencioso e rápido.", "score": "4", "explanation": "" }
+      ]
+    },
+    {
+      "email": "cliente_positivo_12@example.com",
+      "answers": [
+        { "purpose": "Sabor do café é bom, e a apresentação também.", "score": "3", "explanation": "" },
+        { "purpose": "Ambiente limpo, organizado e com boa música.", "score": "4", "explanation": "" },
+        { "purpose": "Atendimento excepcional, equipe muito simpática.", "score": "5", "explanation": "Fui muito bem recebido." }
+      ]
+    },
+    {
+      "email": "cliente_positivo_13@example.com",
+      "answers": [
+        { "purpose": "Café excelente, um dos melhores que já degustei.", "score": "5", "explanation": "Vale cada centavo." },
+        { "purpose": "Ambiente muito agradável e bem localizado.", "score": "4", "explanation": "" },
+        { "purpose": "Atendimento muito bom e eficiente.", "score": "4", "explanation": "" }
+      ]
+    },
+    {
+      "email": "cliente_positivo_14@example.com",
+      "answers": [
+        { "purpose": "Café sempre saboroso e quente.", "score": "4", "explanation": "" },
+        { "purpose": "O ambiente é bom, confortável e limpo.", "score": "3", "explanation": "Padrão agradável." },
+        { "purpose": "Atendimento cordial e profissional.", "score": "3", "explanation": "" }
+      ]
+    },
+    {
+      "email": "cliente_positivo_15@example.com",
+      "answers": [
+        { "purpose": "Café bom, cumpre o que promete.", "score": "3", "explanation": "" },
+        { "purpose": "Ambiente muito charmoso e bem cuidado.", "score": "5", "explanation": "Excelente para fotos." },
+        { "purpose": "Atendimento muito bom, com destaque para a agilidade.", "score": "4", "explanation": "" }
+      ]
+    },
+    {
+      "email": "cliente_positivo_16@example.com",
+      "answers": [
+        { "purpose": "Café de ótima qualidade, sabor intenso.", "score": "4", "explanation": "" },
+        { "purpose": "Ambiente confortável e com decoração moderna.", "score": "4", "explanation": "" },
+        { "purpose": "Atendimento excelente, a equipe é muito atenta.", "score": "5", "explanation": "" }
+      ]
+    },
+    {
+      "email": "cliente_positivo_17@example.com",
+      "answers": [
+        { "purpose": "Café delicioso, especialmente as opções especiais.", "score": "5", "explanation": "" },
+        { "purpose": "Ambiente bom, limpo e com boa iluminação natural.", "score": "3", "explanation": "" },
+        { "purpose": "Atendimento muito bom, atendentes conhecem bem o cardápio.", "score": "4", "explanation": "" }
+      ]
+    },
+    {
+      "email": "cliente_positivo_18@example.com",
+      "answers": [
+        { "purpose": "Café saboroso, e a variedade é um ponto positivo.", "score": "4", "explanation": "" },
+        { "purpose": "Ambiente agradável, ideal para trabalhar ou estudar.", "score": "4", "explanation": "Wi-fi funciona bem." },
+        { "purpose": "Atendimento satisfatório, rápido e educado.", "score": "3", "explanation": "" }
+      ]
+    },
+    {
+      "email": "cliente_positivo_19@example.com",
+      "answers": [
+        { "purpose": "Café bom, sempre peço o mesmo e a qualidade se mantém.", "score": "3", "explanation": "" },
+        { "purpose": "Ambiente muito agradável e sempre limpo.", "score": "4", "explanation": "" },
+        { "purpose": "Atendimento excelente, com muita simpatia.", "score": "5", "explanation": "Me sinto bem-vindo." }
+      ]
+    },
+    {
+      "email": "cliente_positivo_20@example.com",
+      "answers": [
+        { "purpose": "Café com ótima apresentação e sabor.", "score": "4", "explanation": "" },
+        { "purpose": "Ambiente perfeito para relaxar, música calma e decoração bonita.", "score": "5", "explanation": "" },
+        { "purpose": "Atendimento muito bom, eficiente.", "score": "3", "explanation": "" }
+      ]
+    },
+    {
+      "email": "cliente_positivo_21@example.com",
+      "answers": [
+        { "purpose": "Café excelente, aroma que preenche o ambiente.", "score": "5", "explanation": "" },
+        { "purpose": "Lugar muito confortável e com uma vibe ótima.", "score": "4", "explanation": "" },
+        { "purpose": "Atendimento cordial e bastante ágil.", "score": "4", "explanation": "" }
+      ]
+    },
+    {
+      "email": "cliente_positivo_22@example.com",
+      "answers": [
+        { "purpose": "Café bom, mas poderia ser um pouco mais encorpado.", "score": "3", "explanation": "" },
+        { "purpose": "Ambiente muito bonito e bem cuidado.", "score": "4", "explanation": "Limpeza nota 10." },
+        { "purpose": "Atendimento excelente, todos muito prestativos.", "score": "5", "explanation": "" }
+      ]
+    },
+    {
+      "email": "cliente_positivo_23@example.com",
+      "answers": [
+        { "purpose": "Gostei muito do café, sabor e temperatura ótimos.", "score": "4", "explanation": "" },
+        { "purpose": "Ambiente agradável, mas um pouco cheio no horário que fui.", "score": "3", "explanation": "" },
+        { "purpose": "Atendimento profissional e eficiente.", "score": "4", "explanation": "" }
+      ]
+    },
+    {
+      "email": "cliente_positivo_24@example.com",
+      "answers": [
+        { "purpose": "Café excelente, sempre uma ótima experiência.", "score": "5", "explanation": "" },
+        { "purpose": "Ambiente agradável e com boa disposição das mesas.", "score": "4", "explanation": "Bom para grupos." },
+        { "purpose": "Atendimento atencioso e rápido.", "score": "3", "explanation": "" }
+      ]
+    },
+    {
+      "email": "cliente_positivo_25@example.com",
+      "answers": [
+        { "purpose": "Café bom e com preço justo.", "score": "3", "explanation": "Bom custo-benefício." },
+        { "purpose": "Ambiente muito limpo e organizado, parabéns!", "score": "5", "explanation": "" },
+        { "purpose": "Atendimento muito bom, simpático e eficiente.", "score": "4", "explanation": "" }
+      ]
+    },
+    {
+      "email": "cliente_positivo_26@example.com",
+      "answers": [
+        { "purpose": "Café de alta qualidade, sabor diferenciado.", "score": "4", "explanation": "" },
+        { "purpose": "Ambiente confortável e com decoração de bom gosto.", "score": "4", "explanation": "" },
+        { "purpose": "Atendimento impecável, equipe nota 10.", "score": "5", "explanation": "" }
+      ]
+    },
+    {
+      "email": "cliente_positivo_27@example.com",
+      "answers": [
+        { "purpose": "Café delicioso, vale a visita só por ele.", "score": "5", "explanation": "" },
+        { "purpose": "Ambiente bom, mas poderia ter mais tomadas.", "score": "3", "explanation": "Para quem precisa trabalhar." },
+        { "purpose": "Atendimento muito bom, atenciosos.", "score": "4", "explanation": "" }
+      ]
+    },
+    {
+      "email": "cliente_positivo_28@example.com",
+      "answers": [
+        { "purpose": "Café muito bom, bem preparado.", "score": "4", "explanation": "" },
+        { "purpose": "Ambiente agradável e com uma boa seleção musical.", "score": "4", "explanation": "" },
+        { "purpose": "Atendimento eficiente e educado.", "score": "3", "explanation": "" }
+      ]
+    },
+    {
+      "email": "cliente_positivo_29@example.com",
+      "answers": [
+        { "purpose": "Café bom, padrão de qualidade mantido.", "score": "3", "explanation": "" },
+        { "purpose": "Ambiente muito acolhedor e sempre limpo.", "score": "4", "explanation": "" },
+        { "purpose": "Atendimento excelente, superou as expectativas.", "score": "5", "explanation": "Recomendo fortemente." }
+      ]
+    },
+    {
+      "email": "cliente_positivo_30@example.com",
+      "answers": [
+        { "purpose": "Café com apresentação impecável e sabor ótimo.", "score": "4", "explanation": "" },
+        { "purpose": "Ambiente perfeito para uma tarde tranquila, muito relaxante.", "score": "5", "explanation": "" },
+        { "purpose": "Atendimento bom, equipe organizada.", "score": "3", "explanation": "" }
+      ]
+    },
+    {
+      "email": "cliente_positivo_31@example.com",
+      "answers": [
+        { "purpose": "Café fantástico, um dos melhores que já provei!", "score": "5", "explanation": "Sabor inigualável." },
+        { "purpose": "Ambiente muito confortável, ideal para ler um livro.", "score": "4", "explanation": "Atmosfera calma." },
+        { "purpose": "Atendimento rápido e muito cortês por parte de todos.", "score": "4", "explanation": "Equipe bem alinhada." }
+      ]
+    },
+    {
+      "email": "cliente_positivo_32@example.com",
+      "answers": [
+        { "purpose": "O café estava bom, como de costume.", "score": "3", "explanation": "Mantenho a preferência." },
+        { "purpose": "Ambiente sempre muito limpo e com decoração agradável.", "score": "4", "explanation": "Consistência na qualidade do local." },
+        { "purpose": "Atendimento excepcional, fazem você se sentir em casa.", "score": "5", "explanation": "O diferencial do lugar." }
+      ]
+    },
+    {
+      "email": "cliente_positivo_33@example.com",
+      "answers": [
+        { "purpose": "Adorei o café especial do dia, muito saboroso.", "score": "4", "explanation": "Inovação bem-vinda." },
+        { "purpose": "Ambiente agradável, embora um pouco cheio.", "score": "3", "explanation": "Sucesso de público." },
+        { "purpose": "Atendimento profissional e muito eficiente.", "score": "4", "explanation": "Conseguem dar conta do movimento." }
+      ]
+    },
+    {
+      "email": "cliente_positivo_34@example.com",
+      "answers": [
+        { "purpose": "Café excelente, sempre uma aposta certeira.", "score": "5", "explanation": "Nunca decepciona." },
+        { "purpose": "Ambiente com ótima disposição de mesas e muito confortável.", "score": "4", "explanation": "Bom para diferentes ocasiões." },
+        { "purpose": "Atendimento atencioso, mesmo nos horários de pico.", "score": "3", "explanation": "Mantêm o padrão." }
+      ]
+    },
+    {
+      "email": "cliente_positivo_35@example.com",
+      "answers": [
+        { "purpose": "Café bom, com um bom equilíbrio de acidez e corpo.", "score": "3", "explanation": "Para quem aprecia detalhes." },
+        { "purpose": "Ambiente impecavelmente limpo e muito bem organizado.", "score": "5", "explanation": "Dá gosto de ver o cuidado." },
+        { "purpose": "Atendimento muito bom, com funcionários simpáticos e proativos.", "score": "4", "explanation": "Fazem a diferença." }
+      ]
+    },
+    {
+      "email": "cliente_positivo_36@example.com",
+      "answers": [
+        { "purpose": "Café de alta qualidade, sabor que permanece na boca.", "score": "4", "explanation": "Experiência gustativa ótima." },
+        { "purpose": "Ambiente confortável e com uma decoração que inspira tranquilidade.", "score": "4", "explanation": "Perfeito para relaxar." },
+        { "purpose": "Atendimento impecável, desde a recepção até o pagamento.", "score": "5", "explanation": "Serviço completo." }
+      ]
+    },
+    {
+      "email": "cliente_positivo_37@example.com",
+      "answers": [
+        { "purpose": "Café delicioso, com várias opções de preparo.", "score": "5", "explanation": "A barista sabe o que faz." },
+        { "purpose": "Ambiente bom, mas a iluminação poderia ser um pouco mais quente.", "score": "3", "explanation": "Detalhe para ficar perfeito." },
+        { "purpose": "Atendimento muito bom, sempre com um sorriso no rosto.", "score": "4", "explanation": "Alegra o dia." }
+      ]
+    },
+    {
+      "email": "cliente_positivo_38@example.com",
+      "answers": [
+        { "purpose": "Café muito bom, bem extraído e com crema perfeita.", "score": "4", "explanation": "Para os amantes de expresso." },
+        { "purpose": "Ambiente agradável e com uma ótima seleção de músicas de fundo.", "score": "4", "explanation": "Trilha sonora ideal." },
+        { "purpose": "Atendimento eficiente e discreto, como deve ser.", "score": "3", "explanation": "Sem exageros." }
+      ]
+    },
+    {
+      "email": "cliente_positivo_39@example.com",
+      "answers": [
+        { "purpose": "Café bom, consistente com o que é oferecido.", "score": "3", "explanation": "Sem surpresas negativas." },
+        { "purpose": "Ambiente muito acolhedor, me sinto em casa.", "score": "4", "explanation": "Vontade de voltar sempre." },
+        { "purpose": "Atendimento excelente, a equipe é o ponto alto!", "score": "5", "explanation": "Pessoas incríveis." }
+      ]
+    },
+    {
+      "email": "cliente_positivo_40@example.com",
+      "answers": [
+        { "purpose": "Café com apresentação cuidadosa e sabor marcante.", "score": "4", "explanation": "Nota-se o esmero." },
+        { "purpose": "Ambiente perfeito para uma tarde produtiva de trabalho.", "score": "5", "explanation": "Wi-fi ótimo e tomadas disponíveis." },
+        { "purpose": "Atendimento bom, foram rápidos e atenciosos.", "score": "3", "explanation": "Cumpriram bem o papel." }
+      ]
+    },
+    {
+      "email": "cliente_positivo_41@example.com",
+      "answers": [
+        { "purpose": "Café excepcional, com notas aromáticas complexas.", "score": "5", "explanation": "Para paladares exigentes." },
+        { "purpose": "Lugar muito confortável e com uma atmosfera vibrante.", "score": "4", "explanation": "Energia boa." },
+        { "purpose": "Atendimento ágil e muito cortês por toda a equipe.", "score": "4", "explanation": "Sincronia no atendimento." }
+      ]
+    },
+    {
+      "email": "cliente_positivo_42@example.com",
+      "answers": [
+        { "purpose": "O café estava ótimo, como sempre.", "score": "4", "explanation": "Mantenho a fidelidade." },
+        { "purpose": "Ambiente sempre impecável e com decoração que agrada.", "score": "4", "explanation": "Cuidado constante." },
+        { "purpose": "Atendimento bom e profissional, como se espera.", "score": "3", "explanation": "Confiável." }
+      ]
+    },
+    {
+      "email": "cliente_positivo_43@example.com",
+      "answers": [
+        { "purpose": "Café bom, com variedade de grãos para escolher.", "score": "3", "explanation": "Opções para todos." },
+        { "purpose": "Ambiente muito bem planejado, confortável e esteticamente agradável.", "score": "5", "explanation": "Design de interiores nota 10." },
+        { "purpose": "Atendimento muito bom, com sugestões úteis do cardápio.", "score": "4", "explanation": "Conhecimento dos produtos." }
+      ]
+    },
+    {
+      "email": "cliente_positivo_44@example.com",
+      "answers": [
+        { "purpose": "Café de alta qualidade, sabor que impressiona.", "score": "4", "explanation": "Vale a pena experimentar." },
+        { "purpose": "Ambiente com ótima acústica e muito confortável.", "score": "4", "explanation": "Ideal para conversas." },
+        { "purpose": "Atendimento impecável, todos os funcionários são muito educados.", "score": "5", "explanation": "Padrão elevado de serviço." }
+      ]
+    },
+    {
+      "email": "cliente_positivo_45@example.com",
+      "answers": [
+        { "purpose": "Café delicioso, um dos meus favoritos na cidade.", "score": "5", "explanation": "Recomendo a todos." },
+        { "purpose": "Ambiente bom, limpo e com uma energia positiva.", "score": "3", "explanation": "Sempre uma boa opção." },
+        { "purpose": "Atendimento muito bom, com destaque para a simpatia da equipe.", "score": "4", "explanation": "Faz toda a diferença." }
+      ]
+    }
+  ]
+}

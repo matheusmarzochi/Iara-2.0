@@ -25,16 +25,21 @@ type ResearchData = {
 }
 
 const researchFiles = [
-    '/code/worker/src/seed/researches/f4p-base.json',
-    '/code/worker/src/seed/researches/sicredi-2019.json',
-    '/code/worker/src/seed/researches/sicredi-2020.json',
-    '/code/worker/src/seed/researches/sicredi-2021.json',
-    '/code/worker/src/seed/researches/sicredi-2022.json',
-    '/code/worker/src/seed/researches/sicredi-2023.json',
-    '/code/worker/src/seed/researches/sicredi-2024.json',
-    '/code/worker/src/seed/researches/sicredi-2025-01.json',
-    '/code/worker/src/seed/researches/sicredi-2025-02.json',
-    '/code/worker/src/seed/researches/sicredi-2025-04.json'
+    //'/code/worker/src/seed/researches/f4p-base.json',
+    //'/code/worker/src/seed/researches/sicredi-2019.json',
+    //'/code/worker/src/seed/researches/sicredi-2020.json',
+    //'/code/worker/src/seed/researches/sicredi-2021.json',
+    //'/code/worker/src/seed/researches/sicredi-2022.json',
+    //'/code/worker/src/seed/researches/sicredi-2023.json',
+    //'/code/worker/src/seed/researches/sicredi-2024.json',
+    //'/code/worker/src/seed/researches/sicredi-2025-01.json',
+    //'/code/worker/src/seed/researches/sicredi-2025-02.json',
+    //'/code/worker/src/seed/researches/sicredi-2025-04.json',
+    '/code/worker/src/seed/researches/coffe-shop-2025-01.json',
+    '/code/worker/src/seed/researches/coffe-shop-2025-02.json',
+    '/code/worker/src/seed/researches/coffe-shop-2025-03.json',
+    '/code/worker/src/seed/researches/coffe-shop-2025-04.json',
+    '/code/worker/src/seed/researches/coffe-shop-2025-05.json'
 ]
 
 const seed = async (email: string) => {
