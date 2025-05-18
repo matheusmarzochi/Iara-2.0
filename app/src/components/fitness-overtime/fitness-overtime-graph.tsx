@@ -1,7 +1,8 @@
 "use client";
 import React, { useState, useMemo } from "react";
 import type { ReportData, Research } from "iara-shared/database/schema";
-import { Eye, EyeOff } from "lucide-react";
+import { Eye } from "lucide-react";
+import { EyeClosedIcon } from "@radix-ui/react-icons";
 
 export type FitnessOvertimeData = {
     research: Pick<Research, "id" | "title" | "createdAt">;
@@ -26,7 +27,6 @@ function formatDate(dateStr?: string | Date) {
     return `${d.getUTCFullYear()}-${String(d.getUTCMonth() + 1).padStart(2, "0")}-${String(d.getUTCDate()).padStart(2, "0")}`;
 }
 
-// Função utilitária para somar score_box de um array de relatórios
 function sumScoreBox(reports: { score_box: { fit: number; neutral: number; unfit: number } }[]) {
     return reports.reduce(
         (acc, r) => ({
@@ -65,91 +65,128 @@ export default function FitnessOvertimeGraph({ fitnessList, onSelectPurpose }: F
         }
     }
 
+    const barData = sortedFitnessList.map((fitness) => {
+        const totalScore = sumScoreBox(fitness.report);
+        const total = totalScore.fit + totalScore.neutral + totalScore.unfit || 1;
+        return {
+            fit: totalScore.fit,
+            neutral: totalScore.neutral,
+            unfit: totalScore.unfit,
+            fitPct: (totalScore.fit / total) * 100,
+            neutralPct: (totalScore.neutral / total) * 100,
+            unfitPct: (totalScore.unfit / total) * 100,
+            createdAt: fitness.research.createdAt,
+        };
+    });
+
+    const barWidth = 28; // px
+    const barGap = 6; // px
+
     return (
-        <main className="flex flex-col items-center p-8 bg-[#F8FAFC] dark:bg-sky-950 transition-colors">
-            <div className="flex w-full max-w-4xl mb-8 gap-8">
+        <div className="flex flex-col items-center transition-colors">
+            <div className="w-full mb-8">
                 <div className="flex-1">
                     <div className="mb-2 font-semibold flex items-center gap-4 text-foreground dark:text-white">
                         Comparativo dos Relatórios
                     </div>
-                    <div className="space-y-2">
-                        {sortedFitnessList.map((fitness, fIdx) => {
-                            // Soma todos os score_box dos relatórios deste research
-                            const totalScore = sumScoreBox(fitness.report);
-                            const total = totalScore.fit + totalScore.neutral + totalScore.unfit || 1;
-                            const fitPct = (totalScore.fit / total) * 100;
-                            const neutralPct = (totalScore.neutral / total) * 100;
-                            const unfitPct = (totalScore.unfit / total) * 100;
-                            const isSelected = selectedPurpose?.researchIdx === fIdx;
-                            return (
-                                <React.Fragment key={fitness.research.id}>
-                                    <div className="flex items-center gap-2">
-                                        <span
-                                            className="min-w-[8rem] max-w-xs text-sm text-foreground dark:text-white whitespace-normal"
-                                            style={{ wordBreak: "break-word" }}
+                    <div className="w-full flex flex-col items-stretch">
+                        <div className="w-full overflow-x-auto">
+                            <div
+                                className="flex items-end justify-start"
+                                style={{
+                                    minHeight: 340,
+                                    paddingBottom: 8,
+                                    minWidth: `${barData.length * (barWidth + barGap)}px`,
+                                }}
+                            >
+                                {barData.map((bar, fIdx) => {
+                                    const isSelected = selectedPurpose?.researchIdx === fIdx;
+                                    return (
+                                        <div
+                                            key={fIdx}
+                                            className="flex flex-col items-center justify-end"
+                                            style={{
+                                                width: `${barWidth}px`,
+                                                marginRight: fIdx !== barData.length - 1 ? `${barGap}px` : undefined,
+                                            }}
                                         >
-                                            {formatDate(fitness.research.createdAt)}
-                                        </span>
-                                        <div className="flex-1 h-6 flex rounded overflow-hidden border border-gray-200 dark:border-sky-800 relative">
-                                            <div
-                                                style={{ width: `${fitPct}%` }}
-                                                className="bg-green-400 flex items-center justify-center h-full"
+                                            <span
+                                                className="mb-2 text-xs text-foreground dark:text-white break-words"
+                                                style={{
+                                                    writingMode: "vertical-rl",
+                                                    transform: "rotate(180deg)",
+                                                    whiteSpace: "nowrap",
+                                                    height: "80px",
+                                                    overflow: "hidden",
+                                                    display: "flex",
+                                                    alignItems: "center",
+                                                    justifyContent: "center",
+                                                    width: `${barWidth}px`,
+                                                }}
                                             >
-                                                {fitPct > 10 && (
-                                                    <span className="text-xs text-white font-bold px-1">
-                                                        {Math.round(fitPct)}% ({totalScore.fit})
-                                                    </span>
-                                                )}
-                                            </div>
+                                                {formatDate(bar.createdAt)}
+                                            </span>
                                             <div
-                                                style={{ width: `${neutralPct}%` }}
-                                                className="bg-amber-400 flex items-center justify-center h-full"
+                                                className="flex flex-col-reverse rounded overflow-hidden border border-gray-200 dark:border-sky-800 relative transition-all duration-200 cursor-pointer"
+                                                style={{
+                                                    width: `${barWidth}px`,
+                                                    height: "288px",
+                                                    boxShadow: isSelected ? "0 0 0 2px #0284c7" : undefined,
+                                                    borderColor: isSelected ? "#0284c7" : undefined,
+                                                    boxSizing: "border-box",
+                                                }}
+                                                onClick={() =>
+                                                    handleSelectPurpose(
+                                                        isSelected ? null : { researchIdx: fIdx, purposeIdx: 0 }
+                                                    )
+                                                }
+                                                title={isSelected ? "Ocultar relatório" : "Ver relatório"}
                                             >
-                                                {neutralPct > 10 && (
-                                                    <span className="text-xs text-white font-bold px-1">
-                                                        {Math.round(neutralPct)}% ({totalScore.neutral})
-                                                    </span>
-                                                )}
+                                                {/* Unfit */}
+                                                <div
+                                                    style={{ height: `${bar.unfitPct}%` }}
+                                                    className="bg-red-400 flex items-end justify-center w-full transition-all duration-200"
+                                                />
+                                                {/* Neutral */}
+                                                <div
+                                                    style={{ height: `${bar.neutralPct}%` }}
+                                                    className="bg-amber-400 flex items-end justify-center w-full transition-all duration-200"
+                                                />
+                                                {/* Fit */}
+                                                <div
+                                                    style={{ height: `${bar.fitPct}%` }}
+                                                    className="bg-green-400 flex items-end justify-center w-full transition-all duration-200"
+                                                />
                                             </div>
-                                            <div
-                                                style={{ width: `${unfitPct}%` }}
-                                                className="bg-red-400 flex items-center justify-center h-full"
+                                            <button
+                                                className={`mt-2 w-7 h-7 flex items-center justify-center rounded text-xs border transition-colors z-10 bg-white/80 dark:bg-sky-900/80
+                                                    ${isSelected
+                                                        ? "bg-sky-600 text-white border-sky-600"
+                                                        : "border-gray-300 dark:border-sky-700 text-gray-700 dark:text-white hover:bg-sky-100 dark:hover:bg-sky-800"
+                                                    }`}
+                                                onClick={() =>
+                                                    handleSelectPurpose(
+                                                        isSelected ? null : { researchIdx: fIdx, purposeIdx: 0 }
+                                                    )
+                                                }
+                                                title={isSelected ? "Ocultar relatório" : "Ver relatório"}
+                                                style={{ boxShadow: "0 1px 4px 0 #0001" }}
                                             >
-                                                {unfitPct > 10 && (
-                                                    <span className="text-xs text-white font-bold px-1">
-                                                        {Math.round(unfitPct)}% ({totalScore.unfit})
-                                                    </span>
+                                                {isSelected ? (
+                                                    <Eye className="w-4 h-4 text-slate-700 dark:text-white" />
+                                                ) : (
+                                                    <EyeClosedIcon className="w-4 h-4 text-slate-700 dark:text-white" />
                                                 )}
-                                            </div>
+                                            </button>
                                         </div>
-                                        <button
-                                            className={`w-8 h-8 ml-2 flex items-center justify-center rounded text-xs border transition-colors ${isSelected
-                                                    ? "bg-sky-600 text-white border-sky-600"
-                                                    : "bg-white dark:bg-sky-900 border-gray-300 dark:border-sky-700 text-gray-700 dark:text-white hover:bg-sky-100 dark:hover:bg-sky-800"
-                                                }`}
-                                            onClick={() =>
-                                                handleSelectPurpose(
-                                                    isSelected ? null : { researchIdx: fIdx, purposeIdx: 0 }
-                                                )
-                                            }
-                                            title={isSelected ? "Ocultar relatório" : "Ver relatório"}
-                                        >
-                                            {isSelected ? (
-                                                // Ícone de olho fechado (hide) do lucide-react
-                                                <EyeOff className="w-5 h-5" />
-                                            ) : (
-                                                // Ícone de olho aberto (show) do lucide-react
-                                                <Eye className="w-5 h-5" />
-                                            )}
-                                        </button>
-                                    </div>
-                                </React.Fragment>
-                            );
-                        })}
+                                    );
+                                })}
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
-        </main>
+        </div>
     );
 }
 

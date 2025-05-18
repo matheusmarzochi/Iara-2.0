@@ -75,7 +75,7 @@ export default async function SurveyDashboard({ params }: Props) {
   
   return (
     <div>
-      <ReportHeader formsLength={formsLength} research={research} totalViews={totalViews} />
+      <ReportHeader formsLength={formsLength} research={research} reports={reports} totalViews={totalViews} />
       <ReportView reports={reports} research={research} categories={categories} enableSwitch={enableSwitch} />
     </div>
   )

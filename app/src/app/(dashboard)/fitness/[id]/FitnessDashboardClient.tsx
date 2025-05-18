@@ -15,40 +15,19 @@ type FitnessDashboardClientProps = {
 }
 
 export default function FitnessDashboardClient({ fitnessData, reportViewDict }: FitnessDashboardClientProps) {
-    const [selected, setSelected] = useState<{ researchId: string | null, proposeId: string | null }>({ researchId: null, proposeId: null })
+    const [selectedResearchId, setSelectedResearchId] = useState<string | null>(null)
 
-    const handleSelectPurpose = useCallback((researchId: string | null, proposeId: string | null) => {
-        if (researchId && reportViewDict[researchId]) {
-            const base = reportViewDict[researchId]
-            const firstReport = base?.reports?.[0]
-            setSelected({
-                researchId,
-                proposeId: proposeId ?? firstReport?.question_id ?? null
-            })
-        } else {
-            setSelected({ researchId, proposeId })
-        }
-    }, [reportViewDict])
+    const handleSelectPurpose = useCallback((researchId: string | null) => {
+        setSelectedResearchId(researchId)
+    }, [])
 
     let selectedReportData: ReportData | undefined = undefined
-    if (selected.researchId && selected.proposeId) {
-        const base = reportViewDict[selected.researchId]
+    if (selectedResearchId) {
+        const base = reportViewDict[selectedResearchId]
         if (base) {
-            const filteredReports = base.reports.filter(r => r.question_id === selected.proposeId)
-            if (filteredReports.length > 0) {
-                selectedReportData = {
-                    ...base,
-                    reports: filteredReports,
-                }
-            }
+            selectedReportData = base
         }
     }
-
-    const handleTabSelect = useCallback((tabId: string) => {
-        if (selected.researchId) {
-            setSelected({ researchId: selected.researchId, proposeId: tabId })
-        }
-    }, [selected.researchId])
 
     return (
         <div>
@@ -60,17 +39,16 @@ export default function FitnessDashboardClient({ fitnessData, reportViewDict }: 
                 <>
                     <ReportHeader
                         formsLength={selectedReportData.formsLength}
+                        reports={selectedReportData.reports}
                         research={selectedReportData.research}
                         totalViews={selectedReportData.totalViews}
                     />
                     <ReportView
-                        key={`${selected.researchId ?? ""}-${selected.proposeId ?? ""}`}
+                        key={`${selectedResearchId ?? ""}`}
                         reports={selectedReportData.reports}
                         research={selectedReportData.research}
                         categories={selectedReportData.categories}
                         enableSwitch={true}
-                        defaultTabId={selected.proposeId || undefined}
-                        onTabSelect={handleTabSelect}
                     />
                 </>
             )}
