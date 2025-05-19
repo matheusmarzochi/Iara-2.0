@@ -9,3 +9,4 @@ export * from "./research";
 export * from "./user";
 export * from "./analysis";
 export * from "./research_view";
+export * from "./fitness";

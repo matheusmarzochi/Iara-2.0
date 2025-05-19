@@ -1,13 +1,33 @@
-import type React from "react"
-import { db } from "iara-shared/database"
-import { auth } from "@clerk/nextjs/server";
-import { reports, researches, researchViews, users } from "iara-shared/database/schema"
-import { eq, and, inArray, countDistinct } from "iara-shared/node_modules/drizzle-orm"
-import type { FitnessOvertimeData } from "~/components/fitness-overtime/fitness-overtime-graph"
-import type { ReportViewProps } from "~/components/report/report-view"
-import type { ReportHeaderProps } from "~/components/report/report-header"
-import FitnessDashboardClient from "./FitnessDashboardClient"
+import type React from "react";
+import { format, differenceInDays, differenceInMonths } from "date-fns";
 
+import { auth } from "@clerk/nextjs/server";
+
+import { db } from "iara-shared/database";
+import {
+    reports,
+    researches,
+    researchViews,
+    forms,
+    users,
+    fitness as fitnessTable,
+} from "iara-shared/database/schema";
+import {
+    eq,
+    and,
+    inArray,
+    count,
+    countDistinct,
+    isNull,
+} from "iara-shared/node_modules/drizzle-orm";
+
+import type { FitnessOvertimeData } from "~/components/fitness-overtime/fitness-overtime-graph";
+import type { ReportViewProps } from "~/components/report/report-view";
+import type { ReportHeaderProps } from "~/components/report/report-header";
+
+import FitnessDashboardClient from "~/components/fitness-overtime/fitness-dashboard";
+import EditFitnessForm from "~/components/fitness-overtime/edit-fitness-form";
+import RemoveFitness from "~/components/fitness-overtime/remove-fitness"
 type Props = {
   params: {
     id: string
@@ -120,7 +140,7 @@ export const reportViewData = async (researchId: string): Promise<ReportData | u
 
     return {
         categories: categoryList,
-        enableSwitch: true, // Enable the user to edit the targetCategory
+        enableSwitch: true,
         formsLength: research?.forms.length,
         reports: report.data,
         research,
@@ -129,38 +149,120 @@ export const reportViewData = async (researchId: string): Promise<ReportData | u
 }
 
 export default async function SurveyDashboard({ params }: Props) {
-  const researchList = [
-    '9c8d4ad5-41ec-49ad-a70b-3e6ffaf4ca93',
-    '5a68bd3c-3c37-4e57-a9cb-18a7ee460a1c',
-    '957f054b-d966-4b16-8c4f-b03bda2c123e',
-    '027f2061-a4fd-4d5e-921f-e9d1cc1bf746',
-    'beb1cd8a-3704-45b5-88cd-b9f6e5fdeac7',
-    '6531dc2c-63a9-4836-b98e-8d4ed047baf1',
-    '68817bf6-4d17-4114-a956-6713481b9e8f',
-    'f9867e6a-3693-4774-95e2-66a6534c03cc',
-    '2555cf78-9378-4c5b-994e-869947c0f02d',
+  const { userId } = auth();
 
-    '00b000f4-e3e0-4591-851c-ca1c2e570d3f',
-    '103d21b7-ee1f-4737-baf1-31ee067608d9',
-    'f1fc2a4f-59f9-4d10-b95f-07aaf24fe62f',
-    '3747256a-b540-4538-85a1-58aba261c54f'
-  ]
+  const [user] = await db
+    .select({ id: users.id })
+    .from(users)
+    .where(eq(users.clerkId, userId as string))
+    .limit(1);
 
-  const fitnessData = await fitnessOvertimeData(researchList)
-
-  const reportViewDict: Record<string, ReportData | undefined> = {}
-  for (const researchId of researchList) {
-    reportViewDict[researchId] = await reportViewData(researchId)
+  if (!user) {
+    return <>Empty</>;
   }
 
+  const [fitnessItem] = await db
+    .select({ researches: fitnessTable.researches, name: fitnessTable.name })
+    .from(fitnessTable)
+    .where(
+      and(
+        eq(fitnessTable.id, params.id),
+        eq(fitnessTable.userId, user.id)
+      )
+    )
+    .limit(1);
+
+  const researchList: string[] = Array.isArray(fitnessItem?.researches)
+    ? fitnessItem.researches
+    : [];
+
+  const fitnessData = await fitnessOvertimeData(researchList);
+
+  let periodText = "";
+  if (fitnessData && fitnessData.length > 0) {
+    const dates = fitnessData
+      .map(d => d.research.createdAt)
+      .filter(Boolean)
+      .map(date => typeof date === "string" ? new Date(date) : date)
+      .sort((a, b) => a.getTime() - b.getTime());
+
+    if (dates.length > 1) {
+      const first = dates[0];
+      const last = dates[dates.length - 1];
+      const diffDays = differenceInDays(last, first);
+      const diffMonths = differenceInMonths(last, first);
+
+      let intervalText = "";
+      if (diffMonths >= 2) {
+        intervalText = `${diffMonths} meses`;
+      } else {
+        intervalText = `${diffDays} dias`;
+      }
+
+      periodText = `Período: ${format(first, "dd/MM/yyyy")} até ${format(last, "dd/MM/yyyy")} (${intervalText})`;
+    } else if (dates.length === 1) {
+      periodText = `Data: ${format(dates[0], "dd/MM/yyyy")}`;
+    }
+  }
+
+  const reportViewDict: Record<string, ReportData | undefined> = {};
+  for (const researchId of researchList) {
+    reportViewDict[researchId] = await reportViewData(researchId);
+  }
+
+  const researchesListRaw = await db
+    .select({
+      id: researches.id,
+      title: researches.title,
+      formsCount: count(forms.id),
+      createdAt: researches.createdAt,
+    })
+    .from(researches)
+    .leftJoin(forms, eq(forms.researchId, researches.id))
+    .where(
+      and(
+        eq(researches.userId, user.id),
+        eq(researches.status, "FINISHED"),
+        isNull(researches.deletedAt)
+      )
+    )
+    .groupBy(researches.id);
+
+  const researchesList = researchesListRaw.map(r => ({
+    ...r,
+    createdAt: r.createdAt instanceof Date ? r.createdAt.toISOString() : r.createdAt,
+  }));
+
+  const fitnessObj = {
+    id: params.id,
+    name: fitnessItem?.name ?? "",
+    researches: Array.isArray(fitnessItem?.researches) ? fitnessItem.researches : [],
+  };
+
   if (!fitnessData) {
-    return <>Empty</>
+    return <>Empty</>;
   }
 
   return (
-    <FitnessDashboardClient
-      fitnessData={fitnessData}
-      reportViewDict={reportViewDict}
-    />
-  )
+    <div>
+      <header className="mb-6 flex items-center justify-between">
+        <div>
+          <h1 className="text-3xl font-bold">
+           {fitnessItem.name}
+          </h1>
+          {periodText && (
+            <div className="text-muted-foreground mt-1 text-base">{periodText}</div>
+          )}
+        </div>
+        <div className="flex gap-2 items-center">
+          <EditFitnessForm fitness={fitnessObj} researches={researchesList} />
+          <RemoveFitness fitnessId={fitnessObj.id} />
+        </div>
+      </header>
+      <FitnessDashboardClient
+        fitnessData={fitnessData}
+        reportViewDict={reportViewDict}
+      />
+    </div>
+  );
 }

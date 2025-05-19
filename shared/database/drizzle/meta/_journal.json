@@ -225,6 +225,20 @@
       "when": 1746619034499,
       "tag": "0031_slim_zombie",
       "breakpoints": true
+    },
+    {
+      "idx": 32,
+      "version": "7",
+      "when": 1747599245175,
+      "tag": "0032_empty_moira_mactaggert",
+      "breakpoints": true
+    },
+    {
+      "idx": 33,
+      "version": "7",
+      "when": 1747599765168,
+      "tag": "0033_spicy_imperial_guard",
+      "breakpoints": true
     }
   ]
 }

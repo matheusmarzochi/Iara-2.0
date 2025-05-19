@@ -217,10 +217,9 @@ export default async function DashboardPage({
                         >
                           <CardHeader>
                             <div className="flex justify-between items-start">
-                              <CardTitle className="text-xl truncate max-w-[10rem] md:max-w-full">
+                              <CardTitle className="text-xl max-w-[10rem] md:max-w-full">
                                 {research.title}
                               </CardTitle>
-                              <ResearchStatusBadge status={research.status} />
                             </div>
                           </CardHeader>
 
