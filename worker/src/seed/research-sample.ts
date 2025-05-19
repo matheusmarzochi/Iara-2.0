@@ -25,6 +25,18 @@ type ResearchData = {
 }
 
 const researchFiles = [
+    '/code/worker/src/seed/researches/coffe-shop-2024-01.json',
+    '/code/worker/src/seed/researches/coffe-shop-2024-02.json',
+    '/code/worker/src/seed/researches/coffe-shop-2024-03.json',
+    '/code/worker/src/seed/researches/coffe-shop-2024-04.json',
+    '/code/worker/src/seed/researches/coffe-shop-2024-05.json',
+    '/code/worker/src/seed/researches/coffe-shop-2024-06.json',
+    '/code/worker/src/seed/researches/coffe-shop-2024-07.json',
+    '/code/worker/src/seed/researches/coffe-shop-2024-08.json',
+    '/code/worker/src/seed/researches/coffe-shop-2024-09.json',
+    '/code/worker/src/seed/researches/coffe-shop-2024-10.json',
+    '/code/worker/src/seed/researches/coffe-shop-2024-11.json',
+    '/code/worker/src/seed/researches/coffe-shop-2024-12.json',
     //'/code/worker/src/seed/researches/f4p-base.json',
     //'/code/worker/src/seed/researches/sicredi-2019.json',
     //'/code/worker/src/seed/researches/sicredi-2020.json',
@@ -35,11 +47,11 @@ const researchFiles = [
     //'/code/worker/src/seed/researches/sicredi-2025-01.json',
     //'/code/worker/src/seed/researches/sicredi-2025-02.json',
     //'/code/worker/src/seed/researches/sicredi-2025-04.json',
-    '/code/worker/src/seed/researches/coffe-shop-2025-01.json',
-    '/code/worker/src/seed/researches/coffe-shop-2025-02.json',
-    '/code/worker/src/seed/researches/coffe-shop-2025-03.json',
-    '/code/worker/src/seed/researches/coffe-shop-2025-04.json',
-    '/code/worker/src/seed/researches/coffe-shop-2025-05.json'
+    //'/code/worker/src/seed/researches/coffe-shop-2025-01.json',
+    //'/code/worker/src/seed/researches/coffe-shop-2025-02.json',
+    //'/code/worker/src/seed/researches/coffe-shop-2025-03.json',
+    //'/code/worker/src/seed/researches/coffe-shop-2025-04.json',
+    //'/code/worker/src/seed/researches/coffe-shop-2025-05.json'
 ]
 
 const seed = async (email: string) => {

@@ -139,27 +139,25 @@ export default async function FitnessPage({ searchParams }: { searchParams?: { o
 
   return (
     <div>
-      <header className="mb-8 flex flex-col items-start gap-2 sm:flex-row sm:items-center sm:justify-between">
+      <header className="mb-8 flex flex-col items-start gap-2 pt-4 md:pt-0 sm:flex-row sm:items-center sm:justify-between">
         <div>
           <h1 className="text-3xl font-bold tracking-tight">Fitness Overtime</h1>
         </div>
         <CreateFitnessForm researches={researchesList} />
       </header>
       <div className="mt-6">
-        <div className="flex justify-between items-center mb-4">
-          <h2 className="text-xl font-semibold">Seus registros de Fitness</h2>
-        </div>
         {fitnessList.length === 0 ? (
           <p className="text-muted-foreground">Nenhum registro encontrado.</p>
         ) : (
           <div className="overflow-x-auto">
             <table className="min-w-full border rounded bg-[#F8FAFC] dark:bg-sky-900">
-              <thead>
+              <thead className="bg-blue-100 dark:bg-sky-800 text-blue-900 dark:text-blue-100 font-semibold">
                 <tr>
                   <th className="px-4 py-2 text-left w-full">Nome</th>
                   <th className="px-4 py-2 text-left sm:table-cell hidden whitespace-nowrap">Período (duração)</th>
                   <th className="px-4 py-2 text-left sm:hidden table-cell whitespace-nowrap">Duração</th>
                   <th className="px-4 py-2 text-left whitespace-nowrap">Pesquisas</th>
+                  <th className=""></th>
                 </tr>
               </thead>
               <tbody>

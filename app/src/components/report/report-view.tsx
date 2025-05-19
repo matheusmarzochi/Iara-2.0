@@ -371,7 +371,7 @@ function ResponseCard({ type, title, description }: Response) {
         <Card className="bg-[#F8FAFC] dark:bg-sky-900 border border-gray-300 dark:border-sky-800">
             <CardContent className="p-3 md:p-4">
                 <div className="flex flex-col gap-2">
-                    <div className="flex justify-between items-center">
+                    <div className="flex justify-between items-start">
                         <h4 className="font-bold text-foreground dark:text-white">{title}</h4>
                         <span className={cn("text-xs px-2 py-0.5 rounded-full", tagColors[type])}>
                             {type.charAt(0).toUpperCase() + type.slice(1)}

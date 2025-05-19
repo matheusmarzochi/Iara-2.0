@@ -159,25 +159,27 @@ export default async function DashboardPage({
       <main className="flex-1">
 
         <section className="flex flex-col items-end md:items-start pt-4 md:pt-0 pb-8 gap-6">
-          <div className="flex gap-4">
-            <Button size="sm" className="order-1 md:order-2" asChild>
-              <Link href="/researches/new">
-                <span className="flex items-center gap-2">
-                  <Plus className="w-4 h-4" />
-                  Criar Pesquisa
-                </span>
-              </Link>
-            </Button>
-            <Button size="sm" className="order-1 md:order-2" asChild>
-              <Link href="/researches/upload">
-                <span className="flex items-center gap-2">
-                  <Upload className="w-4 h-4" />
-                  Upload Data
-                </span>
-              </Link>
-            </Button>
+          <div className="flex w-full flex-col md:flex-row md:items-center md:justify-between gap-4">
+            <h1 className="text-3xl font-bold tracking-tight">Pesquisas</h1>
+            <div className="flex gap-4">
+              <Button size="sm" className="order-1 md:order-2" asChild>
+                <Link href="/researches/new">
+                  <span className="flex items-center gap-2">
+                    <Plus className="w-4 h-4" />
+                    Criar Pesquisa
+                  </span>
+                </Link>
+              </Button>
+              <Button size="sm" className="order-1 md:order-2" asChild>
+                <Link href="/researches/upload">
+                  <span className="flex items-center gap-2">
+                    <Upload className="w-4 h-4" />
+                    Upload Data
+                  </span>
+                </Link>
+              </Button>
+            </div>
           </div>
-
           {researchs.length <= 0 ? (
             <section className="order-2 md:order-1">
               <p className="text-muted-foreground">

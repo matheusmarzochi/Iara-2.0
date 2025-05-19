@@ -28,6 +28,10 @@ import type { ReportHeaderProps } from "~/components/report/report-header";
 import FitnessDashboardClient from "~/components/fitness-overtime/fitness-dashboard";
 import EditFitnessForm from "~/components/fitness-overtime/edit-fitness-form";
 import RemoveFitness from "~/components/fitness-overtime/remove-fitness"
+import Link from "next/link";
+import { Button } from "~/components/ui/button";
+import { ArrowLeftIcon } from "lucide-react";
+
 type Props = {
   params: {
     id: string
@@ -247,9 +251,25 @@ export default async function SurveyDashboard({ params }: Props) {
     <div>
       <header className="mb-6 flex items-center justify-between">
         <div>
-          <h1 className="text-3xl font-bold">
-           {fitnessItem.name}
-          </h1>
+          {/* Linha com botão voltar e nome */}
+          <div className="flex items-center gap-2">
+            <Button
+              size="sm"
+              variant="link"
+              className="p-0 text-foreground inline-flex"
+              asChild
+            >
+              <Link href="/fitness">
+                <span className="sr-only">
+                  Voltar para a lista de fitness
+                </span>
+                <ArrowLeftIcon className="size-10" />
+              </Link>
+            </Button>
+            <h1 className="text-3xl font-bold">
+              {fitnessItem.name}
+            </h1>
+          </div>
           {periodText && (
             <div className="text-muted-foreground mt-1 text-base">{periodText}</div>
           )}

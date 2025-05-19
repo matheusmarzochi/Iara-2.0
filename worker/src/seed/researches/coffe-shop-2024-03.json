@@ -1,0 +1,1320 @@
+{
+  "title": "Café Aconchego - (2024-Mar)",
+  "description": "Sua opinião nos ajuda a manter e melhorar nosso padrão. Avalie sua experiência conosco.",
+  "questions": [
+    {
+      "purpose": "Qualidade do Café: Como você avalia o sabor, temperatura e aroma do café que consumiu?",
+      "sequence": 1
+    },
+    {
+      "purpose": "Ambiente da Loja: Sua percepção sobre a limpeza, conforto, música e decoração do nosso espaço.",
+      "sequence": 2
+    },
+    {
+      "purpose": "Atendimento Recebido: Como foi a cordialidade, agilidade e eficiência da nossa equipe?",
+      "sequence": 3
+    }
+  ],
+  "forms": [
+    {
+      "email": "cliente_1@example.com",
+      "answers": [
+        {
+          "purpose": "O café estava absolutamente intragável, com um gosto forte de queimado e velho.",
+          "score": "0",
+          "explanation": "Pior experiência que já tive com café, impossível de beber. Não recomendo."
+        },
+        {
+          "purpose": "Ambiente estava imundo, mesas grudentas e o chão completamente sujo e pegajoso.",
+          "score": "0",
+          "explanation": "Falta de higiene básica, muito desagradável e preocupante para a saúde."
+        },
+        {
+          "purpose": "Atendente foi extremamente rude e demonstrou total impaciência desde o início do atendimento.",
+          "score": "0",
+          "explanation": "Me senti completamente desrespeitado e muito mal atendido por todos."
+        }
+      ]
+    },
+    {
+      "email": "cliente_2@example.com",
+      "answers": [
+        {
+          "purpose": "Café servido frio e com um sabor muito aguado, parecia resto do dia anterior.",
+          "score": "1",
+          "explanation": "A qualidade do café deixou muito a desejar, foi bastante decepcionante."
+        },
+        {
+          "purpose": "Música ambiente estava excessivamente alta e de péssimo gosto, impossível conversar.",
+          "score": "1",
+          "explanation": "Não consegui relaxar ou me concentrar no local devido ao barulho intenso."
+        },
+        {
+          "purpose": "Demora excessiva para ser atendido, mesmo com a loja estando relativamente vazia no momento.",
+          "score": "0",
+          "explanation": "Falta de atenção e de agilidade por parte de toda a equipe de atendimento."
+        }
+      ]
+    },
+    {
+      "email": "cliente_3@example.com",
+      "answers": [
+        {
+          "purpose": "Café fraco, sem aroma nenhum e com um sabor residual bastante ruim na boca.",
+          "score": "1",
+          "explanation": "Qualidade bem abaixo do que se espera de um café minimamente decente e saboroso."
+        },
+        {
+          "purpose": "Ambiente com pouca iluminação e um aspecto geral de muito mal conservado e velho.",
+          "score": "1",
+          "explanation": "Precisa de mais cuidado e de mais atenção aos detalhes básicos do espaço físico."
+        },
+        {
+          "purpose": "Atendente parecia completamente desinteressado no trabalho e demonstrou muita má vontade.",
+          "score": "0",
+          "explanation": "Não me senti bem-vindo ou valorizado como cliente neste estabelecimento comercial."
+        }
+      ]
+    },
+    {
+      "email": "cliente_4@example.com",
+      "answers": [
+        {
+          "purpose": "O café estava apenas ok, nada de muito especial, e um pouco morno demais para o meu gosto.",
+          "score": "2",
+          "explanation": "Pelo preço cobrado, eu realmente esperava uma qualidade significativamente superior."
+        },
+        {
+          "purpose": "Ambiente razoável, mas a limpeza das mesas deixou bastante a desejar desta vez que visitei.",
+          "score": "1",
+          "explanation": "Notei alguns restos de comida de outros clientes nas mesas próximas à minha."
+        },
+        {
+          "purpose": "Atendimento foi funcional, mas sem qualquer traço de simpatia ou de cordialidade da equipe.",
+          "score": "1",
+          "explanation": "A equipe apenas cumpriu o mínimo do mínimo necessário, sem nenhum encanto."
+        }
+      ]
+    },
+    {
+      "email": "cliente_5@example.com",
+      "answers": [
+        {
+          "purpose": "Sabor do café era péssimo, tinha gosto de velho e de algo requentado várias vezes.",
+          "score": "0",
+          "explanation": "Não me surpreendeu nem um pouco, infelizmente, já esperava algo ruim."
+        },
+        {
+          "purpose": "O lugar é simples, a decoração é praticamente inexistente e o conforto é absolutamente zero.",
+          "score": "0",
+          "explanation": "Falta um toque especial para tornar o ambiente minimamente acolhedor e agradável."
+        },
+        {
+          "purpose": "Atendimento lento, o funcionário que me atendeu parecia perdido e bastante despreparado.",
+          "score": "0",
+          "explanation": "A paciência foi testada ao limite extremo para conseguir ser atendido no local."
+        }
+      ]
+    },
+    {
+      "email": "cliente_6@example.com",
+      "answers": [
+        {
+          "purpose": "Qualidade do café era horrível, tinha um gosto químico muito forte e estranho.",
+          "score": "0",
+          "explanation": "Não consegui beber, tive que jogar o café fora imediatamente após provar."
+        },
+        {
+          "purpose": "O local estava visivelmente sujo, com lixo espalhado pelo chão e mesas por limpar.",
+          "score": "0",
+          "explanation": "Uma experiência muito negativa e completamente anti-higiênica para qualquer um."
+        },
+        {
+          "purpose": "Fui ignorado no balcão por um longo tempo, demonstrou total descaso com o cliente.",
+          "score": "0",
+          "explanation": "Atendimento precisa melhorar urgentemente, foi simplesmente péssimo e inaceitável."
+        }
+      ]
+    },
+    {
+      "email": "cliente_7@example.com",
+      "answers": [
+        {
+          "purpose": "Café muito amargo e foi servido quase frio na mesa, completamente intragável.",
+          "score": "0",
+          "explanation": "Não valeu a pena o dinheiro que foi gasto, infelizmente, uma decepção."
+        },
+        {
+          "purpose": "Ambiente escuro e com um cheiro desagradável de fritura velha impregnado no ar.",
+          "score": "1",
+          "explanation": "Muito desconfortável para permanecer no local por muito tempo com esse odor."
+        },
+        {
+          "purpose": "Atendente parecia confuso e completamente despreparado para dar informações básicas.",
+          "score": "1",
+          "explanation": "A falta de treinamento da equipe de atendimento era bastante evidente."
+        }
+      ]
+    },
+    {
+      "email": "cliente_8@example.com",
+      "answers": [
+        {
+          "purpose": "Sabor do café era apenas mediano, nada que realmente se destacasse dos demais.",
+          "score": "2",
+          "explanation": "Esperava muito mais criatividade ou qualidade no produto final oferecido."
+        },
+        {
+          "purpose": "O lugar é ok, mas a música ambiente estava muito repetitiva e também muito alta.",
+          "score": "2",
+          "explanation": "A limpeza do local também não era das melhores que já vi, deixou a desejar."
+        },
+        {
+          "purpose": "Atendimento um pouco lento, mas o funcionário ao menos foi educado durante o contato.",
+          "score": "2",
+          "explanation": "Poderiam ser consideravelmente mais ágeis no serviço prestado aos clientes."
+        }
+      ]
+    },
+    {
+      "email": "cliente_9@example.com",
+      "answers": [
+        {
+          "purpose": "Café com gosto forte de queimado, muito ruim mesmo, completamente intragável.",
+          "score": "0",
+          "explanation": "Impossível de tomar, a qualidade era péssima e totalmente inaceitável."
+        },
+        {
+          "purpose": "Ambiente barulhento e com pouca ventilação, estava muito abafado no dia da visita.",
+          "score": "1",
+          "explanation": "Não é um lugar agradável para ficar por muito tempo conversando ou trabalhando."
+        },
+        {
+          "purpose": "Demora absurda para o pedido chegar à mesa, e ainda por cima veio errado.",
+          "score": "0",
+          "explanation": "Total desorganização e clara falta de competência no atendimento prestado."
+        }
+      ]
+    },
+    {
+      "email": "cliente_10@example.com",
+      "answers": [
+        {
+          "purpose": "Café péssimo, com um sabor de terra e ainda por cima servido frio na xícara.",
+          "score": "0",
+          "explanation": "Uma das piores xícaras de café que já tive o desprazer de provar em minha vida."
+        },
+        {
+          "purpose": "Ambiente estava sujo, com teias de aranha visíveis nos cantos e poeira sobre as mesas.",
+          "score": "0",
+          "explanation": "A falta de cuidado com a limpeza do local é gritante e bastante inaceitável."
+        },
+        {
+          "purpose": "Atendimento lento e o funcionário cometeu diversos erros básicos na anotação do pedido.",
+          "score": "1",
+          "explanation": "Precisa de muito mais atenção e, possivelmente, de um novo treinamento para a função."
+        }
+      ]
+    },
+    {
+      "email": "cliente_11@example.com",
+      "answers": [
+        {
+          "purpose": "A xícara estava suja por fora com marcas de dedos e o café tinha um gosto estranho.",
+          "score": "0",
+          "explanation": "Higiene e qualidade do produto principal deixaram muito a desejar nesta visita."
+        },
+        {
+          "purpose": "Havia um cheiro forte de esgoto vindo do banheiro, o que tornou o ambiente horrível e fétido.",
+          "score": "0",
+          "explanation": "As condições sanitárias do local eram péssimas e bastante preocupantes para a saúde."
+        },
+        {
+          "purpose": "Atendente foi sarcástico ao responder minhas perguntas e demonstrou ser pouco profissional.",
+          "score": "0",
+          "explanation": "Nunca fui tão mal tratado em um estabelecimento comercial em toda a minha vida."
+        }
+      ]
+    },
+    {
+      "email": "cliente_12@example.com",
+      "answers": [
+        {
+          "purpose": "Café fraco e sem sabor algum, parecia mais água com um simples corante escuro.",
+          "score": "1",
+          "explanation": "Muito decepcionante para um lugar que se propõe a vender café de qualidade."
+        },
+        {
+          "purpose": "Ambiente com aspecto de velho e visivelmente mal conservado em todas as áreas do salão.",
+          "score": "1",
+          "explanation": "Precisa de uma reforma e de muito mais cuidado urgente com o espaço físico."
+        },
+        {
+          "purpose": "Ninguém para atender no balcão por um bom tempo, desisti e acabei indo embora do local.",
+          "score": "0",
+          "explanation": "Abandono total do cliente, completa falta de consideração e de respeito com quem espera."
+        }
+      ]
+    },
+    {
+      "email": "cliente_13@example.com",
+      "answers": [
+        {
+          "purpose": "Café apenas regular, não voltaria a pedir este especificamente em uma outra ocasião.",
+          "score": "2",
+          "explanation": "Não atendeu às minhas expectativas de sabor e nem de aroma do produto."
+        },
+        {
+          "purpose": "O ambiente é um pouco barulhento demais para o meu gosto pessoal e para poder conversar.",
+          "score": "1",
+          "explanation": "Difícil manter uma conversa minimamente audível sem ter que gritar com a outra pessoa."
+        },
+        {
+          "purpose": "Atendimento fez o mínimo do mínimo necessário, sem qualquer tipo de simpatia ou cordialidade.",
+          "score": "1",
+          "explanation": "Foi frio e distante, não me senti nem um pouco acolhido ou bem-vindo no local."
+        }
+      ]
+    },
+    {
+      "email": "cliente_14@example.com",
+      "answers": [
+        {
+          "purpose": "Café servido em copo de plástico, o que é muito ruim para a experiência geral da bebida.",
+          "score": "1",
+          "explanation": "Esperava, no mínimo, uma xícara de louça para poder apreciar melhor a bebida."
+        },
+        {
+          "purpose": "Banheiro estava sujo e sem sabonete para lavar as mãos, o que é um absurdo.",
+          "score": "0",
+          "explanation": "Inaceitável em qualquer estabelecimento comercial que se preze e respeite os clientes."
+        },
+        {
+          "purpose": "Atendente demonstrou má vontade e parecia estar bastante irritado com todos os clientes.",
+          "score": "0",
+          "explanation": "Atendimento hostil e completamente desagradável durante toda a interação que tive."
+        }
+      ]
+    },
+    {
+      "email": "cliente_15@example.com",
+      "answers": [
+        {
+          "purpose": "Café horrível, com gosto de mofo e ainda foi servido em uma xícara que estava trincada.",
+          "score": "0",
+          "explanation": "Total falta de cuidado e de qualidade com o principal produto oferecido pela casa."
+        },
+        {
+          "purpose": "O local estava com um cheiro insuportável de gordura velha e queimada por todo o ar.",
+          "score": "0",
+          "explanation": "Tornou a permanência no ambiente completamente impossível e muito desagradável."
+        },
+        {
+          "purpose": "Fui completamente ignorado pelos atendentes por mais de 10 minutos seguidos no balcão.",
+          "score": "0",
+          "explanation": "Sentimento de total descaso e de abandono com o cliente que estava presente no local."
+        }
+      ]
+    },
+    {
+      "email": "cliente_16@example.com",
+      "answers": [
+        {
+          "purpose": "O café tinha um gosto metálico horrível e também estava completamente frio quando chegou.",
+          "score": "0",
+          "explanation": "Impossível de tomar, uma péssima experiência do começo ao fim da visita."
+        },
+        {
+          "purpose": "Vi insetos andando tranquilamente perto da comida que estava exposta, o que é nojento.",
+          "score": "0",
+          "explanation": "Problema sério de higiene que precisa ser resolvido com a máxima urgência."
+        },
+        {
+          "purpose": "Atendimento inexistente, ninguém apareceu para anotar o meu pedido na mesa por muito tempo.",
+          "score": "0",
+          "explanation": "Péssima organização e aparente falta de funcionários qualificados no local."
+        }
+      ]
+    },
+    {
+      "email": "cliente_17@example.com",
+      "answers": [
+        {
+          "purpose": "Café muito fraco, parecia mais água suja de café do que um café de verdade e saboroso.",
+          "score": "1",
+          "explanation": "Sem qualidade nenhuma no produto que foi oferecido pela casa aos clientes."
+        },
+        {
+          "purpose": "O lugar estava abafado e com um cheiro forte de guardado ou talvez até de mofo.",
+          "score": "1",
+          "explanation": "Pouco agradável para ficar por muito tempo no ambiente do estabelecimento."
+        },
+        {
+          "purpose": "Atendentes estavam conversando alto entre si e ignorando totalmente os clientes na fila.",
+          "score": "1",
+          "explanation": "Total falta de profissionalismo e de respeito com quem estava ali para consumir."
+        }
+      ]
+    },
+    {
+      "email": "cliente_18@example.com",
+      "answers": [
+        {
+          "purpose": "Café um pouco acima do ponto, com amargor excessivo e muito desagradável ao paladar.",
+          "score": "2",
+          "explanation": "Não estava ideal para o meu paladar, achei excessivamente forte e também amargo."
+        },
+        {
+          "purpose": "Ambiente ok, mas nada que realmente chame a atenção ou que se destaque positivamente.",
+          "score": "2",
+          "explanation": "Comum e sem grandes atrativos visuais ou mesmo de conforto para os clientes."
+        },
+        {
+          "purpose": "Atendimento regular, sem muitos destaques positivos ou mesmo alguns destaques negativos.",
+          "score": "2",
+          "explanation": "Normal, apenas o esperado para um local como este, nem mais nem menos."
+        }
+      ]
+    },
+    {
+      "email": "cliente_19@example.com",
+      "answers": [
+        {
+          "purpose": "Pedi um expresso e me serviram um café coado que estava completamente frio na mesa.",
+          "score": "0",
+          "explanation": "Pedido totalmente errado e ainda por cima de péssima qualidade e apresentação."
+        },
+        {
+          "purpose": "Mesas estavam sujas e as cadeiras rasgadas, o ambiente estava muito descuidado e feio.",
+          "score": "1",
+          "explanation": "Precisa de uma manutenção urgente e de muito mais limpeza em todo o local."
+        },
+        {
+          "purpose": "Atendente derrubou bebida em mim e mal pediu desculpas pelo ocorrido na hora.",
+          "score": "0",
+          "explanation": "Total falta de respeito e de profissionalismo com o cliente que foi prejudicado."
+        }
+      ]
+    },
+    {
+      "email": "cliente_20@example.com",
+      "answers": [
+        {
+          "purpose": "Café péssimo, com gosto de queimado e um amargor muito forte e persistente.",
+          "score": "0",
+          "explanation": "Não recomendo para ninguém, foi uma experiência realmente horrível e intragável."
+        },
+        {
+          "purpose": "Ambiente barulhento, completamente sujo e com uma decoração de extremo mau gosto.",
+          "score": "0",
+          "explanation": "A experiência visual e também sonora no local foi muito ruim e desagradável."
+        },
+        {
+          "purpose": "Atendimento demorado, bastante confuso e o pedido ainda veio completamente errado.",
+          "score": "0",
+          "explanation": "O serviço prestado foi completamente desastroso e altamente ineficiente."
+        }
+      ]
+    },
+    {
+      "email": "cliente_21@example.com",
+      "answers": [
+        {
+          "purpose": "Café com gosto de requentado, claramente não era fresco e estava muito ruim.",
+          "score": "1",
+          "explanation": "A qualidade do café oferecido pela casa era muito baixa e bastante decepcionante."
+        },
+        {
+          "purpose": "O ar condicionado do local estava pingando em cima dos clientes, uma situação ridícula.",
+          "score": "0",
+          "explanation": "Total falta de manutenção e de respeito com quem está no estabelecimento para consumir."
+        },
+        {
+          "purpose": "Demora de mais de 30 minutos para um simples café, algo completamente inaceitável.",
+          "score": "0",
+          "explanation": "Incompetência total na gestão do tempo e também do serviço ao cliente no local."
+        }
+      ]
+    },
+    {
+      "email": "cliente_22@example.com",
+      "answers": [
+        {
+          "purpose": "O café estava muito diluído, sem corpo algum e também sem nenhum sabor.",
+          "score": "1",
+          "explanation": "Não agradou nem um pouco ao meu paladar, estava muito fraco e sem graça."
+        },
+        {
+          "purpose": "Ambiente com poeira visível nos móveis e também nas prateleiras, falta de capricho.",
+          "score": "1",
+          "explanation": "A falta de capricho na limpeza geral era bastante evidente em todo o local."
+        },
+        {
+          "purpose": "Atendente não sabia informar os ingredientes básicos dos produtos do cardápio.",
+          "score": "2",
+          "explanation": "Demonstrou pouco preparo e também um pouco conhecimento sobre o que vende."
+        }
+      ]
+    },
+    {
+      "email": "cliente_23@example.com",
+      "answers": [
+        {
+          "purpose": "Café apenas morno, esfriou muito rápido na mesa e não estava bom o suficiente.",
+          "score": "2",
+          "explanation": "A temperatura ideal da bebida faz toda a diferença na experiência final."
+        },
+        {
+          "purpose": "Local um pouco barulhento demais para o meu gosto, mas era minimamente suportável para uma visita rápida.",
+          "score": "2",
+          "explanation": "Não é o local ideal para quem busca muita tranquilidade e também um pouco de silêncio."
+        },
+        {
+          "purpose": "Atendimento foi eficiente, mas sem muita interação ou qualquer tipo de simpatia por parte da equipe.",
+          "score": "1",
+          "explanation": "Correto, mas poderia ser muito mais acolhedor e também um pouco mais atencioso."
+        }
+      ]
+    },
+    {
+      "email": "cliente_24@example.com",
+      "answers": [
+        {
+          "purpose": "Café intragável, tinha um sabor químico fortíssimo e muito desagradável ao paladar.",
+          "score": "0",
+          "explanation": "Fiquei bastante preocupado com a qualidade e segurança do que foi servido ali."
+        },
+        {
+          "purpose": "O chão estava grudento em várias partes e o ambiente fedia a produto de limpeza muito forte.",
+          "score": "0",
+          "explanation": "As condições de higiene e também de conforto do local eram simplesmente péssimas."
+        },
+        {
+          "purpose": "O funcionário estava mexendo no celular pessoal e me ignorou completamente no balcão.",
+          "score": "0",
+          "explanation": "Total falta de profissionalismo e de respeito com o cliente que estava aguardando atendimento."
+        }
+      ]
+    },
+    {
+      "email": "cliente_25@example.com",
+      "answers": [
+        {
+          "purpose": "Café aceitável, mas nada que me fizesse querer voltar especificamente por causa dele.",
+          "score": "2",
+          "explanation": "Não se destacou em nada entre outras opções que já tive o prazer de provar."
+        },
+        {
+          "purpose": "Ambiente simples e bastante funcional, sem grandes atrativos ou mesmo problemas graves.",
+          "score": "3",
+          "explanation": "Ok para o propósito de tomar um café rápido e seguir o dia normalmente."
+        },
+        {
+          "purpose": "Atendimento rápido no caixa, o que foi um ponto bastante positivo na experiência geral.",
+          "score": "3",
+          "explanation": "Eficiente no momento do pagamento, sem muita demora para finalizar a compra."
+        }
+      ]
+    },
+    {
+      "email": "cliente_26@example.com",
+      "answers": [
+        {
+          "purpose": "Café de qualidade duvidosa, com um gosto estranho e bastante indefinido ao paladar.",
+          "score": "1",
+          "explanation": "Não arriscaria pedir este mesmo café novamente em uma futura visita ao local."
+        },
+        {
+          "purpose": "Mesas estavam sujas e empilhadas em um canto do salão, um claro aspecto de abandono.",
+          "score": "1",
+          "explanation": "O local parecia abandonado e muito mal cuidado pela equipe responsável pela limpeza."
+        },
+        {
+          "purpose": "Atendente fez uma piada de muito mau gosto sobre o meu pedido na hora do atendimento.",
+          "score": "0",
+          "explanation": "Atitude completamente desrespeitosa e nada profissional com o cliente presente."
+        }
+      ]
+    },
+    {
+      "email": "cliente_27@example.com",
+      "answers": [
+        {
+          "purpose": "Café ok, mas a xícara em que foi servido estava visivelmente muito lascada na borda.",
+          "score": "2",
+          "explanation": "Falta de cuidado com os utensílios utilizados e com a segurança do cliente."
+        },
+        {
+          "purpose": "Ambiente um pouco escuro demais e com uma decoração já bastante ultrapassada e antiga.",
+          "score": "1",
+          "explanation": "Precisa de uma renovação urgente para se tornar mais atraente e também mais moderno."
+        },
+        {
+          "purpose": "Atendimento poderia ser um pouco mais ágil na entrega dos pedidos feitos à mesa.",
+          "score": "1",
+          "explanation": "A lentidão no serviço foi um ponto negativo considerável durante a visita ao café."
+        }
+      ]
+    },
+    {
+      "email": "cliente_28@example.com",
+      "answers": [
+        {
+          "purpose": "O pior café que já tomei em toda a minha vida, sem nenhum tipo de exagero algum.",
+          "score": "0",
+          "explanation": "Horrível em todos os aspectos possíveis, completamente intragável e muito ruim."
+        },
+        {
+          "purpose": "Ambiente sujo a ponto de ser considerado nojento e também bastante insalubre para todos.",
+          "score": "0",
+          "explanation": "Não volto nunca mais a este lugar, as condições de higiene eram péssimas."
+        },
+        {
+          "purpose": "Atendimento foi agressivo e completamente desrespeitoso comigo e com minha família.",
+          "score": "0",
+          "explanation": "Uma experiência traumatizante e que não desejo a absolutamente ninguém passar."
+        }
+      ]
+    },
+    {
+      "email": "cliente_29@example.com",
+      "answers": [
+        {
+          "purpose": "Café bom, atendeu bem às minhas expectativas de sabor e também de qualidade geral.",
+          "score": "3",
+          "explanation": "Uma boa opção para quem está por perto e quer tomar um bom café."
+        },
+        {
+          "purpose": "Ambiente agradável e com boa música ambiente tocando no volume certo para conversar.",
+          "score": "2",
+          "explanation": "O volume da música estava ok e a seleção musical era boa e agradável."
+        },
+        {
+          "purpose": "Atendimento um pouco demorado para o meu gosto, mas os funcionários foram cordiais.",
+          "score": "2",
+          "explanation": "A cordialidade demonstrada pela equipe compensou um pouco a longa espera pelo pedido."
+        }
+      ]
+    },
+    {
+      "email": "cliente_30@example.com",
+      "answers": [
+        {
+          "purpose": "Café muito ruim, parecia ser velho e claramente requentado por diversas vezes ao dia.",
+          "score": "1",
+          "explanation": "Não tinha nenhum sabor fresco de café de jeito nenhum, estava horrível."
+        },
+        {
+          "purpose": "O local estava empoeirado em várias partes e com teias de aranha visíveis nos cantos.",
+          "score": "1",
+          "explanation": "A limpeza geral do ambiente estava bastante negligenciada pela equipe do café."
+        },
+        {
+          "purpose": "Atendente esqueceu completamente o meu pedido e ainda tive que pedir tudo de novo.",
+          "score": "1",
+          "explanation": "Muita desatenção e clara falta de profissionalismo por parte da equipe de atendimento."
+        }
+      ]
+    },
+    {
+      "email": "cliente_31@example.com",
+      "answers": [
+        {
+          "purpose": "Café sem sabor e foi servido em um copo descartável de péssima qualidade e sujo.",
+          "score": "1",
+          "explanation": "Tanto a apresentação quanto o sabor do café eram muito ruins e decepcionantes."
+        },
+        {
+          "purpose": "O banheiro do estabelecimento estava interditado e não havia nenhum aviso prévio sobre isso.",
+          "score": "0",
+          "explanation": "Total falta de consideração e de respeito com os clientes que frequentam o local."
+        },
+        {
+          "purpose": "Houve uma cobrança errada na minha conta, e demoraram muito para conseguir corrigir o erro.",
+          "score": "1",
+          "explanation": "Causou um estresse completamente desnecessário e evitável durante o momento do pagamento."
+        }
+      ]
+    },
+    {
+      "email": "cliente_32@example.com",
+      "answers": [
+        {
+          "purpose": "Café razoável, mas nada que realmente justifique o preço um pouco mais alto que o normal.",
+          "score": "2",
+          "explanation": "Muito caro para a qualidade que é efetivamente oferecida ao cliente final."
+        },
+        {
+          "purpose": "Ambiente com poucas mesas disponíveis e estava muito apertado e também desconfortável.",
+          "score": "2",
+          "explanation": "Desconfortável para permanecer por muito tempo no local com amigos ou família."
+        },
+        {
+          "purpose": "Atendimento padrão, sem grandes problemas a relatar, mas também sem nenhum destaque positivo.",
+          "score": "3",
+          "explanation": "Apenas o esperado para um estabelecimento deste tipo, nada a mais ou a menos."
+        }
+      ]
+    },
+    {
+      "email": "cliente_33@example.com",
+      "answers": [
+        {
+          "purpose": "Gosto residual do café era péssimo e muito persistente na boca, simplesmente horrível.",
+          "score": "0",
+          "explanation": "Deixei tudo na xícara, era impossível de beber o que foi servido no local."
+        },
+        {
+          "purpose": "O ambiente tinha um cheiro forte de produto químico que irritava bastante os olhos e o nariz.",
+          "score": "1",
+          "explanation": "Bastante irritante e desconfortável para a permanência no estabelecimento comercial."
+        },
+        {
+          "purpose": "Atendente estava discutindo de forma acalorada com outro funcionário na frente de todos os clientes.",
+          "score": "0",
+          "explanation": "Criou um clima horrível e extremamente constrangedor no estabelecimento para todos."
+        }
+      ]
+    },
+    {
+      "email": "cliente_34@example.com",
+      "answers": [
+        {
+          "purpose": "Café bom, consistente com outras visitas que fiz ao local anteriormente neste ano.",
+          "score": "3",
+          "explanation": "Manteve o padrão de qualidade que eu já esperava encontrar no produto."
+        },
+        {
+          "purpose": "Ambiente limpo e muito bem organizado em todos os seus aspectos e também nos detalhes.",
+          "score": "2",
+          "explanation": "Um lugar agradável para se estar e para tomar um café com um pouco mais de calma."
+        },
+        {
+          "purpose": "Atendimento eficiente e bastante cortês por parte de toda a equipe do café presente.",
+          "score": "2",
+          "explanation": "Fiquei satisfeito com o serviço que recebi dos funcionários do local."
+        }
+      ]
+    },
+    {
+      "email": "cliente_35@example.com",
+      "answers": [
+        {
+          "purpose": "Café servido em uma xícara que estava visivelmente suja e com marcas de batom antigas.",
+          "score": "0",
+          "explanation": "Falta de higiene completamente inaceitável em qualquer lugar que sirva comida ou bebida."
+        },
+        {
+          "purpose": "O local estava muito quente, o ar condicionado parecia estar quebrado ou então simplesmente desligado.",
+          "score": "1",
+          "explanation": "O desconforto térmico prejudicou muito toda a experiência que tive no local."
+        },
+        {
+          "purpose": "Houve muita demora para ser notado pela equipe e ainda mais demora para o pedido chegar à mesa.",
+          "score": "1",
+          "explanation": "O serviço foi extremamente lento e também bastante ineficiente durante toda a visita."
+        }
+      ]
+    },
+    {
+      "email": "cliente_36@example.com",
+      "answers": [
+        {
+          "purpose": "Café com um gosto de queimado que era simplesmente insuportável ao paladar de qualquer um.",
+          "score": "0",
+          "explanation": "Não consegui dar mais do que um único e pequeno gole na bebida servida."
+        },
+        {
+          "purpose": "Ambiente caótico, com crianças correndo e gritando sem nenhum tipo de controle dos pais.",
+          "score": "1",
+          "explanation": "Zero tranquilidade para quem queria um momento de paz e também de sossego."
+        },
+        {
+          "purpose": "Atendente foi rude ao ser questionado sobre uma opção que estava claramente disponível no menu.",
+          "score": "0",
+          "explanation": "Grosseria completamente gratuita e totalmente desnecessária com o cliente que só perguntou."
+        }
+      ]
+    },
+    {
+      "email": "cliente_37@example.com",
+      "answers": [
+        {
+          "purpose": "Café aguado e sem graça, não tinha sabor de absolutamente nada de café de verdade.",
+          "score": "1",
+          "explanation": "Não recomendo este café para ninguém que realmente aprecie uma boa bebida quente."
+        },
+        {
+          "purpose": "Falta de limpeza era bastante evidente nas mesas e também no chão do estabelecimento visitado.",
+          "score": "1",
+          "explanation": "O aspecto geral do ambiente era ruim e visivelmente bastante descuidado pela gerência."
+        },
+        {
+          "purpose": "Atendimento lento e a equipe do local parecia completamente desorganizada e também perdida.",
+          "score": "2",
+          "explanation": "Precisam de muito mais treinamento e de uma melhor organização interna para funcionar."
+        }
+      ]
+    },
+    {
+      "email": "cliente_38@example.com",
+      "answers": [
+        {
+          "purpose": "O café estava ok, mas nada que realmente me impressionasse ou que se destacasse muito.",
+          "score": "2",
+          "explanation": "Foi apenas mais um café comum, sem nada de muito especial para poder relatar aqui."
+        },
+        {
+          "purpose": "Ambiente poderia ser um pouco mais acolhedor e com uma decoração mais interessante e moderna.",
+          "score": "2",
+          "explanation": "Um pouco frio e também impessoal demais para o meu gosto particular e exigente."
+        },
+        {
+          "purpose": "Atendimento apenas regular, sem muita proatividade ou qualquer tipo de simpatia da equipe local.",
+          "score": "2",
+          "explanation": "Cumpriram o básico do serviço oferecido, mas sem nenhum brilho ou mesmo destaque especial."
+        }
+      ]
+    },
+    {
+      "email": "cliente_39@example.com",
+      "answers": [
+        {
+          "purpose": "Encontrei um cabelo dentro do meu café, o que foi absolutamente nojento e muito repulsivo.",
+          "score": "0",
+          "explanation": "Absolutamente nojento e completamente inaceitável em qualquer tipo de estabelecimento."
+        },
+        {
+          "purpose": "O ambiente estava com um odor muito forte e ruim, que vinha diretamente da cozinha do local.",
+          "score": "0",
+          "explanation": "Comprometeu toda a experiência e também o meu apetite no estabelecimento."
+        },
+        {
+          "purpose": "Atendente me tratou com total indiferença e uma clara e evidente má vontade em me servir.",
+          "score": "0",
+          "explanation": "O serviço prestado pela equipe foi horrível do começo ao fim da minha visita ao café."
+        }
+      ]
+    },
+    {
+      "email": "cliente_40@example.com",
+      "answers": [
+        {
+          "purpose": "Café um pouco amargo demais para o meu gosto, mas ainda assim estava tomável.",
+          "score": "2",
+          "explanation": "Não foi o ideal para o meu paladar pessoal, mas deu para beber sem maiores problemas."
+        },
+        {
+          "purpose": "Ambiente limpo, mas sem grandes atrativos na decoração ou mesmo no conforto que é oferecido.",
+          "score": "3",
+          "explanation": "Um local padrão, sem muitos diferenciais em relação a outros cafés da cidade."
+        },
+        {
+          "purpose": "Atendimento foi correto e relativamente rápido na entrega do pedido, o que foi bom.",
+          "score": "3",
+          "explanation": "Foram eficientes no serviço prestado aos clientes que estavam no local."
+        }
+      ]
+    },
+    {
+      "email": "cliente_41@example.com",
+      "answers": [
+        {
+          "purpose": "Café servido frio e já estava adoçado sem que eu tivesse pedido para adoçar antes.",
+          "score": "1",
+          "explanation": "Pedido completamente errado e ainda por cima de má qualidade, uma grande pena."
+        },
+        {
+          "purpose": "Local com um aspecto geral de sujo e bastante mal cuidado pela equipe responsável.",
+          "score": "1",
+          "explanation": "Não inspira confiança para consumir os produtos que são oferecidos no cardápio."
+        },
+        {
+          "purpose": "Ninguém para limpar as mesas que estavam desocupadas por um longo período de tempo.",
+          "score": "1",
+          "explanation": "Muita desorganização e clara falta de atenção com o salão principal do café."
+        }
+      ]
+    },
+    {
+      "email": "cliente_42@example.com",
+      "answers": [
+        {
+          "purpose": "Sabor do café era praticamente inexistente, parecia ser pura água morna e um pouco colorida.",
+          "score": "0",
+          "explanation": "Péssima qualidade nos ingredientes utilizados e também no preparo final da bebida."
+        },
+        {
+          "purpose": "O banheiro do estabelecimento estava quebrado e extremamente sujo, impossível de ser utilizado.",
+          "score": "0",
+          "explanation": "Isso demonstra total falta de manutenção básica e de respeito com todos os clientes."
+        },
+        {
+          "purpose": "Atendente deu uma informação completamente errada sobre um dos produtos do cardápio oferecido.",
+          "score": "1",
+          "explanation": "Isso acabou causando um grande transtorno e uma enorme confusão desnecessária no local."
+        }
+      ]
+    },
+    {
+      "email": "cliente_43@example.com",
+      "answers": [
+        {
+          "purpose": "Café bom, mas a porção que foi servida era muito pequena pelo preço que foi cobrado.",
+          "score": "3",
+          "explanation": "Não achei que o custo-benefício realmente valeu a pena desta vez que visitei o café."
+        },
+        {
+          "purpose": "Ambiente agradável e bem decorado, porém um pouco barulhento demais para o meu gosto.",
+          "score": "2",
+          "explanation": "Era difícil manter uma conversa tranquila sem ter que levantar bastante a minha voz."
+        },
+        {
+          "purpose": "Atendimento foi bom no geral, mas poderiam ser um pouco mais ágeis na entrega dos pedidos.",
+          "score": "2",
+          "explanation": "Houve uma certa espera para receber o meu pedido na mesa, o que foi um pouco chato."
+        }
+      ]
+    },
+    {
+      "email": "cliente_44@example.com",
+      "answers": [
+        {
+          "purpose": "Café com gosto de sabão ou algum outro produto químico muito forte e muito estranho.",
+          "score": "0",
+          "explanation": "Impossível de continuar bebendo, fiquei muito preocupado com a segurança alimentar do local."
+        },
+        {
+          "purpose": "Ambiente com cheiro forte e insuportável de cigarro, mesmo sendo uma área estritamente proibida.",
+          "score": "0",
+          "explanation": "Total desrespeito com as regras do próprio estabelecimento e com os clientes não fumantes."
+        },
+        {
+          "purpose": "Atendente riu do meu pedido de forma debochada e bastante constrangedora na frente de todos.",
+          "score": "0",
+          "explanation": "Me senti completamente humilhado e também muito desrespeitado como cliente do estabelecimento."
+        }
+      ]
+    },
+    {
+      "email": "cliente_45@example.com",
+      "answers": [
+        {
+          "purpose": "Café saboroso, um dos melhores que provei na região nos últimos tempos com toda certeza alguma.",
+          "score": "4",
+          "explanation": "Excelente qualidade tanto no grão utilizado quanto no preparo final do café servido."
+        },
+        {
+          "purpose": "Ambiente muito limpo, super confortável e com uma ótima seleção de músicas de fundo tocando.",
+          "score": "3",
+          "explanation": "A experiência geral no local foi bastante positiva e também muito agradável para mim."
+        },
+        {
+          "purpose": "Atendimento rápido, muito atencioso e extremamente profissional por parte de toda a equipe presente.",
+          "score": "4",
+          "explanation": "Todos os funcionários do estabelecimento estão de parabéns pelo ótimo serviço que foi prestado."
+        }
+      ]
+    },
+    {
+      "email": "cliente_46@example.com",
+      "answers": [
+        {
+          "purpose": "Café excelente, um dos melhores que já tomei em muito tempo, sabor realmente inesquecível.",
+          "score": "4",
+          "explanation": "Parabéns pela altíssima qualidade do café oferecido aos seus clientes!"
+        },
+        {
+          "purpose": "Ambiente muito agradável e com uma limpeza impecável em todos os cantos do salão principal.",
+          "score": "4",
+          "explanation": "Um local muito bem cuidado e que transmite bastante conforto aos seus frequentadores."
+        },
+        {
+          "purpose": "Atendimento foi bom, a equipe é educada e o serviço foi bastante rápido e também eficiente.",
+          "score": "3",
+          "explanation": "Experiência positiva com o atendimento que recebi no estabelecimento durante minha visita."
+        }
+      ]
+    },
+    {
+      "email": "cliente_47@example.com",
+      "answers": [
+        {
+          "purpose": "Café muito ruim, tinha um gosto forte de queimado e estava servido completamente morno.",
+          "score": "1",
+          "explanation": "Não recomendo este café para ninguém, foi uma experiência realmente muito ruim."
+        },
+        {
+          "purpose": "Ambiente com poucas mesas disponíveis e um pouco desorganizado na disposição geral do salão.",
+          "score": "2",
+          "explanation": "Poderia ser um pouco mais arrumado e também um pouco mais espaçoso para os clientes."
+        },
+        {
+          "purpose": "Atendimento lento e o funcionário que me atendeu parecia bastante confuso com tudo ao redor.",
+          "score": "1",
+          "explanation": "Precisa de mais treinamento e de muito mais agilidade no serviço prestado à sua clientela."
+        }
+      ]
+    },
+    {
+      "email": "cliente_48@example.com",
+      "answers": [
+        {
+          "purpose": "Café apenas aceitável, nada que realmente justifique uma segunda visita ao estabelecimento.",
+          "score": "2",
+          "explanation": "Esperava um pouco mais de sabor e também um pouco mais de qualidade no produto final."
+        },
+        {
+          "purpose": "O local é bastante barulhento e a música ambiente não é do meu agrado pessoal de forma alguma.",
+          "score": "2",
+          "explanation": "O ambiente não é muito relaxante ou mesmo tranquilo para ficar por muito tempo ali."
+        },
+        {
+          "purpose": "Atendimento foi ok, mas sem nenhum destaque positivo que mereça alguma menção especial aqui.",
+          "score": "2",
+          "explanation": "Serviço mediano, apenas cumpriu o básico do que se espera de um atendimento profissional."
+        }
+      ]
+    },
+    {
+      "email": "cliente_49@example.com",
+      "answers": [
+        {
+          "purpose": "Café bom, com sabor e aroma bastante equilibrados e também muito agradáveis ao paladar.",
+          "score": "3",
+          "explanation": "Uma escolha segura para quem gosta de um bom café de qualidade superior e bem feito."
+        },
+        {
+          "purpose": "Ambiente limpo e com uma decoração que achei bastante interessante e também bem original.",
+          "score": "2",
+          "explanation": "Um local agradável para fazer uma pausa e tomar um café com um pouco mais de calma."
+        },
+        {
+          "purpose": "Atendimento rápido e os funcionários se mostraram todos muito simpáticos e bastante prestativos.",
+          "score": "2",
+          "explanation": "Tive uma boa experiência com o atendimento que recebi no estabelecimento como um todo."
+        }
+      ]
+    },
+    {
+      "email": "cliente_50@example.com",
+      "answers": [
+        {
+          "purpose": "Café excelente, muito bem preparado e com grãos de altíssima qualidade visível a olho nu.",
+          "score": "4",
+          "explanation": "Superou todas as minhas expectativas em termos de sabor e também de aroma do produto final!"
+        },
+        {
+          "purpose": "Ambiente muito confortável, extremamente limpo e com ótima música ambiente tocando no fundo do salão.",
+          "score": "4",
+          "explanation": "Ideal para relaxar e também para apreciar um bom momento de tranquilidade e de muita paz."
+        },
+        {
+          "purpose": "Atendimento foi cordial e bastante eficiente em todas as etapas do serviço que foi prestado pela equipe.",
+          "score": "3",
+          "explanation": "A equipe do café demonstrou muita competência e também grande profissionalismo no trato com o cliente."
+        }
+      ]
+    },
+    {
+      "email": "cliente_51@example.com",
+      "answers": [
+        {
+          "purpose": "O café estava ruim, muito amargo e com um gosto forte de velho e também de requentado.",
+          "score": "1",
+          "explanation": "Não consegui beber, uma péssima experiência com o principal produto oferecido pela casa ao público."
+        },
+        {
+          "purpose": "Ambiente um pouco sujo e com um cheiro estranho e bastante desagradável no ar do local visitado.",
+          "score": "1",
+          "explanation": "Bastante desconfortável para permanecer por muito tempo no estabelecimento com amigos ou família."
+        },
+        {
+          "purpose": "Atendimento demorado e o atendente que me serviu parecia completamente perdido e muito confuso.",
+          "score": "2",
+          "explanation": "Falta de organização e de preparo por parte da equipe de atendimento do café da cidade."
+        }
+      ]
+    },
+    {
+      "email": "cliente_52@example.com",
+      "answers": [
+        {
+          "purpose": "Café regular, nada que me fizesse querer pedir outro ou mesmo voltar por causa dele ao local.",
+          "score": "2",
+          "explanation": "Foi uma bebida completamente esquecível, sem grandes destaques positivos ou mesmo negativos."
+        },
+        {
+          "purpose": "O ambiente é ok, mas a limpeza geral poderia ser mais caprichada e também mais detalhada.",
+          "score": "2",
+          "explanation": "Notei um pouco de poeira nos cantos das paredes e também em algumas das prateleiras."
+        },
+        {
+          "purpose": "Atendimento foi o básico do básico, sem muita atenção ou qualquer tipo de cuidado com o cliente.",
+          "score": "1",
+          "explanation": "Bastante indiferente e sem nenhum esforço para agradar ou para encantar o consumidor final."
+        }
+      ]
+    },
+    {
+      "email": "cliente_53@example.com",
+      "answers": [
+        {
+          "purpose": "Café muito bom, servido na temperatura certa e com um ótimo sabor final ao meu paladar.",
+          "score": "3",
+          "explanation": "Recomendo para quem aprecia um café de verdadeira qualidade e que seja bem feito."
+        },
+        {
+          "purpose": "Ambiente limpo e com uma decoração que achei bem legal e também bastante moderna e atual.",
+          "score": "3",
+          "explanation": "Bastante confortável para uma visita um pouco mais demorada e também mais relaxante com amigos."
+        },
+        {
+          "purpose": "Atendimento atencioso e os funcionários foram todos muito ágeis no preparo do meu pedido.",
+          "score": "3",
+          "explanation": "Bom serviço prestado pela equipe do local, fiquei bastante satisfeito com tudo que vi."
+        }
+      ]
+    },
+    {
+      "email": "cliente_54@example.com",
+      "answers": [
+        {
+          "purpose": "Café horrível, gosto de terra e água suja.",
+          "score": "0",
+          "explanation": "Intragável, precisei cuspir."
+        },
+        {
+          "purpose": "O lugar cheirava a mofo e estava escuro.",
+          "score": "1",
+          "explanation": "Sensação de abandono total."
+        },
+        {
+          "purpose": "Atendente bocejava enquanto anotava meu pedido.",
+          "score": "1",
+          "explanation": "Zero profissionalismo."
+        }
+      ]
+    },
+    {
+      "email": "cliente_55@example.com",
+      "answers": [
+        {
+          "purpose": "Pedi um café sem açúcar e veio extremamente doce.",
+          "score": "0",
+          "explanation": "Não consegui beber, erro primário."
+        },
+        {
+          "purpose": "Mesas sujas e o chão estava pegajoso, nojento.",
+          "score": "0",
+          "explanation": "Falta de higiene crítica."
+        },
+        {
+          "purpose": "Atendimento lento, esperei mais de 20 minutos por um café simples.",
+          "score": "1",
+          "explanation": "Ineficiência gritante."
+        }
+      ]
+    },
+    {
+      "email": "cliente_56@example.com",
+      "answers": [
+        {
+          "purpose": "Café muito ruim, com gosto de queimado e frio.",
+          "score": "0",
+          "explanation": "Experiência decepcionante."
+        },
+        {
+          "purpose": "Ambiente barulhento e com música de péssima qualidade.",
+          "score": "1",
+          "explanation": "Difícil relaxar."
+        },
+        {
+          "purpose": "Funcionários pareciam mais interessados em conversar entre si.",
+          "score": "1",
+          "explanation": "Fui ignorado."
+        }
+      ]
+    },
+    {
+      "email": "cliente_57@example.com",
+      "answers": [
+        {
+          "purpose": "O café estava fraco e sem sabor algum.",
+          "score": "1",
+          "explanation": "Não valeu o preço."
+        },
+        {
+          "purpose": "Local com pouca ventilação e cheiro forte de gordura.",
+          "score": "1",
+          "explanation": "Desconfortável."
+        },
+        {
+          "purpose": "Atendente foi rude e impaciente com minhas perguntas.",
+          "score": "0",
+          "explanation": "Me senti maltratado."
+        }
+      ]
+    },
+    {
+      "email": "cliente_58@example.com",
+      "answers": [
+        {
+          "purpose": "Café apenas regular, nada de especial.",
+          "score": "2",
+          "explanation": "Comum."
+        },
+        {
+          "purpose": "A limpeza do ambiente poderia ser melhor, notei poeira.",
+          "score": "2",
+          "explanation": "Falta capricho."
+        },
+        {
+          "purpose": "Atendimento foi o básico, sem muita cordialidade.",
+          "score": "2",
+          "explanation": "Indiferente."
+        }
+      ]
+    },
+    {
+      "email": "cliente_59@example.com",
+      "answers": [
+        {
+          "purpose": "Café horrível, gosto de cinzas.",
+          "score": "0",
+          "explanation": "Intragável."
+        },
+        {
+          "purpose": "Ambiente sujo e com aspecto de velho e malcuidado.",
+          "score": "0",
+          "explanation": "Precisa de uma reforma urgente."
+        },
+        {
+          "purpose": "Atendimento péssimo, fui tratado com descaso.",
+          "score": "0",
+          "explanation": "Não volto mais."
+        }
+      ]
+    },
+    {
+      "email": "cliente_60@example.com",
+      "answers": [
+        {
+          "purpose": "Café muito ruim, aguado e frio.",
+          "score": "1",
+          "explanation": "Decepção."
+        },
+        {
+          "purpose": "Lugar barulhento e mesas sujas.",
+          "score": "1",
+          "explanation": "Experiência ruim."
+        },
+        {
+          "purpose": "Atendimento lento e desatento.",
+          "score": "1",
+          "explanation": "Precisa melhorar."
+        }
+      ]
+    },
+    {
+      "email": "cliente_61@example.com",
+      "answers": [
+        {
+          "purpose": "Café razoável, mas esperava mais pelo preço.",
+          "score": "2",
+          "explanation": "Não surpreendeu."
+        },
+        {
+          "purpose": "Ambiente ok, mas um pouco apertado.",
+          "score": "2",
+          "explanation": "Poderia ser mais espaçoso."
+        },
+        {
+          "purpose": "Atendimento foi mediano, sem destaques.",
+          "score": "2",
+          "explanation": "Normal."
+        }
+      ]
+    },
+    {
+      "email": "cliente_62@example.com",
+      "answers": [
+        {
+          "purpose": "Café péssimo, gosto de café velho.",
+          "score": "0",
+          "explanation": "Não recomendo."
+        },
+        {
+          "purpose": "Ambiente sujo e com cheiro ruim.",
+          "score": "0",
+          "explanation": "Inaceitável."
+        },
+        {
+          "purpose": "Atendimento horrível, funcionário grosseiro.",
+          "score": "0",
+          "explanation": "Nunca mais."
+        }
+      ]
+    },
+    {
+      "email": "cliente_63@example.com",
+      "answers": [
+        {
+          "purpose": "Café bom, sabor agradável e na temperatura certa.",
+          "score": "3",
+          "explanation": "Satisfeito."
+        },
+        {
+          "purpose": "Ambiente limpo e com decoração simples mas bonita.",
+          "score": "3",
+          "explanation": "Agradável."
+        },
+        {
+          "purpose": "Atendimento correto e eficiente, sem problemas.",
+          "score": "3",
+          "explanation": "Dentro do esperado."
+        }
+      ]
+    },
+    {
+      "email": "cliente_64@example.com",
+      "answers": [
+        {
+          "purpose": "Café muito saboroso e bem preparado, adorei.",
+          "score": "4",
+          "explanation": "Qualidade excelente."
+        },
+        {
+          "purpose": "Ambiente confortável e com uma ótima atmosfera.",
+          "score": "4",
+          "explanation": "Perfeito para relaxar."
+        },
+        {
+          "purpose": "Atendimento atencioso e muito ágil.",
+          "score": "4",
+          "explanation": "Equipe de parabéns."
+        }
+      ]
+    },
+    {
+      "email": "cliente_65@example.com",
+      "answers": [
+        {
+          "purpose": "O café estava ruim, muito fraco e sem gosto.",
+          "score": "1",
+          "explanation": "Não valeu a pena."
+        },
+        {
+          "purpose": "Local barulhento e a limpeza deixou a desejar.",
+          "score": "1",
+          "explanation": "Desconfortável."
+        },
+        {
+          "purpose": "Atendimento demorado e pouco simpático.",
+          "score": "1",
+          "explanation": "Precisa melhorar."
+        }
+      ]
+    }
+  ]
+}
