@@ -1,6 +1,6 @@
 import type React from "react"
-import ReportView, { ReportViewProps } from "~/components/report/report-view"
-import ReportHeader, { ReportHeaderProps } from "~/components/report/report-header"
+import ReportView, { type ReportViewProps } from "~/components/report/report-view"
+import ReportHeader, { type ReportHeaderProps } from "~/components/report/report-header"
 import { db } from "iara-shared/database"
 import { researches, reports, researchViews } from "iara-shared/database/schema"
 import { eq, countDistinct } from "iara-shared/node_modules/drizzle-orm"

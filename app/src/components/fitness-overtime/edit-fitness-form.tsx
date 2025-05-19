@@ -1,5 +1,6 @@
 "use client";
-import React, { useState } from "react";
+import type React from "react";
+import { useState } from "react";
 import { Button } from "~/components/ui/button";
 import { updateFitness } from "../../app/(dashboard)/fitness/actions/fitness-actions";
 import { useRouter } from "next/navigation";
@@ -74,7 +75,7 @@ export default function EditFitnessForm({ fitness, researches, onSaved }: Props)
               required
             />
             <div>
-              <label className="block mb-1 font-medium">Pesquisas</label>
+              <span className="block mb-1 font-medium">Pesquisas</span>
               <div className="flex gap-2 mb-2">
                 <Button
                   type="button"

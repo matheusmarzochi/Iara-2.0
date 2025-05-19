@@ -19,7 +19,7 @@ function formatDate(dateStr?: string | Date) {
     let d: Date;
     if (typeof dateStr === "string") {
         d = dateStr.length <= 10
-            ? new Date(dateStr + "T00:00:00Z")
+            ? new Date(`${dateStr}T00:00:00Z`)
             : new Date(dateStr);
     } else {
         d = dateStr;
@@ -169,6 +169,7 @@ export default function FitnessOvertimeGraph({ fitnessList, onSelectPurpose }: F
                                                         isSelected ? null : { researchIdx: fIdx, purposeIdx: 0 }
                                                     )
                                                 }
+                                                type="button"
                                                 title={isSelected ? "Ocultar relatório" : "Ver relatório"}
                                                 style={{ boxShadow: "0 1px 4px 0 #0001" }}
                                             >

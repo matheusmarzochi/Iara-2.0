@@ -157,7 +157,7 @@ export default async function FitnessPage({ searchParams }: { searchParams?: { o
                   <th className="px-4 py-2 text-left sm:table-cell hidden whitespace-nowrap">Período (duração)</th>
                   <th className="px-4 py-2 text-left sm:hidden table-cell whitespace-nowrap">Duração</th>
                   <th className="px-4 py-2 text-left whitespace-nowrap">Pesquisas</th>
-                  <th className=""></th>
+                  <th className=""/>
                 </tr>
               </thead>
               <tbody>
