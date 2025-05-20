@@ -6,7 +6,7 @@ export interface ResearchInteractionsCountProps {
 }
 
 export const conversionRate = (formsLength: number, totalViews: number): number => {
-  if (formsLength == 0 && totalViews == 0) {
+  if (formsLength === 0 && totalViews === 0) {
     return 0
   }
   

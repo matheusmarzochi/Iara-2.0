@@ -3,8 +3,8 @@ import { db } from "iara-shared/database"
 import { auth } from "@clerk/nextjs/server";
 import { reports, researches, researchViews, users } from "iara-shared/database/schema"
 import { eq, countDistinct, and } from "iara-shared/node_modules/drizzle-orm"
-import ReportView, { ReportViewProps } from "../../../../../components/report/report-view"
-import ReportHeader, { ReportHeaderProps } from "~/components/report/report-header"
+import ReportView, { type ReportViewProps } from "../../../../../components/report/report-view"
+import ReportHeader, { type ReportHeaderProps } from "~/components/report/report-header"
 
 type Props = {
   params: {
@@ -68,7 +68,6 @@ const reportData = async (researchId: string): Promise<ReportData | undefined> =
     reports: report.data,
     research,
     totalViews: uniqueViews[0]?.uniqueViews || 0
-
   }
 }
 
@@ -84,7 +83,7 @@ export default async function SurveyDashboard({ params }: Props) {
 
   return (
     <div>
-      <ReportHeader formsLength={formsLength} research={research} totalViews={totalViews} />
+      <ReportHeader formsLength={formsLength} research={research} reports={reports} totalViews={totalViews} />
       <ReportView reports={reports} research={research} categories={categories} enableSwitch={enableSwitch} />
     </div>
   )

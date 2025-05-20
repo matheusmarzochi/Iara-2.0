@@ -1,6 +1,6 @@
 import type React from "react"
-import ReportView, { ReportViewProps } from "~/components/report/report-view"
-import ReportHeader, { ReportHeaderProps } from "~/components/report/report-header"
+import ReportView, { type ReportViewProps } from "~/components/report/report-view"
+import ReportHeader, { type ReportHeaderProps } from "~/components/report/report-header"
 import { db } from "iara-shared/database"
 import { researches, reports, researchViews } from "iara-shared/database/schema"
 import { eq, countDistinct } from "iara-shared/node_modules/drizzle-orm"
@@ -55,7 +55,7 @@ const reportData = async (researchId: string): Promise<ReportData | undefined> =
 
     return {
         categories: categoryList,
-        enableSwitch: false, // Admin always false to prevent update targetSwitch
+        enableSwitch: false,
         formsLength: research?.forms.length,
         reports: report.data,
         research,
@@ -75,7 +75,7 @@ export default async function SurveyDashboard({ params }: Props) {
   
   return (
     <div>
-      <ReportHeader formsLength={formsLength} research={research} totalViews={totalViews} />
+      <ReportHeader formsLength={formsLength} research={research} reports={reports} totalViews={totalViews} />
       <ReportView reports={reports} research={research} categories={categories} enableSwitch={enableSwitch} />
     </div>
   )

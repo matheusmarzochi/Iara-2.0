@@ -46,7 +46,7 @@ export function DuplicateResearchButton({ researchId }: Props) {
                     </DialogHeader>
                     <form onSubmit={handleDuplicate}>
                         <div className="mb-4">
-                            <label className="block mb-2 text-sm font-medium">Selecione o usuário</label>
+                            <span className="block mb-2 text-sm font-medium">Selecione o usuário</span>
                             <Select value={selectedUserId} onValueChange={setSelectedUserId}>
                                 <SelectTrigger>
                                     <SelectValue placeholder="Selecione um usuário" />

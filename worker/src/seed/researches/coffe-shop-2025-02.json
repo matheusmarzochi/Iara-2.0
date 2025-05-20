@@ -1,0 +1,253 @@
+{
+  "title": "Café Aconchego - (2025-Fev)",
+  "description": "Sua opinião nos ajuda a manter e melhorar nosso padrão. Avalie sua experiência conosco.",
+  "questions": [
+    {
+      "purpose": "Qualidade do Café: Como você avalia o sabor, temperatura e aroma do café que consumiu?",
+      "sequence": 1
+    },
+    {
+      "purpose": "Ambiente da Loja: Sua percepção sobre a limpeza, conforto, música e decoração do nosso espaço.",
+      "sequence": 2
+    },
+    {
+      "purpose": "Atendimento Recebido: Como foi a cordialidade, agilidade e eficiência da nossa equipe?",
+      "sequence": 3
+    }
+  ],
+  "forms": [
+    {
+      "email": "cliente_foco_baixo_1@example.com",
+      "answers": [
+        { "purpose": "Café totalmente queimado, impossível de beber.", "score": "0", "explanation": "Pior café que já provei." },
+        { "purpose": "Ambiente sujo, mesas grudentas e chão varrido por cima.", "score": "0", "explanation": "Falta de higiene básica." },
+        { "purpose": "Atendente foi extremamente rude quando perguntei sobre o menu.", "score": "0", "explanation": "Me senti maltratado." }
+      ]
+    },
+    {
+      "email": "cliente_foco_baixo_2@example.com",
+      "answers": [
+        { "purpose": "Café aguado e frio.", "score": "1", "explanation": "Decepcionante." },
+        { "purpose": "Música ambiente muito alta e de péssimo gosto.", "score": "1", "explanation": "Não consegui conversar." },
+        { "purpose": "Demora excessiva para um pedido simples, mais de 20 minutos.", "score": "1", "explanation": "Desorganizados." }
+      ]
+    },
+    {
+      "email": "cliente_foco_baixo_3@example.com",
+      "answers": [
+        { "purpose": "O café estava apenas 'ok', nada de especial, um pouco fraco.", "score": "2", "explanation": "Esperava mais pelo preço." },
+        { "purpose": "O ambiente é simples, um pouco apertado.", "score": "2", "explanation": "Funcional, mas não convidativo." },
+        { "purpose": "Atendimento fez o básico, sem simpatia ou qualquer extra.", "score": "2", "explanation": "Atendimento mecânico." }
+      ]
+    },
+    {
+      "email": "cliente_foco_baixo_4@example.com",
+      "answers": [
+        { "purpose": "Café com gosto estranho, metálico.", "score": "0", "explanation": "Não consegui terminar." },
+        { "purpose": "Banheiro em estado deplorável.", "score": "0", "explanation": "Inaceitável." },
+        { "purpose": "Funcionários conversando alto e ignorando os clientes na fila.", "score": "1", "explanation": "Falta de profissionalismo." }
+      ]
+    },
+    {
+      "email": "cliente_foco_baixo_5@example.com",
+      "answers": [
+        { "purpose": "Pedi um cappuccino, veio um café com leite ralo.", "score": "1", "explanation": "Pedido errado e qualidade ruim." },
+        { "purpose": "Cadeiras desconfortáveis e mesas bambas.", "score": "1", "explanation": "Difícil ficar muito tempo." },
+        { "purpose": "O atendente parecia não conhecer os produtos do cardápio.", "score": "2", "explanation": "Um pouco perdido." }
+      ]
+    },
+    {
+      "email": "cliente_foco_baixo_6@example.com",
+      "answers": [
+        { "purpose": "Café apenas morno.", "score": "2", "explanation": "Gosto de café quente." },
+        { "purpose": "Ambiente um pouco escuro demais para o meu gosto.", "score": "2", "explanation": "" },
+        { "purpose": "Atendimento um pouco lento, mas educado.", "score": "2", "explanation": "Poderiam ser mais ágeis." }
+      ]
+    },
+    {
+      "email": "cliente_foco_baixo_7@example.com",
+      "answers": [
+        { "purpose": "Grãos pareciam velhos, café sem aroma.", "score": "1", "explanation": "Qualidade duvidosa." },
+        { "purpose": "Ar condicionado muito forte, ambiente gelado.", "score": "1", "explanation": "Desconfortável." },
+        { "purpose": "Demorou para limparem a mesa que desocupou.", "score": "2", "explanation": "" }
+      ]
+    },
+    {
+      "email": "cliente_foco_baixo_8@example.com",
+      "answers": [
+        { "purpose": "Café muito amargo.", "score": "1", "explanation": "" },
+        { "purpose": "Decoração antiga e sem graça.", "score": "2", "explanation": "Não é um lugar que chama atenção." },
+        { "purpose": "Atendente esqueceu parte do meu pedido.", "score": "1", "explanation": "Tive que lembrá-lo." }
+      ]
+    },
+    {
+      "email": "cliente_foco_baixo_9@example.com",
+      "answers": [
+        { "purpose": "Café servido em copo de plástico, esperava uma xícara.", "score": "2", "explanation": "Apresentação pobre." },
+        { "purpose": "Cheiro forte de produto de limpeza no ar.", "score": "1", "explanation": "Atrapalhou a experiência." },
+        { "purpose": "Ninguém no caixa por um tempo, tive que esperar para pagar.", "score": "1", "explanation": "" }
+      ]
+    },
+    {
+      "email": "cliente_foco_baixo_10@example.com",
+      "answers": [
+        { "purpose": "Qualidade do café inconsistente, já tomei melhores aqui.", "score": "2", "explanation": "Dessa vez não estava bom." },
+        { "purpose": "Wi-fi muito lento, quase impossível de usar.", "score": "1", "explanation": "Precisava para trabalhar." },
+        { "purpose": "O atendente parecia mal humorado.", "score": "1", "explanation": "Não foi simpático." }
+      ]
+    },
+    {
+      "email": "cliente_foco_baixo_11@example.com",
+      "answers": [
+        { "purpose": "Café requentado, nitidamente não era fresco.", "score": "0", "explanation": "Sabor residual horrível." },
+        { "purpose": "Barulho excessivo vindo da cozinha/preparo.", "score": "1", "explanation": "Difícil concentrar." },
+        { "purpose": "Atendente cometeu erro na conta, cobrou a mais.", "score": "0", "explanation": "Tive que pedir correção, constrangedor." }
+      ]
+    },
+    {
+      "email": "cliente_foco_baixo_12@example.com",
+      "answers": [
+        { "purpose": "Leite do café parecia ter passado do ponto.", "score": "1", "explanation": "Gosto azedo." },
+        { "purpose": "Falta de tomadas acessíveis.", "score": "2", "explanation": "Complicado para quem usa notebook." },
+        { "purpose": "Serviço lento apesar de poucas mesas ocupadas.", "score": "1", "explanation": "Sem justificativa para a demora." }
+      ]
+    },
+    {
+      "email": "cliente_foco_baixo_13@example.com",
+      "answers": [
+        { "purpose": "Café mediano, não se destaca.", "score": "2", "explanation": "" },
+        { "purpose": "Iluminação um pouco deficiente em algumas áreas.", "score": "2", "explanation": "Alguns cantos escuros." },
+        { "purpose": "Atendimento apenas funcional, sem cordialidade.", "score": "2", "explanation": "" }
+      ]
+    },
+    {
+      "email": "cliente_foco_baixo_14@example.com",
+      "answers": [
+        { "purpose": "Café fraco demais, parecia 'chafé'.", "score": "1", "explanation": "" },
+        { "purpose": "Mesas muito próximas, pouca privacidade.", "score": "1", "explanation": "" },
+        { "purpose": "Atendente parecia novo e inseguro.", "score": "2", "explanation": "Precisando de mais treinamento." }
+      ]
+    },
+    {
+      "email": "cliente_foco_baixo_15@example.com",
+      "answers": [
+        { "purpose": "Xícara estava lascada.", "score": "1", "explanation": "Falta de cuidado." },
+        { "purpose": "Ambiente um pouco abafado.", "score": "2", "explanation": "Ventilação poderia ser melhor." },
+        { "purpose": "A equipe parecia desorganizada no balcão.", "score": "1", "explanation": "" }
+      ]
+    },
+    {
+      "email": "cliente_foco_baixo_25@example.com",
+      "answers": [
+        { "purpose": "Café com um leve gosto de queimado.", "score": "2", "explanation": "Quase passou do ponto." },
+        { "purpose": "O lixo do salão estava transbordando.", "score": "1", "explanation": "Aparência ruim e anti-higiênico." },
+        { "purpose": "Atendimento um pouco confuso na hora de anotar o pedido.", "score": "2", "explanation": "Tive que repetir algumas vezes." }
+      ]
+    },
+    {
+      "email": "cliente_foco_baixo_46@example.com",
+      "answers": [
+        { "purpose": "Café aceitável, mas nada memorável.", "score": "2", "explanation": "" },
+        { "purpose": "Decoração um tanto antiquada.", "score": "2", "explanation": "Poderia modernizar." },
+        { "purpose": "Atendente educado, mas o serviço foi lento.", "score": "2", "explanation": "Muita espera." }
+      ]
+    },
+
+    {
+      "email": "cliente_variado_1@example.com",
+      "answers": [
+        { "purpose": "Café muito saboroso, bem equilibrado!", "score": "4", "explanation": "Gostei bastante do blend." },
+        { "purpose": "Ambiente agradável e limpo, música boa.", "score": "4", "explanation": "Confortável para uma pausa." },
+        { "purpose": "Atendimento cordial e eficiente.", "score": "3", "explanation": "Dentro do esperado." }
+      ]
+    },
+    {
+      "email": "cliente_variado_2@example.com",
+      "answers": [
+        { "purpose": "Expresso perfeito, crema no ponto!", "score": "5", "explanation": "Um dos melhores que já tomei." },
+        { "purpose": "Decoração charmosa e ambiente muito acolhedor.", "score": "5", "explanation": "Adorei a atmosfera." },
+        { "purpose": "Atendentes super simpáticos e prestativos!", "score": "5", "explanation": "Fizeram me sentir em casa." }
+      ]
+    },
+    {
+      "email": "cliente_variado_3@example.com",
+      "answers": [
+        { "purpose": "O café estava bom, mas já tomei melhores.", "score": "3", "explanation": "Razoável." },
+        { "purpose": "Ambiente ok, mas um pouco barulhento para meu gosto.", "score": "3", "explanation": "Dificultou um pouco a conversa." },
+        { "purpose": "Atendimento correto, sem grandes destaques.", "score": "3", "explanation": "" }
+      ]
+    },
+    {
+      "email": "cliente_variado_4@example.com",
+      "answers": [
+        { "purpose": "Gostei muito do cappuccino especial da casa.", "score": "4", "explanation": "Sabor diferenciado." },
+        { "purpose": "Local limpo, bem iluminado e com wi-fi funcionando bem.", "score": "4", "explanation": "Bom para trabalhar." },
+        { "purpose": "Atendimento rápido e os funcionários pareciam felizes.", "score": "4", "explanation": "Bom astral." }
+      ]
+    },
+    {
+      "email": "cliente_variado_5@example.com",
+      "answers": [
+        { "purpose": "Café de boa qualidade, aroma excelente.", "score": "4", "explanation": "" },
+        { "purpose": "Ambiente com uma vista agradável.", "score": "3", "explanation": "Um diferencial." },
+        { "purpose": "Atendimento poderia ser um pouco mais ágil nos horários de pico.", "score": "3", "explanation": "Demorou um pouco." }
+      ]
+    },
+    {
+      "email": "cliente_variado_6@example.com",
+      "answers": [
+        { "purpose": "Amei o método de preparo do café coado.", "score": "5", "explanation": "Fresquinho e saboroso." },
+        { "purpose": "Música ambiente perfeita, volume e seleção ótimos.", "score": "4", "explanation": "Contribuiu para a experiência." },
+        { "purpose": "Atendente deu ótimas sugestões e foi muito atencioso.", "score": "5", "explanation": "" }
+      ]
+    },
+    {
+      "email": "cliente_variado_7@example.com",
+      "answers": [
+        { "purpose": "Café bom, mas nada excepcional.", "score": "3", "explanation": "Padrão." },
+        { "purpose": "Ambiente confortável, mas um pouco cheio.", "score": "3", "explanation": "Popular." },
+        { "purpose": "Atendimento educado e profissional.", "score": "4", "explanation": "" }
+      ]
+    },
+    {
+      "email": "cliente_variado_8@example.com",
+      "answers": [
+        { "purpose": "Variedade de grãos interessante.", "score": "4", "explanation": "Opções para todos os gostos." },
+        { "purpose": "Limpeza impecável, inclusive dos banheiros.", "score": "5", "explanation": "Ponto muito positivo." },
+        { "purpose": "Atendimento um pouco demorado para pegar a conta.", "score": "3", "explanation": "" }
+      ]
+    },
+    {
+      "email": "cliente_variado_9@example.com",
+      "answers": [
+        { "purpose": "Café saboroso, mas poderia estar um pouco mais quente.", "score": "3", "explanation": "" },
+        { "purpose": "Decoração minimalista e elegante.", "score": "4", "explanation": "Gostei do estilo." },
+        { "purpose": "Atendimento simpático e rápido.", "score": "4", "explanation": "" }
+      ]
+    },
+    {
+      "email": "cliente_variado_10@example.com",
+      "answers": [
+        { "purpose": "O 'Affogato' estava divino!", "score": "5", "explanation": "Sobremesa e café perfeitos." },
+        { "purpose": "Ambiente tranquilo, ótimo para ler um livro.", "score": "4", "explanation": "" },
+        { "purpose": "Todos os funcionários foram muito gentis.", "score": "5", "explanation": "Equipe excelente." }
+      ]
+    },
+    {
+      "email": "cliente_variado_11@example.com",
+      "answers": [
+        { "purpose": "Café honesto, bom custo-benefício.", "score": "3", "explanation": "" },
+        { "purpose": "Tem um espaço externo agradável para dias de sol.", "score": "4", "explanation": "" },
+        { "purpose": "Atendimento foi eficiente e direto ao ponto.", "score": "3", "explanation": "" }
+      ]
+    },
+    {
+      "email": "cliente_variado_12@example.com",
+      "answers": [
+        { "purpose": "O melhor expresso da cidade, na minha opinião.", "score": "5", "explanation": "Sempre volto por ele." },
+        { "purpose": "Ambiente sofisticado e ao mesmo tempo acolhedor.", "score": "5", "explanation": "Combinação perfeita." },
+        { "purpose": "Atendimento impecável do início ao fim.", "score": "5", "explanation": "Parabéns à equipe." }
+      ]
+    }
+  ]
+}

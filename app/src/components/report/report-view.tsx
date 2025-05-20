@@ -9,12 +9,15 @@ import { Switch } from "~/components/ui/switch"
 import { cn } from "~/lib/utils"
 import type { Category, ReportData, Research, ScoreBox } from "iara-shared/database/schema"
 import { updateCategoryTarget } from "./report-view-action"
+import ScoreBoxView from "./score-box-view"
 
 export interface ReportViewProps {
     reports: ReportData[];
     research: Omit<Research, "forms" | "questions">;
     categories: Omit<Category, "analysis">[];
     enableSwitch: boolean;
+    defaultTabId?: string;
+    onTabSelect?: (tabId: string) => void;
 }
 
 export interface Response {
@@ -52,7 +55,6 @@ export interface TabData {
 }
 
 
-// Helper to map report data to TabData
 function mapReportsToTabs(reports: ReportData[]): TabData[] {
     return reports.map((report, idx) => ({
         id: report.question_id,
@@ -76,9 +78,11 @@ function mapReportsToTabs(reports: ReportData[]): TabData[] {
     }))
 }
 
-export default function ReportView({ reports, research, categories, enableSwitch }: ReportViewProps) {
+export default function ReportView({ reports, categories, enableSwitch, defaultTabId, onTabSelect }: ReportViewProps) {
     const tabData = useMemo(() => mapReportsToTabs(reports), [reports])
     const [expandedPurpose, setExpandedPurpose] = useState<string | null>(null)
+    const initialTab = defaultTabId && tabData.some(tab => tab.id === defaultTabId) ? defaultTabId : (tabData[0]?.id ?? "")
+    const [selectedTab, setSelectedTab] = useState<string>(initialTab)
 
     const [categoryTargets, setCategoryTargets] = useState<Record<string, boolean>>(
         () => Object.fromEntries(categories.map(c => [c.id, c.target]))
@@ -107,7 +111,14 @@ export default function ReportView({ reports, research, categories, enableSwitch
 
     return (
         <div className="container mx-auto py-6 px-0 max-w-6xl">
-            <Tabs defaultValue={tabData[0].id} className="w-full">
+            <Tabs
+                value={selectedTab}
+                onValueChange={(tabId) => {
+                    setSelectedTab(tabId)
+                    if (onTabSelect) onTabSelect(tabId)
+                }}
+                className="w-full"
+            >
                 <div className="border-b dark:border-sky-800 mb-6">
                     <div className="relative">
                         <TabsList
@@ -169,29 +180,6 @@ export default function ReportView({ reports, research, categories, enableSwitch
                     </TabsContent>
                 ))}
             </Tabs>
-        </div>
-    )
-}
-
-function ScoreBoxView({ fit, neutral, unfit, className }: ScoreBox & { className?: string }) {
-    return (
-        <div className={cn("bg-[#F8FAFC] dark:bg-sky-900 rounded-lg p-3 md:p-4 flex flex-col justify-center border border-gray-300 dark:border-sky-800", className)}>
-            <div className="flex items-center justify-between h-full">
-                <div className="flex flex-col items-center">
-                    <span className="text-green-600 dark:text-green-400 font-bold text-lg">{fit}%</span>
-                    <span className="text-xs text-muted-foreground dark:text-white">Fit</span>
-                </div>
-                <div className="h-full w-px bg-gray-300 dark:bg-sky-800 mx-2"/>
-                <div className="flex flex-col items-center">
-                    <span className="text-amber-500 dark:text-amber-400 font-bold text-lg">{neutral}%</span>
-                    <span className="text-xs text-muted-foreground dark:text-white">Neutral</span>
-                </div>
-                <div className="h-full w-px bg-gray-300 dark:bg-sky-800 mx-2"/>
-                <div className="flex flex-col items-center">
-                    <span className="text-red-500 dark:text-red-400 font-bold text-lg">{unfit}%</span>
-                    <span className="text-xs text-muted-foreground dark:text-white">Unfit</span>
-                </div>
-            </div>
         </div>
     )
 }
@@ -383,7 +371,7 @@ function ResponseCard({ type, title, description }: Response) {
         <Card className="bg-[#F8FAFC] dark:bg-sky-900 border border-gray-300 dark:border-sky-800">
             <CardContent className="p-3 md:p-4">
                 <div className="flex flex-col gap-2">
-                    <div className="flex justify-between items-center">
+                    <div className="flex justify-between items-start">
                         <h4 className="font-bold text-foreground dark:text-white">{title}</h4>
                         <span className={cn("text-xs px-2 py-0.5 rounded-full", tagColors[type])}>
                             {type.charAt(0).toUpperCase() + type.slice(1)}

@@ -1,0 +1,380 @@
+{
+  "title": "Café Aconchego - (2025-Abr)",
+  "description": "Sua opinião nos ajuda a manter e melhorar nosso padrão. Avalie sua experiência conosco.",
+  "questions": [
+    {
+      "purpose": "Qualidade do Café: Como você avalia o sabor, temperatura e aroma do café que consumiu?",
+      "sequence": 1
+    },
+    {
+      "purpose": "Ambiente da Loja: Sua percepção sobre a limpeza, conforto, música e decoração do nosso espaço.",
+      "sequence": 2
+    },
+    {
+      "purpose": "Atendimento Recebido: Como foi a cordialidade, agilidade e eficiência da nossa equipe?",
+      "sequence": 3
+    }
+  ],
+  "forms": [
+    {
+      "email": "cliente_faixa_234_1@example.com",
+      "answers": [
+        { "purpose": "O café estava bom, temperatura correta.", "score": "3", "explanation": "Sabor agradável, nada excepcional." },
+        { "purpose": "Ambiente limpo, mas a música estava um pouco alta.", "score": "2", "explanation": "Dificultou um pouco a conversa." },
+        { "purpose": "Atendimento rápido e eficiente.", "score": "4", "explanation": "Muito bom." }
+      ]
+    },
+    {
+      "email": "cliente_faixa_234_2@example.com",
+      "answers": [
+        { "purpose": "Café um pouco fraco para o meu gosto, mas tomável.", "score": "2", "explanation": "Esperava mais corpo." },
+        { "purpose": "Decoração agradável e ambiente confortável.", "score": "4", "explanation": "Gostei do estilo." },
+        { "purpose": "Atendente foi cordial e fez o básico.", "score": "3", "explanation": "Atendimento padrão." }
+      ]
+    },
+    {
+      "email": "cliente_faixa_234_3@example.com",
+      "answers": [
+        { "purpose": "Sabor do café muito bom, bem equilibrado.", "score": "4", "explanation": "Um dos melhores que provei aqui." },
+        { "purpose": "Ambiente ok, mas um pouco barulhento na hora do rush.", "score": "2", "explanation": "Preferível em horários mais calmos." },
+        { "purpose": "Atendimento um pouco lento, mas simpático.", "score": "3", "explanation": "A simpatia compensou a espera." }
+      ]
+    },
+    {
+      "email": "cliente_faixa_234_4@example.com",
+      "answers": [
+        { "purpose": "Café estava na temperatura ideal, sabor satisfatório.", "score": "3", "explanation": "" },
+        { "purpose": "Lugar confortável e com boa iluminação.", "score": "4", "explanation": "Bom para ler ou trabalhar." },
+        { "purpose": "Atendimento apenas razoável, sem muito entusiasmo.", "score": "2", "explanation": "Poderia ser mais acolhedor." }
+      ]
+    },
+    {
+      "email": "cliente_faixa_234_5@example.com",
+      "answers": [
+        { "purpose": "Café mais ou menos, já tomei melhores aqui.", "score": "2", "explanation": "Inconsistente." },
+        { "purpose": "Ambiente limpo e organizado, música agradável.", "score": "3", "explanation": "Experiência geral boa no local." },
+        { "purpose": "Atendimento muito bom, ágil e atencioso.", "score": "4", "explanation": "" }
+      ]
+    },
+    {
+      "email": "cliente_faixa_234_6@example.com",
+      "answers": [
+        { "purpose": "Café bom, aroma agradável.", "score": "3", "explanation": "Dentro do esperado." },
+        { "purpose": "Ambiente um pouco apertado, mas limpo.", "score": "2", "explanation": "Mesas muito próximas." },
+        { "purpose": "Atendente foi prestativo e educado.", "score": "4", "explanation": "Excelente atendimento." }
+      ]
+    },
+    {
+      "email": "cliente_faixa_234_7@example.com",
+      "answers": [
+        { "purpose": "Gostei bastante do café, sabor marcante.", "score": "4", "explanation": "" },
+        { "purpose": "Decoração simples, mas o ambiente é confortável.", "score": "3", "explanation": "Sem muito luxo, mas funcional." },
+        { "purpose": "Atendimento demorou um pouco para chegar na mesa.", "score": "2", "explanation": "Estavam com movimento." }
+      ]
+    },
+    {
+      "email": "cliente_faixa_234_8@example.com",
+      "answers": [
+        { "purpose": "Café com boa acidez, mas poderia estar mais quente.", "score": "3", "explanation": "Esfriou rápido." },
+        { "purpose": "Ambiente muito agradável, ótimo para uma pausa.", "score": "4", "explanation": "Relaxante." },
+        { "purpose": "Atendimento apenas cumpriu o protocolo.", "score": "2", "explanation": "Faltou simpatia." }
+      ]
+    },
+    {
+      "email": "cliente_faixa_234_9@example.com",
+      "answers": [
+        { "purpose": "Café mediano, não impressionou.", "score": "2", "explanation": "" },
+        { "purpose": "Limpeza do local estava boa, mesas bem dispostas.", "score": "3", "explanation": "" },
+        { "purpose": "Atendente demonstrou bom conhecimento dos produtos.", "score": "4", "explanation": "Ajudou na escolha." }
+      ]
+    },
+    {
+      "email": "cliente_faixa_234_10@example.com",
+      "answers": [
+        { "purpose": "Café saboroso e bem tirado.", "score": "4", "explanation": "Qualidade consistente." },
+        { "purpose": "O ambiente é bom, mas o ar condicionado estava desligado.", "score": "2", "explanation": "Ficou um pouco abafado." },
+        { "purpose": "Atendimento padrão, sem queixas.", "score": "3", "explanation": "" }
+      ]
+    },
+    {
+      "email": "cliente_faixa_234_11@example.com",
+      "answers": [
+        { "purpose": "Café apenas ok, nada que me fizesse voltar especificamente por ele.", "score": "2", "explanation": "" },
+        { "purpose": "Ambiente confortável e com música ambiente na altura certa.", "score": "4", "explanation": "Gostei da seleção musical." },
+        { "purpose": "Atendimento cordial, mas um pouco lento para trazer a conta.", "score": "3", "explanation": "" }
+      ]
+    },
+    {
+      "email": "cliente_faixa_234_12@example.com",
+      "answers": [
+        { "purpose": "Bom café, mas já provei blends melhores.", "score": "3", "explanation": "Satisfatório." },
+        { "purpose": "O ambiente estava um pouco escuro para o meu gosto.", "score": "2", "explanation": "Preferiria mais luz." },
+        { "purpose": "Atendente muito simpático e prestativo.", "score": "4", "explanation": "Fez a diferença." }
+      ]
+    },
+    {
+      "email": "cliente_faixa_234_13@example.com",
+      "answers": [
+        { "purpose": "Café de boa qualidade, aroma agradável.", "score": "4", "explanation": "" },
+        { "purpose": "Ambiente simples, mas limpo e organizado.", "score": "3", "explanation": "" },
+        { "purpose": "Atendimento eficiente, mas o atendente parecia cansado.", "score": "2", "explanation": "Faltou um pouco de energia." }
+      ]
+    },
+    {
+      "email": "cliente_faixa_234_14@example.com",
+      "answers": [
+        { "purpose": "Café um pouco amargo demais para mim.", "score": "2", "explanation": "" },
+        { "purpose": "Ambiente agradável, com boa ventilação.", "score": "4", "explanation": "" },
+        { "purpose": "Atendimento atencioso e educado.", "score": "3", "explanation": "" }
+      ]
+    },
+    {
+      "email": "cliente_faixa_234_15@example.com",
+      "answers": [
+        { "purpose": "Café bom, na temperatura certa.", "score": "3", "explanation": "" },
+        { "purpose": "Decoração poderia ser mais moderna, mas o local é limpo.", "score": "2", "explanation": "Um pouco antiquado." },
+        { "purpose": "Atendimento muito bom, equipe bem treinada.", "score": "4", "explanation": "" }
+      ]
+    },
+    {
+      "email": "cliente_faixa_234_16@example.com",
+      "answers": [
+        { "purpose": "Café com sabor equilibrado, gostei.", "score": "4", "explanation": "" },
+        { "purpose": "O nível de ruído no ambiente era um pouco alto.", "score": "2", "explanation": "Difícil manter uma conversa." },
+        { "purpose": "Atendimento correto, mas sem muita interação.", "score": "3", "explanation": "" }
+      ]
+    },
+    {
+      "email": "cliente_faixa_234_17@example.com",
+      "answers": [
+        { "purpose": "Café apenas regular, não se destacou.", "score": "2", "explanation": "" },
+        { "purpose": "Ambiente muito bom, espaçoso e confortável.", "score": "4", "explanation": "" },
+        { "purpose": "Atendimento gentil e rápido.", "score": "3", "explanation": "" }
+      ]
+    },
+    {
+      "email": "cliente_faixa_234_18@example.com",
+      "answers": [
+        { "purpose": "Café saboroso, um dos melhores que já tomei recentemente.", "score": "4", "explanation": "" },
+        { "purpose": "Ambiente limpo e com boa música, mas as cadeiras não são muito confortáveis.", "score": "3", "explanation": "Para uma visita rápida, ok." },
+        { "purpose": "Atendimento um pouco confuso na hora de fazer o pedido.", "score": "2", "explanation": "Pareciam atrapalhados." }
+      ]
+    },
+    {
+      "email": "cliente_faixa_234_19@example.com",
+      "answers": [
+        { "purpose": "Café bom, mas poderia ser um pouco mais encorpado.", "score": "3", "explanation": "" },
+        { "purpose": "O ambiente é agradável, mas estava um pouco frio.", "score": "2", "explanation": "Ar condicionado forte." },
+        { "purpose": "Atendimento excelente, muito atenciosos.", "score": "4", "explanation": "" }
+      ]
+    },
+    {
+      "email": "cliente_faixa_234_20@example.com",
+      "answers": [
+        { "purpose": "Café apenas ok, não surpreendeu.", "score": "2", "explanation": "" },
+        { "purpose": "Ambiente bem decorado e confortável.", "score": "4", "explanation": "" },
+        { "purpose": "Atendimento eficiente e simpático.", "score": "3", "explanation": "" }
+      ]
+    },
+    {
+      "email": "cliente_faixa_234_21@example.com",
+      "answers": [
+        { "purpose": "Café muito bom, temperatura e sabor perfeitos.", "score": "4", "explanation": "" },
+        { "purpose": "Ambiente com iluminação agradável, mas o Wi-Fi estava lento.", "score": "3", "explanation": "Dificultou o uso para trabalho." },
+        { "purpose": "Atendimento razoável, demorou para vir o troco.", "score": "2", "explanation": "" }
+      ]
+    },
+    {
+      "email": "cliente_faixa_234_22@example.com",
+      "answers": [
+        { "purpose": "Café satisfatório, mas nada de especial.", "score": "3", "explanation": "" },
+        { "purpose": "O ambiente é ok, mas um pouco barulhento.", "score": "2", "explanation": "Muitas conversas altas." },
+        { "purpose": "Atendimento muito bom, rápido e prestativo.", "score": "4", "explanation": "" }
+      ]
+    },
+    {
+      "email": "cliente_faixa_234_23@example.com",
+      "answers": [
+        { "purpose": "Café um pouco aguado para o meu paladar.", "score": "2", "explanation": "" },
+        { "purpose": "Ambiente limpo e com boa música ambiente.", "score": "4", "explanation": "Volume adequado." },
+        { "purpose": "Atendimento cordial e eficiente.", "score": "3", "explanation": "" }
+      ]
+    },
+    {
+      "email": "cliente_faixa_234_24@example.com",
+      "answers": [
+        { "purpose": "Café com bom sabor e aroma.", "score": "4", "explanation": "" },
+        { "purpose": "Ambiente um pouco apertado, mas a decoração é bonita.", "score": "3", "explanation": "" },
+        { "purpose": "Atendimento apenas funcional, sem muita interação.", "score": "2", "explanation": "" }
+      ]
+    },
+    {
+      "email": "cliente_faixa_234_25@example.com",
+      "answers": [
+        { "purpose": "Café bom, atendeu às expectativas.", "score": "3", "explanation": "" },
+        { "purpose": "O ambiente estava um pouco bagunçado, mesas demorando a serem limpas.", "score": "2", "explanation": "" },
+        { "purpose": "Atendimento muito atencioso e simpático.", "score": "4", "explanation": "" }
+      ]
+    },
+    {
+      "email": "cliente_faixa_234_26@example.com",
+      "answers": [
+        { "purpose": "Café de qualidade regular, nada que se destaque.", "score": "2", "explanation": "" },
+        { "purpose": "Ambiente confortável e bem iluminado.", "score": "4", "explanation": "" },
+        { "purpose": "Atendimento eficiente, mas poderia ser mais caloroso.", "score": "3", "explanation": "" }
+      ]
+    },
+    {
+      "email": "cliente_faixa_234_27@example.com",
+      "answers": [
+        { "purpose": "Café muito saboroso, superou minhas expectativas.", "score": "4", "explanation": "" },
+        { "purpose": "Ambiente agradável, porém a limpeza do banheiro deixou a desejar.", "score": "2", "explanation": "Ponto negativo." },
+        { "purpose": "Atendimento padrão, correto e educado.", "score": "3", "explanation": "" }
+      ]
+    },
+    {
+      "email": "cliente_faixa_234_28@example.com",
+      "answers": [
+        { "purpose": "Café bom, mas achei o preço um pouco alto pela quantidade.", "score": "3", "explanation": "Custo-benefício médio." },
+        { "purpose": "Ambiente com decoração interessante, mas um pouco barulhento.", "score": "3", "explanation": "" },
+        { "purpose": "Atendimento um pouco lento na reposição dos itens da mesa.", "score": "2", "explanation": "" }
+      ]
+    },
+    {
+      "email": "cliente_faixa_234_29@example.com",
+      "answers": [
+        { "purpose": "Café apenas ok, faltou um pouco de sabor.", "score": "2", "explanation": "" },
+        { "purpose": "Ambiente muito bom, confortável e com wi-fi rápido.", "score": "4", "explanation": "Ideal para trabalho." },
+        { "purpose": "Atendimento muito bom e ágil.", "score": "4", "explanation": "" }
+      ]
+    },
+    {
+      "email": "cliente_faixa_234_30@example.com",
+      "answers": [
+        { "purpose": "Café com boa apresentação e sabor agradável.", "score": "4", "explanation": "" },
+        { "purpose": "Ambiente um pouco escuro e com música ambiente que não me agradou.", "score": "2", "explanation": "Questão de preferência." },
+        { "purpose": "Atendimento eficiente e cordial.", "score": "3", "explanation": "" }
+      ]
+    },
+    {
+      "email": "cliente_faixa_234_31@example.com",
+      "answers": [
+        { "purpose": "Café bom, mas nada de extraordinário.", "score": "3", "explanation": "" },
+        { "purpose": "Ambiente limpo e com decoração moderna.", "score": "4", "explanation": "" },
+        { "purpose": "Atendimento apenas razoável, atendente parecia desatento.", "score": "2", "explanation": "" }
+      ]
+    },
+    {
+      "email": "cliente_faixa_234_32@example.com",
+      "answers": [
+        { "purpose": "Café um pouco fraco, esperava mais intensidade.", "score": "2", "explanation": "" },
+        { "purpose": "Ambiente agradável e confortável.", "score": "3", "explanation": "" },
+        { "purpose": "Atendimento muito bom, equipe simpática e prestativa.", "score": "4", "explanation": "" }
+      ]
+    },
+    {
+      "email": "cliente_faixa_234_33@example.com",
+      "answers": [
+        { "purpose": "Café saboroso e na temperatura ideal.", "score": "4", "explanation": "" },
+        { "purpose": "Ambiente um pouco barulhento demais para uma conversa tranquila.", "score": "2", "explanation": "" },
+        { "purpose": "Atendimento correto e ágil.", "score": "3", "explanation": "" }
+      ]
+    },
+    {
+      "email": "cliente_faixa_234_34@example.com",
+      "answers": [
+        { "purpose": "Café bom, mas o preço é um pouco elevado.", "score": "3", "explanation": "" },
+        { "purpose": "Ambiente confortável e com boa música.", "score": "4", "explanation": "" },
+        { "purpose": "Atendimento lento, apesar de poucos clientes.", "score": "2", "explanation": "" }
+      ]
+    },
+    {
+      "email": "cliente_faixa_234_35@example.com",
+      "answers": [
+        { "purpose": "Café apenas regular, não me marcou.", "score": "2", "explanation": "" },
+        { "purpose": "Ambiente limpo e bem organizado.", "score": "3", "explanation": "" },
+        { "purpose": "Atendimento muito atencioso e eficiente.", "score": "4", "explanation": "" }
+      ]
+    },
+    {
+      "email": "cliente_faixa_234_36@example.com",
+      "answers": [
+        { "purpose": "Café muito bom, um dos melhores da região.", "score": "4", "explanation": "" },
+        { "purpose": "Ambiente agradável, mas um pouco escuro.", "score": "3", "explanation": "" },
+        { "purpose": "Atendimento funcional, mas sem muita simpatia.", "score": "2", "explanation": "" }
+      ]
+    },
+    {
+      "email": "cliente_faixa_234_37@example.com",
+      "answers": [
+        { "purpose": "Café bom, atendeu minhas expectativas.", "score": "3", "explanation": "" },
+        { "purpose": "Ambiente com decoração interessante, mas o som estava alto.", "score": "2", "explanation": "" },
+        { "purpose": "Atendimento muito bom e prestativo.", "score": "4", "explanation": "" }
+      ]
+    },
+    {
+      "email": "cliente_faixa_234_38@example.com",
+      "answers": [
+        { "purpose": "Café mediano, faltou sabor mais pronunciado.", "score": "2", "explanation": "" },
+        { "purpose": "Ambiente confortável e com boa iluminação.", "score": "4", "explanation": "" },
+        { "purpose": "Atendimento rápido e eficiente.", "score": "3", "explanation": "" }
+      ]
+    },
+    {
+      "email": "cliente_faixa_234_39@example.com",
+      "answers": [
+        { "purpose": "Café saboroso e bem quente, como gosto.", "score": "4", "explanation": "" },
+        { "purpose": "Ambiente limpo, mas a disposição das mesas não favorece a privacidade.", "score": "2", "explanation": "" },
+        { "purpose": "Atendimento cordial e atencioso.", "score": "3", "explanation": "" }
+      ]
+    },
+    {
+      "email": "cliente_faixa_234_40@example.com",
+      "answers": [
+        { "purpose": "Café bom, mas nada excepcional.", "score": "3", "explanation": "" },
+        { "purpose": "Ambiente agradável e com música ambiente de qualidade.", "score": "4", "explanation": "" },
+        { "purpose": "Atendimento um pouco demorado para fazer o pedido.", "score": "2", "explanation": "" }
+      ]
+    },
+    {
+      "email": "cliente_faixa_234_41@example.com",
+      "answers": [
+        { "purpose": "Café apenas ok, já tomei melhores pelo preço.", "score": "2", "explanation": "" },
+        { "purpose": "Ambiente muito bom, espaçoso e bem decorado.", "score": "4", "explanation": "" },
+        { "purpose": "Atendimento eficiente e simpático.", "score": "4", "explanation": "" }
+      ]
+    },
+    {
+      "email": "cliente_faixa_234_42@example.com",
+      "answers": [
+        { "purpose": "Café muito bom, com torra no ponto certo.", "score": "4", "explanation": "" },
+        { "purpose": "Ambiente confortável, mas a limpeza do chão poderia ser melhor.", "score": "3", "explanation": "" },
+        { "purpose": "Atendimento razoável, atendente parecia pouco interessado.", "score": "2", "explanation": "" }
+      ]
+    },
+    {
+      "email": "cliente_faixa_234_43@example.com",
+      "answers": [
+        { "purpose": "Café bom e com preço justo.", "score": "3", "explanation": "" },
+        { "purpose": "Ambiente um pouco barulhento, mas a decoração é legal.", "score": "3", "explanation": "" },
+        { "purpose": "Atendimento muito bom, ágil e cortês.", "score": "4", "explanation": "" }
+      ]
+    },
+    {
+      "email": "cliente_faixa_234_44@example.com",
+      "answers": [
+        { "purpose": "Café regular, sem grandes atrativos.", "score": "2", "explanation": "" },
+        { "purpose": "Ambiente limpo, mas muito simples.", "score": "2", "explanation": "" },
+        { "purpose": "Atendimento atencioso e prestativo.", "score": "4", "explanation": "Superou as expectativas." }
+      ]
+    },
+    {
+      "email": "cliente_faixa_234_45@example.com",
+      "answers": [
+        { "purpose": "Café saboroso e com boa apresentação.", "score": "4", "explanation": "" },
+        { "purpose": "Ambiente confortável, mas um pouco escuro demais para meu gosto.", "score": "3", "explanation": "" },
+        { "purpose": "Atendimento eficiente, mas um pouco mecânico.", "score": "3", "explanation": "Faltou um toque pessoal." }
+      ]
+    }
+  ]
+}

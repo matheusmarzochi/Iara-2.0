@@ -2,7 +2,7 @@
 
 import { db } from "iara-shared/database"
 import { eq, countDistinct } from "iara-shared/node_modules/drizzle-orm"
-import { Research, researches, researchViews, questions, categories, forms, analysis, answers, classifications} from "iara-shared/database/schema"
+import { type Research, researches, researchViews, questions, categories, forms, analysis, answers, classifications} from "iara-shared/database/schema"
 import { reports } from "iara-shared/database/schema/report"
 
 export const adminGetResearch = async (researchId: string): Promise<Research | undefined> => {

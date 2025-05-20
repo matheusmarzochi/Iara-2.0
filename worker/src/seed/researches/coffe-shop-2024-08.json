@@ -1,0 +1,1320 @@
+{
+  "title": "Café Aconchego - (2024-Ago)",
+  "description": "Sua opinião nos ajuda a manter e melhorar nosso padrão. Avalie sua experiência conosco.",
+  "questions": [
+    {
+      "purpose": "Qualidade do Café: Como você avalia o sabor, temperatura e aroma do café que consumiu?",
+      "sequence": 1
+    },
+    {
+      "purpose": "Ambiente da Loja: Sua percepção sobre a limpeza, conforto, música e decoração do nosso espaço.",
+      "sequence": 2
+    },
+    {
+      "purpose": "Atendimento Recebido: Como foi a cordialidade, agilidade e eficiência da nossa equipe?",
+      "sequence": 3
+    }
+  ],
+  "forms": [
+    {
+      "email": "cliente_1@example.com",
+      "answers": [
+        {
+          "purpose": "O café estava apenas razoável, um pouco fraco para o meu gosto e não muito quente.",
+          "score": "2",
+          "explanation": "Esperava um sabor mais marcante e uma temperatura melhor."
+        },
+        {
+          "purpose": "Ambiente limpo, mas a música estava um pouco alta demais para uma conversa tranquila.",
+          "score": "2",
+          "explanation": "Dificultou um pouco a concentração e o diálogo com minha companhia."
+        },
+        {
+          "purpose": "Atendimento foi rápido, mas sem muita simpatia ou cordialidade por parte da equipe.",
+          "score": "2",
+          "explanation": "Eficiente na entrega, porém um pouco frio e distante no trato."
+        }
+      ]
+    },
+    {
+      "email": "cliente_2@example.com",
+      "answers": [
+        {
+          "purpose": "Café bom, temperatura correta e sabor bastante agradável ao meu paladar.",
+          "score": "3",
+          "explanation": "Fiquei satisfeito com a qualidade geral do café que foi servido."
+        },
+        {
+          "purpose": "Decoração agradável e ambiente confortável para uma pausa rápida durante o dia.",
+          "score": "3",
+          "explanation": "Gostei do estilo do local e da atmosfera que ele proporciona."
+        },
+        {
+          "purpose": "Atendente foi cordial e fez o básico de forma correta e bastante eficiente.",
+          "score": "3",
+          "explanation": "Atendimento padrão, sem queixas a fazer sobre o serviço prestado."
+        }
+      ]
+    },
+    {
+      "email": "cliente_3@example.com",
+      "answers": [
+        {
+          "purpose": "Sabor do café muito bom, bem equilibrado e com um aroma realmente delicioso.",
+          "score": "4",
+          "explanation": "Um dos melhores cafés que provei recentemente na cidade, recomendo."
+        },
+        {
+          "purpose": "Ambiente ok, mas estava um pouco barulhento demais na hora do rush da tarde.",
+          "score": "2",
+          "explanation": "Preferível visitar o local em horários mais calmos para maior tranquilidade."
+        },
+        {
+          "purpose": "Atendimento um pouco lento no preparo do pedido, mas a equipe foi simpática e atenciosa.",
+          "score": "3",
+          "explanation": "A simpatia demonstrada pelos funcionários compensou a pequena espera."
+        }
+      ]
+    },
+    {
+      "email": "cliente_4@example.com",
+      "answers": [
+        {
+          "purpose": "Café excelente! Sabor intenso e um aroma que preenche todo o ambiente de forma agradável.",
+          "score": "5",
+          "explanation": "Qualidade superior, realmente impressionante e muito delicioso."
+        },
+        {
+          "purpose": "Lugar muito confortável e com uma iluminação perfeita para leitura ou para trabalho.",
+          "score": "4",
+          "explanation": "Ótimo para ler um bom livro ou para trabalhar tranquilamente no notebook."
+        },
+        {
+          "purpose": "Atendimento apenas razoável, faltou um pouco mais de entusiasmo e proatividade da equipe.",
+          "score": "2",
+          "explanation": "Poderia ser mais acolhedor e um pouco mais proativo no serviço geral."
+        }
+      ]
+    },
+    {
+      "email": "cliente_5@example.com",
+      "answers": [
+        {
+          "purpose": "Café muito ruim, totalmente aguado e com um gosto de velho que era insuportável.",
+          "score": "1",
+          "explanation": "Decepcionante, não consegui terminar de beber o que foi servido na xícara."
+        },
+        {
+          "purpose": "Ambiente limpo e organizado, com música agradável e bastante suave ao fundo.",
+          "score": "3",
+          "explanation": "A experiência geral no local foi boa, apesar do péssimo café que tomei."
+        },
+        {
+          "purpose": "Atendimento muito bom, ágil e bastante atencioso com todas as minhas solicitações e dúvidas.",
+          "score": "4",
+          "explanation": "A equipe de atendimento do café se destacou positivamente na minha visita ao local."
+        }
+      ]
+    },
+    {
+      "email": "cliente_6@example.com",
+      "answers": [
+        {
+          "purpose": "Café bom, com um aroma bastante agradável e muito convidativo aos sentidos.",
+          "score": "3",
+          "explanation": "Dentro do esperado para um bom café servido na região central da cidade."
+        },
+        {
+          "purpose": "Ambiente um pouco apertado quando está cheio de clientes, mas estava limpo e organizado.",
+          "score": "2",
+          "explanation": "As mesas poderiam ser um pouco mais espaçadas para proporcionar maior conforto aos clientes."
+        },
+        {
+          "purpose": "Atendente foi muito prestativo e extremamente educado durante todo o processo de atendimento.",
+          "score": "4",
+          "explanation": "Excelente atendimento, fez toda a diferença na minha experiência no café."
+        }
+      ]
+    },
+    {
+      "email": "cliente_7@example.com",
+      "answers": [
+        {
+          "purpose": "Gostei bastante do café servido, tinha um sabor marcante e de alta qualidade.",
+          "score": "4",
+          "explanation": "Qualidade perceptível nos grãos utilizados e também no cuidadoso preparo da bebida."
+        },
+        {
+          "purpose": "Decoração simples, mas o ambiente é muito confortável e bastante acolhedor para todos.",
+          "score": "3",
+          "explanation": "Sem muito luxo, mas é bastante funcional e muito agradável para ficar um tempo."
+        },
+        {
+          "purpose": "Atendimento demorou um pouco para chegar até a minha mesa para anotar o pedido inicial.",
+          "score": "2",
+          "explanation": "Parecia que estavam com pouco pessoal trabalhando no dia da minha visita ao local."
+        }
+      ]
+    },
+    {
+      "email": "cliente_8@example.com",
+      "answers": [
+        {
+          "purpose": "Café com boa acidez e corpo, mas poderia estar um pouco mais quente ao ser servido.",
+          "score": "3",
+          "explanation": "Esfriou um pouco rápido demais para o meu gosto pessoal, infelizmente."
+        },
+        {
+          "purpose": "Ambiente muito agradável, ótimo para fazer uma pausa relaxante durante o dia corrido.",
+          "score": "4",
+          "explanation": "Local tranquilo e muito bem cuidado em todos os seus mínimos detalhes."
+        },
+        {
+          "purpose": "Atendimento apenas cumpriu o protocolo básico, sem muita interação ou qualquer simpatia.",
+          "score": "2",
+          "explanation": "Faltou um pouco mais de simpatia e também de proatividade por parte da equipe."
+        }
+      ]
+    },
+    {
+      "email": "cliente_9@example.com",
+      "answers": [
+        {
+          "purpose": "Café mediano, não me impressionou muito o sabor nem o aroma da bebida.",
+          "score": "2",
+          "explanation": "Esperava um pouco mais de personalidade e também de complexidade no café."
+        },
+        {
+          "purpose": "Limpeza do local estava boa, as mesas estavam bem dispostas e muito organizadas.",
+          "score": "3",
+          "explanation": "O ambiente geral estava em ordem e bastante agradável de se ver e estar."
+        },
+        {
+          "purpose": "Atendente demonstrou bom conhecimento dos produtos oferecidos no cardápio do café.",
+          "score": "4",
+          "explanation": "Isso ajudou bastante na minha escolha final do pedido que fiz no balcão."
+        }
+      ]
+    },
+    {
+      "email": "cliente_10@example.com",
+      "answers": [
+        {
+          "purpose": "Café saboroso e muito bem tirado, com uma crema perfeita e bastante convidativa.",
+          "score": "4",
+          "explanation": "Qualidade consistente e muito boa em todas as xícaras que pedi."
+        },
+        {
+          "purpose": "O ambiente é bom, mas o ar condicionado estava desligado e o local ficou um pouco abafado.",
+          "score": "2",
+          "explanation": "Ficou um pouco desconfortável devido ao calor excessivo que fazia no local."
+        },
+        {
+          "purpose": "Atendimento padrão, sem queixas maiores a fazer, mas também sem grandes elogios a tecer.",
+          "score": "3",
+          "explanation": "Serviço correto e eficiente, dentro do que era esperado para o estabelecimento."
+        }
+      ]
+    },
+    {
+      "email": "cliente_11@example.com",
+      "answers": [
+        {
+          "purpose": "Café perfeito! Sabor, aroma e temperatura estavam impecáveis. Adorei muito mesmo!",
+          "score": "5",
+          "explanation": "Melhor café que tomei nos últimos tempos, sem qualquer sombra de dúvida."
+        },
+        {
+          "purpose": "Ambiente confortável e com música ambiente na altura e no estilo certos para relaxar.",
+          "score": "4",
+          "explanation": "Gostei muito da seleção musical e do conforto geral que o espaço oferece."
+        },
+        {
+          "purpose": "Atendimento foi cordial, mas houve um pouco de lentidão para trazer a conta no final.",
+          "score": "3",
+          "explanation": "A única pequena ressalva que tenho a fazer foi a demora no momento do fechamento da conta."
+        }
+      ]
+    },
+    {
+      "email": "cliente_12@example.com",
+      "answers": [
+        {
+          "purpose": "Bom café, mas já provei alguns blends melhores em outros estabelecimentos da cidade.",
+          "score": "3",
+          "explanation": "Satisfatório, mas não chegou a ser excepcional ou completamente inesquecível para mim."
+        },
+        {
+          "purpose": "O ambiente estava um pouco escuro demais para o meu gosto pessoal e também para leitura.",
+          "score": "2",
+          "explanation": "Preferiria um pouco mais de luz natural ou uma iluminação artificial mais eficiente no local."
+        },
+        {
+          "purpose": "Atendente muito simpático e extremamente prestativo com todas as minhas dúvidas e também com os pedidos.",
+          "score": "4",
+          "explanation": "Fez toda a diferença na experiência geral que tive durante minha visita ao café."
+        }
+      ]
+    },
+    {
+      "email": "cliente_13@example.com",
+      "answers": [
+        {
+          "purpose": "Café de excelente qualidade, com um aroma que perfumou toda a mesa onde eu estava.",
+          "score": "5",
+          "explanation": "Realmente um produto diferenciado e de altíssima qualidade, parabéns!"
+        },
+        {
+          "purpose": "Ambiente simples, mas estava muito limpo e bem organizado em todos os cantos do salão.",
+          "score": "3",
+          "explanation": "Funcional e agradável para uma visita rápida e para tomar um bom café."
+        },
+        {
+          "purpose": "Atendimento eficiente, mas o atendente que me serviu parecia um pouco cansado e sobrecarregado.",
+          "score": "2",
+          "explanation": "Faltou um pouco mais de energia e também de entusiasmo no atendimento prestado."
+        }
+      ]
+    },
+    {
+      "email": "cliente_14@example.com",
+      "answers": [
+        {
+          "purpose": "Café um pouco amargo demais para o meu paladar específico, mas a qualidade geral era boa.",
+          "score": "2",
+          "explanation": "Foi mais uma questão de preferência pessoal em relação ao nível de amargor da bebida."
+        },
+        {
+          "purpose": "Ambiente agradável, com boa ventilação natural e também estava muito limpo e organizado.",
+          "score": "4",
+          "explanation": "Local bem cuidado e bastante arejado, o que é um ponto muito positivo para o café."
+        },
+        {
+          "purpose": "Atendimento atencioso e bastante educado por parte de toda a equipe de serviço do local.",
+          "score": "3",
+          "explanation": "Serviço cortês e profissional, exatamente como deve ser em um bom estabelecimento."
+        }
+      ]
+    },
+    {
+      "email": "cliente_15@example.com",
+      "answers": [
+        {
+          "purpose": "Café bom, servido na temperatura certa e com um bom sabor geral ao paladar.",
+          "score": "3",
+          "explanation": "Cumpriu bem o seu papel e também atendeu às minhas expectativas de qualidade."
+        },
+        {
+          "purpose": "Decoração poderia ser um pouco mais moderna e atual, mas o local é bastante limpo.",
+          "score": "2",
+          "explanation": "Um pouco antiquado na aparência, mas não compromete a higiene do ambiente."
+        },
+        {
+          "purpose": "Atendimento muito bom, a equipe do café parece ser bem treinada e também muito motivada.",
+          "score": "4",
+          "explanation": "Serviço de destaque positivo, gostei bastante da atenção recebida por todos."
+        }
+      ]
+    },
+    {
+      "email": "cliente_16@example.com",
+      "answers": [
+        {
+          "purpose": "Café com sabor bastante equilibrado e muito agradável, gostei muito da bebida servida.",
+          "score": "4",
+          "explanation": "Uma ótima escolha de bebida para qualquer momento do dia, seja manhã ou tarde."
+        },
+        {
+          "purpose": "O nível de ruído no ambiente era um pouco alto demais para o meu gosto particular.",
+          "score": "2",
+          "explanation": "Dificultou um pouco para conseguir manter uma conversa tranquila e mais relaxada."
+        },
+        {
+          "purpose": "Atendimento correto, mas sem muita interação pessoal com o cliente no geral durante o serviço.",
+          "score": "3",
+          "explanation": "Profissional, mas poderia ser um pouco menos distante e um pouco mais frio na abordagem."
+        }
+      ]
+    },
+    {
+      "email": "cliente_17@example.com",
+      "answers": [
+        {
+          "purpose": "Café apenas regular, não se destacou em termos de sabor ou mesmo de aroma.",
+          "score": "2",
+          "explanation": "Esperava um pouco mais de um café que se diz especializado e de qualidade."
+        },
+        {
+          "purpose": "Ambiente muito bom, bastante espaçoso e também muito confortável para todos os clientes.",
+          "score": "4",
+          "explanation": "Ótimo para passar um tempo a mais e aproveitar o momento com tranquilidade."
+        },
+        {
+          "purpose": "Atendimento gentil e rápido na preparação de todos os pedidos que foram feitos à equipe.",
+          "score": "3",
+          "explanation": "Equipe eficiente e muito educada com todos os clientes do estabelecimento."
+        }
+      ]
+    },
+    {
+      "email": "cliente_18@example.com",
+      "answers": [
+        {
+          "purpose": "Café saboroso, um dos melhores que já tomei recentemente na cidade toda, sem dúvida.",
+          "score": "4",
+          "explanation": "Superou todas as minhas expectativas em relação ao sabor e também ao aroma."
+        },
+        {
+          "purpose": "Ambiente limpo e com boa música ambiente, mas as cadeiras não são muito confortáveis.",
+          "score": "3",
+          "explanation": "Para uma visita mais rápida, o conforto das cadeiras é ok, mas não para muito tempo."
+        },
+        {
+          "purpose": "Atendimento um pouco confuso na hora de fazer o pedido diretamente no balcão do café.",
+          "score": "2",
+          "explanation": "Pareciam um pouco atrapalhados com o sistema de pedidos ou com o grande movimento."
+        }
+      ]
+    },
+    {
+      "email": "cliente_19@example.com",
+      "answers": [
+        {
+          "purpose": "Café bom, mas poderia ser um pouco mais encorpado e também um pouco mais intenso.",
+          "score": "3",
+          "explanation": "Faltou um pouco mais de personalidade no sabor final do café que foi servido."
+        },
+        {
+          "purpose": "O ambiente é agradável, mas estava um pouco frio demais devido ao ar condicionado muito forte.",
+          "score": "2",
+          "explanation": "Ficou um pouco desconfortável com a temperatura excessivamente baixa do local para mim."
+        },
+        {
+          "purpose": "Atendimento excelente, muito atenciosos e também bastante prestativos em todos os momentos.",
+          "score": "4",
+          "explanation": "A equipe do café realmente se importa com a satisfação e o bem-estar do cliente."
+        }
+      ]
+    },
+    {
+      "email": "cliente_20@example.com",
+      "answers": [
+        {
+          "purpose": "Café muito ruim, parecia água suja com um leve toque de café, sem sabor.",
+          "score": "1",
+          "explanation": "Não me surpreendeu de forma alguma, muito pelo contrário, foi uma decepção."
+        },
+        {
+          "purpose": "Ambiente bem decorado e muito confortável para os diversos clientes que frequentam o local.",
+          "score": "4",
+          "explanation": "Um lugar realmente bonito e bastante agradável para se estar e relaxar um pouco."
+        },
+        {
+          "purpose": "Atendimento eficiente e bastante simpático por parte de todos os funcionários da casa.",
+          "score": "3",
+          "explanation": "Bom tratamento ao cliente, foram todos muito cordiais e educados comigo."
+        }
+      ]
+    },
+    {
+      "email": "cliente_21@example.com",
+      "answers": [
+        {
+          "purpose": "Café muito bom, com temperatura e sabor absolutamente perfeitos para o meu gosto.",
+          "score": "4",
+          "explanation": "Uma experiência realmente deliciosa e bastante memorável para mim."
+        },
+        {
+          "purpose": "Ambiente com iluminação agradável e acolhedora, mas o Wi-Fi estava muito lento hoje.",
+          "score": "3",
+          "explanation": "Dificultou um pouco o uso da internet para realizar trabalho remoto no local."
+        },
+        {
+          "purpose": "Atendimento razoável, houve uma pequena e inesperada demora para conseguir o troco.",
+          "score": "2",
+          "explanation": "Um pequeno deslize no serviço que poderia ter sido facilmente evitado pela equipe."
+        }
+      ]
+    },
+    {
+      "email": "cliente_22@example.com",
+      "answers": [
+        {
+          "purpose": "Café satisfatório, mas nada de muito especial ou diferente do que é comum.",
+          "score": "3",
+          "explanation": "Cumpriu o que se espera de um café simples e também honesto em sua proposta."
+        },
+        {
+          "purpose": "O ambiente é ok, mas estava um pouco barulhento demais para o meu gosto particular.",
+          "score": "2",
+          "explanation": "Muitas conversas altas acontecendo ao mesmo tempo no salão principal do café."
+        },
+        {
+          "purpose": "Atendimento muito bom, rápido e bastante prestativo com todas as informações que solicitei.",
+          "score": "4",
+          "explanation": "Equipe bem informada e também muito ágil no atendimento ao cliente do estabelecimento."
+        }
+      ]
+    },
+    {
+      "email": "cliente_23@example.com",
+      "answers": [
+        {
+          "purpose": "Café um pouco aguado para o meu paladar pessoal, faltou um pouco mais de intensidade.",
+          "score": "2",
+          "explanation": "Esperava um café com um sabor um pouco mais forte e também mais marcante."
+        },
+        {
+          "purpose": "Ambiente limpo e com uma boa seleção de música ambiente tocando no volume certo.",
+          "score": "4",
+          "explanation": "O volume da música estava adequado e a seleção era bastante agradável aos ouvidos."
+        },
+        {
+          "purpose": "Atendimento cordial e eficiente, sem demoras desnecessárias no serviço prestado.",
+          "score": "3",
+          "explanation": "Bom serviço prestado pela equipe do café, fiquei satisfeito com o atendimento."
+        }
+      ]
+    },
+    {
+      "email": "cliente_24@example.com",
+      "answers": [
+        {
+          "purpose": "Café com bom sabor e um aroma muito convidativo e também muito agradável.",
+          "score": "4",
+          "explanation": "Uma ótima escolha para começar bem o dia ou para fazer uma pausa revigorante."
+        },
+        {
+          "purpose": "Ambiente um pouco apertado quando está cheio de clientes, mas a decoração é bonita.",
+          "score": "3",
+          "explanation": "O espaço físico do local poderia ser um pouco maior para maior conforto de todos."
+        },
+        {
+          "purpose": "Atendimento apenas funcional, sem muita interação ou qualquer tipo de simpatia extra.",
+          "score": "2",
+          "explanation": "Fez o básico do serviço, mas poderia ser muito mais acolhedor e atencioso."
+        }
+      ]
+    },
+    {
+      "email": "cliente_25@example.com",
+      "answers": [
+        {
+          "purpose": "Café bom, atendeu bem às minhas expectativas para aquele momento específico do dia.",
+          "score": "3",
+          "explanation": "Fiquei satisfeito com a bebida que foi servida na ocasião da minha visita."
+        },
+        {
+          "purpose": "O ambiente estava um pouco bagunçado, com algumas mesas demorando a serem limpas.",
+          "score": "2",
+          "explanation": "A organização do salão principal poderia ser um pouco melhor e também mais rápida."
+        },
+        {
+          "purpose": "Atendimento muito atencioso e extremamente simpático por parte de todos os funcionários.",
+          "score": "4",
+          "explanation": "A equipe do café é, sem qualquer dúvida, um grande diferencial positivo do local."
+        }
+      ]
+    },
+    {
+      "email": "cliente_26@example.com",
+      "answers": [
+        {
+          "purpose": "Café de qualidade regular, nada que realmente se destaque no sabor final da bebida.",
+          "score": "2",
+          "explanation": "Não é um café ruim, mas também não chega a ser ótimo ou mesmo especial."
+        },
+        {
+          "purpose": "Ambiente confortável e bem iluminado, com bom espaço entre todas as mesas do salão.",
+          "score": "4",
+          "explanation": "Um local agradável para permanecer por mais tempo e também para relaxar um pouco."
+        },
+        {
+          "purpose": "Atendimento eficiente, mas poderia ser um pouco mais caloroso e também mais pessoal.",
+          "score": "3",
+          "explanation": "Correto, mas pareceu um pouco formal demais para o tipo de estabelecimento."
+        }
+      ]
+    },
+    {
+      "email": "cliente_27@example.com",
+      "answers": [
+        {
+          "purpose": "Café muito saboroso, superou minhas expectativas em termos de qualidade e sabor.",
+          "score": "4",
+          "explanation": "Realmente delicioso e muito bem feito pela equipe de baristas do local."
+        },
+        {
+          "purpose": "Ambiente agradável e bem cuidado, porém a limpeza do banheiro deixou um pouco a desejar.",
+          "score": "2",
+          "explanation": "Foi um ponto negativo na experiência geral que tive no estabelecimento visitado."
+        },
+        {
+          "purpose": "Atendimento padrão, correto e educado por parte de toda a equipe de funcionários do café.",
+          "score": "3",
+          "explanation": "Sem problemas no serviço, tudo ocorreu como o esperado e de forma tranquila."
+        }
+      ]
+    },
+    {
+      "email": "cliente_28@example.com",
+      "answers": [
+        {
+          "purpose": "Café bom, mas achei o preço um pouco alto pela quantidade que foi servida na xícara.",
+          "score": "3",
+          "explanation": "O custo-benefício do produto oferecido poderia ser um pouco melhor para o cliente."
+        },
+        {
+          "purpose": "Ambiente com decoração interessante e moderna, mas estava um pouco barulhento demais.",
+          "score": "3",
+          "explanation": "Havia muitas conversas paralelas e um pouco de ruído vindo da rua também."
+        },
+        {
+          "purpose": "Atendimento um pouco lento na reposição dos itens da mesa de buffet self-service do café.",
+          "score": "2",
+          "explanation": "Faltou um pouco mais de agilidade nesse ponto específico do serviço ao cliente."
+        }
+      ]
+    },
+    {
+      "email": "cliente_29@example.com",
+      "answers": [
+        {
+          "purpose": "Café apenas ok, faltou um pouco mais de sabor e também um pouco mais de personalidade.",
+          "score": "2",
+          "explanation": "Não me marcou muito, foi uma bebida comum e completamente esquecível para mim."
+        },
+        {
+          "purpose": "Ambiente muito bom, bastante confortável e com wi-fi funcionando perfeitamente bem no local.",
+          "score": "4",
+          "explanation": "Ideal para quem precisa trabalhar remotamente ou apenas para estudar um pouco com calma."
+        },
+        {
+          "purpose": "Atendimento muito bom e também bastante ágil, mesmo com a casa estando cheia de clientes.",
+          "score": "4",
+          "explanation": "A equipe do café demonstrou muita eficiência e também organização no serviço prestado."
+        }
+      ]
+    },
+    {
+      "email": "cliente_30@example.com",
+      "answers": [
+        {
+          "purpose": "Café com boa apresentação visual e um sabor bastante agradável ao meu paladar.",
+          "score": "4",
+          "explanation": "Uma experiência positiva e que certamente valeu a pena a visita ao local."
+        },
+        {
+          "purpose": "Ambiente um pouco escuro demais e com uma música ambiente que não me agradou muito.",
+          "score": "2",
+          "explanation": "Foi uma questão de preferência pessoal, claro, mas acabou incomodando um pouco."
+        },
+        {
+          "purpose": "Atendimento foi eficiente e cordial durante toda a minha visita ao estabelecimento comercial.",
+          "score": "3",
+          "explanation": "Bom tratamento ao cliente por parte de todos os funcionários presentes no dia."
+        }
+      ]
+    },
+    {
+      "email": "cliente_31@example.com",
+      "answers": [
+        {
+          "purpose": "Café bom, mas nada de realmente extraordinário ou que fosse completamente inesquecível.",
+          "score": "3",
+          "explanation": "Cumpriu bem o papel de um bom café, mas não houve grandes surpresas no sabor."
+        },
+        {
+          "purpose": "Ambiente limpo e com uma decoração moderna e bastante agradável aos olhos dos clientes.",
+          "score": "4",
+          "explanation": "Um local bonito e muito bem cuidado em todos os seus mínimos detalhes de decoração."
+        },
+        {
+          "purpose": "Atendimento apenas razoável, o atendente que me serviu na mesa parecia um pouco desatento.",
+          "score": "2",
+          "explanation": "Poderia ter sido um pouco mais focado no cliente e também no meu pedido específico."
+        }
+      ]
+    },
+    {
+      "email": "cliente_32@example.com",
+      "answers": [
+        {
+          "purpose": "Café um pouco fraco para o meu gosto pessoal, esperava um pouco mais de intensidade no sabor.",
+          "score": "2",
+          "explanation": "Faltou um pouco mais de força e também um pouco mais de personalidade no sabor do café."
+        },
+        {
+          "purpose": "Ambiente agradável e bastante confortável para uma estadia um pouco mais longa no local.",
+          "score": "3",
+          "explanation": "Bom para relaxar e também para aproveitar o momento com um pouco mais de calma e tranquilidade."
+        },
+        {
+          "purpose": "Atendimento muito bom, a equipe do café é simpática e também bastante prestativa com todos.",
+          "score": "4",
+          "explanation": "Fizeram o possível para ajudar com todas as minhas solicitações e também com as minhas dúvidas."
+        }
+      ]
+    },
+    {
+      "email": "cliente_33@example.com",
+      "answers": [
+        {
+          "purpose": "Café saboroso e servido na temperatura ideal para consumo, estava muito bom mesmo.",
+          "score": "4",
+          "explanation": "Gostei bastante da qualidade geral do café que foi servido pela equipe do local."
+        },
+        {
+          "purpose": "Ambiente um pouco barulhento demais para uma conversa tranquila e um pouco mais reservada.",
+          "score": "2",
+          "explanation": "O som ambiente do local estava um pouco alto demais para o meu gosto particular."
+        },
+        {
+          "purpose": "Atendimento foi correto e bastante ágil na maior parte do tempo em que estive lá no café.",
+          "score": "3",
+          "explanation": "Eficiente no geral, sem grandes problemas a apontar sobre o serviço que foi prestado."
+        }
+      ]
+    },
+    {
+      "email": "cliente_34@example.com",
+      "answers": [
+        {
+          "purpose": "Café bom, mas o preço cobrado é um pouco elevado para o que é efetivamente oferecido.",
+          "score": "3",
+          "explanation": "A relação custo-benefício do produto não é das melhores que já vi na cidade."
+        },
+        {
+          "purpose": "Ambiente confortável e com uma boa seleção de músicas de fundo para poder relaxar um pouco.",
+          "score": "4",
+          "explanation": "A trilha sonora do local era bastante agradável e também muito bem selecionada pela casa."
+        },
+        {
+          "purpose": "Atendimento foi lento hoje, apesar de haver poucos clientes no estabelecimento no momento.",
+          "score": "2",
+          "explanation": "Demorou muito mais do que o normal para o meu pedido simples chegar até a mesa."
+        }
+      ]
+    },
+    {
+      "email": "cliente_35@example.com",
+      "answers": [
+        {
+          "purpose": "Café apenas regular, não me marcou de forma positiva ou de maneira especial.",
+          "score": "2",
+          "explanation": "Não foi uma bebida que eu pediria novamente em uma outra visita ao estabelecimento."
+        },
+        {
+          "purpose": "Ambiente limpo e bem organizado, com uma boa disposição das mesas no salão principal.",
+          "score": "3",
+          "explanation": "O espaço físico do café era funcional e também estava bem arrumado no geral."
+        },
+        {
+          "purpose": "Atendimento muito atencioso e também bastante eficiente por parte de toda a equipe do local.",
+          "score": "4",
+          "explanation": "Serviço de qualidade, me senti muito bem atendido por todos os funcionários."
+        }
+      ]
+    },
+    {
+      "email": "cliente_36@example.com",
+      "answers": [
+        {
+          "purpose": "Café muito bom, um dos melhores da região na minha modesta e sincera opinião.",
+          "score": "4",
+          "explanation": "Sempre uma boa pedida quando estou por perto e quero um bom café."
+        },
+        {
+          "purpose": "Ambiente agradável, mas estava um pouco escuro demais para uma boa leitura no local.",
+          "score": "3",
+          "explanation": "A iluminação do estabelecimento poderia ser um pouco melhorada em alguns pontos."
+        },
+        {
+          "purpose": "Atendimento funcional, mas sem muita simpatia ou qualquer tipo de calor humano da equipe.",
+          "score": "2",
+          "explanation": "Foi um atendimento um pouco mecânico e também bastante frio e distante."
+        }
+      ]
+    },
+    {
+      "email": "cliente_37@example.com",
+      "answers": [
+        {
+          "purpose": "Café excelente, com sabor e aroma que realmente conquistam logo na primeira xícara!",
+          "score": "5",
+          "explanation": "Perfeito em todos os sentidos possíveis, recomendo muito a todos os meus amigos!"
+        },
+        {
+          "purpose": "Ambiente com uma decoração bastante interessante e original, mas o som estava um pouco alto.",
+          "score": "3",
+          "explanation": "Distraiu um pouco da conversa e também do momento de relaxamento que eu buscava."
+        },
+        {
+          "purpose": "Atendimento muito bom e bastante prestativo, tiraram todas as minhas dúvidas sobre o cardápio.",
+          "score": "4",
+          "explanation": "A equipe do café estava muito bem informada sobre todos os produtos oferecidos."
+        }
+      ]
+    },
+    {
+      "email": "cliente_38@example.com",
+      "answers": [
+        {
+          "purpose": "Café mediano, faltou um sabor mais pronunciado e um pouco mais marcante ao paladar.",
+          "score": "2",
+          "explanation": "Não foi ruim, mas também não chegou a ser bom ou mesmo especial de alguma forma."
+        },
+        {
+          "purpose": "Ambiente confortável e com uma ótima iluminação natural durante o período do dia.",
+          "score": "4",
+          "explanation": "Muito agradável para trabalhar ou apenas para relaxar um pouco e ler um livro."
+        },
+        {
+          "purpose": "Atendimento rápido e eficiente na preparação do meu pedido diretamente na cozinha.",
+          "score": "3",
+          "explanation": "Sem demoras desnecessárias para receber o que eu havia solicitado no balcão."
+        }
+      ]
+    },
+    {
+      "email": "cliente_39@example.com",
+      "answers": [
+        {
+          "purpose": "Café saboroso e bem quente, exatamente como eu gosto de tomar em qualquer ocasião.",
+          "score": "4",
+          "explanation": "Uma delícia de café, muito bem feito e com cuidado visível no preparo."
+        },
+        {
+          "purpose": "Ambiente limpo, mas a disposição das mesas no salão não favorece muito a privacidade.",
+          "score": "2",
+          "explanation": "As mesas estavam um pouco próximas demais umas das outras para o meu gosto."
+        },
+        {
+          "purpose": "Atendimento cordial e bastante atencioso por parte de toda a equipe do estabelecimento.",
+          "score": "3",
+          "explanation": "Fui muito bem tratado durante toda a minha permanência no local com amigos."
+        }
+      ]
+    },
+    {
+      "email": "cliente_40@example.com",
+      "answers": [
+        {
+          "purpose": "Café bom, mas nada que seja realmente excepcional ou completamente inesquecível para mim.",
+          "score": "3",
+          "explanation": "Cumpriu o que se espera de um café padrão de boa qualidade encontrado na cidade."
+        },
+        {
+          "purpose": "Ambiente agradável e com uma música ambiente de muito boa qualidade e também de bom volume.",
+          "score": "4",
+          "explanation": "A seleção musical do local era excelente e também muito agradável aos ouvidos dos clientes."
+        },
+        {
+          "purpose": "Atendimento um pouco demorado para conseguir fazer o pedido inicial diretamente no balcão.",
+          "score": "2",
+          "explanation": "A espera para ser atendido pela equipe foi um pouco mais longa do que o normal."
+        }
+      ]
+    },
+    {
+      "email": "cliente_41@example.com",
+      "answers": [
+        {
+          "purpose": "Café excelente! Sabor rico e um aroma que convida a pedir mais uma xícara na hora.",
+          "score": "5",
+          "explanation": "Realmente um café especial e de altíssima qualidade, muito bom mesmo."
+        },
+        {
+          "purpose": "Ambiente muito bom, bastante espaçoso e com uma decoração bem moderna e também estilosa.",
+          "score": "4",
+          "explanation": "Um local estiloso e muito agradável para frequentar com amigos ou família."
+        },
+        {
+          "purpose": "Atendimento eficiente e bastante simpático por parte de todos os funcionários do café local.",
+          "score": "4",
+          "explanation": "A equipe do estabelecimento é nota dez em simpatia e também em eficiência no serviço."
+        }
+      ]
+    },
+    {
+      "email": "cliente_42@example.com",
+      "answers": [
+        {
+          "purpose": "Café muito bom, com uma torra no ponto certo e um sabor bastante agradável ao paladar.",
+          "score": "4",
+          "explanation": "Gostei muito da qualidade do café que foi servido pela equipe do estabelecimento."
+        },
+        {
+          "purpose": "Ambiente confortável, mas a limpeza do chão poderia ser um pouco melhor e mais cuidada.",
+          "score": "3",
+          "explanation": "Notei alguns papéis e um pouco de sujeira no canto do salão principal do café."
+        },
+        {
+          "purpose": "Atendimento razoável, o atendente que me serviu na mesa parecia um pouco desinteressado no geral.",
+          "score": "2",
+          "explanation": "Faltou um pouco mais de entusiasmo e também de atenção ao cliente durante o serviço."
+        }
+      ]
+    },
+    {
+      "email": "cliente_43@example.com",
+      "answers": [
+        {
+          "purpose": "Café bom e com um preço justo pela qualidade que é oferecida ao cliente final.",
+          "score": "3",
+          "explanation": "Boa relação custo-benefício, certamente vale a pena experimentar o produto."
+        },
+        {
+          "purpose": "Ambiente um pouco barulhento para o meu gosto pessoal, mas a decoração é bem legal e moderna.",
+          "score": "3",
+          "explanation": "O estilo da decoração do local é interessante e bastante contemporâneo."
+        },
+        {
+          "purpose": "Atendimento muito bom, bastante ágil e também muito cortês com todos os clientes presentes.",
+          "score": "4",
+          "explanation": "Serviço de alta qualidade e com muita educação por parte da equipe de atendimento."
+        }
+      ]
+    },
+    {
+      "email": "cliente_44@example.com",
+      "answers": [
+        {
+          "purpose": "Café regular, sem grandes atrativos no sabor ou mesmo no aroma da bebida.",
+          "score": "2",
+          "explanation": "Não me impressionou de forma alguma, foi apenas um café ok, nada mais."
+        },
+        {
+          "purpose": "Ambiente limpo, mas a decoração é muito simples e um pouco sem personalidade própria.",
+          "score": "2",
+          "explanation": "Falta um toque de charme e de originalidade ao espaço para torná-lo mais especial."
+        },
+        {
+          "purpose": "Atendimento atencioso e muito prestativo, superou todas as minhas expectativas iniciais.",
+          "score": "4",
+          "explanation": "A equipe do café foi um grande destaque positivo durante a minha visita ao local."
+        }
+      ]
+    },
+    {
+      "email": "cliente_45@example.com",
+      "answers": [
+        {
+          "purpose": "Café saboroso e com uma ótima apresentação na xícara, muito bem feito e caprichado.",
+          "score": "4",
+          "explanation": "Demonstra um grande cuidado nos detalhes do preparo e também do serviço ao cliente."
+        },
+        {
+          "purpose": "Ambiente confortável, mas estava um pouco escuro demais para o meu gosto pessoal no momento.",
+          "score": "3",
+          "explanation": "Preferiria um pouco mais de claridade no ambiente geral para me sentir melhor."
+        },
+        {
+          "purpose": "Atendimento eficiente, mas pareceu um pouco mecânico e sem muita interação pessoal com o cliente.",
+          "score": "3",
+          "explanation": "Faltou um toque mais pessoal e um pouco mais caloroso no atendimento prestado pela equipe."
+        }
+      ]
+    },
+    {
+      "email": "cliente_46@example.com",
+      "answers": [
+        {
+          "purpose": "Café excelente, um dos melhores que já tomei em muito tempo, sabor realmente inesquecível.",
+          "score": "5",
+          "explanation": "Parabéns pela altíssima qualidade do café oferecido aos clientes do estabelecimento!"
+        },
+        {
+          "purpose": "Ambiente muito agradável e com uma limpeza impecável em todos os cantos do salão principal.",
+          "score": "4",
+          "explanation": "Um local muito bem cuidado e que transmite uma sensação de conforto e bem-estar."
+        },
+        {
+          "purpose": "Atendimento foi bom, a equipe é educada e o serviço foi bastante rápido e eficiente.",
+          "score": "3",
+          "explanation": "Experiência positiva com o atendimento que recebi no estabelecimento durante minha visita."
+        }
+      ]
+    },
+    {
+      "email": "cliente_47@example.com",
+      "answers": [
+        {
+          "purpose": "Café muito ruim, tinha um gosto forte de queimado e estava servido completamente morno.",
+          "score": "1",
+          "explanation": "Não recomendo este café para ninguém, foi uma experiência realmente muito ruim e decepcionante."
+        },
+        {
+          "purpose": "Ambiente com poucas mesas disponíveis e um pouco desorganizado na disposição geral do salão.",
+          "score": "2",
+          "explanation": "Poderia ser um pouco mais arrumado e também um pouco mais espaçoso para os clientes."
+        },
+        {
+          "purpose": "Atendimento lento e o funcionário que me atendeu parecia bastante confuso com tudo ao seu redor.",
+          "score": "1",
+          "explanation": "Precisa de mais treinamento e de muito mais agilidade no serviço prestado à sua vasta clientela."
+        }
+      ]
+    },
+    {
+      "email": "cliente_48@example.com",
+      "answers": [
+        {
+          "purpose": "Café apenas aceitável, nada que realmente justifique uma segunda visita ao estabelecimento local.",
+          "score": "2",
+          "explanation": "Esperava um pouco mais de sabor e também um pouco mais de qualidade no produto final oferecido."
+        },
+        {
+          "purpose": "O local é bastante barulhento e a música ambiente não é do meu agrado pessoal de forma alguma.",
+          "score": "2",
+          "explanation": "O ambiente não é muito relaxante ou mesmo tranquilo para ficar por muito tempo ali no café."
+        },
+        {
+          "purpose": "Atendimento foi ok, mas sem nenhum destaque positivo que mereça alguma menção especial aqui na pesquisa.",
+          "score": "2",
+          "explanation": "Serviço mediano, apenas cumpriu o básico do que se espera de um atendimento profissional e cortês."
+        }
+      ]
+    },
+    {
+      "email": "cliente_49@example.com",
+      "answers": [
+        {
+          "purpose": "Café bom, com sabor e aroma bastante equilibrados e também muito agradáveis ao paladar.",
+          "score": "3",
+          "explanation": "Uma escolha segura para quem gosta de um bom café de qualidade superior e que seja bem feito."
+        },
+        {
+          "purpose": "Ambiente limpo e com uma decoração que achei bastante interessante e também bastante original.",
+          "score": "3",
+          "explanation": "Um local agradável para fazer uma pausa e tomar um café com um pouco mais de calma e tranquilidade."
+        },
+        {
+          "purpose": "Atendimento rápido e os funcionários se mostraram todos muito simpáticos e também bastante prestativos.",
+          "score": "3",
+          "explanation": "Tive uma boa experiência com o atendimento que recebi no estabelecimento como um todo durante a visita."
+        }
+      ]
+    },
+    {
+      "email": "cliente_50@example.com",
+      "answers": [
+        {
+          "purpose": "Café excelente, muito bem preparado e com grãos de altíssima qualidade visível a olho nu no produto.",
+          "score": "5",
+          "explanation": "Superou todas as minhas expectativas em termos de sabor e também de aroma do produto final!"
+        },
+        {
+          "purpose": "Ambiente muito confortável, extremamente limpo e com ótima música ambiente tocando no fundo do salão.",
+          "score": "4",
+          "explanation": "Ideal para relaxar e também para apreciar um bom momento de tranquilidade e de muita paz interior."
+        },
+        {
+          "purpose": "Atendimento foi cordial e bastante eficiente em todas as etapas do serviço que foi prestado pela equipe.",
+          "score": "4",
+          "explanation": "A equipe do café demonstrou muita competência e também grande profissionalismo no trato com o cliente."
+        }
+      ]
+    },
+    {
+      "email": "cliente_51@example.com",
+      "answers": [
+        {
+          "purpose": "O café estava ruim, muito amargo e com um gosto forte de velho e também de muito requentado.",
+          "score": "1",
+          "explanation": "Não consegui beber, uma péssima experiência com o principal produto oferecido pela casa ao seu público."
+        },
+        {
+          "purpose": "Ambiente um pouco sujo e com um cheiro estranho e bastante desagradável no ar do local visitado.",
+          "score": "1",
+          "explanation": "Bastante desconfortável para permanecer por muito tempo no estabelecimento com amigos ou mesmo família."
+        },
+        {
+          "purpose": "Atendimento demorado e o atendente que me serviu na mesa parecia completamente perdido e muito confuso.",
+          "score": "2",
+          "explanation": "Falta de organização e de preparo por parte da equipe de atendimento do café da cidade grande."
+        }
+      ]
+    },
+    {
+      "email": "cliente_52@example.com",
+      "answers": [
+        {
+          "purpose": "Café regular, nada que me fizesse querer pedir outro ou mesmo voltar por causa dele ao local novamente.",
+          "score": "2",
+          "explanation": "Foi uma bebida completamente esquecível, sem grandes destaques positivos ou mesmo alguns negativos."
+        },
+        {
+          "purpose": "O ambiente é ok, mas a limpeza geral do salão poderia ser mais caprichada e também mais detalhada.",
+          "score": "2",
+          "explanation": "Notei um pouco de poeira nos cantos das paredes e também em algumas das prateleiras do local."
+        },
+        {
+          "purpose": "Atendimento foi o básico do básico, sem muita atenção ou qualquer tipo de cuidado especial com o cliente.",
+          "score": "1",
+          "explanation": "Bastante indiferente e sem nenhum esforço para agradar ou para encantar o consumidor final do produto."
+        }
+      ]
+    },
+    {
+      "email": "cliente_53@example.com",
+      "answers": [
+        {
+          "purpose": "Café muito bom, servido na temperatura certa e com um ótimo sabor final ao meu exigente paladar.",
+          "score": "4",
+          "explanation": "Recomendo para quem aprecia um café de verdadeira qualidade e que seja muito bem feito."
+        },
+        {
+          "purpose": "Ambiente limpo e com uma decoração que achei bem legal e também bastante moderna e muito atual.",
+          "score": "3",
+          "explanation": "Bastante confortável para uma visita um pouco mais demorada e também um pouco mais relaxante com amigos."
+        },
+        {
+          "purpose": "Atendimento atencioso e os funcionários foram todos muito ágeis no preparo do meu pedido na cozinha.",
+          "score": "3",
+          "explanation": "Bom serviço prestado pela equipe do local, fiquei bastante satisfeito com tudo que vi e consumi."
+        }
+      ]
+    },
+    {
+      "email": "cliente_54@example.com",
+      "answers": [
+        {
+          "purpose": "Café excelente, um dos melhores que já experimentei em toda a minha vida, sem qualquer dúvida!",
+          "score": "5",
+          "explanation": "Sabor e aroma simplesmente inigualáveis, uma verdadeira perfeição em forma de xícara de café."
+        },
+        {
+          "purpose": "Ambiente impecável, extremamente limpo, muito confortável e também incrivelmente lindo e bem decorado.",
+          "score": "5",
+          "explanation": "Um verdadeiro oásis de tranquilidade e de muito bom gosto e também de muita sofisticação no ar."
+        },
+        {
+          "purpose": "Atendimento excepcional, a equipe é muito cordial, bastante eficiente e extremamente simpática com todos.",
+          "score": "5",
+          "explanation": "Um serviço que encanta e que fideliza qualquer cliente logo na primeira visita ao estabelecimento."
+        }
+      ]
+    },
+    {
+      "email": "cliente_55@example.com",
+      "answers": [
+        {
+          "purpose": "Café apenas razoável, um pouco fraco demais para o meu gosto pessoal e também um pouco exigente.",
+          "score": "2",
+          "explanation": "Não foi uma bebida que eu pediria novamente em uma próxima visita ao estabelecimento comercial."
+        },
+        {
+          "purpose": "O ambiente estava limpo, mas a decoração geral é um pouco sem graça e também já bastante antiga.",
+          "score": "2",
+          "explanation": "Falta um pouco mais de personalidade e também de modernidade ao espaço como um todo para melhorar."
+        },
+        {
+          "purpose": "Atendimento demorou um pouco para acontecer, mas os funcionários foram minimamente educados no trato.",
+          "score": "3",
+          "explanation": "A paciência foi recompensada com um tratamento educado ao final do atendimento que foi prestado."
+        }
+      ]
+    },
+    {
+      "email": "cliente_56@example.com",
+      "answers": [
+        {
+          "purpose": "Café bom, mas o preço cobrado é um pouco salgado para a quantidade que é oferecida na xícara.",
+          "score": "3",
+          "explanation": "A qualidade do café em si é boa, mas poderia ser um pouco mais acessível ao bolso do consumidor."
+        },
+        {
+          "purpose": "Ambiente agradável e com uma boa seleção de músicas de fundo para poder relaxar um pouco mais.",
+          "score": "4",
+          "explanation": "Bastante relaxante e muito convidativo para ficar um pouco mais de tempo no local com amigos."
+        },
+        {
+          "purpose": "Atendimento correto e eficiente por parte de todos os funcionários do estabelecimento que visitei.",
+          "score": "3",
+          "explanation": "Dentro do esperado para um bom estabelecimento comercial como este aqui na cidade grande."
+        }
+      ]
+    },
+    {
+      "email": "cliente_57@example.com",
+      "answers": [
+        {
+          "purpose": "Café muito bom, com sabor intenso e também bastante bem equilibrado em todas as suas notas.",
+          "score": "4",
+          "explanation": "Aprovado com louvor, uma ótima bebida para qualquer hora do dia, seja manhã ou seja tarde."
+        },
+        {
+          "purpose": "Ambiente confortável, mas estava um pouco escuro para quem deseja ler alguma coisa no local.",
+          "score": "3",
+          "explanation": "A iluminação do local poderia ser melhorada em alguns pontos específicos do salão principal."
+        },
+        {
+          "purpose": "Atendimento foi bom, a equipe se mostrou bastante prestativa e também muito atenta aos pedidos.",
+          "score": "4",
+          "explanation": "Sempre dispostos a ajudar com qualquer solicitação ou com qualquer dúvida dos clientes do café."
+        }
+      ]
+    },
+    {
+      "email": "cliente_58@example.com",
+      "answers": [
+        {
+          "purpose": "Café excelente, superou todas as minhas expectativas em todos os sentidos possíveis da bebida quente.",
+          "score": "5",
+          "explanation": "Maravilhoso! Uma experiência única e completamente deliciosa para o paladar de qualquer um."
+        },
+        {
+          "purpose": "O ambiente é muito bonito e extremamente bem cuidado em cada detalhe, dá gosto de estar no local.",
+          "score": "4",
+          "explanation": "A limpeza e a decoração do espaço são impecáveis e também de muito bom gosto e sofisticação."
+        },
+        {
+          "purpose": "Atendimento foi atencioso, mas pareceu um pouco lento na entrega final do meu pedido à mesa.",
+          "score": "3",
+          "explanation": "Poderia ser um pouco mais rápido e também um pouco mais ágil na finalização do serviço ao cliente."
+        }
+      ]
+    },
+    {
+      "email": "cliente_59@example.com",
+      "answers": [
+        {
+          "purpose": "Café ruim, com gosto excessivamente amargo e uma temperatura morna muito desagradável ao toque.",
+          "score": "1",
+          "explanation": "Não gostei nem um pouco da qualidade do café que foi servido pela equipe do local."
+        },
+        {
+          "purpose": "Ambiente com um cheiro estranho e um pouco sujo nos cantos do salão principal do estabelecimento.",
+          "score": "1",
+          "explanation": "Bastante desconfortável para permanecer por muito tempo no estabelecimento com os amigos ou família."
+        },
+        {
+          "purpose": "Atendimento demorado e o funcionário que me atendeu na mesa parecia bastante desatento e perdido.",
+          "score": "2",
+          "explanation": "Falta de foco e de agilidade no serviço que foi prestado pela equipe de atendimento do café."
+        }
+      ]
+    },
+    {
+      "email": "cliente_60@example.com",
+      "answers": [
+        {
+          "purpose": "Café regular, nada que justifique o preço um pouco mais alto que o da concorrência local.",
+          "score": "2",
+          "explanation": "Esperava um pouco mais pela proposta geral do local e também pelo valor que foi cobrado."
+        },
+        {
+          "purpose": "O ambiente é ok, mas a música estava muito alta e acabou atrapalhando bastante a minha conversa.",
+          "score": "2",
+          "explanation": "O volume excessivo da música ambiente foi um ponto negativo considerável na minha avaliação."
+        },
+        {
+          "purpose": "Atendimento apenas o básico do básico, sem muita cordialidade ou qualquer tipo de simpatia extra.",
+          "score": "2",
+          "explanation": "Foi um atendimento bastante frio e também muito impessoal durante toda a minha experiência no café."
+        }
+      ]
+    },
+    {
+      "email": "cliente_61@example.com",
+      "answers": [
+        {
+          "purpose": "Café bom, atendeu bem às minhas expectativas de sabor e também de qualidade geral do produto.",
+          "score": "3",
+          "explanation": "Fiquei bastante satisfeito com a bebida que foi servida no local pela equipe de baristas."
+        },
+        {
+          "purpose": "Ambiente limpo e com uma decoração que achei bastante original e também muito interessante aos olhos.",
+          "score": "3",
+          "explanation": "Um local agradável e com uma personalidade própria e bastante marcante e original."
+        },
+        {
+          "purpose": "Atendimento rápido e os funcionários foram todos muito simpáticos e também bastante prestativos comigo.",
+          "score": "4",
+          "explanation": "Tive uma ótima experiência com o atendimento que recebi no estabelecimento como um todo durante a visita."
+        }
+      ]
+    },
+    {
+      "email": "cliente_62@example.com",
+      "answers": [
+        {
+          "purpose": "Café excelente, muito bem preparado e com grãos de altíssima qualidade visível a olho nu no produto.",
+          "score": "5",
+          "explanation": "Superou todas as minhas expectativas em termos de sabor e também de aroma do produto final!"
+        },
+        {
+          "purpose": "Ambiente muito confortável, extremamente limpo e com ótima música ambiente tocando no fundo do salão.",
+          "score": "4",
+          "explanation": "Ideal para relaxar e também para apreciar um bom momento de tranquilidade e de muita paz interior."
+        },
+        {
+          "purpose": "Atendimento foi cordial e bastante eficiente em todas as etapas do serviço que foi prestado pela equipe.",
+          "score": "4",
+          "explanation": "A equipe do café demonstrou muita competência e também grande profissionalismo no trato com o cliente."
+        }
+      ]
+    },
+    {
+      "email": "cliente_63@example.com",
+      "answers": [
+        {
+          "purpose": "Café apenas razoável, um pouco fraco demais para o meu gosto pessoal e também um pouco exigente.",
+          "score": "2",
+          "explanation": "Não foi uma bebida que eu pediria novamente em uma próxima visita ao estabelecimento comercial."
+        },
+        {
+          "purpose": "O ambiente estava limpo, mas a decoração geral é um pouco sem graça e também já bastante antiga.",
+          "score": "2",
+          "explanation": "Falta um pouco mais de personalidade e também de modernidade ao espaço como um todo para melhorar."
+        },
+        {
+          "purpose": "Atendimento demorou um pouco para acontecer, mas os funcionários foram minimamente educados no trato.",
+          "score": "3",
+          "explanation": "A paciência foi recompensada com um tratamento educado ao final do atendimento que foi prestado."
+        }
+      ]
+    },
+    {
+      "email": "cliente_64@example.com",
+      "answers": [
+        {
+          "purpose": "Café bom, mas o preço cobrado é um pouco salgado para a quantidade que é oferecida na xícara.",
+          "score": "3",
+          "explanation": "A qualidade do café em si é boa, mas poderia ser um pouco mais acessível ao bolso do consumidor."
+        },
+        {
+          "purpose": "Ambiente agradável e com uma boa seleção de músicas de fundo para poder relaxar um pouco mais.",
+          "score": "4",
+          "explanation": "Bastante relaxante e muito convidativo para ficar um pouco mais de tempo no local com amigos."
+        },
+        {
+          "purpose": "Atendimento correto e eficiente por parte de todos os funcionários do estabelecimento que visitei.",
+          "score": "3",
+          "explanation": "Dentro do esperado para um bom estabelecimento comercial como este aqui na cidade grande."
+        }
+      ]
+    },
+    {
+      "email": "cliente_65@example.com",
+      "answers": [
+        {
+          "purpose": "Café excepcional! Sabor, aroma e corpo estavam perfeitos, uma verdadeira obra de arte líquida.",
+          "score": "5",
+          "explanation": "Melhor café que já tive o imenso prazer de degustar em muito, muito tempo. Parabéns!"
+        },
+        {
+          "purpose": "Ambiente impecável em todos os seus aspectos: limpeza, conforto, decoração e também a música ambiente.",
+          "score": "5",
+          "explanation": "Um verdadeiro refúgio de bom gosto, paz e muita tranquilidade para todos os clientes do café."
+        },
+        {
+          "purpose": "Atendimento que excede todas as expectativas, a equipe é maravilhosa e extremamente profissional em tudo.",
+          "score": "5",
+          "explanation": "Serviço de excelência que realmente encanta e fideliza qualquer cliente logo na primeira visita ao local."
+        }
+      ]
+    }
+  ]
+}
