@@ -51,7 +51,7 @@ export default function CreateFitnessForm({ researches }: { researches: Research
       >
         <span className="flex items-center gap-2">
           <Plus className="w-4 h-4" />
-          Criar Fitness Overtime
+          Criar Fitness Over time
         </span>
       </Button>
       {open && (
@@ -60,7 +60,7 @@ export default function CreateFitnessForm({ researches }: { researches: Research
             onSubmit={handleSubmit}
             className="bg-white dark:bg-sky-900 rounded shadow space-y-4 w-full max-w-md sm:min-w-[480px] sm:p-8 p-4"
           >
-            <h3 className="text-lg font-semibold">Novo Fitness Overtime</h3>
+            <h3 className="text-lg font-semibold">Novo Fitness Over time</h3>
             <input
               className="w-full border rounded px-3 py-2"
               placeholder="Nome"

@@ -52,7 +52,7 @@ export default function DashboarLayout({ children }: { children: ReactNode }) {
                     : ""
                 }`}
               >
-                Fitness Overtime
+                Fitness Over time
               </Link>
             </nav>
           </div>
@@ -92,7 +92,7 @@ export default function DashboarLayout({ children }: { children: ReactNode }) {
               }`}
               onClick={() => setMobileNavOpen(false)}
             >
-              Fitness Overtime
+              Fitness Over time
             </Link>
           </nav>
         )}
