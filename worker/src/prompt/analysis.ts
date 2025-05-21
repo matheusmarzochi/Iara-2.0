@@ -126,6 +126,9 @@ export const getAnalysis = async (researchId: string) => {
         return
     }
 
+    let progress = 0;
+    const totalQuestions = questions.length;
+
     for (const question of questions) {
         if (!question.categories || question.categories.length === 0) continue;
 
@@ -180,8 +183,6 @@ export const getAnalysis = async (researchId: string) => {
             }
         }
 
-        console.log(JSON.stringify(categoryScoreBoxes, null, 2))
-
         for (const category of question.categories) {
             let attempt = 0;
             let isValid = false;
@@ -224,7 +225,6 @@ export const getAnalysis = async (researchId: string) => {
             const categoryForms = filterAnswersByCategory(forms, question.sequence, category.name);
 
             for (const criteria of criteriaList) {
-                
                 attempt = 0;
                 isValid = false;
                 while (attempt < 3 && !isValid) {
@@ -259,5 +259,7 @@ export const getAnalysis = async (researchId: string) => {
                 }
             }
         }
+        progress++;
+        console.log(`getAnalysis Progression: ${progress}/${totalQuestions} (${((progress / totalQuestions) * 100).toFixed(2)}%)`);
     }
 }

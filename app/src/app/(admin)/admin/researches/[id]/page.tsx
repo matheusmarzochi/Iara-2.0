@@ -172,7 +172,7 @@ export default async function ResearchPage({ params }: Props) {
                 <div className="space-y-4">
                     <h3 className="text-xl font-medium">Ações</h3>
 
-                    {(inAnalysis || isOpened) && (
+                    
                         <div className="mb-4 p-4 border rounded">
                         <h4 className="font-medium">Processar Pesquisa</h4>
                         <p className="text-sm text-muted-foreground">
@@ -185,7 +185,7 @@ export default async function ResearchPage({ params }: Props) {
                             </Button>
                         </form>
                     </div>
-                    )}
+                    
 
                     {isOpened && (
                         <div className="mb-4 p-4 border-gray-300 bg-[#F8FAFC] dark:bg-sky-900 dark:border-sky-900 rounded">

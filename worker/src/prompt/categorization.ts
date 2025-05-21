@@ -1,6 +1,6 @@
 import { eq } from "iara-shared/node_modules/drizzle-orm";
 import { db } from "iara-shared/database"
-import { categories, type Form, Question } from "iara-shared/database/schema"
+import { analysis, categories, type Form, Question } from "iara-shared/database/schema"
 import { promptRequest, stringToJson } from "../integration/prompt"
 import { filterAnswersBySequence, filterQuestionsBySequence } from "./helper"
 
@@ -94,9 +94,16 @@ export const getCategories = async (researchId: string) => {
 
     const quantity = 5
 
+    let progress = 0;
+    const totalQuestions = questions.length;
+
     for await (const question of questions) {
         let attempt = 0;
         let isValid = false;
+
+        for (const category of question.categories) {
+            await db.delete(analysis).where(eq(analysis.categoryId, category.id));
+        }
 
         await db
             .delete(categories)
@@ -120,7 +127,6 @@ export const getCategories = async (researchId: string) => {
                 if (attempt >= 3) {
                     console.error(`Validation failed after ${attempt} attempts for question ID ${question.id}`);
                 }
-
                 continue
             }
 
@@ -133,5 +139,7 @@ export const getCategories = async (researchId: string) => {
                     })
             }
         }
+        progress++;
+        console.log(`getCategories Progression: ${progress}/${totalQuestions} (${((progress / totalQuestions) * 100).toFixed(2)}%)`);
     }
 }

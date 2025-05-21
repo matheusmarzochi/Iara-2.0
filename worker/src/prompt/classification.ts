@@ -116,7 +116,8 @@ export const getClassification = async (researchId: string) => {
             let attempt = 0;
             let isValid = false;
 
-            console.log(`Progression: ${process * 100 / total}`)
+            // Improved progression console
+            console.log(`getClassification Progression: ${process + 1}/${total} (${(((process + 1) / total) * 100).toFixed(2)}%)`);
 
             const question = filterQuestionsBySequence(questions, answer.sequence)[0]
 
@@ -131,7 +132,7 @@ export const getClassification = async (researchId: string) => {
 
                 if (alreadyClassificated) {
                     console.log(`getClassification: Classification already done for answer ID ${answer.id}`);
-                    process++
+                    process++;
                     continue
                 }
             }
@@ -155,7 +156,6 @@ export const getClassification = async (researchId: string) => {
                     if (attempt >= MAX_ATTEMPT) {
                         console.log(`Validation failed after ${attempt} attempts for answer ID ${answer.id}`);
                     }
-
                     continue
                 }
 
@@ -173,8 +173,8 @@ export const getClassification = async (researchId: string) => {
                             affinities: Object.values(data),
                         }
                     });
-                process++
             }
+            process++; // Increment only once per answer, after processing
         }
     }
 }
