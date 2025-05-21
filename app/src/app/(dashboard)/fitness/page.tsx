@@ -141,7 +141,7 @@ export default async function FitnessPage({ searchParams }: { searchParams?: { o
     <div>
       <header className="mb-8 flex flex-col items-start gap-2 pt-4 md:pt-0 sm:flex-row sm:items-center sm:justify-between">
         <div>
-          <h1 className="text-3xl font-bold tracking-tight">Fitness Overtime</h1>
+          <h1 className="text-3xl font-bold tracking-tight">Fitness Over time</h1>
         </div>
         <CreateFitnessForm researches={researchesList} />
       </header>
