@@ -3,6 +3,7 @@ import { eq } from 'iara-shared/node_modules/drizzle-orm'
 import { reports, researches, type Research, PointOfInterest, ScoreBox, StrategyInsights, ReportData, analysis } from 'iara-shared/database/schema';
 
 export const getReport = async (researchId: string) => {
+    console.log(`getReport: Start processing Research ID ${researchId}`)
     const research = await db.query.researches.findFirst({
         where: eq(researches.id, researchId),
         with: {
@@ -52,11 +53,17 @@ export const getReport = async (researchId: string) => {
     }) as Research
 
     if (!research) {
-        console.log(`getClassification: Research ID not found ${researchId}`)
+        console.log(`getReport: Research ID not found ${researchId}`)
         return
     }
 
-    const data = buildQuestionReports(research)
+    const totalQuestions = research.questions.length;
+    let progress = 0;
+
+    const data = buildQuestionReports(research, (idx) => {
+        progress = idx + 1;
+        console.log(`getReport Progression: ${((progress / totalQuestions) * 100).toFixed(2)}% (Question ${progress} of ${totalQuestions})`);
+    })
 
     await db
         .insert(reports)
@@ -81,13 +88,15 @@ export const getReport = async (researchId: string) => {
             eq(researches.id, researchId),
         );
 
+    console.log(`getReport: Finished processing Research ID ${researchId}`)
 }
 
 
-export const buildQuestionReports = (research: Research): Array<ReportData> => {
+// buildQuestionReports agora aceita um callback opcional para progresso
+export const buildQuestionReports = (research: Research, onProgress?: (index: number) => void): Array<ReportData> => {
     const questionReports: Array<ReportData> = [];
 
-    for (const question of research.questions) {
+    for (const [index, question] of research.questions.entries()) {
         const questionReport: ReportData = {
             score_box: { fit: 0, neutral: 0, unfit: 0 },
             question_id: question.id,
@@ -277,10 +286,12 @@ export const buildQuestionReports = (research: Research): Array<ReportData> => {
             }
         }
 
-        questionReports.push(({
+        // Ao final do loop de cada questão:
+        questionReports.push({
             ...questionReport,
             point_of_interests: questionReport.point_of_interests.sort((a, b) => b.answers.length - a.answers.length)
-        }))
+        });
+        if (onProgress) onProgress(index);
     }
 
     return questionReports;
