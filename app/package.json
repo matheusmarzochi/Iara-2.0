@@ -39,7 +39,7 @@
     "clsx": "^2.1.1",
     "date-fns": "^4.1.0",
     "iara-shared": "file:../shared",
-    "lucide-react": "^0.394.0",
+    "lucide-react": "^0.511.0",
     "mime-types": "^3.0.1",
     "next": "14.2.15",
     "next-themes": "^0.3.0",
