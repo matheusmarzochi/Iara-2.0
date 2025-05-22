@@ -1,4 +1,5 @@
-2025-05-21 #2 - Change Term: Fitness Over Time
+2025-05-22 #1 - Admin Fitness Over Time
+2025-05-21 #1 - Change Term: Fitness Over Time
 2025-05-20 #2 - Fitness Overtime, Improve Worker (bugfix)
 2025-05-13 #1 - Default Research
 2025-05-12 #1 - Research Duplicaiton
