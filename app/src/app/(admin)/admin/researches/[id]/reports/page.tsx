@@ -6,12 +6,12 @@ import { researches, reports, researchViews } from "iara-shared/database/schema"
 import { eq, countDistinct } from "iara-shared/node_modules/drizzle-orm"
 
 type Props = {
-  params: {
-    id: string
-  }
+    params: {
+        id: string
+    }
 }
 
-interface ReportData extends ReportViewProps, ReportHeaderProps {}
+interface ReportData extends ReportViewProps, ReportHeaderProps { }
 
 const reportData = async (researchId: string): Promise<ReportData | undefined> => {
     "use server"
@@ -60,24 +60,23 @@ const reportData = async (researchId: string): Promise<ReportData | undefined> =
         reports: report.data,
         research,
         totalViews: uniqueViews[0]?.uniqueViews || 0
-
     }
 }
 
 export default async function SurveyDashboard({ params }: Props) {
-  const data = await reportData(params.id)
+    const data = await reportData(params.id)
 
-  if (!data) {
-    return <div>No report or research found</div>
-  }
+    if (!data) {
+        return <div>No report or research found</div>
+    }
 
-  const { formsLength, research, totalViews, reports, categories, enableSwitch } = data
-  
-  return (
-    <div>
-      <ReportHeader formsLength={formsLength} research={research} reports={reports} totalViews={totalViews} />
-      <ReportView reports={reports} research={research} categories={categories} enableSwitch={enableSwitch} />
-    </div>
-  )
+    const { formsLength, research, totalViews, reports, categories, enableSwitch } = data
+
+    return (
+        <div>
+            <ReportHeader formsLength={formsLength} research={research} reports={reports} totalViews={totalViews} />
+            <ReportView reports={reports} research={research} categories={categories} enableSwitch={enableSwitch} />
+        </div>
+    )
 }
 

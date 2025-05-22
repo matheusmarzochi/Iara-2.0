@@ -166,5 +166,5 @@ export const duplicateResearch = async (userId: string, researchId: string) => {
         }
     }
 
-    return newResearch;
+    return newResearch.id;
 }
